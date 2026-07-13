@@ -1,0 +1,22 @@
+quest:
+  id: q10_empire_trade
+  name: "Empire of Trade"
+  level_required: 20
+  giver_npc: lina
+  prerequisite: q09_merchants_gamble
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 900
+  items:
+    - id: merchant_satchel
+      amount: 1
+    - id: gold_pouch
+      amount: 3
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q10_empire_trade_start
+  # TODO: define steps

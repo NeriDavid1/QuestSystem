@@ -1,0 +1,34 @@
+quest:
+  id: q04_dog_ate_homework
+  name: "The Dog Ate My D"
+  level_required: 4
+  giver_npc: teacher_maya
+  prerequisite: q03_cat_on_c
+  summary: "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!"
+
+rewards:
+  xp: 100
+  items:
+    - id: letter_d
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_dog_ate_d
+
+  - type: reach_location
+    location_id: dog_house_corner
+
+  - type: play_minigame
+    minigame_id: word_matching
+    difficulty: 2
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_d
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_dog_sorry

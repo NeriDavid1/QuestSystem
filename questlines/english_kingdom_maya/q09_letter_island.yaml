@@ -1,0 +1,39 @@
+quest:
+  id: q09_letter_island
+  name: "Letter Island Mix-Up"
+  level_required: 9
+  giver_npc: teacher_maya
+  prerequisite: q08_hat_hunt
+  summary: "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן."
+
+rewards:
+  xp: 260
+  items:
+    - id: letter_i
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_letter_island_chaos
+
+  - type: reach_location
+    location_id: letter_island
+
+  - type: play_minigame
+    minigame_id: word_matching
+    difficulty: 4
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 4
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_i
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_island_sorted

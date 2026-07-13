@@ -1,0 +1,68 @@
+questline:
+  id: herbalist_elara
+  npc_id: elara
+  display_name: "Elara's Garden Path"
+  theme: "Gathering & alchemy"
+  quest_count: 10
+  level_range: [3, 18]
+
+quests:
+  - id: q01_healing_hands
+    name: "Healing Hands"
+    level: 3
+    prerequisite: null
+    rewards: { xp: 80, items: [{ id: healing_herb, amount: 5 }] }
+
+  - id: q02_forest_herbs
+    name: "Forest Herbs"
+    level: 5
+    prerequisite: q01_healing_hands
+    rewards: { xp: 150, items: [{ id: healing_herb, amount: 10 }] }
+
+  - id: q03_poison_remedy
+    name: "Poison Remedy"
+    level: 7
+    prerequisite: q02_forest_herbs
+    rewards: { xp: 220, items: [{ id: alchemy_vial, amount: 1 }] }
+
+  - id: q04_moonpetal_hunt
+    name: "Moonpetal Hunt"
+    level: 9
+    prerequisite: q03_poison_remedy
+    rewards: { xp: 300, items: [{ id: moonpetal, amount: 3 }] }
+
+  - id: q05_swamp_samples
+    name: "Swamp Samples"
+    level: 11
+    prerequisite: q04_moonpetal_hunt
+    rewards: { xp: 380, items: [] }
+
+  - id: q06_alchemists_aid
+    name: "Alchemist's Aid"
+    level: 12
+    prerequisite: q05_swamp_samples
+    rewards: { xp: 420, items: [{ id: alchemy_vial, amount: 2 }] }
+
+  - id: q07_rare_bloom
+    name: "Rare Bloom"
+    level: 14
+    prerequisite: q06_alchemists_aid
+    rewards: { xp: 500, items: [{ id: moonpetal, amount: 5 }] }
+
+  - id: q08_plague_cure
+    name: "Plague Cure"
+    level: 15
+    prerequisite: q07_rare_bloom
+    rewards: { xp: 550, items: [] }
+
+  - id: q09_spirit_tea
+    name: "Spirit Tea"
+    level: 16
+    prerequisite: q08_plague_cure
+    rewards: { xp: 600, items: [{ id: healing_herb, amount: 15 }] }
+
+  - id: q10_elaras_secret
+    name: "Elara's Secret"
+    level: 18
+    prerequisite: q09_spirit_tea
+    rewards: { xp: 750, items: [{ id: elixir_recipe, amount: 1 }] }

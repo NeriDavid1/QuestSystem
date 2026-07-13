@@ -1,0 +1,39 @@
+# NPC registry — referenced by quest givers and step targets.
+
+npcs:
+
+  theron:
+    name: "Theron"
+    title: "Blacksmith"
+    location: "Forge District"
+    description: "Master smith who teaches crafting through hands-on work."
+
+  lina:
+    name: "Lina"
+    title: "Merchant"
+    location: "Market Square"
+    description: "Sharp-eyed trader who tests players with deals and deliveries."
+
+  marcus:
+    name: "Captain Marcus"
+    title: "Guard Captain"
+    location: "City Barracks"
+    description: "Veteran soldier assigning patrol and combat duties."
+
+  elara:
+    name: "Elara"
+    title: "Herbalist"
+    location: "Mistwood Outskirts"
+    description: "Quiet healer who sends players to gather rare plants."
+
+  vex:
+    name: "Vex"
+    title: "The Stranger"
+    location: "Unknown (appears dynamically)"
+    description: "Enigmatic figure with a long-running mystery arc."
+
+  teacher_maya:
+    name: "Maya"
+    title: "English Teacher"
+    location: "English Kingdom — Alphabet Plaza"
+    description: "Cheerful teacher who guides children through letters and words with silly stories."

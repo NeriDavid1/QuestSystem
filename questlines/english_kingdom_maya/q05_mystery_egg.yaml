@@ -1,0 +1,34 @@
+quest:
+  id: q05_mystery_egg
+  name: "The Mystery Egg"
+  level_required: 5
+  giver_npc: teacher_maya
+  prerequisite: q04_dog_ate_homework
+  summary: "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות."
+
+rewards:
+  xp: 120
+  items:
+    - id: letter_e
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_giant_egg
+
+  - type: reach_location
+    location_id: garden_gate
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_e
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_egg_hatched_e

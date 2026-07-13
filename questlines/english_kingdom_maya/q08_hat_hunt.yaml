@@ -1,0 +1,34 @@
+quest:
+  id: q08_hat_hunt
+  name: "Maya's Lost Hat"
+  level_required: 8
+  giver_npc: teacher_maya
+  prerequisite: q07_genius_gate
+  summary: "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם."
+
+rewards:
+  xp: 220
+  items:
+    - id: letter_h
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_lost_hat_h
+
+  - type: reach_location
+    location_id: rainy_plaza
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 3
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_h
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_hat_found_h

@@ -1,0 +1,20 @@
+quest:
+  id: q10_captains_legacy
+  name: "Captain's Legacy"
+  level_required: 25
+  giver_npc: marcus
+  prerequisite: q09_last_stand
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 1000
+  items:
+    - id: captain_commendation
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q10_captains_legacy_start
+  # TODO: define steps

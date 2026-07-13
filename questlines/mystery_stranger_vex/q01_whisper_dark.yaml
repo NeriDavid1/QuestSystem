@@ -1,0 +1,27 @@
+quest:
+  id: q01_whisper_dark
+  name: "A Whisper in the Dark"
+  level_required: 15
+  giver_npc: vex
+  prerequisite: null
+  summary: "Vex appears at night and leaves you with a cryptic first task."
+
+rewards:
+  xp: 400
+  items:
+    - id: cryptic_note
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_whisper_intro
+
+  - type: reach_location
+    location_id: old_ruins_gate
+    radius: 5.0
+
+  - type: return_to_npc
+    npc_id: vex
+    dialogue_id: vex_whisper_complete
+    optional_flag: vex_arc_started

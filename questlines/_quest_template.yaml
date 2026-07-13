@@ -1,0 +1,24 @@
+# Copy this file when creating new quests in other questlines.
+# Rename to qXX_<snake_name>.yaml and fill in all TODO fields.
+# Delete this comment block when done.
+
+quest:
+  id: qXX_quest_id
+  name: "Quest Display Name"
+  level_required: 1
+  giver_npc: npc_id
+  prerequisite: null  # or qXX_previous_quest
+  summary: "One-line description for presenters and designers."
+  status: draft  # remove when complete
+
+rewards:
+  xp: 0
+  items: []
+    # - id: item_id
+    #   amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: npc_id
+    dialogue_id: npc_quest_start
+  # Add more steps using types from _registry/systems.yaml

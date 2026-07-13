@@ -1,0 +1,20 @@
+quest:
+  id: q09_merchants_gamble
+  name: "Merchant's Gamble"
+  level_required: 18
+  giver_npc: lina
+  prerequisite: q08_trade_route
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 620
+  items:
+    - id: gold_pouch
+      amount: 2
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q09_merchants_gamble_start
+  # TODO: define steps

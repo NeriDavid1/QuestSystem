@@ -1,0 +1,20 @@
+quest:
+  id: q07_rare_bloom
+  name: "Rare Bloom"
+  level_required: 14
+  giver_npc: elara
+  prerequisite: q06_alchemists_aid
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 500
+  items:
+    - id: moonpetal
+      amount: 5
+
+steps:
+  - type: talk_to_npc
+    npc_id: elara
+    dialogue_id: elara_q07_rare_bloom_start
+  # TODO: define steps

@@ -1,0 +1,20 @@
+quest:
+  id: q03_debt_collection
+  name: "Debt Collection"
+  level_required: 9
+  giver_npc: lina
+  prerequisite: q02_spice_run
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 250
+  items:
+    - id: trade_token
+      amount: 5
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q03_debt_collection_start
+  # TODO: define steps

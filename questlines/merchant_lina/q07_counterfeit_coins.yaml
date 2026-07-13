@@ -1,0 +1,20 @@
+quest:
+  id: q07_counterfeit_coins
+  name: "Counterfeit Coins"
+  level_required: 16
+  giver_npc: lina
+  prerequisite: q06_lost_shipment
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 520
+  items:
+    - id: trade_token
+      amount: 10
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q07_counterfeit_coins_start
+  # TODO: define steps

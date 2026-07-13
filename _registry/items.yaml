@@ -1,0 +1,47 @@
+# Item registry — used in quest rewards and collect/deliver steps.
+
+items:
+
+  # Blacksmith rewards
+  rusty_hammer: { name: "Rusty Hammer", type: tool }
+  iron_ore: { name: "Iron Ore", type: material }
+  steel_ingot: { name: "Steel Ingot", type: material }
+  master_forge_blueprint: { name: "Master Forge Blueprint", type: recipe }
+
+  # Merchant rewards
+  merchant_satchel: { name: "Merchant's Satchel", type: container }
+  trade_token: { name: "Trade Token", type: currency }
+  rare_spice: { name: "Rare Spice", type: material }
+  gold_pouch: { name: "Gold Pouch", type: currency }
+
+  # Guard rewards
+  guard_badge: { name: "Guard Badge", type: accessory }
+  patrol_map: { name: "Patrol Map", type: quest_item }
+  reinforced_shield: { name: "Reinforced Shield", type: armor }
+  captain_commendation: { name: "Captain's Commendation", type: quest_item }
+
+  # Herbalist rewards
+  healing_herb: { name: "Healing Herb", type: consumable }
+  alchemy_vial: { name: "Alchemy Vial", type: tool }
+  moonpetal: { name: "Moonpetal", type: material }
+  elixir_recipe: { name: "Elixir Recipe", type: recipe }
+
+  # Mystery stranger rewards
+  cryptic_note: { name: "Cryptic Note", type: quest_item }
+  shadow_key: { name: "Shadow Key", type: quest_item }
+  vex_sigil: { name: "Vex Sigil", type: accessory }
+  ancient_relic: { name: "Ancient Relic", type: quest_item }
+
+  # English Kingdom — letter collectibles
+  letter_a: { name: "Letter A", type: quest_item }
+  letter_b: { name: "Letter B", type: quest_item }
+  letter_c: { name: "Letter C", type: quest_item }
+  letter_d: { name: "Letter D", type: quest_item }
+  letter_e: { name: "Letter E", type: quest_item }
+  letter_f: { name: "Letter F", type: quest_item }
+  letter_g: { name: "Letter G", type: quest_item }
+  letter_h: { name: "Letter H", type: quest_item }
+  letter_i: { name: "Letter I", type: quest_item }
+  letter_j: { name: "Letter J", type: quest_item }
+  word_hero_badge: { name: "Word Hero Badge", type: accessory }
+  maya_homework: { name: "Maya's Homework", type: quest_item }

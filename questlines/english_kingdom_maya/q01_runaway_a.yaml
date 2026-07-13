@@ -1,0 +1,34 @@
+quest:
+  id: q01_runaway_a
+  name: "The Runaway A"
+  level_required: 1
+  giver_npc: teacher_maya
+  prerequisite: null
+  summary: "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!"
+
+rewards:
+  xp: 40
+  items:
+    - id: letter_a
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_welcome_runaway_a
+
+  - type: reach_location
+    location_id: classroom_chalkboard
+
+  - type: play_minigame
+    minigame_id: letter_drawing
+    difficulty: 1
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_a
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_a_caught

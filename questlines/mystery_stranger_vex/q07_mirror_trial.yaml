@@ -1,0 +1,18 @@
+quest:
+  id: q07_mirror_trial
+  name: "Mirror Trial"
+  level_required: 26
+  giver_npc: vex
+  prerequisite: q06_names_unspoken
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 840
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q07_mirror_trial_start
+  # TODO: define steps

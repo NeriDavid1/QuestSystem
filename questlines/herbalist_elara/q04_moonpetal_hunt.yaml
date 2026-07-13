@@ -1,0 +1,20 @@
+quest:
+  id: q04_moonpetal_hunt
+  name: "Moonpetal Hunt"
+  level_required: 9
+  giver_npc: elara
+  prerequisite: q03_poison_remedy
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 300
+  items:
+    - id: moonpetal
+      amount: 3
+
+steps:
+  - type: talk_to_npc
+    npc_id: elara
+    dialogue_id: elara_q04_moonpetal_hunt_start
+  # TODO: define steps

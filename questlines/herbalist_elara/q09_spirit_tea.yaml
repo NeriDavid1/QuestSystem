@@ -1,0 +1,20 @@
+quest:
+  id: q09_spirit_tea
+  name: "Spirit Tea"
+  level_required: 16
+  giver_npc: elara
+  prerequisite: q08_plague_cure
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 600
+  items:
+    - id: healing_herb
+      amount: 15
+
+steps:
+  - type: talk_to_npc
+    npc_id: elara
+    dialogue_id: elara_q09_spirit_tea_start
+  # TODO: define steps

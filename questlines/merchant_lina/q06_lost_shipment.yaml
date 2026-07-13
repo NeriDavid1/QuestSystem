@@ -1,0 +1,20 @@
+quest:
+  id: q06_lost_shipment
+  name: "The Lost Shipment"
+  level_required: 15
+  giver_npc: lina
+  prerequisite: q05_rare_import
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 480
+  items:
+    - id: gold_pouch
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q06_lost_shipment_start
+  # TODO: define steps

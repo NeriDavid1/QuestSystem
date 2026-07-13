@@ -1,0 +1,155 @@
+# Dialogue scripts for Teacher Maya — English Kingdom questline
+# Referenced by dialogue_id in quest steps
+
+dialogues:
+
+  maya_welcome_runaway_a:
+    speaker: teacher_maya
+    lines:
+      - "שלום! אני מאיה, מורת האנגלית של <strong>ממלכת האותיות</strong>!"
+      - "היום נלמד את האות הראשונה באלף-בית — <strong>A</strong>!"
+      - "אבל יש בעיה דחופה: האות <strong>A</strong> בורחת! היא חושבת שהיא מלכת כל האלף-בית."
+      - "לכו ללוח בכיתה, ציירו את האות <strong>A</strong>, ותפסו אותה לפני שהיא תעוף לשכונה הסמוכה!"
+
+  maya_a_caught:
+    speaker: teacher_maya
+    lines:
+      - "וואו! תפסתם את האות <strong>A</strong>! היא כבר לא בורחת."
+      - "מעולה! <strong>A</strong> היא האות הראשונה — כמו <strong>Apple</strong> (תפוח) ו-<strong>Ant</strong> (נמלה)."
+      - "קחו את האות <strong>A</strong> לתיק שלכם. מחר נמשיך לאות הבאה!"
+
+  maya_bee_stole_b:
+    speaker: teacher_maya
+    lines:
+      - "עזרה! דבורה שובבה גנבה את האות <strong>B</strong> מהשלט <strong>BEE</strong>!"
+      - "בלי <strong>B</strong>, הדבורים שוכחות איך לזמזם באנגלית — הן רק עושות 'zzz'."
+      - "לכו לשדרת האלף-בית, הביסו את רפש האותיות, וציירו את <strong>B</strong> מחדש!"
+
+  maya_bee_fixed:
+    speaker: teacher_maya
+    lines:
+      - "הדבורים חזרו לזמזם! <strong>BEE</strong> שוב נכתב נכון."
+      - "זכרו: <strong>B</strong> היא האות השנייה — כמו <strong>Ball</strong> (כדור) ו-<strong>Book</strong> (ספר)."
+      - "כל הכבוד! האות <strong>B</strong> שלכם."
+
+  maya_cat_squished_c:
+    speaker: teacher_maya
+    lines:
+      - "אוי לא! החתול שלי, <strong>Mittens</strong>, ישב על האות <strong>C</strong>!"
+      - "הוא כיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון' במקום <strong>C</strong>."
+      - "לכו לגן האותיות, ציירו את <strong>C</strong> מחדש, והביאו אותה אליי!"
+
+  maya_c_restored:
+    speaker: teacher_maya
+    lines:
+      - "תודה! האות <strong>C</strong> חזרה לצורה המקורית — עגולה ויפה."
+      - "<strong>Mittens</strong> מתנצל. הוא הבטיח שלא ישב על אותיות יותר."
+
+  maya_c_lesson_done:
+    speaker: teacher_maya
+    lines:
+      - "מצוין! <strong>C</strong> היא האות השלישית — כמו <strong>Cat</strong> (חתול) ו-<strong>Cake</strong> (עוגה)."
+      - "החתול שלי הוא דוגמה מושלמת ל-<strong>C</strong>!"
+
+  maya_dog_ate_d:
+    speaker: teacher_maya
+    lines:
+      - "הכלב שלי, <strong>Buddy</strong>, אכל את האות <strong>D</strong> משיעורי הבית!"
+      - "עכשיו המילה <strong>dog</strong> נראית כמו <strong>_og</strong> — והכלב עדיין מקיא אותיות!"
+      - "לכו לפינת כלבי הבית, שחקו בהתאמת מילים, ומצאו את <strong>D</strong> בבטן של <strong>Buddy</strong>."
+
+  maya_dog_sorry:
+    speaker: teacher_maya
+    lines:
+      - "<strong>Buddy</strong> מתנצל! הוא הבטיח לא לאכול אותיות יותר."
+      - "מעולה! <strong>D</strong> היא האות הרביעית — כמו <strong>Dog</strong> (כלב) ו-<strong>Door</strong> (דלת)."
+      - "המילה <strong>dog</strong> חזרה להיראות נכון!"
+
+  maya_giant_egg:
+    speaker: teacher_maya
+    lines:
+      - "יש ביצה ענקית שחוסמת את שער הגן!"
+      - "הביצה רוצה לשמוע את האות <strong>E</strong> לפני שהיא נפתחת."
+      - "לכו לשער הגן, סדרו את האותיות במשחק, ותנו לביצה את מה שהיא רוצה!"
+
+  maya_egg_hatched_e:
+    speaker: teacher_maya
+    lines:
+      - "הביצה נפתחה! ובפנים — לא תרנגולת, אלא האות <strong>E</strong>!"
+      - "כמו שחשבתי. <strong>E</strong> היא האות החמישית — כמו <strong>Egg</strong> (ביצה) ו-<strong>Elephant</strong> (פיל)."
+
+  maya_butterfly_f_chaos:
+    speaker: teacher_maya
+    lines:
+      - "פרפרים עם אות <strong>F</strong> על הכנפיים מסביב לגן!"
+      - "כל פעם שהם נוחתים על שלט, הם משנים אותו ל-<strong>FLY</strong> (לעוף) או <strong>FRY</strong> (לטגן)!"
+      - "הילדים בגן חושבים שצ'יפס יכול לעוף. עזרו לי — לכו לגן, הביסו את הרפש, וציירו את <strong>F</strong>!"
+
+  maya_butterflies_calm:
+    speaker: teacher_maya
+    lines:
+      - "הפרפרים נרגעו! השלטים חזרו להיות נכונים."
+      - "<strong>F</strong> היא האות השישית — כמו <strong>Fish</strong> (דג) ו-<strong>Fun</strong> (כיף)."
+      - "אבל לא <strong>Fry</strong> — צ'יפס לא אמור לעוף."
+
+  maya_genius_gate_locked:
+    speaker: teacher_maya
+    lines:
+      - "שער הגאון נעול! הוא אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו."
+      - "הוא מבקש את האות <strong>G</strong> ושלוש מילים קלות באנגלית."
+      - "לכו לשער הגאון, שחקו בהתאמת מילים, ותביאו לי את <strong>G</strong>!"
+
+  maya_gate_opens_g:
+    speaker: teacher_maya
+    lines:
+      - "השער נפתח! הוא אפילו אמר 'תודה' — גאון אמיתי."
+      - "האות <strong>G</strong> עשתה את הקסם."
+
+  maya_g_genius_done:
+    speaker: teacher_maya
+    lines:
+      - "מעולה! <strong>G</strong> היא האות השביעית — כמו <strong>Gate</strong> (שער) ו-<strong>Good</strong> (טוב)."
+      - "השער הגאון מבטיח שלא יינעל עליכם שוב."
+
+  maya_lost_hat_h:
+    speaker: teacher_maya
+    lines:
+      - "איבדתי את הכובע שלי! באנגלית זה <strong>HAT</strong>."
+      - "בלי האות <strong>H</strong>, הכובע הפך ל-<strong>_AT</strong> — וחתול שמח ישב עליו בגשם!"
+      - "לכו לכיכר הגשומה, סדרו את האותיות, ומצאו את <strong>H</strong>!"
+
+  maya_hat_found_h:
+    speaker: teacher_maya
+    lines:
+      - "מצאתם את <strong>H</strong>! הכובע שלי חזר — <strong>HAT</strong> ולא <strong>_AT</strong>."
+      - "<strong>H</strong> היא האות השמינית — כמו <strong>Hat</strong> (כובע) ו-<strong>House</strong> (בית)."
+      - "תודה! עכשיו אני לא רטובה."
+
+  maya_letter_island_chaos:
+    speaker: teacher_maya
+    lines:
+      - "על אי האותיות, כל האותיות שלמדנו מתערבבות בערבוביה!"
+      - "האי חושב ש-<strong>I</strong> נראית כמו המספר <strong>1</strong> — ובלבל את כולם."
+      - "לכו לאי, סדרו את הבלגן בהתאמת מילים ובסידור אותיות, ומצאו את <strong>I</strong>!"
+
+  maya_island_sorted:
+    speaker: teacher_maya
+    lines:
+      - "האי מסודר! <strong>I</strong> כבר לא נראית כמו <strong>1</strong>."
+      - "<strong>I</strong> היא האות התשיעית — כמו <strong>Ice</strong> (קרח) ו-<strong>Island</strong> (אי)."
+      - "נשארה רק אות אחת אחרונה לפני הסיום!"
+
+  maya_graduation_intro:
+    speaker: teacher_maya
+    lines:
+      - "הגעתם למבחן הסיום של ממלכת האנגלית!"
+      - "האות האחרונה היא <strong>J</strong> — כמו <strong>Jump</strong> (לקפוץ) ו-<strong>Joy</strong> (שמחה)."
+      - "לכו לכיכר ההד, ציירו את <strong>J</strong>, ואמרו אותה בקול רם!"
+      - "אני מבטיחה שאין מבחן הפתעה... (יש מבחן הפתעה.)"
+
+  maya_word_hero_graduation:
+    speaker: teacher_maya
+    lines:
+      - "מזל טוב! למדתם את האותיות <strong>A</strong> עד <strong>J</strong>!"
+      - "אתם רשמית <strong>גיבורי המילים</strong> של ממלכת האנגלית!"
+      - "קחו את תג הגיבור — וזכרו: כל מילה באנגלית מתחילה באות אחת מהאותיות שלמדתם."

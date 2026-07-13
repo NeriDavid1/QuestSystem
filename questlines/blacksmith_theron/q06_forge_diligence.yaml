@@ -1,0 +1,20 @@
+quest:
+  id: q06_forge_diligence
+  name: "Forge of Diligence"
+  level_required: 11
+  giver_npc: theron
+  prerequisite: q05_broken_blade
+  summary: "TODO: Complete a week of forge work (multi-step crafting arc)."
+  status: draft
+
+rewards:
+  xp: 420
+  items:
+    - id: steel_ingot
+      amount: 3
+
+steps:
+  - type: talk_to_npc
+    npc_id: theron
+    dialogue_id: theron_diligence_start
+  # TODO: define steps

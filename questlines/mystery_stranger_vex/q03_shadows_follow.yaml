@@ -1,0 +1,18 @@
+quest:
+  id: q03_shadows_follow
+  name: "Shadows Follow"
+  level_required: 19
+  giver_npc: vex
+  prerequisite: q02_hidden_door
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 560
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q03_shadows_follow_start
+  # TODO: define steps

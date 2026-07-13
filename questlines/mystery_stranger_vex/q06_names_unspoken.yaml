@@ -1,0 +1,20 @@
+quest:
+  id: q06_names_unspoken
+  name: "Names Unspoken"
+  level_required: 24
+  giver_npc: vex
+  prerequisite: q05_locked_chest
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 760
+  items:
+    - id: vex_sigil
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q06_names_unspoken_start
+  # TODO: define steps

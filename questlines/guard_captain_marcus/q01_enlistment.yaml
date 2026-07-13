@@ -1,0 +1,30 @@
+quest:
+  id: q01_enlistment
+  name: "Enlistment"
+  level_required: 10
+  giver_npc: marcus
+  prerequisite: null
+  summary: "Captain Marcus welcomes you to the guard and assigns first duty."
+
+rewards:
+  xp: 200
+  items:
+    - id: guard_badge
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_enlistment_oath
+
+  - type: reach_location
+    location_id: barracks_training_yard
+    radius: 8.0
+
+  - type: defeat_enemy
+    enemy_id: training_dummy
+    amount: 3
+
+  - type: return_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_enlistment_complete

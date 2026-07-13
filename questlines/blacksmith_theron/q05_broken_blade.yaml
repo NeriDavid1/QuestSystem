@@ -1,0 +1,18 @@
+quest:
+  id: q05_broken_blade
+  name: "The Broken Blade"
+  level_required: 9
+  giver_npc: theron
+  prerequisite: q04_steel_secrets
+  summary: "TODO: Repair a noble's broken blade."
+  status: draft
+
+rewards:
+  xp: 350
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: theron
+    dialogue_id: theron_broken_blade_start
+  # TODO: define steps

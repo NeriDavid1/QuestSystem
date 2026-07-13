@@ -1,0 +1,41 @@
+# Level curve reference for balancing quest requirements and XP rewards.
+
+level_curve:
+  description: "Suggested XP to reach each level (adjust per game design)"
+  xp_per_level:
+    1: 0
+    2: 100
+    3: 250
+    4: 450
+    5: 700
+    6: 1000
+    7: 1400
+    8: 1900
+    9: 2500
+    10: 3200
+    11: 4000
+    12: 5000
+    13: 6200
+    14: 7600
+    15: 9200
+    16: 11000
+    17: 13000
+    18: 15500
+    19: 18500
+    20: 22000
+    21: 26000
+    22: 30500
+    23: 35500
+    24: 41000
+    25: 47000
+    26: 53500
+    27: 60500
+    28: 68000
+    29: 76000
+    30: 85000
+
+reward_guidelines:
+  early_quest: { xp: "50–150", items: "1 basic" }
+  mid_quest: { xp: "150–400", items: "1–2 useful" }
+  late_quest: { xp: "400–800", items: "1 rare or recipe" }
+  finale_quest: { xp: "800+", items: "unique reward" }

@@ -1,0 +1,18 @@
+quest:
+  id: q05_swamp_samples
+  name: "Swamp Samples"
+  level_required: 11
+  giver_npc: elara
+  prerequisite: q04_moonpetal_hunt
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 380
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: elara
+    dialogue_id: elara_q05_swamp_samples_start
+  # TODO: define steps

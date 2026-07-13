@@ -1,0 +1,18 @@
+quest:
+  id: q06_arena_trial
+  name: "Arena Trial"
+  level_required: 19
+  giver_npc: marcus
+  prerequisite: q05_wall_breach
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 560
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q06_arena_trial_start
+  # TODO: define steps

@@ -1,0 +1,40 @@
+quest:
+  id: q07_genius_gate
+  name: "The Genius Gate"
+  level_required: 7
+  giver_npc: teacher_maya
+  prerequisite: q06_butterfly_chaos
+  summary: "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו."
+
+rewards:
+  xp: 180
+  items:
+    - id: letter_g
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_genius_gate_locked
+
+  - type: reach_location
+    location_id: genius_gate
+
+  - type: play_minigame
+    minigame_id: word_matching
+    difficulty: 3
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_g
+    amount: 1
+
+  - type: deliver_item
+    npc_id: teacher_maya
+    item_id: letter_g
+    amount: 1
+    dialogue_id: maya_gate_opens_g
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_g_genius_done

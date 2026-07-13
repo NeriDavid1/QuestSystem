@@ -1,0 +1,68 @@
+questline:
+  id: english_kingdom_maya
+  npc_id: teacher_maya
+  display_name: "English Kingdom — Letter Path"
+  theme: "English letters A–J (levels 1–10)"
+  quest_count: 10
+  level_range: [1, 10]
+
+quests:
+  - id: q01_runaway_a
+    name: "The Runaway A"
+    level: 1
+    prerequisite: null
+    rewards: { xp: 40, items: [{ id: letter_a, amount: 1 }] }
+
+  - id: q02_bee_bandit
+    name: "The Bee Bandit"
+    level: 2
+    prerequisite: q01_runaway_a
+    rewards: { xp: 60, items: [{ id: letter_b, amount: 1 }] }
+
+  - id: q03_cat_on_c
+    name: "Cat on the C"
+    level: 3
+    prerequisite: q02_bee_bandit
+    rewards: { xp: 80, items: [{ id: letter_c, amount: 1 }] }
+
+  - id: q04_dog_ate_homework
+    name: "The Dog Ate My D"
+    level: 4
+    prerequisite: q03_cat_on_c
+    rewards: { xp: 100, items: [{ id: letter_d, amount: 1 }] }
+
+  - id: q05_mystery_egg
+    name: "The Mystery Egg"
+    level: 5
+    prerequisite: q04_dog_ate_homework
+    rewards: { xp: 120, items: [{ id: letter_e, amount: 1 }] }
+
+  - id: q06_butterfly_chaos
+    name: "Butterfly Letter Chaos"
+    level: 6
+    prerequisite: q05_mystery_egg
+    rewards: { xp: 150, items: [{ id: letter_f, amount: 1 }] }
+
+  - id: q07_genius_gate
+    name: "The Genius Gate"
+    level: 7
+    prerequisite: q06_butterfly_chaos
+    rewards: { xp: 180, items: [{ id: letter_g, amount: 1 }] }
+
+  - id: q08_hat_hunt
+    name: "Maya's Lost Hat"
+    level: 8
+    prerequisite: q07_genius_gate
+    rewards: { xp: 220, items: [{ id: letter_h, amount: 1 }] }
+
+  - id: q09_letter_island
+    name: "Letter Island Mix-Up"
+    level: 9
+    prerequisite: q08_hat_hunt
+    rewards: { xp: 260, items: [{ id: letter_i, amount: 1 }] }
+
+  - id: q10_word_hero
+    name: "Word Hero Graduation"
+    level: 10
+    prerequisite: q09_letter_island
+    rewards: { xp: 350, items: [{ id: word_hero_badge, amount: 1 }] }

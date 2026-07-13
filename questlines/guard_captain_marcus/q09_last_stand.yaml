@@ -1,0 +1,18 @@
+quest:
+  id: q09_last_stand
+  name: "Last Stand"
+  level_required: 24
+  giver_npc: marcus
+  prerequisite: q08_siege_prep
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 780
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q09_last_stand_start
+  # TODO: define steps

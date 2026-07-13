@@ -1,0 +1,28 @@
+quest:
+  id: q01_healing_hands
+  name: "Healing Hands"
+  level_required: 3
+  giver_npc: elara
+  prerequisite: null
+  summary: "Elara asks you to gather basic herbs for healing salves."
+
+rewards:
+  xp: 80
+  items:
+    - id: healing_herb
+      amount: 5
+
+steps:
+  - type: talk_to_npc
+    npc_id: elara
+    dialogue_id: elara_healing_intro
+
+  - type: collect_item
+    item_id: healing_herb
+    amount: 5
+
+  - type: deliver_item
+    npc_id: elara
+    item_id: healing_herb
+    amount: 5
+    dialogue_id: elara_healing_complete

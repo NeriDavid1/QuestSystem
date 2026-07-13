@@ -1,0 +1,18 @@
+quest:
+  id: q05_locked_chest
+  name: "The Locked Chest"
+  level_required: 23
+  giver_npc: vex
+  prerequisite: q04_cryptic_map
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 720
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q05_locked_chest_start
+  # TODO: define steps

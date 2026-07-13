@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>מערכת משימות — מפה אינטראקטיבית</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0c0e14;
+      --surface: #141824;
+      --surface2: #1c2233;
+      --border: #2a3348;
+      --text: #eef1f8;
+      --muted: #8b95a8;
+      --accent: #6c8cff;
+      --radius: 16px;
+      --shadow: 0 12px 40px rgba(0,0,0,.45);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Heebo", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      text-align: right;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(108,140,255,.12), transparent),
+        radial-gradient(ellipse 60% 40% at 0% 100%, rgba(123,44,191,.08), transparent);
+    }
+
+    header {
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(20,24,36,.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .subtitle { color: var(--muted); font-size: .9rem; margin-top: .2rem; }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: .85rem;
+      font-size: .875rem;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb button {
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      font: inherit;
+      padding: .25rem .4rem;
+      border-radius: 6px;
+    }
+
+    .breadcrumb button:hover { background: rgba(108,140,255,.12); }
+    .breadcrumb .sep { color: var(--muted); }
+    .breadcrumb .current { color: var(--text); font-weight: 600; }
+
+    .stats {
+      display: flex;
+      gap: 1rem;
+      font-size: .8rem;
+      color: var(--muted);
+    }
+
+    .stats strong { color: var(--text); }
+
+    main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+
+    .questline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .questline-card {
+      --card-accent: var(--accent);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: transform .2s, border-color .2s, box-shadow .2s;
+      position: relative;
+      overflow: hidden;
+      text-align: right;
+      color: inherit;
+      font: inherit;
+      width: 100%;
+    }
+
+    .questline-card::before {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; left: 0;
+      height: 3px;
+      background: var(--card-accent);
+    }
+
+    .questline-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-accent);
+      box-shadow: var(--shadow);
+    }
+
+    .questline-card:active { transform: translateY(-1px); }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.6rem;
+      background: color-mix(in srgb, var(--card-accent) 18%, transparent);
+      margin-bottom: 1rem;
+    }
+
+    .card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: .25rem; }
+    .card-npc { color: var(--muted); font-size: .85rem; margin-bottom: .75rem; }
+    .card-theme { font-size: .9rem; line-height: 1.55; margin-bottom: 1rem; color: #b8c0d0; }
+
+    .card-meta {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      font-size: .75rem;
+      padding: .3rem .65rem;
+      border-radius: 999px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .pill.accent {
+      background: color-mix(in srgb, var(--card-accent) 15%, transparent);
+      border-color: color-mix(in srgb, var(--card-accent) 35%, transparent);
+      color: var(--card-accent);
+    }
+
+    .questline-layout {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .questline-layout { grid-template-columns: 1fr; }
+    }
+
+    .chain-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+
+    .chain-header { margin-bottom: 1.25rem; }
+    .chain-header h2 { font-size: 1.25rem; margin-bottom: .35rem; }
+    .chain-header p { color: var(--muted); font-size: .9rem; line-height: 1.55; }
+
+    .chain-scroll {
+      overflow-x: auto;
+      padding-bottom: .5rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .chain {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      min-width: min-content;
+      padding: .5rem 0;
+    }
+
+    .chain-arrow {
+      color: var(--muted);
+      font-size: 1.1rem;
+      padding: 0 .15rem;
+      flex-shrink: 0;
+      opacity: .5;
+    }
+
+    .quest-node {
+      --node-accent: var(--accent);
+      flex-shrink: 0;
+      width: 148px;
+      background: var(--surface2);
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem .85rem;
+      cursor: pointer;
+      transition: all .2s;
+      text-align: center;
+      color: inherit;
+      font: inherit;
+    }
+
+    .quest-node:hover {
+      border-color: var(--node-accent);
+      transform: scale(1.03);
+    }
+
+    .quest-node.selected {
+      border-color: var(--node-accent);
+      background: color-mix(in srgb, var(--node-accent) 12%, var(--surface2));
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--node-accent) 25%, transparent);
+    }
+
+    .quest-node.draft { opacity: .72; }
+    .quest-node.draft .node-status { display: inline-block; }
+
+    .node-level {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--node-accent);
+      margin-bottom: .4rem;
+    }
+
+    .node-name {
+      font-size: .82rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: .5rem;
+      min-height: 2.6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .node-xp {
+      font-size: .72rem;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .node-status {
+      display: none;
+      font-size: .65rem;
+      margin-top: .35rem;
+      color: #f4a261;
+    }
+
+    .detail-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+
+    .detail-empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 3rem 1rem;
+    }
+
+    .detail-empty .icon { font-size: 2.5rem; margin-bottom: .75rem; opacity: .5; }
+
+    .detail-header { margin-bottom: 1.25rem; }
+    .detail-header h3 { font-size: 1.2rem; margin-bottom: .35rem; }
+
+    .detail-summary {
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+
+    .reward-row {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+    }
+
+    .reward-chip {
+      font-size: .8rem;
+      padding: .4rem .75rem;
+      border-radius: 8px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+    }
+
+    .reward-chip.xp {
+      border-color: rgba(82,183,136,.4);
+      color: #52b788;
+    }
+
+    .steps-title {
+      font-size: .75rem;
+      color: var(--muted);
+      margin-bottom: .85rem;
+      font-weight: 600;
+    }
+
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step-item {
+      display: flex;
+      gap: .85rem;
+      position: relative;
+      padding-bottom: 1.1rem;
+    }
+
+    .step-item:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      right: 17px;
+      top: 36px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .step-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .step-body { flex: 1; min-width: 0; }
+
+    .step-type {
+      font-weight: 600;
+      font-size: .88rem;
+      margin-bottom: .2rem;
+    }
+
+    .step-desc {
+      font-size: .8rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .step-desc code {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .75rem;
+      background: var(--bg);
+      padding: .1rem .35rem;
+      border-radius: 4px;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .story-block {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .story-block-title {
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: .75rem;
+    }
+
+    .dialogue-block {
+      margin-top: .65rem;
+      background: rgba(0,0,0,.2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .75rem .85rem;
+    }
+
+    .dialogue-speaker {
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: .5rem;
+    }
+
+    .dialogue-lines {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+
+    .dialogue-line {
+      font-size: .82rem;
+      line-height: 1.55;
+      color: #d4dae8;
+      padding-right: .5rem;
+      border-right: 2px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    }
+
+    .dialogue-line strong {
+      color: #ffd166;
+      font-weight: 600;
+    }
+
+    .dialogue-missing {
+      font-size: .78rem;
+      color: #f4a261;
+      font-style: italic;
+    }
+
+    .minigame-block {
+      margin-top: .65rem;
+      background: rgba(82,183,136,.08);
+      border: 1px solid rgba(82,183,136,.35);
+      border-radius: 10px;
+      padding: .75rem .85rem;
+    }
+
+    .minigame-block-title {
+      font-size: .72rem;
+      font-weight: 600;
+      color: #52b788;
+      margin-bottom: .45rem;
+    }
+
+    .minigame-instruction {
+      font-size: .84rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: .55rem;
+      color: var(--text);
+    }
+
+    .minigame-tasks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+      margin-bottom: .55rem;
+    }
+
+    .minigame-task {
+      font-size: .8rem;
+      line-height: 1.5;
+      color: #c8d0dc;
+      padding-right: .65rem;
+      position: relative;
+    }
+
+    .minigame-task::before {
+      content: "▸";
+      position: absolute;
+      right: 0;
+      color: #52b788;
+      font-size: .7rem;
+    }
+
+    .minigame-task strong {
+      color: #ffd166;
+      font-weight: 600;
+    }
+
+    .minigame-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      font-size: .72rem;
+    }
+
+    .minigame-meta-chip {
+      padding: .2rem .5rem;
+      border-radius: 6px;
+      background: rgba(0,0,0,.25);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .minigame-meta-chip span {
+      color: #a8dadc;
+      font-weight: 600;
+    }
+
+    .minigame-missing {
+      font-size: .78rem;
+      color: #f4a261;
+      font-style: italic;
+    }
+
+    .draft-notice {
+      margin-top: 1rem;
+      padding: .75rem 1rem;
+      border-radius: 10px;
+      background: rgba(244,162,97,.1);
+      border: 1px solid rgba(244,162,97,.3);
+      color: #f4a261;
+      font-size: .82rem;
+      line-height: 1.5;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      margin-bottom: 1.25rem;
+      padding: .5rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
+      font-size: .875rem;
+    }
+
+    .back-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 600px) {
+      main { padding: 1rem; }
+      header { padding: 1rem; }
+      .quest-node { width: 130px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div>
+        <h1 id="page-title"></h1>
+        <p class="subtitle" id="page-subtitle"></p>
+      </div>
+      <div class="stats" id="global-stats"></div>
+    </div>
+    <nav class="breadcrumb" id="breadcrumb"></nav>
+  </header>
+
+  <main>
+    <section id="view-home"></section>
+    <section id="view-questline" class="hidden"></section>
+  </main>
+
+  <script>
+    const DATA = /*__QUEST_DATA__*/;
+    const UI = DATA.locale?.ui || {};
+    const STEP_LABELS = DATA.locale?.step_labels || {};
+    const FMT = DATA.locale?.step_formats || {};
+
+    const THEMES = {
+      blacksmith_theron: { accent: "#e85d04", icon: "🔨" },
+      merchant_lina: { accent: "#f4a261", icon: "💰" },
+      guard_captain_marcus: { accent: "#4895ef", icon: "🛡️" },
+      herbalist_elara: { accent: "#52b788", icon: "🌿" },
+      mystery_stranger_vex: { accent: "#c77dff", icon: "🌙" },
+      english_kingdom_maya: { accent: "#ffd166", icon: "🔤" },
+    };
+
+    const STEP_ICONS = {
+      talk_to_npc: "💬",
+      return_to_npc: "🔁",
+      play_minigame: "🎮",
+      collect_item: "📦",
+      deliver_item: "📫",
+      reach_location: "📍",
+      defeat_enemy: "⚔️",
+      wait_time: "⏳",
+    };
+
+    let state = { view: "home", questlineId: null, questId: null };
+
+    document.documentElement.lang = DATA.lang || "he";
+    document.documentElement.dir = DATA.dir || "rtl";
+    document.title = `${UI.title || "מערכת משימות"} — מפה אינטראקטיבית`;
+    document.getElementById("page-title").textContent = UI.title || "מערכת משימות";
+    document.getElementById("page-subtitle").textContent = UI.subtitle || "";
+
+    function npcName(id) {
+      return DATA.npcs?.[id]?.name || id;
+    }
+
+    function itemName(id) {
+      return DATA.items?.[id]?.name || id;
+    }
+
+    function minigameName(id) {
+      return DATA.minigames?.[id]?.name || id;
+    }
+
+    function locationName(id) {
+      return DATA.locations?.[id] || id;
+    }
+
+    function enemyName(id) {
+      return DATA.enemies?.[id] || id;
+    }
+
+    function getDialogue(id) {
+      return DATA.dialogues?.[id] || null;
+    }
+
+    function dialogueSpeaker(dialogue, fallbackNpcId) {
+      const speakerId = dialogue?.speaker || fallbackNpcId;
+      return speakerId ? npcName(speakerId) : "";
+    }
+
+    function renderDialogueHtml(dialogueId, fallbackNpcId) {
+      if (!dialogueId) return "";
+      const dlg = getDialogue(dialogueId);
+      if (!dlg?.lines?.length) {
+        return `<div class="dialogue-block"><div class="dialogue-missing">${UI.dialogue_missing || "דיאלוג טרם נכתב."} (<code>${dialogueId}</code>)</div></div>`;
+      }
+      const speaker = dialogueSpeaker(dlg, fallbackNpcId);
+      const lines = dlg.lines
+        .map((line) => `<li class="dialogue-line">${line}</li>`)
+        .join("");
+      return `
+        <div class="dialogue-block">
+          <div class="dialogue-speaker">${UI.npc_says || "אומר/ת"}: ${speaker}</div>
+          <ul class="dialogue-lines">${lines}</ul>
+        </div>`;
+    }
+
+    function questIntroDialogueId(quest) {
+      const talk = (quest.steps || []).find((s) => s.type === "talk_to_npc" && s.dialogue_id);
+      return talk?.dialogue_id || null;
+    }
+
+    function stepNpcId(step) {
+      return step.npc_id || null;
+    }
+
+    function renderMinigameBriefHtml(step) {
+      if (step.type !== "play_minigame") return "";
+      const brief = step.minigame_brief;
+      if (!brief) {
+        return `<div class="minigame-block"><div class="minigame-missing">${UI.minigame_missing || "תיאור טרם נכתב."} (<code>${step.minigame_id}</code>)</div></div>`;
+      }
+      const tasks = (brief.tasks || [])
+        .map((t) => `<li class="minigame-task">${t}</li>`)
+        .join("");
+      const meta = [];
+      if (brief.target) {
+        meta.push(`<span class="minigame-meta-chip">${UI.minigame_target || "מטרה"}: <span>${brief.target}</span></span>`);
+      }
+      if (brief.variant) {
+        meta.push(`<span class="minigame-meta-chip">${brief.variant}</span>`);
+      }
+      if (brief.success) {
+        meta.push(`<span class="minigame-meta-chip">${UI.minigame_success || "בהצלחה"}: <span>${brief.success}</span></span>`);
+      }
+      return `
+        <div class="minigame-block">
+          <div class="minigame-block-title">🎮 ${UI.minigame_goal || "מה השחקן עושה"}</div>
+          ${brief.instruction ? `<div class="minigame-instruction">${brief.instruction}</div>` : ""}
+          ${tasks ? `<ul class="minigame-tasks">${tasks}</ul>` : ""}
+          ${meta.length ? `<div class="minigame-meta">${meta.join("")}</div>` : ""}
+        </div>`;
+    }
+
+    function themeFor(id) {
+      return THEMES[id] || { accent: "#6c8cff", icon: "📜" };
+    }
+
+    function tpl(str, vars) {
+      return str.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? "");
+    }
+
+    function formatStep(step) {
+      const sep = UI.separator || " · ";
+      const parts = [];
+      switch (step.type) {
+        case "talk_to_npc":
+        case "return_to_npc":
+          parts.push(tpl(FMT.talk || "שיחה עם <strong>{npc}</strong>", { npc: npcName(step.npc_id) }));
+          break;
+        case "play_minigame":
+          parts.push(tpl(FMT.minigame || "<strong>{name}</strong> — {difficulty}", {
+            name: minigameName(step.minigame_id),
+            difficulty: `${UI.difficulty || "רמת קושי"} ${step.difficulty}`,
+          }));
+          break;
+        case "collect_item":
+          parts.push(tpl(FMT.collect || "אספו <strong>{item}</strong> ×{amount}", {
+            item: itemName(step.item_id),
+            amount: step.amount,
+          }));
+          break;
+        case "deliver_item":
+          parts.push(tpl(FMT.deliver || "מסרו <strong>{item}</strong> ×{amount} ל{npc}", {
+            item: itemName(step.item_id),
+            amount: step.amount,
+            npc: npcName(step.npc_id),
+          }));
+          break;
+        case "reach_location":
+          parts.push(tpl(FMT.location || "הגיעו ל<code>{id}</code>", { id: locationName(step.location_id) }));
+          break;
+        case "defeat_enemy":
+          parts.push(tpl(FMT.enemy || "הביסו <strong>{enemy}</strong> ×{amount}", {
+            enemy: enemyName(step.enemy_id),
+            amount: step.amount,
+          }));
+          break;
+        case "wait_time":
+          parts.push(tpl(FMT.wait || "המתינו {seconds} שניות", { seconds: step.seconds }));
+          break;
+        default:
+          parts.push(JSON.stringify(step));
+      }
+      return parts.join(sep);
+    }
+
+    function renderStats() {
+      const lines = DATA.questlines.length;
+      const quests = DATA.questlines.reduce((n, ql) => n + ql.quests.length, 0);
+      const complete = DATA.questlines.reduce(
+        (n, ql) => n + ql.quests.filter((q) => q.status !== "draft").length,
+        0
+      );
+      document.getElementById("global-stats").innerHTML = `
+        <span><strong>${lines}</strong> ${UI.quest_lines || "קווי משימות"}</span>
+        <span><strong>${quests}</strong> ${UI.quests || "משימות"}</span>
+        <span><strong>${complete}</strong> ${UI.designed || "מעוצבות"}</span>
+      `;
+    }
+
+    function renderBreadcrumb() {
+      const el = document.getElementById("breadcrumb");
+      const home = UI.all_quest_lines || "כל קווי המשימות";
+      if (state.view === "home") {
+        el.innerHTML = `<span class="current">${home}</span>`;
+        return;
+      }
+      const ql = DATA.questlines.find((q) => q.id === state.questlineId);
+      const quest = ql?.quests.find((q) => q.id === state.questId);
+      el.innerHTML = `
+        <button type="button" data-nav="home">${home}</button>
+        <span class="sep">›</span>
+        ${state.view === "questline" && !state.questId
+          ? `<span class="current">${ql?.displayName}</span>`
+          : `<button type="button" data-nav="questline">${ql?.displayName}</button>`}
+        ${quest ? `<span class="sep">›</span><span class="current">${quest.name}</span>` : ""}
+      `;
+      el.querySelectorAll("button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (btn.dataset.nav === "home") goHome();
+          if (btn.dataset.nav === "questline") openQuestline(state.questlineId);
+        });
+      });
+    }
+
+    function goHome() {
+      state = { view: "home", questlineId: null, questId: null };
+      document.getElementById("view-home").classList.remove("hidden");
+      document.getElementById("view-questline").classList.add("hidden");
+      renderBreadcrumb();
+      renderHome();
+    }
+
+    function openQuestline(id, questId = null) {
+      state = { view: "questline", questlineId: id, questId };
+      document.getElementById("view-home").classList.add("hidden");
+      document.getElementById("view-questline").classList.remove("hidden");
+      renderBreadcrumb();
+      renderQuestline();
+    }
+
+    function selectQuest(questId) {
+      state.questId = questId;
+      renderBreadcrumb();
+      renderQuestline();
+    }
+
+    function renderHome() {
+      const root = document.getElementById("view-home");
+      root.innerHTML = `<div class="questline-grid">${DATA.questlines
+        .map((ql) => {
+          const t = themeFor(ql.id);
+          const [minLv, maxLv] = ql.levelRange || [];
+          return `
+            <button type="button" class="questline-card" data-id="${ql.id}" style="--card-accent:${t.accent}">
+              <div class="card-icon">${t.icon}</div>
+              <div class="card-title">${ql.displayName}</div>
+              <div class="card-npc">${ql.npc.name} · ${ql.npc.title}</div>
+              <p class="card-theme">${ql.theme}</p>
+              <div class="card-meta">
+                <span class="pill accent">${ql.questCount} ${UI.quests_count || "משימות"}</span>
+                <span class="pill">${UI.level_range || "רמות"} ${minLv}–${maxLv}</span>
+                <span class="pill">${ql.npc.location}</span>
+              </div>
+            </button>`;
+        })
+        .join("")}</div>`;
+
+      root.querySelectorAll(".questline-card").forEach((card) => {
+        card.addEventListener("click", () => openQuestline(card.dataset.id));
+      });
+    }
+
+    function renderQuestDetail(ql, quest) {
+      if (!quest) {
+        return `
+          <div class="detail-empty">
+            <div class="icon">👆</div>
+            <p>${UI.click_quest_hint || "לחצו על משימה כדי לראות את השלבים."}</p>
+          </div>`;
+      }
+
+      const t = themeFor(ql.id);
+      const items = (quest.rewards?.items || [])
+        .map((i) => `<span class="reward-chip">${itemName(i.id)} ×${i.amount}</span>`)
+        .join("");
+      const xp = quest.rewards?.xp
+        ? `<span class="reward-chip xp">${quest.rewards.xp} ${UI.xp || "נק׳ ניסיון"}</span>`
+        : "";
+
+      const steps = (quest.steps || [])
+        .filter((s) => s && s.type)
+        .map(
+          (step, i) => {
+            const dialogueId = step.dialogue_id || null;
+            const dialogueHtml = dialogueId
+              ? renderDialogueHtml(dialogueId, stepNpcId(step))
+              : "";
+            const minigameHtml = step.type === "play_minigame"
+              ? renderMinigameBriefHtml(step)
+              : "";
+            return `
+          <li class="step-item">
+            <div class="step-icon">${STEP_ICONS[step.type] || "•"}</div>
+            <div class="step-body">
+              <div class="step-type">${i + 1}. ${STEP_LABELS[step.type] || step.type}</div>
+              <div class="step-desc">${formatStep(step)}</div>
+              ${minigameHtml}
+              ${dialogueHtml}
+            </div>
+          </li>`;
+          }
+        )
+        .join("");
+
+      const introId = questIntroDialogueId(quest);
+      const storyBlock = introId
+        ? `
+        <div class="story-block">
+          <div class="story-block-title">📖 ${UI.quest_story || "סיפור המשימה"}</div>
+          ${renderDialogueHtml(introId, ql.npcId)}
+        </div>`
+        : "";
+
+      const draft =
+        quest.status === "draft" || steps === ""
+          ? `<div class="draft-notice">⚠ ${UI.draft_notice || "טיוטה"}</div>`
+          : "";
+
+      return `
+        <div class="detail-header">
+          <div class="node-level" style="color:${t.accent}">${UI.level_short || "רמה"} ${quest.level}</div>
+          <h3>${quest.name}</h3>
+          <p class="detail-summary">${quest.summary || UI.no_summary || ""}</p>
+        </div>
+        ${storyBlock}
+        <div class="reward-row">${xp}${items || `<span class="reward-chip">${UI.no_items || "ללא פריטים"}</span>`}</div>
+        <div class="steps-title">${UI.quest_steps || "שלבי המשימה"}</div>
+        <ol class="steps-list">${steps || `<li class="step-item"><div class="step-body"><div class="step-desc">${UI.no_steps || ""}</div></div></li>`}</ol>
+        ${draft}`;
+    }
+
+    function renderQuestline() {
+      const ql = DATA.questlines.find((q) => q.id === state.questlineId);
+      if (!ql) return goHome();
+
+      const t = themeFor(ql.id);
+      const root = document.getElementById("view-questline");
+      const selected = ql.quests.find((q) => q.id === state.questId);
+
+      const chain = ql.quests
+        .map((q, i) => {
+          const sel = q.id === state.questId ? "selected" : "";
+          const draft = q.status === "draft" ? "draft" : "";
+          const arrow = i > 0 ? '<span class="chain-arrow">←</span>' : "";
+          return `${arrow}
+            <button type="button" class="quest-node ${sel} ${draft}" data-quest="${q.id}" style="--node-accent:${t.accent}">
+              <div class="node-level">${UI.level_short || "רמה"} ${q.level}</div>
+              <div class="node-name">${q.name}</div>
+              <div class="node-xp">${q.rewards?.xp || 0} ${UI.xp || "נק׳ ניסיון"}</div>
+              <div class="node-status">${UI.draft_badge || "טיוטה"}</div>
+            </button>`;
+        })
+        .join("");
+
+      root.innerHTML = `
+        <button type="button" class="back-btn" id="back-home">→ ${UI.back_to_all || "חזרה"}</button>
+        <div class="questline-layout">
+          <div class="chain-panel">
+            <div class="chain-header">
+              <h2>${t.icon} ${ql.displayName}</h2>
+              <p>${ql.npc.description}</p>
+            </div>
+            <div class="chain-scroll">
+              <div class="chain">${chain}</div>
+            </div>
+          </div>
+          <aside class="detail-panel" id="detail-panel">
+            ${renderQuestDetail(ql, selected)}
+          </aside>
+        </div>`;
+
+      document.getElementById("back-home").addEventListener("click", goHome);
+      root.querySelectorAll(".quest-node").forEach((node) => {
+        node.addEventListener("click", () => selectQuest(node.dataset.quest));
+      });
+    }
+
+    renderStats();
+    goHome();
+  </script>
+</body>
+</html>

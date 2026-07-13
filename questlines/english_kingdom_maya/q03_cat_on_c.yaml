@@ -1,0 +1,40 @@
+quest:
+  id: q03_cat_on_c
+  name: "Cat on the C"
+  level_required: 3
+  giver_npc: teacher_maya
+  prerequisite: q02_bee_bandit
+  summary: "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!"
+
+rewards:
+  xp: 80
+  items:
+    - id: letter_c
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_cat_squished_c
+
+  - type: reach_location
+    location_id: letter_garden
+
+  - type: play_minigame
+    minigame_id: letter_drawing
+    difficulty: 2
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_c
+    amount: 1
+
+  - type: deliver_item
+    npc_id: teacher_maya
+    item_id: letter_c
+    amount: 1
+    dialogue_id: maya_c_restored
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_c_lesson_done

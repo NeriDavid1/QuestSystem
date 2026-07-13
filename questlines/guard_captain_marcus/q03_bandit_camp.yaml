@@ -1,0 +1,18 @@
+quest:
+  id: q03_bandit_camp
+  name: "Bandit Camp"
+  level_required: 14
+  giver_npc: marcus
+  prerequisite: q02_night_patrol
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 380
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q03_bandit_camp_start
+  # TODO: define steps

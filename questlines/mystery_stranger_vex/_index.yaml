@@ -1,0 +1,68 @@
+questline:
+  id: mystery_stranger_vex
+  npc_id: vex
+  display_name: "Vex's Hidden Truth"
+  theme: "Mystery & revelation"
+  quest_count: 10
+  level_range: [15, 30]
+
+quests:
+  - id: q01_whisper_dark
+    name: "A Whisper in the Dark"
+    level: 15
+    prerequisite: null
+    rewards: { xp: 400, items: [{ id: cryptic_note, amount: 1 }] }
+
+  - id: q02_hidden_door
+    name: "The Hidden Door"
+    level: 17
+    prerequisite: q01_whisper_dark
+    rewards: { xp: 480, items: [{ id: shadow_key, amount: 1 }] }
+
+  - id: q03_shadows_follow
+    name: "Shadows Follow"
+    level: 19
+    prerequisite: q02_hidden_door
+    rewards: { xp: 560, items: [] }
+
+  - id: q04_cryptic_map
+    name: "Cryptic Map"
+    level: 21
+    prerequisite: q03_shadows_follow
+    rewards: { xp: 640, items: [{ id: cryptic_note, amount: 1 }] }
+
+  - id: q05_locked_chest
+    name: "The Locked Chest"
+    level: 23
+    prerequisite: q04_cryptic_map
+    rewards: { xp: 720, items: [] }
+
+  - id: q06_names_unspoken
+    name: "Names Unspoken"
+    level: 24
+    prerequisite: q05_locked_chest
+    rewards: { xp: 760, items: [{ id: vex_sigil, amount: 1 }] }
+
+  - id: q07_mirror_trial
+    name: "Mirror Trial"
+    level: 26
+    prerequisite: q06_names_unspoken
+    rewards: { xp: 840, items: [] }
+
+  - id: q08_sigil_vex
+    name: "Sigil of Vex"
+    level: 27
+    prerequisite: q07_mirror_trial
+    rewards: { xp: 880, items: [{ id: vex_sigil, amount: 1 }] }
+
+  - id: q09_other_side
+    name: "The Other Side"
+    level: 28
+    prerequisite: q08_sigil_vex
+    rewards: { xp: 920, items: [{ id: shadow_key, amount: 1 }] }
+
+  - id: q10_truth_revealed
+    name: "Truth Revealed"
+    level: 30
+    prerequisite: q09_other_side
+    rewards: { xp: 1200, items: [{ id: ancient_relic, amount: 1 }] }

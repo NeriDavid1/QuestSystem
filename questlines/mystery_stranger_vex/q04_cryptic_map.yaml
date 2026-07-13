@@ -1,0 +1,20 @@
+quest:
+  id: q04_cryptic_map
+  name: "Cryptic Map"
+  level_required: 21
+  giver_npc: vex
+  prerequisite: q03_shadows_follow
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 640
+  items:
+    - id: cryptic_note
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q04_cryptic_map_start
+  # TODO: define steps

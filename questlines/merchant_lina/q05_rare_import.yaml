@@ -1,0 +1,20 @@
+quest:
+  id: q05_rare_import
+  name: "Rare Import"
+  level_required: 13
+  giver_npc: lina
+  prerequisite: q04_market_rivals
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 400
+  items:
+    - id: rare_spice
+      amount: 5
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q05_rare_import_start
+  # TODO: define steps

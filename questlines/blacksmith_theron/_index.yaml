@@ -1,0 +1,68 @@
+questline:
+  id: blacksmith_theron
+  npc_id: theron
+  display_name: "Theron's Forge Path"
+  theme: "Crafting & mastery"
+  quest_count: 10
+  level_range: [1, 15]
+
+quests:
+  - id: q01_first_hammer
+    name: "First Hammer"
+    level: 1
+    prerequisite: null
+    rewards: { xp: 50, items: [{ id: rusty_hammer, amount: 1 }] }
+
+  - id: q02_iron_ore
+    name: "Iron in the Hills"
+    level: 3
+    prerequisite: q01_first_hammer
+    rewards: { xp: 120, items: [{ id: iron_ore, amount: 5 }] }
+
+  - id: q03_tempering_trial
+    name: "Tempering Trial"
+    level: 5
+    prerequisite: q02_iron_ore
+    rewards: { xp: 200, items: [{ id: iron_ore, amount: 3 }] }
+
+  - id: q04_steel_secrets
+    name: "Steel Secrets"
+    level: 7
+    prerequisite: q03_tempering_trial
+    rewards: { xp: 280, items: [{ id: steel_ingot, amount: 2 }] }
+
+  - id: q05_broken_blade
+    name: "The Broken Blade"
+    level: 9
+    prerequisite: q04_steel_secrets
+    rewards: { xp: 350, items: [] }
+
+  - id: q06_forge_diligence
+    name: "Forge of Diligence"
+    level: 11
+    prerequisite: q05_broken_blade
+    rewards: { xp: 420, items: [{ id: steel_ingot, amount: 3 }] }
+
+  - id: q07_rivals_anvil
+    name: "Rivals at the Anvil"
+    level: 12
+    prerequisite: q06_forge_diligence
+    rewards: { xp: 480, items: [] }
+
+  - id: q08_ore_deep
+    name: "Ore from the Deep"
+    level: 13
+    prerequisite: q07_rivals_anvil
+    rewards: { xp: 520, items: [{ id: iron_ore, amount: 10 }] }
+
+  - id: q09_masters_test
+    name: "Master's Test"
+    level: 14
+    prerequisite: q08_ore_deep
+    rewards: { xp: 600, items: [{ id: steel_ingot, amount: 5 }] }
+
+  - id: q10_legend_forge
+    name: "Legend of the Forge"
+    level: 15
+    prerequisite: q09_masters_test
+    rewards: { xp: 800, items: [{ id: master_forge_blueprint, amount: 1 }] }

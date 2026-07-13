@@ -1,0 +1,20 @@
+quest:
+  id: q02_night_patrol
+  name: "Night Patrol"
+  level_required: 12
+  giver_npc: marcus
+  prerequisite: q01_enlistment
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 300
+  items:
+    - id: patrol_map
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q02_night_patrol_start
+  # TODO: define steps

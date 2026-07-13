@@ -1,0 +1,20 @@
+quest:
+  id: q06_alchemists_aid
+  name: "Alchemist's Aid"
+  level_required: 12
+  giver_npc: elara
+  prerequisite: q05_swamp_samples
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 420
+  items:
+    - id: alchemy_vial
+      amount: 2
+
+steps:
+  - type: talk_to_npc
+    npc_id: elara
+    dialogue_id: elara_q06_alchemists_aid_start
+  # TODO: define steps

@@ -1,0 +1,20 @@
+quest:
+  id: q10_truth_revealed
+  name: "Truth Revealed"
+  level_required: 30
+  giver_npc: vex
+  prerequisite: q09_other_side
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 1200
+  items:
+    - id: ancient_relic
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q10_truth_revealed_start
+  # TODO: define steps

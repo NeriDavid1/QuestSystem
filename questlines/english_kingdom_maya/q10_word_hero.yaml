@@ -1,0 +1,39 @@
+quest:
+  id: q10_word_hero
+  name: "Word Hero Graduation"
+  level_required: 10
+  giver_npc: teacher_maya
+  prerequisite: q09_letter_island
+  summary: "מבחן הסיום בממלכת האנגלית! האות J היא האחרונה — אמורו אותה בקול, ותקבלו תג גיבור המילים. מאיה מבטיחה שאין מבחן פתעים... יש מבחן פתעים."
+
+rewards:
+  xp: 350
+  items:
+    - id: word_hero_badge
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_graduation_intro
+
+  - type: reach_location
+    location_id: echo_plaza
+
+  - type: play_minigame
+    minigame_id: letter_drawing
+    difficulty: 3
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 4
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_j
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_word_hero_graduation

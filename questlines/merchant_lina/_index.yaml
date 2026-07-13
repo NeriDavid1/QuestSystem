@@ -1,0 +1,68 @@
+questline:
+  id: merchant_lina
+  npc_id: lina
+  display_name: "Lina's Trade Route"
+  theme: "Commerce & negotiation"
+  quest_count: 10
+  level_range: [5, 20]
+
+quests:
+  - id: q01_first_sale
+    name: "First Sale"
+    level: 5
+    prerequisite: null
+    rewards: { xp: 100, items: [{ id: merchant_satchel, amount: 1 }] }
+
+  - id: q02_spice_run
+    name: "Spice Run"
+    level: 7
+    prerequisite: q01_first_sale
+    rewards: { xp: 180, items: [{ id: rare_spice, amount: 3 }] }
+
+  - id: q03_debt_collection
+    name: "Debt Collection"
+    level: 9
+    prerequisite: q02_spice_run
+    rewards: { xp: 250, items: [{ id: trade_token, amount: 5 }] }
+
+  - id: q04_market_rivals
+    name: "Market Rivals"
+    level: 11
+    prerequisite: q03_debt_collection
+    rewards: { xp: 320, items: [] }
+
+  - id: q05_rare_import
+    name: "Rare Import"
+    level: 13
+    prerequisite: q04_market_rivals
+    rewards: { xp: 400, items: [{ id: rare_spice, amount: 5 }] }
+
+  - id: q06_lost_shipment
+    name: "The Lost Shipment"
+    level: 15
+    prerequisite: q05_rare_import
+    rewards: { xp: 480, items: [{ id: gold_pouch, amount: 1 }] }
+
+  - id: q07_counterfeit_coins
+    name: "Counterfeit Coins"
+    level: 16
+    prerequisite: q06_lost_shipment
+    rewards: { xp: 520, items: [{ id: trade_token, amount: 10 }] }
+
+  - id: q08_trade_route
+    name: "Trade Route"
+    level: 17
+    prerequisite: q07_counterfeit_coins
+    rewards: { xp: 560, items: [] }
+
+  - id: q09_merchants_gamble
+    name: "Merchant's Gamble"
+    level: 18
+    prerequisite: q08_trade_route
+    rewards: { xp: 620, items: [{ id: gold_pouch, amount: 2 }] }
+
+  - id: q10_empire_trade
+    name: "Empire of Trade"
+    level: 20
+    prerequisite: q09_merchants_gamble
+    rewards: { xp: 900, items: [{ id: merchant_satchel, amount: 1 }, { id: gold_pouch, amount: 3 }] }

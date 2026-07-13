@@ -1,0 +1,139 @@
+# Per-step minigame player briefs — English Kingdom (Maya)
+# Keys: {quest_id}_s{step_index} (0-based step index in quest YAML)
+
+instances:
+
+  q01_runaway_a_s2:
+    instruction: "ציירו את האות A על הלוח בכיתה"
+    tasks:
+      - "הלוח מציג אות <strong>A</strong> מנוקדת עם הכיתוב: Draw the letter <strong>A</strong>"
+      - "עקבו אחרי הקו המנוקד עם האצבע או העכבר"
+      - "ציירו את האות <strong>A</strong> הגדולה (uppercase)"
+      - "לחצו ✓ Done כשסיימתם"
+    target: "A"
+    variant: "trace_guided"
+    success: "האות A נדלקת על הלוח — עכשיו אפשר לאסוף אותה"
+
+  q02_bee_bandit_s3:
+    instruction: "ציירו את האות B כדי לתקן את השלט BEE"
+    tasks:
+      - "השלט מראה <strong>_EE</strong> — האות B חסרה"
+      - "עקבו אחרי קו מנוקד של האות <strong>B</strong>"
+      - "ציירו את <strong>B</strong> על הלוח"
+      - "לחצו ✓ כשהאות נראית נכון"
+    target: "B"
+    variant: "trace_guided"
+    success: "השלט חוזר ל-<strong>BEE</strong> והדבורים יודעות שוב לזמזם"
+
+  q03_cat_on_c_s2:
+    instruction: "ציירו את האות C מחדש בגן האותיות"
+    tasks:
+      - "החתול כיווץ את <strong>C</strong> לצורת קרואסון — צריך לשחזר"
+      - "הלוח מציג קו מנוקד של <strong>C</strong> עגולה"
+      - "ציירו את האות <strong>C</strong> בזהירות"
+      - "לחצו ✓ Done"
+    target: "C"
+    variant: "trace_guided"
+    success: "האות C חזרה לצורה המקורית"
+
+  q04_dog_ate_homework_s2:
+    instruction: "מצאו את האות החסרה במילה dog"
+    tasks:
+      - "משמאל: אותיות בודדות (<strong>d</strong>, <strong>o</strong>, <strong>g</strong>...)"
+      - "מימין: מילים עם חור — למשל <strong>_og</strong>"
+      - "חברו כל אות למילה הנכונה: <strong>d</strong> → <strong>_og</strong> = <strong>dog</strong>"
+      - "השלימו את כל הזוגות הנכונים"
+    target: "dog (אות D)"
+    variant: "letter_to_gap"
+    success: "המילה dog נראית שוב שלמה — הכלב מפסיק להקיא אותיות"
+
+  q05_mystery_egg_s2:
+    instruction: "סדרו את האותיות כדי לפתוח את הביצה"
+    tasks:
+      - "הביצה רוצה לשמוע את האות <strong>E</strong>"
+      - "הוראה על המסך: תרשום <strong>egg</strong> (ביצה)"
+      - "גררו אותיות מהמאגר לשלושת המשבצות: <strong>e</strong>, <strong>g</strong>, <strong>g</strong>"
+      - "התעלמו מאותיות מסיחות (x, a...)"
+      - "לחצו ✓ Check"
+    target: "egg"
+    variant: "word_spelling"
+    success: "הביצה רוטטת ונפתחת — בפנים האות E!"
+
+  q06_butterfly_chaos_s3:
+    instruction: "ציירו את האות F כדי להרגיע את הפרפרים"
+    tasks:
+      - "הפרפרים משנים שלטים ל-<strong>FLY</strong> או <strong>FRY</strong>"
+      - "ציירו את האות <strong>F</strong> על הלוח בגן"
+      - "עקבו אחרי הקו המנוקד"
+      - "לחצו ✓ Done"
+    target: "F"
+    variant: "trace_guided"
+    success: "הפרפרים נוחתים בשקט — השלטים חוזרים ל-FLY הנכון"
+
+  q07_genius_gate_s2:
+    instruction: "התאימו מילים קלות לפתיחת שער הגאון"
+    tasks:
+      - "השער דורש את האות <strong>G</strong> ושלוש מילים באנגלית"
+      - "משמאל: מילים — <strong>gate</strong>, <strong>cat</strong>, <strong>dog</strong>"
+      - "מימין: תמונות של שער, חתול וכלב"
+      - "חברו כל מילה לתמונה הנכונה"
+      - "מצאו גם: איזו אות מתחילה את <strong>gate</strong>? (<strong>G</strong>)"
+    target: "G + gate, cat, dog"
+    variant: "word_to_image"
+    success: "השער הגאון נפתח (בקושי) ואומר תודה"
+
+  q08_hat_hunt_s2:
+    instruction: "סדרו את האותיות של המילה HAT"
+    tasks:
+      - "מאיה איבדה את הכובע — צריך לשחזר את המילה <strong>HAT</strong>"
+      - "הוראה: תרשום <strong>hat</strong> (כובע)"
+      - "גררו <strong>h</strong>, <strong>a</strong>, <strong>t</strong> לשלוש משבצות"
+      - "בחרו רק מהאותיות הנכונות מתוך המאגר"
+      - "לחצו ✓ Check"
+    target: "hat"
+    variant: "word_spelling"
+    success: "הכובע חוזר ל-HAT — החתול יורד ממנו"
+
+  q09_letter_island_s2:
+    instruction: "התאימו אותיות ומילים מעורבבות על האי"
+    tasks:
+      - "כל האותיות A–H מתערבבות — האי מבולבל"
+      - "חברו מילים לתמונות: <strong>cat</strong>↔חתול, <strong>dog</strong>↔כלב, <strong>hat</strong>↔כובע"
+      - "חברו אותיות לחורים: <strong>i</strong> לא נראית כמו <strong>1</strong>"
+      - "4 זוגות בסך הכל"
+    target: "אוצר מילים A–I"
+    variant: "word_to_image + letter_to_gap"
+    success: "האי מסודר — האותיות חוזרות למקומן"
+
+  q09_letter_island_s3:
+    instruction: "איישו את האות I במילה island"
+    tasks:
+      - "הוראה: תרשום <strong>island</strong> (אי)"
+      - "סדרו 6 אותיות: <strong>i</strong>, <strong>s</strong>, <strong>l</strong>, <strong>a</strong>, <strong>n</strong>, <strong>d</strong>"
+      - "התעלמו מ-3 אותיות מסיחות"
+      - "לחצו ✓ Check"
+    target: "island"
+    variant: "word_spelling"
+    success: "האי שמח — I כבר לא נראית כמו 1"
+
+  q10_word_hero_s2:
+    instruction: "ציירו את האות J — האות האחרונה"
+    tasks:
+      - "בכיכר ההד מופיעה האות <strong>J</strong> מנוקדת"
+      - "ציירו את <strong>J</strong> — יש לה קו קטן בתחתית"
+      - "מצב: ציור חופשי (בלי נקודות) — רמה 3"
+      - "לחצו ✓ Done"
+    target: "J"
+    variant: "free_draw"
+    success: "האות J נדלקת — נשאר רק לומר אותה בקול"
+
+  q10_word_hero_s3:
+    instruction: "אמרו את האות J בקול רם"
+    tasks:
+      - "על המסך: אמור באנגלית — <strong>J</strong>"
+      - "לחצו 🔊 Hear it כדי לשמוע את הצליל"
+      - "לחצו 🎤 Press and speak והגידו <strong>J</strong> (ג'י)"
+      - "המתינו שהמערכת תאשר את ההגייה"
+    target: "J"
+    variant: "single_letter"
+    success: "מזל טוב! אתם גיבורי המילים — A עד J שלמים!"

@@ -1,0 +1,20 @@
+quest:
+  id: q02_spice_run
+  name: "Spice Run"
+  level_required: 7
+  giver_npc: lina
+  prerequisite: q01_first_sale
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 180
+  items:
+    - id: rare_spice
+      amount: 3
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q02_spice_run_start
+  # TODO: define steps

@@ -1,0 +1,18 @@
+quest:
+  id: q04_market_rivals
+  name: "Market Rivals"
+  level_required: 11
+  giver_npc: lina
+  prerequisite: q03_debt_collection
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 320
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q04_market_rivals_start
+  # TODO: define steps

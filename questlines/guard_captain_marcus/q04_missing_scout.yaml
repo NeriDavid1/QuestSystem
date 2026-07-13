@@ -1,0 +1,20 @@
+quest:
+  id: q04_missing_scout
+  name: "Missing Scout"
+  level_required: 16
+  giver_npc: marcus
+  prerequisite: q03_bandit_camp
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 450
+  items:
+    - id: patrol_map
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q04_missing_scout_start
+  # TODO: define steps

@@ -1,0 +1,38 @@
+quest:
+  id: q02_bee_bandit
+  name: "The Bee Bandit"
+  level_required: 2
+  giver_npc: teacher_maya
+  prerequisite: q01_runaway_a
+  summary: "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!"
+
+rewards:
+  xp: 60
+  items:
+    - id: letter_b
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_bee_stole_b
+
+  - type: reach_location
+    location_id: alphabet_avenue
+
+  - type: defeat_enemy
+    enemy_id: letter_slime
+    amount: 1
+
+  - type: play_minigame
+    minigame_id: letter_drawing
+    difficulty: 1
+    success_required: true
+
+  - type: collect_item
+    item_id: letter_b
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: maya_bee_fixed

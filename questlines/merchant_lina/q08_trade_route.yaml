@@ -1,0 +1,18 @@
+quest:
+  id: q08_trade_route
+  name: "Trade Route"
+  level_required: 17
+  giver_npc: lina
+  prerequisite: q07_counterfeit_coins
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 560
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_q08_trade_route_start
+  # TODO: define steps

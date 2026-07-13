@@ -1,0 +1,68 @@
+questline:
+  id: guard_captain_marcus
+  npc_id: marcus
+  display_name: "Captain Marcus's Command"
+  theme: "Combat & duty"
+  quest_count: 10
+  level_range: [10, 25]
+
+quests:
+  - id: q01_enlistment
+    name: "Enlistment"
+    level: 10
+    prerequisite: null
+    rewards: { xp: 200, items: [{ id: guard_badge, amount: 1 }] }
+
+  - id: q02_night_patrol
+    name: "Night Patrol"
+    level: 12
+    prerequisite: q01_enlistment
+    rewards: { xp: 300, items: [{ id: patrol_map, amount: 1 }] }
+
+  - id: q03_bandit_camp
+    name: "Bandit Camp"
+    level: 14
+    prerequisite: q02_night_patrol
+    rewards: { xp: 380, items: [] }
+
+  - id: q04_missing_scout
+    name: "Missing Scout"
+    level: 16
+    prerequisite: q03_bandit_camp
+    rewards: { xp: 450, items: [{ id: patrol_map, amount: 1 }] }
+
+  - id: q05_wall_breach
+    name: "Wall Breach"
+    level: 18
+    prerequisite: q04_missing_scout
+    rewards: { xp: 520, items: [{ id: reinforced_shield, amount: 1 }] }
+
+  - id: q06_arena_trial
+    name: "Arena Trial"
+    level: 19
+    prerequisite: q05_wall_breach
+    rewards: { xp: 560, items: [] }
+
+  - id: q07_saboteur
+    name: "The Saboteur"
+    level: 21
+    prerequisite: q06_arena_trial
+    rewards: { xp: 640, items: [] }
+
+  - id: q08_siege_prep
+    name: "Siege Prep"
+    level: 22
+    prerequisite: q07_saboteur
+    rewards: { xp: 700, items: [{ id: reinforced_shield, amount: 1 }] }
+
+  - id: q09_last_stand
+    name: "Last Stand"
+    level: 24
+    prerequisite: q08_siege_prep
+    rewards: { xp: 780, items: [] }
+
+  - id: q10_captains_legacy
+    name: "Captain's Legacy"
+    level: 25
+    prerequisite: q09_last_stand
+    rewards: { xp: 1000, items: [{ id: captain_commendation, amount: 1 }] }

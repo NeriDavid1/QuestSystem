@@ -1,0 +1,32 @@
+quest:
+  id: q02_iron_ore
+  name: "Iron in the Hills"
+  level_required: 3
+  giver_npc: theron
+  prerequisite: q01_first_hammer
+  summary: "Gather iron ore from the hills north of the forge."
+
+rewards:
+  xp: 120
+  items:
+    - id: iron_ore
+      amount: 5
+
+steps:
+  - type: talk_to_npc
+    npc_id: theron
+    dialogue_id: theron_ore_request
+
+  - type: reach_location
+    location_id: iron_hills_mine
+    radius: 10.0
+
+  - type: collect_item
+    item_id: iron_ore
+    amount: 5
+
+  - type: deliver_item
+    npc_id: theron
+    item_id: iron_ore
+    amount: 5
+    dialogue_id: theron_ore_delivered

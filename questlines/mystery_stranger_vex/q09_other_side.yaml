@@ -1,0 +1,20 @@
+quest:
+  id: q09_other_side
+  name: "The Other Side"
+  level_required: 28
+  giver_npc: vex
+  prerequisite: q08_sigil_vex
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 920
+  items:
+    - id: shadow_key
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q09_other_side_start
+  # TODO: define steps

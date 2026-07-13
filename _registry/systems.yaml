@@ -1,0 +1,57 @@
+# Reusable quest step types.
+# AI and authors reference this file — do not duplicate step schemas in individual quests.
+
+step_types:
+
+  talk_to_npc:
+    description: Player initiates dialogue with an NPC
+    fields:
+      npc_id: { type: string, required: true, ref: npcs.yaml }
+      dialogue_id: { type: string, required: true, ref: "_registry/dialogues/" }
+      optional_flag: { type: string, required: false, description: "Sets a story flag after dialogue" }
+
+  return_to_npc:
+    description: Player returns to an NPC to turn in or continue
+    fields:
+      npc_id: { type: string, required: true, ref: npcs.yaml }
+      dialogue_id: { type: string, required: true, ref: "_registry/dialogues/" }
+
+  play_minigame:
+    description: Start and complete a minigame instance
+    fields:
+      minigame_id: { type: string, required: true, ref: minigames.yaml }
+      difficulty: { type: integer, required: true, min: 1, max: 10 }
+      success_required: { type: boolean, required: false, default: true }
+      instance_id: { type: string, required: false, ref: "_registry/minigame_instances/", description: "Override auto key {quest_id}_s{step_index}" }
+
+  collect_item:
+    description: Gather items from the world or drops
+    fields:
+      item_id: { type: string, required: true, ref: items.yaml }
+      amount: { type: integer, required: true, min: 1 }
+
+  deliver_item:
+    description: Bring items to an NPC
+    fields:
+      npc_id: { type: string, required: true, ref: npcs.yaml }
+      item_id: { type: string, required: true, ref: items.yaml }
+      amount: { type: integer, required: true, min: 1 }
+      dialogue_id: { type: string, required: false, ref: "_registry/dialogues/" }
+
+  reach_location:
+    description: Player must enter a trigger zone
+    fields:
+      location_id: { type: string, required: true }
+      radius: { type: float, required: false, default: 5.0 }
+
+  defeat_enemy:
+    description: Kill a specific enemy or enemy type
+    fields:
+      enemy_id: { type: string, required: true }
+      amount: { type: integer, required: true, min: 1 }
+
+  wait_time:
+    description: Real-time or in-game wait (use sparingly)
+    fields:
+      seconds: { type: integer, required: true }
+      in_game_hours: { type: integer, required: false }

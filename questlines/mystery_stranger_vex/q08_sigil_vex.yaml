@@ -1,0 +1,20 @@
+quest:
+  id: q08_sigil_vex
+  name: "Sigil of Vex"
+  level_required: 27
+  giver_npc: vex
+  prerequisite: q07_mirror_trial
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 880
+  items:
+    - id: vex_sigil
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q08_sigil_vex_start
+  # TODO: define steps

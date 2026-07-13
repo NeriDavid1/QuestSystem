@@ -1,0 +1,27 @@
+quest:
+  id: q01_first_sale
+  name: "First Sale"
+  level_required: 5
+  giver_npc: lina
+  prerequisite: null
+  summary: "Lina teaches you the basics of buying low and selling high."
+
+rewards:
+  xp: 100
+  items:
+    - id: merchant_satchel
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: lina
+    dialogue_id: lina_first_sale_intro
+
+  - type: play_minigame
+    minigame_id: market_haggle
+    difficulty: 2
+    success_required: true
+
+  - type: return_to_npc
+    npc_id: lina
+    dialogue_id: lina_first_sale_complete

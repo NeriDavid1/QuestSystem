@@ -1,0 +1,18 @@
+quest:
+  id: q08_plague_cure
+  name: "Plague Cure"
+  level_required: 15
+  giver_npc: elara
+  prerequisite: q07_rare_bloom
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 550
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: elara
+    dialogue_id: elara_q08_plague_cure_start
+  # TODO: define steps

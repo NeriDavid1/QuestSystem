@@ -1,0 +1,27 @@
+quest:
+  id: q03_tempering_trial
+  name: "Tempering Trial"
+  level_required: 5
+  giver_npc: theron
+  prerequisite: q02_iron_ore
+  summary: "Learn tempering by completing a harder forging minigame."
+
+rewards:
+  xp: 200
+  items:
+    - id: iron_ore
+      amount: 3
+
+steps:
+  - type: talk_to_npc
+    npc_id: theron
+    dialogue_id: theron_tempering_lesson
+
+  - type: play_minigame
+    minigame_id: tempering_forge
+    difficulty: 3
+    success_required: true
+
+  - type: return_to_npc
+    npc_id: theron
+    dialogue_id: theron_tempering_passed

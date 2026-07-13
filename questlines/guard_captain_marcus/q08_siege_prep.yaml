@@ -1,0 +1,20 @@
+quest:
+  id: q08_siege_prep
+  name: "Siege Prep"
+  level_required: 22
+  giver_npc: marcus
+  prerequisite: q07_saboteur
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 700
+  items:
+    - id: reinforced_shield
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q08_siege_prep_start
+  # TODO: define steps

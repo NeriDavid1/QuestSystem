@@ -1,0 +1,52 @@
+# English-learning minigame definitions.
+# Referenced by play_minigame steps via minigame_id.
+# Full design docs: presentation/english-learning/minigames/
+
+minigames:
+
+  letter_ordering:
+    name: "Letter Ordering"
+    category: spelling
+    description: "Arrange scrambled letter tiles in the correct order to spell a target English word."
+    english_focus: "Spelling, letter recognition, Hebrew-to-English word mapping"
+    difficulty_range: [1, 6]
+    variants:
+      - word_spelling          # תרשום כלב → d, o, g
+      - sound_to_letters       # what vowel does שש make? → sh
+    typical_trigger: [chest, gate, signpost, book, npc_object]
+
+  word_matching:
+    name: "Word Matching"
+    category: vocabulary
+    description: "Match English words or letter fragments to images or their missing pieces."
+    english_focus: "Vocabulary, word-picture association, missing-letter recognition"
+    difficulty_range: [1, 8]
+    variants:
+      - word_to_image          # dog ↔ photo of dog
+      - letter_to_gap          # o ↔ d_g
+      - word_to_translation    # dog ↔ כלב (optional, later levels)
+    typical_trigger: [chest, shelf, market_stall, puzzle_board, npc_object]
+
+  letter_drawing:
+    name: "Letter Drawing"
+    category: motor_skills
+    description: "Physically trace or draw an English letter on screen."
+    english_focus: "Letter formation, stroke order, uppercase/lowercase recognition"
+    difficulty_range: [1, 4]
+    variants:
+      - trace_guided           # dotted outline to follow
+      - free_draw              # blank canvas, validated by shape
+    typical_trigger: [chalkboard, sand_table, magic_slate, scroll]
+
+  speak_aloud:
+    name: "Speak Aloud"
+    category: pronunciation
+    description: "Say an English word or phrase into the microphone; speech recognition validates pronunciation."
+    english_focus: "Pronunciation, listening confidence, spoken production"
+    difficulty_range: [4, 10]
+    variants:
+      - single_word            # say "dog"
+      - short_phrase           # say "good morning"
+      - repeat_after_npc       # NPC says it, player repeats
+    typical_trigger: [npc, echo_crystal, magic_mirror, training_dummy]
+    requires_microphone: true

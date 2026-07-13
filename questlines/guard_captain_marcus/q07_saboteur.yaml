@@ -1,0 +1,18 @@
+quest:
+  id: q07_saboteur
+  name: "The Saboteur"
+  level_required: 21
+  giver_npc: marcus
+  prerequisite: q06_arena_trial
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 640
+  items: []
+
+steps:
+  - type: talk_to_npc
+    npc_id: marcus
+    dialogue_id: marcus_q07_saboteur_start
+  # TODO: define steps

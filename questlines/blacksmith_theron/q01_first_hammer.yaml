@@ -1,0 +1,27 @@
+quest:
+  id: q01_first_hammer
+  name: "First Hammer"
+  level_required: 1
+  giver_npc: theron
+  prerequisite: null
+  summary: "Theron introduces you to the forge and your first crafting lesson."
+
+rewards:
+  xp: 50
+  items:
+    - id: rusty_hammer
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: theron
+    dialogue_id: theron_intro_forge
+
+  - type: play_minigame
+    minigame_id: basic_forging
+    difficulty: 1
+    success_required: true
+
+  - type: return_to_npc
+    npc_id: theron
+    dialogue_id: theron_forge_complete

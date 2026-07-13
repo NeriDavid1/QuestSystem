@@ -1,0 +1,305 @@
+# תרגום עברית לתוכן המשימות — ממוזג בהצגה ובבנייה
+
+npcs:
+  theron:
+    name: "תרון"
+    title: "נפח"
+    location: "רובע הנפחים"
+    description: "אומן נפח שלומד אתכם יצירה דרך עבודה מעשית."
+  lina:
+    name: "לינה"
+    title: "סוחרת"
+    location: "כיכר השוק"
+    description: "סוחרת חדת עין שבוחנת אתכם בעסקאות ומשלוחים."
+  marcus:
+    name: "מרקוס"
+    title: "קפטן המשמר"
+    location: "מצודת העיר"
+    description: "חייל ותיק שמטיל עליכם משימות סיור ולחימה."
+  elara:
+    name: "אלארה"
+    title: "צמחית"
+    location: "שולי יער הערפל"
+    description: "מרפאה שולחת אתכם לאסוף צמחים נדירים."
+  vex:
+    name: "וקס"
+    title: "הזר"
+    location: "מיקום משתנה"
+    description: "דמות מסתורית עם קשת עלילה ארוכה."
+  teacher_maya:
+    name: "מאיה"
+    title: "מורת אנגלית"
+    location: "ממלכת האנגלית — כיכר האלף-בית"
+    description: "מורה עליזה שמלמדת אותיות ומילים בעזרת סיפורים מצחיקים."
+
+items:
+  rusty_hammer: { name: "פטיש חלוד" }
+  iron_ore: { name: "עפרת ברזל" }
+  steel_ingot: { name: "מטיל פלדה" }
+  master_forge_blueprint: { name: "שרטוט נפח מאסטר" }
+  merchant_satchel: { name: "תיק סוחר" }
+  trade_token: { name: "אסימון מסחר" }
+  rare_spice: { name: "תבלין נדיר" }
+  gold_pouch: { name: "שק זהב" }
+  guard_badge: { name: "תג שומר" }
+  patrol_map: { name: "מפת סיור" }
+  reinforced_shield: { name: "מגן מחוזק" }
+  captain_commendation: { name: "המלצת הקפטן" }
+  healing_herb: { name: "עשב מרפא" }
+  alchemy_vial: { name: "בקבוק אלכימיה" }
+  moonpetal: { name: "עלי כוכב" }
+  elixir_recipe: { name: "מתכון שיקוי" }
+  cryptic_note: { name: "פתק מסתורי" }
+  shadow_key: { name: "מפתח צללים" }
+  vex_sigil: { name: "חותם וקס" }
+  ancient_relic: { name: "שריד עתיק" }
+  letter_a: { name: "אות A" }
+  letter_b: { name: "אות B" }
+  letter_c: { name: "אות C" }
+  letter_d: { name: "אות D" }
+  letter_e: { name: "אות E" }
+  letter_f: { name: "אות F" }
+  letter_g: { name: "אות G" }
+  letter_h: { name: "אות H" }
+  letter_i: { name: "אות I" }
+  letter_j: { name: "אות J" }
+  word_hero_badge: { name: "תג גיבור המילים" }
+  maya_homework: { name: "שיעורי בית של מאיה" }
+
+minigames:
+  letter_ordering: { name: "סידור אותיות" }
+  word_matching: { name: "התאמת מילים" }
+  letter_drawing: { name: "ציור אותיות" }
+  speak_aloud: { name: "דיבור בקול" }
+  basic_forging: { name: "נפחות בסיסית" }
+  tempering_forge: { name: "נפחות טמפר" }
+  market_haggle: { name: "משא ומתן בשוק" }
+
+locations:
+  iron_hills_mine: "מכרה גבעות הברזל"
+  barracks_training_yard: "חצר האימונים"
+  old_ruins_gate: "שער החורבות העתיקות"
+  classroom_chalkboard: "לוח גיר בכיתה"
+  alphabet_avenue: "שדרת האלף-בית"
+  letter_garden: "גן האותיות"
+  dog_house_corner: "פינת בית הכלב"
+  garden_gate: "שער הגן"
+  genius_gate: "שער הגאון"
+  rainy_plaza: "כיכר הגשם"
+  letter_island: "אי האותיות"
+  echo_plaza: "כיכר ההד"
+
+enemies:
+  training_dummy: "בובת אימון"
+  letter_slime: "סליים אותיות"
+
+questlines:
+  blacksmith_theron:
+    display_name: "דרך הנפח של תרון"
+    theme: "יצירה ומיומנות"
+    quests:
+      q01_first_hammer:
+        name: "הפטיש הראשון"
+        summary: "תרון מציג אתכם לנפחייה ולשיעור היצירה הראשון."
+      q02_iron_ore:
+        name: "ברזל בגבעות"
+        summary: "אספו עפרת ברזל מהגבעות מצפון לנפחייה."
+      q03_tempering_trial:
+        name: "מבחן הטמפר"
+        summary: "למדו טמפר על ידי מיני-משחק נפחות מאתגר יותר."
+      q04_steel_secrets:
+        name: "סודות הפלדה"
+        summary: "תרון מלמד את סוד יצירת הפלדה."
+      q05_broken_blade:
+        name: "הלהב השבור"
+        summary: "תקנו את להב השבור של אציל."
+      q06_forge_diligence:
+        name: "נפחיית ההתמדה"
+        summary: "השלימו מחזור עבודה ארוך בנפחייה."
+      q07_rivals_anvil:
+        name: "יריבים על הסדן"
+        summary: "התחרו מול נפח יריב בתחרות נפחות."
+      q08_ore_deep:
+        name: "עפרה מהעומק"
+        summary: "הפיקו עפרה נדירה מהמכרות העמוקים."
+      q09_masters_test:
+        name: "מבחן המאסטר"
+        summary: "עברו את המבחן המעשי האחרון של תרון."
+      q10_legend_forge:
+        name: "אגדת הנפחייה"
+        summary: "חשלו פריט אגדי וזכו בשרטוט הנפח המאסטר."
+
+  merchant_lina:
+    display_name: "מסלול המסחר של לינה"
+    theme: "מסחר ומשא ומתן"
+    quests:
+      q01_first_sale:
+        name: "המכירה הראשונה"
+        summary: "לינה מלמדת אתכם לקנות בזול ולמכור ביוקר."
+      q02_spice_run:
+        name: "משלוח תבלינים"
+        summary: "הביאו תבלינים נדירים לשוק."
+      q03_debt_collection:
+        name: "גביית חוב"
+        summary: "אספו חוב מלקוח בחוב."
+      q04_market_rivals:
+        name: "יריבי השוק"
+        summary: "התמודדו עם סוחר מתחרה בכיכר."
+      q05_rare_import:
+        name: "ייבוא נדיר"
+        summary: "השגו סחורה מיובאת נדירה."
+      q06_lost_shipment:
+        name: "המשלוח האבוד"
+        summary: "אתרו משלוח שאבד בדרך."
+      q07_counterfeit_coins:
+        name: "מטבעות מזויפים"
+        summary: "חשפו פרשת מטבעות מזויפים בשוק."
+      q08_trade_route:
+        name: "נתיב מסחר"
+        summary: "פתחו נתיב מסחר חדש לעיר."
+      q09_merchants_gamble:
+        name: "ההימור של הסוחרת"
+        summary: "היכנסו להימור מסחרי מסוכן."
+      q10_empire_trade:
+        name: "אימפריית המסחר"
+        summary: "הפכו לשותפה המלאה של לינה במסחר."
+
+  guard_captain_marcus:
+    display_name: "פיקוד הקפטן מרקוס"
+    theme: "לחימה וחובה"
+    quests:
+      q01_enlistment:
+        name: "גיוס"
+        summary: "קפטן מרקוס מקבל אתכם למשמר ומטיל משימה ראשונה."
+      q02_night_patrol:
+        name: "סיור לילי"
+        summary: "סיירו בשכונות העיר בלילה."
+      q03_bandit_camp:
+        name: "מחנה שודדים"
+        summary: "טהרו מחנה שודדים מחוץ לעיר."
+      q04_missing_scout:
+        name: "הסייר הנעדר"
+        summary: "מצאו סייר שנעלם במשלחת."
+      q05_wall_breach:
+        name: "פרצה בחומה"
+        summary: "סגרו פרצה בחומת העיר."
+      q06_arena_trial:
+        name: "מבחן הזירה"
+        summary: "עברו מבחן קרב בזירה."
+      q07_saboteur:
+        name: "המשחית"
+        summary: "חשפו את המשחית שמאיים על העיר."
+      q08_siege_prep:
+        name: "הכנה למצור"
+        summary: "הכינו את העיר למצור צפוי."
+      q09_last_stand:
+        name: "העמדה האחרונה"
+        summary: "הגנו על העיר בקרב הכרעה."
+      q10_captains_legacy:
+        name: "מורשת הקפטן"
+        summary: "זכו בהכרתו המלאה של קפטן מרקוס."
+
+  herbalist_elara:
+    display_name: "שביל הגן של אלארה"
+    theme: "איסוף ואלכימיה"
+    quests:
+      q01_healing_hands:
+        name: "ידיים מרפאות"
+        summary: "אלארה מבקשת לאסוף עשבי מרפא למשחים."
+      q02_forest_herbs:
+        name: "עשבי היער"
+        summary: "אספו עשבים ביער הסמוך."
+      q03_poison_remedy:
+        name: "תרופת נגד רעל"
+        summary: "הכינו תרופה לנגד רעל."
+      q04_moonpetal_hunt:
+        name: "מצוד עלי הכוכב"
+        summary: "מצאו את עלי הכוכב הנדירים."
+      q05_swamp_samples:
+        name: "דגימות מהביצה"
+        summary: "אספו דגימות צמחים מהביצה."
+      q06_alchemists_aid:
+        name: "עזרה לאלכימאי"
+        summary: "סייעו לאלכימאי מקומי."
+      q07_rare_bloom:
+        name: "פריחה נדירה"
+        summary: "אתרו פרח נדיר שפורח לילה אחד בשנה."
+      q08_plague_cure:
+        name: "תרופת המגפה"
+        summary: "הכינו תרופה למגפה שפורסת בעיר."
+      q09_spirit_tea:
+        name: "תה הרוח"
+        summary: "אספו מרכיבים לתה מיוחד."
+      q10_elaras_secret:
+        name: "סודה של אלארה"
+        summary: "גלו את הסוד שאלארה מסתירה."
+
+  mystery_stranger_vex:
+    display_name: "האמת הנסתרת של וקס"
+    theme: "מסתורין וגילוי"
+    quests:
+      q01_whisper_dark:
+        name: "לחישה בחושך"
+        summary: "וקס מופיע בלילה ונותן לכם משימה מסתורית ראשונה."
+      q02_hidden_door:
+        name: "הדלת הנסתרת"
+        summary: "מצאו דלת נסתרת בחורבות העתיקות."
+      q03_shadows_follow:
+        name: "הצללים רודפים"
+        summary: "הימלטו מצללים שרודפים אחריכם."
+      q04_cryptic_map:
+        name: "מפה מסתורית"
+        summary: "פענחו מפה עם רמזים מוצפנים."
+      q05_locked_chest:
+        name: "התיבה הנעולה"
+        summary: "פתחו תיבה נעולה בעזרת הרמזים."
+      q06_names_unspoken:
+        name: "שמות שלא נאמרו"
+        summary: "גלו שמות שנאסרו לדבר עליהם."
+      q07_mirror_trial:
+        name: "מבחן המראה"
+        summary: "עברו מבחן מול מראה קסומה."
+      q08_sigil_vex:
+        name: "חותם וקס"
+        summary: "השלימו את חותם וקס העתיק."
+      q09_other_side:
+        name: "הצד השני"
+        summary: "חצו לעבר העולם שמעבר למראה."
+      q10_truth_revealed:
+        name: "האמת נחשפת"
+        summary: "גלו את האמת המלאה מאחורי וקס."
+
+  english_kingdom_maya:
+    display_name: "ממלכת האנגלית — מסלול האותיות"
+    theme: "לימוד אותיות A–J (רמות 1–10)"
+    quests:
+      q01_runaway_a:
+        name: "האות A הבורחת"
+        summary: "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא מלכת האלף-בית!"
+      q02_bee_bandit:
+        name: "דבורת השודדת"
+        summary: "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!"
+      q03_cat_on_c:
+        name: "חתול על ה-C"
+        summary: "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו קוראים לה 'כרוסון'!"
+      q04_dog_ate_homework:
+        name: "הכלב אכל את ה-D"
+        summary: "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו dog נראית כמו _og!"
+      q05_mystery_egg:
+        name: "הביצה המסתורית"
+        summary: "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת."
+      q06_butterfly_chaos:
+        name: "כאוס הפרפרים"
+        summary: "פרפרים עם אות F על הכנפיים משנים שלטים ל-FLY או FRY (צ'יפס מעופף)!"
+      q07_genius_gate:
+        name: "שער הגאון"
+        summary: "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות, אבל לא יודע לפתוח את עצמו."
+      q08_hat_hunt:
+        name: "ציד הכובע של מאיה"
+        summary: "מאיה איבדה את הכובע (HAT) — בלי H, הכובע הפך ל-_AT וחתול ישב עליו בגשם."
+      q09_letter_island:
+        name: "בלגן באי האותיות"
+        summary: "על אי האותיות הכל מתערבב — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן."
+      q10_word_hero:
+        name: "גיבור המילים"
+        summary: "מבחן הסיום! האות J היא האחרונה — אמורו אותה בקול וקבלו תג גיבור המילים."

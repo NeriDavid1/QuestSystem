@@ -1,0 +1,20 @@
+quest:
+  id: q02_hidden_door
+  name: "The Hidden Door"
+  level_required: 17
+  giver_npc: vex
+  prerequisite: q01_whisper_dark
+  summary: "TODO: Define quest story and objectives."
+  status: draft
+
+rewards:
+  xp: 480
+  items:
+    - id: shadow_key
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: vex
+    dialogue_id: vex_q02_hidden_door_start
+  # TODO: define steps
