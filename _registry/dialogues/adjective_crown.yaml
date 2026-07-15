@@ -9,12 +9,6 @@ dialogues:
       - "הגשר שלפנינו נעשה <strong>short</strong> — קצר מדי כדי לעבור."
       - "סדרו את האותיות של <strong>long</strong>, והקסם יאריך אותו."
 
-  adjective_knight_length_restored:
-    speaker: adjective_knight
-    lines:
-      - "הצלחתם! הגשר היה <strong>short</strong>, ועכשיו הוא <strong>long</strong>."
-      - "גביש האורך חזר, והדרך לממלכה שוב פתוחה."
-
   adjective_water_man_cold_stone:
     speaker: adjective_water_man
     lines:

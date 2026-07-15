@@ -548,13 +548,6 @@
         "סדרו את האותיות של <strong>long</strong>, והקסם יאריך אותו."
       ]
     },
-    "adjective_knight_length_restored": {
-      "speaker": "adjective_knight",
-      "lines": [
-        "הצלחתם! הגשר היה <strong>short</strong>, ועכשיו הוא <strong>long</strong>.",
-        "גביש האורך חזר, והדרך לממלכה שוב פתוחה."
-      ]
-    },
     "adjective_water_man_cold_stone": {
       "speaker": "adjective_water_man",
       "lines": [
@@ -1376,11 +1369,6 @@
               "type": "collect_item",
               "item_id": "length_crystal",
               "amount": 1
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_length_restored"
             }
           ]
         },

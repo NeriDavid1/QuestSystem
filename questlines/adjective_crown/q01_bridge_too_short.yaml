@@ -28,7 +28,3 @@ steps:
   - type: collect_item
     item_id: length_crystal
     amount: 1
-
-  - type: return_to_npc
-    npc_id: adjective_knight
-    dialogue_id: adjective_knight_length_restored
