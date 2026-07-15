@@ -32,6 +32,37 @@ npcs:
     location: "ממלכת האנגלית — כיכר האלף-בית"
     description: "מורה עליזה שמלמדת אותיות ומילים בעזרת סיפורים מצחיקים."
 
+  adjective_knight:
+    name: "האביר"
+    title: "שומר כתר התארים"
+    location: "ממלכת התארים — מחנה הכתר"
+    description: "אביר ללא שם שמבקש מגיבורים צעירים להשיב את גבישי כתר התארים."
+  adjective_village_chief:
+    name: "ראש הכפר"
+    title: "ראש הכפר"
+    location: "ממלכת התארים — שער הכפר"
+    description: "מנהיג הכפר שזקוק לעזרה כדי להפוך את הכניסה לבטוחה שוב."
+  adjective_water_man:
+    name: "איש המים"
+    title: "שומר המעיין"
+    location: "ממלכת התארים — המעיין הקפוא"
+    description: "האחראי על המעיינות ודרכי המים של הממלכה."
+  adjective_grandfather:
+    name: "סבא"
+    title: "שומר המעלית המלכותית"
+    location: "ממלכת התארים — המעלית המלכותית"
+    description: "סבא טוב לב שמפעיל את המעלית המלכותית כבר שנים רבות."
+  adjective_grandmother:
+    name: "סבתא"
+    title: "שומרת האחו"
+    location: "ממלכת התארים — אחו החיות"
+    description: "סבתא חמה ואוהבת שמטפלת בחיות שבאחו."
+  adjective_crazy_old_man:
+    name: "הזקן המשוגע"
+    title: "משקיף דרך המסחר"
+    location: "ממלכת התארים — דרך המסחר"
+    description: "זקן מוזר שמבחין בכל דבר משונה שמתרחש בדרך המסחר."
+
 items:
   rusty_hammer: { name: "פטיש חלוד" }
   iron_ore: { name: "עפרת ברזל" }
@@ -66,6 +97,17 @@ items:
   word_hero_badge: { name: "תג גיבור המילים" }
   maya_homework: { name: "שיעורי בית של מאיה" }
 
+  length_crystal: { name: "גביש האורך" }
+  warmth_crystal: { name: "גביש החום" }
+  weight_crystal: { name: "גביש המשקל" }
+  size_crystal: { name: "גביש הגודל" }
+  speed_crystal: { name: "גביש המהירות" }
+  description_crystal: { name: "גביש התיאור" }
+  crown_crystal: { name: "גביש הכתר" }
+  coin: { name: "מטבע" }
+  adjective_crown: { name: "כתר התארים" }
+  small_sheep: { name: "כבשה קטנה" }
+
 minigames:
   letter_ordering: { name: "סידור אותיות" }
   word_matching: { name: "התאמת מילים" }
@@ -89,11 +131,48 @@ locations:
   letter_island: "אי האותיות"
   echo_plaza: "כיכר ההד"
 
+  adjective_short_bridge: "הגשר הקצר"
+  adjective_frozen_spring: "המעיין הקפוא"
+  adjective_royal_lift: "המעלית המלכותית"
+  adjective_village_gate: "שער הכפר"
+  adjective_trade_road: "דרך המסחר"
+  adjective_mixed_meadow: "אחו החיות"
+  adjective_crown_shrine: "מקדש כתר התארים"
+
 enemies:
   training_dummy: "בובת אימון"
   letter_slime: "סליים אותיות"
 
+  adjective_small_zombie: "זומבי קטן"
+  adjective_small_guardian: "שומר קטן"
+
 questlines:
+  adjective_crown:
+    display_name: "כתר התארים"
+    theme: "קסם שמשנה את העולם בעזרת תארים באנגלית (רמות 1–10)"
+    quests:
+      q01_bridge_too_short:
+        name: "הגשר הקצר מדי"
+        summary: "האביר מלמד את השחקן לאיית LONG ולהאריך גשר קצר בדרך לגביש הראשון."
+      q02_whispering_stone:
+        name: "האבן הלוחשת"
+        summary: "אמרו HOT בקול כדי לחמם אבן קרה ולשחרר את גביש החום."
+      q03_matter_of_weight:
+        name: "עניין של משקל"
+        summary: "בחרו LIGHT כדי להרים משטח כבד ולהחזיר את המעלית המלכותית לפעולה."
+      q04_not_so_big_zombie:
+        name: "הזומבי שכבר לא גדול"
+        summary: "הפכו זומבי גדול לקטן, הביסו אותו ופתחו מחדש את שער הכפר."
+      q05_too_fast_to_catch:
+        name: "מהיר מכדי לתפוס"
+        summary: "אייתו ואמרו SLOW במהלך מרדף כדי לעצור גנב גבישים מהיר."
+      q06_five_small_sheep:
+        name: "חמש כבשים קטנות"
+        summary: "מצאו והובילו חמש small sheep מתוך שדה מלא בחיות דומות ומבלבלות."
+      q07_crystal_trial:
+        name: "מבחן הגבישים"
+        summary: "שלבו בחירה, איות, דיבור ולחימה כדי להשיב את הגביש האחרון ולתקן את כתר התארים."
+
   blacksmith_theron:
     display_name: "דרך הנפח של תרון"
     theme: "יצירה ומיומנות"

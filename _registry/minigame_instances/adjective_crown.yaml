@@ -1,0 +1,91 @@
+# Per-step minigame briefs — The Adjective Crown
+# Keys use {quest_id}_s{zero-based step index}.
+
+instances:
+  q01_bridge_too_short_s2:
+    instruction: "סדרו את האותיות כדי להפוך את הגשר ל־LONG"
+    tasks:
+      - "הגשר עכשיו <strong>short</strong> ואינו מגיע לצד השני"
+      - "גררו את האותיות למקומן: <strong>l, o, n, g</strong>"
+      - "צרו את המילה <strong>long</strong>"
+    target: "long"
+    variant: "word_spelling"
+    success: "הגשר מתארך ומגיע לצד השני"
+
+  q02_whispering_stone_s2:
+    instruction: "אמרו HOT כדי לחמם את האבן הקרה"
+    tasks:
+      - "הקשיבו להגייה של <strong>hot</strong>"
+      - "לחצו על המיקרופון ואמרו <strong>hot</strong>"
+      - "אפשר לנסות שוב ולקבל רמז בלי עונש"
+    target: "hot"
+    variant: "single_word"
+    success: "האבן מתחממת, הקרח נמס והמעיין חוזר לזרום"
+
+  q03_matter_of_weight_s2:
+    instruction: "סדרו את האותיות כדי להפוך את המשטח לקל"
+    tasks:
+      - "המשטח הוא <strong>heavy</strong> ואינו יכול לעלות"
+      - "גררו את האותיות: <strong>l, i, g, h, t</strong>"
+      - "צרו את המילה ההפוכה: <strong>light</strong>"
+    target: "light"
+    variant: "word_spelling"
+    success: "המשטח נעשה קל, עולה למעלה והמעלית חוזרת לפעול"
+
+  q04_not_so_big_zombie_s2:
+    instruction: "סדרו את האותיות כדי להקטין את הזומבי"
+    tasks:
+      - "הזומבי הוא <strong>big</strong> ואי אפשר לפגוע בו"
+      - "גררו את האותיות: <strong>s, m, a, l, l</strong>"
+      - "צרו את המילה ההפוכה: <strong>small</strong>"
+    target: "small"
+    variant: "word_spelling"
+    success: "הזומבי נעשה קטן ופגיע — עכשיו אפשר להילחם בו"
+
+  q05_too_fast_to_catch_s2:
+    instruction: "סדרו את האותיות כדי להאט את המפלצת"
+    tasks:
+      - "המפלצת היא <strong>fast</strong>"
+      - "גררו את האותיות: <strong>s, l, o, w</strong>"
+      - "צרו את המילה ההפוכה: <strong>slow</strong>"
+    target: "slow"
+    variant: "word_spelling"
+    success: "לחש ההאטה מוכן להפעלה בקול"
+
+  q05_too_fast_to_catch_s3:
+    instruction: "אמרו SLOW כדי להפעיל את הלחש"
+    tasks:
+      - "קראתם ואייתתם את המילה <strong>slow</strong>"
+      - "אמרו עכשיו <strong>slow</strong> בקול"
+    target: "slow"
+    variant: "single_word"
+    success: "המפלצת מאטה ואפשר להשיג אותה"
+
+  q07_crystal_trial_s2:
+    instruction: "התאימו בין התארים ההפוכים כדי להפעיל את המשטח"
+    tasks:
+      - "התאימו <strong>heavy</strong> אל <strong>light</strong>"
+      - "התאימו <strong>big</strong> אל <strong>small</strong>"
+      - "התאימו <strong>cold</strong> אל <strong>hot</strong>"
+    target: "heavy ↔ light, big ↔ small, cold ↔ hot"
+    variant: "word_to_translation"
+    success: "המשטח נעשה קל ועולה אל השלב הבא במקדש"
+
+  q07_crystal_trial_s3:
+    instruction: "סדרו את האותיות כדי להקטין את השומר"
+    tasks:
+      - "השומר הוא <strong>big</strong>"
+      - "סדרו <strong>s, m, a, l, l</strong>"
+      - "צרו את המילה ההפוכה: <strong>small</strong>"
+    target: "small"
+    variant: "word_spelling"
+    success: "השומר נעשה קטן ופגיע"
+
+  q07_crystal_trial_s5:
+    instruction: "אמרו HOT כדי להעיר את מקדש הכתר"
+    tasks:
+      - "המקדש הוא <strong>cold</strong>"
+      - "אמרו את המילה ההפוכה: <strong>hot</strong>"
+    target: "hot"
+    variant: "single_word"
+    success: "המקדש מתחמם והגביש האחרון מופיע"

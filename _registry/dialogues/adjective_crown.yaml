@@ -1,0 +1,97 @@
+# Dialogue scripts for The Adjective Crown questline
+
+dialogues:
+  adjective_knight_crown_intro:
+    speaker: adjective_knight
+    lines:
+      - "שלום, גיבור צעיר. אני האביר, שומר כתר התארים."
+      - "שבעת הגבישים של הכתר התפזרו, ובלעדיהם הקסם בממלכה משנה דברים בצורה הלא נכונה."
+      - "הגשר שלפנינו נעשה <strong>short</strong> — קצר מדי כדי לעבור."
+      - "סדרו את האותיות של <strong>long</strong>, והקסם יאריך אותו."
+
+  adjective_knight_length_restored:
+    speaker: adjective_knight
+    lines:
+      - "הצלחתם! הגשר היה <strong>short</strong>, ועכשיו הוא <strong>long</strong>."
+      - "גביש האורך חזר, והדרך לממלכה שוב פתוחה."
+
+  adjective_water_man_cold_stone:
+    speaker: adjective_water_man
+    lines:
+      - "הגביש הבא קפוא בתוך המעיין. האבן הקסומה נעשתה <strong>cold</strong>."
+      - "הקשיבו למילה <strong>hot</strong>, ואז אמרו אותה בקול כדי לחמם את האבן."
+
+  adjective_water_man_warmth_restored:
+    speaker: adjective_water_man
+    lines:
+      - "אמרתם <strong>hot</strong>, האבן התחממה והמים שוב זורמים."
+      - "גביש החום מאיר. אפשר להמשיך אל המעלית המלכותית."
+
+  adjective_grandfather_heavy_platform:
+    speaker: adjective_grandfather
+    lines:
+      - "המשטח נעשה <strong>heavy</strong> — כבד כל כך שהמעלית לא יכולה לעלות."
+      - "בחרו את התואר ההפוך. איזה תואר יהפוך אותו לקל?"
+
+  adjective_grandfather_weight_restored:
+    speaker: adjective_grandfather
+    lines:
+      - "נכון: ההפך מ־<strong>heavy</strong> הוא <strong>light</strong>."
+      - "המעלית שוב פועלת, ותושבי הממלכה יכולים להשתמש בה."
+
+  adjective_village_chief_big_zombie:
+    speaker: adjective_village_chief
+    lines:
+      - "זומבי <strong>big</strong> חוסם את שער הכפר. כל עוד הוא גדול, אי אפשר לפגוע בו."
+      - "בחרו את ההפך מ־<strong>big</strong>, שנו אותו, ואז הילחמו בו."
+
+  adjective_village_chief_size_restored:
+    speaker: adjective_village_chief
+    lines:
+      - "הפכתם את הזומבי מ־<strong>big</strong> ל־<strong>small</strong> והצלתם את הכפר."
+      - "גביש הגודל חזר למקומו והשער שוב בטוח."
+
+  adjective_crazy_old_man_fast_thief:
+    speaker: adjective_crazy_old_man
+    lines:
+      - "המפלצת לקחה את גביש המהירות! היא <strong>fast</strong> מדי ואי אפשר לתפוס אותה."
+      - "רדפו אחריה, סדרו את האותיות של <strong>slow</strong>, ואז אמרו את המילה בקול."
+
+  adjective_crazy_old_man_speed_restored:
+    speaker: adjective_crazy_old_man
+    lines:
+      - "אייתתם ואמרתם <strong>slow</strong>, והמפלצת האטה."
+      - "גביש המהירות בידינו ודרך המסחר שוב בטוחה."
+
+  adjective_grandmother_five_small_sheep:
+    speaker: adjective_grandmother
+    lines:
+      - "אני צריך בדיוק חמש <strong>small sheep</strong>."
+      - "בשדה יש גם כבשים ענקיות ופרות קטנות. חפשו חיות שהן גם <strong>small</strong> וגם <strong>sheep</strong>."
+      - "בחרתם כבשה ענקית? זאת sheep, אבל היא לא small. בחרתם פרה קטנה? היא small, אבל היא לא sheep."
+
+  adjective_grandmother_flock_complete:
+    speaker: adjective_grandmother
+    lines:
+      - "אחת, שתיים, שלוש, ארבע, חמש — בדיוק חמש <strong>small sheep</strong>!"
+      - "הנה גביש התיאור. בזכותכם העדר והשדה שוב מסודרים."
+
+  adjective_grandmother_description_restored:
+    speaker: adjective_grandmother
+    lines:
+      - "מצאתם את החיות הנכונות לפי שתי המילים: <strong>small sheep</strong>."
+      - "שישה גבישים חזרו. הגביש האחרון מחכה במקדש הכתר."
+
+  adjective_knight_final_trial:
+    speaker: adjective_knight
+    lines:
+      - "מקדש הכתר ייפתח רק למי שבאמת שולט בקסם התארים."
+      - "השתמשו במה שלמדתם: הפכו heavy ל־light, big ל־small, ו־cold ל־hot."
+      - "האתגרים קצרים, אבל הפעם תצטרכו לזכור לבד."
+
+  adjective_knight_crown_restored:
+    speaker: adjective_knight
+    lines:
+      - "שבעת הגבישים חזרו, וכתר התארים שוב מאיר!"
+      - "שיניתם גשר, אבן, משטח ומפלצות — ועזרתם לכל הממלכה."
+      - "קבלו עשרה מטבעות על השירות שלכם. יום אחד אולי תזכו גם לענוד את הכתר בעצמכם."

@@ -1,0 +1,50 @@
+quest:
+  id: q07_crystal_trial
+  name: "The Crystal Trial"
+  level_required: 10
+  giver_npc: adjective_knight
+  prerequisite: q06_five_small_sheep
+  summary: "The player combines adjective choices, spelling, speech, and combat to restore the Adjective Crown."
+
+rewards:
+  xp: 350
+  items:
+    - id: crown_crystal
+      amount: 1
+    - id: coin
+      amount: 10
+
+steps:
+  - type: talk_to_npc
+    npc_id: adjective_knight
+    dialogue_id: adjective_knight_final_trial
+
+  - type: reach_location
+    location_id: adjective_crown_shrine
+
+  - type: play_minigame
+    minigame_id: word_matching
+    difficulty: 3
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 4
+    success_required: true
+
+  - type: defeat_enemy
+    enemy_id: adjective_small_guardian
+    amount: 1
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 4
+    success_required: true
+
+  - type: collect_item
+    item_id: crown_crystal
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: adjective_knight
+    dialogue_id: adjective_knight_crown_restored

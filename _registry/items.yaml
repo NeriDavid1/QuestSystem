@@ -45,3 +45,15 @@ items:
   letter_j: { name: "Letter J", type: quest_item }
   word_hero_badge: { name: "Word Hero Badge", type: accessory }
   maya_homework: { name: "Maya's Homework", type: quest_item }
+
+  # Adjective Crown questline
+  length_crystal: { name: "Crystal of Length", type: quest_item }
+  warmth_crystal: { name: "Crystal of Warmth", type: quest_item }
+  weight_crystal: { name: "Crystal of Weight", type: quest_item }
+  size_crystal: { name: "Crystal of Size", type: quest_item }
+  speed_crystal: { name: "Crystal of Speed", type: quest_item }
+  description_crystal: { name: "Crystal of Description", type: quest_item }
+  crown_crystal: { name: "Crown Crystal", type: quest_item }
+  coin: { name: "Coin", type: currency }
+  adjective_crown: { name: "Adjective Crown", type: future_reward }
+  small_sheep: { name: "Small Sheep", type: quest_target }

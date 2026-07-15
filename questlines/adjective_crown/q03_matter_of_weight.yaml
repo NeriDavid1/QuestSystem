@@ -1,0 +1,34 @@
+quest:
+  id: q03_matter_of_weight
+  name: "A Matter of Weight"
+  level_required: 4
+  giver_npc: adjective_grandfather
+  prerequisite: q02_whispering_stone
+  summary: "The player chooses LIGHT from adjective runes to raise a heavy platform and restore the royal lift."
+
+rewards:
+  xp: 100
+  items:
+    - id: weight_crystal
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: adjective_grandfather
+    dialogue_id: adjective_grandfather_heavy_platform
+
+  - type: reach_location
+    location_id: adjective_royal_lift
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+
+  - type: collect_item
+    item_id: weight_crystal
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: adjective_grandfather
+    dialogue_id: adjective_grandfather_weight_restored

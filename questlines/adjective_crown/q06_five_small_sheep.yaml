@@ -1,0 +1,39 @@
+quest:
+  id: q06_five_small_sheep
+  name: "Five Small Sheep"
+  level_required: 8
+  giver_npc: adjective_grandmother
+  prerequisite: q05_too_fast_to_catch
+  summary: "The player identifies and herds five small sheep from a field of misleading animal combinations."
+
+rewards:
+  xp: 225
+  items:
+    - id: description_crystal
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: adjective_grandmother
+    dialogue_id: adjective_grandmother_five_small_sheep
+
+  - type: reach_location
+    location_id: adjective_mixed_meadow
+
+  - type: collect_item
+    item_id: small_sheep
+    amount: 5
+
+  - type: deliver_item
+    npc_id: adjective_grandmother
+    item_id: small_sheep
+    amount: 5
+    dialogue_id: adjective_grandmother_flock_complete
+
+  - type: collect_item
+    item_id: description_crystal
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: adjective_grandmother
+    dialogue_id: adjective_grandmother_description_restored
