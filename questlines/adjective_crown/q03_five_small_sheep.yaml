@@ -1,9 +1,9 @@
 quest:
-  id: q06_five_small_sheep
+  id: q03_five_small_sheep
   name: "Five Small Sheep"
   level_required: 8
   giver_npc: adjective_grandmother
-  prerequisite: q05_too_fast_to_catch
+  prerequisite: q02_bridge_too_short
   summary: "The player identifies and herds five small sheep from a field of misleading animal combinations."
 
 rewards:

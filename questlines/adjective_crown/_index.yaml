@@ -7,46 +7,46 @@ questline:
   level_range: [1, 10]
 
 quests:
-  - id: q01_bridge_too_short
-    name: "The Bridge Too Short"
-    level: 1
-    prerequisite: null
-    rewards: { xp: 50, items: [{ id: length_crystal, amount: 1 }] }
-
-  - id: q02_whispering_stone
+  - id: q01_whispering_stone
     name: "The Whispering Stone"
     level: 2
-    prerequisite: q01_bridge_too_short
+    prerequisite: null
     rewards: { xp: 75, items: [{ id: warmth_crystal, amount: 1 }] }
 
-  - id: q03_matter_of_weight
-    name: "A Matter of Weight"
-    level: 4
-    prerequisite: q02_whispering_stone
-    rewards: { xp: 100, items: [{ id: weight_crystal, amount: 1 }] }
+  - id: q02_bridge_too_short
+    name: "The Bridge Is Too Short"
+    level: 1
+    prerequisite: q01_whispering_stone
+    rewards: { xp: 50, items: [{ id: length_crystal, amount: 1 }] }
 
-  - id: q04_not_so_big_zombie
-    name: "The Not-So-Big Zombie"
+  - id: q03_five_small_sheep
+    name: "Five Small Sheep"
+    level: 8
+    prerequisite: q02_bridge_too_short
+    rewards: { xp: 225, items: [{ id: description_crystal, amount: 1 }] }
+
+  - id: q04_giant_zombie
+    name: "The Giant Zombie"
     level: 5
-    prerequisite: q03_matter_of_weight
+    prerequisite: q03_five_small_sheep
     rewards: { xp: 125, items: [{ id: size_crystal, amount: 1 }] }
 
   - id: q05_too_fast_to_catch
     name: "Too Fast to Catch"
     level: 7
-    prerequisite: q04_not_so_big_zombie
+    prerequisite: q04_giant_zombie
     rewards: { xp: 175, items: [{ id: speed_crystal, amount: 1 }] }
 
-  - id: q06_five_small_sheep
-    name: "Five Small Sheep"
-    level: 8
+  - id: q06_something_about_the_weight
+    name: "Something About The Weight"
+    level: 4
     prerequisite: q05_too_fast_to_catch
-    rewards: { xp: 225, items: [{ id: description_crystal, amount: 1 }] }
+    rewards: { xp: 100, items: [{ id: weight_crystal, amount: 1 }] }
 
-  - id: q07_crystal_trial
-    name: "The Crystal Trial"
+  - id: q07_crystal_test
+    name: "The Crystal Test"
     level: 10
-    prerequisite: q06_five_small_sheep
+    prerequisite: q06_something_about_the_weight
     rewards:
       xp: 350
       items:

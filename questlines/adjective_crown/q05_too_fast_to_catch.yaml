@@ -3,7 +3,7 @@ quest:
   name: "Too Fast to Catch"
   level_required: 7
   giver_npc: adjective_crazy_old_man
-  prerequisite: q04_not_so_big_zombie
+  prerequisite: q04_giant_zombie
   summary: "The player spells and says SLOW during a chase to stop a fast crystal thief."
 
 rewards:

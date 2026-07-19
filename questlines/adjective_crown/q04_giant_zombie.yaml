@@ -1,9 +1,9 @@
 quest:
-  id: q04_not_so_big_zombie
-  name: "The Not-So-Big Zombie"
+  id: q04_giant_zombie
+  name: "The Giant Zombie"
   level_required: 5
   giver_npc: adjective_village_chief
-  prerequisite: q03_matter_of_weight
+  prerequisite: q03_five_small_sheep
   summary: "The player changes a big invulnerable zombie into a small zombie, then defeats it to reopen the village."
 
 rewards:

@@ -1,9 +1,9 @@
 quest:
-  id: q07_crystal_trial
-  name: "The Crystal Trial"
+  id: q07_crystal_test
+  name: "The Crystal Test"
   level_required: 10
   giver_npc: adjective_knight
-  prerequisite: q06_five_small_sheep
+  prerequisite: q06_something_about_the_weight
   summary: "The player combines adjective choices, spelling, speech, and combat to restore the Adjective Crown."
 
 rewards:

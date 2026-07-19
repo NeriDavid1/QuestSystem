@@ -1323,60 +1323,10 @@
       },
       "quests": [
         {
-          "id": "q01_bridge_too_short",
-          "name": "הגשר הקצר מדי",
-          "level": 1,
-          "prerequisite": null,
-          "summary": "האביר מלמד את השחקן לאיית LONG ולהאריך גשר קצר בדרך לגביש הראשון.",
-          "status": "complete",
-          "rewards": {
-            "xp": 50,
-            "items": [
-              {
-                "id": "length_crystal",
-                "amount": 1
-              }
-            ]
-          },
-          "steps": [
-            {
-              "type": "talk_to_npc",
-              "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_crown_intro"
-            },
-            {
-              "type": "reach_location",
-              "location_id": "adjective_short_bridge"
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 1,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות כדי להפוך את הגשר ל־LONG",
-                "tasks": [
-                  "הגשר עכשיו <strong>short</strong> ואינו מגיע לצד השני",
-                  "גררו את האותיות למקומן: <strong>l, o, n, g</strong>",
-                  "צרו את המילה <strong>long</strong>"
-                ],
-                "target": "long",
-                "variant": "word_spelling",
-                "success": "הגשר מתארך ומגיע לצד השני"
-              }
-            },
-            {
-              "type": "collect_item",
-              "item_id": "length_crystal",
-              "amount": 1
-            }
-          ]
-        },
-        {
-          "id": "q02_whispering_stone",
+          "id": "q01_whispering_stone",
           "name": "האבן הלוחשת",
           "level": 2,
-          "prerequisite": "q01_bridge_too_short",
+          "prerequisite": null,
           "summary": "אמרו HOT בקול כדי לחמם אבן קרה ולשחרר את גביש החום.",
           "status": "complete",
           "rewards": {
@@ -1402,18 +1352,7 @@
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
               "difficulty": 4,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "אמרו HOT כדי לחמם את האבן הקרה",
-                "tasks": [
-                  "הקשיבו להגייה של <strong>hot</strong>",
-                  "לחצו על המיקרופון ואמרו <strong>hot</strong>",
-                  "אפשר לנסות שוב ולקבל רמז בלי עונש"
-                ],
-                "target": "hot",
-                "variant": "single_word",
-                "success": "האבן מתחממת, הקרח נמס והמעיין חוזר לזרום"
-              }
+              "success_required": true
             },
             {
               "type": "collect_item",
@@ -1428,17 +1367,17 @@
           ]
         },
         {
-          "id": "q03_matter_of_weight",
-          "name": "עניין של משקל",
-          "level": 4,
-          "prerequisite": "q02_whispering_stone",
-          "summary": "בחרו LIGHT כדי להרים משטח כבד ולהחזיר את המעלית המלכותית לפעולה.",
+          "id": "q02_bridge_too_short",
+          "name": "הגשר הקצר מדי",
+          "level": 1,
+          "prerequisite": "q01_whispering_stone",
+          "summary": "האביר מלמד את השחקן לאיית LONG ולהאריך גשר קצר בדרך לגביש הראשון.",
           "status": "complete",
           "rewards": {
-            "xp": 100,
+            "xp": 50,
             "items": [
               {
-                "id": "weight_crystal",
+                "id": "length_crystal",
                 "amount": 1
               }
             ]
@@ -1446,47 +1385,81 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_grandfather",
-              "dialogue_id": "adjective_grandfather_heavy_platform"
+              "npc_id": "adjective_knight",
+              "dialogue_id": "adjective_knight_crown_intro"
             },
             {
               "type": "reach_location",
-              "location_id": "adjective_royal_lift"
+              "location_id": "adjective_short_bridge"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
-              "difficulty": 2,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות כדי להפוך את המשטח לקל",
-                "tasks": [
-                  "המשטח הוא <strong>heavy</strong> ואינו יכול לעלות",
-                  "גררו את האותיות: <strong>l, i, g, h, t</strong>",
-                  "צרו את המילה ההפוכה: <strong>light</strong>"
-                ],
-                "target": "light",
-                "variant": "word_spelling",
-                "success": "המשטח נעשה קל, עולה למעלה והמעלית חוזרת לפעול"
-              }
+              "difficulty": 1,
+              "success_required": true
             },
             {
               "type": "collect_item",
-              "item_id": "weight_crystal",
+              "item_id": "length_crystal",
               "amount": 1
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "adjective_grandfather",
-              "dialogue_id": "adjective_grandfather_weight_restored"
             }
           ]
         },
         {
-          "id": "q04_not_so_big_zombie",
+          "id": "q03_five_small_sheep",
+          "name": "חמש כבשים קטנות",
+          "level": 8,
+          "prerequisite": "q02_bridge_too_short",
+          "summary": "מצאו והובילו חמש small sheep מתוך שדה מלא בחיות דומות ומבלבלות.",
+          "status": "complete",
+          "rewards": {
+            "xp": 225,
+            "items": [
+              {
+                "id": "description_crystal",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "adjective_grandmother",
+              "dialogue_id": "adjective_grandmother_five_small_sheep"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "adjective_mixed_meadow"
+            },
+            {
+              "type": "collect_item",
+              "item_id": "small_sheep",
+              "amount": 5
+            },
+            {
+              "type": "deliver_item",
+              "npc_id": "adjective_grandmother",
+              "item_id": "small_sheep",
+              "amount": 5,
+              "dialogue_id": "adjective_grandmother_flock_complete"
+            },
+            {
+              "type": "collect_item",
+              "item_id": "description_crystal",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "adjective_grandmother",
+              "dialogue_id": "adjective_grandmother_description_restored"
+            }
+          ]
+        },
+        {
+          "id": "q04_giant_zombie",
           "name": "הזומבי שכבר לא גדול",
           "level": 5,
-          "prerequisite": "q03_matter_of_weight",
+          "prerequisite": "q03_five_small_sheep",
           "summary": "הפכו זומבי גדול לקטן, הביסו אותו ופתחו מחדש את שער הכפר.",
           "status": "complete",
           "rewards": {
@@ -1512,18 +1485,7 @@
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
               "difficulty": 2,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות כדי להקטין את הזומבי",
-                "tasks": [
-                  "הזומבי הוא <strong>big</strong> ואי אפשר לפגוע בו",
-                  "גררו את האותיות: <strong>s, m, a, l, l</strong>",
-                  "צרו את המילה ההפוכה: <strong>small</strong>"
-                ],
-                "target": "small",
-                "variant": "word_spelling",
-                "success": "הזומבי נעשה קטן ופגיע — עכשיו אפשר להילחם בו"
-              }
+              "success_required": true
             },
             {
               "type": "defeat_enemy",
@@ -1546,7 +1508,7 @@
           "id": "q05_too_fast_to_catch",
           "name": "מהיר מכדי לתפוס",
           "level": 7,
-          "prerequisite": "q04_not_so_big_zombie",
+          "prerequisite": "q04_giant_zombie",
           "summary": "אייתו ואמרו SLOW במהלך מרדף כדי לעצור גנב גבישים מהיר.",
           "status": "complete",
           "rewards": {
@@ -1614,17 +1576,17 @@
           ]
         },
         {
-          "id": "q06_five_small_sheep",
-          "name": "חמש כבשים קטנות",
-          "level": 8,
+          "id": "q06_something_about_the_weight",
+          "name": "עניין של משקל",
+          "level": 4,
           "prerequisite": "q05_too_fast_to_catch",
-          "summary": "מצאו והובילו חמש small sheep מתוך שדה מלא בחיות דומות ומבלבלות.",
+          "summary": "בחרו LIGHT כדי להרים משטח כבד ולהחזיר את המעלית המלכותית לפעולה.",
           "status": "complete",
           "rewards": {
-            "xp": 225,
+            "xp": 100,
             "items": [
               {
-                "id": "description_crystal",
+                "id": "weight_crystal",
                 "amount": 1
               }
             ]
@@ -1632,42 +1594,36 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_grandmother",
-              "dialogue_id": "adjective_grandmother_five_small_sheep"
+              "npc_id": "adjective_grandfather",
+              "dialogue_id": "adjective_grandfather_heavy_platform"
             },
             {
               "type": "reach_location",
-              "location_id": "adjective_mixed_meadow"
+              "location_id": "adjective_royal_lift"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "difficulty": 2,
+              "success_required": true
             },
             {
               "type": "collect_item",
-              "item_id": "small_sheep",
-              "amount": 5
-            },
-            {
-              "type": "deliver_item",
-              "npc_id": "adjective_grandmother",
-              "item_id": "small_sheep",
-              "amount": 5,
-              "dialogue_id": "adjective_grandmother_flock_complete"
-            },
-            {
-              "type": "collect_item",
-              "item_id": "description_crystal",
+              "item_id": "weight_crystal",
               "amount": 1
             },
             {
               "type": "return_to_npc",
-              "npc_id": "adjective_grandmother",
-              "dialogue_id": "adjective_grandmother_description_restored"
+              "npc_id": "adjective_grandfather",
+              "dialogue_id": "adjective_grandfather_weight_restored"
             }
           ]
         },
         {
-          "id": "q07_crystal_trial",
+          "id": "q07_crystal_test",
           "name": "מבחן הגבישים",
           "level": 10,
-          "prerequisite": "q06_five_small_sheep",
+          "prerequisite": "q06_something_about_the_weight",
           "summary": "שלבו בחירה, איות, דיבור ולחימה כדי להשיב את הגביש האחרון ולתקן את כתר התארים.",
           "status": "complete",
           "rewards": {
@@ -1697,35 +1653,13 @@
               "type": "play_minigame",
               "minigame_id": "word_matching",
               "difficulty": 3,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "התאימו בין התארים ההפוכים כדי להפעיל את המשטח",
-                "tasks": [
-                  "התאימו <strong>heavy</strong> אל <strong>light</strong>",
-                  "התאימו <strong>big</strong> אל <strong>small</strong>",
-                  "התאימו <strong>cold</strong> אל <strong>hot</strong>"
-                ],
-                "target": "heavy ↔ light, big ↔ small, cold ↔ hot",
-                "variant": "word_to_translation",
-                "success": "המשטח נעשה קל ועולה אל השלב הבא במקדש"
-              }
+              "success_required": true
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
               "difficulty": 4,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות כדי להקטין את השומר",
-                "tasks": [
-                  "השומר הוא <strong>big</strong>",
-                  "סדרו <strong>s, m, a, l, l</strong>",
-                  "צרו את המילה ההפוכה: <strong>small</strong>"
-                ],
-                "target": "small",
-                "variant": "word_spelling",
-                "success": "השומר נעשה קטן ופגיע"
-              }
+              "success_required": true
             },
             {
               "type": "defeat_enemy",
@@ -1736,17 +1670,7 @@
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
               "difficulty": 4,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "אמרו HOT כדי להעיר את מקדש הכתר",
-                "tasks": [
-                  "המקדש הוא <strong>cold</strong>",
-                  "אמרו את המילה ההפוכה: <strong>hot</strong>"
-                ],
-                "target": "hot",
-                "variant": "single_word",
-                "success": "המקדש מתחמם והגביש האחרון מופיע"
-              }
+              "success_required": true
             },
             {
               "type": "collect_item",

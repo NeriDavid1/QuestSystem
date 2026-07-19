@@ -1,9 +1,9 @@
 quest:
-  id: q03_matter_of_weight
-  name: "A Matter of Weight"
+  id: q06_something_about_the_weight
+  name: "Something About The Weight"
   level_required: 4
   giver_npc: adjective_grandfather
-  prerequisite: q02_whispering_stone
+  prerequisite: q05_too_fast_to_catch
   summary: "The player chooses LIGHT from adjective runes to raise a heavy platform and restore the royal lift."
 
 rewards:

@@ -1,9 +1,9 @@
 quest:
-  id: q02_whispering_stone
+  id: q01_whispering_stone
   name: "The Whispering Stone"
   level_required: 2
   giver_npc: adjective_water_man
-  prerequisite: q01_bridge_too_short
+  prerequisite: null
   summary: "The player says HOT aloud to warm a cold magic stone and release the second crystal."
 
 rewards:

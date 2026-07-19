@@ -151,25 +151,25 @@ questlines:
     display_name: "כתר התארים"
     theme: "קסם שמשנה את העולם בעזרת תארים באנגלית (רמות 1–10)"
     quests:
-      q01_bridge_too_short:
+      q02_bridge_too_short:
         name: "הגשר הקצר מדי"
         summary: "האביר מלמד את השחקן לאיית LONG ולהאריך גשר קצר בדרך לגביש הראשון."
-      q02_whispering_stone:
+      q01_whispering_stone:
         name: "האבן הלוחשת"
         summary: "אמרו HOT בקול כדי לחמם אבן קרה ולשחרר את גביש החום."
-      q03_matter_of_weight:
+      q06_something_about_the_weight:
         name: "עניין של משקל"
         summary: "בחרו LIGHT כדי להרים משטח כבד ולהחזיר את המעלית המלכותית לפעולה."
-      q04_not_so_big_zombie:
+      q04_giant_zombie:
         name: "הזומבי שכבר לא גדול"
         summary: "הפכו זומבי גדול לקטן, הביסו אותו ופתחו מחדש את שער הכפר."
       q05_too_fast_to_catch:
         name: "מהיר מכדי לתפוס"
         summary: "אייתו ואמרו SLOW במהלך מרדף כדי לעצור גנב גבישים מהיר."
-      q06_five_small_sheep:
+      q03_five_small_sheep:
         name: "חמש כבשים קטנות"
         summary: "מצאו והובילו חמש small sheep מתוך שדה מלא בחיות דומות ומבלבלות."
-      q07_crystal_trial:
+      q07_crystal_test:
         name: "מבחן הגבישים"
         summary: "שלבו בחירה, איות, דיבור ולחימה כדי להשיב את הגביש האחרון ולתקן את כתר התארים."
 

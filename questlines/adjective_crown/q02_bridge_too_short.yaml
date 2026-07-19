@@ -1,9 +1,9 @@
 quest:
-  id: q01_bridge_too_short
-  name: "The Bridge Too Short"
+  id: q02_bridge_too_short
+  name: "The Bridge Is Too Short"
   level_required: 1
   giver_npc: adjective_knight
-  prerequisite: null
+  prerequisite: q01_whispering_stone
   summary: "The Knight teaches the player to spell LONG and extend a short bridge to the first crystal."
 
 rewards:
