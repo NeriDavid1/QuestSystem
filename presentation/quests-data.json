@@ -295,6 +295,48 @@
     "small_sheep": {
       "name": "כבשה קטנה",
       "type": "quest_target"
+    },
+    "herbs": {
+      "name": "Herbs",
+      "type": "material",
+      "softkitty_id": 5,
+      "softkitty_uid": "herbs",
+      "max_stack": 99
+    },
+    "oak_log": {
+      "name": "Oak Log",
+      "type": "material",
+      "softkitty_id": 10,
+      "softkitty_uid": "oak_log",
+      "max_stack": 99
+    },
+    "corn": {
+      "name": "Corn",
+      "type": "material",
+      "softkitty_id": 20,
+      "softkitty_uid": "corn",
+      "max_stack": 99
+    },
+    "gem": {
+      "name": "Gem",
+      "type": "material",
+      "softkitty_id": 26,
+      "softkitty_uid": "gem",
+      "max_stack": 99
+    },
+    "power_stone": {
+      "name": "Power Stone",
+      "type": "material",
+      "softkitty_id": 59,
+      "softkitty_uid": "power_stone",
+      "max_stack": 99
+    },
+    "ancient_rune": {
+      "name": "Ancient Rune",
+      "type": "material",
+      "softkitty_id": 60,
+      "softkitty_uid": "ancient_rune",
+      "max_stack": 99
     }
   },
   "stepTypes": {
@@ -357,6 +399,18 @@
           "required": false,
           "ref": "_registry/minigame_instances/",
           "description": "Override auto key {quest_id}_s{step_index}"
+        },
+        "reward_item_id": {
+          "type": "string",
+          "required": false,
+          "ref": "items.yaml",
+          "description": "SoftKitty inventory item granted after successful completion"
+        },
+        "reward_amount": {
+          "type": "integer",
+          "required": false,
+          "min": 1,
+          "default": 1
         }
       }
     },
@@ -559,129 +613,92 @@
     }
   },
   "dialogues": {
-    "adjective_knight_crown_intro": {
+    "adjective_knight_oak_log_request": {
       "speaker": "adjective_knight",
       "lines": [
-        "שלום, גיבורים צעירים. אני שומר על כתר התארים.",
-        "תארים הם מילים שמתארות דברים. באנגלית, הגשר שלפנינו הוא <strong>short</strong> — קצר.",
-        "המילה ההפוכה מ־<strong>short</strong> היא <strong>long</strong> — ארוך.",
-        "גשו אל הגשר וסדרו את האותיות <strong>l, o, n, g</strong>. הגשר עצמו יישאר כפי שהוא."
+        "אני צריך <strong>Oak Log</strong> אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר.",
+        "סדרו את האותיות של <strong>long</strong>. בסיום המשחק תקבלו Oak Log לתיק.",
+        "חזרו אליי ומסרו לי אותו; הוא יוסר מהתיק בזמן המסירה."
       ]
     },
-    "adjective_knight_length_restored": {
+    "adjective_knight_oak_log_delivered": {
       "speaker": "adjective_knight",
       "lines": [
-        "מצוין! זיהיתם שהגשר הוא <strong>short</strong> ואייתתם את המילה ההפוכה, <strong>long</strong>.",
-        "זכרו: <strong>short</strong> פירושו קצר, ו־<strong>long</strong> פירושו ארוך.",
-        "לא היה צורך לשנות את הגשר. גביש האורך חזר לכתר, והמשימה הבאה מחכה בשדה החיות."
+        "קיבלתי את ה־<strong>Oak Log</strong>. הוא הוסר מהתיק שלכם.",
+        "אייתתם נכון: <strong>long</strong> הוא ההפך מ־<strong>short</strong>."
       ]
     },
-    "adjective_grandmother_five_small_sheep": {
-      "speaker": "adjective_grandmother",
-      "lines": [
-        "שלום, ילדים. אני צריכה עזרה למצוא בדיוק חמש <strong>small sheep</strong> — כבשים קטנות.",
-        "בשדה יש כבשים ופרות, וחלק מהחיות גדולות וחלק קטנות.",
-        "חפשו חיה שהיא גם <strong>small</strong> וגם <strong>sheep</strong>.",
-        "כבשה גדולה היא sheep, אבל לא small. פרה קטנה היא small, אבל לא sheep."
-      ]
-    },
-    "adjective_grandmother_flock_complete": {
-      "speaker": "adjective_grandmother",
-      "lines": [
-        "בואו נספור: אחת, שתיים, שלוש, ארבע, חמש!",
-        "מצאתם בדיוק חמש <strong>small sheep</strong>. כל הכבוד!"
-      ]
-    },
-    "adjective_grandmother_description_restored": {
-      "speaker": "adjective_grandmother",
-      "lines": [
-        "הצלחתם להשתמש בשתי מילים יחד כדי למצוא את החיות הנכונות.",
-        "<strong>Small</strong> מתאר את הגודל, ו־<strong>sheep</strong> אומר לנו איזו חיה לחפש.",
-        "גביש התיאור שלכם. עכשיו לכו אל קרחת היער — משהו קפוא מחכה שם."
-      ]
-    },
-    "adjective_water_man_forest_ice": {
+    "adjective_water_man_herbs_request": {
       "speaker": "adjective_water_man",
       "lines": [
-        "מצאתי את גוש הקרח הזה בקרחת היער. הוא <strong>cold</strong> — קר מאוד.",
-        "בתוך הקרח נמצא גביש החום, אבל אין צורך להביא אש.",
-        "המילה ההפוכה מ־<strong>cold</strong> היא <strong>hot</strong> — חם.",
-        "לחצו על המיקרופון ואמרו <strong>hot</strong> בקול ברור כדי להמיס את הקרח."
+        "אני צריך פריט <strong>Herbs</strong> אחד. המשחק בקרחת היער ייתן לכם אותו.",
+        "אמרו את המילה <strong>hot</strong> בקול ברור, קבלו את הפריט וחזרו אליי."
       ]
     },
-    "adjective_water_man_warmth_restored": {
+    "adjective_water_man_herbs_delivered": {
       "speaker": "adjective_water_man",
       "lines": [
-        "שמעתי אתכם אומרים <strong>hot</strong>, והקרח נמס!",
-        "זכרו: <strong>cold</strong> הוא קר, ו־<strong>hot</strong> הוא חם.",
-        "גביש החום שוב בטוח. תודה שעזרתם ליער."
+        "תודה. קיבלתי את ה־<strong>Herbs</strong>, והפריט הוסר מהתיק.",
+        "זכרו: <strong>hot</strong> הוא חם, וההפך שלו הוא <strong>cold</strong>."
       ]
     },
-    "adjective_grandmother_big_and_small_animals": {
+    "adjective_grandmother_corn_request": {
       "speaker": "adjective_grandmother",
       "lines": [
-        "כבר מצאתם כבשים קטנות. עכשיו נבדוק אם אתם יודעים להשוות בין כל החיות שבשדה.",
-        "<strong>Big</strong> פירושו גדול, ו־<strong>small</strong> פירושו קטן.",
-        "במשחק תראו את הכבשים והפרות שכבר נמצאות כאן. התאימו לכל חיה את התואר הנכון."
+        "אני צריכה שני פריטי <strong>Corn</strong>. כל אחד משני המשחקים ייתן לכם פריט אחד.",
+        "במשחק הראשון סדרו את <strong>big</strong>. במשחק השני אמרו <strong>small</strong>.",
+        "אחרי שיהיו לכם שני פריטים, מסרו לי אותם יחד."
       ]
     },
-    "adjective_grandmother_size_complete": {
+    "adjective_grandmother_corn_delivered": {
       "speaker": "adjective_grandmother",
       "lines": [
-        "נכון מאוד! התאמתם <strong>big</strong> לחיות הגדולות ו־<strong>small</strong> לחיות הקטנות.",
-        "אותה חיה יכולה להיות גדולה או קטנה — התואר מספר לנו איך היא נראית.",
-        "קחו את גביש הגודל והמשיכו בדרך."
+        "קיבלתי שני פריטי <strong>Corn</strong>, ושניהם הוסרו מהתיק שלכם.",
+        "<strong>Big</strong> הוא גדול ו־<strong>small</strong> הוא קטן."
       ]
     },
-    "adjective_knight_twelve_adjectives": {
+    "adjective_knight_runes_request": {
       "speaker": "adjective_knight",
       "lines": [
-        "לפני שנמשיך, נערוך אימון פשוט בתארים בסיסיים.",
-        "יופיעו לפניכם שנים־עשר תארים באנגלית, אחד אחרי השני.",
-        "בכל תור סדרו תחילה את אותיות המילה, ואז אמרו את אותה מילה בקול.",
-        "המילים הן: <strong>short, long, cold, hot, big, small, fast, slow, low, high, heavy</strong> ו־<strong>light</strong>."
+        "אני צריך שנים־עשר פריטי <strong>Ancient Rune</strong>.",
+        "לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף Ancient Rune אחד לתיק.",
+        "השלימו את כולם, ודאו שיש לכם שנים־עשר Runes, ואז מסרו לי אותם."
       ]
     },
-    "adjective_knight_twelve_adjectives_complete": {
+    "adjective_knight_runes_delivered": {
       "speaker": "adjective_knight",
       "lines": [
-        "כל הכבוד! אייתתם ואמרתם את כל שנים־עשר התארים.",
-        "השלמתם שישה זוגות של הפכים, וההגייה שלכם הייתה ברורה.",
-        "עכשיו אתם מוכנים להמשיך לאתגר <strong>low</strong> ו־<strong>high</strong>."
+        "קיבלתי את כל שנים־עשר ה־<strong>Ancient Runes</strong>. הם הוסרו מהתיק שלכם.",
+        "השלמתם שנים־עשר תארים בסיסיים בהצלחה."
       ]
     },
-    "adjective_knight_high_and_low": {
+    "adjective_knight_power_stones_request": {
       "speaker": "adjective_knight",
       "lines": [
-        "ליד גרם המדרגות אפשר ללמוד עוד שני תארים מנוגדים.",
-        "בתחתית אתם במקום <strong>low</strong> — נמוך. סדרו את האותיות של <strong>low</strong>, ואז בנו משפט עם המילה.",
-        "אחר כך עלו במדרגות. בראש המדרגות סדרו את <strong>high</strong> ובנו גם איתה משפט.",
-        "אין צורך לטפס על מגדל; רק לעלות במדרגות הקיימות."
+        "למשימה הבאה אני צריך ארבעה פריטי <strong>Power Stone</strong>.",
+        "יש ארבעה משחקים: איות LOW, משפט עם LOW, איות HIGH ומשפט עם HIGH.",
+        "כל משחק ייתן לכם Power Stone אחד. הביאו לי את כל הארבעה."
       ]
     },
-    "adjective_knight_high_and_low_complete": {
+    "adjective_knight_power_stones_delivered": {
       "speaker": "adjective_knight",
       "lines": [
-        "יפה מאוד. התחלתם <strong>low</strong> וסיימתם <strong>high</strong>.",
-        "<strong>Low</strong> פירושו נמוך, ו־<strong>high</strong> פירושו גבוה.",
-        "אספתם את כל המילים הדרושות. נשאר רק אתגר מסכם אחד."
+        "ארבעת ה־<strong>Power Stones</strong> נמסרו והוסרו מהתיק שלכם.",
+        "השלמתם נכון את <strong>low</strong> ואת <strong>high</strong>, גם כמילים וגם בתוך משפטים."
       ]
     },
-    "adjective_knight_final_challenge": {
+    "adjective_knight_gem_request": {
       "speaker": "adjective_knight",
       "lines": [
-        "הגעתם לאתגר האחרון של כתר התארים. הפעם לא צריך לנסוע לשום מקום.",
-        "המשחק שלידנו יציג את כל זוגות התארים שלמדתם.",
-        "התאימו כל מילה למילה ההפוכה שלה: <strong>short</strong> ו־<strong>long</strong>, וכן הלאה.",
-        "חשבו היטב והשלימו את כל ששת הזוגות."
+        "נשאר משחק אחד בלבד: התאמת זוגות התארים המנוגדים.",
+        "השלמת המשחק תיתן לכם <strong>Gem</strong> אחד. הביאו לי אותו כדי לסיים את קו המשימות."
       ]
     },
-    "adjective_knight_challenge_complete": {
+    "adjective_knight_gem_delivered": {
       "speaker": "adjective_knight",
       "lines": [
-        "הצלחתם! התאמתם את כל זוגות התארים המנוגדים.",
-        "אתם מכירים עכשיו: <strong>short / long</strong>, <strong>cold / hot</strong>, <strong>big / small</strong>, <strong>fast / slow</strong>, <strong>low / high</strong> ו־<strong>heavy / light</strong>.",
-        "כתר התארים שוב שלם. קבלו עשרה מטבעות על העזרה שלכם לממלכה!"
+        "קיבלתי את ה־<strong>Gem</strong>, והוא הוסר מהתיק שלכם.",
+        "התאמתם נכון את כל זוגות התארים. קו המשימות הושלם!"
       ]
     },
     "elara_healing_intro": {
@@ -1349,12 +1366,12 @@
       "id": "adjective_crown",
       "folder": "adjective_crown",
       "displayName": "כתר התארים",
-      "theme": "קסם שמשנה את העולם בעזרת תארים באנגלית (רמות 1–10)",
+      "theme": "תרגול תארים באנגלית באמצעות משחקים, קבלת פריטים ומסירתם לדמויות",
       "levelRange": [
         1,
         10
       ],
-      "questCount": 7,
+      "questCount": 6,
       "npcId": "adjective_knight",
       "npc": {
         "id": "adjective_knight",
@@ -1369,22 +1386,17 @@
           "name": "הגשר קצר מדי",
           "level": 1,
           "prerequisite": null,
-          "summary": "התבוננו בגשר הקצר הקיים ואייתו את התואר ההפוך LONG, בלי לשנות את הגשר.",
+          "summary": "אייתו LONG, קבלו Oak Log אחד ומסרו אותו לאביר.",
           "status": "complete",
           "rewards": {
             "xp": 50,
-            "items": [
-              {
-                "id": "length_crystal",
-                "amount": 1
-              }
-            ]
+            "items": []
           },
           "steps": [
             {
               "type": "talk_to_npc",
               "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_crown_intro"
+              "dialogue_id": "adjective_knight_oak_log_request"
             },
             {
               "type": "reach_location",
@@ -1395,91 +1407,44 @@
               "minigame_id": "letter_ordering",
               "difficulty": 1,
               "success_required": true,
+              "reward_item_id": "oak_log",
+              "reward_amount": 1,
               "minigame_brief": {
-                "instruction": "הגשר הוא SHORT — סדרו את האותיות של המילה ההפוכה LONG",
+                "instruction": "סדרו את האותיות של LONG",
                 "tasks": [
-                  "התבוננו בגשר הקיים: הוא <strong>short</strong> — קצר",
-                  "גררו את האותיות <strong>l, o, n, g</strong> אל ארבע המשבצות",
-                  "קראו את המילה שיצרתם: <strong>long</strong> — ארוך"
+                  "סדרו <strong>l, o, n, g</strong>",
+                  "צרו <strong>long</strong> — ארוך"
                 ],
                 "target": "long",
                 "variant": "word_spelling",
-                "success": "נוצרה המילה LONG; הגשר נשאר ללא שינוי"
+                "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק"
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_length_restored"
-            }
-          ]
-        },
-        {
-          "id": "q02_five_small_sheep",
-          "name": "חמש כבשים קטנות",
-          "level": 3,
-          "prerequisite": "q01_bridge_too_short",
-          "summary": "מצאו חמש כבשים קטנות בין החיות הקיימות וחזרו אל הסבתא.",
-          "status": "complete",
-          "rewards": {
-            "xp": 100,
-            "items": [
-              {
-                "id": "description_crystal",
-                "amount": 1
-              }
-            ]
-          },
-          "steps": [
-            {
-              "type": "talk_to_npc",
-              "npc_id": "adjective_grandmother",
-              "dialogue_id": "adjective_grandmother_five_small_sheep"
-            },
-            {
-              "type": "reach_location",
-              "location_id": "adjective_mixed_meadow"
-            },
-            {
-              "type": "collect_item",
-              "item_id": "small_sheep",
-              "amount": 5
             },
             {
               "type": "deliver_item",
-              "npc_id": "adjective_grandmother",
-              "item_id": "small_sheep",
-              "amount": 5,
-              "dialogue_id": "adjective_grandmother_flock_complete"
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "adjective_grandmother",
-              "dialogue_id": "adjective_grandmother_description_restored"
+              "npc_id": "adjective_knight",
+              "item_id": "oak_log",
+              "amount": 1,
+              "dialogue_id": "adjective_knight_oak_log_delivered"
             }
           ]
         },
         {
-          "id": "q03_whispering_stone",
+          "id": "q02_whispering_stone",
           "name": "האבן הלוחשת",
-          "level": 4,
-          "prerequisite": "q02_five_small_sheep",
-          "summary": "אמרו HOT בקול בקרחת היער כדי להמיס את קוביית הקרח הקיימת ולשחרר את הגביש.",
+          "level": 3,
+          "prerequisite": "q01_bridge_too_short",
+          "summary": "אמרו HOT, קבלו Herbs אחד ומסרו אותו לאיש המים.",
           "status": "complete",
           "rewards": {
-            "xp": 125,
-            "items": [
-              {
-                "id": "warmth_crystal",
-                "amount": 1
-              }
-            ]
+            "xp": 100,
+            "items": []
           },
           "steps": [
             {
               "type": "talk_to_npc",
               "npc_id": "adjective_water_man",
-              "dialogue_id": "adjective_water_man_forest_ice"
+              "dialogue_id": "adjective_water_man_herbs_request"
             },
             {
               "type": "reach_location",
@@ -1490,224 +1455,8 @@
               "minigame_id": "speak_aloud",
               "difficulty": 2,
               "success_required": true,
-              "minigame_brief": {
-                "instruction": "אמרו HOT כדי להמיס את הקרח בקרחת היער",
-                "tasks": [
-                  "הקרח הוא <strong>cold</strong> — קר",
-                  "לחצו על כפתור השמע והקשיבו להגייה של <strong>hot</strong>",
-                  "לחצו על המיקרופון ואמרו <strong>hot</strong> בקול ברור",
-                  "אם ההגייה לא נקלטה, אפשר להקשיב ולנסות שוב"
-                ],
-                "target": "hot",
-                "variant": "single_word",
-                "success": "המילה HOT נקלטה, הקרח נמס והגביש נחשף"
-              }
-            },
-            {
-              "type": "collect_item",
-              "item_id": "warmth_crystal",
-              "amount": 1
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "adjective_water_man",
-              "dialogue_id": "adjective_water_man_warmth_restored"
-            }
-          ]
-        },
-        {
-          "id": "q04_big_and_small_animals",
-          "name": "חיות גדולות וקטנות",
-          "level": 5,
-          "prerequisite": "q03_whispering_stone",
-          "summary": "השוו בין הכבשים והפרות הקיימות וזהו אילו חיות BIG ואילו SMALL.",
-          "status": "complete",
-          "rewards": {
-            "xp": 150,
-            "items": [
-              {
-                "id": "size_crystal",
-                "amount": 1
-              }
-            ]
-          },
-          "steps": [
-            {
-              "type": "talk_to_npc",
-              "npc_id": "adjective_grandmother",
-              "dialogue_id": "adjective_grandmother_big_and_small_animals"
-            },
-            {
-              "type": "reach_location",
-              "location_id": "adjective_animal_field"
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "word_matching",
-              "difficulty": 2,
-              "success_required": true,
-              "minigame_brief": {
-                "instruction": "התאימו לכל חיה את התואר BIG או SMALL",
-                "tasks": [
-                  "התבוננו בתמונות של הכבשים והפרות הקיימות בשדה",
-                  "חברו את החיות הגדולות אל <strong>big</strong>",
-                  "חברו את החיות הקטנות אל <strong>small</strong>",
-                  "השלימו ארבע התאמות: כבשה גדולה, כבשה קטנה, פרה גדולה ופרה קטנה"
-                ],
-                "target": "big animals ↔ big; small animals ↔ small",
-                "variant": "word_to_image",
-                "success": "כל החיות ממוינות נכון לפי BIG ו־SMALL"
-              }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "adjective_grandmother",
-              "dialogue_id": "adjective_grandmother_size_complete"
-            }
-          ]
-        },
-        {
-          "id": "q05_twelve_basic_adjectives",
-          "name": "שנים־עשר תארים בסיסיים",
-          "level": 7,
-          "prerequisite": "q04_big_and_small_animals",
-          "summary": "אייתו ואמרו שנים־עשר תארים בסיסיים באנגלית, אחד אחרי השני.",
-          "status": "complete",
-          "rewards": {
-            "xp": 200,
-            "items": []
-          },
-          "steps": [
-            {
-              "type": "talk_to_npc",
-              "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_twelve_adjectives"
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_short",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של SHORT",
-                "tasks": [
-                  "סדרו <strong>s, h, o, r, t</strong>",
-                  "צרו <strong>short</strong> — קצר"
-                ],
-                "target": "short",
-                "variant": "word_spelling",
-                "success": "SHORT נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_short",
-              "minigame_brief": {
-                "instruction": "אמרו SHORT בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>short</strong>"
-                ],
-                "target": "short",
-                "variant": "single_word",
-                "success": "SHORT נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_long",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של LONG",
-                "tasks": [
-                  "סדרו <strong>l, o, n, g</strong>",
-                  "צרו <strong>long</strong> — ארוך"
-                ],
-                "target": "long",
-                "variant": "word_spelling",
-                "success": "LONG נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_long",
-              "minigame_brief": {
-                "instruction": "אמרו LONG בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>long</strong>"
-                ],
-                "target": "long",
-                "variant": "single_word",
-                "success": "LONG נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_cold",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של COLD",
-                "tasks": [
-                  "סדרו <strong>c, o, l, d</strong>",
-                  "צרו <strong>cold</strong> — קר"
-                ],
-                "target": "cold",
-                "variant": "word_spelling",
-                "success": "COLD נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_cold",
-              "minigame_brief": {
-                "instruction": "אמרו COLD בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>cold</strong>"
-                ],
-                "target": "cold",
-                "variant": "single_word",
-                "success": "COLD נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_hot",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של HOT",
-                "tasks": [
-                  "סדרו <strong>h, o, t</strong>",
-                  "צרו <strong>hot</strong> — חם"
-                ],
-                "target": "hot",
-                "variant": "word_spelling",
-                "success": "HOT נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_hot",
+              "reward_item_id": "herbs",
+              "reward_amount": 1,
               "minigame_brief": {
                 "instruction": "אמרו HOT בקול",
                 "tasks": [
@@ -1716,15 +1465,42 @@
                 ],
                 "target": "hot",
                 "variant": "single_word",
-                "success": "HOT נקלט בהצלחה"
+                "success": "HOT נקלט; Herbs אחד נוסף לתיק"
               }
+            },
+            {
+              "type": "deliver_item",
+              "npc_id": "adjective_water_man",
+              "item_id": "herbs",
+              "amount": 1,
+              "dialogue_id": "adjective_water_man_herbs_delivered"
+            }
+          ]
+        },
+        {
+          "id": "q03_big_and_small_words",
+          "name": "המילים גדול וקטן",
+          "level": 5,
+          "prerequisite": "q02_whispering_stone",
+          "summary": "השלימו BIG ואמרו SMALL, קבלו שני פריטי Corn ומסרו אותם לסבתא.",
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "adjective_grandmother",
+              "dialogue_id": "adjective_grandmother_corn_request"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
               "difficulty": 2,
               "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_big",
+              "reward_item_id": "corn",
+              "reward_amount": 1,
               "minigame_brief": {
                 "instruction": "סדרו את האותיות של BIG",
                 "tasks": [
@@ -1733,7 +1509,7 @@
                 ],
                 "target": "big",
                 "variant": "word_spelling",
-                "success": "BIG נכתב נכון"
+                "success": "BIG נכתב נכון; Corn אחד נוסף לתיק"
               }
             },
             {
@@ -1741,41 +1517,8 @@
               "minigame_id": "speak_aloud",
               "difficulty": 2,
               "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_big",
-              "minigame_brief": {
-                "instruction": "אמרו BIG בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>big</strong>"
-                ],
-                "target": "big",
-                "variant": "single_word",
-                "success": "BIG נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_small",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של SMALL",
-                "tasks": [
-                  "סדרו <strong>s, m, a, l, l</strong>",
-                  "צרו <strong>small</strong> — קטן"
-                ],
-                "target": "small",
-                "variant": "word_spelling",
-                "success": "SMALL נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_small",
+              "reward_item_id": "corn",
+              "reward_amount": 1,
               "minigame_brief": {
                 "instruction": "אמרו SMALL בקול",
                 "tasks": [
@@ -1784,241 +1527,276 @@
                 ],
                 "target": "small",
                 "variant": "single_word",
-                "success": "SMALL נקלט בהצלחה"
+                "success": "SMALL נקלט; Corn נוסף לתיק — כעת יש שניים"
               }
             },
             {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_fast",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של FAST",
-                "tasks": [
-                  "סדרו <strong>f, a, s, t</strong>",
-                  "צרו <strong>fast</strong> — מהיר"
-                ],
-                "target": "fast",
-                "variant": "word_spelling",
-                "success": "FAST נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_fast",
-              "minigame_brief": {
-                "instruction": "אמרו FAST בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>fast</strong>"
-                ],
-                "target": "fast",
-                "variant": "single_word",
-                "success": "FAST נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_slow",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של SLOW",
-                "tasks": [
-                  "סדרו <strong>s, l, o, w</strong>",
-                  "צרו <strong>slow</strong> — איטי"
-                ],
-                "target": "slow",
-                "variant": "word_spelling",
-                "success": "SLOW נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_slow",
-              "minigame_brief": {
-                "instruction": "אמרו SLOW בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>slow</strong>"
-                ],
-                "target": "slow",
-                "variant": "single_word",
-                "success": "SLOW נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_low",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של LOW",
-                "tasks": [
-                  "סדרו <strong>l, o, w</strong>",
-                  "צרו <strong>low</strong> — נמוך"
-                ],
-                "target": "low",
-                "variant": "word_spelling",
-                "success": "LOW נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_low",
-              "minigame_brief": {
-                "instruction": "אמרו LOW בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>low</strong>"
-                ],
-                "target": "low",
-                "variant": "single_word",
-                "success": "LOW נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_high",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של HIGH",
-                "tasks": [
-                  "סדרו <strong>h, i, g, h</strong>",
-                  "צרו <strong>high</strong> — גבוה"
-                ],
-                "target": "high",
-                "variant": "word_spelling",
-                "success": "HIGH נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_high",
-              "minigame_brief": {
-                "instruction": "אמרו HIGH בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>high</strong>"
-                ],
-                "target": "high",
-                "variant": "single_word",
-                "success": "HIGH נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_heavy",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של HEAVY",
-                "tasks": [
-                  "סדרו <strong>h, e, a, v, y</strong>",
-                  "צרו <strong>heavy</strong> — כבד"
-                ],
-                "target": "heavy",
-                "variant": "word_spelling",
-                "success": "HEAVY נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_heavy",
-              "minigame_brief": {
-                "instruction": "אמרו HEAVY בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>heavy</strong>"
-                ],
-                "target": "heavy",
-                "variant": "single_word",
-                "success": "HEAVY נקלט בהצלחה"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_ordering",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_spell_light",
-              "minigame_brief": {
-                "instruction": "סדרו את האותיות של LIGHT",
-                "tasks": [
-                  "סדרו <strong>l, i, g, h, t</strong>",
-                  "צרו <strong>light</strong> — קל"
-                ],
-                "target": "light",
-                "variant": "word_spelling",
-                "success": "LIGHT נכתב נכון"
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "q05_twelve_basic_adjectives_say_light",
-              "minigame_brief": {
-                "instruction": "אמרו LIGHT בקול",
-                "tasks": [
-                  "הקשיבו להגייה",
-                  "לחצו על המיקרופון ואמרו <strong>light</strong>"
-                ],
-                "target": "light",
-                "variant": "single_word",
-                "success": "LIGHT נקלט בהצלחה וכל שנים־עשר התארים הושלמו"
-              }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_twelve_adjectives_complete"
+              "type": "deliver_item",
+              "npc_id": "adjective_grandmother",
+              "item_id": "corn",
+              "amount": 2,
+              "dialogue_id": "adjective_grandmother_corn_delivered"
             }
           ]
         },
         {
-          "id": "q06_from_low_to_high",
-          "name": "מלמטה למעלה",
-          "level": 8,
-          "prerequisite": "q05_twelve_basic_adjectives",
-          "summary": "למדו LOW בתחתית גרם המדרגות הקיים ו-HIGH לאחר העלייה לראשו.",
+          "id": "q04_twelve_basic_adjectives",
+          "name": "שנים־עשר תארים בסיסיים",
+          "level": 7,
+          "prerequisite": "q03_big_and_small_words",
+          "summary": "השלימו שנים־עשר משחקים, קבלו שנים־עשר Ancient Runes ומסרו אותם לאביר.",
           "status": "complete",
           "rewards": {
             "xp": 225,
-            "items": [
-              {
-                "id": "height_crystal",
-                "amount": 1
-              }
-            ]
+            "items": []
           },
           "steps": [
             {
               "type": "talk_to_npc",
               "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_high_and_low"
+              "dialogue_id": "adjective_knight_runes_request"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_short",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "סדרו SHORT",
+                "tasks": [
+                  "סדרו <strong>s, h, o, r, t</strong>"
+                ],
+                "target": "short",
+                "variant": "word_spelling",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_long",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "אמרו LONG",
+                "tasks": [
+                  "אמרו <strong>long</strong> למיקרופון"
+                ],
+                "target": "long",
+                "variant": "single_word",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_cold",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "סדרו COLD",
+                "tasks": [
+                  "סדרו <strong>c, o, l, d</strong>"
+                ],
+                "target": "cold",
+                "variant": "word_spelling",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_hot",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "אמרו HOT",
+                "tasks": [
+                  "אמרו <strong>hot</strong> למיקרופון"
+                ],
+                "target": "hot",
+                "variant": "single_word",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_big",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "סדרו BIG",
+                "tasks": [
+                  "סדרו <strong>b, i, g</strong>"
+                ],
+                "target": "big",
+                "variant": "word_spelling",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_small",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "אמרו SMALL",
+                "tasks": [
+                  "אמרו <strong>small</strong> למיקרופון"
+                ],
+                "target": "small",
+                "variant": "single_word",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_fast",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "סדרו FAST",
+                "tasks": [
+                  "סדרו <strong>f, a, s, t</strong>"
+                ],
+                "target": "fast",
+                "variant": "word_spelling",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_slow",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "אמרו SLOW",
+                "tasks": [
+                  "אמרו <strong>slow</strong> למיקרופון"
+                ],
+                "target": "slow",
+                "variant": "single_word",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_low",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "סדרו LOW",
+                "tasks": [
+                  "סדרו <strong>l, o, w</strong>"
+                ],
+                "target": "low",
+                "variant": "word_spelling",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_high",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "אמרו HIGH",
+                "tasks": [
+                  "אמרו <strong>high</strong> למיקרופון"
+                ],
+                "target": "high",
+                "variant": "single_word",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_heavy",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "סדרו HEAVY",
+                "tasks": [
+                  "סדרו <strong>h, e, a, v, y</strong>"
+                ],
+                "target": "heavy",
+                "variant": "word_spelling",
+                "success": "Ancient Rune אחד נוסף לתיק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "q04_twelve_basic_adjectives_light",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "minigame_brief": {
+                "instruction": "אמרו LIGHT",
+                "tasks": [
+                  "אמרו <strong>light</strong> למיקרופון"
+                ],
+                "target": "light",
+                "variant": "single_word",
+                "success": "Ancient Rune נוסף לתיק — כעת יש שנים־עשר"
+              }
+            },
+            {
+              "type": "deliver_item",
+              "npc_id": "adjective_knight",
+              "item_id": "ancient_rune",
+              "amount": 12,
+              "dialogue_id": "adjective_knight_runes_delivered"
+            }
+          ]
+        },
+        {
+          "id": "q05_from_low_to_high",
+          "name": "מלמטה למעלה",
+          "level": 8,
+          "prerequisite": "q04_twelve_basic_adjectives",
+          "summary": "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם לאביר.",
+          "status": "complete",
+          "rewards": {
+            "xp": 275,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "adjective_knight",
+              "dialogue_id": "adjective_knight_power_stones_request"
             },
             {
               "type": "reach_location",
@@ -2029,16 +1807,16 @@
               "minigame_id": "letter_ordering",
               "difficulty": 2,
               "success_required": true,
+              "reward_item_id": "power_stone",
+              "reward_amount": 1,
               "minigame_brief": {
-                "instruction": "בתחתית המדרגות, סדרו את האותיות של LOW",
+                "instruction": "סדרו LOW",
                 "tasks": [
-                  "אתם נמצאים בתחתית — במקום <strong>low</strong>",
-                  "גררו את האותיות <strong>l, o, w</strong> אל שלוש המשבצות",
-                  "צרו את המילה <strong>low</strong> — נמוך"
+                  "סדרו <strong>l, o, w</strong>"
                 ],
                 "target": "low",
                 "variant": "word_spelling",
-                "success": "נוצרה המילה LOW; עכשיו השתמשו בה בתוך משפט"
+                "success": "Power Stone אחד נוסף לתיק"
               }
             },
             {
@@ -2046,17 +1824,16 @@
               "minigame_id": "word_ordering",
               "difficulty": 3,
               "success_required": true,
+              "reward_item_id": "power_stone",
+              "reward_amount": 1,
               "minigame_brief": {
-                "instruction": "סדרו את המילים כדי לבנות משפט עם LOW",
+                "instruction": "סדרו את המשפט THE PLACE IS LOW",
                 "tasks": [
-                  "המילים מופיעות בסדר מעורבב: <strong>low / is / place / The</strong>",
-                  "גררו את המילים אל ארבעת המקומות בסדר הנכון",
-                  "בנו את המשפט: <strong>The place is low.</strong>",
-                  "שימו לב: המשפט מתחיל ב־<strong>The</strong> ומסתיים בתואר <strong>low</strong>"
+                  "סדרו <strong>The / place / is / low</strong>"
                 ],
                 "target": "The place is low.",
                 "variant": "sentence_building",
-                "success": "המשפט THE PLACE IS LOW הושלם; עכשיו עלו במדרגות"
+                "success": "Power Stone אחד נוסף לתיק"
               }
             },
             {
@@ -2068,16 +1845,16 @@
               "minigame_id": "letter_ordering",
               "difficulty": 2,
               "success_required": true,
+              "reward_item_id": "power_stone",
+              "reward_amount": 1,
               "minigame_brief": {
-                "instruction": "בראש המדרגות, סדרו את האותיות של HIGH",
+                "instruction": "סדרו HIGH",
                 "tasks": [
-                  "עליתם למקום <strong>high</strong> — גבוה",
-                  "גררו את האותיות <strong>h, i, g, h</strong> אל ארבע המשבצות",
-                  "שימו לב שהאות <strong>h</strong> מופיעה פעמיים"
+                  "סדרו <strong>h, i, g, h</strong>"
                 ],
                 "target": "high",
                 "variant": "word_spelling",
-                "success": "נוצרה המילה HIGH; עכשיו השתמשו בה בתוך משפט"
+                "success": "Power Stone אחד נוסף לתיק"
               }
             },
             {
@@ -2085,32 +1862,33 @@
               "minigame_id": "word_ordering",
               "difficulty": 3,
               "success_required": true,
+              "reward_item_id": "power_stone",
+              "reward_amount": 1,
               "minigame_brief": {
-                "instruction": "סדרו את המילים כדי לבנות משפט עם HIGH",
+                "instruction": "סדרו את המשפט THE BUILDING IS HIGH",
                 "tasks": [
-                  "המילים מופיעות בסדר מעורבב: <strong>high / is / building / The</strong>",
-                  "גררו את המילים אל ארבעת המקומות בסדר הנכון",
-                  "בנו את המשפט: <strong>The building is high.</strong>",
-                  "שימו לב: המשפט מתחיל ב־<strong>The</strong> ומסתיים בתואר <strong>high</strong>"
+                  "סדרו <strong>The / building / is / high</strong>"
                 ],
                 "target": "The building is high.",
                 "variant": "sentence_building",
-                "success": "המשפט THE BUILDING IS HIGH הושלם והדרך מ־LOW ל־HIGH הסתיימה"
+                "success": "Power Stone נוסף לתיק — כעת יש ארבעה"
               }
             },
             {
-              "type": "return_to_npc",
+              "type": "deliver_item",
               "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_high_and_low_complete"
+              "item_id": "power_stone",
+              "amount": 4,
+              "dialogue_id": "adjective_knight_power_stones_delivered"
             }
           ]
         },
         {
-          "id": "q07_adjective_challenge",
+          "id": "q06_adjective_challenge",
           "name": "אתגר התארים",
           "level": 10,
-          "prerequisite": "q06_from_low_to_high",
-          "summary": "ליד אביר התארים, השלימו משחק התאמה מסכם עם כל זוגות התארים המנוגדים שנלמדו.",
+          "prerequisite": "q05_from_low_to_high",
+          "summary": "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו לאביר.",
           "status": "complete",
           "rewards": {
             "xp": 350,
@@ -2125,32 +1903,36 @@
             {
               "type": "talk_to_npc",
               "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_final_challenge"
+              "dialogue_id": "adjective_knight_gem_request"
             },
             {
               "type": "play_minigame",
               "minigame_id": "word_matching",
               "difficulty": 4,
               "success_required": true,
+              "reward_item_id": "gem",
+              "reward_amount": 1,
               "minigame_brief": {
-                "instruction": "התאימו את כל זוגות התארים המנוגדים",
+                "instruction": "התאימו את זוגות התארים המנוגדים",
                 "tasks": [
-                  "חברו <strong>short</strong> אל <strong>long</strong>",
-                  "חברו <strong>cold</strong> אל <strong>hot</strong>",
-                  "חברו <strong>big</strong> אל <strong>small</strong>",
-                  "חברו <strong>fast</strong> אל <strong>slow</strong>",
-                  "חברו <strong>low</strong> אל <strong>high</strong>",
-                  "חברו <strong>heavy</strong> אל <strong>light</strong>"
+                  "<strong>short</strong> ↔ <strong>long</strong>",
+                  "<strong>cold</strong> ↔ <strong>hot</strong>",
+                  "<strong>big</strong> ↔ <strong>small</strong>",
+                  "<strong>fast</strong> ↔ <strong>slow</strong>",
+                  "<strong>low</strong> ↔ <strong>high</strong>",
+                  "<strong>heavy</strong> ↔ <strong>light</strong>"
                 ],
-                "target": "short ↔ long; cold ↔ hot; big ↔ small; fast ↔ slow; low ↔ high; heavy ↔ light",
+                "target": "six opposite adjective pairs",
                 "variant": "opposite_pairing",
-                "success": "כל ששת זוגות התארים הותאמו נכון וכתר התארים הושלם"
+                "success": "כל הזוגות הותאמו; Gem אחד נוסף לתיק"
               }
             },
             {
-              "type": "return_to_npc",
+              "type": "deliver_item",
               "npc_id": "adjective_knight",
-              "dialogue_id": "adjective_knight_challenge_complete"
+              "item_id": "gem",
+              "amount": 1,
+              "dialogue_id": "adjective_knight_gem_delivered"
             }
           ]
         }

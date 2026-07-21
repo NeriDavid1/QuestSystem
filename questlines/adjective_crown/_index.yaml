@@ -2,8 +2,8 @@ questline:
   id: adjective_crown
   npc_id: adjective_knight
   display_name: "The Adjective Crown"
-  theme: "Beginner English adjectives through existing open-world landmarks and activities"
-  quest_count: 7
+  theme: "Basic English adjectives through completion, speaking, and final matching games"
+  quest_count: 6
   level_range: [1, 10]
 
 quests:
@@ -11,40 +11,34 @@ quests:
     name: "The Bridge Is Too Short"
     level: 1
     prerequisite: null
-    rewards: { xp: 50, items: [{ id: length_crystal, amount: 1 }] }
+    rewards: { xp: 50, items: [] }
 
-  - id: q02_five_small_sheep
-    name: "Five Small Sheep"
+  - id: q02_whispering_stone
+    name: "The Whispering Stone"
     level: 3
     prerequisite: q01_bridge_too_short
-    rewards: { xp: 100, items: [{ id: description_crystal, amount: 1 }] }
+    rewards: { xp: 100, items: [] }
 
-  - id: q03_whispering_stone
-    name: "The Whispering Stone"
-    level: 4
-    prerequisite: q02_five_small_sheep
-    rewards: { xp: 125, items: [{ id: warmth_crystal, amount: 1 }] }
-
-  - id: q04_big_and_small_animals
-    name: "Big and Small Animals"
+  - id: q03_big_and_small_words
+    name: "Big and Small Words"
     level: 5
-    prerequisite: q03_whispering_stone
-    rewards: { xp: 150, items: [{ id: size_crystal, amount: 1 }] }
+    prerequisite: q02_whispering_stone
+    rewards: { xp: 150, items: [] }
 
-  - id: q05_twelve_basic_adjectives
+  - id: q04_twelve_basic_adjectives
     name: "Twelve Basic Adjectives"
     level: 7
-    prerequisite: q04_big_and_small_animals
-    rewards: { xp: 200, items: [] }
+    prerequisite: q03_big_and_small_words
+    rewards: { xp: 225, items: [] }
 
-  - id: q06_from_low_to_high
+  - id: q05_from_low_to_high
     name: "From Low to High"
     level: 8
-    prerequisite: q05_twelve_basic_adjectives
-    rewards: { xp: 225, items: [{ id: height_crystal, amount: 1 }] }
+    prerequisite: q04_twelve_basic_adjectives
+    rewards: { xp: 275, items: [] }
 
-  - id: q07_adjective_challenge
+  - id: q06_adjective_challenge
     name: "The Adjective Challenge"
     level: 10
-    prerequisite: q06_from_low_to_high
+    prerequisite: q05_from_low_to_high
     rewards: { xp: 350, items: [{ id: coin, amount: 10 }] }

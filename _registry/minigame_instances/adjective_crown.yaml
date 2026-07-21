@@ -1,246 +1,140 @@
 # Per-step minigame briefs — The Adjective Crown
-# Keys use {quest_id}_s{zero-based step index}.
 
 instances:
   q01_bridge_too_short_s2:
-    instruction: "הגשר הוא SHORT — סדרו את האותיות של המילה ההפוכה LONG"
-    tasks:
-      - "התבוננו בגשר הקיים: הוא <strong>short</strong> — קצר"
-      - "גררו את האותיות <strong>l, o, n, g</strong> אל ארבע המשבצות"
-      - "קראו את המילה שיצרתם: <strong>long</strong> — ארוך"
-    target: "long"
-    variant: "word_spelling"
-    success: "נוצרה המילה LONG; הגשר נשאר ללא שינוי"
-
-  q03_whispering_stone_s2:
-    instruction: "אמרו HOT כדי להמיס את הקרח בקרחת היער"
-    tasks:
-      - "הקרח הוא <strong>cold</strong> — קר"
-      - "לחצו על כפתור השמע והקשיבו להגייה של <strong>hot</strong>"
-      - "לחצו על המיקרופון ואמרו <strong>hot</strong> בקול ברור"
-      - "אם ההגייה לא נקלטה, אפשר להקשיב ולנסות שוב"
-    target: "hot"
-    variant: "single_word"
-    success: "המילה HOT נקלטה, הקרח נמס והגביש נחשף"
-
-  q04_big_and_small_animals_s2:
-    instruction: "התאימו לכל חיה את התואר BIG או SMALL"
-    tasks:
-      - "התבוננו בתמונות של הכבשים והפרות הקיימות בשדה"
-      - "חברו את החיות הגדולות אל <strong>big</strong>"
-      - "חברו את החיות הקטנות אל <strong>small</strong>"
-      - "השלימו ארבע התאמות: כבשה גדולה, כבשה קטנה, פרה גדולה ופרה קטנה"
-    target: "big animals ↔ big; small animals ↔ small"
-    variant: "word_to_image"
-    success: "כל החיות ממוינות נכון לפי BIG ו־SMALL"
-
-  q05_twelve_basic_adjectives_spell_short:
-    instruction: "סדרו את האותיות של SHORT"
-    tasks: ["סדרו <strong>s, h, o, r, t</strong>", "צרו <strong>short</strong> — קצר"]
-    target: "short"
-    variant: "word_spelling"
-    success: "SHORT נכתב נכון"
-  q05_twelve_basic_adjectives_say_short:
-    instruction: "אמרו SHORT בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>short</strong>"]
-    target: "short"
-    variant: "single_word"
-    success: "SHORT נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_long:
     instruction: "סדרו את האותיות של LONG"
     tasks: ["סדרו <strong>l, o, n, g</strong>", "צרו <strong>long</strong> — ארוך"]
     target: "long"
     variant: "word_spelling"
-    success: "LONG נכתב נכון"
-  q05_twelve_basic_adjectives_say_long:
-    instruction: "אמרו LONG בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>long</strong>"]
-    target: "long"
-    variant: "single_word"
-    success: "LONG נקלט בהצלחה"
+    success: "LONG נכתב נכון; Oak Log אחד נוסף לתיק"
 
-  q05_twelve_basic_adjectives_spell_cold:
-    instruction: "סדרו את האותיות של COLD"
-    tasks: ["סדרו <strong>c, o, l, d</strong>", "צרו <strong>cold</strong> — קר"]
-    target: "cold"
-    variant: "word_spelling"
-    success: "COLD נכתב נכון"
-  q05_twelve_basic_adjectives_say_cold:
-    instruction: "אמרו COLD בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>cold</strong>"]
-    target: "cold"
-    variant: "single_word"
-    success: "COLD נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_hot:
-    instruction: "סדרו את האותיות של HOT"
-    tasks: ["סדרו <strong>h, o, t</strong>", "צרו <strong>hot</strong> — חם"]
-    target: "hot"
-    variant: "word_spelling"
-    success: "HOT נכתב נכון"
-  q05_twelve_basic_adjectives_say_hot:
+  q02_whispering_stone_s2:
     instruction: "אמרו HOT בקול"
     tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>hot</strong>"]
     target: "hot"
     variant: "single_word"
-    success: "HOT נקלט בהצלחה"
+    success: "HOT נקלט; Herbs אחד נוסף לתיק"
 
-  q05_twelve_basic_adjectives_spell_big:
+  q03_big_and_small_words_s1:
     instruction: "סדרו את האותיות של BIG"
     tasks: ["סדרו <strong>b, i, g</strong>", "צרו <strong>big</strong> — גדול"]
     target: "big"
     variant: "word_spelling"
-    success: "BIG נכתב נכון"
-  q05_twelve_basic_adjectives_say_big:
-    instruction: "אמרו BIG בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>big</strong>"]
-    target: "big"
-    variant: "single_word"
-    success: "BIG נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_small:
-    instruction: "סדרו את האותיות של SMALL"
-    tasks: ["סדרו <strong>s, m, a, l, l</strong>", "צרו <strong>small</strong> — קטן"]
-    target: "small"
-    variant: "word_spelling"
-    success: "SMALL נכתב נכון"
-  q05_twelve_basic_adjectives_say_small:
+    success: "BIG נכתב נכון; Corn אחד נוסף לתיק"
+  q03_big_and_small_words_s2:
     instruction: "אמרו SMALL בקול"
     tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>small</strong>"]
     target: "small"
     variant: "single_word"
-    success: "SMALL נקלט בהצלחה"
+    success: "SMALL נקלט; Corn נוסף לתיק — כעת יש שניים"
 
-  q05_twelve_basic_adjectives_spell_fast:
-    instruction: "סדרו את האותיות של FAST"
-    tasks: ["סדרו <strong>f, a, s, t</strong>", "צרו <strong>fast</strong> — מהיר"]
+  q04_twelve_basic_adjectives_short:
+    instruction: "סדרו SHORT"
+    tasks: ["סדרו <strong>s, h, o, r, t</strong>"]
+    target: "short"
+    variant: "word_spelling"
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_long:
+    instruction: "אמרו LONG"
+    tasks: ["אמרו <strong>long</strong> למיקרופון"]
+    target: "long"
+    variant: "single_word"
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_cold:
+    instruction: "סדרו COLD"
+    tasks: ["סדרו <strong>c, o, l, d</strong>"]
+    target: "cold"
+    variant: "word_spelling"
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_hot:
+    instruction: "אמרו HOT"
+    tasks: ["אמרו <strong>hot</strong> למיקרופון"]
+    target: "hot"
+    variant: "single_word"
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_big:
+    instruction: "סדרו BIG"
+    tasks: ["סדרו <strong>b, i, g</strong>"]
+    target: "big"
+    variant: "word_spelling"
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_small:
+    instruction: "אמרו SMALL"
+    tasks: ["אמרו <strong>small</strong> למיקרופון"]
+    target: "small"
+    variant: "single_word"
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_fast:
+    instruction: "סדרו FAST"
+    tasks: ["סדרו <strong>f, a, s, t</strong>"]
     target: "fast"
     variant: "word_spelling"
-    success: "FAST נכתב נכון"
-  q05_twelve_basic_adjectives_say_fast:
-    instruction: "אמרו FAST בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>fast</strong>"]
-    target: "fast"
-    variant: "single_word"
-    success: "FAST נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_slow:
-    instruction: "סדרו את האותיות של SLOW"
-    tasks: ["סדרו <strong>s, l, o, w</strong>", "צרו <strong>slow</strong> — איטי"]
-    target: "slow"
-    variant: "word_spelling"
-    success: "SLOW נכתב נכון"
-  q05_twelve_basic_adjectives_say_slow:
-    instruction: "אמרו SLOW בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>slow</strong>"]
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_slow:
+    instruction: "אמרו SLOW"
+    tasks: ["אמרו <strong>slow</strong> למיקרופון"]
     target: "slow"
     variant: "single_word"
-    success: "SLOW נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_low:
-    instruction: "סדרו את האותיות של LOW"
-    tasks: ["סדרו <strong>l, o, w</strong>", "צרו <strong>low</strong> — נמוך"]
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_low:
+    instruction: "סדרו LOW"
+    tasks: ["סדרו <strong>l, o, w</strong>"]
     target: "low"
     variant: "word_spelling"
-    success: "LOW נכתב נכון"
-  q05_twelve_basic_adjectives_say_low:
-    instruction: "אמרו LOW בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>low</strong>"]
-    target: "low"
-    variant: "single_word"
-    success: "LOW נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_high:
-    instruction: "סדרו את האותיות של HIGH"
-    tasks: ["סדרו <strong>h, i, g, h</strong>", "צרו <strong>high</strong> — גבוה"]
-    target: "high"
-    variant: "word_spelling"
-    success: "HIGH נכתב נכון"
-  q05_twelve_basic_adjectives_say_high:
-    instruction: "אמרו HIGH בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>high</strong>"]
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_high:
+    instruction: "אמרו HIGH"
+    tasks: ["אמרו <strong>high</strong> למיקרופון"]
     target: "high"
     variant: "single_word"
-    success: "HIGH נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_heavy:
-    instruction: "סדרו את האותיות של HEAVY"
-    tasks: ["סדרו <strong>h, e, a, v, y</strong>", "צרו <strong>heavy</strong> — כבד"]
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_heavy:
+    instruction: "סדרו HEAVY"
+    tasks: ["סדרו <strong>h, e, a, v, y</strong>"]
     target: "heavy"
     variant: "word_spelling"
-    success: "HEAVY נכתב נכון"
-  q05_twelve_basic_adjectives_say_heavy:
-    instruction: "אמרו HEAVY בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>heavy</strong>"]
-    target: "heavy"
-    variant: "single_word"
-    success: "HEAVY נקלט בהצלחה"
-
-  q05_twelve_basic_adjectives_spell_light:
-    instruction: "סדרו את האותיות של LIGHT"
-    tasks: ["סדרו <strong>l, i, g, h, t</strong>", "צרו <strong>light</strong> — קל"]
-    target: "light"
-    variant: "word_spelling"
-    success: "LIGHT נכתב נכון"
-  q05_twelve_basic_adjectives_say_light:
-    instruction: "אמרו LIGHT בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>light</strong>"]
+    success: "Ancient Rune אחד נוסף לתיק"
+  q04_twelve_basic_adjectives_light:
+    instruction: "אמרו LIGHT"
+    tasks: ["אמרו <strong>light</strong> למיקרופון"]
     target: "light"
     variant: "single_word"
-    success: "LIGHT נקלט בהצלחה וכל שנים־עשר התארים הושלמו"
+    success: "Ancient Rune נוסף לתיק — כעת יש שנים־עשר"
 
-  q06_from_low_to_high_s2:
-    instruction: "בתחתית המדרגות, סדרו את האותיות של LOW"
-    tasks:
-      - "אתם נמצאים בתחתית — במקום <strong>low</strong>"
-      - "גררו את האותיות <strong>l, o, w</strong> אל שלוש המשבצות"
-      - "צרו את המילה <strong>low</strong> — נמוך"
+  q05_from_low_to_high_s2:
+    instruction: "סדרו LOW"
+    tasks: ["סדרו <strong>l, o, w</strong>"]
     target: "low"
     variant: "word_spelling"
-    success: "נוצרה המילה LOW; עכשיו השתמשו בה בתוך משפט"
-
-  q06_from_low_to_high_s3:
-    instruction: "סדרו את המילים כדי לבנות משפט עם LOW"
-    tasks:
-      - "המילים מופיעות בסדר מעורבב: <strong>low / is / place / The</strong>"
-      - "גררו את המילים אל ארבעת המקומות בסדר הנכון"
-      - "בנו את המשפט: <strong>The place is low.</strong>"
-      - "שימו לב: המשפט מתחיל ב־<strong>The</strong> ומסתיים בתואר <strong>low</strong>"
+    success: "Power Stone אחד נוסף לתיק"
+  q05_from_low_to_high_s3:
+    instruction: "סדרו את המשפט THE PLACE IS LOW"
+    tasks: ["סדרו <strong>The / place / is / low</strong>"]
     target: "The place is low."
     variant: "sentence_building"
-    success: "המשפט THE PLACE IS LOW הושלם; עכשיו עלו במדרגות"
-
-  q06_from_low_to_high_s5:
-    instruction: "בראש המדרגות, סדרו את האותיות של HIGH"
-    tasks:
-      - "עליתם למקום <strong>high</strong> — גבוה"
-      - "גררו את האותיות <strong>h, i, g, h</strong> אל ארבע המשבצות"
-      - "שימו לב שהאות <strong>h</strong> מופיעה פעמיים"
+    success: "Power Stone אחד נוסף לתיק"
+  q05_from_low_to_high_s5:
+    instruction: "סדרו HIGH"
+    tasks: ["סדרו <strong>h, i, g, h</strong>"]
     target: "high"
     variant: "word_spelling"
-    success: "נוצרה המילה HIGH; עכשיו השתמשו בה בתוך משפט"
-
-  q06_from_low_to_high_s6:
-    instruction: "סדרו את המילים כדי לבנות משפט עם HIGH"
-    tasks:
-      - "המילים מופיעות בסדר מעורבב: <strong>high / is / building / The</strong>"
-      - "גררו את המילים אל ארבעת המקומות בסדר הנכון"
-      - "בנו את המשפט: <strong>The building is high.</strong>"
-      - "שימו לב: המשפט מתחיל ב־<strong>The</strong> ומסתיים בתואר <strong>high</strong>"
+    success: "Power Stone אחד נוסף לתיק"
+  q05_from_low_to_high_s6:
+    instruction: "סדרו את המשפט THE BUILDING IS HIGH"
+    tasks: ["סדרו <strong>The / building / is / high</strong>"]
     target: "The building is high."
     variant: "sentence_building"
-    success: "המשפט THE BUILDING IS HIGH הושלם והדרך מ־LOW ל־HIGH הסתיימה"
+    success: "Power Stone נוסף לתיק — כעת יש ארבעה"
 
-  q07_adjective_challenge_s1:
-    instruction: "התאימו את כל זוגות התארים המנוגדים"
+  q06_adjective_challenge_s1:
+    instruction: "התאימו את זוגות התארים המנוגדים"
     tasks:
-      - "חברו <strong>short</strong> אל <strong>long</strong>"
-      - "חברו <strong>cold</strong> אל <strong>hot</strong>"
-      - "חברו <strong>big</strong> אל <strong>small</strong>"
-      - "חברו <strong>fast</strong> אל <strong>slow</strong>"
-      - "חברו <strong>low</strong> אל <strong>high</strong>"
-      - "חברו <strong>heavy</strong> אל <strong>light</strong>"
-    target: "short ↔ long; cold ↔ hot; big ↔ small; fast ↔ slow; low ↔ high; heavy ↔ light"
+      - "<strong>short</strong> ↔ <strong>long</strong>"
+      - "<strong>cold</strong> ↔ <strong>hot</strong>"
+      - "<strong>big</strong> ↔ <strong>small</strong>"
+      - "<strong>fast</strong> ↔ <strong>slow</strong>"
+      - "<strong>low</strong> ↔ <strong>high</strong>"
+      - "<strong>heavy</strong> ↔ <strong>light</strong>"
+    target: "six opposite adjective pairs"
     variant: "opposite_pairing"
-    success: "כל ששת זוגות התארים הותאמו נכון וכתר התארים הושלם"
+    success: "כל הזוגות הותאמו; Gem אחד נוסף לתיק"

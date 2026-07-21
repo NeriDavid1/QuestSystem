@@ -4,27 +4,24 @@ quest:
   level_required: 1
   giver_npc: adjective_knight
   prerequisite: null
-  summary: "The player observes an existing short bridge and spells its opposite adjective, LONG, without changing the bridge."
+  summary: "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to the Knight."
 
-rewards:
-  xp: 50
-  items:
-    - id: length_crystal
-      amount: 1
+rewards: { xp: 50, items: [] }
 
 steps:
   - type: talk_to_npc
     npc_id: adjective_knight
-    dialogue_id: adjective_knight_crown_intro
-
+    dialogue_id: adjective_knight_oak_log_request
   - type: reach_location
     location_id: adjective_short_bridge
-
   - type: play_minigame
     minigame_id: letter_ordering
     difficulty: 1
     success_required: true
-
-  - type: return_to_npc
+    reward_item_id: oak_log
+    reward_amount: 1
+  - type: deliver_item
     npc_id: adjective_knight
-    dialogue_id: adjective_knight_length_restored
+    item_id: oak_log
+    amount: 1
+    dialogue_id: adjective_knight_oak_log_delivered

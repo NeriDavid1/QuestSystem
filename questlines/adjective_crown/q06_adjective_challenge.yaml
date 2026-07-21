@@ -1,0 +1,29 @@
+quest:
+  id: q06_adjective_challenge
+  name: "The Adjective Challenge"
+  level_required: 10
+  giver_npc: adjective_knight
+  prerequisite: q05_from_low_to_high
+  summary: "Complete the final adjective matching game, receive one Gem, and deliver it to the Knight."
+
+rewards:
+  xp: 350
+  items:
+    - id: coin
+      amount: 10
+
+steps:
+  - type: talk_to_npc
+    npc_id: adjective_knight
+    dialogue_id: adjective_knight_gem_request
+  - type: play_minigame
+    minigame_id: word_matching
+    difficulty: 4
+    success_required: true
+    reward_item_id: gem
+    reward_amount: 1
+  - type: deliver_item
+    npc_id: adjective_knight
+    item_id: gem
+    amount: 1
+    dialogue_id: adjective_knight_gem_delivered

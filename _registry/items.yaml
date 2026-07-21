@@ -57,3 +57,11 @@ items:
   coin: { name: "Coin", type: currency }
   adjective_crown: { name: "Adjective Crown", type: future_reward }
   small_sheep: { name: "Small Sheep", type: quest_target }
+
+  # Existing stackable SoftKitty items used for Adjective Crown deliveries
+  herbs: { name: "Herbs", type: material, softkitty_id: 5, softkitty_uid: herbs, max_stack: 99 }
+  oak_log: { name: "Oak Log", type: material, softkitty_id: 10, softkitty_uid: oak_log, max_stack: 99 }
+  corn: { name: "Corn", type: material, softkitty_id: 20, softkitty_uid: corn, max_stack: 99 }
+  gem: { name: "Gem", type: material, softkitty_id: 26, softkitty_uid: gem, max_stack: 99 }
+  power_stone: { name: "Power Stone", type: material, softkitty_id: 59, softkitty_uid: power_stone, max_stack: 99 }
+  ancient_rune: { name: "Ancient Rune", type: material, softkitty_id: 60, softkitty_uid: ancient_rune, max_stack: 99 }

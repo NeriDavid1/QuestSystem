@@ -1,0 +1,31 @@
+quest:
+  id: q03_big_and_small_words
+  name: "Big and Small Words"
+  level_required: 5
+  giver_npc: adjective_grandmother
+  prerequisite: q02_whispering_stone
+  summary: "Complete BIG and say SMALL, receive two Corn items, and deliver both to the Grandmother."
+
+rewards: { xp: 150, items: [] }
+
+steps:
+  - type: talk_to_npc
+    npc_id: adjective_grandmother
+    dialogue_id: adjective_grandmother_corn_request
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+    reward_item_id: corn
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 2
+    success_required: true
+    reward_item_id: corn
+    reward_amount: 1
+  - type: deliver_item
+    npc_id: adjective_grandmother
+    item_id: corn
+    amount: 2
+    dialogue_id: adjective_grandmother_corn_delivered

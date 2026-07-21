@@ -23,6 +23,8 @@ step_types:
       difficulty: { type: integer, required: true, min: 1, max: 10 }
       success_required: { type: boolean, required: false, default: true }
       instance_id: { type: string, required: false, ref: "_registry/minigame_instances/", description: "Override auto key {quest_id}_s{step_index}" }
+      reward_item_id: { type: string, required: false, ref: items.yaml, description: "SoftKitty inventory item granted after successful completion" }
+      reward_amount: { type: integer, required: false, min: 1, default: 1 }
 
   collect_item:
     description: Gather items from the world or drops

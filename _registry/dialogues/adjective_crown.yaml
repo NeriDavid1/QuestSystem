@@ -1,112 +1,72 @@
 # Dialogue scripts for The Adjective Crown questline
 
 dialogues:
-  adjective_knight_crown_intro:
+  adjective_knight_oak_log_request:
     speaker: adjective_knight
     lines:
-      - "שלום, גיבורים צעירים. אני שומר על כתר התארים."
-      - "תארים הם מילים שמתארות דברים. באנגלית, הגשר שלפנינו הוא <strong>short</strong> — קצר."
-      - "המילה ההפוכה מ־<strong>short</strong> היא <strong>long</strong> — ארוך."
-      - "גשו אל הגשר וסדרו את האותיות <strong>l, o, n, g</strong>. הגשר עצמו יישאר כפי שהוא."
-
-  adjective_knight_length_restored:
+      - "אני צריך <strong>Oak Log</strong> אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר."
+      - "סדרו את האותיות של <strong>long</strong>. בסיום המשחק תקבלו Oak Log לתיק."
+      - "חזרו אליי ומסרו לי אותו; הוא יוסר מהתיק בזמן המסירה."
+  adjective_knight_oak_log_delivered:
     speaker: adjective_knight
     lines:
-      - "מצוין! זיהיתם שהגשר הוא <strong>short</strong> ואייתתם את המילה ההפוכה, <strong>long</strong>."
-      - "זכרו: <strong>short</strong> פירושו קצר, ו־<strong>long</strong> פירושו ארוך."
-      - "לא היה צורך לשנות את הגשר. גביש האורך חזר לכתר, והמשימה הבאה מחכה בשדה החיות."
+      - "קיבלתי את ה־<strong>Oak Log</strong>. הוא הוסר מהתיק שלכם."
+      - "אייתתם נכון: <strong>long</strong> הוא ההפך מ־<strong>short</strong>."
 
-  adjective_grandmother_five_small_sheep:
-    speaker: adjective_grandmother
-    lines:
-      - "שלום, ילדים. אני צריכה עזרה למצוא בדיוק חמש <strong>small sheep</strong> — כבשים קטנות."
-      - "בשדה יש כבשים ופרות, וחלק מהחיות גדולות וחלק קטנות."
-      - "חפשו חיה שהיא גם <strong>small</strong> וגם <strong>sheep</strong>."
-      - "כבשה גדולה היא sheep, אבל לא small. פרה קטנה היא small, אבל לא sheep."
-
-  adjective_grandmother_flock_complete:
-    speaker: adjective_grandmother
-    lines:
-      - "בואו נספור: אחת, שתיים, שלוש, ארבע, חמש!"
-      - "מצאתם בדיוק חמש <strong>small sheep</strong>. כל הכבוד!"
-
-  adjective_grandmother_description_restored:
-    speaker: adjective_grandmother
-    lines:
-      - "הצלחתם להשתמש בשתי מילים יחד כדי למצוא את החיות הנכונות."
-      - "<strong>Small</strong> מתאר את הגודל, ו־<strong>sheep</strong> אומר לנו איזו חיה לחפש."
-      - "גביש התיאור שלכם. עכשיו לכו אל קרחת היער — משהו קפוא מחכה שם."
-
-  adjective_water_man_forest_ice:
+  adjective_water_man_herbs_request:
     speaker: adjective_water_man
     lines:
-      - "מצאתי את גוש הקרח הזה בקרחת היער. הוא <strong>cold</strong> — קר מאוד."
-      - "בתוך הקרח נמצא גביש החום, אבל אין צורך להביא אש."
-      - "המילה ההפוכה מ־<strong>cold</strong> היא <strong>hot</strong> — חם."
-      - "לחצו על המיקרופון ואמרו <strong>hot</strong> בקול ברור כדי להמיס את הקרח."
-
-  adjective_water_man_warmth_restored:
+      - "אני צריך פריט <strong>Herbs</strong> אחד. המשחק בקרחת היער ייתן לכם אותו."
+      - "אמרו את המילה <strong>hot</strong> בקול ברור, קבלו את הפריט וחזרו אליי."
+  adjective_water_man_herbs_delivered:
     speaker: adjective_water_man
     lines:
-      - "שמעתי אתכם אומרים <strong>hot</strong>, והקרח נמס!"
-      - "זכרו: <strong>cold</strong> הוא קר, ו־<strong>hot</strong> הוא חם."
-      - "גביש החום שוב בטוח. תודה שעזרתם ליער."
+      - "תודה. קיבלתי את ה־<strong>Herbs</strong>, והפריט הוסר מהתיק."
+      - "זכרו: <strong>hot</strong> הוא חם, וההפך שלו הוא <strong>cold</strong>."
 
-  adjective_grandmother_big_and_small_animals:
+  adjective_grandmother_corn_request:
     speaker: adjective_grandmother
     lines:
-      - "כבר מצאתם כבשים קטנות. עכשיו נבדוק אם אתם יודעים להשוות בין כל החיות שבשדה."
-      - "<strong>Big</strong> פירושו גדול, ו־<strong>small</strong> פירושו קטן."
-      - "במשחק תראו את הכבשים והפרות שכבר נמצאות כאן. התאימו לכל חיה את התואר הנכון."
-
-  adjective_grandmother_size_complete:
+      - "אני צריכה שני פריטי <strong>Corn</strong>. כל אחד משני המשחקים ייתן לכם פריט אחד."
+      - "במשחק הראשון סדרו את <strong>big</strong>. במשחק השני אמרו <strong>small</strong>."
+      - "אחרי שיהיו לכם שני פריטים, מסרו לי אותם יחד."
+  adjective_grandmother_corn_delivered:
     speaker: adjective_grandmother
     lines:
-      - "נכון מאוד! התאמתם <strong>big</strong> לחיות הגדולות ו־<strong>small</strong> לחיות הקטנות."
-      - "אותה חיה יכולה להיות גדולה או קטנה — התואר מספר לנו איך היא נראית."
-      - "קחו את גביש הגודל והמשיכו בדרך."
+      - "קיבלתי שני פריטי <strong>Corn</strong>, ושניהם הוסרו מהתיק שלכם."
+      - "<strong>Big</strong> הוא גדול ו־<strong>small</strong> הוא קטן."
 
-  adjective_knight_twelve_adjectives:
+  adjective_knight_runes_request:
     speaker: adjective_knight
     lines:
-      - "לפני שנמשיך, נערוך אימון פשוט בתארים בסיסיים."
-      - "יופיעו לפניכם שנים־עשר תארים באנגלית, אחד אחרי השני."
-      - "בכל תור סדרו תחילה את אותיות המילה, ואז אמרו את אותה מילה בקול."
-      - "המילים הן: <strong>short, long, cold, hot, big, small, fast, slow, low, high, heavy</strong> ו־<strong>light</strong>."
-
-  adjective_knight_twelve_adjectives_complete:
+      - "אני צריך שנים־עשר פריטי <strong>Ancient Rune</strong>."
+      - "לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף Ancient Rune אחד לתיק."
+      - "השלימו את כולם, ודאו שיש לכם שנים־עשר Runes, ואז מסרו לי אותם."
+  adjective_knight_runes_delivered:
     speaker: adjective_knight
     lines:
-      - "כל הכבוד! אייתתם ואמרתם את כל שנים־עשר התארים."
-      - "השלמתם שישה זוגות של הפכים, וההגייה שלכם הייתה ברורה."
-      - "עכשיו אתם מוכנים להמשיך לאתגר <strong>low</strong> ו־<strong>high</strong>."
+      - "קיבלתי את כל שנים־עשר ה־<strong>Ancient Runes</strong>. הם הוסרו מהתיק שלכם."
+      - "השלמתם שנים־עשר תארים בסיסיים בהצלחה."
 
-  adjective_knight_high_and_low:
+  adjective_knight_power_stones_request:
     speaker: adjective_knight
     lines:
-      - "ליד גרם המדרגות אפשר ללמוד עוד שני תארים מנוגדים."
-      - "בתחתית אתם במקום <strong>low</strong> — נמוך. סדרו את האותיות של <strong>low</strong>, ואז בנו משפט עם המילה."
-      - "אחר כך עלו במדרגות. בראש המדרגות סדרו את <strong>high</strong> ובנו גם איתה משפט."
-      - "אין צורך לטפס על מגדל; רק לעלות במדרגות הקיימות."
-
-  adjective_knight_high_and_low_complete:
+      - "למשימה הבאה אני צריך ארבעה פריטי <strong>Power Stone</strong>."
+      - "יש ארבעה משחקים: איות LOW, משפט עם LOW, איות HIGH ומשפט עם HIGH."
+      - "כל משחק ייתן לכם Power Stone אחד. הביאו לי את כל הארבעה."
+  adjective_knight_power_stones_delivered:
     speaker: adjective_knight
     lines:
-      - "יפה מאוד. התחלתם <strong>low</strong> וסיימתם <strong>high</strong>."
-      - "<strong>Low</strong> פירושו נמוך, ו־<strong>high</strong> פירושו גבוה."
-      - "אספתם את כל המילים הדרושות. נשאר רק אתגר מסכם אחד."
+      - "ארבעת ה־<strong>Power Stones</strong> נמסרו והוסרו מהתיק שלכם."
+      - "השלמתם נכון את <strong>low</strong> ואת <strong>high</strong>, גם כמילים וגם בתוך משפטים."
 
-  adjective_knight_final_challenge:
+  adjective_knight_gem_request:
     speaker: adjective_knight
     lines:
-      - "הגעתם לאתגר האחרון של כתר התארים. הפעם לא צריך לנסוע לשום מקום."
-      - "המשחק שלידנו יציג את כל זוגות התארים שלמדתם."
-      - "התאימו כל מילה למילה ההפוכה שלה: <strong>short</strong> ו־<strong>long</strong>, וכן הלאה."
-      - "חשבו היטב והשלימו את כל ששת הזוגות."
-
-  adjective_knight_challenge_complete:
+      - "נשאר משחק אחד בלבד: התאמת זוגות התארים המנוגדים."
+      - "השלמת המשחק תיתן לכם <strong>Gem</strong> אחד. הביאו לי אותו כדי לסיים את קו המשימות."
+  adjective_knight_gem_delivered:
     speaker: adjective_knight
     lines:
-      - "הצלחתם! התאמתם את כל זוגות התארים המנוגדים."
-      - "אתם מכירים עכשיו: <strong>short / long</strong>, <strong>cold / hot</strong>, <strong>big / small</strong>, <strong>fast / slow</strong>, <strong>low / high</strong> ו־<strong>heavy / light</strong>."
-      - "כתר התארים שוב שלם. קבלו עשרה מטבעות על העזרה שלכם לממלכה!"
+      - "קיבלתי את ה־<strong>Gem</strong>, והוא הוסר מהתיק שלכם."
+      - "התאמתם נכון את כל זוגות התארים. קו המשימות הושלם!"

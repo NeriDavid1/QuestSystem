@@ -1,0 +1,105 @@
+quest:
+  id: q04_twelve_basic_adjectives
+  name: "Twelve Basic Adjectives"
+  level_required: 7
+  giver_npc: adjective_knight
+  prerequisite: q03_big_and_small_words
+  summary: "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to the Knight."
+
+rewards: { xp: 225, items: [] }
+
+steps:
+  - type: talk_to_npc
+    npc_id: adjective_knight
+    dialogue_id: adjective_knight_runes_request
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_short
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 2
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_long
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_cold
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 2
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_hot
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_big
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 2
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_small
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 3
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_fast
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 3
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_slow
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 3
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_low
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 3
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_high
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 3
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_heavy
+    reward_item_id: ancient_rune
+    reward_amount: 1
+  - type: play_minigame
+    minigame_id: speak_aloud
+    difficulty: 3
+    success_required: true
+    instance_id: q04_twelve_basic_adjectives_light
+    reward_item_id: ancient_rune
+    reward_amount: 1
+
+  - type: deliver_item
+    npc_id: adjective_knight
+    item_id: ancient_rune
+    amount: 12
+    dialogue_id: adjective_knight_runes_delivered

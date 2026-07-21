@@ -149,29 +149,26 @@ enemies:
 questlines:
   adjective_crown:
     display_name: "כתר התארים"
-    theme: "קסם שמשנה את העולם בעזרת תארים באנגלית (רמות 1–10)"
+    theme: "תרגול תארים באנגלית באמצעות משחקים, קבלת פריטים ומסירתם לדמויות"
     quests:
       q01_bridge_too_short:
         name: "הגשר קצר מדי"
-        summary: "התבוננו בגשר הקצר הקיים ואייתו את התואר ההפוך LONG, בלי לשנות את הגשר."
-      q02_five_small_sheep:
-        name: "חמש כבשים קטנות"
-        summary: "מצאו חמש כבשים קטנות בין החיות הקיימות וחזרו אל הסבתא."
-      q03_whispering_stone:
+        summary: "אייתו LONG, קבלו Oak Log אחד ומסרו אותו לאביר."
+      q02_whispering_stone:
         name: "האבן הלוחשת"
-        summary: "אמרו HOT בקול בקרחת היער כדי להמיס את קוביית הקרח הקיימת ולשחרר את הגביש."
-      q04_big_and_small_animals:
-        name: "חיות גדולות וקטנות"
-        summary: "השוו בין הכבשים והפרות הקיימות וזהו אילו חיות BIG ואילו SMALL."
-      q05_twelve_basic_adjectives:
+        summary: "אמרו HOT, קבלו Herbs אחד ומסרו אותו לאיש המים."
+      q03_big_and_small_words:
+        name: "המילים גדול וקטן"
+        summary: "השלימו BIG ואמרו SMALL, קבלו שני פריטי Corn ומסרו אותם לסבתא."
+      q04_twelve_basic_adjectives:
         name: "שנים־עשר תארים בסיסיים"
-        summary: "אייתו ואמרו שנים־עשר תארים בסיסיים באנגלית, אחד אחרי השני."
-      q06_from_low_to_high:
+        summary: "השלימו שנים־עשר משחקים, קבלו שנים־עשר Ancient Runes ומסרו אותם לאביר."
+      q05_from_low_to_high:
         name: "מלמטה למעלה"
-        summary: "למדו LOW בתחתית גרם המדרגות הקיים ו-HIGH לאחר העלייה לראשו."
-      q07_adjective_challenge:
+        summary: "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם לאביר."
+      q06_adjective_challenge:
         name: "אתגר התארים"
-        summary: "ליד אביר התארים, השלימו משחק התאמה מסכם עם כל זוגות התארים המנוגדים שנלמדו."
+        summary: "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו לאביר."
 
   blacksmith_theron:
     display_name: "דרך הנפח של תרון"
