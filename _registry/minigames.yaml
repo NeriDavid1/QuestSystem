@@ -15,6 +15,16 @@ minigames:
       - sound_to_letters       # what vowel does שש make? → sh
     typical_trigger: [chest, gate, signpost, book, npc_object]
 
+  word_ordering:
+    name: "Word Ordering"
+    category: grammar
+    description: "Arrange scrambled English word tiles in the correct order to build a complete sentence."
+    english_focus: "Sentence structure, adjective placement, reading comprehension"
+    difficulty_range: [2, 10]
+    variants:
+      - sentence_building      # the, building, is, high → The building is high.
+    typical_trigger: [signpost, book, npc_object, puzzle_board]
+
   word_matching:
     name: "Word Matching"
     category: vocabulary
@@ -25,6 +35,7 @@ minigames:
       - word_to_image          # dog ↔ photo of dog
       - letter_to_gap          # o ↔ d_g
       - word_to_translation    # dog ↔ כלב (optional, later levels)
+      - opposite_pairing      # short ↔ long, cold ↔ hot
     typical_trigger: [chest, shelf, market_stall, puzzle_board, npc_object]
 
   letter_drawing:

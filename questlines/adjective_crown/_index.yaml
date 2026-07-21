@@ -2,53 +2,49 @@ questline:
   id: adjective_crown
   npc_id: adjective_knight
   display_name: "The Adjective Crown"
-  theme: "Beginner English adjectives through world-changing magic"
+  theme: "Beginner English adjectives through existing open-world landmarks and activities"
   quest_count: 7
   level_range: [1, 10]
 
 quests:
-  - id: q01_whispering_stone
-    name: "The Whispering Stone"
-    level: 2
-    prerequisite: null
-    rewards: { xp: 75, items: [{ id: warmth_crystal, amount: 1 }] }
-
-  - id: q02_bridge_too_short
+  - id: q01_bridge_too_short
     name: "The Bridge Is Too Short"
     level: 1
-    prerequisite: q01_whispering_stone
+    prerequisite: null
     rewards: { xp: 50, items: [{ id: length_crystal, amount: 1 }] }
 
-  - id: q03_five_small_sheep
+  - id: q02_five_small_sheep
     name: "Five Small Sheep"
-    level: 8
-    prerequisite: q02_bridge_too_short
-    rewards: { xp: 225, items: [{ id: description_crystal, amount: 1 }] }
+    level: 3
+    prerequisite: q01_bridge_too_short
+    rewards: { xp: 100, items: [{ id: description_crystal, amount: 1 }] }
 
-  - id: q04_giant_zombie
-    name: "The Giant Zombie"
-    level: 5
-    prerequisite: q03_five_small_sheep
-    rewards: { xp: 125, items: [{ id: size_crystal, amount: 1 }] }
-
-  - id: q05_too_fast_to_catch
-    name: "Too Fast to Catch"
-    level: 7
-    prerequisite: q04_giant_zombie
-    rewards: { xp: 175, items: [{ id: speed_crystal, amount: 1 }] }
-
-  - id: q06_something_about_the_weight
-    name: "Something About The Weight"
+  - id: q03_whispering_stone
+    name: "The Whispering Stone"
     level: 4
-    prerequisite: q05_too_fast_to_catch
-    rewards: { xp: 100, items: [{ id: weight_crystal, amount: 1 }] }
+    prerequisite: q02_five_small_sheep
+    rewards: { xp: 125, items: [{ id: warmth_crystal, amount: 1 }] }
 
-  - id: q07_crystal_test
-    name: "The Crystal Test"
+  - id: q04_big_and_small_animals
+    name: "Big and Small Animals"
+    level: 5
+    prerequisite: q03_whispering_stone
+    rewards: { xp: 150, items: [{ id: size_crystal, amount: 1 }] }
+
+  - id: q05_twelve_basic_adjectives
+    name: "Twelve Basic Adjectives"
+    level: 7
+    prerequisite: q04_big_and_small_animals
+    rewards: { xp: 200, items: [] }
+
+  - id: q06_from_low_to_high
+    name: "From Low to High"
+    level: 8
+    prerequisite: q05_twelve_basic_adjectives
+    rewards: { xp: 225, items: [{ id: height_crystal, amount: 1 }] }
+
+  - id: q07_adjective_challenge
+    name: "The Adjective Challenge"
     level: 10
-    prerequisite: q06_something_about_the_weight
-    rewards:
-      xp: 350
-      items:
-        - { id: crown_crystal, amount: 1 }
-        - { id: coin, amount: 10 }
+    prerequisite: q06_from_low_to_high
+    rewards: { xp: 350, items: [{ id: coin, amount: 10 }] }

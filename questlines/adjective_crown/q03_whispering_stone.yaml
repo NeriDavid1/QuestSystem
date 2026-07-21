@@ -1,13 +1,13 @@
 quest:
-  id: q01_whispering_stone
+  id: q03_whispering_stone
   name: "The Whispering Stone"
-  level_required: 2
+  level_required: 4
   giver_npc: adjective_water_man
-  prerequisite: null
-  summary: "The player says HOT aloud to warm a cold magic stone and release the second crystal."
+  prerequisite: q02_five_small_sheep
+  summary: "In a forest clearing, the player says HOT aloud to melt the existing ice block and release its crystal."
 
 rewards:
-  xp: 75
+  xp: 125
   items:
     - id: warmth_crystal
       amount: 1
@@ -15,14 +15,14 @@ rewards:
 steps:
   - type: talk_to_npc
     npc_id: adjective_water_man
-    dialogue_id: adjective_water_man_cold_stone
+    dialogue_id: adjective_water_man_forest_ice
 
   - type: reach_location
-    location_id: adjective_frozen_spring
+    location_id: adjective_forest_clearing
 
   - type: play_minigame
     minigame_id: speak_aloud
-    difficulty: 4
+    difficulty: 2
     success_required: true
 
   - type: collect_item

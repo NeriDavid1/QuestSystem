@@ -1,0 +1,48 @@
+quest:
+  id: q06_from_low_to_high
+  name: "From Low to High"
+  level_required: 8
+  giver_npc: adjective_knight
+  prerequisite: q05_twelve_basic_adjectives
+  summary: "The player learns LOW at the bottom of an existing staircase and HIGH after walking to the top."
+
+rewards:
+  xp: 225
+  items:
+    - id: height_crystal
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: adjective_knight
+    dialogue_id: adjective_knight_high_and_low
+
+  - type: reach_location
+    location_id: adjective_stairs_low
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: word_ordering
+    difficulty: 3
+    success_required: true
+
+  - type: reach_location
+    location_id: adjective_stairs_high
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    difficulty: 2
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: word_ordering
+    difficulty: 3
+    success_required: true
+
+  - type: return_to_npc
+    npc_id: adjective_knight
+    dialogue_id: adjective_knight_high_and_low_complete

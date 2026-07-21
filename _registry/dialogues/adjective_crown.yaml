@@ -4,88 +4,109 @@ dialogues:
   adjective_knight_crown_intro:
     speaker: adjective_knight
     lines:
-      - "שלום, גיבור צעיר. אני האביר, שומר כתר התארים."
-      - "שבעת הגבישים של הכתר התפזרו, ובלעדיהם הקסם בממלכה משנה דברים בצורה הלא נכונה."
-      - "הגשר שלפנינו נעשה <strong>short</strong> — קצר מדי כדי לעבור."
-      - "סדרו את האותיות של <strong>long</strong>, והקסם יאריך אותו."
+      - "שלום, גיבורים צעירים. אני שומר על כתר התארים."
+      - "תארים הם מילים שמתארות דברים. באנגלית, הגשר שלפנינו הוא <strong>short</strong> — קצר."
+      - "המילה ההפוכה מ־<strong>short</strong> היא <strong>long</strong> — ארוך."
+      - "גשו אל הגשר וסדרו את האותיות <strong>l, o, n, g</strong>. הגשר עצמו יישאר כפי שהוא."
 
-  adjective_water_man_cold_stone:
-    speaker: adjective_water_man
+  adjective_knight_length_restored:
+    speaker: adjective_knight
     lines:
-      - "הגביש הבא קפוא בתוך המעיין. האבן הקסומה נעשתה <strong>cold</strong>."
-      - "הקשיבו למילה <strong>hot</strong>, ואז אמרו אותה בקול כדי לחמם את האבן."
-
-  adjective_water_man_warmth_restored:
-    speaker: adjective_water_man
-    lines:
-      - "אמרתם <strong>hot</strong>, האבן התחממה והמים שוב זורמים."
-      - "גביש החום מאיר. אפשר להמשיך אל המעלית המלכותית."
-
-  adjective_grandfather_heavy_platform:
-    speaker: adjective_grandfather
-    lines:
-      - "המשטח נעשה <strong>heavy</strong> — כבד כל כך שהמעלית לא יכולה לעלות."
-      - "בחרו את התואר ההפוך. איזה תואר יהפוך אותו לקל?"
-
-  adjective_grandfather_weight_restored:
-    speaker: adjective_grandfather
-    lines:
-      - "נכון: ההפך מ־<strong>heavy</strong> הוא <strong>light</strong>."
-      - "המעלית שוב פועלת, ותושבי הממלכה יכולים להשתמש בה."
-
-  adjective_village_chief_big_zombie:
-    speaker: adjective_village_chief
-    lines:
-      - "זומבי <strong>big</strong> חוסם את שער הכפר. כל עוד הוא גדול, אי אפשר לפגוע בו."
-      - "בחרו את ההפך מ־<strong>big</strong>, שנו אותו, ואז הילחמו בו."
-
-  adjective_village_chief_size_restored:
-    speaker: adjective_village_chief
-    lines:
-      - "הפכתם את הזומבי מ־<strong>big</strong> ל־<strong>small</strong> והצלתם את הכפר."
-      - "גביש הגודל חזר למקומו והשער שוב בטוח."
-
-  adjective_crazy_old_man_fast_thief:
-    speaker: adjective_crazy_old_man
-    lines:
-      - "המפלצת לקחה את גביש המהירות! היא <strong>fast</strong> מדי ואי אפשר לתפוס אותה."
-      - "רדפו אחריה, סדרו את האותיות של <strong>slow</strong>, ואז אמרו את המילה בקול."
-
-  adjective_crazy_old_man_speed_restored:
-    speaker: adjective_crazy_old_man
-    lines:
-      - "אייתתם ואמרתם <strong>slow</strong>, והמפלצת האטה."
-      - "גביש המהירות בידינו ודרך המסחר שוב בטוחה."
+      - "מצוין! זיהיתם שהגשר הוא <strong>short</strong> ואייתתם את המילה ההפוכה, <strong>long</strong>."
+      - "זכרו: <strong>short</strong> פירושו קצר, ו־<strong>long</strong> פירושו ארוך."
+      - "לא היה צורך לשנות את הגשר. גביש האורך חזר לכתר, והמשימה הבאה מחכה בשדה החיות."
 
   adjective_grandmother_five_small_sheep:
     speaker: adjective_grandmother
     lines:
-      - "אני צריך בדיוק חמש <strong>small sheep</strong>."
-      - "בשדה יש גם כבשים ענקיות ופרות קטנות. חפשו חיות שהן גם <strong>small</strong> וגם <strong>sheep</strong>."
-      - "בחרתם כבשה ענקית? זאת sheep, אבל היא לא small. בחרתם פרה קטנה? היא small, אבל היא לא sheep."
+      - "שלום, ילדים. אני צריכה עזרה למצוא בדיוק חמש <strong>small sheep</strong> — כבשים קטנות."
+      - "בשדה יש כבשים ופרות, וחלק מהחיות גדולות וחלק קטנות."
+      - "חפשו חיה שהיא גם <strong>small</strong> וגם <strong>sheep</strong>."
+      - "כבשה גדולה היא sheep, אבל לא small. פרה קטנה היא small, אבל לא sheep."
 
   adjective_grandmother_flock_complete:
     speaker: adjective_grandmother
     lines:
-      - "אחת, שתיים, שלוש, ארבע, חמש — בדיוק חמש <strong>small sheep</strong>!"
-      - "הנה גביש התיאור. בזכותכם העדר והשדה שוב מסודרים."
+      - "בואו נספור: אחת, שתיים, שלוש, ארבע, חמש!"
+      - "מצאתם בדיוק חמש <strong>small sheep</strong>. כל הכבוד!"
 
   adjective_grandmother_description_restored:
     speaker: adjective_grandmother
     lines:
-      - "מצאתם את החיות הנכונות לפי שתי המילים: <strong>small sheep</strong>."
-      - "שישה גבישים חזרו. הגביש האחרון מחכה במקדש הכתר."
+      - "הצלחתם להשתמש בשתי מילים יחד כדי למצוא את החיות הנכונות."
+      - "<strong>Small</strong> מתאר את הגודל, ו־<strong>sheep</strong> אומר לנו איזו חיה לחפש."
+      - "גביש התיאור שלכם. עכשיו לכו אל קרחת היער — משהו קפוא מחכה שם."
 
-  adjective_knight_final_trial:
+  adjective_water_man_forest_ice:
+    speaker: adjective_water_man
+    lines:
+      - "מצאתי את גוש הקרח הזה בקרחת היער. הוא <strong>cold</strong> — קר מאוד."
+      - "בתוך הקרח נמצא גביש החום, אבל אין צורך להביא אש."
+      - "המילה ההפוכה מ־<strong>cold</strong> היא <strong>hot</strong> — חם."
+      - "לחצו על המיקרופון ואמרו <strong>hot</strong> בקול ברור כדי להמיס את הקרח."
+
+  adjective_water_man_warmth_restored:
+    speaker: adjective_water_man
+    lines:
+      - "שמעתי אתכם אומרים <strong>hot</strong>, והקרח נמס!"
+      - "זכרו: <strong>cold</strong> הוא קר, ו־<strong>hot</strong> הוא חם."
+      - "גביש החום שוב בטוח. תודה שעזרתם ליער."
+
+  adjective_grandmother_big_and_small_animals:
+    speaker: adjective_grandmother
+    lines:
+      - "כבר מצאתם כבשים קטנות. עכשיו נבדוק אם אתם יודעים להשוות בין כל החיות שבשדה."
+      - "<strong>Big</strong> פירושו גדול, ו־<strong>small</strong> פירושו קטן."
+      - "במשחק תראו את הכבשים והפרות שכבר נמצאות כאן. התאימו לכל חיה את התואר הנכון."
+
+  adjective_grandmother_size_complete:
+    speaker: adjective_grandmother
+    lines:
+      - "נכון מאוד! התאמתם <strong>big</strong> לחיות הגדולות ו־<strong>small</strong> לחיות הקטנות."
+      - "אותה חיה יכולה להיות גדולה או קטנה — התואר מספר לנו איך היא נראית."
+      - "קחו את גביש הגודל והמשיכו בדרך."
+
+  adjective_knight_twelve_adjectives:
     speaker: adjective_knight
     lines:
-      - "מקדש הכתר ייפתח רק למי שבאמת שולט בקסם התארים."
-      - "השתמשו במה שלמדתם: הפכו heavy ל־light, big ל־small, ו־cold ל־hot."
-      - "האתגרים קצרים, אבל הפעם תצטרכו לזכור לבד."
+      - "לפני שנמשיך, נערוך אימון פשוט בתארים בסיסיים."
+      - "יופיעו לפניכם שנים־עשר תארים באנגלית, אחד אחרי השני."
+      - "בכל תור סדרו תחילה את אותיות המילה, ואז אמרו את אותה מילה בקול."
+      - "המילים הן: <strong>short, long, cold, hot, big, small, fast, slow, low, high, heavy</strong> ו־<strong>light</strong>."
 
-  adjective_knight_crown_restored:
+  adjective_knight_twelve_adjectives_complete:
     speaker: adjective_knight
     lines:
-      - "שבעת הגבישים חזרו, וכתר התארים שוב מאיר!"
-      - "שיניתם גשר, אבן, משטח ומפלצות — ועזרתם לכל הממלכה."
-      - "קבלו עשרה מטבעות על השירות שלכם. יום אחד אולי תזכו גם לענוד את הכתר בעצמכם."
+      - "כל הכבוד! אייתתם ואמרתם את כל שנים־עשר התארים."
+      - "השלמתם שישה זוגות של הפכים, וההגייה שלכם הייתה ברורה."
+      - "עכשיו אתם מוכנים להמשיך לאתגר <strong>low</strong> ו־<strong>high</strong>."
+
+  adjective_knight_high_and_low:
+    speaker: adjective_knight
+    lines:
+      - "ליד גרם המדרגות אפשר ללמוד עוד שני תארים מנוגדים."
+      - "בתחתית אתם במקום <strong>low</strong> — נמוך. סדרו את האותיות של <strong>low</strong>, ואז בנו משפט עם המילה."
+      - "אחר כך עלו במדרגות. בראש המדרגות סדרו את <strong>high</strong> ובנו גם איתה משפט."
+      - "אין צורך לטפס על מגדל; רק לעלות במדרגות הקיימות."
+
+  adjective_knight_high_and_low_complete:
+    speaker: adjective_knight
+    lines:
+      - "יפה מאוד. התחלתם <strong>low</strong> וסיימתם <strong>high</strong>."
+      - "<strong>Low</strong> פירושו נמוך, ו־<strong>high</strong> פירושו גבוה."
+      - "אספתם את כל המילים הדרושות. נשאר רק אתגר מסכם אחד."
+
+  adjective_knight_final_challenge:
+    speaker: adjective_knight
+    lines:
+      - "הגעתם לאתגר האחרון של כתר התארים. הפעם לא צריך לנסוע לשום מקום."
+      - "המשחק שלידנו יציג את כל זוגות התארים שלמדתם."
+      - "התאימו כל מילה למילה ההפוכה שלה: <strong>short</strong> ו־<strong>long</strong>, וכן הלאה."
+      - "חשבו היטב והשלימו את כל ששת הזוגות."
+
+  adjective_knight_challenge_complete:
+    speaker: adjective_knight
+    lines:
+      - "הצלחתם! התאמתם את כל זוגות התארים המנוגדים."
+      - "אתם מכירים עכשיו: <strong>short / long</strong>, <strong>cold / hot</strong>, <strong>big / small</strong>, <strong>fast / slow</strong>, <strong>low / high</strong> ו־<strong>heavy / light</strong>."
+      - "כתר התארים שוב שלם. קבלו עשרה מטבעות על העזרה שלכם לממלכה!"

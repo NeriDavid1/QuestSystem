@@ -1,13 +1,13 @@
 quest:
-  id: q03_five_small_sheep
+  id: q02_five_small_sheep
   name: "Five Small Sheep"
-  level_required: 8
+  level_required: 3
   giver_npc: adjective_grandmother
-  prerequisite: q02_bridge_too_short
-  summary: "The player identifies and herds five small sheep from a field of misleading animal combinations."
+  prerequisite: q01_bridge_too_short
+  summary: "The player identifies five small sheep among the existing animals and returns to the Grandmother."
 
 rewards:
-  xp: 225
+  xp: 100
   items:
     - id: description_crystal
       amount: 1
@@ -29,10 +29,6 @@ steps:
     item_id: small_sheep
     amount: 5
     dialogue_id: adjective_grandmother_flock_complete
-
-  - type: collect_item
-    item_id: description_crystal
-    amount: 1
 
   - type: return_to_npc
     npc_id: adjective_grandmother
