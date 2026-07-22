@@ -1,7 +1,7 @@
 quest:
   id: q03_big_and_small_words
   name: "Big and Small Words"
-  level_required: 5
+  level_required: 1
   giver_npc: teacher_maya
   prerequisite: q02_whispering_stone
   summary: "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya."
@@ -39,3 +39,5 @@ steps:
     item_id: corn
     amount: 2
     dialogue_id: adjective_grandmother_corn_delivered
+    reward_item_id: corn
+    reward_amount: 2

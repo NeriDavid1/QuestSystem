@@ -26,3 +26,5 @@ steps:
     item_id: oak_log
     amount: 1
     dialogue_id: adjective_knight_oak_log_delivered
+    reward_item_id: oak_log
+    reward_amount: 1

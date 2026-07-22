@@ -1,7 +1,7 @@
 quest:
   id: q05_from_low_to_high
   name: "From Low to High"
-  level_required: 8
+  level_required: 1
   giver_npc: teacher_maya
   prerequisite: q04_twelve_basic_adjectives
   summary: "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya."
@@ -49,3 +49,5 @@ steps:
     item_id: power_stone
     amount: 4
     dialogue_id: adjective_knight_power_stones_delivered
+    reward_item_id: power_stone
+    reward_amount: 4

@@ -1,10 +1,10 @@
 quest:
   id: q06_adjective_challenge
   name: "The Adjective Challenge"
-  level_required: 10
+  level_required: 1
   giver_npc: teacher_maya
   prerequisite: q05_from_low_to_high
-  summary: "Complete the final adjective matching game, receive one Gem, and deliver it to Maya."
+  summary: "Complete the twelve learned adjective words in a sprite-free matching game, receive one Gem, and deliver it to Maya."
 
 rewards:
   xp: 350
@@ -32,3 +32,5 @@ steps:
     item_id: gem
     amount: 1
     dialogue_id: adjective_knight_gem_delivered
+    reward_item_id: gem
+    reward_amount: 1

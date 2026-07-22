@@ -1,7 +1,7 @@
 quest:
   id: q02_whispering_stone
   name: "The Whispering Stone"
-  level_required: 3
+  level_required: 1
   giver_npc: teacher_maya
   prerequisite: q01_bridge_too_short
   summary: "Say HOT in the forest, receive one Herbs item, and deliver it to Maya."
@@ -26,3 +26,5 @@ steps:
     item_id: herbs
     amount: 1
     dialogue_id: adjective_water_man_herbs_delivered
+    reward_item_id: herbs
+    reward_amount: 1

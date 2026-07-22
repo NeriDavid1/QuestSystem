@@ -1,7 +1,7 @@
 quest:
   id: q04_twelve_basic_adjectives
   name: "Twelve Basic Adjectives"
-  level_required: 7
+  level_required: 1
   giver_npc: teacher_maya
   prerequisite: q03_big_and_small_words
   summary: "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya."
@@ -151,3 +151,5 @@ steps:
     item_id: ancient_rune
     amount: 12
     dialogue_id: adjective_knight_runes_delivered
+    reward_item_id: ancient_rune
+    reward_amount: 12
