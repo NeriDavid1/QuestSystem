@@ -755,89 +755,90 @@
     "adjective_knight_oak_log_request": {
       "speaker": "teacher_maya",
       "lines": [
-        "אני צריכה <strong>Oak Log</strong> אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר.",
-        "סדרו את האותיות של <strong>long</strong>. בסיום המשחק תקבלו Oak Log לתיק.",
+        "אני צריכה goL kaO אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר.",
+        "סדרו את האותיות של gnol. בסיום המשחק תקבלו goL kaO לתיק.",
         "חזרו אליי ומסרו לי אותו; הוא יוסר מהתיק בזמן המסירה."
       ]
     },
     "adjective_knight_oak_log_delivered": {
       "speaker": "teacher_maya",
       "lines": [
-        "קיבלתי את ה־<strong>Oak Log</strong>. הוא הוסר מהתיק שלכם.",
-        "אייתתם נכון: <strong>long</strong> הוא ההפך מ־<strong>short</strong>."
+        "קיבלתי את ה־goL kaO. הוא הוסר מהתיק שלכם.",
+        "אייתתם נכון: gnol הוא ההפך מ־trohs."
       ]
     },
     "adjective_water_man_herbs_request": {
       "speaker": "teacher_maya",
       "lines": [
-        "אני צריכה פריט <strong>Herbs</strong> אחד. המשחק בקרחת היער ייתן לכם אותו.",
-        "אמרו את המילה <strong>hot</strong> בקול ברור, קבלו את הפריט וחזרו אליי."
+        "אני צריכה פריט sbreH אחד. המשחק בקרחת היער ייתן לכם אותו.",
+        "אמרו את המילה toh בקול ברור, קבלו את הפריט וחזרו אליי."
       ]
     },
     "adjective_water_man_herbs_delivered": {
       "speaker": "teacher_maya",
       "lines": [
-        "תודה. קיבלתי את ה־<strong>Herbs</strong>, והפריט הוסר מהתיק.",
-        "זכרו: <strong>hot</strong> הוא חם, וההפך שלו הוא <strong>cold</strong>."
+        "תודה. קיבלתי את ה־sbreH, והפריט הוסר מהתיק.",
+        "זכרו: toh הוא חם, וההפך שלו הוא dloc."
       ]
     },
     "adjective_grandmother_corn_request": {
       "speaker": "teacher_maya",
       "lines": [
-        "אני צריכה שני פריטי <strong>Corn</strong>. כל אחד משני המשחקים ייתן לכם פריט אחד.",
-        "במשחק הראשון סדרו את <strong>big</strong>. במשחק השני אמרו <strong>small</strong>.",
+        "אני צריכה שני פריטי nroC. כל אחד משני המשחקים ייתן לכם פריט אחד.",
+        "במשחק הראשון סדרו את gib. במשחק השני אמרו llams.",
         "אחרי שיהיו לכם שני פריטים, מסרו לי אותם יחד."
       ]
     },
     "adjective_grandmother_corn_delivered": {
       "speaker": "teacher_maya",
       "lines": [
-        "קיבלתי שני פריטי <strong>Corn</strong>, ושניהם הוסרו מהתיק שלכם.",
-        "<strong>Big</strong> הוא גדול ו־<strong>small</strong> הוא קטן."
+        "קיבלתי שני פריטי nroC, ושניהם הוסרו מהתיק שלכם.",
+        "giB הוא גדול ו־llams הוא קטן."
       ]
     },
     "adjective_knight_runes_request": {
       "speaker": "teacher_maya",
       "lines": [
-        "אני צריכה שנים־עשר פריטי <strong>Ancient Rune</strong>.",
-        "לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף Ancient Rune אחד לתיק.",
-        "השלימו את כולם, ודאו שיש לכם שנים־עשר Runes, ואז מסרו לי אותם."
+        "אני צריכה שנים־עשר פריטי enuR tneicnA.",
+        "לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף enuR tneicnA אחד לתיק.",
+        "השלימו את כולם, ודאו שיש לכם שנים־עשר senuR, ואז מסרו לי אותם."
       ]
     },
     "adjective_knight_runes_delivered": {
       "speaker": "teacher_maya",
       "lines": [
-        "קיבלתי את כל שנים־עשר ה־<strong>Ancient Runes</strong>. הם הוסרו מהתיק שלכם.",
+        "קיבלתי את כל שנים־עשר ה־tneicnA senuR. הם הוסרו מהתיק שלכם.",
         "השלמתם שנים־עשר תארים בסיסיים בהצלחה."
       ]
     },
     "adjective_knight_power_stones_request": {
       "speaker": "teacher_maya",
       "lines": [
-        "למשימה הבאה אני צריכה ארבעה פריטי <strong>Power Stone</strong>.",
-        "יש ארבעה משחקים: איות LOW, משפט עם LOW, איות HIGH ומשפט עם HIGH.",
-        "כל משחק ייתן לכם Power Stone אחד. הביאו לי את כל הארבעה."
+        "למשימה הבאה אני צריכה ארבעה פריטי enotS rewoP.",
+        "יש ארבעה משחקים: איות WOL, משפט עם WOL, איות HGIH ומשפט עם HGIH.",
+        "כל משחק ייתן לכם enotS rewoP אחד. הביאו לי את כל הארבעה."
       ]
     },
     "adjective_knight_power_stones_delivered": {
       "speaker": "teacher_maya",
       "lines": [
-        "ארבעת ה־<strong>Power Stones</strong> נמסרו והוסרו מהתיק שלכם.",
-        "השלמתם נכון את <strong>low</strong> ואת <strong>high</strong>, גם כמילים וגם בתוך משפטים."
+        "ארבעת ה־rewoP senotS נמסרו והוסרו מהתיק שלכם.",
+        "השלמתם נכון את wol ואת hgih, גם כמילים וגם בתוך משפטים."
       ]
     },
     "adjective_knight_gem_request": {
       "speaker": "teacher_maya",
       "lines": [
-        "נשאר משחק אחד בלבד: התאמת זוגות התארים המנוגדים.",
-        "השלמת המשחק תיתן לכם <strong>Gem</strong> אחד. הביאו לי אותו כדי לסיים את קו המשימות."
+        "נשאר משחק אחד בלבד: השלמת שתים־עשרה מילות התואר שלמדתם.",
+        "בכל מילה חסרה אות אחת. חברו את האות הנכונה למילה המתאימה, בלי תמונות.",
+        "השלמת המשחק תיתן לכם meG אחד. הביאו לי אותו כדי לסיים את קו המשימות."
       ]
     },
     "adjective_knight_gem_delivered": {
       "speaker": "teacher_maya",
       "lines": [
-        "קיבלתי את ה־<strong>Gem</strong>, והוא הוסר מהתיק שלכם.",
-        "התאמתם נכון את כל זוגות התארים. קו המשימות הושלם!"
+        "קיבלתי את ה־meG, והוא הוסר מהתיק שלכם.",
+        "השלמתם נכון את כל שתים־עשרה מילות התואר. קו המשימות הושלם!"
       ]
     },
     "elara_healing_intro": {
@@ -1981,14 +1982,16 @@
               "npc_id": "teacher_maya",
               "item_id": "oak_log",
               "amount": 1,
-              "dialogue_id": "adjective_knight_oak_log_delivered"
+              "dialogue_id": "adjective_knight_oak_log_delivered",
+              "reward_item_id": "oak_log",
+              "reward_amount": 1
             }
           ]
         },
         {
           "id": "q02_whispering_stone",
           "name": "האבן הלוחשת",
-          "level": 3,
+          "level": 1,
           "prerequisite": "q01_bridge_too_short",
           "summary": "אמרו HOT, קבלו Herbs אחד ומסרו אותו למאיה.",
           "status": "complete",
@@ -2030,14 +2033,16 @@
               "npc_id": "teacher_maya",
               "item_id": "herbs",
               "amount": 1,
-              "dialogue_id": "adjective_water_man_herbs_delivered"
+              "dialogue_id": "adjective_water_man_herbs_delivered",
+              "reward_item_id": "herbs",
+              "reward_amount": 1
             }
           ]
         },
         {
           "id": "q03_big_and_small_words",
           "name": "המילים גדול וקטן",
-          "level": 5,
+          "level": 1,
           "prerequisite": "q02_whispering_stone",
           "summary": "השלימו BIG ואמרו SMALL, קבלו שני פריטי Corn ומסרו אותם למאיה.",
           "status": "complete",
@@ -2104,14 +2109,16 @@
               "npc_id": "teacher_maya",
               "item_id": "corn",
               "amount": 2,
-              "dialogue_id": "adjective_grandmother_corn_delivered"
+              "dialogue_id": "adjective_grandmother_corn_delivered",
+              "reward_item_id": "corn",
+              "reward_amount": 2
             }
           ]
         },
         {
           "id": "q04_twelve_basic_adjectives",
           "name": "שנים־עשר תארים בסיסיים",
-          "level": 7,
+          "level": 1,
           "prerequisite": "q03_big_and_small_words",
           "summary": "השלימו שנים־עשר משחקים, קבלו שנים־עשר Ancient Runes ומסרו אותם למאיה.",
           "status": "complete",
@@ -2406,14 +2413,16 @@
               "npc_id": "teacher_maya",
               "item_id": "ancient_rune",
               "amount": 12,
-              "dialogue_id": "adjective_knight_runes_delivered"
+              "dialogue_id": "adjective_knight_runes_delivered",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 12
             }
           ]
         },
         {
           "id": "q05_from_low_to_high",
           "name": "מלמטה למעלה",
-          "level": 8,
+          "level": 1,
           "prerequisite": "q04_twelve_basic_adjectives",
           "summary": "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם למאיה.",
           "status": "complete",
@@ -2512,14 +2521,16 @@
               "npc_id": "teacher_maya",
               "item_id": "power_stone",
               "amount": 4,
-              "dialogue_id": "adjective_knight_power_stones_delivered"
+              "dialogue_id": "adjective_knight_power_stones_delivered",
+              "reward_item_id": "power_stone",
+              "reward_amount": 4
             }
           ]
         },
         {
           "id": "q06_adjective_challenge",
           "name": "אתגר התארים",
-          "level": 10,
+          "level": 1,
           "prerequisite": "q05_from_low_to_high",
           "summary": "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו למאיה.",
           "status": "complete",
@@ -2552,18 +2563,24 @@
               "reward_item_id": "gem",
               "reward_amount": 1,
               "minigame_brief": {
-                "instruction": "התאימו את זוגות התארים המנוגדים",
+                "instruction": "השלימו את האות החסרה בכל אחת ממילות התואר",
                 "tasks": [
-                  "<strong>short</strong> ↔ <strong>long</strong>",
-                  "<strong>cold</strong> ↔ <strong>hot</strong>",
-                  "<strong>big</strong> ↔ <strong>small</strong>",
-                  "<strong>fast</strong> ↔ <strong>slow</strong>",
-                  "<strong>low</strong> ↔ <strong>high</strong>",
-                  "<strong>heavy</strong> ↔ <strong>light</strong>"
+                  "_hort",
+                  "_ong",
+                  "_old",
+                  "_ot",
+                  "_ig",
+                  "_mall",
+                  "_ast",
+                  "_low",
+                  "_ow",
+                  "_igh",
+                  "_eavy",
+                  "_ight"
                 ],
-                "target": "six opposite adjective pairs",
-                "variant": "opposite_pairing",
-                "success": "כל הזוגות הותאמו; Gem אחד נוסף לתיק"
+                "target": "short, long, cold, hot, big, small, fast, slow, low, high, heavy, light",
+                "variant": "missing_letter_matching",
+                "success": "כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק"
               }
             },
             {
@@ -2571,7 +2588,9 @@
               "npc_id": "teacher_maya",
               "item_id": "gem",
               "amount": 1,
-              "dialogue_id": "adjective_knight_gem_delivered"
+              "dialogue_id": "adjective_knight_gem_delivered",
+              "reward_item_id": "gem",
+              "reward_amount": 1
             }
           ]
         }
