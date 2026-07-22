@@ -1,0 +1,20 @@
+quest:
+  id: q20_word_carnival
+  name: "The Grand Word Carnival"
+  level_required: 30
+  giver_npc: vocabulary_keeper
+  prerequisite: q19_thunder_applause
+  summary: "All four vocabulary worlds meet for a final carnival where forty-eight English words must find their places."
+rewards:
+  xp: 400
+  items:
+    - { id: vocabulary_master_badge, amount: 1 }
+    - { id: coin, amount: 15 }
+steps:
+  - { type: talk_to_npc, npc_id: vocabulary_keeper, dialogue_id: vocab_q20_intro }
+  - { type: reach_location, location_id: Sanctum of Whispering Light }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light, difficulty: 7, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light, difficulty: 6, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light, difficulty: 6, success_required: true }
+  - { type: collect_item, item_id: vocabulary_atlas, amount: 1 }
+  - { type: return_to_npc, npc_id: vocabulary_keeper, dialogue_id: vocab_q20_complete }

@@ -125,6 +125,66 @@
       "title": "משקיף דרך המסחר",
       "location": "ממלכת התארים — דרך המסחר",
       "description": "זקן מוזר שמבחין בכל דבר משונה שמתרחש בדרך המסחר."
+    },
+    "royal_librarian": {
+      "name": "הספרנית המלכותית",
+      "title": "שומרת ספר ה־nouns המלכותי",
+      "location": "ספריית ה־nouns המלכותית",
+      "description": "ספרנית סבלנית שעוזרת לגיבורים צעירים להשיב את שמות האנשים, המקומות, החפצים והיצורים בממלכה."
+    },
+    "forgetful_king": {
+      "name": "המלך השכחן",
+      "title": "שליט ממלכת ה־nouns",
+      "location": "חדר הכס המלכותי",
+      "description": "מלך טוב לב שמבלבל בין חפצי הארמון לאחר שה־nouns שלהם נעלמו."
+    },
+    "royal_armorer": {
+      "name": "נפח הנשק המלכותי",
+      "title": "שומר הנשקייה המלכותית",
+      "location": "הנשקייה המלכותית",
+      "description": "אומן זהיר שמנסה להחזיר את השמות הנכונים לחרבות, מגנים ומגילות."
+    },
+    "confused_wizard": {
+      "name": "הקוסם המבולבל",
+      "title": "סוחר קסמים זמני",
+      "location": "שער השוק המלכותי",
+      "description": "קוסם שפתח בטעות חנות קסמים מוזלת לאחר ששמות אנשי החצר התערבבו."
+    },
+    "offended_dragon": {
+      "name": "הדרקון הנעלב",
+      "title": "שומר ארכיון היצורים",
+      "location": "ארכיון היצורים המלכותי",
+      "description": "דרקון גאה שמתנגד בתוקף לכך שמישהו קרא לו goblin."
+    },
+    "vocabulary_keeper": {
+      "name": "שומר אוצר המילים",
+      "title": "שומר אטלס המילים הגדול",
+      "location": "קרנבל אוצר המילים",
+      "description": "מדריך עליז שאוסף מילים שימושיות באנגלית מתוך האסונות המצחיקים ביותר בממלכה."
+    },
+    "animal_caretaker": {
+      "name": "מטפל החיות",
+      "title": "שומר החיות המלכותיות",
+      "location": "מתחם החיות המלכותי",
+      "description": "מטפל סבלני שהחיות שלו מחליפות בלי הפסקה מקומות, בגדים ותפקידים."
+    },
+    "food_queen": {
+      "name": "מלכת האוכל",
+      "title": "שליטת ממלכת האוכל",
+      "location": "ארמון המטבח המלכותי",
+      "description": "מלכה חגיגית שהופכת כל ארוחה לטורניר ומתייחסת לכל מאפין כמו לאזרח חשוב."
+    },
+    "school_headmaster": {
+      "name": "מנהל בית הספר",
+      "title": "מנהל בית הספר המלכותי",
+      "location": "בית הספר המלכותי",
+      "description": "מנהל טוב לב שמנסה להשתלט על עפרונות מורדים, ציורים מתעטשים ורובוטים שאוכלים שיעורי בית."
+    },
+    "adventure_scout": {
+      "name": "סייר ההרפתקאות",
+      "title": "מוביל המשלחות המלכותי",
+      "location": "מחנה ההרפתקאות",
+      "description": "סייר נמרץ שהמצפן שלו מבולבל, אבל חוש ההומור שלו מכוון בדיוק."
     }
   },
   "items": {
@@ -337,6 +397,78 @@
       "softkitty_id": 60,
       "softkitty_uid": "ancient_rune",
       "max_stack": 99
+    },
+    "noun_royalty_page": {
+      "name": "דף ה־nouns של אנשי המלוכה",
+      "type": "quest_item"
+    },
+    "noun_places_page": {
+      "name": "דף ה־nouns של המקומות",
+      "type": "quest_item"
+    },
+    "noun_treasury_page": {
+      "name": "דף ה־nouns של אוצרות הארמון",
+      "type": "quest_item"
+    },
+    "noun_armory_page": {
+      "name": "דף ה־nouns של הנשקייה",
+      "type": "quest_item"
+    },
+    "noun_court_page": {
+      "name": "דף ה־nouns של אנשי החצר",
+      "type": "quest_item"
+    },
+    "noun_creatures_page": {
+      "name": "דף ה־nouns של היצורים",
+      "type": "quest_item"
+    },
+    "royal_noun_book": {
+      "name": "ספר ה־nouns המלכותי",
+      "type": "quest_item"
+    },
+    "noun_keeper_badge": {
+      "name": "תג שומר ה־nouns המלכותי",
+      "type": "accessory"
+    },
+    "vocab_animal_card": {
+      "name": "כרטיס מילת חיות",
+      "type": "quest_item"
+    },
+    "vocab_animal_page": {
+      "name": "דף החיות של אטלס המילים",
+      "type": "quest_item"
+    },
+    "vocab_food_card": {
+      "name": "כרטיס מילת אוכל",
+      "type": "quest_item"
+    },
+    "vocab_food_page": {
+      "name": "דף האוכל של אטלס המילים",
+      "type": "quest_item"
+    },
+    "vocab_school_card": {
+      "name": "כרטיס מילת בית ספר",
+      "type": "quest_item"
+    },
+    "vocab_school_page": {
+      "name": "דף בית הספר של אטלס המילים",
+      "type": "quest_item"
+    },
+    "vocab_adventure_card": {
+      "name": "כרטיס מילת הרפתקה",
+      "type": "quest_item"
+    },
+    "vocab_adventure_page": {
+      "name": "דף ההרפתקאות של אטלס המילים",
+      "type": "quest_item"
+    },
+    "vocabulary_atlas": {
+      "name": "אטלס אוצר המילים הגדול",
+      "type": "quest_item"
+    },
+    "vocabulary_master_badge": {
+      "name": "תג אלוף אוצר המילים",
+      "type": "accessory"
     }
   },
   "stepTypes": {
@@ -975,6 +1107,119 @@
         "העיר בטוחה בזכותכם. תודה — מכל הלב."
       ]
     },
+    "nouns_librarian_missing_roles": {
+      "speaker": "royal_librarian",
+      "lines": [
+        "אסון בספרייה המלכותית! שלוש מילים ברחו מן הפרק על אנשי הארמון: <strong>king</strong>, <strong>queen</strong> ו־<strong>knight</strong>.",
+        "בלי השמות האלה, המלך לא יודע שהוא <strong>king</strong>, המלכה מחפשת את הכרטיס <strong>queen</strong>, והאביר כבר התיישב על הכיסא של המלך.",
+        "התאימו כל noun לדמות הנכונה, שחזרו את האות הראשונה ב־<strong>king</strong>, ואז אמרו את שלושת השמות בקול."
+      ]
+    },
+    "nouns_librarian_roles_restored": {
+      "speaker": "royal_librarian",
+      "lines": [
+        "מצוין: <strong>king</strong>, <strong>queen</strong>, <strong>knight</strong>. שלושה nouns שנותנים שמות לאנשים בממלכה.",
+        "האביר ירד מן הכס, אבל ביקש לקחת איתו את הכרית. לדבריו, גם <strong>knight</strong> ראוי לשבת בנוחות.",
+        "שמרו את דף אנשי המלוכה. המילים האלה יחזרו שוב בהמשך."
+      ]
+    },
+    "nouns_librarian_mixed_places": {
+      "speaker": "royal_librarian",
+      "lines": [
+        "המפה המלכותית השתגעה: ה־<strong>castle</strong> מסומן בתור <strong>tower</strong>, המגדל מסומן בתור <strong>gate</strong>, והשער מסומן בתור castle.",
+        "נלמד שלושה nouns של מקומות: <strong>castle</strong> הוא טירה, <strong>tower</strong> הוא מגדל, ו־<strong>gate</strong> הוא שער.",
+        "היזהרו מהטעות: tower יכולה להיות חלק מן castle, אבל הן אינן אותה מילה."
+      ]
+    },
+    "nouns_librarian_places_restored": {
+      "speaker": "royal_librarian",
+      "lines": [
+        "המפה שוב נכונה: <strong>castle</strong>, <strong>tower</strong>, <strong>gate</strong>.",
+        "השומרים שכבר טיפסו ל־tower במקום להגיע ל־gate מבקשים שנציב שם דלת. הבקשה עדיין בבדיקה.",
+        "דף המקומות חזר לספר."
+      ]
+    },
+    "nouns_king_crown_soup": {
+      "speaker": "forgetful_king",
+      "lines": [
+        "סוף סוף הגעתם! איבדתי שלושה nouns חשובים: <strong>crown</strong>, <strong>throne</strong> ו־<strong>treasure</strong>.",
+        "<strong>crown</strong> הוא כתר, <strong>throne</strong> הוא כיסא, ו־<strong>treasure</strong> הוא אוצר. אני שמתי קערת מרק על הראש וישבתי על תיבת האוצר.",
+        "מצאו את השמות הנכונים לפני שהטבח יוסיף לכתר גזר."
+      ]
+    },
+    "nouns_king_treasury_restored": {
+      "speaker": "forgetful_king",
+      "lines": [
+        "נפלא: <strong>crown</strong> על הראש, <strong>throne</strong> באולם, ו־<strong>treasure</strong> בכספת.",
+        "קערת המרק חזרה למטבח. אני מודה שהיא הייתה קלה יותר מן ה־<strong>crown</strong>, אבל הרבה פחות מלכותית.",
+        "קחו את דף אוצרות הארמון."
+      ]
+    },
+    "nouns_armorer_mixed_equipment": {
+      "speaker": "royal_armorer",
+      "lines": [
+        "בלגן בנשקייה! ה־<strong>shield</strong> משמש כמגש מרק, מנסים לכתוב בעזרת <strong>sword</strong>, ומנגבים את השולחן ב־<strong>scroll</strong>.",
+        "שלושת ה־nouns שלנו הם <strong>sword</strong>, <strong>shield</strong> ו־<strong>scroll</strong>. התאימו כל מילה לחפץ הנכון.",
+        "גובלין לקח את הדף החסר. קודם שחזרו את המילים, ואז יהיה ברור איזה חפץ כדאי לקחת לקרב."
+      ]
+    },
+    "nouns_armorer_equipment_restored": {
+      "speaker": "royal_armorer",
+      "lines": [
+        "עבודה טובה: <strong>sword</strong>, <strong>shield</strong>, <strong>scroll</strong>.",
+        "ה־<strong>shield</strong> שוב מגן, ה־<strong>sword</strong> חזר למעמד, וה־<strong>scroll</strong> ניצל מן המרק.",
+        "הטבח התאכזב מעט. לדבריו, ה־shield היה המגש המרשים ביותר במטבח."
+      ]
+    },
+    "nouns_wizard_new_shop": {
+      "speaker": "confused_wizard",
+      "lines": [
+        "ברוכים הבאים למטבח הקסמים שלי! לפחות נדמה לי שאני <strong>cook</strong>... איבדנו את <strong>wizard</strong>, <strong>cook</strong> ו־<strong>guard</strong>.",
+        "ה־<strong>wizard</strong> מערבב מרק עם שרביט, ה־<strong>cook</strong> שומר על השער בעזרת כף, וה־<strong>guard</strong> מנופף במקל וצועק 'קסם!'.",
+        "התאימו את שלושת ה־nouns לאנשים הנכונים ואמרו אותם בקול לפני שהמרק מתחיל לעוף."
+      ]
+    },
+    "nouns_wizard_roles_restored": {
+      "speaker": "confused_wizard",
+      "lines": [
+        "נזכרתי! אני <strong>wizard</strong>. במטבח עובד <strong>cook</strong>, וליד השער עומד <strong>guard</strong>.",
+        "ה־guard הפסיק לנסות קסמים. זה לטובה — בפעם האחרונה הוא הפך את הקסדה שלו לקומקום.",
+        "דף אנשי החצר שוב בטוח."
+      ]
+    },
+    "nouns_dragon_wrong_name": {
+      "speaker": "offended_dragon",
+      "lines": [
+        "עלבון נורא! מישהו הצמיד לי את הכרטיס <strong>goblin</strong>. אני <strong>dragon</strong> מכובד, לא goblin קטן!",
+        "ה־<strong>goblin</strong> קיבל את הכרטיס dragon וכבר דורש טירה ואוצר. ה־<strong>griffin</strong> קיבל שם שגוי ומנסה לנשוף אש.",
+        "למדו את <strong>dragon</strong>, <strong>griffin</strong> ו־<strong>goblin</strong>, ואז החזירו לכל יצור את ה־noun שלו."
+      ]
+    },
+    "nouns_dragon_names_restored": {
+      "speaker": "offended_dragon",
+      "lines": [
+        "כך טוב יותר: <strong>dragon</strong>, <strong>griffin</strong>, <strong>goblin</strong>. שלושה nouns של יצורים בממלכה.",
+        "ה־goblin החזיר את כרטיס dragon, אבל הוא עדיין מבקש אוצר קטן 'רק לניסיון'.",
+        "קחו את דף היצורים. נתראה במבחן הסיום — אני אבוא לבדוק שהוגים dragon בכבוד."
+      ]
+    },
+    "nouns_librarian_final_trial": {
+      "speaker": "royal_librarian",
+      "lines": [
+        "כל דפי הספר נמצאו, אבל הספר ייסגר שוב אם המילים לא באמת נלמדו. הגיע מבחן ה־nouns המלכותי.",
+        "התאימו nouns מוכרים לתמונות, הרכיבו את הכתיב של כמה מילים, ואז אמרו בקול noun אחד מכל קבוצה.",
+        "לא נוסיף מילים חדשות. זה הזמן לזכור את האנשים, המקומות, החפצים והיצורים שכבר פגשנו."
+      ]
+    },
+    "nouns_librarian_book_restored": {
+      "speaker": "royal_librarian",
+      "lines": [
+        "הצלחתם! ספר ה־nouns המלכותי שלם, וכל מילה חזרה למקום הנכון.",
+        "אתם מזהים, קוראים ואומרים nouns של אנשים, מקומות, חפצים ויצורים מן הממלכה.",
+        "המלך ביקש את ה־<strong>crown</strong>. הטבח שוב הביא קערת מרק — הפעם בכוונה. אפילו המלך צחק.",
+        "קבלו את תג שומר ה־nouns המלכותי."
+      ]
+    },
     "maya_welcome_runaway_a": {
       "speaker": "teacher_maya",
       "lines": [
@@ -1339,6 +1584,290 @@
         "אני לא תמיד הייתי 'וקס הזר'. פעם הייתי מישהו אחר. מישהו שהעיר שכחה.",
         "קחו את השריד העתיק. זה שלכם עכשיו. והאמת — גם."
       ]
+    },
+    "vocab_q01_intro": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "עז ברחה עם מפת החווה בפה. עכשיו <strong>duck</strong> מחכה באורווה, ו־<strong>horse</strong> מנסה לשחות בברווזייה.",
+        "למדו את המילים <strong>goat</strong>, <strong>duck</strong> ו־<strong>horse</strong>, והחזירו כל חיה למקום הנכון.",
+        "מהרו לפני שה־goat תגלה שגם ספר ההוראות טעים."
+      ]
+    },
+    "vocab_q01_complete": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "נהדר: <strong>goat</strong>, <strong>duck</strong>, <strong>horse</strong>.",
+        "ה־horse יצא מן הברווזייה. ה־duck עדיין דורש ערימת קש פרטית."
+      ]
+    },
+    "vocab_q02_intro": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "ביער יש בעיית בוקר: ה־<strong>owl</strong> מסרב להתעורר, ה־<strong>fox</strong> לקח לו את המשקפיים, וה־<strong>bear</strong> מנסה ללחוש.",
+        "התוצאה היא owl ישנוני, fox שנראה חכם מדי, ו־bear שלוחש בעוצמה שכל היער שומע.",
+        "התאימו והגידו: <strong>fox</strong>, <strong>owl</strong>, <strong>bear</strong>."
+      ]
+    },
+    "vocab_q02_complete": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "מצוין: fox, owl, bear. שלוש המילים נשמרו.",
+        "ה־owl חזר לישון. הוא ביקש שלא נפריע לו לפני מחר בערב."
+      ]
+    },
+    "vocab_q03_intro": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "בחצר הג'ונגל ה־<strong>parrot</strong> מחקה את המלך ונותן פקודות, ה־<strong>monkey</strong> גנב את הכתר, וה־<strong>tiger</strong> מחכה בנימוס לארוחת צהריים.",
+        "למדו <strong>monkey</strong>, <strong>tiger</strong> ו־<strong>parrot</strong> לפני שהתוכי מכריז על עצמו כמלך."
+      ]
+    },
+    "vocab_q03_complete": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "monkey, tiger, parrot — הכול נכון.",
+        "ה־parrot ויתר על הכס, אבל ממשיך לצעוק: 'עוד עוגיות לכולם!' זו הייתה הפקודה הפופולרית ביותר שלו."
+      ]
+    },
+    "vocab_q04_intro": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "במפרץ האלמוגים ה־<strong>octopus</strong> הזמין שמונה גרביים, ה־<strong>dolphin</strong> מבצע את המשלוח, וה־<strong>shark</strong> טוען שבא רק לתה.",
+        "למדו <strong>dolphin</strong>, <strong>shark</strong> ו־<strong>octopus</strong>. סרטן עצבני מחזיק את הגרב האחרונה."
+      ]
+    },
+    "vocab_q04_complete": {
+      "speaker": "animal_caretaker",
+      "lines": [
+        "נכון: dolphin, shark, octopus.",
+        "ל־octopus יש עכשיו שמונה גרביים. רק אחרי שלבש אותן הוא נזכר שאין לו נעליים."
+      ]
+    },
+    "vocab_q05_intro": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "מצעד החיות מתחיל, אבל כל אחת מחזיקה כרטיס שגוי. ה־goat מחזיקה SHARK, וה־octopus מחזיק HORSE.",
+        "לא נלמד מילים חדשות. נחזור על שתים־עשרה החיות, נאיית כמה מהן ונאמר ארבע בקול."
+      ]
+    },
+    "vocab_q05_complete": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "כל החיות קיבלו את שמותיהן, ודף Animals נכנס לאטלס.",
+        "ה־goat עדיין ניסתה לאכול את הכרטיס שלה. לפחות הפעם היא ידעה שכתוב עליו goat."
+      ]
+    },
+    "vocab_q06_intro": {
+      "speaker": "food_queen",
+      "lines": [
+        "ברוכים הבאים לממלכת ארוחת הבוקר! אני לובשת <strong>pancake</strong> בתור כתר, קערת <strong>cereal</strong> שומרת על הדלת, ו־<strong>honey</strong> הדביק את אנשי החצר זה לזה.",
+        "למדו <strong>pancake</strong>, <strong>cereal</strong> ו־<strong>honey</strong> לפני שהכתר שלי מבקש סירופ."
+      ]
+    },
+    "vocab_q06_complete": {
+      "speaker": "food_queen",
+      "lines": [
+        "pancake, cereal, honey — שלוש המילים במקום.",
+        "הכתר היה טעים מאוד, אך מעכשיו אחזור לכתר שאינו נעלם בזמן ארוחת הבוקר."
+      ]
+    },
+    "vocab_q07_intro": {
+      "speaker": "food_queen",
+      "lines": [
+        "בטורניר הירקות ה־<strong>carrot</strong> נותן פקודות, ה־<strong>pepper</strong> גורם לכולם להתעטש, ואביר ה־<strong>onion</strong> גורם לקהל לבכות.",
+        "התאימו ואמרו <strong>carrot</strong>, <strong>pepper</strong>, <strong>onion</strong>, ואז עצרו את סליים הבצל."
+      ]
+    },
+    "vocab_q07_complete": {
+      "speaker": "food_queen",
+      "lines": [
+        "נפלא: carrot, pepper, onion.",
+        "אביר ה־onion ניצח בטורניר. אף אחד לא ראה איך — כולם ניגבו דמעות."
+      ]
+    },
+    "vocab_q08_intro": {
+      "speaker": "food_queen",
+      "lines": [
+        "מהפכה במאפייה! כיכר <strong>bread</strong> חסמה את הדלת, <strong>cookie</strong> מתגלגל במסדרון, ו־<strong>muffin</strong> ברח בכרכרה קטנה.",
+        "למדו <strong>bread</strong>, <strong>cookie</strong> ו־<strong>muffin</strong> ותפסו את המאפים לפני שיגיעו לגבול."
+      ]
+    },
+    "vocab_q08_complete": {
+      "speaker": "food_queen",
+      "lines": [
+        "bread, cookie, muffin — כולם חזרו למאפייה.",
+        "ה־muffin טוען שלא ברח; הוא פשוט יצא לחופשה קצרה בלי להודיע."
+      ]
+    },
+    "vocab_q09_intro": {
+      "speaker": "food_queen",
+      "lines": [
+        "באולם המשתה קערת <strong>soup</strong> מחפשת כפית, <strong>salad</strong> דורש כתר, ו־<strong>cheese</strong> מספר לכולם שהוא הגיע מן הירח.",
+        "למדו <strong>soup</strong>, <strong>salad</strong> ו־<strong>cheese</strong>. אין צורך להתווכח עם cheese על אסטרונומיה."
+      ]
+    },
+    "vocab_q09_complete": {
+      "speaker": "food_queen",
+      "lines": [
+        "soup, salad, cheese — יפה מאוד.",
+        "ה־cheese הודה שהוא לא מן הירח, אבל ביקש שנשמור את הסיפור כי הוא נשמע מרשים."
+      ]
+    },
+    "vocab_q10_intro": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "פסטיבל האוכל מוכן, אבל התפריט התבלבל: ליד soup מופיעה תמונת muffin, וליד onion כתוב HONEY.",
+        "חזרו על שתים־עשרה מילות האוכל, אייתו את המילים שנבחרו ואמרו אותן בקול."
+      ]
+    },
+    "vocab_q10_complete": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "דף Food Kingdom הושלם ונכנס לאטלס.",
+        "האורחים קיבלו סוף סוף את המנות הנכונות. רק ה־pancake ביקש לשבת על כס המלכה."
+      ]
+    },
+    "vocab_q11_intro": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "מרד בכיתה! ה־<strong>pencil</strong> מסרב לכתוב, ה־<strong>ruler</strong> הכריז על עצמו כמלך, וה־<strong>notebook</strong> התחיל לתת ציונים למורה.",
+        "למדו <strong>pencil</strong>, <strong>ruler</strong> ו־<strong>notebook</strong> והחזירו את השיעור למסלול."
+      ]
+    },
+    "vocab_q11_complete": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "pencil, ruler, notebook — מצוין.",
+        "ה־notebook נתן למורה ציון תשעים ושמונה. שתי נקודות ירדו בגלל כתב יד."
+      ]
+    },
+    "vocab_q12_intro": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "בחדר האמנות ה־<strong>brush</strong> דגדג את הדיוקן, ה־<strong>paint</strong> עף לכל הכיוונים, ו־<strong>paper</strong> ביקש מטרייה.",
+        "התאימו ואמרו <strong>brush</strong>, <strong>paint</strong>, <strong>paper</strong>."
+      ]
+    },
+    "vocab_q12_complete": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "brush, paint, paper — שלוש מילים חדשות נשמרו.",
+        "הדיוקן הפסיק להתעטש, אבל עכשיו הוא מבקש טישו מצויר."
+      ]
+    },
+    "vocab_q13_intro": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "במעבדה ה־<strong>robot</strong> אכל את שיעורי הבית, ה־<strong>magnet</strong> גנב את כל הכפיות, ודגם <strong>planet</strong> התגלגל החוצה.",
+        "למדו <strong>magnet</strong>, <strong>planet</strong> ו־<strong>robot</strong>, ואז עצרו את הרובוט לפני שיאכל גם את המבחן."
+      ]
+    },
+    "vocab_q13_complete": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "magnet, planet, robot — הכול נכון.",
+        "הרובוט החזיר את שיעורי הבית. למרבה הצער, הוא גם בדק אותם והוסיף הערות."
+      ]
+    },
+    "vocab_q14_intro": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "מגרש המשחקים השתגע: ה־<strong>swing</strong> עף גבוה מדי, ה־<strong>slide</strong> מצביע אל הירח, ו־<strong>rope</strong> קשר את כל הספסלים יחד.",
+        "למדו <strong>swing</strong>, <strong>slide</strong> ו־<strong>rope</strong> לפני שמישהו באמת מחליק לירח."
+      ]
+    },
+    "vocab_q14_complete": {
+      "speaker": "school_headmaster",
+      "lines": [
+        "swing, slide, rope — נהדר.",
+        "ה־slide חזר למקום. הוא עדיין טוען שהירח היה ממש קרוב."
+      ]
+    },
+    "vocab_q15_intro": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "יריד בית הספר התחיל, אך שתים־עשרה המילים נכנסו לכיתות הלא נכונות. ROBOT יושב בחדר האמנות ו־BRUSH מנסה לפתור תרגיל.",
+        "זהו קו הסיום של פרק School: התאמה, איות ודיבור בלי מילים חדשות."
+      ]
+    },
+    "vocab_q15_complete": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "דף School הושלם. אתם מזהים את כל שתים־עשרה המילים.",
+        "ה־ruler עדיין חושב שהוא מלך, אך הסכים לשלוט רק במגירת כלי הכתיבה."
+      ]
+    },
+    "vocab_q16_intro": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "במחנה ההרפתקנים צמח שיער על <strong>helmet</strong>, ה־<strong>banner</strong> דורש מחיאות כפיים, וסט <strong>armor</strong> רוקד בלי אביר.",
+        "למדו <strong>helmet</strong>, <strong>banner</strong> ו־<strong>armor</strong> לפני שהשריון מבקש שותף לריקוד."
+      ]
+    },
+    "vocab_q16_complete": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "helmet, banner, armor — שלוש המילים מוכנות להרפתקה.",
+        "גזרנו ל־helmet את השיער. הוא ביקש להשאיר פוני קטן."
+      ]
+    },
+    "vocab_q17_intro": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "בסדנת הקסם <strong>potion</strong> גורם לשיהוקים, <strong>wand</strong> מצביע לאחור, ו־<strong>spell</strong> הופך מגפיים לבננות.",
+        "למדו <strong>potion</strong>, <strong>wand</strong> ו־<strong>spell</strong>, ואז הביסו את הגוש שברח מן הסיר."
+      ]
+    },
+    "vocab_q17_complete": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "potion, wand, spell — מצוין.",
+        "הקסם תוקן. המגפיים חזרו להיות מגפיים, אך אחד מהם עדיין מריח קצת כמו בננה."
+      ]
+    },
+    "vocab_q18_intro": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "המסע נעצר: ה־<strong>compass</strong> מצביע על ארוחת הצהריים, ה־<strong>backpack</strong> אורז את עצמו, וה־<strong>tent</strong> מסרב לקום.",
+        "למדו <strong>compass</strong>, <strong>backpack</strong> ו־<strong>tent</strong> כדי שנוכל לצאת לדרך."
+      ]
+    },
+    "vocab_q18_complete": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "compass, backpack, tent — הכול מוכן.",
+        "ה־compass עדיין מצביע מדי פעם על כריך. אנחנו מתחילים לחשוד שהוא פשוט רעב."
+      ]
+    },
+    "vocab_q19_intro": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "בפסגת הסערה <strong>cloud</strong> חובש כובע, <strong>rainbow</strong> איבד את הצבעים, ו־<strong>thunder</strong> חושב שכל בום ראוי למחיאות כפיים.",
+        "למדו <strong>cloud</strong>, <strong>rainbow</strong> ו־<strong>thunder</strong> והחזירו את דף Adventure."
+      ]
+    },
+    "vocab_q19_complete": {
+      "speaker": "adventure_scout",
+      "lines": [
+        "cloud, rainbow, thunder — נפלא. דף Adventure הושלם.",
+        "מחאנו כפיים פעם אחת ל־thunder. עכשיו הוא מבקש הדרן."
+      ]
+    },
+    "vocab_q20_intro": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "הקרנבל הגדול נפתח! ארבעים ושמונה מילים הגיעו מחיות, אוכל, בית הספר והרפתקאות — וכולן התערבבו.",
+        "לא נלמד מילים חדשות. התאימו את המילים לתמונות, אייתו מילים מוכרות ואמרו מילים מכל ארבעת העולמות.",
+        "אם תצליחו, ארבעת הדפים יהפכו לאטלס אוצר המילים הגדול."
+      ]
+    },
+    "vocab_q20_complete": {
+      "speaker": "vocabulary_keeper",
+      "lines": [
+        "הצלחתם! ארבעים ושמונה מילים באנגלית נמצאות באטלס, ואתם יודעים לזהות, לקרוא ולומר אותן.",
+        "במצעד הסיום ה־octopus לובש helmet, ה־robot מחזיק pancake, וה־rainbow קיבל notebook. הפעם זה בכוונה.",
+        "קבלו את תג אלופי אוצר המילים."
+      ]
     }
   },
   "locations": {
@@ -1360,13 +1889,32 @@
     "adjective_village_gate": "שער הכפר",
     "adjective_trade_road": "דרך המסחר",
     "adjective_mixed_meadow": "אחו החיות",
-    "adjective_crown_shrine": "מקדש כתר התארים"
+    "adjective_crown_shrine": "מקדש כתר התארים",
+    "MoonriverCottage": "קוטג' נהר הירח",
+    "BuildersHome": "בית הבנאים",
+    "Driftgold Bay": "מפרץ דריפטגולד",
+    "FairyRosePark": "פארק ורד הפיות",
+    "Forsaken Cove": "המפרץ הנטוש",
+    "KingdomGate": "שער הממלכה",
+    "Sanctum of Whispering Light": "מקדש האור הלוחש",
+    "SilverFountainCourt": "חצר מזרקת הכסף",
+    "Solitude Tower": "מגדל הבדידות",
+    "The Oathstone Bridge": "גשר אבן השבועה",
+    "TowerOfLostVigil": "מגדל המשמר האבוד",
+    "The Sunspire Tree": "עץ צריח השמש",
+    "The Weeping Stones": "האבנים הבוכות",
+    "The Last Roar": "השאגה האחרונה"
   },
   "enemies": {
     "training_dummy": "בובת אימון",
     "letter_slime": "סליים אותיות",
     "adjective_small_zombie": "זומבי קטן",
-    "adjective_small_guardian": "שומר קטן"
+    "adjective_small_guardian": "שומר קטן",
+    "noun_goblin": "גובלין גונב מילים",
+    "vocabulary_sock_crab": "סרטן גונב גרביים",
+    "vocabulary_onion_slime": "סליים בצל דומע",
+    "vocabulary_homework_robot": "רובוט אוכל שיעורי בית",
+    "vocabulary_potion_blob": "בועת שיקוי משהקת"
   },
   "questlines": [
     {
@@ -4048,6 +4596,2364 @@
               "type": "talk_to_npc",
               "npc_id": "vex",
               "dialogue_id": "vex_q10_truth_revealed_start"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "royal_nouns",
+      "folder": "royal_nouns",
+      "displayName": "ספר ה־nouns המלכותי",
+      "theme": "לימוד nouns מתקדמים מעולם הממלכה דרך סיפור מצחיק, הקשבה, התאמה, איות ודיבור (רמות 4–10)",
+      "levelRange": [
+        4,
+        10
+      ],
+      "questCount": 7,
+      "npcId": "royal_librarian",
+      "npc": {
+        "id": "royal_librarian",
+        "name": "הספרנית המלכותית",
+        "title": "שומרת ספר ה־nouns המלכותי",
+        "location": "ספריית ה־nouns המלכותית",
+        "description": "ספרנית סבלנית שעוזרת לגיבורים צעירים להשיב את שמות האנשים, המקומות, החפצים והיצורים בממלכה."
+      },
+      "quests": [
+        {
+          "id": "q01_roles_without_names",
+          "name": "תפקידים בלי שמות",
+          "level": 4,
+          "prerequisite": null,
+          "summary": "המילים KING, QUEEN ו־KNIGHT נעלמו, וחדר הכס התמלא בבלבול מלכותי מצחיק.",
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": [
+              {
+                "id": "noun_royalty_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "royal_librarian",
+              "dialogue_id": "nouns_librarian_missing_roles"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "SilverFountainCourt"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את ה־nouns לדמויות הנכונות בחדר הכס",
+                "tasks": [
+                  "התאימו <strong>king</strong> לתמונת המלך",
+                  "התאימו <strong>queen</strong> לתמונת המלכה",
+                  "התאימו <strong>knight</strong> לתמונת האביר",
+                  "בסיבוב השני התמונות מחליפות מקום — התאימו שוב בלי להסתמך על המיקום"
+                ],
+                "target": "king, queen, knight",
+                "variant": "word_to_image",
+                "success": "שלוש הדמויות מקבלות בחזרה את השמות הנכונים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_drawing",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "שחזרו את האות K בתחילת המילה KING",
+                "tasks": [
+                  "על דף הספר מופיעה המילה <strong>_ING</strong>",
+                  "עקבו אחר הקו המנוקד וציירו <strong>K</strong> גדולה",
+                  "קראו את המילה השלמה: <strong>KING</strong>"
+                ],
+                "target": "K in KING",
+                "variant": "trace_guided",
+                "success": "המילה KING חוזרת לדף אנשי המלוכה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו את שמות אנשי המלוכה באנגלית",
+                "tasks": [
+                  "לחצו על Hear it והקשיבו ל־<strong>king</strong>, ואז אמרו king",
+                  "הקשיבו ל־<strong>queen</strong>, ואז אמרו queen",
+                  "הקשיבו ל־<strong>knight</strong>, ואז אמרו knight — האות K אינה נשמעת"
+                ],
+                "target": "king, queen, knight",
+                "variant": "repeat_after_npc",
+                "success": "הספר מזהה את שלושת ה־nouns ומאיר"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "noun_royalty_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "royal_librarian",
+              "dialogue_id": "nouns_librarian_roles_restored"
+            }
+          ]
+        },
+        {
+          "id": "q02_castle_on_the_map",
+          "name": "הטירה שהפכה למגדל",
+          "level": 5,
+          "prerequisite": "q01_roles_without_names",
+          "summary": "CASTLE, TOWER ו־GATE החליפו מקומות במפה ושולחים את תושבי הממלכה ליעדים הלא נכונים.",
+          "status": "complete",
+          "rewards": {
+            "xp": 125,
+            "items": [
+              {
+                "id": "noun_places_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "royal_librarian",
+              "dialogue_id": "nouns_librarian_mixed_places"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "KingdomGate"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו כל noun למקום הנכון במפת הממלכה",
+                "tasks": [
+                  "התאימו <strong>castle</strong> לתמונת הטירה השלמה",
+                  "התאימו <strong>tower</strong> לתמונת המגדל הגבוה",
+                  "התאימו <strong>gate</strong> לתמונת השער בכניסה לטירה",
+                  "זכרו: tower יכולה להיות חלק מ־castle, ו־gate היא הכניסה"
+                ],
+                "target": "castle, tower, gate",
+                "variant": "word_to_image",
+                "success": "המפה שולחת את תושבי הממלכה למקומות הנכונים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות כדי לשחזר את המילה CASTLE",
+                "tasks": [
+                  "גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות",
+                  "התעלמו מאותיות המסיחות",
+                  "קראו את המילה השלמה: <strong>castle</strong>"
+                ],
+                "target": "castle",
+                "variant": "word_spelling",
+                "success": "הכרטיס CASTLE חוזר למקום הנכון על המפה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו שלושה nouns של מקומות",
+                "tasks": [
+                  "הקשיבו ואמרו <strong>castle</strong>",
+                  "הקשיבו ואמרו <strong>tower</strong>",
+                  "הקשיבו ואמרו <strong>gate</strong>"
+                ],
+                "target": "castle, tower, gate",
+                "variant": "repeat_after_npc",
+                "success": "שלושת שמות המקומות נשמרים בדף המפה"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "noun_places_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "royal_librarian",
+              "dialogue_id": "nouns_librarian_places_restored"
+            }
+          ]
+        },
+        {
+          "id": "q03_crown_soup",
+          "name": "מרק הכתר",
+          "level": 6,
+          "prerequisite": "q02_castle_on_the_map",
+          "summary": "המלך מבלבל בין CROWN, THRONE ו־TREASURE ומגיע לחצר עם קערת מרק על הראש.",
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "noun_treasury_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "forgetful_king",
+              "dialogue_id": "nouns_king_crown_soup"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Solitude Tower"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את שמות אוצרות הארמון לחפצים הנכונים",
+                "tasks": [
+                  "התאימו <strong>crown</strong> לכתר, לא לקערת המרק",
+                  "התאימו <strong>throne</strong> לכיסא",
+                  "התאימו <strong>treasure</strong> לאוצר שבכספת",
+                  "בסיבוב החזרה מופיעים גם king ו־castle מן המשימות הקודמות"
+                ],
+                "target": "crown, throne, treasure",
+                "variant": "word_to_image",
+                "success": "המלך מפסיק ללבוש כלי מטבח"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של המילה CROWN",
+                "tasks": [
+                  "גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר",
+                  "בדקו שהמילה מתחילה ב־C ומסתיימת ב־N",
+                  "קראו את המילה: <strong>crown</strong>"
+                ],
+                "target": "crown",
+                "variant": "word_spelling",
+                "success": "הכתר מקבל בחזרה את הכרטיס CROWN"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו את שלושת ה־nouns של אוצרות הארמון",
+                "tasks": [
+                  "הקשיבו ואמרו <strong>crown</strong>",
+                  "הקשיבו ואמרו <strong>throne</strong> — הצליל TH מופיע בתחילת המילה",
+                  "הקשיבו ואמרו <strong>treasure</strong>"
+                ],
+                "target": "crown, throne, treasure",
+                "variant": "repeat_after_npc",
+                "success": "שלושת השמות נכנסים לדף אוצרות הארמון"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "noun_treasury_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "forgetful_king",
+              "dialogue_id": "nouns_king_treasury_restored"
+            }
+          ]
+        },
+        {
+          "id": "q04_soup_shield",
+          "name": "מגן המרק",
+          "level": 7,
+          "prerequisite": "q03_crown_soup",
+          "summary": "SWORD, SHIELD ו־SCROLL התערבבו בנשקייה, וגובלין ברח עם דף ה־nouns החסר.",
+          "status": "complete",
+          "rewards": {
+            "xp": 175,
+            "items": [
+              {
+                "id": "noun_armory_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "royal_armorer",
+              "dialogue_id": "nouns_armorer_mixed_equipment"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Oathstone Bridge"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "WoodenCart3_The_Oath_stone_Bridge",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את שמות החפצים בנשקייה",
+                "tasks": [
+                  "התאימו <strong>sword</strong> לחרב",
+                  "התאימו <strong>shield</strong> למגן",
+                  "התאימו <strong>scroll</strong> למגילה",
+                  "בסיבוב השני השלימו גם: <strong>s_ord</strong>, <strong>sh_eld</strong>, <strong>sc_oll</strong>"
+                ],
+                "target": "sword, shield, scroll",
+                "variant": "word_to_image + letter_to_gap",
+                "success": "כל חפץ חוזר למדף הנכון בנשקייה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "WoodenCart3_The_Oath_stone_Bridge",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של המילה SHIELD",
+                "tasks": [
+                  "גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות",
+                  "שימו לב לצירוף <strong>sh</strong> בתחילת המילה",
+                  "קראו את המילה השלמה: <strong>shield</strong>"
+                ],
+                "target": "shield",
+                "variant": "word_spelling",
+                "success": "ה־shield חוזר להיות מגן במקום מגש מרק"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "WoodenCart3_The_Oath_stone_Bridge",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו את שמות חפצי הנשקייה",
+                "tasks": [
+                  "הקשיבו ואמרו <strong>sword</strong> — האות W אינה נשמעת",
+                  "הקשיבו ואמרו <strong>shield</strong>",
+                  "הקשיבו ואמרו <strong>scroll</strong>"
+                ],
+                "target": "sword, shield, scroll",
+                "variant": "repeat_after_npc",
+                "success": "הספר שומר את שלושת השמות לפני הקרב עם הגובלין"
+              }
+            },
+            {
+              "type": "defeat_enemy",
+              "enemy_id": "noun_goblin",
+              "amount": 1
+            },
+            {
+              "type": "collect_item",
+              "item_id": "noun_armory_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "royal_armorer",
+              "dialogue_id": "nouns_armorer_equipment_restored"
+            }
+          ]
+        },
+        {
+          "id": "q05_wizard_for_sale",
+          "name": "הקוסם במטבח",
+          "level": 8,
+          "prerequisite": "q04_soup_shield",
+          "summary": "WIZARD, COOK ו־GUARD החליפו זהויות ומילאו את מטבח הארמון בקסמים לא מתוכננים.",
+          "status": "complete",
+          "rewards": {
+            "xp": 210,
+            "items": [
+              {
+                "id": "noun_court_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "confused_wizard",
+              "dialogue_id": "nouns_wizard_new_shop"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "TowerOfLostVigil"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את ה־nouns לאנשי החצר הנכונים",
+                "tasks": [
+                  "התאימו <strong>wizard</strong> לדמות הקוסם",
+                  "התאימו <strong>cook</strong> לדמות הטבח",
+                  "התאימו <strong>guard</strong> לדמות השומר",
+                  "בסיבוב החזרה התאימו גם king, queen ו־knight"
+                ],
+                "target": "wizard, cook, guard",
+                "variant": "word_to_image",
+                "success": "ה־wizard חוזר לקסם, ה־cook למטבח וה־guard לשער"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו שלושה nouns של אנשים בממלכה",
+                "tasks": [
+                  "הקשיבו ואמרו <strong>wizard</strong>",
+                  "הקשיבו ואמרו <strong>cook</strong>",
+                  "הקשיבו ואמרו <strong>guard</strong>",
+                  "לסיום, המערכת בוחרת אחד משלושת השמות ואותו אומרים בלי הדגמה נוספת"
+                ],
+                "target": "wizard, cook, guard",
+                "variant": "repeat_after_npc",
+                "success": "שלושת אנשי החצר מקבלים בחזרה את שמות התפקידים שלהם"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "noun_court_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "confused_wizard",
+              "dialogue_id": "nouns_wizard_roles_restored"
+            }
+          ]
+        },
+        {
+          "id": "q06_dragon_identity",
+          "name": "הדרקון שהפך לגובלין",
+          "level": 9,
+          "prerequisite": "q05_wizard_for_sale",
+          "summary": "DRAGON, GRIFFIN ו־GOBLIN קיבלו כרטיסי שם שגויים — הדרקון נעלב והגובלין כבר דורש אוצר.",
+          "status": "complete",
+          "rewards": {
+            "xp": 260,
+            "items": [
+              {
+                "id": "noun_creatures_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "offended_dragon",
+              "dialogue_id": "nouns_dragon_wrong_name"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Forsaken Cove"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו כל יצור ל־noun הנכון",
+                "tasks": [
+                  "התאימו <strong>dragon</strong> לדרקון",
+                  "התאימו <strong>griffin</strong> לגריפין בעל גוף האריה והכנפיים",
+                  "התאימו <strong>goblin</strong> לגובלין",
+                  "בסיבוב השני הכרטיסים והתמונות מחליפים מקום"
+                ],
+                "target": "dragon, griffin, goblin",
+                "variant": "word_to_image",
+                "success": "הדרקון מפסיק לענוד כרטיס GOBLIN ונרגע מעט"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של המילה DRAGON",
+                "tasks": [
+                  "גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות",
+                  "התעלמו מאותיות המסיחות",
+                  "קראו את המילה השלמה: <strong>dragon</strong>"
+                ],
+                "target": "dragon",
+                "variant": "word_spelling",
+                "success": "כרטיס DRAGON חוזר ליצור הנכון"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו את שמות שלושת היצורים",
+                "tasks": [
+                  "הקשיבו ואמרו <strong>dragon</strong>",
+                  "הקשיבו ואמרו <strong>griffin</strong>",
+                  "הקשיבו ואמרו <strong>goblin</strong>"
+                ],
+                "target": "dragon, griffin, goblin",
+                "variant": "repeat_after_npc",
+                "success": "דף היצורים מזהה את שלושת השמות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "noun_creatures_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "offended_dragon",
+              "dialogue_id": "nouns_dragon_names_restored"
+            }
+          ]
+        },
+        {
+          "id": "q07_royal_noun_trial",
+          "name": "מבחן ה־nouns המלכותי",
+          "level": 10,
+          "prerequisite": "q06_dragon_identity",
+          "summary": "חזרו על ה־nouns של האנשים, המקומות, החפצים והיצורים והשיבו את כל הדפים לספר המלכותי.",
+          "status": "complete",
+          "rewards": {
+            "xp": 350,
+            "items": [
+              {
+                "id": "noun_keeper_badge",
+                "amount": 1
+              },
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "royal_librarian",
+              "dialogue_id": "nouns_librarian_final_trial"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Sanctum of Whispering Light"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
+              "difficulty": 6,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "עברו מבחן התאמה מסכם של ה־nouns המלכותיים",
+                "tasks": [
+                  "סיבוב אנשים: king, queen, knight, wizard, cook, guard",
+                  "סיבוב מקומות: castle, tower, gate",
+                  "סיבוב חפצים: crown, throne, treasure, sword, shield, scroll",
+                  "סיבוב יצורים: dragon, griffin, goblin",
+                  "התאימו כל מילה לתמונה; בכל סיבוב מופיעים גם שני מסיחים מקבוצה אחרת"
+                ],
+                "target": "18 kingdom nouns",
+                "variant": "word_to_image",
+                "success": "ארבעת שערי היכל ה־nouns נפתחים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "שחזרו חמישה nouns מוכרים מן הספר",
+                "tasks": [
+                  "סדרו את <strong>queen</strong>",
+                  "סדרו את <strong>castle</strong>",
+                  "סדרו את <strong>throne</strong>",
+                  "סדרו את <strong>shield</strong>",
+                  "סדרו את <strong>dragon</strong>"
+                ],
+                "target": "queen, castle, throne, shield, dragon",
+                "variant": "word_spelling",
+                "success": "חמש המילים חוזרות לעמוד האחרון של הספר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
+              "difficulty": 6,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אמרו בקול noun אחד מכל קבוצה",
+                "tasks": [
+                  "הקשיבו פעם אחת, ואז אמרו <strong>knight</strong>",
+                  "אמרו <strong>castle</strong>",
+                  "אמרו <strong>shield</strong>",
+                  "אמרו <strong>dragon</strong>",
+                  "בשלב האחרון אין שינוי של המילים — רק פחות תמיכה כדי לבדוק זכירה"
+                ],
+                "target": "knight, castle, shield, dragon",
+                "variant": "single_word",
+                "success": "ספר ה־nouns המלכותי נפתח ומקבל את כל הדפים"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "royal_noun_book",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "royal_librarian",
+              "dialogue_id": "nouns_librarian_book_restored"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vocabulary_adventures",
+      "folder": "vocabulary_adventures",
+      "displayName": "הרפתקאות אוצר המילים",
+      "theme": "48 מילים חדשות באנגלית דרך חיות, ממלכת האוכל, בית הספר והרפתקאות מצחיקות (רמות 11–30)",
+      "levelRange": [
+        11,
+        30
+      ],
+      "questCount": 20,
+      "npcId": "vocabulary_keeper",
+      "npc": {
+        "id": "vocabulary_keeper",
+        "name": "שומר אוצר המילים",
+        "title": "שומר אטלס המילים הגדול",
+        "location": "קרנבל אוצר המילים",
+        "description": "מדריך עליז שאוסף מילים שימושיות באנגלית מתוך האסונות המצחיקים ביותר בממלכה."
+      },
+      "quests": [
+        {
+          "id": "q01_goat_ate_map",
+          "name": "העז שאכלה את המפה",
+          "level": 11,
+          "prerequisite": null,
+          "summary": "עז אכלה את מפת החווה, ועכשיו לומדים goat, duck ו־horse כדי להחזיר כל חיה למקום הנכון.",
+          "status": "complete",
+          "rewards": {
+            "xp": 120,
+            "items": [
+              {
+                "id": "vocab_animal_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q01_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "MoonriverCottage"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Small_Shop_Moonriver",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את המילים לחיות הנכונות בחווה",
+                "tasks": [
+                  "<strong>goat</strong> לעז, <strong>duck</strong> לברווז",
+                  "<strong>horse</strong> לסוס; בסיבוב השני התמונות מחליפות מקום"
+                ],
+                "target": "goat, duck, horse",
+                "variant": "word_to_image",
+                "success": "שלוש החיות חוזרות למקומות הנכונים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Small_Shop_Moonriver",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של HORSE",
+                "tasks": [
+                  "גררו h, o, r, s, e למשבצות",
+                  "קראו את המילה השלמה: <strong>horse</strong>"
+                ],
+                "target": "horse",
+                "variant": "word_spelling",
+                "success": "כרטיס HORSE משוחזר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Small_Shop_Moonriver",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו את שלוש המילים",
+                "tasks": [
+                  "Hear it ואז אמרו <strong>goat</strong> ו־<strong>duck</strong>",
+                  "הקשיבו ואמרו <strong>horse</strong>"
+                ],
+                "target": "goat, duck, horse",
+                "variant": "repeat_after_npc",
+                "success": "שלוש המילים נשמרות באטלס"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_animal_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q01_complete"
+            }
+          ]
+        },
+        {
+          "id": "q02_owl_morning",
+          "name": "הינשוף שונא את הבוקר",
+          "level": 12,
+          "prerequisite": "q01_goat_ate_map",
+          "summary": "ינשוף ישנוני, שועל עם משקפיים ודוב שלוחש בקול מלמדים fox, owl ו־bear.",
+          "status": "complete",
+          "rewards": {
+            "xp": 130,
+            "items": [
+              {
+                "id": "vocab_animal_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q02_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Sunspire Tree"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את חיות היער לתמונות",
+                "tasks": [
+                  "<strong>fox</strong> לשועל ו־<strong>owl</strong> לינשוף",
+                  "<strong>bear</strong> לדוב; חזרו על הסיבוב בסדר חדש"
+                ],
+                "target": "fox, owl, bear",
+                "variant": "word_to_image",
+                "success": "כל חיית יער מקבלת את הכרטיס שלה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו fox, owl, bear",
+                "tasks": [
+                  "הקשיבו לכל מילה לפני הדיבור",
+                  "אמרו <strong>fox</strong>, <strong>owl</strong>, <strong>bear</strong>"
+                ],
+                "target": "fox, owl, bear",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות היער נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_animal_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q02_complete"
+            }
+          ]
+        },
+        {
+          "id": "q03_parrot_king",
+          "name": "התוכי שהפך למלך",
+          "level": 13,
+          "prerequisite": "q02_owl_morning",
+          "summary": "תוכי הכריז על עצמו כמלך הג'ונגל; לומדים monkey, tiger ו־parrot לפני שהוא מטיל מס על בננות.",
+          "status": "complete",
+          "rewards": {
+            "xp": 140,
+            "items": [
+              {
+                "id": "vocab_animal_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q03_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Last Roar"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את חיות הג'ונגל לתמונות",
+                "tasks": [
+                  "<strong>monkey</strong> לקוף ו־<strong>tiger</strong> לטיגריס",
+                  "<strong>parrot</strong> לתוכי שמחזיק כתר"
+                ],
+                "target": "monkey, tiger, parrot",
+                "variant": "word_to_image",
+                "success": "בית המשפט של הג'ונגל מסודר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של PARROT",
+                "tasks": [
+                  "סדרו p, a, r, r, o, t",
+                  "שימו לב שיש שתי אותיות r"
+                ],
+                "target": "parrot",
+                "variant": "word_spelling",
+                "success": "המילה PARROT חוזרת לתוכי"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו monkey, tiger, parrot",
+                "tasks": [
+                  "חזרו אחרי ההקלטה",
+                  "אמרו את שלוש המילים פעם נוספת עם פחות עזרה"
+                ],
+                "target": "monkey, tiger, parrot",
+                "variant": "repeat_after_npc",
+                "success": "שלוש המילים נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_animal_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q03_complete"
+            }
+          ]
+        },
+        {
+          "id": "q04_octopus_socks",
+          "name": "שמונה גרביים לתמנון",
+          "level": 14,
+          "prerequisite": "q03_parrot_king",
+          "summary": "תמנון דורש שמונה גרביים תואמות, ובדרך לומדים dolphin, shark ו־octopus.",
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "vocab_animal_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q04_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Driftgold Bay"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את חיות הים לתמונות",
+                "tasks": [
+                  "<strong>dolphin</strong> לדולפין ו־<strong>shark</strong> לכריש",
+                  "<strong>octopus</strong> לתמנון בעל שמונה הזרועות"
+                ],
+                "target": "dolphin, shark, octopus",
+                "variant": "word_to_image",
+                "success": "משלוח הגרביים מגיע לחיה הנכונה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו dolphin, shark, octopus",
+                "tasks": [
+                  "הקשיבו להגייה של כל מילה",
+                  "אמרו <strong>dolphin</strong>, <strong>shark</strong>, <strong>octopus</strong>"
+                ],
+                "target": "dolphin, shark, octopus",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות הים נשמרות"
+              }
+            },
+            {
+              "type": "defeat_enemy",
+              "enemy_id": "vocabulary_sock_crab",
+              "amount": 1
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_animal_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "animal_caretaker",
+              "dialogue_id": "vocab_q04_complete"
+            }
+          ]
+        },
+        {
+          "id": "q05_animal_parade",
+          "name": "מצעד החיות",
+          "level": 15,
+          "prerequisite": "q04_octopus_socks",
+          "summary": "חוזרים על 12 מילות החיות בהתאמה, שמיעה ודיבור ומארגנים מצעד שבו הכריש מבטיח לא לנשוך את התזמורת.",
+          "status": "complete",
+          "rewards": {
+            "xp": 180,
+            "items": [
+              {
+                "id": "vocab_animal_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q05_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "FairyRosePark"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את שתים־עשרה החיות במצעד",
+                "tasks": [
+                  "סיבוב חווה ויער: goat, duck, horse, fox, owl, bear",
+                  "סיבוב ג'ונגל וים: monkey, tiger, parrot, dolphin, shark, octopus"
+                ],
+                "target": "12 animal words",
+                "variant": "word_to_image",
+                "success": "כל חיה עומדת עם הכרטיס הנכון"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אייתו ארבע מילות חיות מוכרות",
+                "tasks": [
+                  "סדרו horse ו־parrot",
+                  "סדרו dolphin ו־octopus"
+                ],
+                "target": "horse, parrot, dolphin, octopus",
+                "variant": "word_spelling",
+                "success": "דף Animals כמעט שלם"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אמרו ארבע מילים מן המצעד",
+                "tasks": [
+                  "אמרו goat ו־owl",
+                  "אמרו tiger ו־shark"
+                ],
+                "target": "goat, owl, tiger, shark",
+                "variant": "single_word",
+                "success": "דף Animals הושלם"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_animal_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q05_complete"
+            }
+          ]
+        },
+        {
+          "id": "q06_pancake_crown",
+          "name": "כתר הפנקייק",
+          "level": 16,
+          "prerequisite": "q05_animal_parade",
+          "summary": "ארוחת הבוקר המלכותית יצאה משליטה; לומדים pancake, cereal ו־honey כדי להציל כתר דביק במיוחד.",
+          "status": "complete",
+          "rewards": {
+            "xp": 170,
+            "items": [
+              {
+                "id": "vocab_food_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q06_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "MoonriverCottage"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Small_Shop_Moonriver",
+              "difficulty": 3,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את מילות ארוחת הבוקר לתמונות",
+                "tasks": [
+                  "<strong>pancake</strong> לחביתית ו־<strong>cereal</strong> לקערת דגנים",
+                  "<strong>honey</strong> לדבש"
+                ],
+                "target": "pancake, cereal, honey",
+                "variant": "word_to_image",
+                "success": "ארוחת הבוקר מקבלת את השמות הנכונים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Small_Shop_Moonriver",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של PANCAKE",
+                "tasks": [
+                  "סדרו p, a, n, c, a, k, e",
+                  "קראו בקול את המילה <strong>pancake</strong>"
+                ],
+                "target": "pancake",
+                "variant": "word_spelling",
+                "success": "כתר ה־PANCAKE מזוהה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Small_Shop_Moonriver",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו pancake, cereal, honey",
+                "tasks": [
+                  "חזרו אחרי כל הקלטה",
+                  "אמרו את שלוש המילים בסדר חדש"
+                ],
+                "target": "pancake, cereal, honey",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות ארוחת הבוקר נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_food_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q06_complete"
+            }
+          ]
+        },
+        {
+          "id": "q07_onion_knight",
+          "name": "אביר הבצל",
+          "level": 17,
+          "prerequisite": "q06_pancake_crown",
+          "summary": "בצל עטה שריון וגרם לכל הזירה לבכות; לומדים carrot, pepper ו־onion בטורניר הירקות.",
+          "status": "complete",
+          "rewards": {
+            "xp": 180,
+            "items": [
+              {
+                "id": "vocab_food_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q07_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "KingdomGate"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את הירקות לתמונות",
+                "tasks": [
+                  "<strong>carrot</strong> לגזר ו־<strong>pepper</strong> לפלפל",
+                  "<strong>onion</strong> לבצל"
+                ],
+                "target": "carrot, pepper, onion",
+                "variant": "word_to_image",
+                "success": "הירקות מוכנים לטורניר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו carrot, pepper, onion",
+                "tasks": [
+                  "הקשיבו לכל מילה",
+                  "אמרו <strong>carrot</strong>, <strong>pepper</strong>, <strong>onion</strong>"
+                ],
+                "target": "carrot, pepper, onion",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות הירקות נשמרות"
+              }
+            },
+            {
+              "type": "defeat_enemy",
+              "enemy_id": "vocabulary_onion_slime",
+              "amount": 1
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_food_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q07_complete"
+            }
+          ]
+        },
+        {
+          "id": "q08_muffin_escape",
+          "name": "בריחת המאפין הגדולה",
+          "level": 18,
+          "prerequisite": "q07_onion_knight",
+          "summary": "מאפין נמלט מהמאפייה עם עוגייה כשותפה; לומדים bread, cookie ו־muffin לפני שעת התה.",
+          "status": "complete",
+          "rewards": {
+            "xp": 190,
+            "items": [
+              {
+                "id": "vocab_food_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q08_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "BuildersHome"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את מאכלי המאפייה לתמונות",
+                "tasks": [
+                  "<strong>bread</strong> ללחם ו־<strong>cookie</strong> לעוגייה",
+                  "<strong>muffin</strong> למאפין שבכרכרה"
+                ],
+                "target": "bread, cookie, muffin",
+                "variant": "word_to_image",
+                "success": "שלושת המאפים נמצאים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של MUFFIN",
+                "tasks": [
+                  "סדרו m, u, f, f, i, n",
+                  "שימו לב לשתי האותיות f"
+                ],
+                "target": "muffin",
+                "variant": "word_spelling",
+                "success": "כרטיס MUFFIN משוחזר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו bread, cookie, muffin",
+                "tasks": [
+                  "חזרו אחרי ההקלטה",
+                  "אמרו את שלוש המילים בלי להחליף ביניהן"
+                ],
+                "target": "bread, cookie, muffin",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות המאפייה נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_food_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q08_complete"
+            }
+          ]
+        },
+        {
+          "id": "q09_cheese_moon",
+          "name": "ירח הגבינה",
+          "level": 19,
+          "prerequisite": "q08_muffin_escape",
+          "summary": "הטבח בטוח שהירח עשוי גבינה; לומדים soup, salad ו־cheese כדי להכין משתה הגיוני יותר.",
+          "status": "complete",
+          "rewards": {
+            "xp": 200,
+            "items": [
+              {
+                "id": "vocab_food_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q09_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "SilverFountainCourt"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את מנות המשתה לתמונות",
+                "tasks": [
+                  "<strong>soup</strong> למרק ו־<strong>salad</strong> לסלט",
+                  "<strong>cheese</strong> לגבינה, לא לירח"
+                ],
+                "target": "soup, salad, cheese",
+                "variant": "word_to_image",
+                "success": "שולחן המשתה מסודר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו soup, salad, cheese",
+                "tasks": [
+                  "הקשיבו לכל מילה",
+                  "אמרו <strong>soup</strong>, <strong>salad</strong>, <strong>cheese</strong>"
+                ],
+                "target": "soup, salad, cheese",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות המשתה נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_food_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "food_queen",
+              "dialogue_id": "vocab_q09_complete"
+            }
+          ]
+        },
+        {
+          "id": "q10_food_festival",
+          "name": "פסטיבל האוכל המלכותי",
+          "level": 20,
+          "prerequisite": "q09_cheese_moon",
+          "summary": "חוזרים על 12 מילות האוכל ומצילים פסטיבל שבו הפנקייק רוצה כתר והבצל שוב נואם בדמעות.",
+          "status": "complete",
+          "rewards": {
+            "xp": 240,
+            "items": [
+              {
+                "id": "vocab_food_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q10_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "FairyRosePark"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את שתים־עשרה מילות האוכל",
+                "tasks": [
+                  "סיבוב בוקר וירקות: pancake, cereal, honey, carrot, pepper, onion",
+                  "סיבוב מאפייה ומשתה: bread, cookie, muffin, soup, salad, cheese"
+                ],
+                "target": "12 food words",
+                "variant": "word_to_image",
+                "success": "התפריט תואם לכל המנות"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אייתו ארבע מילות אוכל מוכרות",
+                "tasks": [
+                  "סדרו pancake ו־onion",
+                  "סדרו muffin ו־cheese"
+                ],
+                "target": "pancake, onion, muffin, cheese",
+                "variant": "word_spelling",
+                "success": "דף Food Kingdom כמעט שלם"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אמרו ארבע מילות אוכל",
+                "tasks": [
+                  "אמרו cereal ו־pepper",
+                  "אמרו cookie ו־salad"
+                ],
+                "target": "cereal, pepper, cookie, salad",
+                "variant": "single_word",
+                "success": "דף Food Kingdom הושלם"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_food_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q10_complete"
+            }
+          ]
+        },
+        {
+          "id": "q11_pencil_rebellion",
+          "name": "מרד העיפרון",
+          "level": 21,
+          "prerequisite": "q10_food_festival",
+          "summary": "העפרונות מסרבים לכתוב עד שיקבלו חופשה; לומדים pencil, ruler ו־notebook ומשיבים סדר לכיתה.",
+          "status": "complete",
+          "rewards": {
+            "xp": 220,
+            "items": [
+              {
+                "id": "vocab_school_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q11_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "FairyRosePark"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את כלי הכיתה לתמונות",
+                "tasks": [
+                  "<strong>pencil</strong> לעיפרון ו־<strong>ruler</strong> לסרגל",
+                  "<strong>notebook</strong> למחברת שנותנת ציונים"
+                ],
+                "target": "pencil, ruler, notebook",
+                "variant": "word_to_image",
+                "success": "כלי הכיתה מפסיקים את המרד"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של NOTEBOOK",
+                "tasks": [
+                  "סדרו n, o, t, e, b, o, o, k",
+                  "שימו לב לשלוש האותיות o במילה"
+                ],
+                "target": "notebook",
+                "variant": "word_spelling",
+                "success": "כרטיס NOTEBOOK משוחזר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו pencil, ruler, notebook",
+                "tasks": [
+                  "חזרו אחרי כל מילה",
+                  "אמרו את שלוש המילים בסדר חדש"
+                ],
+                "target": "pencil, ruler, notebook",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות הכיתה נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_school_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q11_complete"
+            }
+          ]
+        },
+        {
+          "id": "q12_paint_sneeze",
+          "name": "הציור שהתעטש",
+          "level": 22,
+          "prerequisite": "q11_pencil_rebellion",
+          "summary": "ציור מתעטש צבע על הקירות; לומדים brush, paint ו־paper כדי לתקן יצירת אמנות רועשת.",
+          "status": "complete",
+          "rewards": {
+            "xp": 230,
+            "items": [
+              {
+                "id": "vocab_school_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q12_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "SilverFountainCourt"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את חומרי האמנות לתמונות",
+                "tasks": [
+                  "<strong>brush</strong> למכחול ו־<strong>paint</strong> לצבע",
+                  "<strong>paper</strong> לנייר שמחזיק מטרייה"
+                ],
+                "target": "brush, paint, paper",
+                "variant": "word_to_image",
+                "success": "חדר האמנות מסודר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו brush, paint, paper",
+                "tasks": [
+                  "הקשיבו לכל מילה",
+                  "אמרו <strong>brush</strong>, <strong>paint</strong>, <strong>paper</strong>"
+                ],
+                "target": "brush, paint, paper",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות האמנות נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_school_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q12_complete"
+            }
+          ]
+        },
+        {
+          "id": "q13_robot_homework",
+          "name": "הרובוט אכל את שיעורי הבית",
+          "level": 23,
+          "prerequisite": "q12_paint_sneeze",
+          "summary": "רובוט טוען ששיעורי הבית טעימים; לומדים magnet, planet ו־robot במעבדת המדעים.",
+          "status": "complete",
+          "rewards": {
+            "xp": 240,
+            "items": [
+              {
+                "id": "vocab_school_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q13_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "BuildersHome"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את חפצי המעבדה לתמונות",
+                "tasks": [
+                  "<strong>magnet</strong> למגנט ו־<strong>planet</strong> לכוכב הלכת",
+                  "<strong>robot</strong> לרובוט שאכל את שיעורי הבית"
+                ],
+                "target": "magnet, planet, robot",
+                "variant": "word_to_image",
+                "success": "המעבדה מזהה את שלושת החפצים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של PLANET",
+                "tasks": [
+                  "סדרו p, l, a, n, e, t",
+                  "קראו את המילה השלמה: <strong>planet</strong>"
+                ],
+                "target": "planet",
+                "variant": "word_spelling",
+                "success": "דגם ה־PLANET חוזר לכיתה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו magnet, planet, robot",
+                "tasks": [
+                  "חזרו אחרי ההקלטה",
+                  "אמרו את שלוש המילים לפני שה־robot אוכל עוד דף"
+                ],
+                "target": "magnet, planet, robot",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות המדע נשמרות"
+              }
+            },
+            {
+              "type": "defeat_enemy",
+              "enemy_id": "vocabulary_homework_robot",
+              "amount": 1
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_school_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q13_complete"
+            }
+          ]
+        },
+        {
+          "id": "q14_slide_to_moon",
+          "name": "המגלשה לירח",
+          "level": 24,
+          "prerequisite": "q13_robot_homework",
+          "summary": "המנהל חושש שהמגלשה מגיעה לירח; לומדים swing, slide ו־rope ובודקים לאן היא באמת מובילה.",
+          "status": "complete",
+          "rewards": {
+            "xp": 250,
+            "items": [
+              {
+                "id": "vocab_school_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q14_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "FairyRosePark"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את מתקני המשחקים לתמונות",
+                "tasks": [
+                  "<strong>swing</strong> לנדנדה ו־<strong>slide</strong> למגלשה",
+                  "<strong>rope</strong> לחבל"
+                ],
+                "target": "swing, slide, rope",
+                "variant": "word_to_image",
+                "success": "מגרש המשחקים חוזר לפעול"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו swing, slide, rope",
+                "tasks": [
+                  "הקשיבו לכל מילה",
+                  "אמרו <strong>swing</strong>, <strong>slide</strong>, <strong>rope</strong>"
+                ],
+                "target": "swing, slide, rope",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות המשחקים נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_school_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "school_headmaster",
+              "dialogue_id": "vocab_q14_complete"
+            }
+          ]
+        },
+        {
+          "id": "q15_school_day",
+          "name": "יום הלימודים המוזר ביותר",
+          "level": 25,
+          "prerequisite": "q14_slide_to_moon",
+          "summary": "חוזרים על 12 מילות בית הספר ביריד שבו העיפרון שובת, הציור מתעטש והרובוט מבקש קינוח.",
+          "status": "complete",
+          "rewards": {
+            "xp": 290,
+            "items": [
+              {
+                "id": "vocab_school_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q15_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "KingdomGate"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "difficulty": 6,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את שתים־עשרה מילות בית הספר",
+                "tasks": [
+                  "סיבוב כיתה ואמנות: pencil, ruler, notebook, brush, paint, paper",
+                  "סיבוב מדע ומשחקים: magnet, planet, robot, swing, slide, rope"
+                ],
+                "target": "12 school words",
+                "variant": "word_to_image",
+                "success": "כל מילה חוזרת לחדר הנכון"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אייתו ארבע מילות בית ספר",
+                "tasks": [
+                  "סדרו notebook ו־brush",
+                  "סדרו planet ו־swing"
+                ],
+                "target": "notebook, brush, planet, swing",
+                "variant": "word_spelling",
+                "success": "דף School כמעט שלם"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אמרו ארבע מילות בית ספר",
+                "tasks": [
+                  "אמרו pencil ו־paper",
+                  "אמרו robot ו־slide"
+                ],
+                "target": "pencil, paper, robot, slide",
+                "variant": "single_word",
+                "success": "דף School הושלם"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_school_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q15_complete"
+            }
+          ]
+        },
+        {
+          "id": "q16_helmet_hair",
+          "name": "הקסדה עם השיער",
+          "level": 26,
+          "prerequisite": "q15_school_day",
+          "summary": "קסדה מצמיחה תסרוקת מלכותית; לומדים helmet, banner ו־armor לפני שהשריון מבקש שמפו.",
+          "status": "complete",
+          "rewards": {
+            "xp": 270,
+            "items": [
+              {
+                "id": "vocab_adventure_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q16_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Oathstone Bridge"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "WoodenCart3_The_Oath_stone_Bridge",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את ציוד ההרפתקנים לתמונות",
+                "tasks": [
+                  "<strong>helmet</strong> לקסדה ו־<strong>banner</strong> לדגל",
+                  "<strong>armor</strong> לשריון הרוקד"
+                ],
+                "target": "helmet, banner, armor",
+                "variant": "word_to_image",
+                "success": "הציוד מוכן למחנה"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "WoodenCart3_The_Oath_stone_Bridge",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של HELMET",
+                "tasks": [
+                  "סדרו h, e, l, m, e, t",
+                  "קראו את המילה השלמה: <strong>helmet</strong>"
+                ],
+                "target": "helmet",
+                "variant": "word_spelling",
+                "success": "כרטיס HELMET משוחזר"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "WoodenCart3_The_Oath_stone_Bridge",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו helmet, banner, armor",
+                "tasks": [
+                  "חזרו אחרי כל מילה",
+                  "אמרו את שלוש המילים שוב עם פחות עזרה"
+                ],
+                "target": "helmet, banner, armor",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות הציוד נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_adventure_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q16_complete"
+            }
+          ]
+        },
+        {
+          "id": "q17_potion_hiccups",
+          "name": "שיקוי השיהוקים",
+          "level": 27,
+          "prerequisite": "q16_helmet_hair",
+          "summary": "שיקוי גורם לכל הסדנה לשהק נצנצים; לומדים potion, wand ו־spell כדי לעצור את הבלגן.",
+          "status": "complete",
+          "rewards": {
+            "xp": 280,
+            "items": [
+              {
+                "id": "vocab_adventure_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q17_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "TowerOfLostVigil"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את חפצי הקסם לתמונות",
+                "tasks": [
+                  "<strong>potion</strong> לשיקוי ו־<strong>wand</strong> לשרביט",
+                  "<strong>spell</strong> לכישוף שהפך מגפיים לבננות"
+                ],
+                "target": "potion, wand, spell",
+                "variant": "word_to_image",
+                "success": "שלושת חפצי הקסם מזוהים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו potion, wand, spell",
+                "tasks": [
+                  "הקשיבו לכל מילה",
+                  "אמרו <strong>potion</strong>, <strong>wand</strong>, <strong>spell</strong>"
+                ],
+                "target": "potion, wand, spell",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות הקסם נשמרות"
+              }
+            },
+            {
+              "type": "defeat_enemy",
+              "enemy_id": "vocabulary_potion_blob",
+              "amount": 1
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_adventure_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q17_complete"
+            }
+          ]
+        },
+        {
+          "id": "q18_compass_confusion",
+          "name": "המצפן המבולבל",
+          "level": 28,
+          "prerequisite": "q17_potion_hiccups",
+          "summary": "מצפן מצביע על ארוחת הצהריים במקום על הצפון; לומדים compass, backpack ו־tent ויוצאים למחנה.",
+          "status": "complete",
+          "rewards": {
+            "xp": 290,
+            "items": [
+              {
+                "id": "vocab_adventure_card",
+                "amount": 3
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q18_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Forsaken Cove"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את ציוד המסע לתמונות",
+                "tasks": [
+                  "<strong>compass</strong> למצפן ו־<strong>backpack</strong> לתיק גב",
+                  "<strong>tent</strong> לאוהל המסרב לקום"
+                ],
+                "target": "compass, backpack, tent",
+                "variant": "word_to_image",
+                "success": "ציוד המסע ארוז נכון"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "סדרו את האותיות של COMPASS",
+                "tasks": [
+                  "סדרו c, o, m, p, a, s, s",
+                  "שימו לב לשתי האותיות s בסוף"
+                ],
+                "target": "compass",
+                "variant": "word_spelling",
+                "success": "ה־COMPASS מפסיק להצביע על ארוחת הצהריים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו compass, backpack, tent",
+                "tasks": [
+                  "חזרו אחרי ההקלטה",
+                  "אמרו את שלוש המילים לפני היציאה למסע"
+                ],
+                "target": "compass, backpack, tent",
+                "variant": "repeat_after_npc",
+                "success": "שלוש מילות המסע נשמרות"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_adventure_card",
+              "amount": 3
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q18_complete"
+            }
+          ]
+        },
+        {
+          "id": "q19_thunder_applause",
+          "name": "הרעם רוצה מחיאות כפיים",
+          "level": 29,
+          "prerequisite": "q18_compass_confusion",
+          "summary": "הרעם משוכנע שהוא כוכב במה; לומדים cloud, rainbow ו־thunder ומסיימים את מופע הסערה.",
+          "status": "complete",
+          "rewards": {
+            "xp": 310,
+            "items": [
+              {
+                "id": "vocab_adventure_page",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q19_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Last Roar"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "התאימו את מילות מזג האוויר לתמונות",
+                "tasks": [
+                  "<strong>cloud</strong> לענן ו־<strong>rainbow</strong> לקשת",
+                  "<strong>thunder</strong> לרעם שמבקש מחיאות כפיים"
+                ],
+                "target": "cloud, rainbow, thunder",
+                "variant": "word_to_image",
+                "success": "הסערה מקבלת את השמות הנכונים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 5,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "הקשיבו ואמרו cloud, rainbow, thunder",
+                "tasks": [
+                  "הקשיבו לכל מילה",
+                  "אמרו <strong>cloud</strong>, <strong>rainbow</strong>, <strong>thunder</strong>"
+                ],
+                "target": "cloud, rainbow, thunder",
+                "variant": "repeat_after_npc",
+                "success": "דף Adventure הושלם"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocab_adventure_page",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "adventure_scout",
+              "dialogue_id": "vocab_q19_complete"
+            }
+          ]
+        },
+        {
+          "id": "q20_word_carnival",
+          "name": "קרנבל המילים הגדול",
+          "level": 30,
+          "prerequisite": "q19_thunder_applause",
+          "summary": "מבחן מסכם מצחיק: מתאימים, שומעים, מאייתים ואומרים את כל 48 המילים כדי להשלים את אטלס אוצר המילים.",
+          "status": "complete",
+          "rewards": {
+            "xp": 400,
+            "items": [
+              {
+                "id": "vocabulary_master_badge",
+                "amount": 1
+              },
+              {
+                "id": "coin",
+                "amount": 15
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q20_intro"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Sanctum of Whispering Light"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
+              "difficulty": 7,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "עברו ארבעה סבבי התאמה מסכמים",
+                "tasks": [
+                  "Animals ו־Food Kingdom: התאימו 24 מילים לתמונות",
+                  "School ו־Adventure: התאימו 24 מילים לתמונות; בכל סבב יש מסיחים מעולם אחר"
+                ],
+                "target": "goat, duck, horse, fox, owl, bear, monkey, tiger, parrot, dolphin, shark, octopus; pancake, cereal, honey, carrot, pepper, onion, bread, cookie, muffin, soup, salad, cheese; pencil, ruler, notebook, brush, paint, paper, magnet, planet, robot, swing, slide, rope; helmet, banner, armor, potion, wand, spell, compass, backpack, tent, cloud, rainbow, thunder",
+                "variant": "word_to_image",
+                "success": "כל ארבעת שערי הקרנבל נפתחים"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
+              "difficulty": 6,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אייתו שמונה מילים שנבחרו מארבעת העולמות",
+                "tasks": [
+                  "Animals/Food: octopus, pancake, muffin, cheese",
+                  "School/Adventure: notebook, planet, helmet, compass"
+                ],
+                "target": "8 mixed review words",
+                "variant": "word_spelling",
+                "success": "ארבעת הדפים מתחברים לאטלס"
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
+              "difficulty": 6,
+              "success_required": true,
+              "minigame_brief": {
+                "instruction": "אמרו שתי מילים מכל עולם",
+                "tasks": [
+                  "אמרו horse, dolphin, cereal, onion",
+                  "אמרו ruler, robot, banner, rainbow"
+                ],
+                "target": "8 spoken review words",
+                "variant": "single_word",
+                "success": "אטלס אוצר המילים הגדול נפתח"
+              }
+            },
+            {
+              "type": "collect_item",
+              "item_id": "vocabulary_atlas",
+              "amount": 1
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "vocabulary_keeper",
+              "dialogue_id": "vocab_q20_complete"
             }
           ]
         }

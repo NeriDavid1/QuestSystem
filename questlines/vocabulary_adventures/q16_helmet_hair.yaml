@@ -1,0 +1,16 @@
+quest:
+  id: q16_helmet_hair
+  name: "The Helmet with Hair"
+  level_required: 26
+  giver_npc: adventure_scout
+  prerequisite: q15_school_day
+  summary: "A helmet grows hair, a banner demands applause, and a suit of armor starts dancing."
+rewards: { xp: 270, items: [{ id: vocab_adventure_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q16_intro }
+  - { type: reach_location, location_id: The Oathstone Bridge }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: WoodenCart3_The_Oath_stone_Bridge, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: WoodenCart3_The_Oath_stone_Bridge, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: WoodenCart3_The_Oath_stone_Bridge, difficulty: 5, success_required: true }
+  - { type: collect_item, item_id: vocab_adventure_card, amount: 3 }
+  - { type: return_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q16_complete }

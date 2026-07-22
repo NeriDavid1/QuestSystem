@@ -1,0 +1,47 @@
+quest:
+  id: q01_roles_without_names
+  name: "Roles Without Names"
+  level_required: 4
+  giver_npc: royal_librarian
+  prerequisite: null
+  summary: "The Royal Book loses KING, QUEEN, and KNIGHT, leaving the throne room hilariously confused."
+
+rewards:
+  xp: 100
+  items:
+    - id: noun_royalty_page
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: royal_librarian
+    dialogue_id: nouns_librarian_missing_roles
+
+  - type: reach_location
+    location_id: SilverFountainCourt
+
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 3
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: letter_drawing
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 3
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 4
+    success_required: true
+
+  - type: collect_item
+    item_id: noun_royalty_page
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: royal_librarian
+    dialogue_id: nouns_librarian_roles_restored

@@ -1,0 +1,16 @@
+quest:
+  id: q17_potion_hiccups
+  name: "The Hiccup Potion"
+  level_required: 27
+  giver_npc: adventure_scout
+  prerequisite: q16_helmet_hair
+  summary: "A potion gives the wizard hiccups, a wand points backward, and a spell turns boots into bananas."
+rewards: { xp: 280, items: [{ id: vocab_adventure_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q17_intro }
+  - { type: reach_location, location_id: TowerOfLostVigil }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil, difficulty: 5, success_required: true }
+  - { type: defeat_enemy, enemy_id: vocabulary_potion_blob, amount: 1 }
+  - { type: collect_item, item_id: vocab_adventure_card, amount: 3 }
+  - { type: return_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q17_complete }

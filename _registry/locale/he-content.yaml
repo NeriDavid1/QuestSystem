@@ -63,6 +63,57 @@ npcs:
     location: "ממלכת התארים — דרך המסחר"
     description: "זקן מוזר שמבחין בכל דבר משונה שמתרחש בדרך המסחר."
 
+  royal_librarian:
+    name: "הספרנית המלכותית"
+    title: "שומרת ספר ה־nouns המלכותי"
+    location: "ספריית ה־nouns המלכותית"
+    description: "ספרנית סבלנית שעוזרת לגיבורים צעירים להשיב את שמות האנשים, המקומות, החפצים והיצורים בממלכה."
+  forgetful_king:
+    name: "המלך השכחן"
+    title: "שליט ממלכת ה־nouns"
+    location: "חדר הכס המלכותי"
+    description: "מלך טוב לב שמבלבל בין חפצי הארמון לאחר שה־nouns שלהם נעלמו."
+  royal_armorer:
+    name: "נפח הנשק המלכותי"
+    title: "שומר הנשקייה המלכותית"
+    location: "הנשקייה המלכותית"
+    description: "אומן זהיר שמנסה להחזיר את השמות הנכונים לחרבות, מגנים ומגילות."
+  confused_wizard:
+    name: "הקוסם המבולבל"
+    title: "סוחר קסמים זמני"
+    location: "שער השוק המלכותי"
+    description: "קוסם שפתח בטעות חנות קסמים מוזלת לאחר ששמות אנשי החצר התערבבו."
+  offended_dragon:
+    name: "הדרקון הנעלב"
+    title: "שומר ארכיון היצורים"
+    location: "ארכיון היצורים המלכותי"
+    description: "דרקון גאה שמתנגד בתוקף לכך שמישהו קרא לו goblin."
+  vocabulary_keeper:
+    name: "שומר אוצר המילים"
+    title: "שומר אטלס המילים הגדול"
+    location: "קרנבל אוצר המילים"
+    description: "מדריך עליז שאוסף מילים שימושיות באנגלית מתוך האסונות המצחיקים ביותר בממלכה."
+  animal_caretaker:
+    name: "מטפל החיות"
+    title: "שומר החיות המלכותיות"
+    location: "מתחם החיות המלכותי"
+    description: "מטפל סבלני שהחיות שלו מחליפות בלי הפסקה מקומות, בגדים ותפקידים."
+  food_queen:
+    name: "מלכת האוכל"
+    title: "שליטת ממלכת האוכל"
+    location: "ארמון המטבח המלכותי"
+    description: "מלכה חגיגית שהופכת כל ארוחה לטורניר ומתייחסת לכל מאפין כמו לאזרח חשוב."
+  school_headmaster:
+    name: "מנהל בית הספר"
+    title: "מנהל בית הספר המלכותי"
+    location: "בית הספר המלכותי"
+    description: "מנהל טוב לב שמנסה להשתלט על עפרונות מורדים, ציורים מתעטשים ורובוטים שאוכלים שיעורי בית."
+  adventure_scout:
+    name: "סייר ההרפתקאות"
+    title: "מוביל המשלחות המלכותי"
+    location: "מחנה ההרפתקאות"
+    description: "סייר נמרץ שהמצפן שלו מבולבל, אבל חוש ההומור שלו מכוון בדיוק."
+
 items:
   rusty_hammer: { name: "פטיש חלוד" }
   iron_ore: { name: "עפרת ברזל" }
@@ -108,6 +159,26 @@ items:
   adjective_crown: { name: "כתר התארים" }
   small_sheep: { name: "כבשה קטנה" }
 
+  noun_royalty_page: { name: "דף ה־nouns של אנשי המלוכה" }
+  noun_places_page: { name: "דף ה־nouns של המקומות" }
+  noun_treasury_page: { name: "דף ה־nouns של אוצרות הארמון" }
+  noun_armory_page: { name: "דף ה־nouns של הנשקייה" }
+  noun_court_page: { name: "דף ה־nouns של אנשי החצר" }
+  noun_creatures_page: { name: "דף ה־nouns של היצורים" }
+  royal_noun_book: { name: "ספר ה־nouns המלכותי" }
+  noun_keeper_badge: { name: "תג שומר ה־nouns המלכותי" }
+
+  vocab_animal_card: { name: "כרטיס מילת חיות" }
+  vocab_animal_page: { name: "דף החיות של אטלס המילים" }
+  vocab_food_card: { name: "כרטיס מילת אוכל" }
+  vocab_food_page: { name: "דף האוכל של אטלס המילים" }
+  vocab_school_card: { name: "כרטיס מילת בית ספר" }
+  vocab_school_page: { name: "דף בית הספר של אטלס המילים" }
+  vocab_adventure_card: { name: "כרטיס מילת הרפתקה" }
+  vocab_adventure_page: { name: "דף ההרפתקאות של אטלס המילים" }
+  vocabulary_atlas: { name: "אטלס אוצר המילים הגדול" }
+  vocabulary_master_badge: { name: "תג אלוף אוצר המילים" }
+
 minigames:
   letter_ordering: { name: "סידור אותיות" }
   word_matching: { name: "התאמת מילים" }
@@ -139,6 +210,22 @@ locations:
   adjective_mixed_meadow: "אחו החיות"
   adjective_crown_shrine: "מקדש כתר התארים"
 
+  # Exact Unity QuestWorldCatalogSet_OpenWorld area IDs used by the new lines
+  MoonriverCottage: "קוטג' נהר הירח"
+  BuildersHome: "בית הבנאים"
+  "Driftgold Bay": "מפרץ דריפטגולד"
+  FairyRosePark: "פארק ורד הפיות"
+  "Forsaken Cove": "המפרץ הנטוש"
+  KingdomGate: "שער הממלכה"
+  "Sanctum of Whispering Light": "מקדש האור הלוחש"
+  SilverFountainCourt: "חצר מזרקת הכסף"
+  "Solitude Tower": "מגדל הבדידות"
+  "The Oathstone Bridge": "גשר אבן השבועה"
+  TowerOfLostVigil: "מגדל המשמר האבוד"
+  "The Sunspire Tree": "עץ צריח השמש"
+  "The Weeping Stones": "האבנים הבוכות"
+  "The Last Roar": "השאגה האחרונה"
+
 enemies:
   training_dummy: "בובת אימון"
   letter_slime: "סליים אותיות"
@@ -146,7 +233,104 @@ enemies:
   adjective_small_zombie: "זומבי קטן"
   adjective_small_guardian: "שומר קטן"
 
+  noun_goblin: "גובלין גונב מילים"
+  vocabulary_sock_crab: "סרטן גונב גרביים"
+  vocabulary_onion_slime: "סליים בצל דומע"
+  vocabulary_homework_robot: "רובוט אוכל שיעורי בית"
+  vocabulary_potion_blob: "בועת שיקוי משהקת"
+
 questlines:
+  vocabulary_adventures:
+    display_name: "הרפתקאות אוצר המילים"
+    theme: "48 מילים חדשות באנגלית דרך חיות, ממלכת האוכל, בית הספר והרפתקאות מצחיקות (רמות 11–30)"
+    quests:
+      q01_goat_ate_map:
+        name: "העז שאכלה את המפה"
+        summary: "עז אכלה את מפת החווה, ועכשיו לומדים goat, duck ו־horse כדי להחזיר כל חיה למקום הנכון."
+      q02_owl_morning:
+        name: "הינשוף שונא את הבוקר"
+        summary: "ינשוף ישנוני, שועל עם משקפיים ודוב שלוחש בקול מלמדים fox, owl ו־bear."
+      q03_parrot_king:
+        name: "התוכי שהפך למלך"
+        summary: "תוכי הכריז על עצמו כמלך הג'ונגל; לומדים monkey, tiger ו־parrot לפני שהוא מטיל מס על בננות."
+      q04_octopus_socks:
+        name: "שמונה גרביים לתמנון"
+        summary: "תמנון דורש שמונה גרביים תואמות, ובדרך לומדים dolphin, shark ו־octopus."
+      q05_animal_parade:
+        name: "מצעד החיות"
+        summary: "חוזרים על 12 מילות החיות בהתאמה, שמיעה ודיבור ומארגנים מצעד שבו הכריש מבטיח לא לנשוך את התזמורת."
+      q06_pancake_crown:
+        name: "כתר הפנקייק"
+        summary: "ארוחת הבוקר המלכותית יצאה משליטה; לומדים pancake, cereal ו־honey כדי להציל כתר דביק במיוחד."
+      q07_onion_knight:
+        name: "אביר הבצל"
+        summary: "בצל עטה שריון וגרם לכל הזירה לבכות; לומדים carrot, pepper ו־onion בטורניר הירקות."
+      q08_muffin_escape:
+        name: "בריחת המאפין הגדולה"
+        summary: "מאפין נמלט מהמאפייה עם עוגייה כשותפה; לומדים bread, cookie ו־muffin לפני שעת התה."
+      q09_cheese_moon:
+        name: "ירח הגבינה"
+        summary: "הטבח בטוח שהירח עשוי גבינה; לומדים soup, salad ו־cheese כדי להכין משתה הגיוני יותר."
+      q10_food_festival:
+        name: "פסטיבל האוכל המלכותי"
+        summary: "חוזרים על 12 מילות האוכל ומצילים פסטיבל שבו הפנקייק רוצה כתר והבצל שוב נואם בדמעות."
+      q11_pencil_rebellion:
+        name: "מרד העיפרון"
+        summary: "העפרונות מסרבים לכתוב עד שיקבלו חופשה; לומדים pencil, ruler ו־notebook ומשיבים סדר לכיתה."
+      q12_paint_sneeze:
+        name: "הציור שהתעטש"
+        summary: "ציור מתעטש צבע על הקירות; לומדים brush, paint ו־paper כדי לתקן יצירת אמנות רועשת."
+      q13_robot_homework:
+        name: "הרובוט אכל את שיעורי הבית"
+        summary: "רובוט טוען ששיעורי הבית טעימים; לומדים magnet, planet ו־robot במעבדת המדעים."
+      q14_slide_to_moon:
+        name: "המגלשה לירח"
+        summary: "המנהל חושש שהמגלשה מגיעה לירח; לומדים swing, slide ו־rope ובודקים לאן היא באמת מובילה."
+      q15_school_day:
+        name: "יום הלימודים המוזר ביותר"
+        summary: "חוזרים על 12 מילות בית הספר ביריד שבו העיפרון שובת, הציור מתעטש והרובוט מבקש קינוח."
+      q16_helmet_hair:
+        name: "הקסדה עם השיער"
+        summary: "קסדה מצמיחה תסרוקת מלכותית; לומדים helmet, banner ו־armor לפני שהשריון מבקש שמפו."
+      q17_potion_hiccups:
+        name: "שיקוי השיהוקים"
+        summary: "שיקוי גורם לכל הסדנה לשהק נצנצים; לומדים potion, wand ו־spell כדי לעצור את הבלגן."
+      q18_compass_confusion:
+        name: "המצפן המבולבל"
+        summary: "מצפן מצביע על ארוחת הצהריים במקום על הצפון; לומדים compass, backpack ו־tent ויוצאים למחנה."
+      q19_thunder_applause:
+        name: "הרעם רוצה מחיאות כפיים"
+        summary: "הרעם משוכנע שהוא כוכב במה; לומדים cloud, rainbow ו־thunder ומסיימים את מופע הסערה."
+      q20_word_carnival:
+        name: "קרנבל המילים הגדול"
+        summary: "מבחן מסכם מצחיק: מתאימים, שומעים, מאייתים ואומרים את כל 48 המילים כדי להשלים את אטלס אוצר המילים."
+
+  royal_nouns:
+    display_name: "ספר ה־nouns המלכותי"
+    theme: "לימוד nouns מתקדמים מעולם הממלכה דרך סיפור מצחיק, הקשבה, התאמה, איות ודיבור (רמות 4–10)"
+    quests:
+      q01_roles_without_names:
+        name: "תפקידים בלי שמות"
+        summary: "המילים KING, QUEEN ו־KNIGHT נעלמו, וחדר הכס התמלא בבלבול מלכותי מצחיק."
+      q02_castle_on_the_map:
+        name: "הטירה שהפכה למגדל"
+        summary: "CASTLE, TOWER ו־GATE החליפו מקומות במפה ושולחים את תושבי הממלכה ליעדים הלא נכונים."
+      q03_crown_soup:
+        name: "מרק הכתר"
+        summary: "המלך מבלבל בין CROWN, THRONE ו־TREASURE ומגיע לחצר עם קערת מרק על הראש."
+      q04_soup_shield:
+        name: "מגן המרק"
+        summary: "SWORD, SHIELD ו־SCROLL התערבבו בנשקייה, וגובלין ברח עם דף ה־nouns החסר."
+      q05_wizard_for_sale:
+        name: "הקוסם במטבח"
+        summary: "WIZARD, COOK ו־GUARD החליפו זהויות ומילאו את מטבח הארמון בקסמים לא מתוכננים."
+      q06_dragon_identity:
+        name: "הדרקון שהפך לגובלין"
+        summary: "DRAGON, GRIFFIN ו־GOBLIN קיבלו כרטיסי שם שגויים — הדרקון נעלב והגובלין כבר דורש אוצר."
+      q07_royal_noun_trial:
+        name: "מבחן ה־nouns המלכותי"
+        summary: "חזרו על ה־nouns של האנשים, המקומות, החפצים והיצורים והשיבו את כל הדפים לספר המלכותי."
+
   adjective_crown:
     display_name: "כתר התארים"
     theme: "תרגול תארים באנגלית באמצעות משחקים, קבלת פריטים ומסירתם למאיה"

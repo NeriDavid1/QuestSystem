@@ -1,0 +1,16 @@
+quest:
+  id: q08_muffin_escape
+  name: "The Great Muffin Escape"
+  level_required: 18
+  giver_npc: food_queen
+  prerequisite: q07_onion_knight
+  summary: "Bread blocks the bakery door while a cookie rolls away and a muffin escapes in a tiny carriage."
+rewards: { xp: 190, items: [{ id: vocab_food_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: food_queen, dialogue_id: vocab_q08_intro }
+  - { type: reach_location, location_id: BuildersHome }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest1_BuildersHomeArea, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Lost_Chest1_BuildersHomeArea, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest1_BuildersHomeArea, difficulty: 4, success_required: true }
+  - { type: collect_item, item_id: vocab_food_card, amount: 3 }
+  - { type: return_to_npc, npc_id: food_queen, dialogue_id: vocab_q08_complete }

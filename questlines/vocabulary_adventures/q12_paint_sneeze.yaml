@@ -1,0 +1,15 @@
+quest:
+  id: q12_paint_sneeze
+  name: "The Painting That Sneezed"
+  level_required: 22
+  giver_npc: school_headmaster
+  prerequisite: q11_pencil_rebellion
+  summary: "A brush tickles a portrait, paint flies everywhere, and paper asks for an umbrella."
+rewards: { xp: 230, items: [{ id: vocab_school_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q12_intro }
+  - { type: reach_location, location_id: SilverFountainCourt }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest5_Silver_Fountain_Court, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest5_Silver_Fountain_Court, difficulty: 4, success_required: true }
+  - { type: collect_item, item_id: vocab_school_card, amount: 3 }
+  - { type: return_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q12_complete }

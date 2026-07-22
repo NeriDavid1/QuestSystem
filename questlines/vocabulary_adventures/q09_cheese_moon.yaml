@@ -1,0 +1,15 @@
+quest:
+  id: q09_cheese_moon
+  name: "The Cheese Moon"
+  level_required: 19
+  giver_npc: food_queen
+  prerequisite: q08_muffin_escape
+  summary: "Soup wants a spoon, salad demands a crown, and cheese insists that it came from the moon."
+rewards: { xp: 200, items: [{ id: vocab_food_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: food_queen, dialogue_id: vocab_q09_intro }
+  - { type: reach_location, location_id: SilverFountainCourt }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest5_Silver_Fountain_Court, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest5_Silver_Fountain_Court, difficulty: 4, success_required: true }
+  - { type: collect_item, item_id: vocab_food_card, amount: 3 }
+  - { type: return_to_npc, npc_id: food_queen, dialogue_id: vocab_q09_complete }

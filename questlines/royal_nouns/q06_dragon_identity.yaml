@@ -1,0 +1,47 @@
+quest:
+  id: q06_dragon_identity
+  name: "The Dragon Who Became a Goblin"
+  level_required: 9
+  giver_npc: offended_dragon
+  prerequisite: q05_wizard_for_sale
+  summary: "DRAGON, GRIFFIN, and GOBLIN receive the wrong name cards, causing a very offended dragon and a very ambitious goblin."
+
+rewards:
+  xp: 260
+  items:
+    - id: noun_creatures_page
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: offended_dragon
+    dialogue_id: nouns_dragon_wrong_name
+
+  - type: reach_location
+    location_id: Forsaken Cove
+
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest3_Forsaken_Cove
+    difficulty: 5
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest3_Forsaken_Cove
+    difficulty: 5
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest3_Forsaken_Cove
+    difficulty: 5
+    success_required: true
+
+  - type: collect_item
+    item_id: noun_creatures_page
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: offended_dragon
+    dialogue_id: nouns_dragon_names_restored
