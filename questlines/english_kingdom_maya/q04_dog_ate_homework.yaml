@@ -18,10 +18,11 @@ steps:
     dialogue_id: maya_dog_ate_d
 
   - type: reach_location
-    location_id: dog_house_corner
+    location_id: FairyRosePark
 
   - type: play_minigame
     minigame_id: word_matching
+    world_object_id: Exam_Table_Fairy_Rose_Park
     difficulty: 2
     success_required: true
 

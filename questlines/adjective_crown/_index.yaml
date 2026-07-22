@@ -1,6 +1,6 @@
 questline:
   id: adjective_crown
-  npc_id: adjective_knight
+  npc_id: teacher_maya
   display_name: "The Adjective Crown"
   theme: "Basic English adjectives through completion, speaking, and final matching games"
   quest_count: 6

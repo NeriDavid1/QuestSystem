@@ -20,6 +20,7 @@ step_types:
     description: Start and complete a minigame instance
     fields:
       minigame_id: { type: string, required: true, ref: minigames.yaml }
+      world_object_id: { type: string, required: true, ref: "Unity QuestWorldCatalogSet_OpenWorld interactables", description: "Exact world minigame object ID; its name identifies the quest area" }
       difficulty: { type: integer, required: true, min: 1, max: 10 }
       success_required: { type: boolean, required: false, default: true }
       instance_id: { type: string, required: false, ref: "_registry/minigame_instances/", description: "Override auto key {quest_id}_s{step_index}" }
@@ -43,7 +44,7 @@ step_types:
   reach_location:
     description: Player must enter a trigger zone
     fields:
-      location_id: { type: string, required: true }
+      location_id: { type: string, required: true, ref: "Unity QuestWorldCatalogSet_OpenWorld areas" }
       radius: { type: float, required: false, default: 5.0 }
 
   defeat_enemy:

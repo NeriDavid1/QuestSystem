@@ -18,10 +18,11 @@ steps:
     dialogue_id: maya_welcome_runaway_a
 
   - type: reach_location
-    location_id: classroom_chalkboard
+    location_id: MoonriverCottage
 
   - type: play_minigame
     minigame_id: letter_drawing
+    world_object_id: Small_Shop_Moonriver
     difficulty: 1
     success_required: true
 

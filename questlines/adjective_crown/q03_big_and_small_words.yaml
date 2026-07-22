@@ -2,30 +2,40 @@ quest:
   id: q03_big_and_small_words
   name: "Big and Small Words"
   level_required: 5
-  giver_npc: adjective_grandmother
+  giver_npc: teacher_maya
   prerequisite: q02_whispering_stone
-  summary: "Complete BIG and say SMALL, receive two Corn items, and deliver both to the Grandmother."
+  summary: "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya."
 
 rewards: { xp: 150, items: [] }
 
 steps:
   - type: talk_to_npc
-    npc_id: adjective_grandmother
+    npc_id: teacher_maya
     dialogue_id: adjective_grandmother_corn_request
+  - type: reach_location
+    location_id: The Sunspire Tree
+
   - type: play_minigame
     minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    instance_id: q03_big_and_small_words_s1
     difficulty: 2
     success_required: true
     reward_item_id: corn
     reward_amount: 1
+  - type: reach_location
+    location_id: The Sunspire Tree
+
   - type: play_minigame
     minigame_id: speak_aloud
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    instance_id: q03_big_and_small_words_s2
     difficulty: 2
     success_required: true
     reward_item_id: corn
     reward_amount: 1
   - type: deliver_item
-    npc_id: adjective_grandmother
+    npc_id: teacher_maya
     item_id: corn
     amount: 2
     dialogue_id: adjective_grandmother_corn_delivered

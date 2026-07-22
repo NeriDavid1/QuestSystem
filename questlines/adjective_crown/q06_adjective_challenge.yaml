@@ -2,9 +2,9 @@ quest:
   id: q06_adjective_challenge
   name: "The Adjective Challenge"
   level_required: 10
-  giver_npc: adjective_knight
+  giver_npc: teacher_maya
   prerequisite: q05_from_low_to_high
-  summary: "Complete the final adjective matching game, receive one Gem, and deliver it to the Knight."
+  summary: "Complete the final adjective matching game, receive one Gem, and deliver it to Maya."
 
 rewards:
   xp: 350
@@ -14,16 +14,21 @@ rewards:
 
 steps:
   - type: talk_to_npc
-    npc_id: adjective_knight
+    npc_id: teacher_maya
     dialogue_id: adjective_knight_gem_request
+  - type: reach_location
+    location_id: Sanctum of Whispering Light
+
   - type: play_minigame
     minigame_id: word_matching
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    instance_id: q06_adjective_challenge_s1
     difficulty: 4
     success_required: true
     reward_item_id: gem
     reward_amount: 1
   - type: deliver_item
-    npc_id: adjective_knight
+    npc_id: teacher_maya
     item_id: gem
     amount: 1
     dialogue_id: adjective_knight_gem_delivered

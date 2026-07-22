@@ -18,15 +18,17 @@ steps:
     dialogue_id: maya_graduation_intro
 
   - type: reach_location
-    location_id: echo_plaza
+    location_id: Solitude Tower
 
   - type: play_minigame
     minigame_id: letter_drawing
+    world_object_id: WoodenCart2_Solitude_Tower
     difficulty: 3
     success_required: true
 
   - type: play_minigame
     minigame_id: speak_aloud
+    world_object_id: WoodenCart2_Solitude_Tower
     difficulty: 4
     success_required: true
 

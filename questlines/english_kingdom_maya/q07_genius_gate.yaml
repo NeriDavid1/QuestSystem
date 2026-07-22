@@ -18,10 +18,11 @@ steps:
     dialogue_id: maya_genius_gate_locked
 
   - type: reach_location
-    location_id: genius_gate
+    location_id: KingdomGate
 
   - type: play_minigame
     minigame_id: word_matching
+    world_object_id: Exam_Table1_Outside_Gate
     difficulty: 3
     success_required: true
 

@@ -18,10 +18,11 @@ steps:
     dialogue_id: maya_cat_squished_c
 
   - type: reach_location
-    location_id: letter_garden
+    location_id: Driftgold Bay
 
   - type: play_minigame
     minigame_id: letter_drawing
+    world_object_id: Lost_Chest2_Driftgold_Bay
     difficulty: 2
     success_required: true
 

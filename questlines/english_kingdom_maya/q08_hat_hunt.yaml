@@ -18,10 +18,11 @@ steps:
     dialogue_id: maya_lost_hat_h
 
   - type: reach_location
-    location_id: rainy_plaza
+    location_id: Sanctum of Whispering Light
 
   - type: play_minigame
     minigame_id: letter_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 3
     success_required: true
 

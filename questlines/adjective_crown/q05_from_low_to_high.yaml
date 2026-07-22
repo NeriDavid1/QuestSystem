@@ -2,46 +2,50 @@ quest:
   id: q05_from_low_to_high
   name: "From Low to High"
   level_required: 8
-  giver_npc: adjective_knight
+  giver_npc: teacher_maya
   prerequisite: q04_twelve_basic_adjectives
-  summary: "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to the Knight."
+  summary: "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya."
 
 rewards: { xp: 275, items: [] }
 
 steps:
   - type: talk_to_npc
-    npc_id: adjective_knight
+    npc_id: teacher_maya
     dialogue_id: adjective_knight_power_stones_request
   - type: reach_location
-    location_id: adjective_stairs_low
+    location_id: The Last Roar
   - type: play_minigame
     minigame_id: letter_ordering
+    world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 2
     success_required: true
     reward_item_id: power_stone
     reward_amount: 1
   - type: play_minigame
     minigame_id: word_ordering
+    world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 3
     success_required: true
     reward_item_id: power_stone
     reward_amount: 1
   - type: reach_location
-    location_id: adjective_stairs_high
+    location_id: The Last Roar
   - type: play_minigame
     minigame_id: letter_ordering
+    world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 2
     success_required: true
     reward_item_id: power_stone
     reward_amount: 1
   - type: play_minigame
     minigame_id: word_ordering
+    world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 3
     success_required: true
     reward_item_id: power_stone
     reward_amount: 1
   - type: deliver_item
-    npc_id: adjective_knight
+    npc_id: teacher_maya
     item_id: power_stone
     amount: 4
     dialogue_id: adjective_knight_power_stones_delivered

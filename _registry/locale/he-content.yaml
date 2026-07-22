@@ -149,26 +149,26 @@ enemies:
 questlines:
   adjective_crown:
     display_name: "כתר התארים"
-    theme: "תרגול תארים באנגלית באמצעות משחקים, קבלת פריטים ומסירתם לדמויות"
+    theme: "תרגול תארים באנגלית באמצעות משחקים, קבלת פריטים ומסירתם למאיה"
     quests:
       q01_bridge_too_short:
         name: "הגשר קצר מדי"
-        summary: "אייתו LONG, קבלו Oak Log אחד ומסרו אותו לאביר."
+        summary: "אייתו LONG, קבלו Oak Log אחד ומסרו אותו למאיה."
       q02_whispering_stone:
         name: "האבן הלוחשת"
-        summary: "אמרו HOT, קבלו Herbs אחד ומסרו אותו לאיש המים."
+        summary: "אמרו HOT, קבלו Herbs אחד ומסרו אותו למאיה."
       q03_big_and_small_words:
         name: "המילים גדול וקטן"
-        summary: "השלימו BIG ואמרו SMALL, קבלו שני פריטי Corn ומסרו אותם לסבתא."
+        summary: "השלימו BIG ואמרו SMALL, קבלו שני פריטי Corn ומסרו אותם למאיה."
       q04_twelve_basic_adjectives:
         name: "שנים־עשר תארים בסיסיים"
-        summary: "השלימו שנים־עשר משחקים, קבלו שנים־עשר Ancient Runes ומסרו אותם לאביר."
+        summary: "השלימו שנים־עשר משחקים, קבלו שנים־עשר Ancient Runes ומסרו אותם למאיה."
       q05_from_low_to_high:
         name: "מלמטה למעלה"
-        summary: "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם לאביר."
+        summary: "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם למאיה."
       q06_adjective_challenge:
         name: "אתגר התארים"
-        summary: "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו לאביר."
+        summary: "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו למאיה."
 
   blacksmith_theron:
     display_name: "דרך הנפח של תרון"

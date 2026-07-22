@@ -2,71 +2,71 @@
 
 dialogues:
   adjective_knight_oak_log_request:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
-      - "אני צריך <strong>Oak Log</strong> אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר."
+      - "אני צריכה <strong>Oak Log</strong> אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר."
       - "סדרו את האותיות של <strong>long</strong>. בסיום המשחק תקבלו Oak Log לתיק."
       - "חזרו אליי ומסרו לי אותו; הוא יוסר מהתיק בזמן המסירה."
   adjective_knight_oak_log_delivered:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
       - "קיבלתי את ה־<strong>Oak Log</strong>. הוא הוסר מהתיק שלכם."
       - "אייתתם נכון: <strong>long</strong> הוא ההפך מ־<strong>short</strong>."
 
   adjective_water_man_herbs_request:
-    speaker: adjective_water_man
+    speaker: teacher_maya
     lines:
-      - "אני צריך פריט <strong>Herbs</strong> אחד. המשחק בקרחת היער ייתן לכם אותו."
+      - "אני צריכה פריט <strong>Herbs</strong> אחד. המשחק בקרחת היער ייתן לכם אותו."
       - "אמרו את המילה <strong>hot</strong> בקול ברור, קבלו את הפריט וחזרו אליי."
   adjective_water_man_herbs_delivered:
-    speaker: adjective_water_man
+    speaker: teacher_maya
     lines:
       - "תודה. קיבלתי את ה־<strong>Herbs</strong>, והפריט הוסר מהתיק."
       - "זכרו: <strong>hot</strong> הוא חם, וההפך שלו הוא <strong>cold</strong>."
 
   adjective_grandmother_corn_request:
-    speaker: adjective_grandmother
+    speaker: teacher_maya
     lines:
       - "אני צריכה שני פריטי <strong>Corn</strong>. כל אחד משני המשחקים ייתן לכם פריט אחד."
       - "במשחק הראשון סדרו את <strong>big</strong>. במשחק השני אמרו <strong>small</strong>."
       - "אחרי שיהיו לכם שני פריטים, מסרו לי אותם יחד."
   adjective_grandmother_corn_delivered:
-    speaker: adjective_grandmother
+    speaker: teacher_maya
     lines:
       - "קיבלתי שני פריטי <strong>Corn</strong>, ושניהם הוסרו מהתיק שלכם."
       - "<strong>Big</strong> הוא גדול ו־<strong>small</strong> הוא קטן."
 
   adjective_knight_runes_request:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
-      - "אני צריך שנים־עשר פריטי <strong>Ancient Rune</strong>."
+      - "אני צריכה שנים־עשר פריטי <strong>Ancient Rune</strong>."
       - "לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף Ancient Rune אחד לתיק."
       - "השלימו את כולם, ודאו שיש לכם שנים־עשר Runes, ואז מסרו לי אותם."
   adjective_knight_runes_delivered:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
       - "קיבלתי את כל שנים־עשר ה־<strong>Ancient Runes</strong>. הם הוסרו מהתיק שלכם."
       - "השלמתם שנים־עשר תארים בסיסיים בהצלחה."
 
   adjective_knight_power_stones_request:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
-      - "למשימה הבאה אני צריך ארבעה פריטי <strong>Power Stone</strong>."
+      - "למשימה הבאה אני צריכה ארבעה פריטי <strong>Power Stone</strong>."
       - "יש ארבעה משחקים: איות LOW, משפט עם LOW, איות HIGH ומשפט עם HIGH."
       - "כל משחק ייתן לכם Power Stone אחד. הביאו לי את כל הארבעה."
   adjective_knight_power_stones_delivered:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
       - "ארבעת ה־<strong>Power Stones</strong> נמסרו והוסרו מהתיק שלכם."
       - "השלמתם נכון את <strong>low</strong> ואת <strong>high</strong>, גם כמילים וגם בתוך משפטים."
 
   adjective_knight_gem_request:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
       - "נשאר משחק אחד בלבד: התאמת זוגות התארים המנוגדים."
       - "השלמת המשחק תיתן לכם <strong>Gem</strong> אחד. הביאו לי אותו כדי לסיים את קו המשימות."
   adjective_knight_gem_delivered:
-    speaker: adjective_knight
+    speaker: teacher_maya
     lines:
       - "קיבלתי את ה־<strong>Gem</strong>, והוא הוסר מהתיק שלכם."
       - "התאמתם נכון את כל זוגות התארים. קו המשימות הושלם!"

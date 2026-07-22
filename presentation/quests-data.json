@@ -383,6 +383,12 @@
           "required": true,
           "ref": "minigames.yaml"
         },
+        "world_object_id": {
+          "type": "string",
+          "required": true,
+          "ref": "Unity QuestWorldCatalogSet_OpenWorld interactables",
+          "description": "Exact world minigame object ID; its name identifies the quest area"
+        },
         "difficulty": {
           "type": "integer",
           "required": true,
@@ -459,7 +465,8 @@
       "fields": {
         "location_id": {
           "type": "string",
-          "required": true
+          "required": true,
+          "ref": "Unity QuestWorldCatalogSet_OpenWorld areas"
         },
         "radius": {
           "type": "float",
@@ -614,36 +621,36 @@
   },
   "dialogues": {
     "adjective_knight_oak_log_request": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
-        "אני צריך <strong>Oak Log</strong> אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר.",
+        "אני צריכה <strong>Oak Log</strong> אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר.",
         "סדרו את האותיות של <strong>long</strong>. בסיום המשחק תקבלו Oak Log לתיק.",
         "חזרו אליי ומסרו לי אותו; הוא יוסר מהתיק בזמן המסירה."
       ]
     },
     "adjective_knight_oak_log_delivered": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
         "קיבלתי את ה־<strong>Oak Log</strong>. הוא הוסר מהתיק שלכם.",
         "אייתתם נכון: <strong>long</strong> הוא ההפך מ־<strong>short</strong>."
       ]
     },
     "adjective_water_man_herbs_request": {
-      "speaker": "adjective_water_man",
+      "speaker": "teacher_maya",
       "lines": [
-        "אני צריך פריט <strong>Herbs</strong> אחד. המשחק בקרחת היער ייתן לכם אותו.",
+        "אני צריכה פריט <strong>Herbs</strong> אחד. המשחק בקרחת היער ייתן לכם אותו.",
         "אמרו את המילה <strong>hot</strong> בקול ברור, קבלו את הפריט וחזרו אליי."
       ]
     },
     "adjective_water_man_herbs_delivered": {
-      "speaker": "adjective_water_man",
+      "speaker": "teacher_maya",
       "lines": [
         "תודה. קיבלתי את ה־<strong>Herbs</strong>, והפריט הוסר מהתיק.",
         "זכרו: <strong>hot</strong> הוא חם, וההפך שלו הוא <strong>cold</strong>."
       ]
     },
     "adjective_grandmother_corn_request": {
-      "speaker": "adjective_grandmother",
+      "speaker": "teacher_maya",
       "lines": [
         "אני צריכה שני פריטי <strong>Corn</strong>. כל אחד משני המשחקים ייתן לכם פריט אחד.",
         "במשחק הראשון סדרו את <strong>big</strong>. במשחק השני אמרו <strong>small</strong>.",
@@ -651,51 +658,51 @@
       ]
     },
     "adjective_grandmother_corn_delivered": {
-      "speaker": "adjective_grandmother",
+      "speaker": "teacher_maya",
       "lines": [
         "קיבלתי שני פריטי <strong>Corn</strong>, ושניהם הוסרו מהתיק שלכם.",
         "<strong>Big</strong> הוא גדול ו־<strong>small</strong> הוא קטן."
       ]
     },
     "adjective_knight_runes_request": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
-        "אני צריך שנים־עשר פריטי <strong>Ancient Rune</strong>.",
+        "אני צריכה שנים־עשר פריטי <strong>Ancient Rune</strong>.",
         "לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף Ancient Rune אחד לתיק.",
         "השלימו את כולם, ודאו שיש לכם שנים־עשר Runes, ואז מסרו לי אותם."
       ]
     },
     "adjective_knight_runes_delivered": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
         "קיבלתי את כל שנים־עשר ה־<strong>Ancient Runes</strong>. הם הוסרו מהתיק שלכם.",
         "השלמתם שנים־עשר תארים בסיסיים בהצלחה."
       ]
     },
     "adjective_knight_power_stones_request": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
-        "למשימה הבאה אני צריך ארבעה פריטי <strong>Power Stone</strong>.",
+        "למשימה הבאה אני צריכה ארבעה פריטי <strong>Power Stone</strong>.",
         "יש ארבעה משחקים: איות LOW, משפט עם LOW, איות HIGH ומשפט עם HIGH.",
         "כל משחק ייתן לכם Power Stone אחד. הביאו לי את כל הארבעה."
       ]
     },
     "adjective_knight_power_stones_delivered": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
         "ארבעת ה־<strong>Power Stones</strong> נמסרו והוסרו מהתיק שלכם.",
         "השלמתם נכון את <strong>low</strong> ואת <strong>high</strong>, גם כמילים וגם בתוך משפטים."
       ]
     },
     "adjective_knight_gem_request": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
         "נשאר משחק אחד בלבד: התאמת זוגות התארים המנוגדים.",
         "השלמת המשחק תיתן לכם <strong>Gem</strong> אחד. הביאו לי אותו כדי לסיים את קו המשימות."
       ]
     },
     "adjective_knight_gem_delivered": {
-      "speaker": "adjective_knight",
+      "speaker": "teacher_maya",
       "lines": [
         "קיבלתי את ה־<strong>Gem</strong>, והוא הוסר מהתיק שלכם.",
         "התאמתם נכון את כל זוגות התארים. קו המשימות הושלם!"
@@ -1366,19 +1373,19 @@
       "id": "adjective_crown",
       "folder": "adjective_crown",
       "displayName": "כתר התארים",
-      "theme": "תרגול תארים באנגלית באמצעות משחקים, קבלת פריטים ומסירתם לדמויות",
+      "theme": "תרגול תארים באנגלית באמצעות משחקים, קבלת פריטים ומסירתם למאיה",
       "levelRange": [
         1,
         10
       ],
       "questCount": 6,
-      "npcId": "adjective_knight",
+      "npcId": "teacher_maya",
       "npc": {
-        "id": "adjective_knight",
-        "name": "האביר",
-        "title": "שומר כתר התארים",
-        "location": "ממלכת התארים — מחנה הכתר",
-        "description": "אביר ללא שם שמבקש מגיבורים צעירים להשיב את גבישי כתר התארים."
+        "id": "teacher_maya",
+        "name": "מאיה",
+        "title": "מורת אנגלית",
+        "location": "ממלכת האנגלית — כיכר האלף-בית",
+        "description": "מורה עליזה שמלמדת אותיות ומילים בעזרת סיפורים מצחיקים."
       },
       "quests": [
         {
@@ -1386,7 +1393,7 @@
           "name": "הגשר קצר מדי",
           "level": 1,
           "prerequisite": null,
-          "summary": "אייתו LONG, קבלו Oak Log אחד ומסרו אותו לאביר.",
+          "summary": "אייתו LONG, קבלו Oak Log אחד ומסרו אותו למאיה.",
           "status": "complete",
           "rewards": {
             "xp": 50,
@@ -1395,16 +1402,17 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "dialogue_id": "adjective_knight_oak_log_request"
             },
             {
               "type": "reach_location",
-              "location_id": "adjective_short_bridge"
+              "location_id": "The Oathstone Bridge"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "WoodenCart3_The_Oath_stone_Bridge",
               "difficulty": 1,
               "success_required": true,
               "reward_item_id": "oak_log",
@@ -1422,7 +1430,7 @@
             },
             {
               "type": "deliver_item",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "item_id": "oak_log",
               "amount": 1,
               "dialogue_id": "adjective_knight_oak_log_delivered"
@@ -1434,7 +1442,7 @@
           "name": "האבן הלוחשת",
           "level": 3,
           "prerequisite": "q01_bridge_too_short",
-          "summary": "אמרו HOT, קבלו Herbs אחד ומסרו אותו לאיש המים.",
+          "summary": "אמרו HOT, קבלו Herbs אחד ומסרו אותו למאיה.",
           "status": "complete",
           "rewards": {
             "xp": 100,
@@ -1443,16 +1451,17 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_water_man",
+              "npc_id": "teacher_maya",
               "dialogue_id": "adjective_water_man_herbs_request"
             },
             {
               "type": "reach_location",
-              "location_id": "adjective_forest_clearing"
+              "location_id": "TowerOfLostVigil"
             },
             {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
               "difficulty": 2,
               "success_required": true,
               "reward_item_id": "herbs",
@@ -1470,7 +1479,7 @@
             },
             {
               "type": "deliver_item",
-              "npc_id": "adjective_water_man",
+              "npc_id": "teacher_maya",
               "item_id": "herbs",
               "amount": 1,
               "dialogue_id": "adjective_water_man_herbs_delivered"
@@ -1482,7 +1491,7 @@
           "name": "המילים גדול וקטן",
           "level": 5,
           "prerequisite": "q02_whispering_stone",
-          "summary": "השלימו BIG ואמרו SMALL, קבלו שני פריטי Corn ומסרו אותם לסבתא.",
+          "summary": "השלימו BIG ואמרו SMALL, קבלו שני פריטי Corn ומסרו אותם למאיה.",
           "status": "complete",
           "rewards": {
             "xp": 150,
@@ -1491,12 +1500,18 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_grandmother",
+              "npc_id": "teacher_maya",
               "dialogue_id": "adjective_grandmother_corn_request"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Sunspire Tree"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "instance_id": "q03_big_and_small_words_s1",
               "difficulty": 2,
               "success_required": true,
               "reward_item_id": "corn",
@@ -1513,8 +1528,14 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Sunspire Tree"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "instance_id": "q03_big_and_small_words_s2",
               "difficulty": 2,
               "success_required": true,
               "reward_item_id": "corn",
@@ -1532,7 +1553,7 @@
             },
             {
               "type": "deliver_item",
-              "npc_id": "adjective_grandmother",
+              "npc_id": "teacher_maya",
               "item_id": "corn",
               "amount": 2,
               "dialogue_id": "adjective_grandmother_corn_delivered"
@@ -1544,7 +1565,7 @@
           "name": "שנים־עשר תארים בסיסיים",
           "level": 7,
           "prerequisite": "q03_big_and_small_words",
-          "summary": "השלימו שנים־עשר משחקים, קבלו שנים־עשר Ancient Runes ומסרו אותם לאביר.",
+          "summary": "השלימו שנים־עשר משחקים, קבלו שנים־עשר Ancient Runes ומסרו אותם למאיה.",
           "status": "complete",
           "rewards": {
             "xp": 225,
@@ -1553,12 +1574,17 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "dialogue_id": "adjective_knight_runes_request"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_short",
@@ -1575,8 +1601,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_long",
@@ -1593,8 +1624,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_cold",
@@ -1611,8 +1647,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_hot",
@@ -1629,8 +1670,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_big",
@@ -1647,8 +1693,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_small",
@@ -1665,8 +1716,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_fast",
@@ -1683,8 +1739,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_slow",
@@ -1701,8 +1762,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_low",
@@ -1719,8 +1785,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_high",
@@ -1737,8 +1808,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_heavy",
@@ -1755,8 +1831,13 @@
               }
             },
             {
+              "type": "reach_location",
+              "location_id": "The Weeping Stones"
+            },
+            {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "q04_twelve_basic_adjectives_light",
@@ -1774,7 +1855,7 @@
             },
             {
               "type": "deliver_item",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "item_id": "ancient_rune",
               "amount": 12,
               "dialogue_id": "adjective_knight_runes_delivered"
@@ -1786,7 +1867,7 @@
           "name": "מלמטה למעלה",
           "level": 8,
           "prerequisite": "q04_twelve_basic_adjectives",
-          "summary": "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם לאביר.",
+          "summary": "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם למאיה.",
           "status": "complete",
           "rewards": {
             "xp": 275,
@@ -1795,16 +1876,17 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "dialogue_id": "adjective_knight_power_stones_request"
             },
             {
               "type": "reach_location",
-              "location_id": "adjective_stairs_low"
+              "location_id": "The Last Roar"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
               "difficulty": 2,
               "success_required": true,
               "reward_item_id": "power_stone",
@@ -1822,6 +1904,7 @@
             {
               "type": "play_minigame",
               "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
               "difficulty": 3,
               "success_required": true,
               "reward_item_id": "power_stone",
@@ -1838,11 +1921,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "adjective_stairs_high"
+              "location_id": "The Last Roar"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
               "difficulty": 2,
               "success_required": true,
               "reward_item_id": "power_stone",
@@ -1860,6 +1944,7 @@
             {
               "type": "play_minigame",
               "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
               "difficulty": 3,
               "success_required": true,
               "reward_item_id": "power_stone",
@@ -1876,7 +1961,7 @@
             },
             {
               "type": "deliver_item",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "item_id": "power_stone",
               "amount": 4,
               "dialogue_id": "adjective_knight_power_stones_delivered"
@@ -1888,7 +1973,7 @@
           "name": "אתגר התארים",
           "level": 10,
           "prerequisite": "q05_from_low_to_high",
-          "summary": "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו לאביר.",
+          "summary": "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו למאיה.",
           "status": "complete",
           "rewards": {
             "xp": 350,
@@ -1902,12 +1987,18 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "dialogue_id": "adjective_knight_gem_request"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Sanctum of Whispering Light"
             },
             {
               "type": "play_minigame",
               "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
+              "instance_id": "q06_adjective_challenge_s1",
               "difficulty": 4,
               "success_required": true,
               "reward_item_id": "gem",
@@ -1929,7 +2020,7 @@
             },
             {
               "type": "deliver_item",
-              "npc_id": "adjective_knight",
+              "npc_id": "teacher_maya",
               "item_id": "gem",
               "amount": 1,
               "dialogue_id": "adjective_knight_gem_delivered"
@@ -2295,11 +2386,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "classroom_chalkboard"
+              "location_id": "MoonriverCottage"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
+              "world_object_id": "Small_Shop_Moonriver",
               "difficulty": 1,
               "success_required": true,
               "minigame_brief": {
@@ -2351,7 +2443,7 @@
             },
             {
               "type": "reach_location",
-              "location_id": "alphabet_avenue"
+              "location_id": "BuildersHome"
             },
             {
               "type": "defeat_enemy",
@@ -2361,6 +2453,7 @@
             {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
               "difficulty": 1,
               "success_required": true,
               "minigame_brief": {
@@ -2412,11 +2505,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "letter_garden"
+              "location_id": "Driftgold Bay"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
               "difficulty": 2,
               "success_required": true,
               "minigame_brief": {
@@ -2475,11 +2569,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "dog_house_corner"
+              "location_id": "FairyRosePark"
             },
             {
               "type": "play_minigame",
               "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 2,
               "success_required": true,
               "minigame_brief": {
@@ -2531,11 +2626,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "garden_gate"
+              "location_id": "Forsaken Cove"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
               "difficulty": 2,
               "success_required": true,
               "minigame_brief": {
@@ -2588,7 +2684,7 @@
             },
             {
               "type": "reach_location",
-              "location_id": "letter_garden"
+              "location_id": "KingdomGate"
             },
             {
               "type": "defeat_enemy",
@@ -2598,6 +2694,7 @@
             {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
               "difficulty": 2,
               "success_required": true,
               "minigame_brief": {
@@ -2649,11 +2746,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "genius_gate"
+              "location_id": "KingdomGate"
             },
             {
               "type": "play_minigame",
               "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table1_Outside_Gate",
               "difficulty": 3,
               "success_required": true,
               "minigame_brief": {
@@ -2713,11 +2811,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "rainy_plaza"
+              "location_id": "Sanctum of Whispering Light"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest4_Sanctum_Of_Whispering_Light",
               "difficulty": 3,
               "success_required": true,
               "minigame_brief": {
@@ -2770,11 +2869,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "letter_island"
+              "location_id": "SilverFountainCourt"
             },
             {
               "type": "play_minigame",
               "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
               "difficulty": 4,
               "success_required": true,
               "minigame_brief": {
@@ -2793,6 +2893,7 @@
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
               "difficulty": 4,
               "success_required": true,
               "minigame_brief": {
@@ -2844,11 +2945,12 @@
             },
             {
               "type": "reach_location",
-              "location_id": "echo_plaza"
+              "location_id": "Solitude Tower"
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
               "difficulty": 3,
               "success_required": true,
               "minigame_brief": {
@@ -2867,6 +2969,7 @@
             {
               "type": "play_minigame",
               "minigame_id": "speak_aloud",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
               "difficulty": 4,
               "success_required": true,
               "minigame_brief": {
