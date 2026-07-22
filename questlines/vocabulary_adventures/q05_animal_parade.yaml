@@ -1,0 +1,16 @@
+quest:
+  id: q05_animal_parade
+  name: "The Animal Parade"
+  level_required: 15
+  giver_npc: vocabulary_keeper
+  prerequisite: q04_octopus_socks
+  summary: "Twelve animals join a parade but every participant is holding the wrong English name card."
+rewards: { xp: 180, items: [{ id: vocab_animal_page, amount: 1 }] }
+steps:
+  - { type: talk_to_npc, npc_id: vocabulary_keeper, dialogue_id: vocab_q05_intro }
+  - { type: reach_location, location_id: FairyRosePark }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 5, success_required: true }
+  - { type: collect_item, item_id: vocab_animal_page, amount: 1 }
+  - { type: return_to_npc, npc_id: vocabulary_keeper, dialogue_id: vocab_q05_complete }

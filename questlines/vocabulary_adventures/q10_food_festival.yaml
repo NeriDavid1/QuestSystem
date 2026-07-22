@@ -1,0 +1,16 @@
+quest:
+  id: q10_food_festival
+  name: "The Royal Food Festival"
+  level_required: 20
+  giver_npc: vocabulary_keeper
+  prerequisite: q09_cheese_moon
+  summary: "The festival menu has twelve pictures and twelve English words, all placed beside the wrong dishes."
+rewards: { xp: 240, items: [{ id: vocab_food_page, amount: 1 }] }
+steps:
+  - { type: talk_to_npc, npc_id: vocabulary_keeper, dialogue_id: vocab_q10_intro }
+  - { type: reach_location, location_id: FairyRosePark }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 5, success_required: true }
+  - { type: collect_item, item_id: vocab_food_page, amount: 1 }
+  - { type: return_to_npc, npc_id: vocabulary_keeper, dialogue_id: vocab_q10_complete }

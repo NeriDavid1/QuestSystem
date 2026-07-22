@@ -1,0 +1,16 @@
+quest:
+  id: q07_onion_knight
+  name: "The Onion Knight"
+  level_required: 17
+  giver_npc: food_queen
+  prerequisite: q06_pancake_crown
+  summary: "A carrot commands the guards, a pepper sneezes, and an onion knight makes the whole court cry."
+rewards: { xp: 180, items: [{ id: vocab_food_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: food_queen, dialogue_id: vocab_q07_intro }
+  - { type: reach_location, location_id: KingdomGate }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Wooden_Cart1_Inside_Gate, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Wooden_Cart1_Inside_Gate, difficulty: 4, success_required: true }
+  - { type: defeat_enemy, enemy_id: vocabulary_onion_slime, amount: 1 }
+  - { type: collect_item, item_id: vocab_food_card, amount: 3 }
+  - { type: return_to_npc, npc_id: food_queen, dialogue_id: vocab_q07_complete }

@@ -1,0 +1,40 @@
+questline:
+  id: vocabulary_adventures
+  npc_id: vocabulary_keeper
+  display_name: "Vocabulary Adventures"
+  theme: "Funny English vocabulary journeys through animals, food, school, and adventure"
+  quest_count: 20
+  level_range: [11, 30]
+
+quests:
+  - { id: q01_goat_ate_map, name: "The Goat Ate the Map", level: 11, prerequisite: null, rewards: { xp: 120, items: [{ id: vocab_animal_card, amount: 3 }] } }
+  - { id: q02_owl_morning, name: "The Owl Hates Morning", level: 12, prerequisite: q01_goat_ate_map, rewards: { xp: 130, items: [{ id: vocab_animal_card, amount: 3 }] } }
+  - { id: q03_parrot_king, name: "The Parrot Became King", level: 13, prerequisite: q02_owl_morning, rewards: { xp: 140, items: [{ id: vocab_animal_card, amount: 3 }] } }
+  - { id: q04_octopus_socks, name: "Eight Socks for an Octopus", level: 14, prerequisite: q03_parrot_king, rewards: { xp: 150, items: [{ id: vocab_animal_card, amount: 3 }] } }
+  - { id: q05_animal_parade, name: "The Animal Parade", level: 15, prerequisite: q04_octopus_socks, rewards: { xp: 180, items: [{ id: vocab_animal_page, amount: 1 }] } }
+
+  - { id: q06_pancake_crown, name: "The Pancake Crown", level: 16, prerequisite: q05_animal_parade, rewards: { xp: 170, items: [{ id: vocab_food_card, amount: 3 }] } }
+  - { id: q07_onion_knight, name: "The Onion Knight", level: 17, prerequisite: q06_pancake_crown, rewards: { xp: 180, items: [{ id: vocab_food_card, amount: 3 }] } }
+  - { id: q08_muffin_escape, name: "The Great Muffin Escape", level: 18, prerequisite: q07_onion_knight, rewards: { xp: 190, items: [{ id: vocab_food_card, amount: 3 }] } }
+  - { id: q09_cheese_moon, name: "The Cheese Moon", level: 19, prerequisite: q08_muffin_escape, rewards: { xp: 200, items: [{ id: vocab_food_card, amount: 3 }] } }
+  - { id: q10_food_festival, name: "The Royal Food Festival", level: 20, prerequisite: q09_cheese_moon, rewards: { xp: 240, items: [{ id: vocab_food_page, amount: 1 }] } }
+
+  - { id: q11_pencil_rebellion, name: "The Pencil Rebellion", level: 21, prerequisite: q10_food_festival, rewards: { xp: 220, items: [{ id: vocab_school_card, amount: 3 }] } }
+  - { id: q12_paint_sneeze, name: "The Painting That Sneezed", level: 22, prerequisite: q11_pencil_rebellion, rewards: { xp: 230, items: [{ id: vocab_school_card, amount: 3 }] } }
+  - { id: q13_robot_homework, name: "The Robot Ate the Homework", level: 23, prerequisite: q12_paint_sneeze, rewards: { xp: 240, items: [{ id: vocab_school_card, amount: 3 }] } }
+  - { id: q14_slide_to_moon, name: "The Slide to the Moon", level: 24, prerequisite: q13_robot_homework, rewards: { xp: 250, items: [{ id: vocab_school_card, amount: 3 }] } }
+  - { id: q15_school_day, name: "The Strangest School Day", level: 25, prerequisite: q14_slide_to_moon, rewards: { xp: 290, items: [{ id: vocab_school_page, amount: 1 }] } }
+
+  - { id: q16_helmet_hair, name: "The Helmet with Hair", level: 26, prerequisite: q15_school_day, rewards: { xp: 270, items: [{ id: vocab_adventure_card, amount: 3 }] } }
+  - { id: q17_potion_hiccups, name: "The Hiccup Potion", level: 27, prerequisite: q16_helmet_hair, rewards: { xp: 280, items: [{ id: vocab_adventure_card, amount: 3 }] } }
+  - { id: q18_compass_confusion, name: "The Confused Compass", level: 28, prerequisite: q17_potion_hiccups, rewards: { xp: 290, items: [{ id: vocab_adventure_card, amount: 3 }] } }
+  - { id: q19_thunder_applause, name: "Thunder Wants Applause", level: 29, prerequisite: q18_compass_confusion, rewards: { xp: 310, items: [{ id: vocab_adventure_page, amount: 1 }] } }
+  - id: q20_word_carnival
+    name: "The Grand Word Carnival"
+    level: 30
+    prerequisite: q19_thunder_applause
+    rewards:
+      xp: 400
+      items:
+        - { id: vocabulary_master_badge, amount: 1 }
+        - { id: coin, amount: 15 }

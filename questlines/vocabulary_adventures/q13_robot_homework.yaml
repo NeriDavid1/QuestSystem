@@ -1,0 +1,17 @@
+quest:
+  id: q13_robot_homework
+  name: "The Robot Ate the Homework"
+  level_required: 23
+  giver_npc: school_headmaster
+  prerequisite: q12_paint_sneeze
+  summary: "A robot eats homework, a magnet steals every spoon, and a model planet rolls out of class."
+rewards: { xp: 240, items: [{ id: vocab_school_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q13_intro }
+  - { type: reach_location, location_id: BuildersHome }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest1_BuildersHomeArea, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Lost_Chest1_BuildersHomeArea, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest1_BuildersHomeArea, difficulty: 5, success_required: true }
+  - { type: defeat_enemy, enemy_id: vocabulary_homework_robot, amount: 1 }
+  - { type: collect_item, item_id: vocab_school_card, amount: 3 }
+  - { type: return_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q13_complete }

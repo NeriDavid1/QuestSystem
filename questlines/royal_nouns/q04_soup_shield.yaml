@@ -1,0 +1,51 @@
+quest:
+  id: q04_soup_shield
+  name: "The Soup Shield"
+  level_required: 7
+  giver_npc: royal_armorer
+  prerequisite: q03_crown_soup
+  summary: "SWORD, SHIELD, and SCROLL are mixed up in the armory while a goblin steals the missing noun page."
+
+rewards:
+  xp: 175
+  items:
+    - id: noun_armory_page
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: royal_armorer
+    dialogue_id: nouns_armorer_mixed_equipment
+
+  - type: reach_location
+    location_id: The Oathstone Bridge
+
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: WoodenCart3_The_Oath_stone_Bridge
+    difficulty: 4
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: WoodenCart3_The_Oath_stone_Bridge
+    difficulty: 4
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: WoodenCart3_The_Oath_stone_Bridge
+    difficulty: 5
+    success_required: true
+
+  - type: defeat_enemy
+    enemy_id: noun_goblin
+    amount: 1
+
+  - type: collect_item
+    item_id: noun_armory_page
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: royal_armorer
+    dialogue_id: nouns_armorer_equipment_restored

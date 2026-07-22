@@ -65,3 +65,25 @@ items:
   gem: { name: "Gem", type: material, softkitty_id: 26, softkitty_uid: gem, max_stack: 99 }
   power_stone: { name: "Power Stone", type: material, softkitty_id: 59, softkitty_uid: power_stone, max_stack: 99 }
   ancient_rune: { name: "Ancient Rune", type: material, softkitty_id: 60, softkitty_uid: ancient_rune, max_stack: 99 }
+
+  # Royal Book of Nouns questline
+  noun_royalty_page: { name: "Royalty Noun Page", type: quest_item }
+  noun_places_page: { name: "Places Noun Page", type: quest_item }
+  noun_treasury_page: { name: "Treasury Noun Page", type: quest_item }
+  noun_armory_page: { name: "Armory Noun Page", type: quest_item }
+  noun_court_page: { name: "Court Noun Page", type: quest_item }
+  noun_creatures_page: { name: "Creatures Noun Page", type: quest_item }
+  royal_noun_book: { name: "Royal Book of Nouns", type: quest_item }
+  noun_keeper_badge: { name: "Royal Noun Keeper Badge", type: accessory }
+
+  # Vocabulary Adventures questline
+  vocab_animal_card: { name: "Animal Word Card", type: quest_item }
+  vocab_animal_page: { name: "Animal Atlas Page", type: quest_item }
+  vocab_food_card: { name: "Food Word Card", type: quest_item }
+  vocab_food_page: { name: "Food Atlas Page", type: quest_item }
+  vocab_school_card: { name: "School Word Card", type: quest_item }
+  vocab_school_page: { name: "School Atlas Page", type: quest_item }
+  vocab_adventure_card: { name: "Adventure Word Card", type: quest_item }
+  vocab_adventure_page: { name: "Adventure Atlas Page", type: quest_item }
+  vocabulary_atlas: { name: "Great Vocabulary Atlas", type: quest_item }
+  vocabulary_master_badge: { name: "Vocabulary Master Badge", type: accessory }

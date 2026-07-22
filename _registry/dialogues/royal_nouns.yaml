@@ -1,0 +1,102 @@
+# Dialogue scripts for The Royal Book of Nouns questline.
+# Hebrew carries the story and instructions; target nouns remain in English.
+
+dialogues:
+  nouns_librarian_missing_roles:
+    speaker: royal_librarian
+    lines:
+      - "אסון בספרייה המלכותית! שלוש מילים ברחו מן הפרק על אנשי הארמון: <strong>king</strong>, <strong>queen</strong> ו־<strong>knight</strong>."
+      - "בלי השמות האלה, המלך לא יודע שהוא <strong>king</strong>, המלכה מחפשת את הכרטיס <strong>queen</strong>, והאביר כבר התיישב על הכיסא של המלך."
+      - "התאימו כל noun לדמות הנכונה, שחזרו את האות הראשונה ב־<strong>king</strong>, ואז אמרו את שלושת השמות בקול."
+
+  nouns_librarian_roles_restored:
+    speaker: royal_librarian
+    lines:
+      - "מצוין: <strong>king</strong>, <strong>queen</strong>, <strong>knight</strong>. שלושה nouns שנותנים שמות לאנשים בממלכה."
+      - "האביר ירד מן הכס, אבל ביקש לקחת איתו את הכרית. לדבריו, גם <strong>knight</strong> ראוי לשבת בנוחות."
+      - "שמרו את דף אנשי המלוכה. המילים האלה יחזרו שוב בהמשך."
+
+  nouns_librarian_mixed_places:
+    speaker: royal_librarian
+    lines:
+      - "המפה המלכותית השתגעה: ה־<strong>castle</strong> מסומן בתור <strong>tower</strong>, המגדל מסומן בתור <strong>gate</strong>, והשער מסומן בתור castle."
+      - "נלמד שלושה nouns של מקומות: <strong>castle</strong> הוא טירה, <strong>tower</strong> הוא מגדל, ו־<strong>gate</strong> הוא שער."
+      - "היזהרו מהטעות: tower יכולה להיות חלק מן castle, אבל הן אינן אותה מילה."
+
+  nouns_librarian_places_restored:
+    speaker: royal_librarian
+    lines:
+      - "המפה שוב נכונה: <strong>castle</strong>, <strong>tower</strong>, <strong>gate</strong>."
+      - "השומרים שכבר טיפסו ל־tower במקום להגיע ל־gate מבקשים שנציב שם דלת. הבקשה עדיין בבדיקה."
+      - "דף המקומות חזר לספר."
+
+  nouns_king_crown_soup:
+    speaker: forgetful_king
+    lines:
+      - "סוף סוף הגעתם! איבדתי שלושה nouns חשובים: <strong>crown</strong>, <strong>throne</strong> ו־<strong>treasure</strong>."
+      - "<strong>crown</strong> הוא כתר, <strong>throne</strong> הוא כיסא, ו־<strong>treasure</strong> הוא אוצר. אני שמתי קערת מרק על הראש וישבתי על תיבת האוצר."
+      - "מצאו את השמות הנכונים לפני שהטבח יוסיף לכתר גזר."
+
+  nouns_king_treasury_restored:
+    speaker: forgetful_king
+    lines:
+      - "נפלא: <strong>crown</strong> על הראש, <strong>throne</strong> באולם, ו־<strong>treasure</strong> בכספת."
+      - "קערת המרק חזרה למטבח. אני מודה שהיא הייתה קלה יותר מן ה־<strong>crown</strong>, אבל הרבה פחות מלכותית."
+      - "קחו את דף אוצרות הארמון."
+
+  nouns_armorer_mixed_equipment:
+    speaker: royal_armorer
+    lines:
+      - "בלגן בנשקייה! ה־<strong>shield</strong> משמש כמגש מרק, מנסים לכתוב בעזרת <strong>sword</strong>, ומנגבים את השולחן ב־<strong>scroll</strong>."
+      - "שלושת ה־nouns שלנו הם <strong>sword</strong>, <strong>shield</strong> ו־<strong>scroll</strong>. התאימו כל מילה לחפץ הנכון."
+      - "גובלין לקח את הדף החסר. קודם שחזרו את המילים, ואז יהיה ברור איזה חפץ כדאי לקחת לקרב."
+
+  nouns_armorer_equipment_restored:
+    speaker: royal_armorer
+    lines:
+      - "עבודה טובה: <strong>sword</strong>, <strong>shield</strong>, <strong>scroll</strong>."
+      - "ה־<strong>shield</strong> שוב מגן, ה־<strong>sword</strong> חזר למעמד, וה־<strong>scroll</strong> ניצל מן המרק."
+      - "הטבח התאכזב מעט. לדבריו, ה־shield היה המגש המרשים ביותר במטבח."
+
+  nouns_wizard_new_shop:
+    speaker: confused_wizard
+    lines:
+      - "ברוכים הבאים למטבח הקסמים שלי! לפחות נדמה לי שאני <strong>cook</strong>... איבדנו את <strong>wizard</strong>, <strong>cook</strong> ו־<strong>guard</strong>."
+      - "ה־<strong>wizard</strong> מערבב מרק עם שרביט, ה־<strong>cook</strong> שומר על השער בעזרת כף, וה־<strong>guard</strong> מנופף במקל וצועק 'קסם!'."
+      - "התאימו את שלושת ה־nouns לאנשים הנכונים ואמרו אותם בקול לפני שהמרק מתחיל לעוף."
+
+  nouns_wizard_roles_restored:
+    speaker: confused_wizard
+    lines:
+      - "נזכרתי! אני <strong>wizard</strong>. במטבח עובד <strong>cook</strong>, וליד השער עומד <strong>guard</strong>."
+      - "ה־guard הפסיק לנסות קסמים. זה לטובה — בפעם האחרונה הוא הפך את הקסדה שלו לקומקום."
+      - "דף אנשי החצר שוב בטוח."
+
+  nouns_dragon_wrong_name:
+    speaker: offended_dragon
+    lines:
+      - "עלבון נורא! מישהו הצמיד לי את הכרטיס <strong>goblin</strong>. אני <strong>dragon</strong> מכובד, לא goblin קטן!"
+      - "ה־<strong>goblin</strong> קיבל את הכרטיס dragon וכבר דורש טירה ואוצר. ה־<strong>griffin</strong> קיבל שם שגוי ומנסה לנשוף אש."
+      - "למדו את <strong>dragon</strong>, <strong>griffin</strong> ו־<strong>goblin</strong>, ואז החזירו לכל יצור את ה־noun שלו."
+
+  nouns_dragon_names_restored:
+    speaker: offended_dragon
+    lines:
+      - "כך טוב יותר: <strong>dragon</strong>, <strong>griffin</strong>, <strong>goblin</strong>. שלושה nouns של יצורים בממלכה."
+      - "ה־goblin החזיר את כרטיס dragon, אבל הוא עדיין מבקש אוצר קטן 'רק לניסיון'."
+      - "קחו את דף היצורים. נתראה במבחן הסיום — אני אבוא לבדוק שהוגים dragon בכבוד."
+
+  nouns_librarian_final_trial:
+    speaker: royal_librarian
+    lines:
+      - "כל דפי הספר נמצאו, אבל הספר ייסגר שוב אם המילים לא באמת נלמדו. הגיע מבחן ה־nouns המלכותי."
+      - "התאימו nouns מוכרים לתמונות, הרכיבו את הכתיב של כמה מילים, ואז אמרו בקול noun אחד מכל קבוצה."
+      - "לא נוסיף מילים חדשות. זה הזמן לזכור את האנשים, המקומות, החפצים והיצורים שכבר פגשנו."
+
+  nouns_librarian_book_restored:
+    speaker: royal_librarian
+    lines:
+      - "הצלחתם! ספר ה־nouns המלכותי שלם, וכל מילה חזרה למקום הנכון."
+      - "אתם מזהים, קוראים ואומרים nouns של אנשים, מקומות, חפצים ויצורים מן הממלכה."
+      - "המלך ביקש את ה־<strong>crown</strong>. הטבח שוב הביא קערת מרק — הפעם בכוונה. אפילו המלך צחק."
+      - "קבלו את תג שומר ה־nouns המלכותי."

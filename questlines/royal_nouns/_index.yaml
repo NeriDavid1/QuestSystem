@@ -1,0 +1,54 @@
+questline:
+  id: royal_nouns
+  npc_id: royal_librarian
+  display_name: "The Royal Book of Nouns"
+  theme: "Advanced kingdom nouns through a comic mystery"
+  quest_count: 7
+  level_range: [4, 10]
+
+quests:
+  - id: q01_roles_without_names
+    name: "Roles Without Names"
+    level: 4
+    prerequisite: null
+    rewards: { xp: 100, items: [{ id: noun_royalty_page, amount: 1 }] }
+
+  - id: q02_castle_on_the_map
+    name: "The Castle That Became a Tower"
+    level: 5
+    prerequisite: q01_roles_without_names
+    rewards: { xp: 125, items: [{ id: noun_places_page, amount: 1 }] }
+
+  - id: q03_crown_soup
+    name: "The Crown Soup"
+    level: 6
+    prerequisite: q02_castle_on_the_map
+    rewards: { xp: 150, items: [{ id: noun_treasury_page, amount: 1 }] }
+
+  - id: q04_soup_shield
+    name: "The Soup Shield"
+    level: 7
+    prerequisite: q03_crown_soup
+    rewards: { xp: 175, items: [{ id: noun_armory_page, amount: 1 }] }
+
+  - id: q05_wizard_for_sale
+    name: "The Wizard in the Kitchen"
+    level: 8
+    prerequisite: q04_soup_shield
+    rewards: { xp: 210, items: [{ id: noun_court_page, amount: 1 }] }
+
+  - id: q06_dragon_identity
+    name: "The Dragon Who Became a Goblin"
+    level: 9
+    prerequisite: q05_wizard_for_sale
+    rewards: { xp: 260, items: [{ id: noun_creatures_page, amount: 1 }] }
+
+  - id: q07_royal_noun_trial
+    name: "The Royal Noun Trial"
+    level: 10
+    prerequisite: q06_dragon_identity
+    rewards:
+      xp: 350
+      items:
+        - { id: noun_keeper_badge, amount: 1 }
+        - { id: coin, amount: 10 }

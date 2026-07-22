@@ -1,0 +1,227 @@
+# Hebrew dialogue scripts for Vocabulary Adventures.
+# The words being learned remain in English.
+
+dialogues:
+  vocab_q01_intro:
+    speaker: animal_caretaker
+    lines:
+      - "עז ברחה עם מפת החווה בפה. עכשיו <strong>duck</strong> מחכה באורווה, ו־<strong>horse</strong> מנסה לשחות בברווזייה."
+      - "למדו את המילים <strong>goat</strong>, <strong>duck</strong> ו־<strong>horse</strong>, והחזירו כל חיה למקום הנכון."
+      - "מהרו לפני שה־goat תגלה שגם ספר ההוראות טעים."
+  vocab_q01_complete:
+    speaker: animal_caretaker
+    lines:
+      - "נהדר: <strong>goat</strong>, <strong>duck</strong>, <strong>horse</strong>."
+      - "ה־horse יצא מן הברווזייה. ה־duck עדיין דורש ערימת קש פרטית."
+
+  vocab_q02_intro:
+    speaker: animal_caretaker
+    lines:
+      - "ביער יש בעיית בוקר: ה־<strong>owl</strong> מסרב להתעורר, ה־<strong>fox</strong> לקח לו את המשקפיים, וה־<strong>bear</strong> מנסה ללחוש."
+      - "התוצאה היא owl ישנוני, fox שנראה חכם מדי, ו־bear שלוחש בעוצמה שכל היער שומע."
+      - "התאימו והגידו: <strong>fox</strong>, <strong>owl</strong>, <strong>bear</strong>."
+  vocab_q02_complete:
+    speaker: animal_caretaker
+    lines:
+      - "מצוין: fox, owl, bear. שלוש המילים נשמרו."
+      - "ה־owl חזר לישון. הוא ביקש שלא נפריע לו לפני מחר בערב."
+
+  vocab_q03_intro:
+    speaker: animal_caretaker
+    lines:
+      - "בחצר הג'ונגל ה־<strong>parrot</strong> מחקה את המלך ונותן פקודות, ה־<strong>monkey</strong> גנב את הכתר, וה־<strong>tiger</strong> מחכה בנימוס לארוחת צהריים."
+      - "למדו <strong>monkey</strong>, <strong>tiger</strong> ו־<strong>parrot</strong> לפני שהתוכי מכריז על עצמו כמלך."
+  vocab_q03_complete:
+    speaker: animal_caretaker
+    lines:
+      - "monkey, tiger, parrot — הכול נכון."
+      - "ה־parrot ויתר על הכס, אבל ממשיך לצעוק: 'עוד עוגיות לכולם!' זו הייתה הפקודה הפופולרית ביותר שלו."
+
+  vocab_q04_intro:
+    speaker: animal_caretaker
+    lines:
+      - "במפרץ האלמוגים ה־<strong>octopus</strong> הזמין שמונה גרביים, ה־<strong>dolphin</strong> מבצע את המשלוח, וה־<strong>shark</strong> טוען שבא רק לתה."
+      - "למדו <strong>dolphin</strong>, <strong>shark</strong> ו־<strong>octopus</strong>. סרטן עצבני מחזיק את הגרב האחרונה."
+  vocab_q04_complete:
+    speaker: animal_caretaker
+    lines:
+      - "נכון: dolphin, shark, octopus."
+      - "ל־octopus יש עכשיו שמונה גרביים. רק אחרי שלבש אותן הוא נזכר שאין לו נעליים."
+
+  vocab_q05_intro:
+    speaker: vocabulary_keeper
+    lines:
+      - "מצעד החיות מתחיל, אבל כל אחת מחזיקה כרטיס שגוי. ה־goat מחזיקה SHARK, וה־octopus מחזיק HORSE."
+      - "לא נלמד מילים חדשות. נחזור על שתים־עשרה החיות, נאיית כמה מהן ונאמר ארבע בקול."
+  vocab_q05_complete:
+    speaker: vocabulary_keeper
+    lines:
+      - "כל החיות קיבלו את שמותיהן, ודף Animals נכנס לאטלס."
+      - "ה־goat עדיין ניסתה לאכול את הכרטיס שלה. לפחות הפעם היא ידעה שכתוב עליו goat."
+
+  vocab_q06_intro:
+    speaker: food_queen
+    lines:
+      - "ברוכים הבאים לממלכת ארוחת הבוקר! אני לובשת <strong>pancake</strong> בתור כתר, קערת <strong>cereal</strong> שומרת על הדלת, ו־<strong>honey</strong> הדביק את אנשי החצר זה לזה."
+      - "למדו <strong>pancake</strong>, <strong>cereal</strong> ו־<strong>honey</strong> לפני שהכתר שלי מבקש סירופ."
+  vocab_q06_complete:
+    speaker: food_queen
+    lines:
+      - "pancake, cereal, honey — שלוש המילים במקום."
+      - "הכתר היה טעים מאוד, אך מעכשיו אחזור לכתר שאינו נעלם בזמן ארוחת הבוקר."
+
+  vocab_q07_intro:
+    speaker: food_queen
+    lines:
+      - "בטורניר הירקות ה־<strong>carrot</strong> נותן פקודות, ה־<strong>pepper</strong> גורם לכולם להתעטש, ואביר ה־<strong>onion</strong> גורם לקהל לבכות."
+      - "התאימו ואמרו <strong>carrot</strong>, <strong>pepper</strong>, <strong>onion</strong>, ואז עצרו את סליים הבצל."
+  vocab_q07_complete:
+    speaker: food_queen
+    lines:
+      - "נפלא: carrot, pepper, onion."
+      - "אביר ה־onion ניצח בטורניר. אף אחד לא ראה איך — כולם ניגבו דמעות."
+
+  vocab_q08_intro:
+    speaker: food_queen
+    lines:
+      - "מהפכה במאפייה! כיכר <strong>bread</strong> חסמה את הדלת, <strong>cookie</strong> מתגלגל במסדרון, ו־<strong>muffin</strong> ברח בכרכרה קטנה."
+      - "למדו <strong>bread</strong>, <strong>cookie</strong> ו־<strong>muffin</strong> ותפסו את המאפים לפני שיגיעו לגבול."
+  vocab_q08_complete:
+    speaker: food_queen
+    lines:
+      - "bread, cookie, muffin — כולם חזרו למאפייה."
+      - "ה־muffin טוען שלא ברח; הוא פשוט יצא לחופשה קצרה בלי להודיע."
+
+  vocab_q09_intro:
+    speaker: food_queen
+    lines:
+      - "באולם המשתה קערת <strong>soup</strong> מחפשת כפית, <strong>salad</strong> דורש כתר, ו־<strong>cheese</strong> מספר לכולם שהוא הגיע מן הירח."
+      - "למדו <strong>soup</strong>, <strong>salad</strong> ו־<strong>cheese</strong>. אין צורך להתווכח עם cheese על אסטרונומיה."
+  vocab_q09_complete:
+    speaker: food_queen
+    lines:
+      - "soup, salad, cheese — יפה מאוד."
+      - "ה־cheese הודה שהוא לא מן הירח, אבל ביקש שנשמור את הסיפור כי הוא נשמע מרשים."
+
+  vocab_q10_intro:
+    speaker: vocabulary_keeper
+    lines:
+      - "פסטיבל האוכל מוכן, אבל התפריט התבלבל: ליד soup מופיעה תמונת muffin, וליד onion כתוב HONEY."
+      - "חזרו על שתים־עשרה מילות האוכל, אייתו את המילים שנבחרו ואמרו אותן בקול."
+  vocab_q10_complete:
+    speaker: vocabulary_keeper
+    lines:
+      - "דף Food Kingdom הושלם ונכנס לאטלס."
+      - "האורחים קיבלו סוף סוף את המנות הנכונות. רק ה־pancake ביקש לשבת על כס המלכה."
+
+  vocab_q11_intro:
+    speaker: school_headmaster
+    lines:
+      - "מרד בכיתה! ה־<strong>pencil</strong> מסרב לכתוב, ה־<strong>ruler</strong> הכריז על עצמו כמלך, וה־<strong>notebook</strong> התחיל לתת ציונים למורה."
+      - "למדו <strong>pencil</strong>, <strong>ruler</strong> ו־<strong>notebook</strong> והחזירו את השיעור למסלול."
+  vocab_q11_complete:
+    speaker: school_headmaster
+    lines:
+      - "pencil, ruler, notebook — מצוין."
+      - "ה־notebook נתן למורה ציון תשעים ושמונה. שתי נקודות ירדו בגלל כתב יד."
+
+  vocab_q12_intro:
+    speaker: school_headmaster
+    lines:
+      - "בחדר האמנות ה־<strong>brush</strong> דגדג את הדיוקן, ה־<strong>paint</strong> עף לכל הכיוונים, ו־<strong>paper</strong> ביקש מטרייה."
+      - "התאימו ואמרו <strong>brush</strong>, <strong>paint</strong>, <strong>paper</strong>."
+  vocab_q12_complete:
+    speaker: school_headmaster
+    lines:
+      - "brush, paint, paper — שלוש מילים חדשות נשמרו."
+      - "הדיוקן הפסיק להתעטש, אבל עכשיו הוא מבקש טישו מצויר."
+
+  vocab_q13_intro:
+    speaker: school_headmaster
+    lines:
+      - "במעבדה ה־<strong>robot</strong> אכל את שיעורי הבית, ה־<strong>magnet</strong> גנב את כל הכפיות, ודגם <strong>planet</strong> התגלגל החוצה."
+      - "למדו <strong>magnet</strong>, <strong>planet</strong> ו־<strong>robot</strong>, ואז עצרו את הרובוט לפני שיאכל גם את המבחן."
+  vocab_q13_complete:
+    speaker: school_headmaster
+    lines:
+      - "magnet, planet, robot — הכול נכון."
+      - "הרובוט החזיר את שיעורי הבית. למרבה הצער, הוא גם בדק אותם והוסיף הערות."
+
+  vocab_q14_intro:
+    speaker: school_headmaster
+    lines:
+      - "מגרש המשחקים השתגע: ה־<strong>swing</strong> עף גבוה מדי, ה־<strong>slide</strong> מצביע אל הירח, ו־<strong>rope</strong> קשר את כל הספסלים יחד."
+      - "למדו <strong>swing</strong>, <strong>slide</strong> ו־<strong>rope</strong> לפני שמישהו באמת מחליק לירח."
+  vocab_q14_complete:
+    speaker: school_headmaster
+    lines:
+      - "swing, slide, rope — נהדר."
+      - "ה־slide חזר למקום. הוא עדיין טוען שהירח היה ממש קרוב."
+
+  vocab_q15_intro:
+    speaker: vocabulary_keeper
+    lines:
+      - "יריד בית הספר התחיל, אך שתים־עשרה המילים נכנסו לכיתות הלא נכונות. ROBOT יושב בחדר האמנות ו־BRUSH מנסה לפתור תרגיל."
+      - "זהו קו הסיום של פרק School: התאמה, איות ודיבור בלי מילים חדשות."
+  vocab_q15_complete:
+    speaker: vocabulary_keeper
+    lines:
+      - "דף School הושלם. אתם מזהים את כל שתים־עשרה המילים."
+      - "ה־ruler עדיין חושב שהוא מלך, אך הסכים לשלוט רק במגירת כלי הכתיבה."
+
+  vocab_q16_intro:
+    speaker: adventure_scout
+    lines:
+      - "במחנה ההרפתקנים צמח שיער על <strong>helmet</strong>, ה־<strong>banner</strong> דורש מחיאות כפיים, וסט <strong>armor</strong> רוקד בלי אביר."
+      - "למדו <strong>helmet</strong>, <strong>banner</strong> ו־<strong>armor</strong> לפני שהשריון מבקש שותף לריקוד."
+  vocab_q16_complete:
+    speaker: adventure_scout
+    lines:
+      - "helmet, banner, armor — שלוש המילים מוכנות להרפתקה."
+      - "גזרנו ל־helmet את השיער. הוא ביקש להשאיר פוני קטן."
+
+  vocab_q17_intro:
+    speaker: adventure_scout
+    lines:
+      - "בסדנת הקסם <strong>potion</strong> גורם לשיהוקים, <strong>wand</strong> מצביע לאחור, ו־<strong>spell</strong> הופך מגפיים לבננות."
+      - "למדו <strong>potion</strong>, <strong>wand</strong> ו־<strong>spell</strong>, ואז הביסו את הגוש שברח מן הסיר."
+  vocab_q17_complete:
+    speaker: adventure_scout
+    lines:
+      - "potion, wand, spell — מצוין."
+      - "הקסם תוקן. המגפיים חזרו להיות מגפיים, אך אחד מהם עדיין מריח קצת כמו בננה."
+
+  vocab_q18_intro:
+    speaker: adventure_scout
+    lines:
+      - "המסע נעצר: ה־<strong>compass</strong> מצביע על ארוחת הצהריים, ה־<strong>backpack</strong> אורז את עצמו, וה־<strong>tent</strong> מסרב לקום."
+      - "למדו <strong>compass</strong>, <strong>backpack</strong> ו־<strong>tent</strong> כדי שנוכל לצאת לדרך."
+  vocab_q18_complete:
+    speaker: adventure_scout
+    lines:
+      - "compass, backpack, tent — הכול מוכן."
+      - "ה־compass עדיין מצביע מדי פעם על כריך. אנחנו מתחילים לחשוד שהוא פשוט רעב."
+
+  vocab_q19_intro:
+    speaker: adventure_scout
+    lines:
+      - "בפסגת הסערה <strong>cloud</strong> חובש כובע, <strong>rainbow</strong> איבד את הצבעים, ו־<strong>thunder</strong> חושב שכל בום ראוי למחיאות כפיים."
+      - "למדו <strong>cloud</strong>, <strong>rainbow</strong> ו־<strong>thunder</strong> והחזירו את דף Adventure."
+  vocab_q19_complete:
+    speaker: adventure_scout
+    lines:
+      - "cloud, rainbow, thunder — נפלא. דף Adventure הושלם."
+      - "מחאנו כפיים פעם אחת ל־thunder. עכשיו הוא מבקש הדרן."
+
+  vocab_q20_intro:
+    speaker: vocabulary_keeper
+    lines:
+      - "הקרנבל הגדול נפתח! ארבעים ושמונה מילים הגיעו מחיות, אוכל, בית הספר והרפתקאות — וכולן התערבבו."
+      - "לא נלמד מילים חדשות. התאימו את המילים לתמונות, אייתו מילים מוכרות ואמרו מילים מכל ארבעת העולמות."
+      - "אם תצליחו, ארבעת הדפים יהפכו לאטלס אוצר המילים הגדול."
+  vocab_q20_complete:
+    speaker: vocabulary_keeper
+    lines:
+      - "הצלחתם! ארבעים ושמונה מילים באנגלית נמצאות באטלס, ואתם יודעים לזהות, לקרוא ולומר אותן."
+      - "במצעד הסיום ה־octopus לובש helmet, ה־robot מחזיק pancake, וה־rainbow קיבל notebook. הפעם זה בכוונה."
+      - "קבלו את תג אלופי אוצר המילים."

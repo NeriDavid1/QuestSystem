@@ -1,0 +1,16 @@
+quest:
+  id: q03_parrot_king
+  name: "The Parrot Became King"
+  level_required: 13
+  giver_npc: animal_caretaker
+  prerequisite: q02_owl_morning
+  summary: "A parrot copies the king, a monkey steals the crown, and a tiger waits politely for lunch."
+rewards: { xp: 140, items: [{ id: vocab_animal_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: animal_caretaker, dialogue_id: vocab_q03_intro }
+  - { type: reach_location, location_id: The Last Roar }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest6_The_Last_Roar, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Lost_Chest6_The_Last_Roar, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest6_The_Last_Roar, difficulty: 4, success_required: true }
+  - { type: collect_item, item_id: vocab_animal_card, amount: 3 }
+  - { type: return_to_npc, npc_id: animal_caretaker, dialogue_id: vocab_q03_complete }

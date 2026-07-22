@@ -1,0 +1,335 @@
+# Per-step minigame briefs — Vocabulary Adventures.
+# Every new-word quest follows: meaning -> spelling where selected -> listen and speak.
+
+instances:
+  q01_goat_ate_map_s2:
+    instruction: "התאימו את המילים לחיות הנכונות בחווה"
+    tasks: ["<strong>goat</strong> לעז, <strong>duck</strong> לברווז", "<strong>horse</strong> לסוס; בסיבוב השני התמונות מחליפות מקום"]
+    target: "goat, duck, horse"
+    variant: "word_to_image"
+    success: "שלוש החיות חוזרות למקומות הנכונים"
+  q01_goat_ate_map_s3:
+    instruction: "סדרו את האותיות של HORSE"
+    tasks: ["גררו h, o, r, s, e למשבצות", "קראו את המילה השלמה: <strong>horse</strong>"]
+    target: "horse"
+    variant: "word_spelling"
+    success: "כרטיס HORSE משוחזר"
+  q01_goat_ate_map_s4:
+    instruction: "הקשיבו ואמרו את שלוש המילים"
+    tasks: ["Hear it ואז אמרו <strong>goat</strong> ו־<strong>duck</strong>", "הקשיבו ואמרו <strong>horse</strong>"]
+    target: "goat, duck, horse"
+    variant: "repeat_after_npc"
+    success: "שלוש המילים נשמרות באטלס"
+
+  q02_owl_morning_s2:
+    instruction: "התאימו את חיות היער לתמונות"
+    tasks: ["<strong>fox</strong> לשועל ו־<strong>owl</strong> לינשוף", "<strong>bear</strong> לדוב; חזרו על הסיבוב בסדר חדש"]
+    target: "fox, owl, bear"
+    variant: "word_to_image"
+    success: "כל חיית יער מקבלת את הכרטיס שלה"
+  q02_owl_morning_s3:
+    instruction: "הקשיבו ואמרו fox, owl, bear"
+    tasks: ["הקשיבו לכל מילה לפני הדיבור", "אמרו <strong>fox</strong>, <strong>owl</strong>, <strong>bear</strong>"]
+    target: "fox, owl, bear"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות היער נשמרות"
+
+  q03_parrot_king_s2:
+    instruction: "התאימו את חיות הג'ונגל לתמונות"
+    tasks: ["<strong>monkey</strong> לקוף ו־<strong>tiger</strong> לטיגריס", "<strong>parrot</strong> לתוכי שמחזיק כתר"]
+    target: "monkey, tiger, parrot"
+    variant: "word_to_image"
+    success: "בית המשפט של הג'ונגל מסודר"
+  q03_parrot_king_s3:
+    instruction: "סדרו את האותיות של PARROT"
+    tasks: ["סדרו p, a, r, r, o, t", "שימו לב שיש שתי אותיות r"]
+    target: "parrot"
+    variant: "word_spelling"
+    success: "המילה PARROT חוזרת לתוכי"
+  q03_parrot_king_s4:
+    instruction: "הקשיבו ואמרו monkey, tiger, parrot"
+    tasks: ["חזרו אחרי ההקלטה", "אמרו את שלוש המילים פעם נוספת עם פחות עזרה"]
+    target: "monkey, tiger, parrot"
+    variant: "repeat_after_npc"
+    success: "שלוש המילים נשמרות"
+
+  q04_octopus_socks_s2:
+    instruction: "התאימו את חיות הים לתמונות"
+    tasks: ["<strong>dolphin</strong> לדולפין ו־<strong>shark</strong> לכריש", "<strong>octopus</strong> לתמנון בעל שמונה הזרועות"]
+    target: "dolphin, shark, octopus"
+    variant: "word_to_image"
+    success: "משלוח הגרביים מגיע לחיה הנכונה"
+  q04_octopus_socks_s3:
+    instruction: "הקשיבו ואמרו dolphin, shark, octopus"
+    tasks: ["הקשיבו להגייה של כל מילה", "אמרו <strong>dolphin</strong>, <strong>shark</strong>, <strong>octopus</strong>"]
+    target: "dolphin, shark, octopus"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות הים נשמרות"
+
+  q05_animal_parade_s2:
+    instruction: "התאימו את שתים־עשרה החיות במצעד"
+    tasks: ["סיבוב חווה ויער: goat, duck, horse, fox, owl, bear", "סיבוב ג'ונגל וים: monkey, tiger, parrot, dolphin, shark, octopus"]
+    target: "12 animal words"
+    variant: "word_to_image"
+    success: "כל חיה עומדת עם הכרטיס הנכון"
+  q05_animal_parade_s3:
+    instruction: "אייתו ארבע מילות חיות מוכרות"
+    tasks: ["סדרו horse ו־parrot", "סדרו dolphin ו־octopus"]
+    target: "horse, parrot, dolphin, octopus"
+    variant: "word_spelling"
+    success: "דף Animals כמעט שלם"
+  q05_animal_parade_s4:
+    instruction: "אמרו ארבע מילים מן המצעד"
+    tasks: ["אמרו goat ו־owl", "אמרו tiger ו־shark"]
+    target: "goat, owl, tiger, shark"
+    variant: "single_word"
+    success: "דף Animals הושלם"
+
+  q06_pancake_crown_s2:
+    instruction: "התאימו את מילות ארוחת הבוקר לתמונות"
+    tasks: ["<strong>pancake</strong> לחביתית ו־<strong>cereal</strong> לקערת דגנים", "<strong>honey</strong> לדבש"]
+    target: "pancake, cereal, honey"
+    variant: "word_to_image"
+    success: "ארוחת הבוקר מקבלת את השמות הנכונים"
+  q06_pancake_crown_s3:
+    instruction: "סדרו את האותיות של PANCAKE"
+    tasks: ["סדרו p, a, n, c, a, k, e", "קראו בקול את המילה <strong>pancake</strong>"]
+    target: "pancake"
+    variant: "word_spelling"
+    success: "כתר ה־PANCAKE מזוהה"
+  q06_pancake_crown_s4:
+    instruction: "הקשיבו ואמרו pancake, cereal, honey"
+    tasks: ["חזרו אחרי כל הקלטה", "אמרו את שלוש המילים בסדר חדש"]
+    target: "pancake, cereal, honey"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות ארוחת הבוקר נשמרות"
+
+  q07_onion_knight_s2:
+    instruction: "התאימו את הירקות לתמונות"
+    tasks: ["<strong>carrot</strong> לגזר ו־<strong>pepper</strong> לפלפל", "<strong>onion</strong> לבצל"]
+    target: "carrot, pepper, onion"
+    variant: "word_to_image"
+    success: "הירקות מוכנים לטורניר"
+  q07_onion_knight_s3:
+    instruction: "הקשיבו ואמרו carrot, pepper, onion"
+    tasks: ["הקשיבו לכל מילה", "אמרו <strong>carrot</strong>, <strong>pepper</strong>, <strong>onion</strong>"]
+    target: "carrot, pepper, onion"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות הירקות נשמרות"
+
+  q08_muffin_escape_s2:
+    instruction: "התאימו את מאכלי המאפייה לתמונות"
+    tasks: ["<strong>bread</strong> ללחם ו־<strong>cookie</strong> לעוגייה", "<strong>muffin</strong> למאפין שבכרכרה"]
+    target: "bread, cookie, muffin"
+    variant: "word_to_image"
+    success: "שלושת המאפים נמצאים"
+  q08_muffin_escape_s3:
+    instruction: "סדרו את האותיות של MUFFIN"
+    tasks: ["סדרו m, u, f, f, i, n", "שימו לב לשתי האותיות f"]
+    target: "muffin"
+    variant: "word_spelling"
+    success: "כרטיס MUFFIN משוחזר"
+  q08_muffin_escape_s4:
+    instruction: "הקשיבו ואמרו bread, cookie, muffin"
+    tasks: ["חזרו אחרי ההקלטה", "אמרו את שלוש המילים בלי להחליף ביניהן"]
+    target: "bread, cookie, muffin"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות המאפייה נשמרות"
+
+  q09_cheese_moon_s2:
+    instruction: "התאימו את מנות המשתה לתמונות"
+    tasks: ["<strong>soup</strong> למרק ו־<strong>salad</strong> לסלט", "<strong>cheese</strong> לגבינה, לא לירח"]
+    target: "soup, salad, cheese"
+    variant: "word_to_image"
+    success: "שולחן המשתה מסודר"
+  q09_cheese_moon_s3:
+    instruction: "הקשיבו ואמרו soup, salad, cheese"
+    tasks: ["הקשיבו לכל מילה", "אמרו <strong>soup</strong>, <strong>salad</strong>, <strong>cheese</strong>"]
+    target: "soup, salad, cheese"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות המשתה נשמרות"
+
+  q10_food_festival_s2:
+    instruction: "התאימו את שתים־עשרה מילות האוכל"
+    tasks: ["סיבוב בוקר וירקות: pancake, cereal, honey, carrot, pepper, onion", "סיבוב מאפייה ומשתה: bread, cookie, muffin, soup, salad, cheese"]
+    target: "12 food words"
+    variant: "word_to_image"
+    success: "התפריט תואם לכל המנות"
+  q10_food_festival_s3:
+    instruction: "אייתו ארבע מילות אוכל מוכרות"
+    tasks: ["סדרו pancake ו־onion", "סדרו muffin ו־cheese"]
+    target: "pancake, onion, muffin, cheese"
+    variant: "word_spelling"
+    success: "דף Food Kingdom כמעט שלם"
+  q10_food_festival_s4:
+    instruction: "אמרו ארבע מילות אוכל"
+    tasks: ["אמרו cereal ו־pepper", "אמרו cookie ו־salad"]
+    target: "cereal, pepper, cookie, salad"
+    variant: "single_word"
+    success: "דף Food Kingdom הושלם"
+
+  q11_pencil_rebellion_s2:
+    instruction: "התאימו את כלי הכיתה לתמונות"
+    tasks: ["<strong>pencil</strong> לעיפרון ו־<strong>ruler</strong> לסרגל", "<strong>notebook</strong> למחברת שנותנת ציונים"]
+    target: "pencil, ruler, notebook"
+    variant: "word_to_image"
+    success: "כלי הכיתה מפסיקים את המרד"
+  q11_pencil_rebellion_s3:
+    instruction: "סדרו את האותיות של NOTEBOOK"
+    tasks: ["סדרו n, o, t, e, b, o, o, k", "שימו לב לשלוש האותיות o במילה"]
+    target: "notebook"
+    variant: "word_spelling"
+    success: "כרטיס NOTEBOOK משוחזר"
+  q11_pencil_rebellion_s4:
+    instruction: "הקשיבו ואמרו pencil, ruler, notebook"
+    tasks: ["חזרו אחרי כל מילה", "אמרו את שלוש המילים בסדר חדש"]
+    target: "pencil, ruler, notebook"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות הכיתה נשמרות"
+
+  q12_paint_sneeze_s2:
+    instruction: "התאימו את חומרי האמנות לתמונות"
+    tasks: ["<strong>brush</strong> למכחול ו־<strong>paint</strong> לצבע", "<strong>paper</strong> לנייר שמחזיק מטרייה"]
+    target: "brush, paint, paper"
+    variant: "word_to_image"
+    success: "חדר האמנות מסודר"
+  q12_paint_sneeze_s3:
+    instruction: "הקשיבו ואמרו brush, paint, paper"
+    tasks: ["הקשיבו לכל מילה", "אמרו <strong>brush</strong>, <strong>paint</strong>, <strong>paper</strong>"]
+    target: "brush, paint, paper"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות האמנות נשמרות"
+
+  q13_robot_homework_s2:
+    instruction: "התאימו את חפצי המעבדה לתמונות"
+    tasks: ["<strong>magnet</strong> למגנט ו־<strong>planet</strong> לכוכב הלכת", "<strong>robot</strong> לרובוט שאכל את שיעורי הבית"]
+    target: "magnet, planet, robot"
+    variant: "word_to_image"
+    success: "המעבדה מזהה את שלושת החפצים"
+  q13_robot_homework_s3:
+    instruction: "סדרו את האותיות של PLANET"
+    tasks: ["סדרו p, l, a, n, e, t", "קראו את המילה השלמה: <strong>planet</strong>"]
+    target: "planet"
+    variant: "word_spelling"
+    success: "דגם ה־PLANET חוזר לכיתה"
+  q13_robot_homework_s4:
+    instruction: "הקשיבו ואמרו magnet, planet, robot"
+    tasks: ["חזרו אחרי ההקלטה", "אמרו את שלוש המילים לפני שה־robot אוכל עוד דף"]
+    target: "magnet, planet, robot"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות המדע נשמרות"
+
+  q14_slide_to_moon_s2:
+    instruction: "התאימו את מתקני המשחקים לתמונות"
+    tasks: ["<strong>swing</strong> לנדנדה ו־<strong>slide</strong> למגלשה", "<strong>rope</strong> לחבל"]
+    target: "swing, slide, rope"
+    variant: "word_to_image"
+    success: "מגרש המשחקים חוזר לפעול"
+  q14_slide_to_moon_s3:
+    instruction: "הקשיבו ואמרו swing, slide, rope"
+    tasks: ["הקשיבו לכל מילה", "אמרו <strong>swing</strong>, <strong>slide</strong>, <strong>rope</strong>"]
+    target: "swing, slide, rope"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות המשחקים נשמרות"
+
+  q15_school_day_s2:
+    instruction: "התאימו את שתים־עשרה מילות בית הספר"
+    tasks: ["סיבוב כיתה ואמנות: pencil, ruler, notebook, brush, paint, paper", "סיבוב מדע ומשחקים: magnet, planet, robot, swing, slide, rope"]
+    target: "12 school words"
+    variant: "word_to_image"
+    success: "כל מילה חוזרת לחדר הנכון"
+  q15_school_day_s3:
+    instruction: "אייתו ארבע מילות בית ספר"
+    tasks: ["סדרו notebook ו־brush", "סדרו planet ו־swing"]
+    target: "notebook, brush, planet, swing"
+    variant: "word_spelling"
+    success: "דף School כמעט שלם"
+  q15_school_day_s4:
+    instruction: "אמרו ארבע מילות בית ספר"
+    tasks: ["אמרו pencil ו־paper", "אמרו robot ו־slide"]
+    target: "pencil, paper, robot, slide"
+    variant: "single_word"
+    success: "דף School הושלם"
+
+  q16_helmet_hair_s2:
+    instruction: "התאימו את ציוד ההרפתקנים לתמונות"
+    tasks: ["<strong>helmet</strong> לקסדה ו־<strong>banner</strong> לדגל", "<strong>armor</strong> לשריון הרוקד"]
+    target: "helmet, banner, armor"
+    variant: "word_to_image"
+    success: "הציוד מוכן למחנה"
+  q16_helmet_hair_s3:
+    instruction: "סדרו את האותיות של HELMET"
+    tasks: ["סדרו h, e, l, m, e, t", "קראו את המילה השלמה: <strong>helmet</strong>"]
+    target: "helmet"
+    variant: "word_spelling"
+    success: "כרטיס HELMET משוחזר"
+  q16_helmet_hair_s4:
+    instruction: "הקשיבו ואמרו helmet, banner, armor"
+    tasks: ["חזרו אחרי כל מילה", "אמרו את שלוש המילים שוב עם פחות עזרה"]
+    target: "helmet, banner, armor"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות הציוד נשמרות"
+
+  q17_potion_hiccups_s2:
+    instruction: "התאימו את חפצי הקסם לתמונות"
+    tasks: ["<strong>potion</strong> לשיקוי ו־<strong>wand</strong> לשרביט", "<strong>spell</strong> לכישוף שהפך מגפיים לבננות"]
+    target: "potion, wand, spell"
+    variant: "word_to_image"
+    success: "שלושת חפצי הקסם מזוהים"
+  q17_potion_hiccups_s3:
+    instruction: "הקשיבו ואמרו potion, wand, spell"
+    tasks: ["הקשיבו לכל מילה", "אמרו <strong>potion</strong>, <strong>wand</strong>, <strong>spell</strong>"]
+    target: "potion, wand, spell"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות הקסם נשמרות"
+
+  q18_compass_confusion_s2:
+    instruction: "התאימו את ציוד המסע לתמונות"
+    tasks: ["<strong>compass</strong> למצפן ו־<strong>backpack</strong> לתיק גב", "<strong>tent</strong> לאוהל המסרב לקום"]
+    target: "compass, backpack, tent"
+    variant: "word_to_image"
+    success: "ציוד המסע ארוז נכון"
+  q18_compass_confusion_s3:
+    instruction: "סדרו את האותיות של COMPASS"
+    tasks: ["סדרו c, o, m, p, a, s, s", "שימו לב לשתי האותיות s בסוף"]
+    target: "compass"
+    variant: "word_spelling"
+    success: "ה־COMPASS מפסיק להצביע על ארוחת הצהריים"
+  q18_compass_confusion_s4:
+    instruction: "הקשיבו ואמרו compass, backpack, tent"
+    tasks: ["חזרו אחרי ההקלטה", "אמרו את שלוש המילים לפני היציאה למסע"]
+    target: "compass, backpack, tent"
+    variant: "repeat_after_npc"
+    success: "שלוש מילות המסע נשמרות"
+
+  q19_thunder_applause_s2:
+    instruction: "התאימו את מילות מזג האוויר לתמונות"
+    tasks: ["<strong>cloud</strong> לענן ו־<strong>rainbow</strong> לקשת", "<strong>thunder</strong> לרעם שמבקש מחיאות כפיים"]
+    target: "cloud, rainbow, thunder"
+    variant: "word_to_image"
+    success: "הסערה מקבלת את השמות הנכונים"
+  q19_thunder_applause_s3:
+    instruction: "הקשיבו ואמרו cloud, rainbow, thunder"
+    tasks: ["הקשיבו לכל מילה", "אמרו <strong>cloud</strong>, <strong>rainbow</strong>, <strong>thunder</strong>"]
+    target: "cloud, rainbow, thunder"
+    variant: "repeat_after_npc"
+    success: "דף Adventure הושלם"
+
+  q20_word_carnival_s2:
+    instruction: "עברו ארבעה סבבי התאמה מסכמים"
+    tasks: ["Animals ו־Food Kingdom: התאימו 24 מילים לתמונות", "School ו־Adventure: התאימו 24 מילים לתמונות; בכל סבב יש מסיחים מעולם אחר"]
+    target: "goat, duck, horse, fox, owl, bear, monkey, tiger, parrot, dolphin, shark, octopus; pancake, cereal, honey, carrot, pepper, onion, bread, cookie, muffin, soup, salad, cheese; pencil, ruler, notebook, brush, paint, paper, magnet, planet, robot, swing, slide, rope; helmet, banner, armor, potion, wand, spell, compass, backpack, tent, cloud, rainbow, thunder"
+    variant: "word_to_image"
+    success: "כל ארבעת שערי הקרנבל נפתחים"
+  q20_word_carnival_s3:
+    instruction: "אייתו שמונה מילים שנבחרו מארבעת העולמות"
+    tasks: ["Animals/Food: octopus, pancake, muffin, cheese", "School/Adventure: notebook, planet, helmet, compass"]
+    target: "8 mixed review words"
+    variant: "word_spelling"
+    success: "ארבעת הדפים מתחברים לאטלס"
+  q20_word_carnival_s4:
+    instruction: "אמרו שתי מילים מכל עולם"
+    tasks: ["אמרו horse, dolphin, cereal, onion", "אמרו ruler, robot, banner, rainbow"]
+    target: "8 spoken review words"
+    variant: "single_word"
+    success: "אטלס אוצר המילים הגדול נפתח"

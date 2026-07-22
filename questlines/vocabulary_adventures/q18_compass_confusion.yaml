@@ -1,0 +1,16 @@
+quest:
+  id: q18_compass_confusion
+  name: "The Confused Compass"
+  level_required: 28
+  giver_npc: adventure_scout
+  prerequisite: q17_potion_hiccups
+  summary: "A compass points at lunch, a backpack packs itself, and a tent refuses to wake up."
+rewards: { xp: 290, items: [{ id: vocab_adventure_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q18_intro }
+  - { type: reach_location, location_id: Forsaken Cove }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest3_Forsaken_Cove, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Lost_Chest3_Forsaken_Cove, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest3_Forsaken_Cove, difficulty: 5, success_required: true }
+  - { type: collect_item, item_id: vocab_adventure_card, amount: 3 }
+  - { type: return_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q18_complete }

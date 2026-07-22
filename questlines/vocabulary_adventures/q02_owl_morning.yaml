@@ -1,0 +1,15 @@
+quest:
+  id: q02_owl_morning
+  name: "The Owl Hates Morning"
+  level_required: 12
+  giver_npc: animal_caretaker
+  prerequisite: q01_goat_ate_map
+  summary: "An owl refuses to wake up while a fox borrows its glasses and a bear tries to whisper."
+rewards: { xp: 130, items: [{ id: vocab_animal_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: animal_caretaker, dialogue_id: vocab_q02_intro }
+  - { type: reach_location, location_id: The Sunspire Tree }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest7_The_Sunspire_Tree, difficulty: 3, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest7_The_Sunspire_Tree, difficulty: 4, success_required: true }
+  - { type: collect_item, item_id: vocab_animal_card, amount: 3 }
+  - { type: return_to_npc, npc_id: animal_caretaker, dialogue_id: vocab_q02_complete }

@@ -1,0 +1,47 @@
+quest:
+  id: q03_crown_soup
+  name: "The Crown Soup"
+  level_required: 6
+  giver_npc: forgetful_king
+  prerequisite: q02_castle_on_the_map
+  summary: "The king confuses CROWN, THRONE, and TREASURE and wears a soup bowl to court."
+
+rewards:
+  xp: 150
+  items:
+    - id: noun_treasury_page
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: forgetful_king
+    dialogue_id: nouns_king_crown_soup
+
+  - type: reach_location
+    location_id: Solitude Tower
+
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: WoodenCart2_Solitude_Tower
+    difficulty: 4
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: WoodenCart2_Solitude_Tower
+    difficulty: 3
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: WoodenCart2_Solitude_Tower
+    difficulty: 4
+    success_required: true
+
+  - type: collect_item
+    item_id: noun_treasury_page
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: forgetful_king
+    dialogue_id: nouns_king_treasury_restored

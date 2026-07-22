@@ -73,3 +73,63 @@ npcs:
     title: "Road Watcher"
     location: "Adjective Kingdom — Trade Road"
     description: "An eccentric old man who notices every strange event on the trade road."
+
+  royal_librarian:
+    name: "The Royal Librarian"
+    title: "Keeper of the Royal Book of Nouns"
+    location: "Royal Noun Library"
+    description: "A patient librarian who helps young heroes restore the missing kingdom nouns."
+
+  forgetful_king:
+    name: "The Forgetful King"
+    title: "Ruler of the Noun Kingdom"
+    location: "Royal Throne Room"
+    description: "A good-hearted king who keeps confusing royal objects after their nouns disappear."
+
+  royal_armorer:
+    name: "The Royal Armorer"
+    title: "Keeper of the Armory"
+    location: "Royal Armory"
+    description: "A careful armorer trying to return the correct names to swords, shields, and scrolls."
+
+  confused_wizard:
+    name: "The Confused Wizard"
+    title: "Temporary Magic Merchant"
+    location: "Royal Market Gate"
+    description: "A wizard who accidentally opens a discount magic shop when the court nouns are mixed up."
+
+  offended_dragon:
+    name: "The Offended Dragon"
+    title: "Guardian of the Creature Archive"
+    location: "Royal Creature Archive"
+    description: "A proud dragon who strongly objects to being labeled as a goblin."
+
+  vocabulary_keeper:
+    name: "The Vocabulary Keeper"
+    title: "Keeper of the Great Word Atlas"
+    location: "Vocabulary Carnival"
+    description: "A cheerful guide who collects useful English words from the kingdom's funniest disasters."
+
+  animal_caretaker:
+    name: "The Animal Caretaker"
+    title: "Keeper of the Royal Animals"
+    location: "Royal Animal Grounds"
+    description: "A patient caretaker whose animals constantly swap places, clothes, and job titles."
+
+  food_queen:
+    name: "The Food Queen"
+    title: "Ruler of the Food Kingdom"
+    location: "Royal Kitchen Palace"
+    description: "A festive queen who treats every meal like a tournament and every muffin like a citizen."
+
+  school_headmaster:
+    name: "The Headmaster"
+    title: "Head of the Royal School"
+    location: "Royal School"
+    description: "A kind headmaster trying to keep pencils, paintings, and homework-eating robots under control."
+
+  adventure_scout:
+    name: "The Adventure Scout"
+    title: "Royal Expedition Leader"
+    location: "Adventure Camp"
+    description: "An energetic scout whose compass is confused but whose sense of humor is perfectly accurate."

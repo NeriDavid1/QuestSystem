@@ -1,0 +1,16 @@
+quest:
+  id: q06_pancake_crown
+  name: "The Pancake Crown"
+  level_required: 16
+  giver_npc: food_queen
+  prerequisite: q05_animal_parade
+  summary: "The Food Queen wears a pancake crown while cereal guards the door and honey sticks everyone together."
+rewards: { xp: 170, items: [{ id: vocab_food_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: food_queen, dialogue_id: vocab_q06_intro }
+  - { type: reach_location, location_id: MoonriverCottage }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Small_Shop_Moonriver, difficulty: 3, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Small_Shop_Moonriver, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Small_Shop_Moonriver, difficulty: 4, success_required: true }
+  - { type: collect_item, item_id: vocab_food_card, amount: 3 }
+  - { type: return_to_npc, npc_id: food_queen, dialogue_id: vocab_q06_complete }

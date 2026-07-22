@@ -1,0 +1,49 @@
+quest:
+  id: q07_royal_noun_trial
+  name: "The Royal Noun Trial"
+  level_required: 10
+  giver_npc: royal_librarian
+  prerequisite: q06_dragon_identity
+  summary: "The player reviews the kingdom nouns and restores every page of the Royal Book of Nouns."
+
+rewards:
+  xp: 350
+  items:
+    - id: noun_keeper_badge
+      amount: 1
+    - id: coin
+      amount: 10
+
+steps:
+  - type: talk_to_npc
+    npc_id: royal_librarian
+    dialogue_id: nouns_librarian_final_trial
+
+  - type: reach_location
+    location_id: Sanctum of Whispering Light
+
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: 6
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: 5
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: 6
+    success_required: true
+
+  - type: collect_item
+    item_id: royal_noun_book
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: royal_librarian
+    dialogue_id: nouns_librarian_book_restored

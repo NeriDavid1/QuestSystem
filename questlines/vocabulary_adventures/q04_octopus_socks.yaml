@@ -1,0 +1,16 @@
+quest:
+  id: q04_octopus_socks
+  name: "Eight Socks for an Octopus"
+  level_required: 14
+  giver_npc: animal_caretaker
+  prerequisite: q03_parrot_king
+  summary: "An octopus orders eight socks, a dolphin delivers them, and a shark claims it only came for tea."
+rewards: { xp: 150, items: [{ id: vocab_animal_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: animal_caretaker, dialogue_id: vocab_q04_intro }
+  - { type: reach_location, location_id: Driftgold Bay }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest2_Driftgold_Bay, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest2_Driftgold_Bay, difficulty: 5, success_required: true }
+  - { type: defeat_enemy, enemy_id: vocabulary_sock_crab, amount: 1 }
+  - { type: collect_item, item_id: vocab_animal_card, amount: 3 }
+  - { type: return_to_npc, npc_id: animal_caretaker, dialogue_id: vocab_q04_complete }

@@ -1,0 +1,15 @@
+quest:
+  id: q19_thunder_applause
+  name: "Thunder Wants Applause"
+  level_required: 29
+  giver_npc: adventure_scout
+  prerequisite: q18_compass_confusion
+  summary: "A cloud wears a hat, a rainbow loses its colors, and thunder believes every boom deserves applause."
+rewards: { xp: 310, items: [{ id: vocab_adventure_page, amount: 1 }] }
+steps:
+  - { type: talk_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q19_intro }
+  - { type: reach_location, location_id: The Last Roar }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Lost_Chest6_The_Last_Roar, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Lost_Chest6_The_Last_Roar, difficulty: 5, success_required: true }
+  - { type: collect_item, item_id: vocab_adventure_page, amount: 1 }
+  - { type: return_to_npc, npc_id: adventure_scout, dialogue_id: vocab_q19_complete }

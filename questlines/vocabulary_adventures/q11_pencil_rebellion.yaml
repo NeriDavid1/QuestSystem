@@ -1,0 +1,16 @@
+quest:
+  id: q11_pencil_rebellion
+  name: "The Pencil Rebellion"
+  level_required: 21
+  giver_npc: school_headmaster
+  prerequisite: q10_food_festival
+  summary: "A pencil refuses to write, a ruler declares itself king, and a notebook starts grading the teacher."
+rewards: { xp: 220, items: [{ id: vocab_school_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q11_intro }
+  - { type: reach_location, location_id: FairyRosePark }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: letter_ordering, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 5, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 5, success_required: true }
+  - { type: collect_item, item_id: vocab_school_card, amount: 3 }
+  - { type: return_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q11_complete }

@@ -1,0 +1,15 @@
+quest:
+  id: q14_slide_to_moon
+  name: "The Slide to the Moon"
+  level_required: 24
+  giver_npc: school_headmaster
+  prerequisite: q13_robot_homework
+  summary: "A swing flies too high, a slide points at the moon, and a jump rope ties the playground together."
+rewards: { xp: 250, items: [{ id: vocab_school_card, amount: 3 }] }
+steps:
+  - { type: talk_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q14_intro }
+  - { type: reach_location, location_id: FairyRosePark }
+  - { type: play_minigame, minigame_id: word_matching, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 4, success_required: true }
+  - { type: play_minigame, minigame_id: speak_aloud, world_object_id: Exam_Table_Fairy_Rose_Park, difficulty: 4, success_required: true }
+  - { type: collect_item, item_id: vocab_school_card, amount: 3 }
+  - { type: return_to_npc, npc_id: school_headmaster, dialogue_id: vocab_q14_complete }

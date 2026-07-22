@@ -1,0 +1,41 @@
+quest:
+  id: q05_wizard_for_sale
+  name: "The Wizard in the Kitchen"
+  level_required: 8
+  giver_npc: confused_wizard
+  prerequisite: q04_soup_shield
+  summary: "WIZARD, COOK, and GUARD trade identities, filling the palace kitchen with accidental magic."
+
+rewards:
+  xp: 210
+  items:
+    - id: noun_court_page
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: confused_wizard
+    dialogue_id: nouns_wizard_new_shop
+
+  - type: reach_location
+    location_id: TowerOfLostVigil
+
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 4
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 5
+    success_required: true
+
+  - type: collect_item
+    item_id: noun_court_page
+    amount: 1
+
+  - type: return_to_npc
+    npc_id: confused_wizard
+    dialogue_id: nouns_wizard_roles_restored

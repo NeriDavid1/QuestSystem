@@ -1,0 +1,216 @@
+# Per-step minigame briefs — The Royal Book of Nouns.
+# Keys use {quest_id}_s{zero-based step index}.
+
+instances:
+  q01_roles_without_names_s2:
+    instruction: "התאימו את ה־nouns לדמויות הנכונות בחדר הכס"
+    tasks:
+      - "התאימו <strong>king</strong> לתמונת המלך"
+      - "התאימו <strong>queen</strong> לתמונת המלכה"
+      - "התאימו <strong>knight</strong> לתמונת האביר"
+      - "בסיבוב השני התמונות מחליפות מקום — התאימו שוב בלי להסתמך על המיקום"
+    target: "king, queen, knight"
+    variant: "word_to_image"
+    success: "שלוש הדמויות מקבלות בחזרה את השמות הנכונים"
+
+  q01_roles_without_names_s3:
+    instruction: "שחזרו את האות K בתחילת המילה KING"
+    tasks:
+      - "על דף הספר מופיעה המילה <strong>_ING</strong>"
+      - "עקבו אחר הקו המנוקד וציירו <strong>K</strong> גדולה"
+      - "קראו את המילה השלמה: <strong>KING</strong>"
+    target: "K in KING"
+    variant: "trace_guided"
+    success: "המילה KING חוזרת לדף אנשי המלוכה"
+
+  q01_roles_without_names_s4:
+    instruction: "הקשיבו ואמרו את שמות אנשי המלוכה באנגלית"
+    tasks:
+      - "לחצו על Hear it והקשיבו ל־<strong>king</strong>, ואז אמרו king"
+      - "הקשיבו ל־<strong>queen</strong>, ואז אמרו queen"
+      - "הקשיבו ל־<strong>knight</strong>, ואז אמרו knight — האות K אינה נשמעת"
+    target: "king, queen, knight"
+    variant: "repeat_after_npc"
+    success: "הספר מזהה את שלושת ה־nouns ומאיר"
+
+  q02_castle_on_the_map_s2:
+    instruction: "התאימו כל noun למקום הנכון במפת הממלכה"
+    tasks:
+      - "התאימו <strong>castle</strong> לתמונת הטירה השלמה"
+      - "התאימו <strong>tower</strong> לתמונת המגדל הגבוה"
+      - "התאימו <strong>gate</strong> לתמונת השער בכניסה לטירה"
+      - "זכרו: tower יכולה להיות חלק מ־castle, ו־gate היא הכניסה"
+    target: "castle, tower, gate"
+    variant: "word_to_image"
+    success: "המפה שולחת את תושבי הממלכה למקומות הנכונים"
+
+  q02_castle_on_the_map_s3:
+    instruction: "סדרו את האותיות כדי לשחזר את המילה CASTLE"
+    tasks:
+      - "גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות"
+      - "התעלמו מאותיות המסיחות"
+      - "קראו את המילה השלמה: <strong>castle</strong>"
+    target: "castle"
+    variant: "word_spelling"
+    success: "הכרטיס CASTLE חוזר למקום הנכון על המפה"
+
+  q02_castle_on_the_map_s4:
+    instruction: "הקשיבו ואמרו שלושה nouns של מקומות"
+    tasks:
+      - "הקשיבו ואמרו <strong>castle</strong>"
+      - "הקשיבו ואמרו <strong>tower</strong>"
+      - "הקשיבו ואמרו <strong>gate</strong>"
+    target: "castle, tower, gate"
+    variant: "repeat_after_npc"
+    success: "שלושת שמות המקומות נשמרים בדף המפה"
+
+  q03_crown_soup_s2:
+    instruction: "התאימו את שמות אוצרות הארמון לחפצים הנכונים"
+    tasks:
+      - "התאימו <strong>crown</strong> לכתר, לא לקערת המרק"
+      - "התאימו <strong>throne</strong> לכיסא"
+      - "התאימו <strong>treasure</strong> לאוצר שבכספת"
+      - "בסיבוב החזרה מופיעים גם king ו־castle מן המשימות הקודמות"
+    target: "crown, throne, treasure"
+    variant: "word_to_image"
+    success: "המלך מפסיק ללבוש כלי מטבח"
+
+  q03_crown_soup_s3:
+    instruction: "סדרו את האותיות של המילה CROWN"
+    tasks:
+      - "גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר"
+      - "בדקו שהמילה מתחילה ב־C ומסתיימת ב־N"
+      - "קראו את המילה: <strong>crown</strong>"
+    target: "crown"
+    variant: "word_spelling"
+    success: "הכתר מקבל בחזרה את הכרטיס CROWN"
+
+  q03_crown_soup_s4:
+    instruction: "הקשיבו ואמרו את שלושת ה־nouns של אוצרות הארמון"
+    tasks:
+      - "הקשיבו ואמרו <strong>crown</strong>"
+      - "הקשיבו ואמרו <strong>throne</strong> — הצליל TH מופיע בתחילת המילה"
+      - "הקשיבו ואמרו <strong>treasure</strong>"
+    target: "crown, throne, treasure"
+    variant: "repeat_after_npc"
+    success: "שלושת השמות נכנסים לדף אוצרות הארמון"
+
+  q04_soup_shield_s2:
+    instruction: "התאימו את שמות החפצים בנשקייה"
+    tasks:
+      - "התאימו <strong>sword</strong> לחרב"
+      - "התאימו <strong>shield</strong> למגן"
+      - "התאימו <strong>scroll</strong> למגילה"
+      - "בסיבוב השני השלימו גם: <strong>s_ord</strong>, <strong>sh_eld</strong>, <strong>sc_oll</strong>"
+    target: "sword, shield, scroll"
+    variant: "word_to_image + letter_to_gap"
+    success: "כל חפץ חוזר למדף הנכון בנשקייה"
+
+  q04_soup_shield_s3:
+    instruction: "סדרו את האותיות של המילה SHIELD"
+    tasks:
+      - "גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות"
+      - "שימו לב לצירוף <strong>sh</strong> בתחילת המילה"
+      - "קראו את המילה השלמה: <strong>shield</strong>"
+    target: "shield"
+    variant: "word_spelling"
+    success: "ה־shield חוזר להיות מגן במקום מגש מרק"
+
+  q04_soup_shield_s4:
+    instruction: "הקשיבו ואמרו את שמות חפצי הנשקייה"
+    tasks:
+      - "הקשיבו ואמרו <strong>sword</strong> — האות W אינה נשמעת"
+      - "הקשיבו ואמרו <strong>shield</strong>"
+      - "הקשיבו ואמרו <strong>scroll</strong>"
+    target: "sword, shield, scroll"
+    variant: "repeat_after_npc"
+    success: "הספר שומר את שלושת השמות לפני הקרב עם הגובלין"
+
+  q05_wizard_for_sale_s2:
+    instruction: "התאימו את ה־nouns לאנשי החצר הנכונים"
+    tasks:
+      - "התאימו <strong>wizard</strong> לדמות הקוסם"
+      - "התאימו <strong>cook</strong> לדמות הטבח"
+      - "התאימו <strong>guard</strong> לדמות השומר"
+      - "בסיבוב החזרה התאימו גם king, queen ו־knight"
+    target: "wizard, cook, guard"
+    variant: "word_to_image"
+    success: "ה־wizard חוזר לקסם, ה־cook למטבח וה־guard לשער"
+
+  q05_wizard_for_sale_s3:
+    instruction: "הקשיבו ואמרו שלושה nouns של אנשים בממלכה"
+    tasks:
+      - "הקשיבו ואמרו <strong>wizard</strong>"
+      - "הקשיבו ואמרו <strong>cook</strong>"
+      - "הקשיבו ואמרו <strong>guard</strong>"
+      - "לסיום, המערכת בוחרת אחד משלושת השמות ואותו אומרים בלי הדגמה נוספת"
+    target: "wizard, cook, guard"
+    variant: "repeat_after_npc"
+    success: "שלושת אנשי החצר מקבלים בחזרה את שמות התפקידים שלהם"
+
+  q06_dragon_identity_s2:
+    instruction: "התאימו כל יצור ל־noun הנכון"
+    tasks:
+      - "התאימו <strong>dragon</strong> לדרקון"
+      - "התאימו <strong>griffin</strong> לגריפין בעל גוף האריה והכנפיים"
+      - "התאימו <strong>goblin</strong> לגובלין"
+      - "בסיבוב השני הכרטיסים והתמונות מחליפים מקום"
+    target: "dragon, griffin, goblin"
+    variant: "word_to_image"
+    success: "הדרקון מפסיק לענוד כרטיס GOBLIN ונרגע מעט"
+
+  q06_dragon_identity_s3:
+    instruction: "סדרו את האותיות של המילה DRAGON"
+    tasks:
+      - "גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות"
+      - "התעלמו מאותיות המסיחות"
+      - "קראו את המילה השלמה: <strong>dragon</strong>"
+    target: "dragon"
+    variant: "word_spelling"
+    success: "כרטיס DRAGON חוזר ליצור הנכון"
+
+  q06_dragon_identity_s4:
+    instruction: "הקשיבו ואמרו את שמות שלושת היצורים"
+    tasks:
+      - "הקשיבו ואמרו <strong>dragon</strong>"
+      - "הקשיבו ואמרו <strong>griffin</strong>"
+      - "הקשיבו ואמרו <strong>goblin</strong>"
+    target: "dragon, griffin, goblin"
+    variant: "repeat_after_npc"
+    success: "דף היצורים מזהה את שלושת השמות"
+
+  q07_royal_noun_trial_s2:
+    instruction: "עברו מבחן התאמה מסכם של ה־nouns המלכותיים"
+    tasks:
+      - "סיבוב אנשים: king, queen, knight, wizard, cook, guard"
+      - "סיבוב מקומות: castle, tower, gate"
+      - "סיבוב חפצים: crown, throne, treasure, sword, shield, scroll"
+      - "סיבוב יצורים: dragon, griffin, goblin"
+      - "התאימו כל מילה לתמונה; בכל סיבוב מופיעים גם שני מסיחים מקבוצה אחרת"
+    target: "18 kingdom nouns"
+    variant: "word_to_image"
+    success: "ארבעת שערי היכל ה־nouns נפתחים"
+
+  q07_royal_noun_trial_s3:
+    instruction: "שחזרו חמישה nouns מוכרים מן הספר"
+    tasks:
+      - "סדרו את <strong>queen</strong>"
+      - "סדרו את <strong>castle</strong>"
+      - "סדרו את <strong>throne</strong>"
+      - "סדרו את <strong>shield</strong>"
+      - "סדרו את <strong>dragon</strong>"
+    target: "queen, castle, throne, shield, dragon"
+    variant: "word_spelling"
+    success: "חמש המילים חוזרות לעמוד האחרון של הספר"
+
+  q07_royal_noun_trial_s4:
+    instruction: "אמרו בקול noun אחד מכל קבוצה"
+    tasks:
+      - "הקשיבו פעם אחת, ואז אמרו <strong>knight</strong>"
+      - "אמרו <strong>castle</strong>"
+      - "אמרו <strong>shield</strong>"
+      - "אמרו <strong>dragon</strong>"
+      - "בשלב האחרון אין שינוי של המילים — רק פחות תמיכה כדי לבדוק זכירה"
+    target: "knight, castle, shield, dragon"
+    variant: "single_word"
+    success: "ספר ה־nouns המלכותי נפתח ומקבל את כל הדפים"
