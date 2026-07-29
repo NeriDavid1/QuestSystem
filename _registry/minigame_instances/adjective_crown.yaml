@@ -127,20 +127,32 @@ instances:
     success: "Power Stone נוסף לתיק — כעת יש ארבעה"
 
   q06_adjective_challenge_s1:
-    instruction: "השלימו את האות החסרה בכל אחת ממילות התואר"
+    instruction: "השלימו את האות החסרה — SHORT / LONG / COLD / HOT"
     tasks:
       - "_hort"
       - "_ong"
       - "_old"
       - "_ot"
+    target: "short, long, cold, hot"
+    variant: "missing_letter_matching"
+    success: "ארבע המילים הראשונות הושלמו"
+  q06_adjective_challenge_s2:
+    instruction: "השלימו את האות החסרה — BIG / SMALL / FAST / SLOW"
+    tasks:
       - "_ig"
       - "_mall"
       - "_ast"
       - "_low"
+    target: "big, small, fast, slow"
+    variant: "missing_letter_matching"
+    success: "ארבע המילים הבאות הושלמו"
+  q06_adjective_challenge_s3:
+    instruction: "השלימו את האות החסרה — LOW / HIGH / HEAVY / LIGHT"
+    tasks:
       - "_ow"
       - "_igh"
       - "_eavy"
       - "_ight"
-    target: "short, long, cold, hot, big, small, fast, slow, low, high, heavy, light"
+    target: "low, high, heavy, light"
     variant: "missing_letter_matching"
     success: "כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק"

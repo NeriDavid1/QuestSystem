@@ -1,63 +1,99 @@
-# English-learning minigame definitions.
-# Referenced by play_minigame steps via minigame_id.
-# Full design docs: presentation/english-learning/minigames/
+# English-learning minigame types available in Unity.
+# Referenced by play_minigame via minigame_id.
+# world_object_id is the Unity interactable gameId (station), NOT this type name.
+# Do NOT invent types (no basic_forging, market_haggle, tempering_forge, etc.).
 
 minigames:
 
   letter_ordering:
     name: "Letter Ordering"
+    unity_config: LetterOrderingQuestConfigSO
+    unity_content: LetterOrderingDataSO
     category: spelling
-    description: "Arrange scrambled letter tiles in the correct order to spell a target English word."
-    english_focus: "Spelling, letter recognition, Hebrew-to-English word mapping"
+    description: "Arrange scrambled letter tiles to spell a target English word."
+    english_focus: "Spelling, letter recognition"
     difficulty_range: [1, 6]
+    content_fields:
+      - prompt
+      - targetWord
+      - extraDistractorCount
+      - customDistractors
+      - wordRevealDatabase
     variants:
-      - word_spelling          # תרשום כלב → d, o, g
-      - sound_to_letters       # what vowel does שש make? → sh
-    typical_trigger: [chest, gate, signpost, book, npc_object]
+      - word_spelling
+    typical_stations: [chest, cart, tombstone, exam_table]
 
   word_ordering:
     name: "Word Ordering"
+    unity_config: WordOrderingQuestConfigSO
+    unity_content: WordOrderingDataSO
     category: grammar
-    description: "Arrange scrambled English word tiles in the correct order to build a complete sentence."
-    english_focus: "Sentence structure, adjective placement, reading comprehension"
+    description: "Arrange scrambled English word tiles into a complete sentence."
+    english_focus: "Sentence structure, adjective placement"
     difficulty_range: [2, 10]
+    content_fields:
+      - prompt
+      - englishWordsInOrder
+      - preFilledIndices
+      - distractorWords
+      - wordRevealDatabase
     variants:
-      - sentence_building      # the, building, is, high → The building is high.
-    typical_trigger: [signpost, book, npc_object, puzzle_board]
+      - sentence_building
+    typical_stations: [chest, cart, exam_table]
 
   word_matching:
     name: "Word Matching"
+    unity_config: LineMatchQuestConfigSO
+    unity_content: LetterConnectionLevelConfigSO
     category: vocabulary
-    description: "Match English words or letter fragments to images or their missing pieces."
-    english_focus: "Vocabulary, word-picture association, missing-letter recognition"
+    description: "Match English words/fragments (includes opposite pairing / Line Match)."
+    english_focus: "Vocabulary, missing-letter recognition, opposites"
     difficulty_range: [1, 8]
+    content_fields:
+      - letters
+      - wordTasks
     variants:
-      - word_to_image          # dog ↔ photo of dog
-      - letter_to_gap          # o ↔ d_g
-      - word_to_translation    # dog ↔ כלב (optional, later levels)
-      - opposite_pairing      # short ↔ long, cold ↔ hot
-    typical_trigger: [chest, shelf, market_stall, puzzle_board, npc_object]
+      - word_to_image
+      - letter_to_gap
+      - opposite_pairing
+    typical_stations: [chest, exam_table]
 
   letter_drawing:
     name: "Letter Drawing"
+    unity_config: DrawingQuestConfigSO
+    unity_content: LetterPathSO
     category: motor_skills
-    description: "Physically trace or draw an English letter on screen."
-    english_focus: "Letter formation, stroke order, uppercase/lowercase recognition"
+    description: "Trace or draw an English letter on screen."
+    english_focus: "Letter formation, stroke order"
     difficulty_range: [1, 4]
+    content_fields:
+      - letter
+      - strokes
+      - previewImage
+      - clip
     variants:
-      - trace_guided           # dotted outline to follow
-      - free_draw              # blank canvas, validated by shape
-    typical_trigger: [chalkboard, sand_table, magic_slate, scroll]
+      - trace_guided
+      - free_draw
+    typical_stations: [shop, chest, cart]
 
   speak_aloud:
     name: "Speak Aloud"
+    unity_config: SpeakAloudQuestConfigSO
+    unity_content: SpeakAloudDataSO
     category: pronunciation
-    description: "Say an English word or phrase into the microphone; speech recognition validates pronunciation."
-    english_focus: "Pronunciation, listening confidence, spoken production"
+    description: "Say an English word or phrase; speech recognition validates it."
+    english_focus: "Pronunciation, spoken production"
     difficulty_range: [4, 10]
+    content_fields:
+      - prompt
+      - targetWords
+      - targetPhrase
+      - silenceTimeoutSeconds
+      - allowFuzzyMatch
+      - referenceClip
+      - wordRevealDatabase
     variants:
-      - single_word            # say "dog"
-      - short_phrase           # say "good morning"
-      - repeat_after_npc       # NPC says it, player repeats
-    typical_trigger: [npc, echo_crystal, magic_mirror, training_dummy]
+      - single_word
+      - short_phrase
+    typical_stations: [fire_camp, cart, chest]
     requires_microphone: true

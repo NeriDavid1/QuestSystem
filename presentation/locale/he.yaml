@@ -37,8 +37,6 @@ step_labels:
   collect_item: "איסוף פריט"
   deliver_item: "מסירת פריט"
   reach_location: "הגעה למיקום"
-  defeat_enemy: "הבסת אויב"
-  wait_time: "המתנה"
 
 step_formats:
   talk: "שיחה עם <strong>{npc}</strong>"
@@ -47,5 +45,3 @@ step_formats:
   collect: "אספו <strong>{item}</strong> ×{amount}"
   deliver: "מסרו <strong>{item}</strong> ×{amount} ל{npc}"
   location: "הגיעו ל<code>{id}</code>"
-  enemy: "הביסו <strong>{enemy}</strong> ×{amount}"
-  wait: "המתינו {seconds} שניות"

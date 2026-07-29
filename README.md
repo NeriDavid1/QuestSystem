@@ -1,6 +1,6 @@
 # Quest System
 
-Authoring workspace for NPC quest lines. Designed for **boss presentations**, **easy navigation**, and **AI-assisted creation** without loading the entire game every time.
+Authoring workspace for English-learning Open World quests. Synced to Unity `QuestWorldCatalogSet_OpenWorld`.
 
 ## Quick start
 
@@ -9,35 +9,35 @@ Authoring workspace for NPC quest lines. Designed for **boss presentations**, **
 | Boss / interactive map (online) | **[Open Viewer](https://neridavid1.github.io/QuestSystem/)** — GitHub Pages |
 | Boss / interactive map (local) | [`presentation/viewer.html`](presentation/viewer.html) — double-click to open |
 | Boss / overview (text) | [`presentation/overview.md`](presentation/overview.md) |
-| **English-learning MMO** | [`presentation/english-learning/README.md`](presentation/english-learning/README.md) |
+| **English-learning design** | [`presentation/english-learning/README.md`](presentation/english-learning/README.md) |
 | Author a quest | [`_registry/`](_registry/) → pick questline → edit one quest file |
 | AI authoring | Cursor reads [`.cursor/rules/quest-authoring.mdc`](.cursor/rules/quest-authoring.mdc) automatically |
+| Unity map | [`_registry/unity_mapping.yaml`](_registry/unity_mapping.yaml) |
 
 ## Folder layout
 
 ```
-_registry/          Shared definitions (systems, NPCs, items, levels, minigames)
-questlines/         One folder per NPC quest line
+_registry/          Shared definitions (systems, NPCs, areas, interactables, items, minigames)
+questlines/         english_kingdom_maya + adjective_crown only
 presentation/       Boss-facing summary and graphs
-  english-learning/ Step & minigame design docs (children's English MMO)
+  english-learning/ Step & minigame design docs
 ```
+
+World IDs in `_registry/npcs.yaml`, `areas.yaml`, and `interactables.yaml` mirror Unity `QuestWorldCatalogSet_OpenWorld`.
 
 ## Quest lines
 
-| Folder | NPC | Quests | Levels |
+| Folder | NPC | Quests | Status |
 |--------|-----|--------|--------|
-| `blacksmith_theron` | Theron the Blacksmith | 10 | 1–15 |
-| `merchant_lina` | Lina the Merchant | 10 | 5–20 |
-| `guard_captain_marcus` | Captain Marcus | 10 | 10–25 |
-| `herbalist_elara` | Elara the Herbalist | 10 | 3–18 |
-| `mystery_stranger_vex` | Vex the Stranger | 10 | 15–30 |
+| `adjective_crown` | Teacher Maya | 6 | **Live in Unity** |
+| `english_kingdom_maya` | Teacher Maya | 10 | Authored here (OpenWorld IDs; QuestDefinition SOs not yet) |
 
 ## Authoring workflow
 
-1. Define or update shared data in `_registry/` (only when adding new NPCs, items, or step types).
-2. Add or edit a quest in `questlines/<npc_folder>/qXX_name.yaml`.
-3. Update that questline's `_index.yaml` with the summary row (name, level, rewards, prerequisite).
-4. Update `_graph.mmd` if quest order or prerequisites change.
+1. Use only IDs from `_registry/` (OpenWorld catalogs).
+2. Prefer the Adjective Crown pattern: `reach_location` → `play_minigame` → `deliver_item`.
+3. Add or edit a quest in `questlines/<line>/qXX_name.yaml`.
+4. Update that questline's `_index.yaml` and `_graph.mmd`.
 
 ## Interactive presentation (עברית)
 
@@ -49,23 +49,22 @@ presentation/       Boss-facing summary and graphs
    ```
 3. Open `presentation/viewer.html` in your browser (double-click `OPEN_VIEWER.bat`).
 
-The viewer is **fully in Hebrew** with RTL layout. Hebrew text lives in:
+Hebrew text lives in:
 - `presentation/locale/he.yaml` — UI strings
 - `_registry/locale/he-content.yaml` — quest names, NPCs, items, summaries
-
-Click a **quest line card** → see the quest chain → click a **quest node** → see steps and rewards.
 
 ## AI prompt example
 
 ```
-Using _registry/systems.yaml, add quest q06 to blacksmith_theron:
-level 8, reward 200 XP + steel_ingot, steps: talk to Theron → forging minigame → return to Theron.
-Update _index.yaml and _graph.mmd.
+Using _registry/systems.yaml and unity_mapping.yaml, add quest q07 to adjective_crown:
+talk to teacher_maya → reach The Last Roar → letter_ordering on Lost_Chest6_The_Last_Roar
+→ deliver softkitty item to Maya. Update _index.yaml and _graph.mmd.
 ```
 
 ## File conventions
 
 - Quest IDs: `q01`, `q02`, … (zero-padded)
-- Registry IDs: `snake_case` (e.g. `theron`, `rusty_hammer`)
+- Registry IDs: exact Unity catalog IDs (may include spaces)
 - One quest = one YAML file
 - Index files stay high-level — no step detail
+- SoftKitty deliverables need `softkitty_id` in `items.yaml`

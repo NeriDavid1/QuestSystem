@@ -83,7 +83,8 @@ Register new items in `_registry/items.yaml` before using them in quests.
 
 | Source | Typical flow |
 |--------|--------------|
-| Enemy drop | `defeat_enemy` → `collect_item` |
+| SoftKitty step reward | `play_minigame` → `deliver_item` |
+| World collectible | `reach_location` → `collect_item` |
 | World pickup | `reach_location` → interact → item added |
 | NPC gift | `talk_to_npc` with flag → auto-grant item |
 | Minigame reward | `play_minigame` success → item granted |
@@ -114,7 +115,7 @@ Register new items in `_registry/items.yaml` before using them in quests.
 
 - `deliver_item` — collect then bring to NPC
 - `play_minigame` — collected letters used in ordering puzzle
-- `defeat_enemy` — fight first, collect drops
+- `reach_location` — travel to the collect area first
 
 ## See also
 

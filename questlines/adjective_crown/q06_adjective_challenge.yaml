@@ -4,7 +4,7 @@ quest:
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q05_from_low_to_high
-  summary: "Complete the twelve learned adjective words in a sprite-free matching game, receive one Gem, and deliver it to Maya."
+  summary: "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya."
 
 rewards:
   xp: 350
@@ -23,7 +23,19 @@ steps:
     minigame_id: word_matching
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     instance_id: q06_adjective_challenge_s1
-    difficulty: 4
+    difficulty: 3
+    success_required: true
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    instance_id: q06_adjective_challenge_s2
+    difficulty: 3
+    success_required: true
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    instance_id: q06_adjective_challenge_s3
+    difficulty: 3
     success_required: true
     reward_item_id: gem
     reward_amount: 1

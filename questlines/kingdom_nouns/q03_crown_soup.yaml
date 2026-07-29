@@ -1,0 +1,41 @@
+quest:
+  id: q03_crown_soup
+  name: "The Crown Soup"
+  level_required: 1
+  giver_npc: "Professor Crazy"
+  prerequisite: q02_castle_on_the_map
+  summary: "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone."
+
+rewards: { xp: 500, items: [] }
+
+steps:
+  - type: talk_to_npc
+    npc_id: "Professor Crazy"
+    dialogue_id: nouns_professor_crown_soup
+
+  - type: reach_location
+    location_id: Solitude Tower
+
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: WoodenCart2_Solitude_Tower
+    instance_id: q03_crown_soup_s2
+    difficulty: 5
+    success_required: true
+
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: WoodenCart2_Solitude_Tower
+    instance_id: q03_crown_soup_s3
+    difficulty: 5
+    success_required: true
+    reward_item_id: power_stone
+    reward_amount: 1
+
+  - type: deliver_item
+    npc_id: "Professor Crazy"
+    item_id: power_stone
+    amount: 1
+    dialogue_id: nouns_professor_treasury_restored
+    reward_item_id: power_stone
+    reward_amount: 1

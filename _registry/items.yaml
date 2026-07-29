@@ -1,38 +1,28 @@
-# Item registry — used in quest rewards and collect/deliver steps.
+# Item registry — inventoriable shippable rewards need softkitty_id.
+# SoftKitty IDs come from Unity Assets/_ThirdParty/SoftKitty/Data/ItemObject.asset.
+# Do not invent new SoftKitty items without adding them in Unity first.
 
 items:
 
-  # Blacksmith rewards
-  rusty_hammer: { name: "Rusty Hammer", type: tool }
-  iron_ore: { name: "Iron Ore", type: material }
-  steel_ingot: { name: "Steel Ingot", type: material }
-  master_forge_blueprint: { name: "Master Forge Blueprint", type: recipe }
+  # SoftKitty stackables used by live Adjective Crown quests
+  herbs: { name: "Herbs", type: material, softkitty_id: 5, softkitty_uid: herbs, max_stack: 99 }
+  oak_log: { name: "Oak Log", type: material, softkitty_id: 10, softkitty_uid: oak_log, max_stack: 99 }
+  corn: { name: "Corn", type: material, softkitty_id: 20, softkitty_uid: corn, max_stack: 99 }
+  gem: { name: "Gem", type: material, softkitty_id: 26, softkitty_uid: gem, max_stack: 99 }
+  power_stone: { name: "Power Stone", type: material, softkitty_id: 59, softkitty_uid: power_stone, max_stack: 99 }
+  ancient_rune: { name: "Ancient Rune", type: material, softkitty_id: 60, softkitty_uid: ancient_rune, max_stack: 99 }
 
-  # Merchant rewards
-  merchant_satchel: { name: "Merchant's Satchel", type: container }
-  trade_token: { name: "Trade Token", type: currency }
-  rare_spice: { name: "Rare Spice", type: material }
-  gold_pouch: { name: "Gold Pouch", type: currency }
+  # Quest completion currency (string reward path on q06)
+  coin: { name: "Coin", type: currency }
 
-  # Guard rewards
-  guard_badge: { name: "Guard Badge", type: accessory }
-  patrol_map: { name: "Patrol Map", type: quest_item }
-  reinforced_shield: { name: "Reinforced Shield", type: armor }
-  captain_commendation: { name: "Captain's Commendation", type: quest_item }
+  # Blacksmith Will — combat unlock token (authoring; wire ability_id in Unity later)
+  slash_ability:
+    name: "Slash Ability"
+    type: ability_unlock
+    ability_id: slash
+    description: "Unlocks the Slash combat ability when granted as a quest reward."
 
-  # Herbalist rewards
-  healing_herb: { name: "Healing Herb", type: consumable }
-  alchemy_vial: { name: "Alchemy Vial", type: tool }
-  moonpetal: { name: "Moonpetal", type: material }
-  elixir_recipe: { name: "Elixir Recipe", type: recipe }
-
-  # Mystery stranger rewards
-  cryptic_note: { name: "Cryptic Note", type: quest_item }
-  shadow_key: { name: "Shadow Key", type: quest_item }
-  vex_sigil: { name: "Vex Sigil", type: accessory }
-  ancient_relic: { name: "Ancient Relic", type: quest_item }
-
-  # English Kingdom — letter collectibles
+  # English Kingdom Maya letter collectibles (authoring line; not SoftKitty yet)
   letter_a: { name: "Letter A", type: quest_item }
   letter_b: { name: "Letter B", type: quest_item }
   letter_c: { name: "Letter C", type: quest_item }
@@ -44,46 +34,3 @@ items:
   letter_i: { name: "Letter I", type: quest_item }
   letter_j: { name: "Letter J", type: quest_item }
   word_hero_badge: { name: "Word Hero Badge", type: accessory }
-  maya_homework: { name: "Maya's Homework", type: quest_item }
-
-  # Adjective Crown questline
-  length_crystal: { name: "Crystal of Length", type: quest_item }
-  warmth_crystal: { name: "Crystal of Warmth", type: quest_item }
-  weight_crystal: { name: "Crystal of Weight", type: quest_item }
-  size_crystal: { name: "Crystal of Size", type: quest_item }
-  speed_crystal: { name: "Crystal of Speed", type: quest_item }
-  description_crystal: { name: "Crystal of Description", type: quest_item }
-  crown_crystal: { name: "Crown Crystal", type: quest_item }
-  coin: { name: "Coin", type: currency }
-  adjective_crown: { name: "Adjective Crown", type: future_reward }
-  small_sheep: { name: "Small Sheep", type: quest_target }
-
-  # Existing stackable SoftKitty items used for Adjective Crown deliveries
-  herbs: { name: "Herbs", type: material, softkitty_id: 5, softkitty_uid: herbs, max_stack: 99 }
-  oak_log: { name: "Oak Log", type: material, softkitty_id: 10, softkitty_uid: oak_log, max_stack: 99 }
-  corn: { name: "Corn", type: material, softkitty_id: 20, softkitty_uid: corn, max_stack: 99 }
-  gem: { name: "Gem", type: material, softkitty_id: 26, softkitty_uid: gem, max_stack: 99 }
-  power_stone: { name: "Power Stone", type: material, softkitty_id: 59, softkitty_uid: power_stone, max_stack: 99 }
-  ancient_rune: { name: "Ancient Rune", type: material, softkitty_id: 60, softkitty_uid: ancient_rune, max_stack: 99 }
-
-  # Royal Book of Nouns questline
-  noun_royalty_page: { name: "Royalty Noun Page", type: quest_item }
-  noun_places_page: { name: "Places Noun Page", type: quest_item }
-  noun_treasury_page: { name: "Treasury Noun Page", type: quest_item }
-  noun_armory_page: { name: "Armory Noun Page", type: quest_item }
-  noun_court_page: { name: "Court Noun Page", type: quest_item }
-  noun_creatures_page: { name: "Creatures Noun Page", type: quest_item }
-  royal_noun_book: { name: "Royal Book of Nouns", type: quest_item }
-  noun_keeper_badge: { name: "Royal Noun Keeper Badge", type: accessory }
-
-  # Vocabulary Adventures questline
-  vocab_animal_card: { name: "Animal Word Card", type: quest_item }
-  vocab_animal_page: { name: "Animal Atlas Page", type: quest_item }
-  vocab_food_card: { name: "Food Word Card", type: quest_item }
-  vocab_food_page: { name: "Food Atlas Page", type: quest_item }
-  vocab_school_card: { name: "School Word Card", type: quest_item }
-  vocab_school_page: { name: "School Atlas Page", type: quest_item }
-  vocab_adventure_card: { name: "Adventure Word Card", type: quest_item }
-  vocab_adventure_page: { name: "Adventure Atlas Page", type: quest_item }
-  vocabulary_atlas: { name: "Great Vocabulary Atlas", type: quest_item }
-  vocabulary_master_badge: { name: "Vocabulary Master Badge", type: accessory }

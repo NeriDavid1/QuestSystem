@@ -1,140 +1,164 @@
 # תרגום עברית לתוכן המשימות — ממוזג בהצגה ובבנייה
+# רק תוכן מסונכרן ל־OpenWorld / Maya / Adjective Crown
 
 npcs:
-  theron:
-    name: "תרון"
-    title: "נפח"
-    location: "רובע הנפחים"
-    description: "אומן נפח שלומד אתכם יצירה דרך עבודה מעשית."
-  lina:
-    name: "לינה"
-    title: "סוחרת"
-    location: "כיכר השוק"
-    description: "סוחרת חדת עין שבוחנת אתכם בעסקאות ומשלוחים."
-  marcus:
-    name: "מרקוס"
-    title: "קפטן המשמר"
-    location: "מצודת העיר"
-    description: "חייל ותיק שמטיל עליכם משימות סיור ולחימה."
-  elara:
-    name: "אלארה"
-    title: "צמחית"
-    location: "שולי יער הערפל"
-    description: "מרפאה שולחת אתכם לאסוף צמחים נדירים."
-  vex:
-    name: "וקס"
-    title: "הזר"
-    location: "מיקום משתנה"
-    description: "דמות מסתורית עם קשת עלילה ארוכה."
   teacher_maya:
-    name: "מאיה"
+    name: "המורה מאיה"
     title: "מורת אנגלית"
-    location: "ממלכת האנגלית — כיכר האלף-בית"
-    description: "מורה עליזה שמלמדת אותיות ומילים בעזרת סיפורים מצחיקים."
+    location: "כיכר האלף-בית"
+    description: "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים."
+
+  Blacksmith:
+    name: "ויל הנפח"
+    title: "נפח"
+    location: "בית הבנאים"
+    description: "נפח ידידותי שמתקן כלים ואוהב להרעיש בפטיש."
+  "City Gaurd Info":
+    name: "פן הפטפטן"
+    title: "שומר עיר"
+    location: "שער הממלכה"
+    description: "שומר דברן שמכיר כל שמועה בעיר."
+  "Main Gate Gaurd 1":
+    name: "טומלין המפהק"
+    title: "שומר שער"
+    location: "שער הממלכה"
+    description: "שומר ישנוני שבכל זאת מבחין בצרות."
+  "Main Gate Gaurd 2":
+    name: "גאריק הבלתי־זז"
+    title: "שומר שער"
+    location: "שער הממלכה"
+    description: "שומר רציני כמעט אף פעם לא עוזב את העמדה."
+  Fisherman:
+    name: "נמו בלי הרשת"
+    title: "דייג"
+    location: "מפרץ דריפטגולד"
+    description: "דייג שמאבד רשתות ומבקש עזרה."
+  Ghost:
+    name: "בו רדקליף"
+    title: "רוח"
+    location: "האבנים הבוכות"
+    description: "רוח ידידותית שאוהבת הפתעות במקומות שקטים."
 
   adjective_knight:
-    name: "האביר"
-    title: "שומר כתר התארים"
-    location: "ממלכת התארים — מחנה הכתר"
-    description: "אביר ללא שם שמבקש מגיבורים צעירים להשיב את גבישי כתר התארים."
+    name: "אביר התארים"
+    title: "אביר התארים"
+    location: "מקדש כתר התארים"
+    description: "אביר אמיץ שמלמד מילות תואר כמו big, hot ו־slow."
   adjective_village_chief:
     name: "ראש הכפר"
     title: "ראש הכפר"
-    location: "ממלכת התארים — שער הכפר"
-    description: "מנהיג הכפר שזקוק לעזרה כדי להפוך את הכניסה לבטוחה שוב."
+    location: "שער הכפר"
+    description: "מנהיג הכפר ששומר על השער מסודר ובטוח."
   adjective_water_man:
     name: "איש המים"
-    title: "שומר המעיין"
-    location: "ממלכת התארים — המעיין הקפוא"
-    description: "האחראי על המעיינות ודרכי המים של הממלכה."
+    title: "איש המים"
+    location: "המעיין הקפוא"
+    description: "עוזר שקט שמשגיח על מעיינות ודרכי מים."
   adjective_grandfather:
     name: "סבא"
-    title: "שומר המעלית המלכותית"
-    location: "ממלכת התארים — המעלית המלכותית"
-    description: "סבא טוב לב שמפעיל את המעלית המלכותית כבר שנים רבות."
+    title: "סבא"
+    location: "המעלית המלכותית"
+    description: "סבא עדין שמפעיל את המעלית המלכותית."
   adjective_grandmother:
     name: "סבתא"
-    title: "שומרת האחו"
-    location: "ממלכת התארים — אחו החיות"
-    description: "סבתא חמה ואוהבת שמטפלת בחיות שבאחו."
+    title: "סבתא"
+    location: "אחו החיות"
+    description: "סבתא טובה שמטפלת בחיות ובתירס."
   adjective_crazy_old_man:
     name: "הזקן המשוגע"
-    title: "משקיף דרך המסחר"
-    location: "ממלכת התארים — דרך המסחר"
-    description: "זקן מוזר שמבחין בכל דבר משונה שמתרחש בדרך המסחר."
+    title: "הזקן המשוגע"
+    location: "דרך המסחר"
+    description: "זקן מוזר שמבחין בכל דבר משונה בדרך."
 
-  royal_librarian:
-    name: "הספרנית המלכותית"
-    title: "שומרת ספר ה־nouns המלכותי"
-    location: "ספריית ה־nouns המלכותית"
-    description: "ספרנית סבלנית שעוזרת לגיבורים צעירים להשיב את שמות האנשים, המקומות, החפצים והיצורים בממלכה."
-  forgetful_king:
-    name: "המלך השכחן"
-    title: "שליט ממלכת ה־nouns"
-    location: "חדר הכס המלכותי"
-    description: "מלך טוב לב שמבלבל בין חפצי הארמון לאחר שה־nouns שלהם נעלמו."
-  royal_armorer:
-    name: "נפח הנשק המלכותי"
-    title: "שומר הנשקייה המלכותית"
-    location: "הנשקייה המלכותית"
-    description: "אומן זהיר שמנסה להחזיר את השמות הנכונים לחרבות, מגנים ומגילות."
-  confused_wizard:
-    name: "הקוסם המבולבל"
-    title: "סוחר קסמים זמני"
-    location: "שער השוק המלכותי"
-    description: "קוסם שפתח בטעות חנות קסמים מוזלת לאחר ששמות אנשי החצר התערבבו."
-  offended_dragon:
-    name: "הדרקון הנעלב"
-    title: "שומר ארכיון היצורים"
-    location: "ארכיון היצורים המלכותי"
-    description: "דרקון גאה שמתנגד בתוקף לכך שמישהו קרא לו goblin."
-  vocabulary_keeper:
-    name: "שומר אוצר המילים"
-    title: "שומר אטלס המילים הגדול"
-    location: "קרנבל אוצר המילים"
-    description: "מדריך עליז שאוסף מילים שימושיות באנגלית מתוך האסונות המצחיקים ביותר בממלכה."
-  animal_caretaker:
-    name: "מטפל החיות"
-    title: "שומר החיות המלכותיות"
-    location: "מתחם החיות המלכותי"
-    description: "מטפל סבלני שהחיות שלו מחליפות בלי הפסקה מקומות, בגדים ותפקידים."
-  food_queen:
-    name: "מלכת האוכל"
-    title: "שליטת ממלכת האוכל"
-    location: "ארמון המטבח המלכותי"
-    description: "מלכה חגיגית שהופכת כל ארוחה לטורניר ומתייחסת לכל מאפין כמו לאזרח חשוב."
-  school_headmaster:
-    name: "מנהל בית הספר"
-    title: "מנהל בית הספר המלכותי"
-    location: "בית הספר המלכותי"
-    description: "מנהל טוב לב שמנסה להשתלט על עפרונות מורדים, ציורים מתעטשים ורובוטים שאוכלים שיעורי בית."
-  adventure_scout:
-    name: "סייר ההרפתקאות"
-    title: "מוביל המשלחות המלכותי"
-    location: "מחנה ההרפתקאות"
-    description: "סייר נמרץ שהמצפן שלו מבולבל, אבל חוש ההומור שלו מכוון בדיוק."
+  "Benny the Builder":
+    name: "בני הבנאי"
+    title: "בנאי"
+    location: "בית הבנאים"
+    description: "בנאי חרוץ שתמיד צריך עוד עץ ועזרה."
+  Cannoneer:
+    name: "תותחן"
+    title: "תותחן"
+    location: "המפרץ הנטוש"
+    description: "תותחן רועש ששומר על המפרץ."
+  "Secondary Gate Soldier":
+    name: "חייל שער משני"
+    title: "חייל שער"
+    location: "שער הממלכה"
+    description: "חייל צעיר שמשגיח על השער הצדדי."
+  "Secondary Gate Main":
+    name: "מפקד שער משני"
+    title: "מפקד שער"
+    location: "שער הממלכה"
+    description: "שומר בכיר שאחראי על השער הצדדי."
+  "Old Man":
+    name: "הזקן"
+    title: "זקן"
+    location: "קוטג' נהר הירח"
+    description: "זקן חכם שמספר סיפורים קצרים ליד הקוטג'."
+  "Village Head":
+    name: "ראש הכפר"
+    title: "ראש כפר"
+    location: "פארק ורד הפיות"
+    description: "ראש כפר ידידותי שמארגן משימות מקומיות."
+  "Farmer V2":
+    name: "חקלאי V2"
+    title: "חקלאי"
+    location: "פארק ורד הפיות"
+    description: "חקלאי עסוק שהיבולים שלו תמיד צריכים הצלה."
+  "Old Woman":
+    name: "הזקנה"
+    title: "זקנה"
+    location: "קוטג' נהר הירח"
+    description: "זקנה חמה שמשתפת חטיפים ועצות פשוטות."
+  "Professor Crazy":
+    name: "פרופסור משוגע"
+    title: "פרופסור"
+    location: "מגדל הבדידות"
+    description: "פרופסור פראי עם רעיונות גדולים וניסויים מבולגנים."
+  Farmer:
+    name: "חקלאי"
+    title: "חקלאי"
+    location: "פארק ורד הפיות"
+    description: "חקלאי פשוט שצריך עזרה עם חיות ושדות."
+  "Flight Guide":
+    name: "מדריך טיסה"
+    title: "מדריך טיסה"
+    location: "עץ צריח השמש"
+    description: "מדריך שמלמד מסלולי טיסה סביב העץ."
+  "Little Boy":
+    name: "ילד קטן"
+    title: "ילד"
+    location: "פארק ורד הפיות"
+    description: "ילד סקרן שמאבד צעצועים ושואל הרבה שאלות."
+  "Little Girl":
+    name: "ילדה קטנה"
+    title: "ילדה"
+    location: "פארק ורד הפיות"
+    description: "ילדה שובבה שמתחילה חיפושי אוצר קטנים."
+  "Mountain Guide":
+    name: "מדריך הרים"
+    title: "מדריך הרים"
+    location: "מגדל המשמר האבוד"
+    description: "מדריך שמכיר את השבילים הגבוהים והמגדלים הבודדים."
+  Painter:
+    name: "צייר"
+    title: "צייר"
+    location: "עץ צריח השמש"
+    description: "צייר חולם שמחפש צבעים ורעיונות למילים."
+  "Riding Guide":
+    name: "מדריך רכיבה"
+    title: "מדריך רכיבה"
+    location: "מפרץ דריפטגולד"
+    description: "מדריך שמלמד רכיבה בטוחה ליד המפרץ."
 
 items:
-  rusty_hammer: { name: "פטיש חלוד" }
-  iron_ore: { name: "עפרת ברזל" }
-  steel_ingot: { name: "מטיל פלדה" }
-  master_forge_blueprint: { name: "שרטוט נפח מאסטר" }
-  merchant_satchel: { name: "תיק סוחר" }
-  trade_token: { name: "אסימון מסחר" }
-  rare_spice: { name: "תבלין נדיר" }
-  gold_pouch: { name: "שק זהב" }
-  guard_badge: { name: "תג שומר" }
-  patrol_map: { name: "מפת סיור" }
-  reinforced_shield: { name: "מגן מחוזק" }
-  captain_commendation: { name: "המלצת הקפטן" }
-  healing_herb: { name: "עשב מרפא" }
-  alchemy_vial: { name: "בקבוק אלכימיה" }
-  moonpetal: { name: "עלי כוכב" }
-  elixir_recipe: { name: "מתכון שיקוי" }
-  cryptic_note: { name: "פתק מסתורי" }
-  shadow_key: { name: "מפתח צללים" }
-  vex_sigil: { name: "חותם וקס" }
-  ancient_relic: { name: "שריד עתיק" }
+  herbs: { name: "עשבים" }
+  oak_log: { name: "בול עץ אלון" }
+  corn: { name: "תירס" }
+  gem: { name: "אבן חן" }
+  power_stone: { name: "אבן כוח" }
+  ancient_rune: { name: "רונה עתיקה" }
+  coin: { name: "מטבע" }
   letter_a: { name: "אות A" }
   letter_b: { name: "אות B" }
   letter_c: { name: "אות C" }
@@ -146,61 +170,26 @@ items:
   letter_i: { name: "אות I" }
   letter_j: { name: "אות J" }
   word_hero_badge: { name: "תג גיבור המילים" }
-  maya_homework: { name: "שיעורי בית של מאיה" }
-
-  length_crystal: { name: "גביש האורך" }
-  warmth_crystal: { name: "גביש החום" }
-  weight_crystal: { name: "גביש המשקל" }
-  size_crystal: { name: "גביש הגודל" }
-  speed_crystal: { name: "גביש המהירות" }
-  description_crystal: { name: "גביש התיאור" }
-  crown_crystal: { name: "גביש הכתר" }
-  coin: { name: "מטבע" }
-  adjective_crown: { name: "כתר התארים" }
-  small_sheep: { name: "כבשה קטנה" }
-
-  noun_royalty_page: { name: "דף ה־nouns של אנשי המלוכה" }
-  noun_places_page: { name: "דף ה־nouns של המקומות" }
-  noun_treasury_page: { name: "דף ה־nouns של אוצרות הארמון" }
-  noun_armory_page: { name: "דף ה־nouns של הנשקייה" }
-  noun_court_page: { name: "דף ה־nouns של אנשי החצר" }
-  noun_creatures_page: { name: "דף ה־nouns של היצורים" }
-  royal_noun_book: { name: "ספר ה־nouns המלכותי" }
-  noun_keeper_badge: { name: "תג שומר ה־nouns המלכותי" }
-
-  vocab_animal_card: { name: "כרטיס מילת חיות" }
-  vocab_animal_page: { name: "דף החיות של אטלס המילים" }
-  vocab_food_card: { name: "כרטיס מילת אוכל" }
-  vocab_food_page: { name: "דף האוכל של אטלס המילים" }
-  vocab_school_card: { name: "כרטיס מילת בית ספר" }
-  vocab_school_page: { name: "דף בית הספר של אטלס המילים" }
-  vocab_adventure_card: { name: "כרטיס מילת הרפתקה" }
-  vocab_adventure_page: { name: "דף ההרפתקאות של אטלס המילים" }
-  vocabulary_atlas: { name: "אטלס אוצר המילים הגדול" }
-  vocabulary_master_badge: { name: "תג אלוף אוצר המילים" }
+  slash_ability: { name: "יכולת Slash" }
 
 minigames:
   letter_ordering: { name: "סידור אותיות" }
+  word_ordering: { name: "סידור מילים" }
   word_matching: { name: "התאמת מילים" }
   letter_drawing: { name: "ציור אותיות" }
   speak_aloud: { name: "דיבור בקול" }
-  basic_forging: { name: "נפחות בסיסית" }
-  tempering_forge: { name: "נפחות טמפר" }
-  market_haggle: { name: "משא ומתן בשוק" }
 
 locations:
-  iron_hills_mine: "מכרה גבעות הברזל"
-  barracks_training_yard: "חצר האימונים"
-  old_ruins_gate: "שער החורבות העתיקות"
-  classroom_chalkboard: "לוח גיר בכיתה"
-  alphabet_avenue: "שדרת האלף-בית"
-  letter_garden: "גן האותיות"
-  dog_house_corner: "פינת בית הכלב"
-  garden_gate: "שער הגן"
-  genius_gate: "שער הגאון"
-  rainy_plaza: "כיכר הגשם"
-  letter_island: "אי האותיות"
-  echo_plaza: "כיכר ההד"
+  q01_runaway_a_zone: "אזור ה־A הבורח"
+  q02_bee_garden: "גן הדבורים"
+  q03_cat_tree: "עץ החתולים"
+  q04_dog_house: "בית הכלב"
+  q05_garden_gate: "שער הגן"
+  q06_butterfly_garden: "גן הפרפרים"
+  q07_genius_gate: "שער הגאון"
+  q08_hat_location: "מקום הכובע"
+  q09_letter_island: "אי האותיות"
+  q10_graduation_stage: "במת הסיום"
 
   adjective_short_bridge: "הגשר הקצר"
   adjective_frozen_spring: "המעיין הקפוא"
@@ -210,7 +199,6 @@ locations:
   adjective_mixed_meadow: "אחו החיות"
   adjective_crown_shrine: "מקדש כתר התארים"
 
-  # Exact Unity QuestWorldCatalogSet_OpenWorld area IDs used by the new lines
   MoonriverCottage: "קוטג' נהר הירח"
   BuildersHome: "בית הבנאים"
   "Driftgold Bay": "מפרץ דריפטגולד"
@@ -226,110 +214,62 @@ locations:
   "The Weeping Stones": "האבנים הבוכות"
   "The Last Roar": "השאגה האחרונה"
 
-enemies:
-  training_dummy: "בובת אימון"
-  letter_slime: "סליים אותיות"
-
+interactables:
+  mystery_egg: "ביצת המסתורין"
+  letter_drawing_a: "ציור אות A"
+  letter_drawing_b: "ציור אות B"
+  letter_drawing_c: "ציור אות C"
+  letter_drawing_f: "ציור אות F"
+  letter_drawing_j: "ציור אות J"
+  word_matching_d: "התאמת אותיות DOG"
+  word_matching_g: "מילים בשער הגאון"
+  word_matching_i: "התאמה באי האותיות"
+  letter_ordering_egg: "איות EGG"
+  letter_ordering_h: "איות HAT"
+  letter_ordering_i: "איות ISLAND"
+  speak_aloud_j: "אמירת אות J"
+  speak_aloud_hot: "אמירת HOT"
+  letter_ordering_long: "איות LONG"
+  letter_ordering_small: "איות SMALL"
+  letter_ordering_slow: "איות SLOW"
+  speak_aloud_slow: "אמירת SLOW"
+  letter_ordering_light: "בחירת LIGHT"
+  word_matching_adjective_crown: "מבחן התאמת תארים"
+  letter_ordering_adjective_crown: "מבחן איות תארים"
+  speak_aloud_adjective_crown: "מבחן תארים בדיבור"
+  small_sheep: "כבשה קטנה"
   adjective_small_zombie: "זומבי קטן"
   adjective_small_guardian: "שומר קטן"
-
-  noun_goblin: "גובלין גונב מילים"
-  vocabulary_sock_crab: "סרטן גונב גרביים"
-  vocabulary_onion_slime: "סליים בצל דומע"
-  vocabulary_homework_robot: "רובוט אוכל שיעורי בית"
-  vocabulary_potion_blob: "בועת שיקוי משהקת"
+  Small_Shop_Moonriver: "חנות קטנה"
+  Lost_Chest7_The_Sunspire_Tree: "תיבה אבודה 7"
+  WoodenCart3_The_Oath_stone_Bridge: "עגלה מעץ 3"
+  Lost_Chest6_The_Last_Roar: "תיבה אבודה 6"
+  Lost_Chest1_BuildersHomeArea: "תיבה אבודה 1"
+  Lost_Chest2_Driftgold_Bay: "תיבה אבודה 2"
+  Exam_Table_Fairy_Rose_Park: "שולחן מבחן"
+  Fire_Camp_Tower_Of_Lost_Vigil: "מדורת מחנה"
+  Tomb_Stone_The_Weeping_Stones: "מצבה"
+  Lost_Chest3_Forsaken_Cove: "תיבה אבודה 3"
+  Wooden_Cart1_Inside_Gate: "עגלה מעץ 1"
+  Exam_Table1_Outside_Gate: "שולחן מבחן 1"
+  Lost_Chest4_Sanctum_Of_Whispering_Light: "תיבה אבודה 4"
+  Lost_Chest5_Silver_Fountain_Court: "תיבה אבודה 5"
+  WoodenCart2_Solitude_Tower: "עגלה מעץ 2"
 
 questlines:
-  vocabulary_adventures:
-    display_name: "הרפתקאות אוצר המילים"
-    theme: "48 מילים חדשות באנגלית דרך חיות, ממלכת האוכל, בית הספר והרפתקאות מצחיקות (רמות 11–30)"
+  blacksmith_will:
+    display_name: "ויל הנפח — ה־Slash הראשון"
+    theme: "הרפתקאות מצחיקות בנפחייה; פתיחת Slash עם המילים הכי קלות"
     quests:
-      q01_goat_ate_map:
-        name: "העז שאכלה את המפה"
-        summary: "עז אכלה את מפת החווה, ועכשיו לומדים goat, duck ו־horse כדי להחזיר כל חיה למקום הנכון."
-      q02_owl_morning:
-        name: "הינשוף שונא את הבוקר"
-        summary: "ינשוף ישנוני, שועל עם משקפיים ודוב שלוחש בקול מלמדים fox, owl ו־bear."
-      q03_parrot_king:
-        name: "התוכי שהפך למלך"
-        summary: "תוכי הכריז על עצמו כמלך הג'ונגל; לומדים monkey, tiger ו־parrot לפני שהוא מטיל מס על בננות."
-      q04_octopus_socks:
-        name: "שמונה גרביים לתמנון"
-        summary: "תמנון דורש שמונה גרביים תואמות, ובדרך לומדים dolphin, shark ו־octopus."
-      q05_animal_parade:
-        name: "מצעד החיות"
-        summary: "חוזרים על 12 מילות החיות בהתאמה, שמיעה ודיבור ומארגנים מצעד שבו הכריש מבטיח לא לנשוך את התזמורת."
-      q06_pancake_crown:
-        name: "כתר הפנקייק"
-        summary: "ארוחת הבוקר המלכותית יצאה משליטה; לומדים pancake, cereal ו־honey כדי להציל כתר דביק במיוחד."
-      q07_onion_knight:
-        name: "אביר הבצל"
-        summary: "בצל עטה שריון וגרם לכל הזירה לבכות; לומדים carrot, pepper ו־onion בטורניר הירקות."
-      q08_muffin_escape:
-        name: "בריחת המאפין הגדולה"
-        summary: "מאפין נמלט מהמאפייה עם עוגייה כשותפה; לומדים bread, cookie ו־muffin לפני שעת התה."
-      q09_cheese_moon:
-        name: "ירח הגבינה"
-        summary: "הטבח בטוח שהירח עשוי גבינה; לומדים soup, salad ו־cheese כדי להכין משתה הגיוני יותר."
-      q10_food_festival:
-        name: "פסטיבל האוכל המלכותי"
-        summary: "חוזרים על 12 מילות האוכל ומצילים פסטיבל שבו הפנקייק רוצה כתר והבצל שוב נואם בדמעות."
-      q11_pencil_rebellion:
-        name: "מרד העיפרון"
-        summary: "העפרונות מסרבים לכתוב עד שיקבלו חופשה; לומדים pencil, ruler ו־notebook ומשיבים סדר לכיתה."
-      q12_paint_sneeze:
-        name: "הציור שהתעטש"
-        summary: "ציור מתעטש צבע על הקירות; לומדים brush, paint ו־paper כדי לתקן יצירת אמנות רועשת."
-      q13_robot_homework:
-        name: "הרובוט אכל את שיעורי הבית"
-        summary: "רובוט טוען ששיעורי הבית טעימים; לומדים magnet, planet ו־robot במעבדת המדעים."
-      q14_slide_to_moon:
-        name: "המגלשה לירח"
-        summary: "המנהל חושש שהמגלשה מגיעה לירח; לומדים swing, slide ו־rope ובודקים לאן היא באמת מובילה."
-      q15_school_day:
-        name: "יום הלימודים המוזר ביותר"
-        summary: "חוזרים על 12 מילות בית הספר ביריד שבו העיפרון שובת, הציור מתעטש והרובוט מבקש קינוח."
-      q16_helmet_hair:
-        name: "הקסדה עם השיער"
-        summary: "קסדה מצמיחה תסרוקת מלכותית; לומדים helmet, banner ו־armor לפני שהשריון מבקש שמפו."
-      q17_potion_hiccups:
-        name: "שיקוי השיהוקים"
-        summary: "שיקוי גורם לכל הסדנה לשהק נצנצים; לומדים potion, wand ו־spell כדי לעצור את הבלגן."
-      q18_compass_confusion:
-        name: "המצפן המבולבל"
-        summary: "מצפן מצביע על ארוחת הצהריים במקום על הצפון; לומדים compass, backpack ו־tent ויוצאים למחנה."
-      q19_thunder_applause:
-        name: "הרעם רוצה מחיאות כפיים"
-        summary: "הרעם משוכנע שהוא כוכב במה; לומדים cloud, rainbow ו־thunder ומסיימים את מופע הסערה."
-      q20_word_carnival:
-        name: "קרנבל המילים הגדול"
-        summary: "מבחן מסכם מצחיק: מתאימים, שומעים, מאייתים ואומרים את כל 48 המילים כדי להשלים את אטלס אוצר המילים."
-
-  royal_nouns:
-    display_name: "ספר ה־nouns המלכותי"
-    theme: "לימוד nouns מתקדמים מעולם הממלכה דרך סיפור מצחיק, הקשבה, התאמה, איות ודיבור (רמות 4–10)"
-    quests:
-      q01_roles_without_names:
-        name: "תפקידים בלי שמות"
-        summary: "המילים KING, QUEEN ו־KNIGHT נעלמו, וחדר הכס התמלא בבלבול מלכותי מצחיק."
-      q02_castle_on_the_map:
-        name: "הטירה שהפכה למגדל"
-        summary: "CASTLE, TOWER ו־GATE החליפו מקומות במפה ושולחים את תושבי הממלכה ליעדים הלא נכונים."
-      q03_crown_soup:
-        name: "מרק הכתר"
-        summary: "המלך מבלבל בין CROWN, THRONE ו־TREASURE ומגיע לחצר עם קערת מרק על הראש."
-      q04_soup_shield:
-        name: "מגן המרק"
-        summary: "SWORD, SHIELD ו־SCROLL התערבבו בנשקייה, וגובלין ברח עם דף ה־nouns החסר."
-      q05_wizard_for_sale:
-        name: "הקוסם במטבח"
-        summary: "WIZARD, COOK ו־GUARD החליפו זהויות ומילאו את מטבח הארמון בקסמים לא מתוכננים."
-      q06_dragon_identity:
-        name: "הדרקון שהפך לגובלין"
-        summary: "DRAGON, GRIFFIN ו־GOBLIN קיבלו כרטיסי שם שגויים — הדרקון נעלב והגובלין כבר דורש אוצר."
-      q07_royal_noun_trial:
-        name: "מבחן ה־nouns המלכותי"
-        summary: "חזרו על ה־nouns של האנשים, המקומות, החפצים והיצורים והשיבו את כל הדפים לספר המלכותי."
+      q01_runaway_hammer:
+        name: "הפטיש הבורח"
+        summary: "הפטיש של ויל רץ אחרי חתול — אייתו CAT במפרץ, הביאו Oak Log אחד."
+      q02_snoring_anvil:
+        name: "הסדן הנוחר"
+        summary: "הסדן מתעורר רק לסיפור על כלב — אייתו DOG בבית הבנאים, הביאו Herbs אחד."
+      q03_first_real_slash:
+        name: "ה־Slash הראשון"
+        summary: "אייתו BIG ליד שער הממלכה, חזרו לוויל וקבלו את יכולת Slash."
 
   adjective_crown:
     display_name: "כתר התארים"
@@ -352,182 +292,7 @@ questlines:
         summary: "השלימו ארבעה משחקי LOW/HIGH, קבלו ארבעה Power Stones ומסרו אותם למאיה."
       q06_adjective_challenge:
         name: "אתגר התארים"
-        summary: "השלימו משחק התאמה מסכם, קבלו Gem אחד ומסרו אותו למאיה."
-
-  blacksmith_theron:
-    display_name: "דרך הנפח של תרון"
-    theme: "יצירה ומיומנות"
-    quests:
-      q01_first_hammer:
-        name: "הפטיש הראשון"
-        summary: "תרון מציג אתכם לנפחייה ולשיעור היצירה הראשון."
-      q02_iron_ore:
-        name: "ברזל בגבעות"
-        summary: "אספו עפרת ברזל מהגבעות מצפון לנפחייה."
-      q03_tempering_trial:
-        name: "מבחן הטמפר"
-        summary: "למדו טמפר על ידי מיני-משחק נפחות מאתגר יותר."
-      q04_steel_secrets:
-        name: "סודות הפלדה"
-        summary: "תרון מלמד את סוד יצירת הפלדה."
-      q05_broken_blade:
-        name: "הלהב השבור"
-        summary: "תקנו את להב השבור של אציל."
-      q06_forge_diligence:
-        name: "נפחיית ההתמדה"
-        summary: "השלימו מחזור עבודה ארוך בנפחייה."
-      q07_rivals_anvil:
-        name: "יריבים על הסדן"
-        summary: "התחרו מול נפח יריב בתחרות נפחות."
-      q08_ore_deep:
-        name: "עפרה מהעומק"
-        summary: "הפיקו עפרה נדירה מהמכרות העמוקים."
-      q09_masters_test:
-        name: "מבחן המאסטר"
-        summary: "עברו את המבחן המעשי האחרון של תרון."
-      q10_legend_forge:
-        name: "אגדת הנפחייה"
-        summary: "חשלו פריט אגדי וזכו בשרטוט הנפח המאסטר."
-
-  merchant_lina:
-    display_name: "מסלול המסחר של לינה"
-    theme: "מסחר ומשא ומתן"
-    quests:
-      q01_first_sale:
-        name: "המכירה הראשונה"
-        summary: "לינה מלמדת אתכם לקנות בזול ולמכור ביוקר."
-      q02_spice_run:
-        name: "משלוח תבלינים"
-        summary: "הביאו תבלינים נדירים לשוק."
-      q03_debt_collection:
-        name: "גביית חוב"
-        summary: "אספו חוב מלקוח בחוב."
-      q04_market_rivals:
-        name: "יריבי השוק"
-        summary: "התמודדו עם סוחר מתחרה בכיכר."
-      q05_rare_import:
-        name: "ייבוא נדיר"
-        summary: "השגו סחורה מיובאת נדירה."
-      q06_lost_shipment:
-        name: "המשלוח האבוד"
-        summary: "אתרו משלוח שאבד בדרך."
-      q07_counterfeit_coins:
-        name: "מטבעות מזויפים"
-        summary: "חשפו פרשת מטבעות מזויפים בשוק."
-      q08_trade_route:
-        name: "נתיב מסחר"
-        summary: "פתחו נתיב מסחר חדש לעיר."
-      q09_merchants_gamble:
-        name: "ההימור של הסוחרת"
-        summary: "היכנסו להימור מסחרי מסוכן."
-      q10_empire_trade:
-        name: "אימפריית המסחר"
-        summary: "הפכו לשותפה המלאה של לינה במסחר."
-
-  guard_captain_marcus:
-    display_name: "פיקוד הקפטן מרקוס"
-    theme: "לחימה וחובה"
-    quests:
-      q01_enlistment:
-        name: "גיוס"
-        summary: "קפטן מרקוס מקבל אתכם למשמר ומטיל משימה ראשונה."
-      q02_night_patrol:
-        name: "סיור לילי"
-        summary: "סיירו בשכונות העיר בלילה."
-      q03_bandit_camp:
-        name: "מחנה שודדים"
-        summary: "טהרו מחנה שודדים מחוץ לעיר."
-      q04_missing_scout:
-        name: "הסייר הנעדר"
-        summary: "מצאו סייר שנעלם במשלחת."
-      q05_wall_breach:
-        name: "פרצה בחומה"
-        summary: "סגרו פרצה בחומת העיר."
-      q06_arena_trial:
-        name: "מבחן הזירה"
-        summary: "עברו מבחן קרב בזירה."
-      q07_saboteur:
-        name: "המשחית"
-        summary: "חשפו את המשחית שמאיים על העיר."
-      q08_siege_prep:
-        name: "הכנה למצור"
-        summary: "הכינו את העיר למצור צפוי."
-      q09_last_stand:
-        name: "העמדה האחרונה"
-        summary: "הגנו על העיר בקרב הכרעה."
-      q10_captains_legacy:
-        name: "מורשת הקפטן"
-        summary: "זכו בהכרתו המלאה של קפטן מרקוס."
-
-  herbalist_elara:
-    display_name: "שביל הגן של אלארה"
-    theme: "איסוף ואלכימיה"
-    quests:
-      q01_healing_hands:
-        name: "ידיים מרפאות"
-        summary: "אלארה מבקשת לאסוף עשבי מרפא למשחים."
-      q02_forest_herbs:
-        name: "עשבי היער"
-        summary: "אספו עשבים ביער הסמוך."
-      q03_poison_remedy:
-        name: "תרופת נגד רעל"
-        summary: "הכינו תרופה לנגד רעל."
-      q04_moonpetal_hunt:
-        name: "מצוד עלי הכוכב"
-        summary: "מצאו את עלי הכוכב הנדירים."
-      q05_swamp_samples:
-        name: "דגימות מהביצה"
-        summary: "אספו דגימות צמחים מהביצה."
-      q06_alchemists_aid:
-        name: "עזרה לאלכימאי"
-        summary: "סייעו לאלכימאי מקומי."
-      q07_rare_bloom:
-        name: "פריחה נדירה"
-        summary: "אתרו פרח נדיר שפורח לילה אחד בשנה."
-      q08_plague_cure:
-        name: "תרופת המגפה"
-        summary: "הכינו תרופה למגפה שפורסת בעיר."
-      q09_spirit_tea:
-        name: "תה הרוח"
-        summary: "אספו מרכיבים לתה מיוחד."
-      q10_elaras_secret:
-        name: "סודה של אלארה"
-        summary: "גלו את הסוד שאלארה מסתירה."
-
-  mystery_stranger_vex:
-    display_name: "האמת הנסתרת של וקס"
-    theme: "מסתורין וגילוי"
-    quests:
-      q01_whisper_dark:
-        name: "לחישה בחושך"
-        summary: "וקס מופיע בלילה ונותן לכם משימה מסתורית ראשונה."
-      q02_hidden_door:
-        name: "הדלת הנסתרת"
-        summary: "מצאו דלת נסתרת בחורבות העתיקות."
-      q03_shadows_follow:
-        name: "הצללים רודפים"
-        summary: "הימלטו מצללים שרודפים אחריכם."
-      q04_cryptic_map:
-        name: "מפה מסתורית"
-        summary: "פענחו מפה עם רמזים מוצפנים."
-      q05_locked_chest:
-        name: "התיבה הנעולה"
-        summary: "פתחו תיבה נעולה בעזרת הרמזים."
-      q06_names_unspoken:
-        name: "שמות שלא נאמרו"
-        summary: "גלו שמות שנאסרו לדבר עליהם."
-      q07_mirror_trial:
-        name: "מבחן המראה"
-        summary: "עברו מבחן מול מראה קסומה."
-      q08_sigil_vex:
-        name: "חותם וקס"
-        summary: "השלימו את חותם וקס העתיק."
-      q09_other_side:
-        name: "הצד השני"
-        summary: "חצו לעבר העולם שמעבר למראה."
-      q10_truth_revealed:
-        name: "האמת נחשפת"
-        summary: "גלו את האמת המלאה מאחורי וקס."
+        summary: "השלימו שלושה משחקי התאמה (4 מילים בכל אחד), קבלו Gem אחד ומסרו אותו למאיה."
 
   english_kingdom_maya:
     display_name: "ממלכת האנגלית — מסלול האותיות"
@@ -563,3 +328,29 @@ questlines:
       q10_word_hero:
         name: "גיבור המילים"
         summary: "מבחן הסיום! האות J היא האחרונה — אמורו אותה בקול וקבלו תג גיבור המילים."
+
+  kingdom_nouns:
+    display_name: "ספר ה־nouns של הממלכה"
+    theme: "לימוד nouns מעולם הממלכה דרך סיפור מצחיק — איות ודיבור (משימה ראשונה רמה 50; השאר רמה 1)"
+    quests:
+      q01_roles_without_names:
+        name: "תפקידים בלי שמות"
+        summary: "אייתו king ליד המזרקה, אמרו king / queen / knight, מסרו Gem למאיה."
+      q02_castle_on_the_map:
+        name: "הטירה שהפכה למגדל"
+        summary: "אייתו castle ליד השער, אמרו castle / tower / gate, מסרו Gem לפן הפטפטן."
+      q03_crown_soup:
+        name: "מרק הכתר"
+        summary: "אייתו crown במגדל הבדידות, אמרו crown / throne / treasure, מסרו Power Stone לפרופסור משוגע."
+      q04_soup_shield:
+        name: "מגן המרק"
+        summary: "אייתו shield על הגשר, אמרו sword / shield / scroll, מסרו Power Stone לוויל הנפח."
+      q05_wizard_for_sale:
+        name: "הקוסם במטבח"
+        summary: "אייתו wizard במגדל המשמר, אמרו wizard / cook / guard, מסרו Power Stone לזקנה."
+      q06_dragon_identity:
+        name: "הדרקון שהפך לגובלין"
+        summary: "אייתו dragon במפרץ הנטוש, אמרו dragon / griffin / goblin, מסרו Ancient Rune לתותחן."
+      q07_royal_noun_trial:
+        name: "מבחן ה־nouns המלכותי"
+        summary: "סדרו חמישה nouns מוכרים, אמרו אחד מכל קבוצה, מסרו Ancient Rune למאיה."

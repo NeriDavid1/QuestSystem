@@ -1,0 +1,77 @@
+# Unity ↔ QuestSystem authoring map
+# Source of truth: QuestWorldCatalogSet_OpenWorld
+
+source_of_truth:
+  catalog_set: QuestWorldCatalogSet_OpenWorld
+  unity_path: "Assets/_OurAssets/Data/Quests/Lines/OpenWorld/Catalogs/"
+  catalogs:
+    npcs: NpcCatalog_OpenWorld.asset
+    areas: AreaCatalog_OpenWorld.asset
+    interactables: InteractableCatalog_OpenWorld.asset
+    quests: QuestCatalog_OpenWorld.asset
+
+questlines:
+  adjective_crown:
+    status: live_in_unity
+    note: "QuestDefinitionSO assets exist; wired on QuestLine_adjective_crown"
+    giver_npc: teacher_maya
+    catalog_set: QuestWorldCatalogSet_OpenWorld
+  english_kingdom_maya:
+    status: authored_here
+    note: "OpenWorld area/interactable stubs exist; no QuestDefinitionSO assets yet"
+    giver_npc: teacher_maya
+  blacksmith_will:
+    status: authored_here
+    note: "Beginner forge line; Slash unlock via slash_ability item; no QuestDefinitionSO assets yet"
+    giver_npc: Blacksmith
+    catalog_set: QuestWorldCatalogSet_OpenWorld
+  kingdom_nouns:
+    status: authored_here
+    note: "Kingdom nouns (spell + speak); SoftKitty deliver loop; no QuestDefinitionSO assets yet"
+    giver_npc: teacher_maya
+    catalog_set: QuestWorldCatalogSet_OpenWorld
+
+step_type_map:
+  talk_to_npc: TalkToNpc
+  return_to_npc: TalkToNpc
+  reach_location: EnterArea
+  play_minigame: CompleteMiniGame
+  collect_item: Collect
+  deliver_item: DeliverItem
+
+play_minigame_fields:
+  minigame_id: "Which *QuestConfigSO subclass / content type to use"
+  world_object_id: "Unity interactable gameId (targetId) — Open World station ID"
+  difficulty: "Objective parameter difficulty (string/int 1–10)"
+  reward_item_id: "Optional SoftKitty item granted as stepReward"
+  instance_id: "Optional minigame_instances brief key"
+
+canonical_live_pattern: |
+  # EnterArea → CompleteMiniGame (+ SoftKitty step reward) → DeliverItem
+  - type: reach_location
+    location_id: The Oathstone Bridge
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: WoodenCart3_The_Oath_stone_Bridge
+    difficulty: 1
+    reward_item_id: oak_log
+    reward_amount: 1
+  - type: deliver_item
+    npc_id: teacher_maya
+    item_id: oak_log
+    amount: 1
+
+softkitty_items_used:
+  herbs: 5
+  oak_log: 10
+  corn: 20
+  gem: 26
+  power_stone: 59
+  ancient_rune: 60
+
+forbidden:
+  - Invent NPC / area / interactable IDs not in the OpenWorld catalogs
+  - Invent minigame types (no forging, haggle, etc.)
+  - Use defeat_enemy or wait_time (not in live QuestObjectiveType set for authoring)
+  - Deliver SoftKitty items without softkitty_id in items.yaml
+  - Prefer semantic stubs (letter_ordering_long) over live stations when a live station exists

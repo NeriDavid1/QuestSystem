@@ -1,135 +1,179 @@
-# NPC registry — referenced by quest givers and step targets.
+# NPC registry — IDs must match Unity NpcCatalog_OpenWorld exactly.
+# Use the key as npc_id in quest steps (not the display name).
+# Some IDs contain spaces or typos (e.g. "City Gaurd Info") — copy them exactly.
 
 npcs:
 
-  theron:
-    name: "Theron"
-    title: "Blacksmith"
-    location: "Forge District"
-    description: "Master smith who teaches crafting through hands-on work."
-
-  lina:
-    name: "Lina"
-    title: "Merchant"
-    location: "Market Square"
-    description: "Sharp-eyed trader who tests players with deals and deliveries."
-
-  marcus:
-    name: "Captain Marcus"
-    title: "Guard Captain"
-    location: "City Barracks"
-    description: "Veteran soldier assigning patrol and combat duties."
-
-  elara:
-    name: "Elara"
-    title: "Herbalist"
-    location: "Mistwood Outskirts"
-    description: "Quiet healer who sends players to gather rare plants."
-
-  vex:
-    name: "Vex"
-    title: "The Stranger"
-    location: "Unknown (appears dynamically)"
-    description: "Enigmatic figure with a long-running mystery arc."
-
   teacher_maya:
-    name: "Maya"
+    name: "Teacher Maya"
     title: "English Teacher"
-    location: "English Kingdom — Alphabet Plaza"
-    description: "Cheerful teacher who guides children through letters and words with silly stories."
+    location: "Alphabet Plaza"
+    description: "Cheerful teacher who sends kids on letter and word adventures."
+
+  Blacksmith:
+    name: "Will The Smith"
+    title: "Blacksmith"
+    location: "BuildersHome"
+    description: "Friendly smith who fixes tools and loves loud hammering."
+
+  "City Gaurd Info":
+    name: "Fenn the Chatty"
+    title: "City Guard"
+    location: "KingdomGate"
+    description: "Talkative guard who knows every rumor in town."
+
+  "Main Gate Gaurd 1":
+    name: "Tomlin the Yawner"
+    title: "Gate Guard"
+    location: "KingdomGate"
+    description: "Sleepy gate guard who still somehow spots trouble."
+
+  "Main Gate Gaurd 2":
+    name: "Garrick the Unmoving"
+    title: "Gate Guard"
+    location: "KingdomGate"
+    description: "Serious guard who almost never leaves his post."
+
+  Fisherman:
+    name: "Nemo the Netless"
+    title: "Fisherman"
+    location: "Driftgold Bay"
+    description: "Fisherman who keeps losing his nets and asking for help."
+
+  Ghost:
+    name: "Boo Radcliff"
+    title: "Ghost"
+    location: "The Weeping Stones"
+    description: "Friendly ghost who haunts quiet places and loves surprises."
 
   adjective_knight:
-    name: "The Knight"
-    title: "Keeper of the Adjective Crown"
-    location: "Adjective Kingdom — Crown Camp"
-    description: "A nameless knight who asks young heroes to restore the crystals of the Adjective Crown."
-
-  adjective_village_chief:
-    name: "The Village Chief"
-    title: "Head of the Village"
-    location: "Adjective Kingdom — Village Gate"
-    description: "The village leader who needs help making the entrance safe again."
+    name: "Adjective Knight"
+    title: "Adjective Knight"
+    location: "adjective_crown_shrine"
+    description: "Brave knight who teaches describing words like big, hot, and slow."
 
   adjective_water_man:
-    name: "The Water Man"
-    title: "Keeper of the Spring"
-    location: "Adjective Kingdom — Frozen Spring"
-    description: "The keeper responsible for the kingdom's springs and waterways."
-
-  adjective_grandfather:
-    name: "Grandfather"
-    title: "Royal Lift Keeper"
-    location: "Adjective Kingdom — Royal Lift"
-    description: "A kind grandfather who has operated the royal lift for many years."
+    name: "Water Man"
+    title: "Water Man"
+    location: "adjective_frozen_spring"
+    description: "Quiet helper who watches springs and water paths."
 
   adjective_grandmother:
     name: "Grandmother"
-    title: "Keeper of the Meadow"
-    location: "Adjective Kingdom — Mixed Meadow"
-    description: "A warm grandmother who cares for the animals in the mixed meadow."
+    title: "Grandmother"
+    location: "adjective_mixed_meadow"
+    description: "Kind grandmother who cares for meadow animals and corn."
+
+  adjective_village_chief:
+    name: "Village Chief"
+    title: "Village Chief"
+    location: "adjective_village_gate"
+    description: "Village leader who keeps the gate safe and tidy."
 
   adjective_crazy_old_man:
-    name: "The Crazy Old Man"
-    title: "Road Watcher"
-    location: "Adjective Kingdom — Trade Road"
-    description: "An eccentric old man who notices every strange event on the trade road."
+    name: "Crazy Old Man"
+    title: "Crazy Old Man"
+    location: "adjective_trade_road"
+    description: "Odd old man who notices every strange thing on the road."
 
-  royal_librarian:
-    name: "The Royal Librarian"
-    title: "Keeper of the Royal Book of Nouns"
-    location: "Royal Noun Library"
-    description: "A patient librarian who helps young heroes restore the missing kingdom nouns."
+  adjective_grandfather:
+    name: "Grandfather"
+    title: "Grandfather"
+    location: "adjective_royal_lift"
+    description: "Gentle grandfather who runs the royal lift."
 
-  forgetful_king:
-    name: "The Forgetful King"
-    title: "Ruler of the Noun Kingdom"
-    location: "Royal Throne Room"
-    description: "A good-hearted king who keeps confusing royal objects after their nouns disappear."
+  "Benny the Builder":
+    name: "Benny the Builder"
+    title: "Builder"
+    location: "BuildersHome"
+    description: "Hard-working builder who always needs more wood and help."
 
-  royal_armorer:
-    name: "The Royal Armorer"
-    title: "Keeper of the Armory"
-    location: "Royal Armory"
-    description: "A careful armorer trying to return the correct names to swords, shields, and scrolls."
+  Cannoneer:
+    name: "Cannoneer"
+    title: "Cannoneer"
+    location: "Forsaken Cove"
+    description: "Loud cannoneer who guards the cove and loves big booms."
 
-  confused_wizard:
-    name: "The Confused Wizard"
-    title: "Temporary Magic Merchant"
-    location: "Royal Market Gate"
-    description: "A wizard who accidentally opens a discount magic shop when the court nouns are mixed up."
+  "Secondary Gate Soldier":
+    name: "Secondary Gate Soldier"
+    title: "Gate Soldier"
+    location: "KingdomGate"
+    description: "Young soldier watching the side gate."
 
-  offended_dragon:
-    name: "The Offended Dragon"
-    title: "Guardian of the Creature Archive"
-    location: "Royal Creature Archive"
-    description: "A proud dragon who strongly objects to being labeled as a goblin."
+  "Secondary Gate Main":
+    name: "Secondary Gate Main"
+    title: "Gate Captain"
+    location: "KingdomGate"
+    description: "Senior guard in charge of the side gate."
 
-  vocabulary_keeper:
-    name: "The Vocabulary Keeper"
-    title: "Keeper of the Great Word Atlas"
-    location: "Vocabulary Carnival"
-    description: "A cheerful guide who collects useful English words from the kingdom's funniest disasters."
+  "Old Man":
+    name: "Old Man"
+    title: "Old Man"
+    location: "MoonriverCottage"
+    description: "Wise old man who sits by the cottage and tells short stories."
 
-  animal_caretaker:
-    name: "The Animal Caretaker"
-    title: "Keeper of the Royal Animals"
-    location: "Royal Animal Grounds"
-    description: "A patient caretaker whose animals constantly swap places, clothes, and job titles."
+  "Village Head":
+    name: "Village Head"
+    title: "Village Head"
+    location: "FairyRosePark"
+    description: "Friendly village head who organizes local chores."
 
-  food_queen:
-    name: "The Food Queen"
-    title: "Ruler of the Food Kingdom"
-    location: "Royal Kitchen Palace"
-    description: "A festive queen who treats every meal like a tournament and every muffin like a citizen."
+  "Farmer V2":
+    name: "Farmer V2"
+    title: "Farmer"
+    location: "FairyRosePark"
+    description: "Busy farmer with crops that always need saving."
 
-  school_headmaster:
-    name: "The Headmaster"
-    title: "Head of the Royal School"
-    location: "Royal School"
-    description: "A kind headmaster trying to keep pencils, paintings, and homework-eating robots under control."
+  "Old Woman":
+    name: "Old Woman"
+    title: "Old Woman"
+    location: "MoonriverCottage"
+    description: "Warm old woman who shares snacks and simple advice."
 
-  adventure_scout:
-    name: "The Adventure Scout"
-    title: "Royal Expedition Leader"
-    location: "Adventure Camp"
-    description: "An energetic scout whose compass is confused but whose sense of humor is perfectly accurate."
+  "Professor Crazy":
+    name: "Professor Crazy"
+    title: "Professor"
+    location: "Solitude Tower"
+    description: "Wild professor with big ideas and messy experiments."
+
+  Farmer:
+    name: "Farmer"
+    title: "Farmer"
+    location: "FairyRosePark"
+    description: "Simple farmer who needs help with animals and fields."
+
+  "Flight Guide":
+    name: "Flight Guide"
+    title: "Flight Guide"
+    location: "The Sunspire Tree"
+    description: "Guide who helps kids learn flying routes around the tree."
+
+  "Little Boy":
+    name: "Little Boy"
+    title: "Child"
+    location: "FairyRosePark"
+    description: "Curious boy who loses toys and asks lots of questions."
+
+  "Little Girl":
+    name: "Little Girl"
+    title: "Child"
+    location: "FairyRosePark"
+    description: "Playful girl who starts small scavenger hunts."
+
+  "Mountain Guide":
+    name: "Mountain Guide"
+    title: "Mountain Guide"
+    location: "TowerOfLostVigil"
+    description: "Guide who knows the high paths and lonely towers."
+
+  Painter:
+    name: "Painter"
+    title: "Painter"
+    location: "The Sunspire Tree"
+    description: "Dreamy painter looking for colors and word ideas."
+
+  "Riding Guide":
+    name: "Riding Guide"
+    title: "Riding Guide"
+    location: "Driftgold Bay"
+    description: "Guide who teaches safe riding near the bay paths."

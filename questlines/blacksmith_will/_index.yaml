@@ -1,0 +1,26 @@
+questline:
+  id: blacksmith_will
+  npc_id: Blacksmith
+  display_name: "Will the Smith — First Slash"
+  theme: "Silly forge adventures; unlock Slash with the easiest kid words"
+  quest_count: 3
+  level_range: [1, 1]
+
+quests:
+  - id: q01_runaway_hammer
+    name: "The Runaway Hammer"
+    level: 1
+    prerequisite: null
+    rewards: { xp: 50, items: [] }
+
+  - id: q02_snoring_anvil
+    name: "The Snoring Anvil"
+    level: 1
+    prerequisite: q01_runaway_hammer
+    rewards: { xp: 75, items: [] }
+
+  - id: q03_first_real_slash
+    name: "First Real Slash"
+    level: 1
+    prerequisite: q02_snoring_anvil
+    rewards: { xp: 100, items: [{ id: slash_ability, amount: 1 }] }

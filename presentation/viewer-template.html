@@ -584,13 +584,8 @@
     const FMT = DATA.locale?.step_formats || {};
 
     const THEMES = {
-      blacksmith_theron: { accent: "#e85d04", icon: "🔨" },
-      merchant_lina: { accent: "#f4a261", icon: "💰" },
-      guard_captain_marcus: { accent: "#4895ef", icon: "🛡️" },
-      herbalist_elara: { accent: "#52b788", icon: "🌿" },
-      mystery_stranger_vex: { accent: "#c77dff", icon: "🌙" },
+      adjective_crown: { accent: "#7b2cbf", icon: "👑" },
       english_kingdom_maya: { accent: "#ffd166", icon: "🔤" },
-      vocabulary_adventures: { accent: "#ff8fab", icon: "🎪" },
     };
 
     const STEP_ICONS = {
@@ -600,8 +595,6 @@
       collect_item: "📦",
       deliver_item: "📫",
       reach_location: "📍",
-      defeat_enemy: "⚔️",
-      wait_time: "⏳",
     };
 
     let state = { view: "home", questlineId: null, questId: null };
@@ -732,15 +725,6 @@
           break;
         case "reach_location":
           parts.push(tpl(FMT.location || "הגיעו ל<code>{id}</code>", { id: locationName(step.location_id) }));
-          break;
-        case "defeat_enemy":
-          parts.push(tpl(FMT.enemy || "הביסו <strong>{enemy}</strong> ×{amount}", {
-            enemy: enemyName(step.enemy_id),
-            amount: step.amount,
-          }));
-          break;
-        case "wait_time":
-          parts.push(tpl(FMT.wait || "המתינו {seconds} שניות", { seconds: step.seconds }));
           break;
         default:
           parts.push(JSON.stringify(step));

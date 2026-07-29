@@ -1,0 +1,86 @@
+---
+description: Rules for authoring quests in the QuestSystem workspace
+globs:
+  - questlines/**
+  - _registry/**
+  - presentation/**
+---
+
+# Quest authoring rules
+
+When creating or editing quests in this workspace:
+
+## Allowed questlines only
+
+- `english_kingdom_maya` — authored here (OpenWorld IDs; no Unity QuestDefinition SOs yet)
+- `adjective_crown` — **live in Unity** (prefer this pattern for shippable OpenWorld quests)
+- `blacksmith_will` — authored here (beginner forge fun; Slash unlock item)
+- `kingdom_nouns` — authored here (שמות עצם / kingdom nouns; Teacher Maya hub; q01 level 50, rest level 1)
+
+Do not create Theron/Lina/Marcus/Elara/Vex/Vocabulary lines, or restore deleted `royal_nouns` as-is.
+
+## What to read
+
+1. `_registry/systems.yaml` — step types (maps to Unity QuestObjectiveType)
+2. `_registry/unity_mapping.yaml` — Unity ↔ YAML map and live pattern
+3. `_registry/npcs.yaml` — NPC IDs (NpcCatalog_OpenWorld)
+4. `_registry/areas.yaml` — area IDs (AreaCatalog_OpenWorld)
+5. `_registry/interactables.yaml` — world station IDs (InteractableCatalog_OpenWorld)
+6. `_registry/items.yaml` — items (SoftKitty-backed for deliverable rewards)
+7. `_registry/minigames.yaml` — only the 5 real minigame types
+8. The **target questline's** `_index.yaml` only
+9. The **specific quest file** being created or edited
+
+## What NOT to read
+
+- Do not read other questlines unless explicitly asked
+- Do not read other quest files in the same line unless checking prerequisites or continuity
+
+## World catalog rule (critical)
+
+- `npc_id`, `location_id`, and `world_object_id` must use **exact Unity catalog IDs**
+- Some IDs contain spaces (e.g. `"The Oathstone Bridge"`, `"City Gaurd Info"`) — copy them exactly
+- Prefer `status: live_used` areas/stations over `catalog_stub` semantic IDs
+- `play_minigame.world_object_id` = Open World station (chest/cart/camp/table), not a type name
+- Deliverable SoftKitty items must have `softkitty_id` in `items.yaml`
+- Never invent minigame types, NPCs, areas, or stations
+
+## Canonical shippable pattern (Adjective Crown)
+
+```yaml
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: ...
+- type: reach_location
+  location_id: The Oathstone Bridge
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: WoodenCart3_The_Oath_stone_Bridge
+  difficulty: 1
+  reward_item_id: oak_log
+  reward_amount: 1
+- type: deliver_item
+  npc_id: teacher_maya
+  item_id: oak_log
+  amount: 1
+```
+
+## When creating a new quest
+
+1. Pick the next `qXX` ID from the questline `_index.yaml`
+2. Create `qXX_<snake_name>.yaml` using existing quests in that line as format reference
+3. Use only step types defined in `systems.yaml`
+4. Reference NPCs / areas / interactables / items by registry ID
+5. Append a summary row to `_index.yaml` (id, name, level, prerequisite, rewards)
+6. Add the node to `_graph.mmd` with prerequisite arrow
+
+## File format
+
+- Quest files: YAML with `quest`, `rewards`, `steps` sections
+- Steps: list of objects with `type` matching a key in `systems.yaml`
+- Keep dialogue IDs descriptive: `maya_runaway_a_intro`, `adjective_knight_oak_log_request`
+
+## Presentation
+
+- Boss-facing content goes in `presentation/overview.md` — keep it tables and graphs, not raw YAML
+- Questline graphs use Mermaid in `_graph.mmd`

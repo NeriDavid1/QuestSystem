@@ -1,9 +1,11 @@
-# Reusable quest step types.
-# AI and authors reference this file — do not duplicate step schemas in individual quests.
+# Reusable quest step types — maps to Unity QuestObjectiveType.
+# See unity_mapping.yaml for the full Unity ↔ YAML map.
+# Canonical live pattern: reach_location → play_minigame → deliver_item
 
 step_types:
 
   talk_to_npc:
+    unity_objective: TalkToNpc
     description: Player initiates dialogue with an NPC
     fields:
       npc_id: { type: string, required: true, ref: npcs.yaml }
@@ -11,30 +13,34 @@ step_types:
       optional_flag: { type: string, required: false, description: "Sets a story flag after dialogue" }
 
   return_to_npc:
+    unity_objective: TalkToNpc
     description: Player returns to an NPC to turn in or continue
     fields:
       npc_id: { type: string, required: true, ref: npcs.yaml }
       dialogue_id: { type: string, required: true, ref: "_registry/dialogues/" }
 
   play_minigame:
-    description: Start and complete a minigame instance
+    unity_objective: CompleteMiniGame
+    description: Start and complete a minigame on a world station
     fields:
-      minigame_id: { type: string, required: true, ref: minigames.yaml }
-      world_object_id: { type: string, required: true, ref: "Unity QuestWorldCatalogSet_OpenWorld interactables", description: "Exact world minigame object ID; its name identifies the quest area" }
+      minigame_id: { type: string, required: true, ref: minigames.yaml, description: "One of the 5 Unity minigame types" }
+      world_object_id: { type: string, required: true, ref: interactables.yaml, description: "Exact Open World station gameId (chest/cart/camp/table)" }
       difficulty: { type: integer, required: true, min: 1, max: 10 }
       success_required: { type: boolean, required: false, default: true }
       instance_id: { type: string, required: false, ref: "_registry/minigame_instances/", description: "Override auto key {quest_id}_s{step_index}" }
-      reward_item_id: { type: string, required: false, ref: items.yaml, description: "SoftKitty inventory item granted after successful completion" }
+      reward_item_id: { type: string, required: false, ref: items.yaml, description: "SoftKitty inventory item granted after success (needs softkitty_id)" }
       reward_amount: { type: integer, required: false, min: 1, default: 1 }
 
   collect_item:
+    unity_objective: Collect
     description: Gather items from the world or drops
     fields:
       item_id: { type: string, required: true, ref: items.yaml }
       amount: { type: integer, required: true, min: 1 }
 
   deliver_item:
-    description: Bring items to an NPC
+    unity_objective: DeliverItem
+    description: Bring items to an NPC (SoftKitty consume on live quests)
     fields:
       npc_id: { type: string, required: true, ref: npcs.yaml }
       item_id: { type: string, required: true, ref: items.yaml }
@@ -42,19 +48,25 @@ step_types:
       dialogue_id: { type: string, required: false, ref: "_registry/dialogues/" }
 
   reach_location:
+    unity_objective: EnterArea
     description: Player must enter a trigger zone
     fields:
-      location_id: { type: string, required: true, ref: "Unity QuestWorldCatalogSet_OpenWorld areas" }
+      location_id: { type: string, required: true, ref: areas.yaml, description: "Exact Unity area ID from AreaCatalog_OpenWorld" }
       radius: { type: float, required: false, default: 5.0 }
 
-  defeat_enemy:
-    description: Kill a specific enemy or enemy type
-    fields:
-      enemy_id: { type: string, required: true }
-      amount: { type: integer, required: true, min: 1 }
-
-  wait_time:
-    description: Real-time or in-game wait (use sparingly)
-    fields:
-      seconds: { type: integer, required: true }
-      in_game_hours: { type: integer, required: false }
+# Example live Adjective Crown pattern:
+# - type: talk_to_npc
+#   npc_id: teacher_maya
+#   dialogue_id: ...
+# - type: reach_location
+#   location_id: The Oathstone Bridge
+# - type: play_minigame
+#   minigame_id: letter_ordering
+#   world_object_id: WoodenCart3_The_Oath_stone_Bridge
+#   difficulty: 1
+#   reward_item_id: oak_log
+#   reward_amount: 1
+# - type: deliver_item
+#   npc_id: teacher_maya
+#   item_id: oak_log
+#   amount: 1

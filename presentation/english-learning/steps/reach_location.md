@@ -54,7 +54,7 @@ Do not use long travel chains without a learning step at the destination.
 
 - `play_minigame` — go to place, then interact
 - `talk_to_npc` — go to NPC area first
-- `defeat_enemy` — enter arena zone
+- `reach_location` — enter the zone that holds the station
 
 ## See also
 

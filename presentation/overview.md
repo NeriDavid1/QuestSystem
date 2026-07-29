@@ -2,170 +2,130 @@
 
 > **Interactive map:** Open [`viewer.html`](viewer.html) in your browser — click quest lines, then quests, to explore steps and rewards.
 
-**5 quest lines · 50 quests · Levels 1–30**
+**4 quest lines · 26 quests · Synced to Unity OpenWorld catalogs**
 
 Use this document for boss presentations. Each questline has a visual graph in its folder (`_graph.mmd`).
+
+Source of truth: Unity `QuestWorldCatalogSet_OpenWorld` — see [`_registry/unity_mapping.yaml`](../_registry/unity_mapping.yaml).
 
 ---
 
 ## At a glance
 
-| # | Quest line | NPC | Quests | Levels | Theme |
+| # | Quest line | NPC | Quests | Status | Theme |
 |---|------------|-----|--------|--------|-------|
-| 1 | [Theron's Forge Path](../questlines/blacksmith_theron/_index.yaml) | Theron (Blacksmith) | 10 | 1–15 | Crafting |
-| 2 | [Lina's Trade Route](../questlines/merchant_lina/_index.yaml) | Lina (Merchant) | 10 | 5–20 | Commerce |
-| 3 | [Captain Marcus's Command](../questlines/guard_captain_marcus/_index.yaml) | Captain Marcus | 10 | 10–25 | Combat |
-| 4 | [Elara's Garden Path](../questlines/herbalist_elara/_index.yaml) | Elara (Herbalist) | 10 | 3–18 | Gathering |
-| 5 | [Vex's Hidden Truth](../questlines/mystery_stranger_vex/_index.yaml) | Vex (Stranger) | 10 | 15–30 | Mystery |
+| 1 | [The Adjective Crown](../questlines/adjective_crown/_index.yaml) | Teacher Maya | 6 | **Live in Unity** | Basic adjectives via minigames + SoftKitty deliveries |
+| 2 | [English Kingdom — Letter Path](../questlines/english_kingdom_maya/_index.yaml) | Teacher Maya | 10 | Authored here | Letters A–J on Open World stations |
+| 3 | [Will the Smith — First Slash](../questlines/blacksmith_will/_index.yaml) | Blacksmith Will | 3 | Authored here | Silly forge fun; unlock Slash (CAT / DOG / BIG) |
+| 4 | [The Kingdom Book of Nouns](../questlines/kingdom_nouns/_index.yaml) | Teacher Maya | 7 | Authored here | שמות עצם — spell + speak (q01 Lv50; rest Lv1) |
 
 ---
 
-## 1. Theron's Forge Path
+## 1. The Adjective Crown (live)
 
-**NPC:** Theron · **Location:** Forge District · **Status:** 3 quests fully designed, 7 drafts
+**NPC:** Teacher Maya · **Pattern:** EnterArea → CompleteMiniGame → DeliverItem · **SoftKitty items:** oak_log, herbs, corn, ancient_rune, power_stone, gem
 
 ```mermaid
 flowchart LR
-  Q1["First Hammer<br/>Lv 1"] --> Q2["Iron in the Hills<br/>Lv 3"]
-  Q2 --> Q3["Tempering Trial<br/>Lv 5"]
-  Q3 --> Q4["Steel Secrets<br/>Lv 7"]
-  Q4 --> Q5["Broken Blade<br/>Lv 9"]
-  Q5 --> Q6["Forge of Diligence<br/>Lv 11"]
-  Q6 --> Q7["Rivals at the Anvil<br/>Lv 12"]
-  Q7 --> Q8["Ore from the Deep<br/>Lv 13"]
-  Q8 --> Q9["Master's Test<br/>Lv 14"]
-  Q9 --> Q10["Legend of the Forge<br/>Lv 15"]
+  Q1["Bridge Too Short<br/>LONG · Oak Log"] --> Q2["Whispering Stone<br/>HOT · Herbs"]
+  Q2 --> Q3["Big and Small<br/>BIG/SMALL · Corn"]
+  Q3 --> Q4["Twelve Adjectives<br/>12 runes"]
+  Q4 --> Q5["Low to High<br/>4 power stones"]
+  Q5 --> Q6["Adjective Challenge<br/>Gem"]
 ```
 
-| Quest | Level | XP | Key reward |
-|-------|-------|-----|------------|
-| First Hammer | 1 | 50 | Rusty Hammer |
-| Iron in the Hills | 3 | 120 | Iron Ore ×5 |
-| Tempering Trial | 5 | 200 | Iron Ore ×3 |
-| Steel Secrets | 7 | 280 | Steel Ingot ×2 |
-| The Broken Blade | 9 | 350 | — |
-| Forge of Diligence | 11 | 420 | Steel Ingot ×3 |
-| Rivals at the Anvil | 12 | 480 | — |
-| Ore from the Deep | 13 | 520 | Iron Ore ×10 |
-| Master's Test | 14 | 600 | Steel Ingot ×5 |
-| Legend of the Forge | 15 | 800 | Master Forge Blueprint |
-
-**Example quest flow (First Hammer):** Talk to Theron → Basic forging minigame → Return to Theron
+| Quest | Area | Station | Minigames |
+|-------|------|---------|-----------|
+| q01 | The Oathstone Bridge | WoodenCart3_The_Oath_stone_Bridge | letter_ordering |
+| q02 | TowerOfLostVigil | Fire_Camp_Tower_Of_Lost_Vigil | speak_aloud |
+| q03 | The Sunspire Tree | Lost_Chest7_The_Sunspire_Tree | letter_ordering, speak_aloud |
+| q04 | The Weeping Stones | Tomb_Stone_The_Weeping_Stones | letter_ordering, speak_aloud ×12 |
+| q05 | The Last Roar | Lost_Chest6_The_Last_Roar | letter_ordering, word_ordering |
+| q06 | Sanctum of Whispering Light | Lost_Chest4_Sanctum_Of_Whispering_Light | word_matching ×3 |
 
 ---
 
-## 2. Lina's Trade Route
+## 2. English Kingdom — Letter Path
 
-**NPC:** Lina · **Location:** Market Square · **Status:** 1 quest fully designed, 9 drafts
+**NPC:** Teacher Maya · **Levels:** 1–10 · **Status:** Authored with OpenWorld IDs (QuestDefinition SOs not in Unity yet)
 
-| Quest | Level | XP | Key reward |
-|-------|-------|-----|------------|
-| First Sale | 5 | 100 | Merchant's Satchel |
-| Spice Run | 7 | 180 | Rare Spice ×3 |
-| Debt Collection | 9 | 250 | Trade Token ×5 |
-| Market Rivals | 11 | 320 | — |
-| Rare Import | 13 | 400 | Rare Spice ×5 |
-| The Lost Shipment | 15 | 480 | Gold Pouch |
-| Counterfeit Coins | 16 | 520 | Trade Token ×10 |
-| Trade Route | 17 | 560 | — |
-| Merchant's Gamble | 18 | 620 | Gold Pouch ×2 |
-| Empire of Trade | 20 | 900 | Satchel + Gold Pouch ×3 |
-
----
-
-## 3. Captain Marcus's Command
-
-**NPC:** Captain Marcus · **Location:** City Barracks · **Status:** 1 quest fully designed, 9 drafts
-
-| Quest | Level | XP | Key reward |
-|-------|-------|-----|------------|
-| Enlistment | 10 | 200 | Guard Badge |
-| Night Patrol | 12 | 300 | Patrol Map |
-| Bandit Camp | 14 | 380 | — |
-| Missing Scout | 16 | 450 | Patrol Map |
-| Wall Breach | 18 | 520 | Reinforced Shield |
-| Arena Trial | 19 | 560 | — |
-| The Saboteur | 21 | 640 | — |
-| Siege Prep | 22 | 700 | Reinforced Shield |
-| Last Stand | 24 | 780 | — |
-| Captain's Legacy | 25 | 1000 | Captain's Commendation |
-
----
-
-## 4. Elara's Garden Path
-
-**NPC:** Elara · **Location:** Mistwood Outskirts · **Status:** 1 quest fully designed, 9 drafts
-
-| Quest | Level | XP | Key reward |
-|-------|-------|-----|------------|
-| Healing Hands | 3 | 80 | Healing Herb ×5 |
-| Forest Herbs | 5 | 150 | Healing Herb ×10 |
-| Poison Remedy | 7 | 220 | Alchemy Vial |
-| Moonpetal Hunt | 9 | 300 | Moonpetal ×3 |
-| Swamp Samples | 11 | 380 | — |
-| Alchemist's Aid | 12 | 420 | Alchemy Vial ×2 |
-| Rare Bloom | 14 | 500 | Moonpetal ×5 |
-| Plague Cure | 15 | 550 | — |
-| Spirit Tea | 16 | 600 | Healing Herb ×15 |
-| Elara's Secret | 18 | 750 | Elixir Recipe |
-
----
-
-## 5. Vex's Hidden Truth
-
-**NPC:** Vex · **Location:** Appears dynamically · **Status:** 1 quest fully designed, 9 drafts
-
-| Quest | Level | XP | Key reward |
-|-------|-------|-----|------------|
-| A Whisper in the Dark | 15 | 400 | Cryptic Note |
-| The Hidden Door | 17 | 480 | Shadow Key |
-| Shadows Follow | 19 | 560 | — |
-| Cryptic Map | 21 | 640 | Cryptic Note |
-| The Locked Chest | 23 | 720 | — |
-| Names Unspoken | 24 | 760 | Vex Sigil |
-| Mirror Trial | 26 | 840 | — |
-| Sigil of Vex | 27 | 880 | Vex Sigil |
-| The Other Side | 28 | 920 | Shadow Key |
-| Truth Revealed | 30 | 1200 | Ancient Relic |
-
----
-
-## How a quest node expands
-
-Each row above is a **quest node**. Open its YAML file to see the internal steps:
-
-```
-Quest Node                    Quest Steps (inside)
-─────────────────────────────────────────────────────
-First Hammer (Lv 1)     →     1. Talk to Theron
-                              2. Basic forging minigame
-                              3. Return to Theron
+```mermaid
+flowchart LR
+  Q1["A"] --> Q2["B"] --> Q3["C"] --> Q4["D"] --> Q5["E"]
+  Q5 --> Q6["F"] --> Q7["G"] --> Q8["H"] --> Q9["I"] --> Q10["J"]
 ```
 
-Step types are defined once in [`_registry/systems.yaml`](../_registry/systems.yaml): `talk_to_npc`, `play_minigame`, `collect_item`, `deliver_item`, `reach_location`, `defeat_enemy`, etc.
+| Quest | Letter | Area | Station |
+|-------|--------|------|---------|
+| q01 | A | MoonriverCottage | Small_Shop_Moonriver |
+| q02 | B | BuildersHome | Lost_Chest1_BuildersHomeArea |
+| q03 | C | Driftgold Bay | Lost_Chest2_Driftgold_Bay |
+| q04 | D | FairyRosePark | Exam_Table_Fairy_Rose_Park |
+| q05 | E | Forsaken Cove | Lost_Chest3_Forsaken_Cove |
+| q06 | F | KingdomGate | Wooden_Cart1_Inside_Gate |
+| q07 | G | KingdomGate | Exam_Table1_Outside_Gate |
+| q08 | H | Sanctum of Whispering Light | Lost_Chest4_Sanctum_Of_Whispering_Light |
+| q09 | I | SilverFountainCourt | Lost_Chest5_Silver_Fountain_Court |
+| q10 | J | Solitude Tower | WoodenCart2_Solitude_Tower |
 
 ---
 
-## Navigation guide
+## 3. Will the Smith — First Slash
 
-| I want to… | Open |
-|------------|------|
-| See all quests in a line | `questlines/<npc>/_index.yaml` |
-| See quest flow visually | `questlines/<npc>/_graph.mmd` |
-| Edit one quest's steps | `questlines/<npc>/qXX_name.yaml` |
-| Add a new step type | `_registry/systems.yaml` |
-| Add NPC or item | `_registry/npcs.yaml` or `items.yaml` |
+**NPC:** Blacksmith Will · **Levels:** 1 · **Status:** Authored here · **Pattern:** letter_ordering only (CAT / DOG / BIG) · **Unlock:** `slash_ability` on q03
+
+```mermaid
+flowchart LR
+  Q1["Runaway Hammer<br/>CAT · Oak Log"] --> Q2["Snoring Anvil<br/>DOG · Herbs"]
+  Q2 --> Q3["First Real Slash<br/>BIG · Slash Ability"]
+```
+
+| Quest | Word | Area | Station | Reward |
+|-------|------|------|---------|--------|
+| q01 | CAT | Driftgold Bay | Lost_Chest2_Driftgold_Bay | Oak Log delivery |
+| q02 | DOG | BuildersHome | Lost_Chest1_BuildersHomeArea | Herbs delivery |
+| q03 | BIG | KingdomGate | Wooden_Cart1_Inside_Gate | **slash_ability** |
 
 ---
 
-## Progress tracker
+## 4. The Kingdom Book of Nouns
 
-| Questline | Index | Graph | Quest files | Fully designed |
-|-----------|-------|-------|-------------|----------------|
-| Blacksmith | ✅ | ✅ | 10/10 | 3/10 |
-| Merchant | ✅ | ✅ | 10/10 | 1/10 |
-| Guard | ✅ | ✅ | 10/10 | 1/10 |
-| Herbalist | ✅ | ✅ | 10/10 | 1/10 |
-| Mystery | ✅ | ✅ | 10/10 | 1/10 |
+**NPC:** Teacher Maya (hub) · **Levels:** q01 = 50, q02–q07 = 1 · **Status:** Authored here · **Pattern:** EnterArea → letter_ordering → speak_aloud → DeliverItem · **SoftKitty:** gem, power_stone, ancient_rune
 
-**Next step:** Flesh out draft quests using AI — one quest at a time, without loading the full 50.
+Supporting givers: City Gaurd Info, Professor Crazy, Blacksmith, Old Woman, Cannoneer. No `word_matching`.
+
+```mermaid
+flowchart LR
+  Q1["Roles<br/>Lv50 · KING"] --> Q2["Places<br/>Lv1 · CASTLE"]
+  Q2 --> Q3["Treasury<br/>Lv1 · CROWN"]
+  Q3 --> Q4["Armory<br/>Lv1 · SHIELD"]
+  Q4 --> Q5["Court<br/>Lv1 · WIZARD"]
+  Q5 --> Q6["Creatures<br/>Lv1 · DRAGON"]
+  Q6 --> Q7["Trial<br/>Lv1 · REVIEW"]
+```
+
+| Quest | Nouns | Area | Station | Deliverable |
+|-------|-------|------|---------|-------------|
+| q01 | king, queen, knight | SilverFountainCourt | Lost_Chest5_Silver_Fountain_Court | Gem → Teacher Maya |
+| q02 | castle, tower, gate | KingdomGate | Exam_Table1_Outside_Gate | Gem → City Gaurd Info |
+| q03 | crown, throne, treasure | Solitude Tower | WoodenCart2_Solitude_Tower | Power Stone → Professor Crazy |
+| q04 | sword, shield, scroll | The Oathstone Bridge | WoodenCart3_The_Oath_stone_Bridge | Power Stone → Blacksmith |
+| q05 | wizard, cook, guard | TowerOfLostVigil | Fire_Camp_Tower_Of_Lost_Vigil | Power Stone → Old Woman |
+| q06 | dragon, griffin, goblin | Forsaken Cove | Lost_Chest3_Forsaken_Cove | Ancient Rune → Cannoneer |
+| q07 | mixed review | Sanctum of Whispering Light | Lost_Chest4_Sanctum_Of_Whispering_Light | Ancient Rune → Teacher Maya |
+
+---
+
+## Allowed step types (Unity)
+
+| YAML | Unity QuestObjectiveType |
+|------|--------------------------|
+| `talk_to_npc` / `return_to_npc` | TalkToNpc |
+| `reach_location` | EnterArea |
+| `play_minigame` | CompleteMiniGame |
+| `collect_item` | Collect |
+| `deliver_item` | DeliverItem |
+
+## Allowed minigames
+
+`letter_ordering` · `word_ordering` · `word_matching` · `letter_drawing` · `speak_aloud`

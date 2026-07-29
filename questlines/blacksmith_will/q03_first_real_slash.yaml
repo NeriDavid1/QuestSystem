@@ -1,0 +1,28 @@
+quest:
+  id: q03_first_real_slash
+  name: "First Real Slash"
+  level_required: 1
+  giver_npc: Blacksmith
+  prerequisite: q02_snoring_anvil
+  summary: "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability."
+
+rewards:
+  xp: 100
+  items:
+    - id: slash_ability
+      amount: 1
+
+steps:
+  - type: talk_to_npc
+    npc_id: Blacksmith
+    dialogue_id: will_first_slash_start
+  - type: reach_location
+    location_id: KingdomGate
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 1
+    success_required: true
+  - type: return_to_npc
+    npc_id: Blacksmith
+    dialogue_id: will_first_slash_done

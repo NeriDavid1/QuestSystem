@@ -1,0 +1,30 @@
+quest:
+  id: q01_runaway_hammer
+  name: "The Runaway Hammer"
+  level_required: 1
+  giver_npc: Blacksmith
+  prerequisite: null
+  summary: "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log."
+
+rewards: { xp: 50, items: [] }
+
+steps:
+  - type: talk_to_npc
+    npc_id: Blacksmith
+    dialogue_id: will_runaway_hammer_start
+  - type: reach_location
+    location_id: Driftgold Bay
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    reward_item_id: oak_log
+    reward_amount: 1
+  - type: deliver_item
+    npc_id: Blacksmith
+    item_id: oak_log
+    amount: 1
+    dialogue_id: will_runaway_hammer_done
+    reward_item_id: oak_log
+    reward_amount: 1

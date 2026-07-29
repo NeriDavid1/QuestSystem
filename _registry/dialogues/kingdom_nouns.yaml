@@ -1,0 +1,103 @@
+# Dialogue scripts for The Kingdom Book of Nouns questline.
+# Hebrew carries the story and instructions; target nouns remain in English.
+# Learning loop: spell + speak (no word matching).
+
+dialogues:
+  nouns_maya_missing_roles:
+    speaker: teacher_maya
+    lines:
+      - "אסון בספר השמות! שלוש מילים ברחו מן הפרק על אנשי הארמון: מלך, מלכה ואביר."
+      - "בלי השמות האלה באנגלית, המלך לא יודע שהוא <strong>king</strong>, המלכה מחפשת את הכרטיס <strong>queen</strong>, והאביר כבר התיישב על הכיסא של המלך."
+      - "אייתו את המילה מלך באנגלית ליד מזרקת הכסף, ואז אמרו בקול: מלך, מלכה ואביר."
+
+  nouns_maya_roles_restored:
+    speaker: teacher_maya
+    lines:
+      - "מצוין: <strong>king</strong> (מלך), <strong>queen</strong> (מלכה), <strong>knight</strong> (אביר)."
+      - "האביר ירד מן הכס, אבל ביקש לקחת איתו את הכרית. לדבריו, גם אביר ראוי לשבת בנוחות."
+      - "תודה על ה־Gem. המילים האלה יחזרו שוב בהמשך."
+
+  nouns_fenn_mixed_places:
+    speaker: "City Gaurd Info"
+    lines:
+      - "המפה ליד השער השתגעה: הטירה מסומנת כמגדל, המגדל כשער, והשער כטירה."
+      - "נלמד שלושה שמות מקומות באנגלית: טירה היא <strong>castle</strong>, מגדל הוא <strong>tower</strong>, ושער הוא <strong>gate</strong>."
+      - "אייתו את המילה טירה באנגלית ליד שער הממלכה, ואז אמרו בקול: טירה, מגדל ושער."
+
+  nouns_fenn_places_restored:
+    speaker: "City Gaurd Info"
+    lines:
+      - "המפה שוב נכונה: <strong>castle</strong> (טירה), <strong>tower</strong> (מגדל), <strong>gate</strong> (שער)."
+      - "השומרים שכבר טיפסו למגדל במקום להגיע לשער מבקשים שנציב שם דלת. הבקשה עדיין בבדיקה."
+      - "תודה על ה־Gem. תעבירו למאיה שהמפה שוב בסדר — אני כבר סיפרתי לכל העיר."
+
+  nouns_professor_crown_soup:
+    speaker: "Professor Crazy"
+    lines:
+      - "סוף סוף הגעתם! בניסוי שלי איבדתי שלושה שמות חשובים: כתר, כיסא־מלכות ואוצר."
+      - "כתר הוא <strong>crown</strong>, כיסא־מלכות הוא <strong>throne</strong>, ואוצר הוא <strong>treasure</strong>. שמתי קערת מרק על הראש וישבתי על תיבת האוצר — למען המדע!"
+      - "אייתו את המילה כתר באנגלית במגדל הבדידות, ואז אמרו בקול: כתר, כיסא־מלכות ואוצר."
+
+  nouns_professor_treasury_restored:
+    speaker: "Professor Crazy"
+    lines:
+      - "נפלא: <strong>crown</strong> (כתר) על הראש, <strong>throne</strong> (כיסא־מלכות) באולם, ו־<strong>treasure</strong> (אוצר) בכספת."
+      - "קערת המרק חזרה למטבח. היא הייתה קלה יותר מן הכתר, אבל הרבה פחות מלכותית."
+      - "תודה על ה־Power Stone. הניסוי נכשל בהצלחה מסחררת."
+
+  nouns_blacksmith_mixed_equipment:
+    speaker: Blacksmith
+    lines:
+      - "בלגן בנשקייה! המגן משמש כמגש מרק, מנסים לכתוב בעזרת חרב, ומנגבים את השולחן במגילה."
+      - "שלושת השמות באנגלית: חרב היא <strong>sword</strong>, מגן הוא <strong>shield</strong>, ומגילה היא <strong>scroll</strong>."
+      - "אייתו את המילה מגן באנגלית על גשר אבן השבועה, ואז אמרו בקול: חרב, מגן ומגילה."
+
+  nouns_blacksmith_equipment_restored:
+    speaker: Blacksmith
+    lines:
+      - "עבודה טובה: <strong>sword</strong> (חרב), <strong>shield</strong> (מגן), <strong>scroll</strong> (מגילה)."
+      - "המגן שוב מגן, החרב חזרה למעמד, והמגילה ניצלה מן המרק."
+      - "מישהו במטבח התאכזב — לדבריו המגן היה המגש המרשים ביותר. תודה על ה־Power Stone."
+
+  nouns_old_woman_new_roles:
+    speaker: "Old Woman"
+    lines:
+      - "ברוכים הבאים למטבח! לפחות נדמה לי שאני הטבחית... איבדנו את שמות הקוסם, הטבח והשומר."
+      - "הקוסם מערבב מרק עם שרביט, הטבח שומר על השער בעזרת כף, והשומר מנופף במקל וצועק 'קסם!'."
+      - "אייתו את המילה קוסם באנגלית במגדל המשמר האבוד, ואז אמרו בקול: קוסם, טבח ושומר — לפני שהמרק מתחיל לעוף."
+
+  nouns_old_woman_roles_restored:
+    speaker: "Old Woman"
+    lines:
+      - "נזכרתי! אני מגישה חטיפים, לא מערבבת קסמים. בקסם עובד <strong>wizard</strong> (קוסם), במטבח <strong>cook</strong> (טבח), וליד השער <strong>guard</strong> (שומר)."
+      - "השומר הפסיק לנסות קסמים. זה לטובה — בפעם האחרונה הוא הפך את הקסדה שלו לקומקום."
+      - "תודה על ה־Power Stone. קחו גם עוגייה — בלי קסם הפעם."
+
+  nouns_cannoneer_wrong_names:
+    speaker: Cannoneer
+    lines:
+      - "עלבון נורא במפרץ! מישהו הצמיד לדרקון את הכרטיס של גובלין. הוא דרקון מכובד, לא גובלין קטן!"
+      - "הגובלין קיבל את כרטיס הדרקון וכבר דורש טירה ואוצר. הגריפין קיבל שם שגוי ומנסה לנשוף אש."
+      - "אייתו את המילה דרקון באנגלית במפרץ הנטוש, ואז אמרו בקול: דרקון, גריפין וגובלין."
+
+  nouns_cannoneer_names_restored:
+    speaker: Cannoneer
+    lines:
+      - "כך טוב יותר: <strong>dragon</strong> (דרקון), <strong>griffin</strong> (גריפין), <strong>goblin</strong> (גובלין)."
+      - "הגובלין החזיר את כרטיס הדרקון, אבל הוא עדיין מבקש אוצר קטן 'רק לניסיון'."
+      - "תודה על ה־Ancient Rune. בום! עכשיו כולם עם השם הנכון."
+
+  nouns_maya_final_trial:
+    speaker: teacher_maya
+    lines:
+      - "כל דפי הספר נמצאו, אבל הספר ייסגר שוב אם המילים לא באמת נלמדו. הגיע מבחן השמות של הממלכה."
+      - "סדרו באנגלית את הכתיב של כמה מילים מוכרות (מלכה, טירה, כיסא־מלכות, מגן, דרקון), ואז אמרו בקול מילה אחת מכל קבוצה."
+      - "לא נוסיף מילים חדשות. זה הזמן לזכור את האנשים, המקומות, החפצים והיצורים שכבר פגשנו."
+
+  nouns_maya_book_restored:
+    speaker: teacher_maya
+    lines:
+      - "הצלחתם! ספר השמות של הממלכה שלם, וכל מילה חזרה למקום הנכון."
+      - "אתם קוראים ואומרים באנגלית שמות של אנשים, מקומות, חפצים ויצורים מן הממלכה."
+      - "פרופסור משוגע ביקש את הכתר. הזקנה שוב הביאה קערת מרק — הפעם בכוונה. אפילו התותחן צחק."
+      - "קבלו את ה־Ancient Rune ואת מטבעות הסיום. אתם שומרי השמות של הממלכה."

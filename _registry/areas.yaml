@@ -1,0 +1,166 @@
+# Area registry — IDs must match Unity AreaCatalog_OpenWorld exactly.
+# Use these exact id values in reach_location.location_id.
+# status: live_used = referenced by shipped/authored quest steps; catalog_stub = in Unity catalog only.
+
+areas:
+
+  # ── Catalog stubs (Maya alphabet zones; prefer Open World landmarks in authored Maya quests) ──
+
+  q01_runaway_a_zone:
+    name: "Runaway A Zone"
+    status: catalog_stub
+    description: "Catalog stub — Maya q01 uses MoonriverCottage instead."
+
+  q02_bee_garden:
+    name: "Bee Garden"
+    status: catalog_stub
+    description: "Catalog stub — Maya q02 uses BuildersHome instead."
+
+  q03_cat_tree:
+    name: "Cat Tree"
+    status: catalog_stub
+    description: "Catalog stub — Maya q03 uses Driftgold Bay instead."
+
+  q04_dog_house:
+    name: "Dog House"
+    status: catalog_stub
+    description: "Catalog stub — Maya q04 uses FairyRosePark instead."
+
+  q05_garden_gate:
+    name: "Garden Gate"
+    status: catalog_stub
+    description: "Catalog stub — Maya q05 uses Forsaken Cove instead."
+
+  q06_butterfly_garden:
+    name: "Butterfly Garden"
+    status: catalog_stub
+    description: "Catalog stub — Maya q06 uses KingdomGate instead."
+
+  q07_genius_gate:
+    name: "Genius Gate"
+    status: catalog_stub
+    description: "Catalog stub — Maya q07 uses KingdomGate instead."
+
+  q08_hat_location:
+    name: "Hat Location"
+    status: catalog_stub
+    description: "Catalog stub — Maya q08 uses Sanctum of Whispering Light instead."
+
+  q09_letter_island:
+    name: "Letter Island"
+    status: catalog_stub
+    description: "Catalog stub — Maya q09 uses SilverFountainCourt instead."
+
+  q10_graduation_stage:
+    name: "Graduation Stage"
+    status: catalog_stub
+    description: "Catalog stub — Maya q10 uses Solitude Tower instead."
+
+  # ── Open World landmarks (prefer these for shippable quests) ────────────
+
+  TowerOfLostVigil:
+    name: "Tower of Lost Vigil"
+    status: live_used
+    description: "Lonely watchtower with a fire camp for speak-aloud games."
+
+  "The Weeping Stones":
+    name: "The Weeping Stones"
+    status: live_used
+    description: "Quiet stone grounds with tombstones for adjective drills."
+
+  "The Sunspire Tree":
+    name: "The Sunspire Tree"
+    status: live_used
+    description: "Giant sunny tree used for big/small word games."
+
+  "The Oathstone Bridge":
+    name: "The Oathstone Bridge"
+    status: live_used
+    description: "Stone bridge — main spot for short/long bridge quests."
+
+  "The Last Roar":
+    name: "The Last Roar"
+    status: live_used
+    description: "Dramatic cliff area for low/high power-stone games."
+
+  "Solitude Tower":
+    name: "Solitude Tower"
+    status: live_used
+    description: "Tall quiet tower with carts and study spots."
+
+  SilverFountainCourt:
+    name: "Silver Fountain Court"
+    status: live_used
+    description: "Palace court with a silver fountain and lost chests."
+
+  "Sanctum of Whispering Light":
+    name: "Sanctum of Whispering Light"
+    status: live_used
+    description: "Glowing sanctum for final adjective matching challenges."
+
+  MoonriverCottage:
+    name: "Moonriver Cottage"
+    status: live_used
+    description: "Cozy cottage by the moonlit river."
+
+  KingdomGate:
+    name: "Kingdom Gate"
+    status: live_used
+    description: "Main city gate with guards and exam tables."
+
+  "Forsaken Cove":
+    name: "Forsaken Cove"
+    status: live_used
+    description: "Rocky cove with lost chests and sea wind."
+
+  FairyRosePark:
+    name: "Fairy Rose Park"
+    status: live_used
+    description: "Pretty park with roses, exams, and village chores."
+
+  "Driftgold Bay":
+    name: "Driftgold Bay"
+    status: live_used
+    description: "Sunny bay for fishing and riding paths."
+
+  BuildersHome:
+    name: "Builders Home"
+    status: live_used
+    description: "Workshop home for builders, chefs, and smith work."
+
+  # ── Adjective Crown catalog zones (live quests use Open World landmarks above) ──
+
+  adjective_frozen_spring:
+    name: "Frozen Spring"
+    status: catalog_stub
+    description: "Cold spring watched by the Water Man."
+
+  adjective_short_bridge:
+    name: "Short Bridge"
+    status: catalog_stub
+    description: "Short bridge catalog stub — live q01 uses The Oathstone Bridge."
+
+  adjective_mixed_meadow:
+    name: "Mixed Meadow"
+    status: catalog_stub
+    description: "Meadow with mixed animals and grandmother chores."
+
+  adjective_village_gate:
+    name: "Village Gate"
+    status: catalog_stub
+    description: "Village entrance watched by the Village Chief."
+
+  adjective_trade_road:
+    name: "Trade Road"
+    status: catalog_stub
+    description: "Busy road where the Crazy Old Man watches everything."
+
+  adjective_royal_lift:
+    name: "Royal Lift"
+    status: catalog_stub
+    description: "Lift operated by Grandfather."
+
+  adjective_crown_shrine:
+    name: "Crown Shrine"
+    status: catalog_stub
+    description: "Shrine of the Adjective Crown and knight lessons."

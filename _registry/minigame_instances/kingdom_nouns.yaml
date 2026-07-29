@@ -1,0 +1,148 @@
+# Per-step minigame briefs — The Kingdom Book of Nouns.
+# Keys use {quest_id}_s{zero-based step index}.
+# Instructions/tasks use Hebrew meanings; letters and spoken targets stay English.
+
+instances:
+  q01_roles_without_names_s2:
+    instruction: "סדרו את האותיות כדי לשחזר את המילה מלך באנגלית"
+    tasks:
+      - "גררו את האותיות <strong>k, i, n, g</strong> למשבצות"
+      - "התעלמו מאותיות המסיחות"
+      - "קראו את המילה השלמה: <strong>king</strong> — מלך"
+    target: "king"
+    variant: "word_spelling"
+    success: "המילה KING (מלך) חוזרת לדף אנשי המלוכה"
+
+  q01_roles_without_names_s3:
+    instruction: "אמרו באנגלית: מלך, מלכה ואביר"
+    tasks:
+      - "לחצו על Hear it והקשיבו ל־<strong>king</strong>, ואז אמרו king — מלך"
+      - "הקשיבו ל־<strong>queen</strong>, ואז אמרו queen — מלכה"
+      - "הקשיבו ל־<strong>knight</strong>, ואז אמרו knight — אביר (האות K אינה נשמעת)"
+    target: "king, queen, knight"
+    variant: "repeat_after_npc"
+    success: "Gem אחד נוסף לתיק; שלושת שמות המלוכה נשמעו נכון"
+
+  q02_castle_on_the_map_s2:
+    instruction: "סדרו את האותיות כדי לשחזר את המילה טירה באנגלית"
+    tasks:
+      - "גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות"
+      - "התעלמו מאותיות המסיחות"
+      - "קראו את המילה השלמה: <strong>castle</strong> — טירה"
+    target: "castle"
+    variant: "word_spelling"
+    success: "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה"
+
+  q02_castle_on_the_map_s3:
+    instruction: "אמרו באנגלית: טירה, מגדל ושער"
+    tasks:
+      - "הקשיבו ואמרו <strong>castle</strong> — טירה"
+      - "הקשיבו ואמרו <strong>tower</strong> — מגדל"
+      - "הקשיבו ואמרו <strong>gate</strong> — שער"
+    target: "castle, tower, gate"
+    variant: "repeat_after_npc"
+    success: "Gem אחד נוסף לתיק; שלושת שמות המקומות נשמעו נכון"
+
+  q03_crown_soup_s2:
+    instruction: "סדרו את האותיות כדי לשחזר את המילה כתר באנגלית"
+    tasks:
+      - "גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר"
+      - "בדקו שהמילה מתחילה ב־C ומסתיימת ב־N"
+      - "קראו את המילה: <strong>crown</strong> — כתר"
+    target: "crown"
+    variant: "word_spelling"
+    success: "הכתר מקבל בחזרה את הכרטיס CROWN"
+
+  q03_crown_soup_s3:
+    instruction: "אמרו באנגלית: כתר, כיסא־מלכות ואוצר"
+    tasks:
+      - "הקשיבו ואמרו <strong>crown</strong> — כתר"
+      - "הקשיבו ואמרו <strong>throne</strong> — כיסא־מלכות (הצליל TH בתחילת המילה)"
+      - "הקשיבו ואמרו <strong>treasure</strong> — אוצר"
+    target: "crown, throne, treasure"
+    variant: "repeat_after_npc"
+    success: "Power Stone אחד נוסף לתיק; שלושת שמות האוצרות נשמעו נכון"
+
+  q04_soup_shield_s2:
+    instruction: "סדרו את האותיות כדי לשחזר את המילה מגן באנגלית"
+    tasks:
+      - "גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות"
+      - "שימו לב לצירוף <strong>sh</strong> בתחילת המילה"
+      - "קראו את המילה השלמה: <strong>shield</strong> — מגן"
+    target: "shield"
+    variant: "word_spelling"
+    success: "המגן (shield) חוזר להיות מגן במקום מגש מרק"
+
+  q04_soup_shield_s3:
+    instruction: "אמרו באנגלית: חרב, מגן ומגילה"
+    tasks:
+      - "הקשיבו ואמרו <strong>sword</strong> — חרב (האות W אינה נשמעת)"
+      - "הקשיבו ואמרו <strong>shield</strong> — מגן"
+      - "הקשיבו ואמרו <strong>scroll</strong> — מגילה"
+    target: "sword, shield, scroll"
+    variant: "repeat_after_npc"
+    success: "Power Stone אחד נוסף לתיק; שלושת שמות הנשקייה נשמעו נכון"
+
+  q05_wizard_for_sale_s2:
+    instruction: "סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית"
+    tasks:
+      - "גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות"
+      - "התעלמו מאותיות המסיחות"
+      - "קראו את המילה השלמה: <strong>wizard</strong> — קוסם"
+    target: "wizard"
+    variant: "word_spelling"
+    success: "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון"
+
+  q05_wizard_for_sale_s3:
+    instruction: "אמרו באנגלית: קוסם, טבח ושומר"
+    tasks:
+      - "הקשיבו ואמרו <strong>wizard</strong> — קוסם"
+      - "הקשיבו ואמרו <strong>cook</strong> — טבח"
+      - "הקשיבו ואמרו <strong>guard</strong> — שומר"
+    target: "wizard, cook, guard"
+    variant: "repeat_after_npc"
+    success: "Power Stone אחד נוסף לתיק; שלושת שמות אנשי החצר נשמעו נכון"
+
+  q06_dragon_identity_s2:
+    instruction: "סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית"
+    tasks:
+      - "גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות"
+      - "התעלמו מאותיות המסיחות"
+      - "קראו את המילה השלמה: <strong>dragon</strong> — דרקון"
+    target: "dragon"
+    variant: "word_spelling"
+    success: "כרטיס DRAGON (דרקון) חוזר ליצור הנכון"
+
+  q06_dragon_identity_s3:
+    instruction: "אמרו באנגלית: דרקון, גריפין וגובלין"
+    tasks:
+      - "הקשיבו ואמרו <strong>dragon</strong> — דרקון"
+      - "הקשיבו ואמרו <strong>griffin</strong> — גריפין"
+      - "הקשיבו ואמרו <strong>goblin</strong> — גובלין"
+    target: "dragon, griffin, goblin"
+    variant: "repeat_after_npc"
+    success: "Ancient Rune אחד נוסף לתיק; שלושת שמות היצורים נשמעו נכון"
+
+  q07_royal_noun_trial_s2:
+    instruction: "שחזרו באנגלית חמש מילים מוכרות מן הספר"
+    tasks:
+      - "סדרו את המילה מלכה: <strong>queen</strong>"
+      - "סדרו את המילה טירה: <strong>castle</strong>"
+      - "סדרו את המילה כיסא־מלכות: <strong>throne</strong>"
+      - "סדרו את המילה מגן: <strong>shield</strong>"
+      - "סדרו את המילה דרקון: <strong>dragon</strong>"
+    target: "queen, castle, throne, shield, dragon"
+    variant: "word_spelling"
+    success: "חמש המילים חוזרות לעמוד האחרון של הספר"
+
+  q07_royal_noun_trial_s3:
+    instruction: "אמרו באנגלית מילה אחת מכל קבוצה"
+    tasks:
+      - "הקשיבו פעם אחת, ואז אמרו <strong>knight</strong> — אביר"
+      - "אמרו <strong>castle</strong> — טירה"
+      - "אמרו <strong>shield</strong> — מגן"
+      - "אמרו <strong>dragon</strong> — דרקון"
+      - "בשלב האחרון אין שינוי של המילים — רק פחות תמיכה כדי לבדוק זכירה"
+    target: "knight, castle, shield, dragon"
+    variant: "single_word"
+    success: "Ancient Rune אחד נוסף לתיק; ספר ה־nouns של הממלכה נפתח בשלמותו"

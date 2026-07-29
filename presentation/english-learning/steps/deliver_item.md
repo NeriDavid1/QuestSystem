@@ -53,7 +53,8 @@ Best when the item itself is a lesson object (letter, word card).
 ## Pairs well with
 
 - `collect_item` — classic gather → deliver loop
-- `defeat_enemy` — drop → collect → deliver
+- `play_minigame` — earn item as step reward, then deliver
+- `reach_location` — travel to station area before collecting
 
 ## See also
 
