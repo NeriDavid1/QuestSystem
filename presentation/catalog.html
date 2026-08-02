@@ -499,7 +499,7 @@
       card.className = "card" + (focusId && focusId === entry.id ? " selected" : "");
       card.id = "entry-" + encodeURIComponent(entry.id);
 
-      if (activeTab === "areas" || activeTab === "npcs" || activeTab === "interactables") {
+      if (activeTab === "areas" || activeTab === "npcs" || activeTab === "interactables" || activeTab === "items") {
         const thumb = document.createElement("div");
         thumb.className = "thumb";
         const url = imgUrl(entry.image);
@@ -508,6 +508,11 @@
           img.src = url;
           img.alt = entry.name || entry.id;
           img.loading = "lazy";
+          if (activeTab === "items") {
+            thumb.style.background = "#1a2030";
+            img.style.objectFit = "contain";
+            img.style.padding = "12px";
+          }
           thumb.appendChild(img);
         } else {
           thumb.textContent = "No image";

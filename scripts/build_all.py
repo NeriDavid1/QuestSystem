@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Rebuild creator catalog + Hebrew quest presentation."""
+"""Rebuild creator catalog + Hebrew quest presentation.
+
+Optional SoftKitty refresh (needs local Unity project):
+  python scripts/export_softkitty_items.py
+"""
 
 from __future__ import annotations
 

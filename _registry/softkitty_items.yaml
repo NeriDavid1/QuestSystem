@@ -1,0 +1,837 @@
+# SoftKitty inventory items — exported from Unity ItemObject.asset.
+# Keys are SoftKitty uid. softkitty_id is the numeric IdManager id for quests.
+# Do not invent IDs. Re-run: python scripts/export_softkitty_items.py
+
+softkitty_items:
+
+  health_potion(s):
+    image: images/items/health_potion(s).png
+    name: Health Potion(S)
+    softkitty_id: 0
+    softkitty_uid: health_potion(s)
+    type: consumable
+    description: Heal 50 health points.
+
+  health_potion(l):
+    image: images/items/health_potion(l).png
+    name: Health Potion(L)
+    softkitty_id: 1
+    softkitty_uid: health_potion(l)
+    type: consumable
+    description: No description yet.
+
+  energy_potion(s):
+    image: images/items/energy_potion(s).png
+    name: Energy Potion(S)
+    softkitty_id: 2
+    softkitty_uid: energy_potion(s)
+    type: consumable
+    description: Recover 50 stamina points.
+
+  energy_potion(l):
+    image: images/items/energy_potion(l).png
+    name: Energy Potion(L)
+    softkitty_id: 3
+    softkitty_uid: energy_potion(l)
+    type: consumable
+    description: Recover 100 stamina points.
+
+  lucky_fruit:
+    image: images/items/lucky_fruit.png
+    name: Lucky Fruit
+    softkitty_id: 4
+    softkitty_uid: lucky_fruit
+    type: consumable
+    description: Permanent increase Luck for 1 points.
+
+  herbs:
+    image: images/items/herbs.png
+    name: Herbs
+    softkitty_id: 5
+    softkitty_uid: herbs
+    type: consumable
+    description: Permanent increase defence for 1 points.
+
+  iron_ore:
+    image: images/items/iron_ore.png
+    name: Iron Ore
+    softkitty_id: 6
+    softkitty_uid: iron_ore
+    type: material
+    description: Crafting material.
+
+  copper_ore:
+    image: images/items/copper_ore.png
+    name: Copper Ore
+    softkitty_id: 7
+    softkitty_uid: copper_ore
+    type: material
+    description: Crafting material.
+
+  silver_ore:
+    image: images/items/silver_ore.png
+    name: Silver Ore
+    softkitty_id: 8
+    softkitty_uid: silver_ore
+    type: material
+    description: Crafting material.
+
+  gold_ore:
+    image: images/items/gold_ore.png
+    name: Gold Ore
+    softkitty_id: 9
+    softkitty_uid: gold_ore
+    type: material
+    description: Crafting material.
+
+  oak_log:
+    image: images/items/oak_log.png
+    name: Oak Log
+    softkitty_id: 10
+    softkitty_uid: oak_log
+    type: material
+    description: Crafting material.
+
+  walnut_log:
+    image: images/items/walnut_log.png
+    name: Walnut Log
+    softkitty_id: 11
+    softkitty_uid: walnut_log
+    type: material
+    description: Crafting material.
+
+  wolf_skin:
+    image: images/items/wolf_skin.png
+    name: "Wolf's Skin"
+    softkitty_id: 12
+    softkitty_uid: wolf_skin
+    type: material
+    description: Crafting material.
+
+  bear_skin:
+    image: images/items/bear_skin.png
+    name: "Bear's Skin"
+    softkitty_id: 13
+    softkitty_uid: bear_skin
+    type: material
+    description: Crafting material.
+
+  wolf_claw:
+    image: images/items/wolf_claw.png
+    name: "Wolf's Claw"
+    softkitty_id: 14
+    softkitty_uid: wolf_claw
+    type: material
+    description: Crafting material.
+
+  bear_tooth:
+    image: images/items/bear_tooth.png
+    name: "Bear's Tooth"
+    softkitty_id: 15
+    softkitty_uid: bear_tooth
+    type: material
+    description: Crafting material.
+
+  letter:
+    image: images/items/letter.png
+    name: Letter
+    softkitty_id: 16
+    softkitty_uid: letter
+    type: questing
+    description: Quest item.
+
+  gift_for_jenny:
+    image: images/items/gift_for_jenny.png
+    name: Gift For Jenny
+    softkitty_id: 17
+    softkitty_uid: gift_for_jenny
+    type: questing
+    description: Quest item.
+
+  pass_permit:
+    image: images/items/pass_permit.png
+    name: Pass Permit
+    softkitty_id: 18
+    softkitty_uid: pass_permit
+    type: questing
+    description: Quest item.
+
+  strange_egg:
+    image: images/items/strange_egg.png
+    name: Strange Egg
+    softkitty_id: 19
+    softkitty_uid: strange_egg
+    type: questing
+    description: Quest item.
+
+  corn:
+    image: images/items/corn.png
+    name: Corn
+    softkitty_id: 20
+    softkitty_uid: corn
+    type: questing
+    description: Quest item.
+
+  poison:
+    image: images/items/poison.png
+    name: Poison
+    softkitty_id: 21
+    softkitty_uid: poison
+    type: questing
+    description: Quest item.
+
+  monster_head:
+    image: images/items/monster_head.png
+    name: Monster Head
+    softkitty_id: 22
+    softkitty_uid: monster_head
+    type: material
+    description: Quest item.
+
+  monster_meat:
+    image: images/items/monster_meat.png
+    name: Monster Meat
+    softkitty_id: 23
+    softkitty_uid: monster_meat
+    type: material
+    description: Quest item.
+
+  monster_wing:
+    image: images/items/monster_wing.png
+    name: Monster Wing
+    softkitty_id: 24
+    softkitty_uid: monster_wing
+    type: questing
+    description: Quest item.
+
+  monster_skin:
+    image: images/items/monster_skin.png
+    name: Monster Skin
+    softkitty_id: 25
+    softkitty_uid: monster_skin
+    type: questing
+    description: Quest item.
+
+  gem:
+    image: images/items/gem.png
+    name: Gem
+    softkitty_id: 26
+    softkitty_uid: gem
+    type: questing
+    description: Quest item.
+
+  knight_gauntlet_blueprint:
+    image: images/items/knight_gauntlet_blueprint.png
+    name: "Knight's Gauntlet Blueprint"
+    softkitty_id: 27
+    softkitty_uid: knight_gauntlet_blueprint
+    type: material
+    description: Crafting blueprint.
+
+  plate_armor_blueprint:
+    image: images/items/plate_armor_blueprint.png
+    name: Plate Armor Blueprint
+    softkitty_id: 28
+    softkitty_uid: plate_armor_blueprint
+    type: material
+    description: Crafting blueprint.
+
+  great_axe_blueprint:
+    image: images/items/great_axe_blueprint.png
+    name: Great Axe Blueprint
+    softkitty_id: 29
+    softkitty_uid: great_axe_blueprint
+    type: material
+    description: Crafting blueprint.
+
+  knight_helmet_blueprint:
+    image: images/items/knight_helmet_blueprint.png
+    name: "Knight's Helmet Blueprint"
+    softkitty_id: 30
+    softkitty_uid: knight_helmet_blueprint
+    type: material
+    description: Crafting blueprint.
+
+  short_sword:
+    image: images/items/short_sword.png
+    name: Short Sword
+    softkitty_id: 31
+    softkitty_uid: short_sword
+    type: equipment
+    description: Basic sword made with iron.
+
+  long_sword:
+    image: images/items/long_sword.png
+    name: Long Sword
+    softkitty_id: 32
+    softkitty_uid: long_sword
+    type: equipment
+    description: Sharp sword made with copper.
+
+  great_axe:
+    image: images/items/great_axe.png
+    name: Great Axe
+    softkitty_id: 33
+    softkitty_uid: great_axe
+    type: equipment
+    description: "Great sword can destroy anything. {stun}% chance to stun enemy on"
+
+  knight_sword:
+    image: images/items/knight_sword.png
+    name: "Knight's Sword"
+    softkitty_id: 34
+    softkitty_uid: knight_sword
+    type: equipment
+    description: "Fine heavy sword. {stun}% chance to stun enemy on hit."
+
+  king_sword:
+    image: images/items/king_sword.png
+    name: "King's Sword"
+    softkitty_id: 35
+    softkitty_uid: king_sword
+    type: equipment
+    description: "Burning sword with ultimate power.  {stun}% chance to stun enemy"
+
+  shuriken:
+    image: images/items/shuriken.png
+    name: Shuriken
+    softkitty_id: 36
+    softkitty_uid: shuriken
+    type: equipment
+    description: Simple ring made with leather.
+
+  copper_ring:
+    image: images/items/copper_ring.png
+    name: Copper Ring
+    softkitty_id: 37
+    softkitty_uid: copper_ring
+    type: equipment
+    description: Nice copper ring with magical power.
+
+  ancient_ring:
+    image: images/items/ancient_ring.png
+    name: Ancient Ring
+    softkitty_id: 38
+    softkitty_uid: ancient_ring
+    type: equipment
+    description: Legendary magic ring.
+
+  necklace_of_fire:
+    image: images/items/necklace_of_fire.png
+    name: Necklace of Fire
+    softkitty_id: 39
+    softkitty_uid: necklace_of_fire
+    type: equipment
+    description: Necklace with fire power.
+
+  blue_gem_necklace:
+    image: images/items/blue_gem_necklace.png
+    name: Blue Gem Necklace
+    softkitty_id: 40
+    softkitty_uid: blue_gem_necklace
+    type: equipment
+    description: Beauftiful necklace with blue gem.
+
+  red_gem_necklace:
+    image: images/items/red_gem_necklace.png
+    name: Red Gem Necklace
+    softkitty_id: 41
+    softkitty_uid: red_gem_necklace
+    type: equipment
+    description: Beauftiful necklace with red gem.
+
+  leather_armor:
+    image: images/items/leather_armor.png
+    name: Leather Armor
+    softkitty_id: 42
+    softkitty_uid: leather_armor
+    type: equipment
+    description: Leather armor to protect the torso.
+
+  plate_armor:
+    image: images/items/plate_armor.png
+    name: Plate Armor
+    softkitty_id: 43
+    softkitty_uid: plate_armor
+    type: equipment
+    description: Plate armor to protect the torso.
+
+  knight_armor:
+    image: images/items/knight_armor.png
+    name: "Knight's Armor"
+    softkitty_id: 44
+    softkitty_uid: knight_armor
+    type: equipment
+    description: "Knight's plate armor to protect the torso."
+
+  leather_boots:
+    image: images/items/leather_boots.png
+    name: Leather Boots
+    softkitty_id: 45
+    softkitty_uid: leather_boots
+    type: equipment
+    description: Light weight leather boots.
+
+  guard_boots:
+    image: images/items/guard_boots.png
+    name: "Guard's Boots"
+    softkitty_id: 46
+    softkitty_uid: guard_boots
+    type: equipment
+    description: Leather boots with metal pieces.
+
+  knight_boots:
+    image: images/items/knight_boots.png
+    name: "Knight's Boots"
+    softkitty_id: 47
+    softkitty_uid: knight_boots
+    type: equipment
+    description: "Knight's plate armor boots."
+
+  dark_hoods:
+    image: images/items/dark_hoods.png
+    name: Dark Hoods
+    softkitty_id: 48
+    softkitty_uid: dark_hoods
+    type: equipment
+    description: Dark hoods with golden embroider.
+
+  knight_cape:
+    image: images/items/knight_cape.png
+    name: "Knight's Cape"
+    softkitty_id: 49
+    softkitty_uid: knight_cape
+    type: equipment
+    description: Heavy red cape with armor pieces.
+
+  leather_glove:
+    image: images/items/leather_glove.png
+    name: Leather Glove
+    softkitty_id: 50
+    softkitty_uid: leather_glove
+    type: equipment
+    description: Heavy red cape with armor pieces.
+
+  guard_gauntlet:
+    image: images/items/guard_gauntlet.png
+    name: "Guard's Gauntlet"
+    softkitty_id: 51
+    softkitty_uid: guard_gauntlet
+    type: equipment
+    description: Leather gauntlet with metal armor.
+
+  knight_gauntlet:
+    image: images/items/knight_gauntlet.png
+    name: "Knight's Gauntlet"
+    softkitty_id: 52
+    softkitty_uid: knight_gauntlet
+    type: equipment
+    description: Plate armor gauntlet.
+
+  leather_helmet:
+    image: images/items/leather_helmet.png
+    name: Leather Helmet
+    softkitty_id: 53
+    softkitty_uid: leather_helmet
+    type: equipment
+    description: Light weight leather helmet.
+
+  guard_helmet:
+    image: images/items/guard_helmet.png
+    name: "Guard's Helmet"
+    softkitty_id: 54
+    softkitty_uid: guard_helmet
+    type: equipment
+    description: Metal helmet with good protection.
+
+  knight_helmet:
+    image: images/items/knight_helmet.png
+    name: "Knight's Helmet"
+    softkitty_id: 55
+    softkitty_uid: knight_helmet
+    type: equipment
+    description: Plate armor helmet with best protection.
+
+  buckler:
+    image: images/items/buckler.png
+    name: Buckler
+    softkitty_id: 56
+    softkitty_uid: buckler
+    type: equipment
+    description: Small buckler made with leather and woods.
+
+  leather_shield:
+    image: images/items/leather_shield.png
+    name: Leather Shield
+    softkitty_id: 57
+    softkitty_uid: leather_shield
+    type: equipment
+    description: Nice shield made with leather and woods.
+
+  knight_shield:
+    image: images/items/knight_shield.png
+    name: "Knight's Shield"
+    softkitty_id: 58
+    softkitty_uid: knight_shield
+    type: equipment
+    description: Metal shield can block any attack.
+
+  power_stone:
+    image: images/items/power_stone.png
+    name: Power Stone
+    softkitty_id: 59
+    softkitty_uid: power_stone
+    type: material
+    description: Magic stone to enhance your equipments.
+
+  ancient_rune:
+    image: images/items/ancient_rune.png
+    name: Ancient Rune
+    softkitty_id: 60
+    softkitty_uid: ancient_rune
+    type: material
+    description: Magic rune to enhance your equipments.
+
+  enchantment_recipe:
+    image: images/items/enchantment_recipe.png
+    name: Enchantment Recipe
+    softkitty_id: 61
+    softkitty_uid: enchantment_recipe
+    type: material
+    description: Add enchantments to your equipment.
+
+  skill_1:
+    image: images/items/skill_1.png
+    name: Skill 1
+    softkitty_id: 62
+    softkitty_uid: skill_1
+    type: skill
+    description: Example Skill.
+
+  skill_2:
+    image: images/items/skill_2.png
+    name: Skill 2
+    softkitty_id: 63
+    softkitty_uid: skill_2
+    type: skill
+    description: Example Skill.
+
+  skill_3:
+    image: images/items/skill_3.png
+    name: Skill 3
+    softkitty_id: 64
+    softkitty_uid: skill_3
+    type: skill
+    description: Example Skill.
+
+  skill_4:
+    image: images/items/skill_4.png
+    name: Skill 4
+    softkitty_id: 65
+    softkitty_uid: skill_4
+    type: skill
+    description: Example Skill.
+
+  skill_5:
+    image: images/items/skill_5.png
+    name: Skill 5
+    softkitty_id: 66
+    softkitty_uid: skill_5
+    type: skill
+    description: Example Skill.
+
+  skill_6:
+    image: images/items/skill_6.png
+    name: Skill 6
+    softkitty_id: 67
+    softkitty_uid: skill_6
+    type: skill
+    description: Example Skill.
+
+  skill_7:
+    image: images/items/skill_7.png
+    name: Skill 7
+    softkitty_id: 68
+    softkitty_uid: skill_7
+    type: skill
+    description: Example Skill.
+
+  skill_8:
+    image: images/items/skill_8.png
+    name: Skill 8
+    softkitty_id: 69
+    softkitty_uid: skill_8
+    type: skill
+    description: Example Skill.
+
+  skill_9:
+    image: images/items/skill_9.png
+    name: Skill 9
+    softkitty_id: 70
+    softkitty_uid: skill_9
+    type: skill
+    description: Example Skill.
+
+  skill_10:
+    image: images/items/skill_10.png
+    name: Skill 10
+    softkitty_id: 71
+    softkitty_uid: skill_10
+    type: skill
+    description: Example Skill.
+
+  skill_11:
+    image: images/items/skill_11.png
+    name: Skill 11
+    softkitty_id: 72
+    softkitty_uid: skill_11
+    type: skill
+    description: Example Skill.
+
+  skill_12:
+    image: images/items/skill_12.png
+    name: Skill 12
+    softkitty_id: 73
+    softkitty_uid: skill_12
+    type: skill
+    description: Example Skill.
+
+  skill_13:
+    image: images/items/skill_13.png
+    name: Skill 13
+    softkitty_id: 74
+    softkitty_uid: skill_13
+    type: skill
+    description: Example Skill.
+
+  skill_14:
+    image: images/items/skill_14.png
+    name: Skill 14
+    softkitty_id: 75
+    softkitty_uid: skill_14
+    type: skill
+    description: Example Skill.
+
+  skill_15:
+    image: images/items/skill_15.png
+    name: Skill 15
+    softkitty_id: 76
+    softkitty_uid: skill_15
+    type: skill
+    description: Example Skill.
+
+  skill_16:
+    image: images/items/skill_16.png
+    name: Skill 16
+    softkitty_id: 77
+    softkitty_uid: skill_16
+    type: skill
+    description: Example Skill.
+
+  skill_17:
+    image: images/items/skill_17.png
+    name: Skill 17
+    softkitty_id: 78
+    softkitty_uid: skill_17
+    type: skill
+    description: Example Skill.
+
+  skill_18:
+    image: images/items/skill_18.png
+    name: Skill 18
+    softkitty_id: 79
+    softkitty_uid: skill_18
+    type: skill
+    description: Example Skill.
+
+  skill_19:
+    image: images/items/skill_19.png
+    name: Skill 19
+    softkitty_id: 80
+    softkitty_uid: skill_19
+    type: skill
+    description: Example Skill.
+
+  skill_20:
+    image: images/items/skill_20.png
+    name: Skill 20
+    softkitty_id: 81
+    softkitty_uid: skill_20
+    type: skill
+    description: Example Skill.
+
+  skill_21:
+    image: images/items/skill_21.png
+    name: Skill 21
+    softkitty_id: 82
+    softkitty_uid: skill_21
+    type: skill
+    description: Example Skill.
+
+  skill_22:
+    image: images/items/skill_22.png
+    name: Skill 22
+    softkitty_id: 83
+    softkitty_uid: skill_22
+    type: skill
+    description: Example Skill.
+
+  skill_23:
+    image: images/items/skill_23.png
+    name: Skill 23
+    softkitty_id: 84
+    softkitty_uid: skill_23
+    type: skill
+    description: Example Skill.
+
+  skill_24:
+    image: images/items/skill_24.png
+    name: Skill 24
+    softkitty_id: 85
+    softkitty_uid: skill_24
+    type: skill
+    description: Example Skill.
+
+  health_potion(l)_recipe:
+    image: images/items/health_potion(l)_recipe.png
+    name: Health Potion(L) Recipe
+    softkitty_id: 86
+    softkitty_uid: health_potion(l)_recipe
+    type: material
+    description: Example Skill.
+
+  gem_of_strengh:
+    image: images/items/gem_of_strengh.png
+    name: Gem of Strengh
+    softkitty_id: 87
+    softkitty_uid: gem_of_strengh
+    type: material
+    description: Sockets on equipment to enchance its abilities.
+
+  gem_of_speed:
+    image: images/items/gem_of_speed.png
+    name: Gem of Speed
+    softkitty_id: 88
+    softkitty_uid: gem_of_speed
+    type: material
+    description: Sockets on equipment to enchance its abilities.
+
+  gem_of_life:
+    image: images/items/gem_of_life.png
+    name: Gem of Life
+    softkitty_id: 89
+    softkitty_uid: gem_of_life
+    type: material
+    description: Sockets on equipment to enchance its abilities.
+
+  gem_of_precision:
+    image: images/items/gem_of_precision.png
+    name: Gem of Precision
+    softkitty_id: 90
+    softkitty_uid: gem_of_precision
+    type: material
+    description: Sockets on equipment to enchance its abilities.
+
+  ability_owl:
+    image: images/items/ability_owl.png
+    name: Owl
+    softkitty_id: 92
+    softkitty_uid: ability_owl
+    type: skill
+    description: Transform into an owl.
+
+  ability_bunny:
+    image: images/items/ability_bunny.png
+    name: Bunny
+    softkitty_id: 93
+    softkitty_uid: ability_bunny
+    type: skill
+    description: Transform into a bunny.
+
+  ability_cat:
+    image: images/items/ability_cat.png
+    name: Cat
+    softkitty_id: 94
+    softkitty_uid: ability_cat
+    type: skill
+    description: Transform into a cat.
+
+  ability_dance:
+    image: images/items/ability_dance.png
+    name: Dance
+    softkitty_id: 95
+    softkitty_uid: ability_dance
+    type: skill
+    description: Hip-hop dance until you move.
+
+  ability_magic_bolt:
+    image: images/items/ability_magic_bolt.png
+    name: Magic Bolt
+    softkitty_id: 96
+    softkitty_uid: ability_magic_bolt
+    type: skill
+    description: Fires a magic bolt in front of you.
+
+  ability_magic_nova:
+    image: images/items/ability_magic_nova.png
+    name: PurpleNova
+    softkitty_id: 97
+    softkitty_uid: ability_magic_nova
+    type: skill
+    description: Unleashes purple magic in all directions around you.
+
+  ability_magic_slash:
+    image: images/items/ability_magic_slash.png
+    name: Magic Slash
+    softkitty_id: 98
+    softkitty_uid: ability_magic_slash
+    type: skill
+    description: A close-range magic slash in front of you.
+
+  ability_ice_crystals:
+    image: images/items/ability_ice_crystals.png
+    name: Ice Crystals
+    softkitty_id: 100
+    softkitty_uid: ability_ice_crystals
+    type: skill
+    description: Summons a sweeping cone of crystals that damages enemies in front
+
+  ability_ice_burst:
+    image: images/items/ability_ice_burst.png
+    name: IceBurst
+    softkitty_id: 101
+    softkitty_uid: ability_ice_burst
+    type: skill
+    description: Releases an explosive ring of ice crystals around you.
+
+  ability_red_energy_explosion:
+    image: images/items/ability_red_energy_explosion.png
+    name: Red Energy Explosion
+    softkitty_id: 102
+    softkitty_uid: ability_red_energy_explosion
+    type: skill
+    description: Unleashes a radial blast of red energy around you.
+
+  ability_red_nova:
+    image: images/items/ability_red_nova.png
+    name: RedNova
+    softkitty_id: 103
+    softkitty_uid: ability_red_nova
+    type: skill
+    description: Unleashes a powerful red nova in all directions around you.
+
+  ability_blue_nova:
+    image: images/items/ability_blue_nova.png
+    name: BlueNova
+    softkitty_id: 104
+    softkitty_uid: ability_blue_nova
+    type: skill
+    description: Unleashes the most powerful nova in all directions around you.
+
+  ability_meteor_shower:
+    image: images/items/ability_meteor_shower.png
+    name: Meteor Shower
+    softkitty_id: 105
+    softkitty_uid: ability_meteor_shower
+    type: skill
+    description: Calls down a powerful meteor shower on an area in front of you.

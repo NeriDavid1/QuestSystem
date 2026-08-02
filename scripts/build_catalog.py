@@ -200,11 +200,32 @@ def serialize_minigames(raw: dict) -> list[dict]:
     return games
 
 
+def merge_items() -> dict:
+    """Quest items.yaml overlaid on SoftKitty export (softkitty_items.yaml)."""
+    soft = load_yaml(REGISTRY / "softkitty_items.yaml").get("softkitty_items") or {}
+    quest = load_yaml(REGISTRY / "items.yaml").get("items") or {}
+    merged: dict = {}
+    for key, meta in soft.items():
+        merged[str(key)] = dict(meta) if isinstance(meta, dict) else {"name": str(meta)}
+    for key, meta in quest.items():
+        q = dict(meta) if isinstance(meta, dict) else {"name": str(meta)}
+        if str(key) in merged:
+            # Preserve SoftKitty image/ids unless quest explicitly sets them
+            base = merged[str(key)]
+            for k, v in q.items():
+                if v is not None and v != "":
+                    base[k] = v
+            merged[str(key)] = base
+        else:
+            merged[str(key)] = q
+    return merged
+
+
 def build_payload() -> dict:
     areas_raw = load_yaml(REGISTRY / "areas.yaml").get("areas") or {}
     npcs_raw = load_yaml(REGISTRY / "npcs.yaml").get("npcs") or {}
     inter_raw = load_yaml(REGISTRY / "interactables.yaml").get("interactables") or {}
-    items_raw = load_yaml(REGISTRY / "items.yaml").get("items") or {}
+    items_raw = merge_items()
     minigames_raw = load_yaml(REGISTRY / "minigames.yaml").get("minigames") or {}
     systems = load_yaml(REGISTRY / "systems.yaml")
     mapping = load_yaml(REGISTRY / "unity_mapping.yaml")
@@ -212,7 +233,7 @@ def build_payload() -> dict:
     areas = build_entries(areas_raw, "areas")
     npcs = build_entries(npcs_raw, "npcs")
     interactables = build_entries(inter_raw, "interactables")
-    items = build_entries(items_raw, None)
+    items = build_entries(items_raw, "items")
     minigames = serialize_minigames(minigames_raw)
     step_types = serialize_step_types(systems.get("step_types") or {})
 
@@ -233,6 +254,7 @@ def build_payload() -> dict:
             "areas_with_image": sum(1 for e in areas if e.get("image")),
             "npcs_with_image": sum(1 for e in npcs if e.get("image")),
             "interactables_with_image": sum(1 for e in interactables if e.get("image")),
+            "items_with_image": sum(1 for e in items if e.get("image")),
         },
         "areas": areas,
         "npcs": npcs,
@@ -259,13 +281,15 @@ def sync_presentation_images() -> int:
 
 
 def main() -> None:
-    for sub in ("areas", "npcs", "interactables"):
+    for sub in ("areas", "npcs", "interactables", "items"):
         (IMAGES / sub).mkdir(parents=True, exist_ok=True)
 
     # Sync YAML image fields from disk first so subsequent loads see them
     sync_yaml_images(REGISTRY / "areas.yaml", "areas", "areas")
     sync_yaml_images(REGISTRY / "npcs.yaml", "npcs", "npcs")
     sync_yaml_images(REGISTRY / "interactables.yaml", "interactables", "interactables")
+    if (REGISTRY / "softkitty_items.yaml").exists():
+        sync_yaml_images(REGISTRY / "softkitty_items.yaml", "softkitty_items", "items")
 
     payload = build_payload()
     sync_presentation_images()
@@ -300,7 +324,7 @@ def main() -> None:
     )
     write_gallery_md(
         "Items",
-        None,
+        "items",
         payload["items"],
         REGISTRY / "items.md",
         extra_columns=[
@@ -325,7 +349,8 @@ def main() -> None:
         f"areas {c['areas']} ({c['areas_with_image']} img),",
         f"npcs {c['npcs']} ({c['npcs_with_image']} img),",
         f"interactables {c['interactables']} ({c['interactables_with_image']} img),",
-        f"items {c['items']}, minigames {c['minigames']}, steps {c['step_types']}",
+        f"items {c['items']} ({c.get('items_with_image', 0)} img),",
+        f"minigames {c['minigames']}, steps {c['step_types']}",
     )
 
 

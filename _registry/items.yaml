@@ -1,6 +1,9 @@
 # Item registry — inventoriable shippable rewards need softkitty_id.
 # SoftKitty IDs come from Unity Assets/_ThirdParty/SoftKitty/Data/ItemObject.asset.
+# Full SoftKitty catalog (all items + icons): softkitty_items.yaml
+#   Re-export: python scripts/export_softkitty_items.py
 # Do not invent new SoftKitty items without adding them in Unity first.
+# Creator catalog merges softkitty_items.yaml + this file (this file wins on conflicts).
 
 items:
 

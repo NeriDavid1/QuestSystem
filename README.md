@@ -56,7 +56,7 @@ Interactive: **[catalog.html](presentation/catalog.html)** · Markdown galleries
 | Areas | [`_registry/areas.yaml`](_registry/areas.yaml) | [`areas.md`](_registry/areas.md) |
 | NPCs | [`_registry/npcs.yaml`](_registry/npcs.yaml) | [`npcs.md`](_registry/npcs.md) |
 | Interactables | [`_registry/interactables.yaml`](_registry/interactables.yaml) | [`interactables.md`](_registry/interactables.md) |
-| Items | [`_registry/items.yaml`](_registry/items.yaml) | [`items.md`](_registry/items.md) |
+| Items | [`_registry/items.yaml`](_registry/items.yaml) + [`softkitty_items.yaml`](_registry/softkitty_items.yaml) | [`items.md`](_registry/items.md) |
 | Minigames | [`_registry/minigames.yaml`](_registry/minigames.yaml) | [`minigames.md`](_registry/minigames.md) |
 | Step types | [`_registry/systems.yaml`](_registry/systems.yaml) | (see catalog → Step types) |
 | Unity map | [`_registry/unity_mapping.yaml`](_registry/unity_mapping.yaml) | — |
