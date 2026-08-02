@@ -27,8 +27,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build presentation
-        run: python scripts/build_presentation.py
+      - name: Build creator catalog + Hebrew viewer
+        run: python scripts/build_all.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
