@@ -254,7 +254,7 @@ def sync_presentation_images() -> int:
         return 0
     shutil.copytree(IMAGES, PRESENTATION_IMAGES)
     count = sum(1 for _ in PRESENTATION_IMAGES.rglob("*.png"))
-    print(f"synced {count} PNGs → presentation/images/")
+    print(f"synced {count} PNGs -> presentation/images/")
     return count
 
 
