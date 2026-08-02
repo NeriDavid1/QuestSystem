@@ -61,7 +61,18 @@ Interactive: **[catalog.html](presentation/catalog.html)** · Markdown galleries
 | Step types | [`_registry/systems.yaml`](_registry/systems.yaml) | (see catalog → Step types) |
 | Unity map | [`_registry/unity_mapping.yaml`](_registry/unity_mapping.yaml) | — |
 
-Pictures live in `_registry/images/{areas,npcs,interactables}/` named by catalog **id**.
+Pictures live in `_registry/images/{areas,npcs,interactables,items}/` named by catalog **id** (SoftKitty **uid** for items).
+
+### SoftKitty item icons
+
+Full inventory icons are exported from the Unity project:
+
+```bash
+python scripts/export_softkitty_items.py
+python scripts/build_catalog.py
+```
+
+Writes `_registry/softkitty_items.yaml` + `_registry/images/items/*.png` (shown in the Items tab).
 
 ### ID rules
 
@@ -84,12 +95,13 @@ Pictures live in `_registry/images/{areas,npcs,interactables}/` named by catalog
 
 ```
 _registry/          Shared definitions + picture galleries
-  images/           PNGs by catalog id (areas, npcs, interactables)
+  images/           PNGs by catalog id (areas, npcs, interactables, items)
+  softkitty_items.yaml  Full SoftKitty inventory (uid + softkitty_id + icons)
 questlines/         One folder per quest line
 presentation/       Interactive HTML (catalog + Hebrew quest map)
   catalog.html      Creator knowledge browser
   viewer.html       Boss quest map (עברית)
-scripts/            build_catalog.py · build_presentation.py · build_all.py
+scripts/            build_catalog.py · export_softkitty_items.py · build_presentation.py · build_all.py
 ```
 
 ## Refreshing catalog pictures
