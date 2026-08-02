@@ -169,6 +169,7 @@ interactables:
     description: "Shop station at Moonriver Cottage."
 
   Lost_Chest7_The_Sunspire_Tree:
+    image: images/interactables/Lost_Chest7_The_Sunspire_Tree.png
     name: "Lost Chest 7"
     kind: minigame
     status: live_used
@@ -176,6 +177,7 @@ interactables:
     description: "Chest station at The Sunspire Tree (big/small games)."
 
   WoodenCart3_The_Oath_stone_Bridge:
+    image: images/interactables/WoodenCart3_The_Oath_stone_Bridge.png
     name: "Wooden Cart 3"
     kind: minigame
     status: live_used
@@ -183,6 +185,7 @@ interactables:
     description: "Cart station on The Oathstone Bridge (LONG spelling)."
 
   Lost_Chest6_The_Last_Roar:
+    image: images/interactables/Lost_Chest6_The_Last_Roar.png
     name: "Lost Chest 6"
     kind: minigame
     status: live_used
@@ -190,6 +193,7 @@ interactables:
     description: "Chest station at The Last Roar (low/high games)."
 
   Lost_Chest1_BuildersHomeArea:
+    image: images/interactables/Lost_Chest1_BuildersHomeArea.png
     name: "Lost Chest 1"
     kind: minigame
     status: live_used
@@ -197,6 +201,7 @@ interactables:
     description: "Chest station at Builders Home."
 
   Lost_Chest2_Driftgold_Bay:
+    image: images/interactables/Lost_Chest2_Driftgold_Bay.png
     name: "Lost Chest 2"
     kind: minigame
     status: live_used
@@ -204,6 +209,7 @@ interactables:
     description: "Chest station at Driftgold Bay."
 
   Exam_Table_Fairy_Rose_Park:
+    image: images/interactables/Exam_Table_Fairy_Rose_Park.png
     name: "Exam Table"
     kind: minigame
     status: live_used
@@ -211,6 +217,7 @@ interactables:
     description: "Exam table in Fairy Rose Park."
 
   Fire_Camp_Tower_Of_Lost_Vigil:
+    image: images/interactables/Fire_Camp_Tower_Of_Lost_Vigil.png
     name: "Fire Camp"
     kind: minigame
     status: live_used
@@ -218,6 +225,7 @@ interactables:
     description: "Fire camp at Tower of Lost Vigil (HOT speaking)."
 
   Tomb_Stone_The_Weeping_Stones:
+    image: images/interactables/Tomb_Stone_The_Weeping_Stones.png
     name: "Tomb Stone"
     kind: minigame
     status: live_used
@@ -225,6 +233,7 @@ interactables:
     description: "Tombstone station for twelve basic adjectives."
 
   Lost_Chest3_Forsaken_Cove:
+    image: images/interactables/Lost_Chest3_Forsaken_Cove.png
     name: "Lost Chest 3"
     kind: minigame
     status: live_used
@@ -232,6 +241,7 @@ interactables:
     description: "Chest station at Forsaken Cove."
 
   Wooden_Cart1_Inside_Gate:
+    image: images/interactables/Wooden_Cart1_Inside_Gate.png
     name: "Wooden Cart 1"
     kind: minigame
     status: live_used
@@ -239,6 +249,7 @@ interactables:
     description: "Cart station inside the Kingdom Gate."
 
   Exam_Table1_Outside_Gate:
+    image: images/interactables/Exam_Table1_Outside_Gate.png
     name: "Exam Table 1"
     kind: minigame
     status: live_used
@@ -246,6 +257,7 @@ interactables:
     description: "Exam table outside the Kingdom Gate."
 
   Lost_Chest4_Sanctum_Of_Whispering_Light:
+    image: images/interactables/Lost_Chest4_Sanctum_Of_Whispering_Light.png
     name: "Lost Chest 4"
     kind: minigame
     status: live_used
@@ -253,6 +265,7 @@ interactables:
     description: "Chest station for the final adjective challenge."
 
   Lost_Chest5_Silver_Fountain_Court:
+    image: images/interactables/Lost_Chest5_Silver_Fountain_Court.png
     name: "Lost Chest 5"
     kind: minigame
     status: live_used
@@ -260,6 +273,7 @@ interactables:
     description: "Chest station at Silver Fountain Court."
 
   WoodenCart2_Solitude_Tower:
+    image: images/interactables/WoodenCart2_Solitude_Tower.png
     name: "Wooden Cart 2"
     kind: minigame
     status: live_used

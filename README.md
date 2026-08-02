@@ -2,58 +2,110 @@
 
 Authoring workspace for English-learning Open World quests. Synced to Unity `QuestWorldCatalogSet_OpenWorld`.
 
-## Quick start
+## Start here
 
-| Audience | Start here |
-|----------|------------|
-| Boss / interactive map (online) | **[Open Viewer](https://neridavid1.github.io/QuestSystem/)** — GitHub Pages |
-| Boss / interactive map (local) | [`presentation/viewer.html`](presentation/viewer.html) — double-click to open |
-| Boss / overview (text) | [`presentation/overview.md`](presentation/overview.md) |
-| **English-learning design** | [`presentation/english-learning/README.md`](presentation/english-learning/README.md) |
-| Author a quest | [`_registry/`](_registry/) → pick questline → edit one quest file |
-| AI authoring | Cursor reads [`.cursor/rules/quest-authoring.mdc`](.cursor/rules/quest-authoring.mdc) automatically |
-| Unity map | [`_registry/unity_mapping.yaml`](_registry/unity_mapping.yaml) |
+| Who | Open this |
+|-----|-----------|
+| **Quest creators (you)** | **[Creator catalog](https://neridavid1.github.io/QuestSystem/catalog.html)** — searchable Areas / NPCs / Interactables (with pictures), Items, Minigames, Step types |
+| Creators (local) | [`presentation/catalog.html`](presentation/catalog.html) or double-click [`presentation/OPEN_CATALOG.bat`](presentation/OPEN_CATALOG.bat) |
+| Boss / stakeholders (עברית) | **[Quest map](https://neridavid1.github.io/QuestSystem/viewer.html)** · local [`presentation/viewer.html`](presentation/viewer.html) |
+| Landing page | [`presentation/index.html`](presentation/index.html) |
+
+After changing registry YAML or capturing new pictures, rebuild:
+
+```bash
+pip install -r requirements.txt
+python scripts/build_catalog.py      # creator catalog + galleries
+# or: python scripts/build_all.py   # catalog + Hebrew quest viewer
+```
+
+## How to write a quest
+
+1. Browse the **[Creator catalog](presentation/catalog.html)** and copy exact IDs (prefer `live_used` over `catalog_stub`).
+2. Open the target questline folder under [`questlines/`](questlines/).
+3. Add `qXX_<snake_name>.yaml` using an existing quest in that line as the format reference.
+4. Use only step types from [`_registry/systems.yaml`](_registry/systems.yaml).
+5. Update that line’s `_index.yaml` and `_graph.mmd`.
+
+### Canonical live pattern (Adjective Crown)
+
+```yaml
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: ...
+- type: reach_location
+  location_id: The Oathstone Bridge
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: WoodenCart3_The_Oath_stone_Bridge
+  difficulty: 1
+  reward_item_id: oak_log
+  reward_amount: 1
+- type: deliver_item
+  npc_id: teacher_maya
+  item_id: oak_log
+  amount: 1
+```
+
+## World catalog (all knowledge)
+
+Interactive: **[catalog.html](presentation/catalog.html)** · Markdown galleries (GitHub-friendly):
+
+| Catalog | YAML (source) | Gallery |
+|---------|---------------|---------|
+| Areas | [`_registry/areas.yaml`](_registry/areas.yaml) | [`areas.md`](_registry/areas.md) |
+| NPCs | [`_registry/npcs.yaml`](_registry/npcs.yaml) | [`npcs.md`](_registry/npcs.md) |
+| Interactables | [`_registry/interactables.yaml`](_registry/interactables.yaml) | [`interactables.md`](_registry/interactables.md) |
+| Items | [`_registry/items.yaml`](_registry/items.yaml) | [`items.md`](_registry/items.md) |
+| Minigames | [`_registry/minigames.yaml`](_registry/minigames.yaml) | [`minigames.md`](_registry/minigames.md) |
+| Step types | [`_registry/systems.yaml`](_registry/systems.yaml) | (see catalog → Step types) |
+| Unity map | [`_registry/unity_mapping.yaml`](_registry/unity_mapping.yaml) | — |
+
+Pictures live in `_registry/images/{areas,npcs,interactables}/` named by catalog **id**.
+
+### ID rules
+
+- `npc_id`, `location_id`, `world_object_id` must be **exact** Unity catalog IDs (spaces allowed — copy them).
+- Prefer `status: live_used` over `catalog_stub`.
+- `play_minigame.world_object_id` = world station (chest/cart/camp/table), **not** a minigame type name.
+- SoftKitty deliverables need `softkitty_id` in `items.yaml`.
+- Never invent NPCs, areas, stations, or minigame types.
+
+## Quest lines
+
+| Folder | Giver NPC | Status |
+|--------|-----------|--------|
+| `adjective_crown` | `teacher_maya` | **Live in Unity** |
+| `english_kingdom_maya` | `teacher_maya` | Authored here (no QuestDefinition SOs yet) |
+| `blacksmith_will` | `Blacksmith` | Authored here (Slash unlock) |
+| `kingdom_nouns` | `teacher_maya` | Authored here (nouns / SoftKitty loop) |
 
 ## Folder layout
 
 ```
-_registry/          Shared definitions (systems, NPCs, areas, interactables, items, minigames)
-questlines/         english_kingdom_maya + adjective_crown only
-presentation/       Boss-facing summary and graphs
-  english-learning/ Step & minigame design docs
+_registry/          Shared definitions + picture galleries
+  images/           PNGs by catalog id (areas, npcs, interactables)
+questlines/         One folder per quest line
+presentation/       Interactive HTML (catalog + Hebrew quest map)
+  catalog.html      Creator knowledge browser
+  viewer.html       Boss quest map (עברית)
+scripts/            build_catalog.py · build_presentation.py · build_all.py
 ```
 
-World IDs in `_registry/npcs.yaml`, `areas.yaml`, and `interactables.yaml` mirror Unity `QuestWorldCatalogSet_OpenWorld`.
+## Refreshing catalog pictures
 
-## Quest lines
+From the English Kingdom Unity project (OpenWorld scene open):
 
-| Folder | NPC | Quests | Status |
-|--------|-----|--------|--------|
-| `adjective_crown` | Teacher Maya | 6 | **Live in Unity** |
-| `english_kingdom_maya` | Teacher Maya | 10 | Authored here (OpenWorld IDs; QuestDefinition SOs not yet) |
+1. **Tools → English Kingdom → Quests → Capture Catalog Screenshots**
+2. Set output folder to this repo’s `_registry/images`
+3. Capture Selected / Capture All
+4. Run `python scripts/build_catalog.py` to refresh galleries + `catalog-data.json`
 
-## Authoring workflow
+## AI authoring
 
-1. Use only IDs from `_registry/` (OpenWorld catalogs).
-2. Prefer the Adjective Crown pattern: `reach_location` → `play_minigame` → `deliver_item`.
-3. Add or edit a quest in `questlines/<line>/qXX_name.yaml`.
-4. Update that questline's `_index.yaml` and `_graph.mmd`.
+Cursor reads [`.cursor/rules/quest-authoring.mdc`](.cursor/rules/quest-authoring.mdc) automatically. Prefer the Creator catalog / gallery markdown for visual context when choosing IDs.
 
-## Interactive presentation (עברית)
-
-1. Edit quest YAML files as usual.
-2. Rebuild the viewer:
-   ```bash
-   pip install -r requirements.txt
-   python scripts/build_presentation.py
-   ```
-3. Open `presentation/viewer.html` in your browser (double-click `OPEN_VIEWER.bat`).
-
-Hebrew text lives in:
-- `presentation/locale/he.yaml` — UI strings
-- `_registry/locale/he-content.yaml` — quest names, NPCs, items, summaries
-
-## AI prompt example
+### Prompt example
 
 ```
 Using _registry/systems.yaml and unity_mapping.yaml, add quest q07 to adjective_crown:
@@ -68,3 +120,11 @@ talk to teacher_maya → reach The Last Roar → letter_ordering on Lost_Chest6_
 - One quest = one YAML file
 - Index files stay high-level — no step detail
 - SoftKitty deliverables need `softkitty_id` in `items.yaml`
+
+## Hebrew presentation rebuild
+
+```bash
+python scripts/build_presentation.py
+```
+
+Hebrew strings: `presentation/locale/he.yaml`, `_registry/locale/he-content.yaml`.

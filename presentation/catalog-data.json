@@ -1,0 +1,1200 @@
+{
+  "title": "Quest Creator Catalog",
+  "subtitle": "Open World IDs for authoring — synced to QuestWorldCatalogSet_OpenWorld",
+  "canonical_pattern": "# EnterArea → CompleteMiniGame (+ SoftKitty step reward) → DeliverItem\n- type: reach_location\n  location_id: The Oathstone Bridge\n- type: play_minigame\n  minigame_id: letter_ordering\n  world_object_id: WoodenCart3_The_Oath_stone_Bridge\n  difficulty: 1\n  reward_item_id: oak_log\n  reward_amount: 1\n- type: deliver_item\n  npc_id: teacher_maya\n  item_id: oak_log\n  amount: 1\n",
+  "source_of_truth": {
+    "catalog_set": "QuestWorldCatalogSet_OpenWorld",
+    "unity_path": "Assets/_OurAssets/Data/Quests/Lines/OpenWorld/Catalogs/",
+    "catalogs": {
+      "npcs": "NpcCatalog_OpenWorld.asset",
+      "areas": "AreaCatalog_OpenWorld.asset",
+      "interactables": "InteractableCatalog_OpenWorld.asset",
+      "quests": "QuestCatalog_OpenWorld.asset"
+    }
+  },
+  "counts": {
+    "areas": 31,
+    "npcs": 29,
+    "interactables": 40,
+    "items": 19,
+    "minigames": 5,
+    "step_types": 6,
+    "areas_with_image": 15,
+    "npcs_with_image": 22,
+    "interactables_with_image": 14
+  },
+  "areas": [
+    {
+      "name": "Crown Shrine",
+      "status": "catalog_stub",
+      "description": "Shrine of the Adjective Crown and knight lessons.",
+      "id": "adjective_crown_shrine"
+    },
+    {
+      "name": "Frozen Spring",
+      "status": "catalog_stub",
+      "description": "Cold spring watched by the Water Man.",
+      "id": "adjective_frozen_spring"
+    },
+    {
+      "name": "Mixed Meadow",
+      "status": "catalog_stub",
+      "description": "Meadow with mixed animals and grandmother chores.",
+      "id": "adjective_mixed_meadow"
+    },
+    {
+      "name": "Royal Lift",
+      "status": "catalog_stub",
+      "description": "Lift operated by Grandfather.",
+      "id": "adjective_royal_lift"
+    },
+    {
+      "name": "Short Bridge",
+      "status": "catalog_stub",
+      "description": "Short bridge catalog stub — live q01 uses The Oathstone Bridge.",
+      "id": "adjective_short_bridge"
+    },
+    {
+      "name": "Trade Road",
+      "status": "catalog_stub",
+      "description": "Busy road where the Crazy Old Man watches everything.",
+      "id": "adjective_trade_road"
+    },
+    {
+      "name": "Village Gate",
+      "status": "catalog_stub",
+      "description": "Village entrance watched by the Village Chief.",
+      "id": "adjective_village_gate"
+    },
+    {
+      "image": "images/areas/BuildersHome.png",
+      "name": "Builders Home",
+      "status": "live_used",
+      "description": "Workshop home for builders, chefs, and smith work.",
+      "id": "BuildersHome"
+    },
+    {
+      "image": "images/areas/Driftgold Bay.png",
+      "name": "Driftgold Bay",
+      "status": "live_used",
+      "description": "Sunny bay for fishing and riding paths.",
+      "id": "Driftgold Bay"
+    },
+    {
+      "image": "images/areas/FairyRosePark.png",
+      "name": "Fairy Rose Park",
+      "status": "live_used",
+      "description": "Pretty park with roses, exams, and village chores.",
+      "id": "FairyRosePark"
+    },
+    {
+      "image": "images/areas/Forsaken Cove.png",
+      "name": "Forsaken Cove",
+      "status": "live_used",
+      "description": "Rocky cove with lost chests and sea wind.",
+      "id": "Forsaken Cove"
+    },
+    {
+      "image": "images/areas/KingdomGate.png",
+      "name": "Kingdom Gate",
+      "status": "live_used",
+      "description": "Main city gate with guards and exam tables.",
+      "id": "KingdomGate"
+    },
+    {
+      "image": "images/areas/MoonriverCottage.png",
+      "name": "Moonriver Cottage",
+      "status": "live_used",
+      "description": "Cozy cottage by the moonlit river.",
+      "id": "MoonriverCottage"
+    },
+    {
+      "image": "images/areas/q01_runaway_a_zone.png",
+      "name": "Runaway A Zone",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q01 uses MoonriverCottage instead.",
+      "id": "q01_runaway_a_zone"
+    },
+    {
+      "name": "Bee Garden",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q02 uses BuildersHome instead.",
+      "id": "q02_bee_garden"
+    },
+    {
+      "name": "Cat Tree",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q03 uses Driftgold Bay instead.",
+      "id": "q03_cat_tree"
+    },
+    {
+      "name": "Dog House",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q04 uses FairyRosePark instead.",
+      "id": "q04_dog_house"
+    },
+    {
+      "name": "Garden Gate",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q05 uses Forsaken Cove instead.",
+      "id": "q05_garden_gate"
+    },
+    {
+      "name": "Butterfly Garden",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q06 uses KingdomGate instead.",
+      "id": "q06_butterfly_garden"
+    },
+    {
+      "name": "Genius Gate",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q07 uses KingdomGate instead.",
+      "id": "q07_genius_gate"
+    },
+    {
+      "name": "Hat Location",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q08 uses Sanctum of Whispering Light instead.",
+      "id": "q08_hat_location"
+    },
+    {
+      "name": "Letter Island",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q09 uses SilverFountainCourt instead.",
+      "id": "q09_letter_island"
+    },
+    {
+      "name": "Graduation Stage",
+      "status": "catalog_stub",
+      "description": "Catalog stub — Maya q10 uses Solitude Tower instead.",
+      "id": "q10_graduation_stage"
+    },
+    {
+      "image": "images/areas/Sanctum of Whispering Light.png",
+      "name": "Sanctum of Whispering Light",
+      "status": "live_used",
+      "description": "Glowing sanctum for final adjective matching challenges.",
+      "id": "Sanctum of Whispering Light"
+    },
+    {
+      "image": "images/areas/SilverFountainCourt.png",
+      "name": "Silver Fountain Court",
+      "status": "live_used",
+      "description": "Palace court with a silver fountain and lost chests.",
+      "id": "SilverFountainCourt"
+    },
+    {
+      "image": "images/areas/Solitude Tower.png",
+      "name": "Solitude Tower",
+      "status": "live_used",
+      "description": "Tall quiet tower with carts and study spots.",
+      "id": "Solitude Tower"
+    },
+    {
+      "image": "images/areas/The Last Roar.png",
+      "name": "The Last Roar",
+      "status": "live_used",
+      "description": "Dramatic cliff area for low/high power-stone games.",
+      "id": "The Last Roar"
+    },
+    {
+      "image": "images/areas/The Oathstone Bridge.png",
+      "name": "The Oathstone Bridge",
+      "status": "live_used",
+      "description": "Stone bridge — main spot for short/long bridge quests.",
+      "id": "The Oathstone Bridge"
+    },
+    {
+      "image": "images/areas/The Sunspire Tree.png",
+      "name": "The Sunspire Tree",
+      "status": "live_used",
+      "description": "Giant sunny tree used for big/small word games.",
+      "id": "The Sunspire Tree"
+    },
+    {
+      "image": "images/areas/The Weeping Stones.png",
+      "name": "The Weeping Stones",
+      "status": "live_used",
+      "description": "Quiet stone grounds with tombstones for adjective drills.",
+      "id": "The Weeping Stones"
+    },
+    {
+      "image": "images/areas/TowerOfLostVigil.png",
+      "name": "Tower of Lost Vigil",
+      "status": "live_used",
+      "description": "Lonely watchtower with a fire camp for speak-aloud games.",
+      "id": "TowerOfLostVigil"
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Crazy Old Man",
+      "title": "Crazy Old Man",
+      "location": "adjective_trade_road",
+      "description": "Odd old man who notices every strange thing on the road.",
+      "id": "adjective_crazy_old_man"
+    },
+    {
+      "name": "Grandfather",
+      "title": "Grandfather",
+      "location": "adjective_royal_lift",
+      "description": "Gentle grandfather who runs the royal lift.",
+      "id": "adjective_grandfather"
+    },
+    {
+      "name": "Grandmother",
+      "title": "Grandmother",
+      "location": "adjective_mixed_meadow",
+      "description": "Kind grandmother who cares for meadow animals and corn.",
+      "id": "adjective_grandmother"
+    },
+    {
+      "name": "Adjective Knight",
+      "title": "Adjective Knight",
+      "location": "adjective_crown_shrine",
+      "description": "Brave knight who teaches describing words like big, hot, and slow.",
+      "id": "adjective_knight"
+    },
+    {
+      "name": "Village Chief",
+      "title": "Village Chief",
+      "location": "adjective_village_gate",
+      "description": "Village leader who keeps the gate safe and tidy.",
+      "id": "adjective_village_chief"
+    },
+    {
+      "name": "Water Man",
+      "title": "Water Man",
+      "location": "adjective_frozen_spring",
+      "description": "Quiet helper who watches springs and water paths.",
+      "id": "adjective_water_man"
+    },
+    {
+      "image": "images/npcs/Benny the Builder.png",
+      "name": "Benny the Builder",
+      "title": "Builder",
+      "location": "BuildersHome",
+      "description": "Hard-working builder who always needs more wood and help.",
+      "id": "Benny the Builder"
+    },
+    {
+      "image": "images/npcs/Blacksmith.png",
+      "name": "Will The Smith",
+      "title": "Blacksmith",
+      "location": "BuildersHome",
+      "description": "Friendly smith who fixes tools and loves loud hammering.",
+      "id": "Blacksmith"
+    },
+    {
+      "image": "images/npcs/Cannoneer.png",
+      "name": "Cannoneer",
+      "title": "Cannoneer",
+      "location": "Forsaken Cove",
+      "description": "Loud cannoneer who guards the cove and loves big booms.",
+      "id": "Cannoneer"
+    },
+    {
+      "image": "images/npcs/City Gaurd Info.png",
+      "name": "Fenn the Chatty",
+      "title": "City Guard",
+      "location": "KingdomGate",
+      "description": "Talkative guard who knows every rumor in town.",
+      "id": "City Gaurd Info"
+    },
+    {
+      "image": "images/npcs/Farmer.png",
+      "name": "Farmer",
+      "title": "Farmer",
+      "location": "FairyRosePark",
+      "description": "Simple farmer who needs help with animals and fields.",
+      "id": "Farmer"
+    },
+    {
+      "image": "images/npcs/Farmer V2.png",
+      "name": "Farmer V2",
+      "title": "Farmer",
+      "location": "FairyRosePark",
+      "description": "Busy farmer with crops that always need saving.",
+      "id": "Farmer V2"
+    },
+    {
+      "image": "images/npcs/Fisherman.png",
+      "name": "Nemo the Netless",
+      "title": "Fisherman",
+      "location": "Driftgold Bay",
+      "description": "Fisherman who keeps losing his nets and asking for help.",
+      "id": "Fisherman"
+    },
+    {
+      "image": "images/npcs/Flight Guide.png",
+      "name": "Flight Guide",
+      "title": "Flight Guide",
+      "location": "The Sunspire Tree",
+      "description": "Guide who helps kids learn flying routes around the tree.",
+      "id": "Flight Guide"
+    },
+    {
+      "image": "images/npcs/Ghost.png",
+      "name": "Boo Radcliff",
+      "title": "Ghost",
+      "location": "The Weeping Stones",
+      "description": "Friendly ghost who haunts quiet places and loves surprises.",
+      "id": "Ghost"
+    },
+    {
+      "image": "images/npcs/Little Boy.png",
+      "name": "Little Boy",
+      "title": "Child",
+      "location": "FairyRosePark",
+      "description": "Curious boy who loses toys and asks lots of questions.",
+      "id": "Little Boy"
+    },
+    {
+      "image": "images/npcs/Little Girl.png",
+      "name": "Little Girl",
+      "title": "Child",
+      "location": "FairyRosePark",
+      "description": "Playful girl who starts small scavenger hunts.",
+      "id": "Little Girl"
+    },
+    {
+      "image": "images/npcs/Main Gate Gaurd 1.png",
+      "name": "Tomlin the Yawner",
+      "title": "Gate Guard",
+      "location": "KingdomGate",
+      "description": "Sleepy gate guard who still somehow spots trouble.",
+      "id": "Main Gate Gaurd 1"
+    },
+    {
+      "image": "images/npcs/Main Gate Gaurd 2.png",
+      "name": "Garrick the Unmoving",
+      "title": "Gate Guard",
+      "location": "KingdomGate",
+      "description": "Serious guard who almost never leaves his post.",
+      "id": "Main Gate Gaurd 2"
+    },
+    {
+      "image": "images/npcs/Mountain Guide.png",
+      "name": "Mountain Guide",
+      "title": "Mountain Guide",
+      "location": "TowerOfLostVigil",
+      "description": "Guide who knows the high paths and lonely towers.",
+      "id": "Mountain Guide"
+    },
+    {
+      "image": "images/npcs/Old Man.png",
+      "name": "Old Man",
+      "title": "Old Man",
+      "location": "MoonriverCottage",
+      "description": "Wise old man who sits by the cottage and tells short stories.",
+      "id": "Old Man"
+    },
+    {
+      "image": "images/npcs/Old Woman.png",
+      "name": "Old Woman",
+      "title": "Old Woman",
+      "location": "MoonriverCottage",
+      "description": "Warm old woman who shares snacks and simple advice.",
+      "id": "Old Woman"
+    },
+    {
+      "name": "Painter",
+      "title": "Painter",
+      "location": "The Sunspire Tree",
+      "description": "Dreamy painter looking for colors and word ideas.",
+      "id": "Painter"
+    },
+    {
+      "image": "images/npcs/Professor Crazy.png",
+      "name": "Professor Crazy",
+      "title": "Professor",
+      "location": "Solitude Tower",
+      "description": "Wild professor with big ideas and messy experiments.",
+      "id": "Professor Crazy"
+    },
+    {
+      "image": "images/npcs/Riding Guide.png",
+      "name": "Riding Guide",
+      "title": "Riding Guide",
+      "location": "Driftgold Bay",
+      "description": "Guide who teaches safe riding near the bay paths.",
+      "id": "Riding Guide"
+    },
+    {
+      "image": "images/npcs/Secondary Gate Main.png",
+      "name": "Secondary Gate Main",
+      "title": "Gate Captain",
+      "location": "KingdomGate",
+      "description": "Senior guard in charge of the side gate.",
+      "id": "Secondary Gate Main"
+    },
+    {
+      "image": "images/npcs/Secondary Gate Soldier.png",
+      "name": "Secondary Gate Soldier",
+      "title": "Gate Soldier",
+      "location": "KingdomGate",
+      "description": "Young soldier watching the side gate.",
+      "id": "Secondary Gate Soldier"
+    },
+    {
+      "image": "images/npcs/teacher_maya.png",
+      "name": "Teacher Maya",
+      "title": "English Teacher",
+      "location": "Alphabet Plaza",
+      "description": "Cheerful teacher who sends kids on letter and word adventures.",
+      "id": "teacher_maya"
+    },
+    {
+      "image": "images/npcs/Village Head.png",
+      "name": "Village Head",
+      "title": "Village Head",
+      "location": "FairyRosePark",
+      "description": "Friendly village head who organizes local chores.",
+      "id": "Village Head"
+    }
+  ],
+  "interactables": [
+    {
+      "name": "Small Guardian",
+      "kind": "collectible",
+      "status": "catalog_stub",
+      "description": "Catalog collectible — no DefeatEnemy objective in live system.",
+      "id": "adjective_small_guardian"
+    },
+    {
+      "name": "Small Zombie",
+      "kind": "collectible",
+      "status": "catalog_stub",
+      "description": "Catalog collectible — no DefeatEnemy objective in live system.",
+      "id": "adjective_small_zombie"
+    },
+    {
+      "image": "images/interactables/Exam_Table1_Outside_Gate.png",
+      "name": "Exam Table 1",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "KingdomGate",
+      "description": "Exam table outside the Kingdom Gate.",
+      "id": "Exam_Table1_Outside_Gate"
+    },
+    {
+      "image": "images/interactables/Exam_Table_Fairy_Rose_Park.png",
+      "name": "Exam Table",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "FairyRosePark",
+      "description": "Exam table in Fairy Rose Park.",
+      "id": "Exam_Table_Fairy_Rose_Park"
+    },
+    {
+      "image": "images/interactables/Fire_Camp_Tower_Of_Lost_Vigil.png",
+      "name": "Fire Camp",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "TowerOfLostVigil",
+      "description": "Fire camp at Tower of Lost Vigil (HOT speaking).",
+      "id": "Fire_Camp_Tower_Of_Lost_Vigil"
+    },
+    {
+      "name": "Draw Letter A",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Small_Shop_Moonriver.",
+      "id": "letter_drawing_a"
+    },
+    {
+      "name": "Draw Letter B",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Lost_Chest1_BuildersHomeArea.",
+      "id": "letter_drawing_b"
+    },
+    {
+      "name": "Draw Letter C",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Lost_Chest2_Driftgold_Bay.",
+      "id": "letter_drawing_c"
+    },
+    {
+      "name": "Draw Letter F",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Wooden_Cart1_Inside_Gate.",
+      "id": "letter_drawing_f"
+    },
+    {
+      "name": "Draw Letter J",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower.",
+      "id": "letter_drawing_j"
+    },
+    {
+      "name": "Adjective spelling test",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic adjective spelling stub.",
+      "id": "letter_ordering_adjective_crown"
+    },
+    {
+      "name": "Spell EGG",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Lost_Chest3_Forsaken_Cove.",
+      "id": "letter_ordering_egg"
+    },
+    {
+      "name": "Spell HAT",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Lost_Chest4_Sanctum_Of_Whispering_Light.",
+      "id": "letter_ordering_h"
+    },
+    {
+      "name": "Spell ISLAND",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.",
+      "id": "letter_ordering_i"
+    },
+    {
+      "name": "Choose word LIGHT",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic letter-ordering stub.",
+      "id": "letter_ordering_light"
+    },
+    {
+      "name": "Spell word LONG",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — live q01 uses WoodenCart3_The_Oath_stone_Bridge.",
+      "id": "letter_ordering_long"
+    },
+    {
+      "name": "Spell word SLOW",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic letter-ordering stub.",
+      "id": "letter_ordering_slow"
+    },
+    {
+      "name": "Spell word SMALL",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — live q03 uses Lost_Chest7_The_Sunspire_Tree.",
+      "id": "letter_ordering_small"
+    },
+    {
+      "image": "images/interactables/Lost_Chest1_BuildersHomeArea.png",
+      "name": "Lost Chest 1",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "BuildersHome",
+      "description": "Chest station at Builders Home.",
+      "id": "Lost_Chest1_BuildersHomeArea"
+    },
+    {
+      "image": "images/interactables/Lost_Chest2_Driftgold_Bay.png",
+      "name": "Lost Chest 2",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "Driftgold Bay",
+      "description": "Chest station at Driftgold Bay.",
+      "id": "Lost_Chest2_Driftgold_Bay"
+    },
+    {
+      "image": "images/interactables/Lost_Chest3_Forsaken_Cove.png",
+      "name": "Lost Chest 3",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "Forsaken Cove",
+      "description": "Chest station at Forsaken Cove.",
+      "id": "Lost_Chest3_Forsaken_Cove"
+    },
+    {
+      "image": "images/interactables/Lost_Chest4_Sanctum_Of_Whispering_Light.png",
+      "name": "Lost Chest 4",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "Sanctum of Whispering Light",
+      "description": "Chest station for the final adjective challenge.",
+      "id": "Lost_Chest4_Sanctum_Of_Whispering_Light"
+    },
+    {
+      "image": "images/interactables/Lost_Chest5_Silver_Fountain_Court.png",
+      "name": "Lost Chest 5",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "SilverFountainCourt",
+      "description": "Chest station at Silver Fountain Court.",
+      "id": "Lost_Chest5_Silver_Fountain_Court"
+    },
+    {
+      "image": "images/interactables/Lost_Chest6_The_Last_Roar.png",
+      "name": "Lost Chest 6",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "The Last Roar",
+      "description": "Chest station at The Last Roar (low/high games).",
+      "id": "Lost_Chest6_The_Last_Roar"
+    },
+    {
+      "image": "images/interactables/Lost_Chest7_The_Sunspire_Tree.png",
+      "name": "Lost Chest 7",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "The Sunspire Tree",
+      "description": "Chest station at The Sunspire Tree (big/small games).",
+      "id": "Lost_Chest7_The_Sunspire_Tree"
+    },
+    {
+      "name": "Mystery Egg",
+      "kind": "collectible",
+      "status": "catalog_stub",
+      "description": "Collectible catalog stub.",
+      "id": "mystery_egg"
+    },
+    {
+      "name": "Small Sheep",
+      "kind": "collectible",
+      "status": "catalog_stub",
+      "description": "Small sheep collectible stub.",
+      "id": "small_sheep"
+    },
+    {
+      "name": "Small Shop",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "MoonriverCottage",
+      "description": "Shop station at Moonriver Cottage.",
+      "id": "Small_Shop_Moonriver"
+    },
+    {
+      "name": "Spoken adjective test",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic spoken adjective stub.",
+      "id": "speak_aloud_adjective_crown"
+    },
+    {
+      "name": "Speak word HOT",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — live q02 uses Fire_Camp_Tower_Of_Lost_Vigil.",
+      "id": "speak_aloud_hot"
+    },
+    {
+      "name": "Speak Letter J",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower.",
+      "id": "speak_aloud_j"
+    },
+    {
+      "name": "Speak word SLOW",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic speak-aloud stub.",
+      "id": "speak_aloud_slow"
+    },
+    {
+      "image": "images/interactables/Tomb_Stone_The_Weeping_Stones.png",
+      "name": "Tomb Stone",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "The Weeping Stones",
+      "description": "Tombstone station for twelve basic adjectives.",
+      "id": "Tomb_Stone_The_Weeping_Stones"
+    },
+    {
+      "image": "images/interactables/Wooden_Cart1_Inside_Gate.png",
+      "name": "Wooden Cart 1",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "KingdomGate",
+      "description": "Cart station inside the Kingdom Gate.",
+      "id": "Wooden_Cart1_Inside_Gate"
+    },
+    {
+      "image": "images/interactables/WoodenCart2_Solitude_Tower.png",
+      "name": "Wooden Cart 2",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "Solitude Tower",
+      "description": "Cart station at Solitude Tower.",
+      "id": "WoodenCart2_Solitude_Tower"
+    },
+    {
+      "image": "images/interactables/WoodenCart3_The_Oath_stone_Bridge.png",
+      "name": "Wooden Cart 3",
+      "kind": "minigame",
+      "status": "live_used",
+      "area": "The Oathstone Bridge",
+      "description": "Cart station on The Oathstone Bridge (LONG spelling).",
+      "id": "WoodenCart3_The_Oath_stone_Bridge"
+    },
+    {
+      "name": "Adjective matching test",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — live q06 uses Lost_Chest4_Sanctum_Of_Whispering_Light.",
+      "id": "word_matching_adjective_crown"
+    },
+    {
+      "name": "Match DOG Letters",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Exam_Table_Fairy_Rose_Park.",
+      "id": "word_matching_d"
+    },
+    {
+      "name": "Genius Gate Words",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Exam_Table1_Outside_Gate.",
+      "id": "word_matching_g"
+    },
+    {
+      "name": "Letter Island Match",
+      "kind": "minigame",
+      "status": "catalog_stub",
+      "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.",
+      "id": "word_matching_i"
+    }
+  ],
+  "items": [
+    {
+      "name": "Ancient Rune",
+      "type": "material",
+      "softkitty_id": 60,
+      "softkitty_uid": "ancient_rune",
+      "max_stack": 99,
+      "id": "ancient_rune"
+    },
+    {
+      "name": "Coin",
+      "type": "currency",
+      "id": "coin"
+    },
+    {
+      "name": "Corn",
+      "type": "material",
+      "softkitty_id": 20,
+      "softkitty_uid": "corn",
+      "max_stack": 99,
+      "id": "corn"
+    },
+    {
+      "name": "Gem",
+      "type": "material",
+      "softkitty_id": 26,
+      "softkitty_uid": "gem",
+      "max_stack": 99,
+      "id": "gem"
+    },
+    {
+      "name": "Herbs",
+      "type": "material",
+      "softkitty_id": 5,
+      "softkitty_uid": "herbs",
+      "max_stack": 99,
+      "id": "herbs"
+    },
+    {
+      "name": "Letter A",
+      "type": "quest_item",
+      "id": "letter_a"
+    },
+    {
+      "name": "Letter B",
+      "type": "quest_item",
+      "id": "letter_b"
+    },
+    {
+      "name": "Letter C",
+      "type": "quest_item",
+      "id": "letter_c"
+    },
+    {
+      "name": "Letter D",
+      "type": "quest_item",
+      "id": "letter_d"
+    },
+    {
+      "name": "Letter E",
+      "type": "quest_item",
+      "id": "letter_e"
+    },
+    {
+      "name": "Letter F",
+      "type": "quest_item",
+      "id": "letter_f"
+    },
+    {
+      "name": "Letter G",
+      "type": "quest_item",
+      "id": "letter_g"
+    },
+    {
+      "name": "Letter H",
+      "type": "quest_item",
+      "id": "letter_h"
+    },
+    {
+      "name": "Letter I",
+      "type": "quest_item",
+      "id": "letter_i"
+    },
+    {
+      "name": "Letter J",
+      "type": "quest_item",
+      "id": "letter_j"
+    },
+    {
+      "name": "Oak Log",
+      "type": "material",
+      "softkitty_id": 10,
+      "softkitty_uid": "oak_log",
+      "max_stack": 99,
+      "id": "oak_log"
+    },
+    {
+      "name": "Power Stone",
+      "type": "material",
+      "softkitty_id": 59,
+      "softkitty_uid": "power_stone",
+      "max_stack": 99,
+      "id": "power_stone"
+    },
+    {
+      "name": "Slash Ability",
+      "type": "ability_unlock",
+      "ability_id": "slash",
+      "description": "Unlocks the Slash combat ability when granted as a quest reward.",
+      "id": "slash_ability"
+    },
+    {
+      "name": "Word Hero Badge",
+      "type": "accessory",
+      "id": "word_hero_badge"
+    }
+  ],
+  "minigames": [
+    {
+      "name": "Letter Drawing",
+      "unity_config": "DrawingQuestConfigSO",
+      "unity_content": "LetterPathSO",
+      "category": "motor_skills",
+      "description": "Trace or draw an English letter on screen.",
+      "english_focus": "Letter formation, stroke order",
+      "difficulty_range": [
+        1,
+        4
+      ],
+      "content_fields": [
+        "letter",
+        "strokes",
+        "previewImage",
+        "clip"
+      ],
+      "variants": [
+        "trace_guided",
+        "free_draw"
+      ],
+      "typical_stations": [
+        "shop",
+        "chest",
+        "cart"
+      ],
+      "id": "letter_drawing"
+    },
+    {
+      "name": "Letter Ordering",
+      "unity_config": "LetterOrderingQuestConfigSO",
+      "unity_content": "LetterOrderingDataSO",
+      "category": "spelling",
+      "description": "Arrange scrambled letter tiles to spell a target English word.",
+      "english_focus": "Spelling, letter recognition",
+      "difficulty_range": [
+        1,
+        6
+      ],
+      "content_fields": [
+        "prompt",
+        "targetWord",
+        "extraDistractorCount",
+        "customDistractors",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "word_spelling"
+      ],
+      "typical_stations": [
+        "chest",
+        "cart",
+        "tombstone",
+        "exam_table"
+      ],
+      "id": "letter_ordering"
+    },
+    {
+      "name": "Speak Aloud",
+      "unity_config": "SpeakAloudQuestConfigSO",
+      "unity_content": "SpeakAloudDataSO",
+      "category": "pronunciation",
+      "description": "Say an English word or phrase; speech recognition validates it.",
+      "english_focus": "Pronunciation, spoken production",
+      "difficulty_range": [
+        4,
+        10
+      ],
+      "content_fields": [
+        "prompt",
+        "targetWords",
+        "targetPhrase",
+        "silenceTimeoutSeconds",
+        "allowFuzzyMatch",
+        "referenceClip",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "single_word",
+        "short_phrase"
+      ],
+      "typical_stations": [
+        "fire_camp",
+        "cart",
+        "chest"
+      ],
+      "requires_microphone": true,
+      "id": "speak_aloud"
+    },
+    {
+      "name": "Word Matching",
+      "unity_config": "LineMatchQuestConfigSO",
+      "unity_content": "LetterConnectionLevelConfigSO",
+      "category": "vocabulary",
+      "description": "Match English words/fragments (includes opposite pairing / Line Match).",
+      "english_focus": "Vocabulary, missing-letter recognition, opposites",
+      "difficulty_range": [
+        1,
+        8
+      ],
+      "content_fields": [
+        "letters",
+        "wordTasks"
+      ],
+      "variants": [
+        "word_to_image",
+        "letter_to_gap",
+        "opposite_pairing"
+      ],
+      "typical_stations": [
+        "chest",
+        "exam_table"
+      ],
+      "id": "word_matching"
+    },
+    {
+      "name": "Word Ordering",
+      "unity_config": "WordOrderingQuestConfigSO",
+      "unity_content": "WordOrderingDataSO",
+      "category": "grammar",
+      "description": "Arrange scrambled English word tiles into a complete sentence.",
+      "english_focus": "Sentence structure, adjective placement",
+      "difficulty_range": [
+        2,
+        10
+      ],
+      "content_fields": [
+        "prompt",
+        "englishWordsInOrder",
+        "preFilledIndices",
+        "distractorWords",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "sentence_building"
+      ],
+      "typical_stations": [
+        "chest",
+        "cart",
+        "exam_table"
+      ],
+      "id": "word_ordering"
+    }
+  ],
+  "step_types": [
+    {
+      "id": "talk_to_npc",
+      "unity_objective": "TalkToNpc",
+      "description": "Player initiates dialogue with an NPC",
+      "fields": [
+        {
+          "name": "npc_id",
+          "type": "string",
+          "required": true,
+          "ref": "npcs.yaml"
+        },
+        {
+          "name": "dialogue_id",
+          "type": "string",
+          "required": true,
+          "ref": "_registry/dialogues/"
+        },
+        {
+          "name": "optional_flag",
+          "type": "string",
+          "required": false,
+          "description": "Sets a story flag after dialogue"
+        }
+      ]
+    },
+    {
+      "id": "return_to_npc",
+      "unity_objective": "TalkToNpc",
+      "description": "Player returns to an NPC to turn in or continue",
+      "fields": [
+        {
+          "name": "npc_id",
+          "type": "string",
+          "required": true,
+          "ref": "npcs.yaml"
+        },
+        {
+          "name": "dialogue_id",
+          "type": "string",
+          "required": true,
+          "ref": "_registry/dialogues/"
+        }
+      ]
+    },
+    {
+      "id": "play_minigame",
+      "unity_objective": "CompleteMiniGame",
+      "description": "Start and complete a minigame on a world station",
+      "fields": [
+        {
+          "name": "minigame_id",
+          "type": "string",
+          "required": true,
+          "ref": "minigames.yaml",
+          "description": "One of the 5 Unity minigame types"
+        },
+        {
+          "name": "world_object_id",
+          "type": "string",
+          "required": true,
+          "ref": "interactables.yaml",
+          "description": "Exact Open World station gameId (chest/cart/camp/table)"
+        },
+        {
+          "name": "difficulty",
+          "type": "integer",
+          "required": true,
+          "min": 1,
+          "max": 10
+        },
+        {
+          "name": "success_required",
+          "type": "boolean",
+          "required": false,
+          "default": true
+        },
+        {
+          "name": "instance_id",
+          "type": "string",
+          "required": false,
+          "ref": "_registry/minigame_instances/",
+          "description": "Override auto key {quest_id}_s{step_index}"
+        },
+        {
+          "name": "reward_item_id",
+          "type": "string",
+          "required": false,
+          "ref": "items.yaml",
+          "description": "SoftKitty inventory item granted after success (needs softkitty_id)"
+        },
+        {
+          "name": "reward_amount",
+          "type": "integer",
+          "required": false,
+          "min": 1,
+          "default": 1
+        }
+      ]
+    },
+    {
+      "id": "collect_item",
+      "unity_objective": "Collect",
+      "description": "Gather items from the world or drops",
+      "fields": [
+        {
+          "name": "item_id",
+          "type": "string",
+          "required": true,
+          "ref": "items.yaml"
+        },
+        {
+          "name": "amount",
+          "type": "integer",
+          "required": true,
+          "min": 1
+        }
+      ]
+    },
+    {
+      "id": "deliver_item",
+      "unity_objective": "DeliverItem",
+      "description": "Bring items to an NPC (SoftKitty consume on live quests)",
+      "fields": [
+        {
+          "name": "npc_id",
+          "type": "string",
+          "required": true,
+          "ref": "npcs.yaml"
+        },
+        {
+          "name": "item_id",
+          "type": "string",
+          "required": true,
+          "ref": "items.yaml"
+        },
+        {
+          "name": "amount",
+          "type": "integer",
+          "required": true,
+          "min": 1
+        },
+        {
+          "name": "dialogue_id",
+          "type": "string",
+          "required": false,
+          "ref": "_registry/dialogues/"
+        }
+      ]
+    },
+    {
+      "id": "reach_location",
+      "unity_objective": "EnterArea",
+      "description": "Player must enter a trigger zone",
+      "fields": [
+        {
+          "name": "location_id",
+          "type": "string",
+          "required": true,
+          "ref": "areas.yaml",
+          "description": "Exact Unity area ID from AreaCatalog_OpenWorld"
+        },
+        {
+          "name": "radius",
+          "type": "float",
+          "required": false,
+          "default": 5.0
+        }
+      ]
+    }
+  ]
+}

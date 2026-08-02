@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quest Creator Catalog — Open World IDs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0c0e14;
+      --surface: #141824;
+      --surface2: #1c2233;
+      --border: #2a3348;
+      --text: #eef1f8;
+      --muted: #8b95a8;
+      --accent: #6c8cff;
+      --ok: #3ecf8e;
+      --warn: #e6a23c;
+      --radius: 14px;
+      --shadow: 0 12px 40px rgba(0,0,0,.45);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(108,140,255,.12), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(62,207,142,.06), transparent);
+    }
+
+    header {
+      padding: 1.1rem 1.75rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(20,24,36,.9);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    h1 { font-size: 1.35rem; font-weight: 700; }
+    .subtitle { color: var(--muted); font-size: .88rem; margin-top: .2rem; max-width: 42rem; }
+
+    .header-links {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: .85rem;
+      padding: .35rem .7rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface2);
+    }
+    .header-links a:hover { border-color: var(--accent); }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+    }
+
+    .tab {
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--muted);
+      font: inherit;
+      font-size: .85rem;
+      font-weight: 600;
+      padding: .4rem .85rem;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .tab:hover { color: var(--text); }
+    .tab.active {
+      color: var(--text);
+      border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
+      background: color-mix(in srgb, var(--accent) 18%, transparent);
+    }
+
+    #search {
+      flex: 1;
+      min-width: 180px;
+      max-width: 360px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font: inherit;
+      padding: .5rem .75rem;
+      border-radius: 10px;
+    }
+    #search:focus { outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+
+    select.filter {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font: inherit;
+      font-size: .85rem;
+      padding: .45rem .65rem;
+      border-radius: 10px;
+    }
+
+    .stats {
+      font-size: .8rem;
+      color: var(--muted);
+      margin-left: auto;
+    }
+    .stats strong { color: var(--text); }
+
+    main { padding: 1.5rem 1.75rem 3rem; max-width: 1400px; margin: 0 auto; }
+
+    .pattern-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      margin-bottom: 1.25rem;
+    }
+    .pattern-box h2 { font-size: 1rem; margin-bottom: .5rem; }
+    .pattern-box pre {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .78rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      color: #c5cde0;
+      background: var(--surface2);
+      border-radius: 10px;
+      padding: .85rem 1rem;
+      overflow-x: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color .15s, transform .15s;
+    }
+    .card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); transform: translateY(-2px); }
+    .card.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+
+    .thumb {
+      aspect-ratio: 16 / 10;
+      background: var(--surface2);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body { padding: 1rem; display: flex; flex-direction: column; gap: .45rem; flex: 1; }
+
+    .card-name { font-weight: 700; font-size: 1.02rem; line-height: 1.3; }
+
+    .id-row {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+    }
+    .id-code {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .72rem;
+      color: var(--accent);
+      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
+      padding: .2rem .45rem;
+      border-radius: 6px;
+      word-break: break-all;
+      flex: 1;
+    }
+    .copy-btn {
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--muted);
+      font: inherit;
+      font-size: .72rem;
+      font-weight: 600;
+      padding: .25rem .5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .copy-btn:hover { color: var(--text); border-color: var(--accent); }
+    .copy-btn.copied { color: var(--ok); border-color: var(--ok); }
+
+    .meta { color: var(--muted); font-size: .82rem; line-height: 1.45; }
+    .pills { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .15rem; }
+    .pill {
+      font-size: .7rem;
+      padding: .2rem .5rem;
+      border-radius: 999px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .pill.live { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 40%, var(--border)); }
+    .pill.stub { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 40%, var(--border)); }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.25rem;
+      margin-bottom: .85rem;
+    }
+    .step-card h3 {
+      font-size: 1.05rem;
+      font-family: "JetBrains Mono", monospace;
+      color: var(--accent);
+      margin-bottom: .35rem;
+    }
+    .step-card .desc { color: var(--muted); font-size: .9rem; margin-bottom: .75rem; }
+    .field-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .82rem;
+    }
+    .field-table th, .field-table td {
+      text-align: left;
+      padding: .4rem .5rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .field-table th { color: var(--muted); font-weight: 600; }
+    .field-table code {
+      font-family: "JetBrains Mono", monospace;
+      font-size: .78rem;
+      color: var(--accent);
+    }
+
+    .empty {
+      color: var(--muted);
+      padding: 2rem;
+      text-align: center;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      background: var(--surface2);
+      border: 1px solid var(--ok);
+      color: var(--text);
+      padding: .55rem .9rem;
+      border-radius: 10px;
+      font-size: .85rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+      z-index: 200;
+    }
+    .toast.show { opacity: 1; }
+
+    @media (max-width: 640px) {
+      header, main { padding-left: 1rem; padding-right: 1rem; }
+      .stats { margin-left: 0; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div>
+        <h1>Quest Creator Catalog</h1>
+        <p class="subtitle" id="subtitle">Open World IDs for authoring</p>
+      </div>
+      <div class="header-links">
+        <a href="viewer.html">Quest map (עברית)</a>
+        <a href="../README.md">README</a>
+        <a href="../_registry/">Registry YAML</a>
+      </div>
+    </div>
+    <div class="toolbar">
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <input id="search" type="search" placeholder="Search id, name, description…" autocomplete="off" />
+      <select id="statusFilter" class="filter" aria-label="Status filter">
+        <option value="all">All statuses</option>
+        <option value="live_used">live_used</option>
+        <option value="catalog_stub">catalog_stub</option>
+        <option value="has_image">Has image</option>
+        <option value="no_image">No image</option>
+      </select>
+      <select id="kindFilter" class="filter" aria-label="Kind filter" hidden>
+        <option value="all">All kinds</option>
+        <option value="collectible">collectible</option>
+        <option value="minigame">minigame</option>
+        <option value="custom">custom</option>
+      </select>
+      <div class="stats" id="stats"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="pattern-box" id="patternBox" hidden>
+      <h2>Canonical live pattern</h2>
+      <pre id="patternPre"></pre>
+    </div>
+    <div id="content"></div>
+  </main>
+
+  <div class="toast" id="toast">Copied</div>
+
+  <script>
+    const IMAGE_BASE = "";
+    const TABS = [
+      { id: "areas", label: "Areas" },
+      { id: "npcs", label: "NPCs" },
+      { id: "interactables", label: "Interactables" },
+      { id: "items", label: "Items" },
+      { id: "minigames", label: "Minigames" },
+      { id: "steps", label: "Step types" },
+    ];
+
+    let DATA = null;
+    let activeTab = "areas";
+    let focusId = null;
+
+    const $ = (sel) => document.querySelector(sel);
+    const tabsEl = $("#tabs");
+    const contentEl = $("#content");
+    const searchEl = $("#search");
+    const statusFilterEl = $("#statusFilter");
+    const kindFilterEl = $("#kindFilter");
+    const statsEl = $("#stats");
+    const toastEl = $("#toast");
+
+    function parseHash() {
+      const raw = (location.hash || "").replace(/^#/, "");
+      if (!raw) return;
+      const [tab, ...rest] = raw.split("/");
+      if (TABS.some((t) => t.id === tab)) {
+        activeTab = tab;
+        focusId = rest.length ? decodeURIComponent(rest.join("/")) : null;
+      }
+    }
+
+    function setHash() {
+      const parts = [activeTab];
+      if (focusId) parts.push(encodeURIComponent(focusId));
+      history.replaceState(null, "", "#" + parts.join("/"));
+    }
+
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(showToast._t);
+      showToast._t = setTimeout(() => toastEl.classList.remove("show"), 1400);
+    }
+
+    async function copyText(text, btn) {
+      try {
+        await navigator.clipboard.writeText(text);
+        if (btn) {
+          btn.classList.add("copied");
+          btn.textContent = "Copied";
+          setTimeout(() => {
+            btn.classList.remove("copied");
+            btn.textContent = "Copy";
+          }, 1200);
+        }
+        showToast("Copied: " + text);
+      } catch {
+        showToast("Copy failed");
+      }
+    }
+
+    function imgUrl(rel) {
+      if (!rel) return null;
+      return IMAGE_BASE + rel.replace(/^\/+/, "");
+    }
+
+    function matchesQuery(entry, q) {
+      if (!q) return true;
+      const blob = [
+        entry.id,
+        entry.name,
+        entry.title,
+        entry.location,
+        entry.description,
+        entry.kind,
+        entry.status,
+        entry.type,
+        entry.category,
+        entry.english_focus,
+        entry.unity_objective,
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return blob.includes(q);
+    }
+
+    function statusOk(entry) {
+      const f = statusFilterEl.value;
+      if (f === "all") return true;
+      if (f === "live_used") return entry.status === "live_used";
+      if (f === "catalog_stub") return entry.status === "catalog_stub";
+      if (f === "has_image") return !!entry.image;
+      if (f === "no_image") return !entry.image;
+      return true;
+    }
+
+    function kindOk(entry) {
+      if (activeTab !== "interactables") return true;
+      const f = kindFilterEl.value;
+      if (f === "all") return true;
+      return String(entry.kind || "").toLowerCase() === f;
+    }
+
+    function renderTabs() {
+      tabsEl.innerHTML = "";
+      for (const tab of TABS) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "tab" + (tab.id === activeTab ? " active" : "");
+        btn.textContent = tab.label;
+        btn.setAttribute("role", "tab");
+        btn.addEventListener("click", () => {
+          activeTab = tab.id;
+          focusId = null;
+          setHash();
+          render();
+        });
+        tabsEl.appendChild(btn);
+      }
+    }
+
+    function pill(text, cls) {
+      const span = document.createElement("span");
+      span.className = "pill" + (cls ? " " + cls : "");
+      span.textContent = text;
+      return span;
+    }
+
+    function makeIdRow(id) {
+      const row = document.createElement("div");
+      row.className = "id-row";
+      const code = document.createElement("code");
+      code.className = "id-code";
+      code.textContent = id;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "copy-btn";
+      btn.textContent = "Copy";
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        copyText(id, btn);
+      });
+      row.append(code, btn);
+      return row;
+    }
+
+    function cardShell(entry, extraMetaNodes) {
+      const card = document.createElement("article");
+      card.className = "card" + (focusId && focusId === entry.id ? " selected" : "");
+      card.id = "entry-" + encodeURIComponent(entry.id);
+
+      if (activeTab === "areas" || activeTab === "npcs" || activeTab === "interactables") {
+        const thumb = document.createElement("div");
+        thumb.className = "thumb";
+        const url = imgUrl(entry.image);
+        if (url) {
+          const img = document.createElement("img");
+          img.src = url;
+          img.alt = entry.name || entry.id;
+          img.loading = "lazy";
+          thumb.appendChild(img);
+        } else {
+          thumb.textContent = "No image";
+        }
+        card.appendChild(thumb);
+      }
+
+      const body = document.createElement("div");
+      body.className = "card-body";
+
+      const name = document.createElement("div");
+      name.className = "card-name";
+      name.textContent = entry.name || entry.id;
+      body.appendChild(name);
+      body.appendChild(makeIdRow(entry.id));
+
+      if (extraMetaNodes && extraMetaNodes.length) {
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        for (const n of extraMetaNodes) meta.appendChild(n);
+        body.appendChild(meta);
+      }
+
+      const pills = document.createElement("div");
+      pills.className = "pills";
+      if (entry.status) {
+        pills.appendChild(
+          pill(entry.status, entry.status === "live_used" ? "live" : entry.status === "catalog_stub" ? "stub" : "")
+        );
+      }
+      if (entry.kind) pills.appendChild(pill(String(entry.kind)));
+      if (entry.type) pills.appendChild(pill(String(entry.type)));
+      if (entry.category) pills.appendChild(pill(String(entry.category)));
+      if (entry.softkitty_id != null) pills.appendChild(pill("softkitty " + entry.softkitty_id));
+      if (pills.childNodes.length) body.appendChild(pills);
+
+      card.appendChild(body);
+      card.addEventListener("click", () => {
+        focusId = entry.id;
+        setHash();
+        document.querySelectorAll(".card.selected").forEach((el) => el.classList.remove("selected"));
+        card.classList.add("selected");
+      });
+      return card;
+    }
+
+    function textNode(str) {
+      return document.createTextNode(str);
+    }
+
+    function line(str) {
+      const d = document.createElement("div");
+      d.textContent = str;
+      return d;
+    }
+
+    function renderCards(entries, mapper) {
+      const q = searchEl.value.trim().toLowerCase();
+      const filtered = entries.filter(
+        (e) => matchesQuery(e, q) && statusOk(e) && kindOk(e)
+      );
+      statsEl.innerHTML = `Showing <strong>${filtered.length}</strong> / ${entries.length}`;
+
+      if (!filtered.length) {
+        contentEl.innerHTML = '<div class="empty">No matches. Clear search or filters.</div>';
+        return;
+      }
+
+      const grid = document.createElement("div");
+      grid.className = "grid";
+      for (const entry of filtered) {
+        grid.appendChild(mapper(entry));
+      }
+      contentEl.innerHTML = "";
+      contentEl.appendChild(grid);
+
+      if (focusId) {
+        const el = document.getElementById("entry-" + encodeURIComponent(focusId));
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+
+    function renderSteps() {
+      const q = searchEl.value.trim().toLowerCase();
+      const steps = (DATA.step_types || []).filter((s) => matchesQuery(s, q));
+      statsEl.innerHTML = `Showing <strong>${steps.length}</strong> / ${(DATA.step_types || []).length}`;
+      contentEl.innerHTML = "";
+
+      if (DATA.canonical_pattern) {
+        $("#patternBox").hidden = false;
+        $("#patternPre").textContent = String(DATA.canonical_pattern).trim();
+      }
+
+      if (!steps.length) {
+        contentEl.innerHTML = '<div class="empty">No step types match.</div>';
+        return;
+      }
+
+      for (const step of steps) {
+        const card = document.createElement("div");
+        card.className = "step-card";
+        card.id = "entry-" + encodeURIComponent(step.id);
+
+        const h = document.createElement("h3");
+        h.textContent = step.id;
+        card.appendChild(h);
+        card.appendChild(makeIdRow(step.id));
+
+        if (step.unity_objective) {
+          const u = document.createElement("div");
+          u.className = "meta";
+          u.textContent = "Unity: " + step.unity_objective;
+          card.appendChild(u);
+        }
+        const desc = document.createElement("div");
+        desc.className = "desc";
+        desc.textContent = step.description || "";
+        card.appendChild(desc);
+
+        if (step.fields && step.fields.length) {
+          const table = document.createElement("table");
+          table.className = "field-table";
+          table.innerHTML =
+            "<thead><tr><th>Field</th><th>Required</th><th>Ref / notes</th></tr></thead>";
+          const tbody = document.createElement("tbody");
+          for (const f of step.fields) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td><code>${escapeHtml(f.name)}</code></td>
+              <td>${f.required ? "yes" : "no"}</td>
+              <td>${escapeHtml(f.ref || f.description || f.type || "")}</td>`;
+            tbody.appendChild(tr);
+          }
+          table.appendChild(tbody);
+          card.appendChild(table);
+        }
+
+        contentEl.appendChild(card);
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function render() {
+      renderTabs();
+      kindFilterEl.hidden = activeTab !== "interactables";
+      const showStatus =
+        activeTab === "areas" ||
+        activeTab === "npcs" ||
+        activeTab === "interactables";
+      statusFilterEl.hidden = !showStatus && activeTab !== "items";
+
+      if (activeTab === "steps") {
+        renderSteps();
+        return;
+      }
+
+      $("#patternBox").hidden = true;
+
+      if (activeTab === "areas") {
+        renderCards(DATA.areas || [], (e) => {
+          const bits = [];
+          if (e.description) bits.push(line(e.description));
+          return cardShell(e, bits);
+        });
+      } else if (activeTab === "npcs") {
+        renderCards(DATA.npcs || [], (e) => {
+          const bits = [];
+          if (e.title) bits.push(line(e.title));
+          if (e.location) bits.push(line("Location: " + e.location));
+          if (e.description) bits.push(line(e.description));
+          return cardShell(e, bits);
+        });
+      } else if (activeTab === "interactables") {
+        renderCards(DATA.interactables || [], (e) => {
+          const bits = [];
+          if (e.description) bits.push(line(e.description));
+          return cardShell(e, bits);
+        });
+      } else if (activeTab === "items") {
+        renderCards(DATA.items || [], (e) => {
+          const bits = [];
+          if (e.description) bits.push(line(e.description));
+          if (e.softkitty_uid) bits.push(line("uid: " + e.softkitty_uid));
+          if (e.ability_id) bits.push(line("ability: " + e.ability_id));
+          return cardShell(e, bits);
+        });
+      } else if (activeTab === "minigames") {
+        renderCards(DATA.minigames || [], (e) => {
+          const bits = [];
+          if (e.english_focus) bits.push(line(e.english_focus));
+          if (e.description) bits.push(line(e.description));
+          if (e.difficulty_range) bits.push(line("Difficulty: " + JSON.stringify(e.difficulty_range)));
+          return cardShell(e, bits);
+        });
+      }
+    }
+
+    async function boot() {
+      parseHash();
+      try {
+        const res = await fetch("catalog-data.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        DATA = await res.json();
+      } catch (err) {
+        contentEl.innerHTML =
+          '<div class="empty">Could not load <code>catalog-data.json</code>. Run <code>python scripts/build_catalog.py</code> first.<br/>' +
+          escapeHtml(String(err)) +
+          "</div>";
+        return;
+      }
+
+      $("#subtitle").textContent = DATA.subtitle || $("#subtitle").textContent;
+      searchEl.addEventListener("input", () => render());
+      statusFilterEl.addEventListener("change", () => render());
+      kindFilterEl.addEventListener("change", () => render());
+      window.addEventListener("hashchange", () => {
+        parseHash();
+        render();
+      });
+      render();
+    }
+
+    boot();
+  </script>
+</body>
+</html>

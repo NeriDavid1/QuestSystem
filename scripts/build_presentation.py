@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Build interactive quest presentation from YAML source files."""
+"""Build interactive Hebrew quest presentation from YAML source files.
+
+For the English creator catalog (areas/NPCs/images), run:
+  python scripts/build_catalog.py
+Or both:
+  python scripts/build_all.py
+"""
 
 from __future__ import annotations
 

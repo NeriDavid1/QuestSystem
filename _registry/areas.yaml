@@ -7,6 +7,7 @@ areas:
   # ── Catalog stubs (Maya alphabet zones; prefer Open World landmarks in authored Maya quests) ──
 
   q01_runaway_a_zone:
+    image: images/areas/q01_runaway_a_zone.png
     name: "Runaway A Zone"
     status: catalog_stub
     description: "Catalog stub — Maya q01 uses MoonriverCottage instead."
@@ -59,71 +60,85 @@ areas:
   # ── Open World landmarks (prefer these for shippable quests) ────────────
 
   TowerOfLostVigil:
+    image: images/areas/TowerOfLostVigil.png
     name: "Tower of Lost Vigil"
     status: live_used
     description: "Lonely watchtower with a fire camp for speak-aloud games."
 
   "The Weeping Stones":
+    image: images/areas/The Weeping Stones.png
     name: "The Weeping Stones"
     status: live_used
     description: "Quiet stone grounds with tombstones for adjective drills."
 
   "The Sunspire Tree":
+    image: images/areas/The Sunspire Tree.png
     name: "The Sunspire Tree"
     status: live_used
     description: "Giant sunny tree used for big/small word games."
 
   "The Oathstone Bridge":
+    image: images/areas/The Oathstone Bridge.png
     name: "The Oathstone Bridge"
     status: live_used
     description: "Stone bridge — main spot for short/long bridge quests."
 
   "The Last Roar":
+    image: images/areas/The Last Roar.png
     name: "The Last Roar"
     status: live_used
     description: "Dramatic cliff area for low/high power-stone games."
 
   "Solitude Tower":
+    image: images/areas/Solitude Tower.png
     name: "Solitude Tower"
     status: live_used
     description: "Tall quiet tower with carts and study spots."
 
   SilverFountainCourt:
+    image: images/areas/SilverFountainCourt.png
     name: "Silver Fountain Court"
     status: live_used
     description: "Palace court with a silver fountain and lost chests."
 
   "Sanctum of Whispering Light":
+    image: images/areas/Sanctum of Whispering Light.png
     name: "Sanctum of Whispering Light"
     status: live_used
     description: "Glowing sanctum for final adjective matching challenges."
 
   MoonriverCottage:
+    image: images/areas/MoonriverCottage.png
     name: "Moonriver Cottage"
     status: live_used
     description: "Cozy cottage by the moonlit river."
 
   KingdomGate:
+    image: images/areas/KingdomGate.png
     name: "Kingdom Gate"
     status: live_used
     description: "Main city gate with guards and exam tables."
 
   "Forsaken Cove":
+    image: images/areas/Forsaken Cove.png
     name: "Forsaken Cove"
     status: live_used
     description: "Rocky cove with lost chests and sea wind."
 
   FairyRosePark:
+    image: images/areas/FairyRosePark.png
     name: "Fairy Rose Park"
     status: live_used
     description: "Pretty park with roses, exams, and village chores."
 
   "Driftgold Bay":
+    image: images/areas/Driftgold Bay.png
     name: "Driftgold Bay"
     status: live_used
     description: "Sunny bay for fishing and riding paths."
 
   BuildersHome:
+    image: images/areas/BuildersHome.png
     name: "Builders Home"
     status: live_used
     description: "Workshop home for builders, chefs, and smith work."

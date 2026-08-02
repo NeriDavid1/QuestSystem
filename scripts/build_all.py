@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+"""Rebuild creator catalog + Hebrew quest presentation."""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+from pathlib import Path
+
+SCRIPTS = Path(__file__).resolve().parent
+
+
+def run(name: str) -> None:
+    path = SCRIPTS / name
+    print(f"==> {name}")
+    subprocess.check_call([sys.executable, str(path)])
+
+
+def main() -> None:
+    run("build_catalog.py")
+    run("build_presentation.py")
+    print("All presentation builds finished.")
+
+
+if __name__ == "__main__":
+    main()
