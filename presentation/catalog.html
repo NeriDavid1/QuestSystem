@@ -499,7 +499,13 @@
       card.className = "card" + (focusId && focusId === entry.id ? " selected" : "");
       card.id = "entry-" + encodeURIComponent(entry.id);
 
-      if (activeTab === "areas" || activeTab === "npcs" || activeTab === "interactables" || activeTab === "items") {
+      if (
+        activeTab === "areas" ||
+        activeTab === "npcs" ||
+        activeTab === "interactables" ||
+        activeTab === "items" ||
+        activeTab === "minigames"
+      ) {
         const thumb = document.createElement("div");
         thumb.className = "thumb";
         const url = imgUrl(entry.image);
@@ -512,6 +518,12 @@
             thumb.style.background = "#1a2030";
             img.style.objectFit = "contain";
             img.style.padding = "12px";
+          }
+          if (activeTab === "minigames") {
+            // Screenshots are wide UI captures — show full frame, not a cropped square.
+            img.style.objectFit = "contain";
+            thumb.style.background = "#1a2030";
+            thumb.style.aspectRatio = "16 / 10";
           }
           thumb.appendChild(img);
         } else {
@@ -723,9 +735,13 @@
         if (!res.ok) throw new Error("HTTP " + res.status);
         DATA = await res.json();
       } catch (err) {
+        const isFile = location.protocol === "file:";
         contentEl.innerHTML =
-          '<div class="empty">Could not load <code>catalog-data.json</code>. Run <code>python scripts/build_catalog.py</code> first.<br/>' +
-          escapeHtml(String(err)) +
+          '<div class="empty">' +
+          (isFile
+            ? 'Opened as a local file — the catalog cannot load data that way.<br/>Double-click <code>OPEN_CATALOG.bat</code> (starts a tiny local server), or use the live site:<br/><a href="https://neridavid1.github.io/QuestSystem/catalog.html">neridavid1.github.io/QuestSystem/catalog.html</a>'
+            : 'Could not load <code>catalog-data.json</code>. Run <code>python scripts/build_catalog.py</code> first.<br/>' +
+              escapeHtml(String(err))) +
           "</div>";
         return;
       }

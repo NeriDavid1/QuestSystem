@@ -7,7 +7,7 @@ Authoring workspace for English-learning Open World quests. Synced to Unity `Que
 | Who | Open this |
 |-----|-----------|
 | **Quest creators (you)** | **[Creator catalog](https://neridavid1.github.io/QuestSystem/catalog.html)** — searchable Areas / NPCs / Interactables (with pictures), Items, Minigames, Step types |
-| Creators (local) | [`presentation/catalog.html`](presentation/catalog.html) or double-click [`presentation/OPEN_CATALOG.bat`](presentation/OPEN_CATALOG.bat) |
+| Creators (local) | Double-click [`presentation/OPEN_CATALOG.bat`](presentation/OPEN_CATALOG.bat) (serves over localhost — opening the HTML file directly stays empty) |
 | Boss / stakeholders (עברית) | **[Quest map](https://neridavid1.github.io/QuestSystem/viewer.html)** · local [`presentation/viewer.html`](presentation/viewer.html) |
 | Landing page | [`presentation/index.html`](presentation/index.html) |
 
@@ -61,7 +61,7 @@ Interactive: **[catalog.html](presentation/catalog.html)** · Markdown galleries
 | Step types | [`_registry/systems.yaml`](_registry/systems.yaml) | (see catalog → Step types) |
 | Unity map | [`_registry/unity_mapping.yaml`](_registry/unity_mapping.yaml) | — |
 
-Pictures live in `_registry/images/{areas,npcs,interactables,items}/` named by catalog **id** (SoftKitty **uid** for items).
+Pictures live in `_registry/images/{areas,npcs,interactables,items,minigames}/` named by catalog **id** (SoftKitty **uid** for items).
 
 ### SoftKitty item icons
 
