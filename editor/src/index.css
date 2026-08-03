@@ -1078,6 +1078,34 @@ code {
   background: var(--mint);
 }
 
+.rail-line-actions {
+  display: none;
+  gap: 2px;
+  align-items: center;
+  padding-right: 4px;
+}
+
+.rail-line-wrap:hover .rail-line-actions,
+.rail-line-wrap.active .rail-line-actions {
+  display: inline-flex;
+}
+
+.rail-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  border-radius: 6px;
+  color: #8e9aae;
+  background: transparent;
+}
+
+.rail-action:hover {
+  color: var(--purple);
+  background: #eeeaff;
+}
+
 .rail-tip {
   display: flex;
   gap: 8px;
@@ -1585,6 +1613,58 @@ select:focus {
 .step-list {
   display: grid;
   gap: 4px;
+}
+
+.step-row-actions {
+  display: inline-flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.step-field {
+  display: block;
+  gap: 5px;
+}
+
+.step-field input,
+.step-field textarea,
+.step-field select {
+  margin-top: 5px;
+}
+
+.step-field.has-error input,
+.step-field.has-error select,
+.step-field.has-error textarea {
+  border-color: #ffb4ab;
+  background: #fff8f7;
+}
+
+.field-description {
+  display: block;
+  margin-top: 4px;
+  color: #97a2b2;
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.field-error {
+  display: block;
+  margin-top: 4px;
+  color: #d9534f;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.unresolved-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: #b0522e;
+  background: #fff1e6;
+  font-size: 8px;
+  font-weight: 700;
 }
 
 .step-row {

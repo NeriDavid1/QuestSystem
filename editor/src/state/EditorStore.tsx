@@ -1,0 +1,1440 @@
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react'
+import { useT } from '../i18n'
+import type {
+  Dialogue,
+  DialogueLine,
+  EditorData,
+  MinigameInstance,
+  Quest,
+  QuestPrerequisite,
+  QuestReward,
+  QuestStep,
+  Questline,
+  QuestlineRevision,
+  ValidationIssue,
+} from '../lib/types'
+import { emptyEditorData } from '../lib/types'
+import { hasSupabaseConfig, loadEditorData, supabase } from '../lib/supabase'
+import { createDemoData } from '../lib/demoData'
+import {
+  DEFAULT_DIALOGUE_LOCALE,
+  getQuestSteps,
+  getQuestlineQuests,
+  makeLocalId,
+  slugify,
+  uniqueDialogueKey,
+  uniqueQuestKey,
+  uniqueQuestlineKey,
+  uniqueKey,
+} from '../lib/editorData'
+import { validateQuestline } from '../lib/validation'
+import {
+  SaveConflictError,
+  publishQuestline,
+  saveQuestlineDraft,
+  signIn as persistenceSignIn,
+  signOut as persistenceSignOut,
+  signUp as persistenceSignUp,
+  type QuestlineSavePayload,
+  type SaveResult,
+} from '../lib/persistence'
+
+export type View = 'overview' | 'editor' | 'library' | 'preview' | 'settings'
+export type LibraryTab = 'catalog' | 'dialogues' | 'minigames'
+
+export interface ConfirmState {
+  title: string
+  message: string
+  confirmLabel: string
+  tone: 'danger' | 'primary'
+  onConfirm: () => void
+}
+
+interface ToastState {
+  message: string
+  tone: 'success' | 'error'
+}
+
+interface EditorStoreValue {
+  demoMode: boolean
+  data: EditorData
+  user: { id: string; email?: string } | null
+  authReady: boolean
+  view: View
+  setView: (view: View) => void
+  selectedQuestlineId: string
+  selectedQuestId: string
+  selectedStepId: string
+  setSelectedQuestlineId: (id: string) => void
+  setSelectedQuestId: (id: string) => void
+  setSelectedStepId: (id: string) => void
+  selectedLine: Questline | undefined
+  lineQuests: Quest[]
+  selectedQuest: Quest | undefined
+  questSteps: QuestStep[]
+  issues: ValidationIssue[]
+  dirty: boolean
+  saving: boolean
+  publishing: boolean
+  toast: ToastState | null
+  loadError: string
+  history: { canUndo: boolean; canRedo: boolean }
+  undo: () => void
+  redo: () => void
+  notify: (message: string, tone?: 'success' | 'error') => void
+  confirmState: ConfirmState | null
+  openConfirm: (state: ConfirmState) => void
+  closeConfirm: () => void
+  conflictState: boolean
+  closeConflict: () => void
+  showNewQuestline: boolean
+  setShowNewQuestline: (open: boolean) => void
+  showPublishConfirm: boolean
+  setShowPublishConfirm: (open: boolean) => void
+  showSearch: boolean
+  setShowSearch: (open: boolean) => void
+  showRevisions: boolean
+  setShowRevisions: (open: boolean) => void
+  showTemplates: boolean
+  setShowTemplates: (open: boolean) => void
+  libraryTab: LibraryTab
+  setLibraryTab: (tab: LibraryTab) => void
+  updateLine: (patch: Partial<Questline>) => void
+  updateQuest: (patch: Partial<Quest>) => void
+  updateStep: (stepId: string, patch: Partial<QuestStep>) => void
+  updateDialogue: (dialogueId: string, patch: Partial<Dialogue>) => void
+  updateDialogueLine: (lineId: string, patch: Partial<DialogueLine>) => void
+  addDialogueLine: (dialogueId: string, locale?: string) => void
+  removeDialogueLine: (lineId: string) => void
+  moveDialogueLine: (lineId: string, direction: -1 | 1) => void
+  createDialogue: (options?: { speaker?: string | null; baseKey?: string; attachToStepId?: string }) => void
+  createDialogueForStep: (stepId: string) => void
+  updateMinigame: (minigameId: string, patch: Partial<MinigameInstance>) => void
+  togglePrerequisite: (questId: string, prerequisiteQuestId: string, enabled: boolean) => void
+  addReward: (scope: 'quest' | 'step', parentId: string) => void
+  updateReward: (rewardId: string, patch: Partial<QuestReward>) => void
+  removeReward: (rewardId: string) => void
+  addQuest: () => void
+  addStep: () => void
+  createQuestline: (name: string, key: string, theme: string) => void
+  removeQuestline: (questlineId: string) => void
+  removeQuest: (questId: string) => void
+  removeStep: (stepId: string) => void
+  removeDialogue: (dialogueId: string) => void
+  removeMinigame: (minigameId: string) => void
+  duplicateQuest: (questId: string) => void
+  duplicateStep: (stepId: string) => void
+  duplicateDialogue: (dialogueId: string) => void
+  duplicateQuestline: (questlineId: string) => void
+  moveQuest: (questId: string, direction: -1 | 1) => void
+  moveStep: (stepId: string, direction: -1 | 1) => void
+  saveDraft: (options?: { force?: boolean }) => Promise<void>
+  publish: () => Promise<void>
+  retryJoin: () => Promise<void>
+  handleSignIn: (email: string, password: string) => Promise<void>
+  handleSignUp: (email: string, password: string) => Promise<void>
+  handleSignOut: () => Promise<void>
+  revisionsForLine: (questlineId: string) => QuestlineRevision[]
+  restoreRevisionAsDraft: (revision: QuestlineRevision) => void
+  createQuestFromTemplate: (kind: 'blank' | 'adventure') => void
+  forceSaveAfterConflict: () => Promise<void>
+}
+
+const EditorStoreContext = createContext<EditorStoreValue | null>(null)
+
+export function EditorStoreProvider({ children }: { children: ReactNode }) {
+  const t = useT()
+  const demoMode = !hasSupabaseConfig
+  const [data, setData] = useState<EditorData>(() => (demoMode ? createDemoData() : emptyEditorData()))
+  const [user, setUser] = useState<{ id: string; email?: string } | null>(null)
+  const [authReady, setAuthReady] = useState(demoMode)
+  const [selectedQuestlineId, setSelectedQuestlineId] = useState(demoMode ? 'demo-ql-adjective' : '')
+  const [selectedQuestId, setSelectedQuestId] = useState('')
+  const [selectedStepId, setSelectedStepId] = useState('')
+  const [view, setView] = useState<View>('editor')
+  const [dirty, setDirty] = useState(false)
+  const [saving, setSaving] = useState(false)
+  const [publishing, setPublishing] = useState(false)
+  const [toast, setToast] = useState<ToastState | null>(null)
+  const [loadError, setLoadError] = useState('')
+  const [showNewQuestline, setShowNewQuestline] = useState(false)
+  const [showPublishConfirm, setShowPublishConfirm] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
+  const [showRevisions, setShowRevisions] = useState(false)
+  const [showTemplates, setShowTemplates] = useState(false)
+  const [libraryTab, setLibraryTab] = useState<LibraryTab>('catalog')
+  const [confirmState, setConfirmState] = useState<ConfirmState | null>(null)
+  const [conflictState, setConflictState] = useState(false)
+
+  const history = useRef<EditorData[]>([])
+  const historyIndex = useRef(-1)
+  const restoringHistory = useRef(false)
+  const autoSaveInFlight = useRef(false)
+  const toastTimer = useRef<number | null>(null)
+  const [historyVersion, setHistoryVersion] = useState(0)
+
+  // Scoped-save tracking: shared rows the user created/edited/deleted this session.
+  const touchedDialogueIds = useRef(new Set<string>())
+  const touchedMinigameIds = useRef(new Set<string>())
+  const deletedQuestIds = useRef<string[]>([])
+  const deletedStepIds = useRef<string[]>([])
+  const deletedDialogueIds = useRef<string[]>([])
+  const deletedMinigameIds = useRef<string[]>([])
+  const questlineVersions = useRef<Record<string, string>>({})
+
+  // --- History tracking ---
+  useEffect(() => {
+    if (restoringHistory.current) {
+      restoringHistory.current = false
+      return
+    }
+    if (history.current[historyIndex.current] === data) return
+    const next = history.current.slice(0, historyIndex.current + 1)
+    next.push(data)
+    if (next.length > 40) next.shift()
+    history.current = next
+    historyIndex.current = next.length - 1
+  }, [data])
+
+  const undo = useCallback(() => {
+    if (historyIndex.current <= 0) return
+    historyIndex.current -= 1
+    restoringHistory.current = true
+    setData(history.current[historyIndex.current])
+    setDirty(true)
+    setHistoryVersion((value) => value + 1)
+  }, [])
+
+  const redo = useCallback(() => {
+    if (historyIndex.current >= history.current.length - 1) return
+    historyIndex.current += 1
+    restoringHistory.current = true
+    setData(history.current[historyIndex.current])
+    setDirty(true)
+    setHistoryVersion((value) => value + 1)
+  }, [])
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (!(event.ctrlKey || event.metaKey)) return
+      const target = event.target as HTMLElement | null
+      if (target && (target.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName))) return
+      if (event.key.toLowerCase() === 'z' && !event.shiftKey) {
+        event.preventDefault()
+        undo()
+      } else if (event.key.toLowerCase() === 'y' || (event.key.toLowerCase() === 'z' && event.shiftKey)) {
+        event.preventDefault()
+        redo()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [undo, redo])
+
+  // --- Auth + initial load ---
+  useEffect(() => {
+    if (!hasSupabaseConfig || !supabase) return
+    const client = supabase
+    let mounted = true
+
+    const enterWorkspace = async (sessionUser: { id: string; email?: string | null }) => {
+      const displayName = sessionUser.email?.split('@')[0] ?? null
+      const { error: membershipError } = await client.rpc('ensure_workspace_member', {
+        p_display_name: displayName,
+      })
+      if (membershipError) throw membershipError
+      const loaded = await loadEditorData()
+      if (!mounted) return
+      setData(loaded)
+      questlineVersions.current = Object.fromEntries(
+        loaded.questlines.map((line) => [line.id, line.updated_at ?? '']),
+      )
+      setLoadError('')
+    }
+
+    const initialize = async () => {
+      const { data: sessionData } = await client.auth.getSession()
+      if (!mounted) return
+      const sessionUser = sessionData.session?.user
+      setUser(sessionUser ? { id: sessionUser.id, email: sessionUser.email } : null)
+      if (sessionUser) {
+        try {
+          await enterWorkspace(sessionUser)
+        } catch (error) {
+          if (mounted) setLoadError(error instanceof Error ? error.message : t('loadEditorFailed'))
+        }
+      }
+      setAuthReady(true)
+    }
+    void initialize()
+    const { data: authListener } = client.auth.onAuthStateChange((_event, session) => {
+      const sessionUser = session?.user
+      setUser(sessionUser ? { id: sessionUser.id, email: sessionUser.email } : null)
+      if (sessionUser) {
+        void enterWorkspace(sessionUser).catch((error: unknown) => {
+          if (mounted) setLoadError(error instanceof Error ? error.message : t('loadEditorFailed'))
+        })
+      } else {
+        setData(emptyEditorData())
+      }
+    })
+    return () => {
+      mounted = false
+      authListener.subscription.unsubscribe()
+    }
+  }, [t])
+
+  // --- Selection sanity effects ---
+  useEffect(() => {
+    if (data.questlines.length === 0) return
+    if (!selectedQuestlineId || !data.questlines.some((line) => line.id === selectedQuestlineId)) {
+      setSelectedQuestlineId(data.questlines[0].id)
+    }
+  }, [data.questlines, selectedQuestlineId])
+
+  const selectedLine = data.questlines.find((line) => line.id === selectedQuestlineId)
+  const lineQuests = useMemo(() => getQuestlineQuests(data, selectedQuestlineId), [data, selectedQuestlineId])
+
+  useEffect(() => {
+    if (lineQuests.length === 0) {
+      setSelectedQuestId('')
+      setSelectedStepId('')
+      return
+    }
+    if (!selectedQuestId || !lineQuests.some((quest) => quest.id === selectedQuestId)) {
+      setSelectedQuestId(lineQuests[0].id)
+    }
+  }, [lineQuests, selectedQuestId])
+
+  const selectedQuest = data.quests.find((quest) => quest.id === selectedQuestId)
+  const questSteps = selectedQuest ? getQuestSteps(data, selectedQuest.id) : []
+
+  useEffect(() => {
+    if (questSteps.length === 0) {
+      setSelectedStepId('')
+      return
+    }
+    if (!selectedStepId || !questSteps.some((step) => step.id === selectedStepId)) {
+      setSelectedStepId(questSteps[0].id)
+    }
+  }, [questSteps, selectedStepId])
+
+  const rawIssues = useMemo(
+    () => validateQuestline(data, selectedLine, t),
+    [data, selectedLine, t],
+  )
+  const [issues, setIssues] = useState<ValidationIssue[]>(rawIssues)
+  useEffect(() => {
+    const timeout = window.setTimeout(() => setIssues(rawIssues), 150)
+    return () => window.clearTimeout(timeout)
+  }, [rawIssues])
+
+  const notify = useCallback((message: string, tone: 'success' | 'error' = 'success') => {
+    if (toastTimer.current !== null) window.clearTimeout(toastTimer.current)
+    setToast({ message, tone })
+    toastTimer.current = window.setTimeout(() => {
+      setToast(null)
+      toastTimer.current = null
+    }, 3600)
+  }, [])
+
+  const openConfirm = useCallback((state: ConfirmState) => setConfirmState(state), [])
+  const closeConfirm = useCallback(() => setConfirmState(null), [])
+  const closeConflict = useCallback(() => {
+    setConflictState(false)
+  }, [])
+
+  // --- Mutations ---
+  const updateLine = useCallback((patch: Partial<Questline>) => {
+    if (!selectedLine) return
+    setData((current) => ({
+      ...current,
+      questlines: current.questlines.map((line) => (line.id === selectedLine.id ? { ...line, ...patch } : line)),
+    }))
+    setDirty(true)
+  }, [selectedLine])
+
+  const updateQuest = useCallback((patch: Partial<Quest>) => {
+    if (!selectedQuest) return
+    setData((current) => ({
+      ...current,
+      quests: current.quests.map((quest) => (quest.id === selectedQuest.id ? { ...quest, ...patch } : quest)),
+    }))
+    setDirty(true)
+  }, [selectedQuest])
+
+  const updateStep = useCallback((stepId: string, patch: Partial<QuestStep>) => {
+    setData((current) => ({
+      ...current,
+      steps: current.steps.map((step) => (step.id === stepId ? { ...step, ...patch } : step)),
+    }))
+    setDirty(true)
+  }, [])
+
+  const updateDialogue = useCallback((dialogueId: string, patch: Partial<Dialogue>) => {
+    touchedDialogueIds.current.add(dialogueId)
+    setData((current) => {
+      const existing = current.dialogues.find((dialogue) => dialogue.id === dialogueId)
+      const previousKey = existing?.key
+      const nextKey = patch.key ?? previousKey
+      return {
+        ...current,
+        dialogues: current.dialogues.map((dialogue) => (dialogue.id === dialogueId ? { ...dialogue, ...patch } : dialogue)),
+        steps: previousKey && nextKey && previousKey !== nextKey
+          ? current.steps.map((step) =>
+            step.payload.dialogue_id === previousKey
+              ? { ...step, payload: { ...step.payload, dialogue_id: nextKey } }
+              : step)
+          : current.steps,
+      }
+    })
+    setDirty(true)
+  }, [])
+
+  const updateDialogueLine = useCallback((lineId: string, patch: Partial<DialogueLine>) => {
+    setData((current) => {
+      const target = current.dialogueLines.find((line) => line.id === lineId)
+      if (target) touchedDialogueIds.current.add(target.dialogue_id)
+      return {
+        ...current,
+        dialogueLines: current.dialogueLines.map((line) => (line.id === lineId ? { ...line, ...patch } : line)),
+      }
+    })
+    setDirty(true)
+  }, [])
+
+  const addDialogueLine = useCallback((dialogueId: string, locale = DEFAULT_DIALOGUE_LOCALE) => {
+    touchedDialogueIds.current.add(dialogueId)
+    setData((current) => {
+      const siblings = current.dialogueLines.filter((line) => line.dialogue_id === dialogueId && line.locale === locale)
+      const nextOrder = siblings.length === 0 ? 0 : Math.max(...siblings.map((line) => line.line_order)) + 1
+      const line: DialogueLine = {
+        id: makeLocalId('dline'),
+        dialogue_id: dialogueId,
+        locale,
+        line_order: nextOrder,
+        content: '',
+        line_format: 'plain_text',
+      }
+      return { ...current, dialogueLines: [...current.dialogueLines, line] }
+    })
+    setDirty(true)
+    notify(t('dialogueLineAdded'))
+  }, [notify, t])
+
+  const removeDialogueLine = useCallback((lineId: string) => {
+    setData((current) => {
+      const target = current.dialogueLines.find((line) => line.id === lineId)
+      if (!target) return current
+      touchedDialogueIds.current.add(target.dialogue_id)
+      const remaining = current.dialogueLines.filter((line) => line.id !== lineId)
+      const siblings = remaining
+        .filter((line) => line.dialogue_id === target.dialogue_id && line.locale === target.locale)
+        .sort((a, b) => a.line_order - b.line_order)
+      const orderById = new Map(siblings.map((line, index) => [line.id, index]))
+      return {
+        ...current,
+        dialogueLines: remaining.map((line) => (orderById.has(line.id) ? { ...line, line_order: orderById.get(line.id)! } : line)),
+      }
+    })
+    setDirty(true)
+  }, [])
+
+  const moveDialogueLine = useCallback((lineId: string, direction: -1 | 1) => {
+    setData((current) => {
+      const target = current.dialogueLines.find((line) => line.id === lineId)
+      if (!target) return current
+      touchedDialogueIds.current.add(target.dialogue_id)
+      const siblings = current.dialogueLines
+        .filter((line) => line.dialogue_id === target.dialogue_id && line.locale === target.locale)
+        .sort((a, b) => a.line_order - b.line_order)
+      const index = siblings.findIndex((line) => line.id === lineId)
+      const swapWith = siblings[index + direction]
+      if (!swapWith) return current
+      return {
+        ...current,
+        dialogueLines: current.dialogueLines.map((line) => {
+          if (line.id === target.id) return { ...line, line_order: swapWith.line_order }
+          if (line.id === swapWith.id) return { ...line, line_order: target.line_order }
+          return line
+        }),
+      }
+    })
+    setDirty(true)
+  }, [])
+
+  const createDialogue = useCallback((options?: { speaker?: string | null; baseKey?: string; attachToStepId?: string }) => {
+    setData((current) => {
+      const key = uniqueDialogueKey(current, options?.baseKey ?? 'new_dialogue')
+      const dialogue: Dialogue = {
+        id: makeLocalId('dialogue'),
+        key,
+        speaker_external_id: options?.speaker ?? selectedQuest?.giver_external_id ?? null,
+        source_path: null,
+        source_metadata: { local_draft: true },
+      }
+      touchedDialogueIds.current.add(dialogue.id)
+      const line: DialogueLine = {
+        id: makeLocalId('dline'),
+        dialogue_id: dialogue.id,
+        locale: DEFAULT_DIALOGUE_LOCALE,
+        line_order: 0,
+        content: '',
+        line_format: 'plain_text',
+      }
+      return {
+        ...current,
+        dialogues: [...current.dialogues, dialogue],
+        dialogueLines: [...current.dialogueLines, line],
+        steps: options?.attachToStepId
+          ? current.steps.map((step) =>
+            step.id === options.attachToStepId
+              ? { ...step, payload: { ...step.payload, dialogue_id: key } }
+              : step)
+          : current.steps,
+      }
+    })
+    setDirty(true)
+    notify(t('dialogueCreated'))
+  }, [notify, selectedQuest, t])
+
+  const createDialogueForStep = useCallback((stepId: string) => {
+    createDialogue({
+      baseKey: `${selectedQuest?.key ?? 'quest'}_dialogue`,
+      speaker: selectedQuest?.giver_external_id ?? null,
+      attachToStepId: stepId,
+    })
+  }, [createDialogue, selectedQuest])
+
+  const updateMinigame = useCallback((minigameId: string, patch: Partial<MinigameInstance>) => {
+    touchedMinigameIds.current.add(minigameId)
+    setData((current) => ({
+      ...current,
+      minigames: current.minigames.map((minigame) => (minigame.id === minigameId ? { ...minigame, ...patch } : minigame)),
+    }))
+    setDirty(true)
+  }, [])
+
+  const togglePrerequisite = useCallback((questId: string, prerequisiteQuestId: string, enabled: boolean) => {
+    setData((current) => {
+      const exists = current.prerequisites.some(
+        (edge) => edge.quest_id === questId && edge.prerequisite_quest_id === prerequisiteQuestId,
+      )
+      if (enabled && !exists) {
+        return { ...current, prerequisites: [...current.prerequisites, { quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] }
+      }
+      if (!enabled && exists) {
+        return {
+          ...current,
+          prerequisites: current.prerequisites.filter(
+            (edge) => !(edge.quest_id === questId && edge.prerequisite_quest_id === prerequisiteQuestId),
+          ),
+        }
+      }
+      return current
+    })
+    setDirty(true)
+  }, [])
+
+  const addReward = useCallback((scope: 'quest' | 'step', parentId: string) => {
+    const reward: QuestReward = {
+      id: makeLocalId('reward'),
+      scope,
+      quest_id: scope === 'quest' ? parentId : null,
+      step_id: scope === 'step' ? parentId : null,
+      reward_type: 'xp',
+      xp_amount: 50,
+      item_external_id: null,
+      amount: null,
+      source_metadata: { local_draft: true },
+    }
+    setData((current) => ({ ...current, rewards: [...current.rewards, reward] }))
+    setDirty(true)
+  }, [])
+
+  const updateReward = useCallback((rewardId: string, patch: Partial<QuestReward>) => {
+    setData((current) => ({
+      ...current,
+      rewards: current.rewards.map((reward) => (reward.id === rewardId ? { ...reward, ...patch } : reward)),
+    }))
+    setDirty(true)
+  }, [])
+
+  const removeReward = useCallback((rewardId: string) => {
+    setData((current) => ({ ...current, rewards: current.rewards.filter((reward) => reward.id !== rewardId) }))
+    setDirty(true)
+  }, [])
+
+  const addQuest = useCallback(() => {
+    if (!selectedLine) return
+    const quests = getQuestlineQuests(data, selectedLine.id)
+    const position = quests.length
+    const newQuest: Quest = {
+      id: makeLocalId('quest'),
+      questline_id: selectedLine.id,
+      key: `q${String(position + 1).padStart(2, '0')}_new_quest`,
+      position,
+      name: t('newLearningQuest'),
+      level_required: Math.max(1, position + 1),
+      giver_external_id: selectedLine.default_giver_external_id,
+      summary: t('describeLearnerGoal'),
+      status: 'draft',
+      source_path: null,
+      source_metadata: { local_draft: true },
+    }
+    setData((current) => ({ ...current, quests: [...current.quests, newQuest] }))
+    setSelectedQuestId(newQuest.id)
+    setDirty(true)
+    notify(t('draftQuestAdded'))
+  }, [data, notify, selectedLine, t])
+
+  const addStep = useCallback(() => {
+    if (!selectedQuest) return
+    const steps = getQuestSteps(data, selectedQuest.id)
+    const position = steps.length
+    const newStep: QuestStep = {
+      id: makeLocalId('step'),
+      quest_id: selectedQuest.id,
+      key: `${selectedQuest.key}_step_${String(position + 1).padStart(2, '0')}`,
+      position,
+      step_type: 'talk_to_npc',
+      payload: { npc_id: selectedQuest.giver_external_id ?? 'teacher_maya', dialogue_id: '' },
+      source_metadata: { local_draft: true, source_position: position },
+    }
+    setData((current) => ({ ...current, steps: [...current.steps, newStep] }))
+    setSelectedStepId(newStep.id)
+    setDirty(true)
+    notify(t('learningStepAdded'))
+  }, [data, notify, selectedQuest, t])
+
+  const createQuestline = useCallback((name: string, key: string, theme: string) => {
+    const line: Questline = {
+      id: makeLocalId('questline'),
+      key: key || slugify(name),
+      display_name: name || t('untitledQuestline'),
+      theme: theme || null,
+      default_giver_external_id: 'teacher_maya',
+      status: 'draft',
+      level_min: 1,
+      level_max: null,
+      source_path: null,
+      source_metadata: { local_draft: true },
+    }
+    setData((current) => ({ ...current, questlines: [...current.questlines, line] }))
+    setSelectedQuestlineId(line.id)
+    setSelectedQuestId('')
+    setSelectedStepId('')
+    setShowNewQuestline(false)
+    setDirty(true)
+    notify(t('questlineDraftCreated'))
+  }, [notify, t])
+
+  // --- New CRUD: delete / duplicate / reorder ---
+  const removeQuest = useCallback((questId: string) => {
+    setData((current) => {
+      const steps = current.steps.filter((step) => step.quest_id === questId)
+      deletedQuestIds.current.push(questId)
+      for (const step of steps) deletedStepIds.current.push(step.id)
+      const stepIds = new Set(steps.map((step) => step.id))
+      return {
+        ...current,
+        quests: current.quests.filter((quest) => quest.id !== questId),
+        steps: current.steps.filter((step) => step.quest_id !== questId),
+        rewards: current.rewards.filter(
+          (reward) => !(reward.quest_id === questId || (reward.step_id !== null && stepIds.has(reward.step_id))),
+        ),
+        prerequisites: current.prerequisites.filter(
+          (edge) => edge.quest_id !== questId && edge.prerequisite_quest_id !== questId,
+        ),
+      }
+    })
+    setDirty(true)
+    if (selectedQuestId === questId) {
+      setSelectedQuestId('')
+      setSelectedStepId('')
+    }
+    notify(t('questDeleted'))
+  }, [notify, selectedQuestId, t])
+
+  const removeStep = useCallback((stepId: string) => {
+    deletedStepIds.current.push(stepId)
+    setData((current) => ({
+      ...current,
+      steps: current.steps.filter((step) => step.id !== stepId),
+      rewards: current.rewards.filter((reward) => !(reward.scope === 'step' && reward.step_id === stepId)),
+    }))
+    setDirty(true)
+    if (selectedStepId === stepId) setSelectedStepId('')
+    notify(t('stepDeleted'))
+  }, [notify, selectedStepId, t])
+
+  const removeDialogue = useCallback((dialogueId: string) => {
+    const dialogue = data.dialogues.find((item) => item.id === dialogueId)
+    if (!dialogue) return
+    const referenced = data.steps.some((step) => step.payload.dialogue_id === dialogue.key)
+    if (referenced) {
+      notify(t('dialogueInUse'), 'error')
+      return
+    }
+    deletedDialogueIds.current.push(dialogueId)
+    touchedDialogueIds.current.delete(dialogueId)
+    setData((current) => ({
+      ...current,
+      dialogues: current.dialogues.filter((item) => item.id !== dialogueId),
+      dialogueLines: current.dialogueLines.filter((line) => line.dialogue_id !== dialogueId),
+    }))
+    setDirty(true)
+    notify(t('dialogueDeleted'))
+  }, [data, notify, t])
+
+  const removeMinigame = useCallback((minigameId: string) => {
+    deletedMinigameIds.current.push(minigameId)
+    touchedMinigameIds.current.delete(minigameId)
+    setData((current) => ({ ...current, minigames: current.minigames.filter((minigame) => minigame.id !== minigameId) }))
+    setDirty(true)
+    notify(t('minigameDeleted'))
+  }, [notify, t])
+
+  const removeQuestline = useCallback((questlineId: string) => {
+    setData((current) => {
+      const quests = current.quests.filter((quest) => quest.questline_id === questlineId)
+      for (const quest of quests) deletedQuestIds.current.push(quest.id)
+      const questIds = new Set(quests.map((quest) => quest.id))
+      return {
+        ...current,
+        questlines: current.questlines.filter((line) => line.id !== questlineId),
+        quests: current.quests.filter((quest) => quest.questline_id !== questlineId),
+        steps: current.steps.filter((step) => !questIds.has(step.quest_id)),
+        rewards: current.rewards.filter(
+          (reward) => !(reward.quest_id !== null && questIds.has(reward.quest_id)),
+        ),
+        prerequisites: current.prerequisites.filter(
+          (edge) => !questIds.has(edge.quest_id) && !questIds.has(edge.prerequisite_quest_id),
+        ),
+      }
+    })
+    setDirty(true)
+    if (selectedQuestlineId === questlineId) {
+      setSelectedQuestlineId('')
+      setSelectedQuestId('')
+      setSelectedStepId('')
+    }
+    notify(t('questlineDeleted'))
+  }, [notify, selectedQuestlineId, t])
+
+  const duplicateQuest = useCallback((questId: string) => {
+    setData((current) => {
+      const source = current.quests.find((quest) => quest.id === questId)
+      if (!source) return current
+      const siblings = getQuestlineQuests(current, source.questline_id)
+      const newPosition = siblings.length
+      const newQuest: Quest = {
+        ...source,
+        id: makeLocalId('quest'),
+        key: uniqueQuestKey(current, `${source.key}_copy`),
+        position: newPosition,
+        name: `${source.name} (${t('copySuffix')})`,
+        status: 'draft',
+        source_metadata: { ...source.source_metadata, local_draft: true },
+      }
+      const sourceSteps = getQuestSteps(current, source.id)
+      const steps: QuestStep[] = sourceSteps.map((step, index) => ({
+        ...step,
+        id: makeLocalId('step'),
+        quest_id: newQuest.id,
+        key: `${newQuest.key}_step_${String(index + 1).padStart(2, '0')}`,
+        payload: { ...step.payload },
+        source_metadata: { ...step.source_metadata, local_draft: true },
+      }))
+      const stepIdMap = new Map(sourceSteps.map((step, index) => [step.id, steps[index].id]))
+      const rewards: QuestReward[] = current.rewards
+        .filter((reward) =>
+          (reward.scope === 'quest' && reward.quest_id === source.id)
+          || (reward.scope === 'step' && reward.step_id !== null && stepIdMap.has(reward.step_id)),
+        )
+        .map((reward) => ({
+          ...reward,
+          id: makeLocalId('reward'),
+          quest_id: reward.scope === 'quest' ? newQuest.id : null,
+          step_id: reward.scope === 'step' && reward.step_id !== null ? stepIdMap.get(reward.step_id)! : null,
+          source_metadata: { ...reward.source_metadata, local_draft: true },
+        }))
+      const prerequisites: QuestPrerequisite[] = current.prerequisites
+        .filter((edge) => edge.quest_id === source.id)
+        .map((edge) => ({ quest_id: newQuest.id, prerequisite_quest_id: edge.prerequisite_quest_id }))
+      return {
+        ...current,
+        quests: [...current.quests, newQuest],
+        steps: [...current.steps, ...steps],
+        rewards: [...current.rewards, ...rewards],
+        prerequisites: [...current.prerequisites, ...prerequisites],
+      }
+    })
+    setDirty(true)
+    notify(t('questDuplicated'))
+  }, [notify, t])
+
+  const moveQuest = useCallback((questId: string, direction: -1 | 1) => {
+    setData((current) => {
+      const target = current.quests.find((quest) => quest.id === questId)
+      if (!target) return current
+      const siblings = getQuestlineQuests(current, target.questline_id)
+      const index = siblings.findIndex((quest) => quest.id === questId)
+      const swapWith = siblings[index + direction]
+      if (!swapWith) return current
+      const byId = new Map(siblings.map((quest, position) => [quest.id, position]))
+      byId.set(target.id, byId.get(swapWith.id)!)
+      byId.set(swapWith.id, index)
+      return {
+        ...current,
+        quests: current.quests.map((quest) => (byId.has(quest.id) ? { ...quest, position: byId.get(quest.id)! } : quest)),
+      }
+    })
+    setDirty(true)
+  }, [])
+
+  const moveStep = useCallback((stepId: string, direction: -1 | 1) => {
+    setData((current) => {
+      const target = current.steps.find((step) => step.id === stepId)
+      if (!target) return current
+      const siblings = getQuestSteps(current, target.quest_id)
+      const index = siblings.findIndex((step) => step.id === stepId)
+      const swapWith = siblings[index + direction]
+      if (!swapWith) return current
+      const byId = new Map(siblings.map((step, position) => [step.id, position]))
+      byId.set(target.id, byId.get(swapWith.id)!)
+      byId.set(swapWith.id, index)
+      return {
+        ...current,
+        steps: current.steps.map((step) => (byId.has(step.id) ? { ...step, position: byId.get(step.id)! } : step)),
+      }
+    })
+    setDirty(true)
+  }, [])
+
+  const duplicateStep = useCallback((stepId: string) => {
+    setData((current) => {
+      const source = current.steps.find((step) => step.id === stepId)
+      if (!source) return current
+      const siblings = getQuestSteps(current, source.quest_id)
+      const copy: QuestStep = {
+        ...source,
+        id: makeLocalId('step'),
+        key: uniqueKey(siblings.map((step) => step.key), `${source.key}_copy`, `${source.key}_copy`),
+        position: siblings.length,
+        payload: { ...source.payload },
+        source_metadata: { ...source.source_metadata, local_draft: true },
+      }
+      const rewards: QuestReward[] = current.rewards
+        .filter((reward) => reward.scope === 'step' && reward.step_id === source.id)
+        .map((reward) => ({ ...reward, id: makeLocalId('reward'), step_id: copy.id, source_metadata: { ...reward.source_metadata, local_draft: true } }))
+      return {
+        ...current,
+        steps: [...current.steps, copy],
+        rewards: [...current.rewards, ...rewards],
+      }
+    })
+    setDirty(true)
+    notify(t('stepDuplicated'))
+  }, [notify, t])
+
+  const duplicateDialogue = useCallback((dialogueId: string) => {
+    setData((current) => {
+      const source = current.dialogues.find((dialogue) => dialogue.id === dialogueId)
+      if (!source) return current
+      const copyId = makeLocalId('dialogue')
+      const copy: Dialogue = {
+        ...source,
+        id: copyId,
+        key: uniqueDialogueKey(current, `${source.key}_copy`),
+        source_metadata: { ...source.source_metadata, local_draft: true },
+      }
+      const lines: DialogueLine[] = current.dialogueLines
+        .filter((line) => line.dialogue_id === source.id)
+        .map((line) => ({ ...line, id: makeLocalId('dline'), dialogue_id: copyId }))
+      touchedDialogueIds.current.add(copyId)
+      return {
+        ...current,
+        dialogues: [...current.dialogues, copy],
+        dialogueLines: [...current.dialogueLines, ...lines],
+      }
+    })
+    setDirty(true)
+    notify(t('dialogueDuplicated'))
+  }, [notify, t])
+
+  const duplicateQuestline = useCallback((questlineId: string) => {
+    setData((current) => {
+      const source = current.questlines.find((line) => line.id === questlineId)
+      if (!source) return current
+      const lineCopyId = makeLocalId('questline')
+      const lineCopy: Questline = {
+        ...source,
+        id: lineCopyId,
+        key: uniqueQuestlineKey(current, `${source.key}_copy`),
+        display_name: `${source.display_name} (${t('copySuffix')})`,
+        status: 'draft',
+        source_metadata: { ...source.source_metadata, local_draft: true },
+      }
+      const sourceQuests = getQuestlineQuests(current, source.id)
+      const questCopies: Quest[] = sourceQuests.map((quest, index) => ({
+        ...quest,
+        id: makeLocalId('quest'),
+        questline_id: lineCopyId,
+        key: uniqueKey(current.quests.map((item) => item.key), `${quest.key}_copy`, `${quest.key}_copy`),
+        position: index,
+        status: 'draft',
+        source_metadata: { ...quest.source_metadata, local_draft: true },
+      }))
+      const questIdMap = new Map(sourceQuests.map((quest, index) => [quest.id, questCopies[index].id]))
+
+      const usedStepKeys = new Set(current.steps.map((step) => step.key))
+      const sourceSteps = current.steps.filter((step) => questIdMap.has(step.quest_id))
+      const stepCopies: QuestStep[] = sourceSteps.map((step) => {
+        const copyKey = uniqueKey(usedStepKeys, step.key, step.key)
+        usedStepKeys.add(copyKey)
+        return {
+          ...step,
+          id: makeLocalId('step'),
+          quest_id: questIdMap.get(step.quest_id)!,
+          key: copyKey,
+          payload: { ...step.payload },
+          source_metadata: { ...step.source_metadata, local_draft: true },
+        }
+      })
+      const stepIdMap = new Map(sourceSteps.map((step, index) => [step.id, stepCopies[index].id]))
+
+      const rewards: QuestReward[] = current.rewards
+        .filter((reward) =>
+          (reward.scope === 'quest' && reward.quest_id !== null && questIdMap.has(reward.quest_id))
+          || (reward.scope === 'step' && reward.step_id !== null && stepIdMap.has(reward.step_id)),
+        )
+        .map((reward) => ({
+          ...reward,
+          id: makeLocalId('reward'),
+          quest_id: reward.scope === 'quest' ? questIdMap.get(reward.quest_id!)! : null,
+          step_id: reward.scope === 'step' ? stepIdMap.get(reward.step_id!) ?? null : null,
+          source_metadata: { ...reward.source_metadata, local_draft: true },
+        }))
+      const prerequisites: QuestPrerequisite[] = current.prerequisites
+        .filter((edge) => questIdMap.has(edge.quest_id) || questIdMap.has(edge.prerequisite_quest_id))
+        .map((edge) => ({
+          quest_id: questIdMap.get(edge.quest_id) ?? edge.quest_id,
+          prerequisite_quest_id: questIdMap.get(edge.prerequisite_quest_id) ?? edge.prerequisite_quest_id,
+        }))
+      return {
+        ...current,
+        questlines: [...current.questlines, lineCopy],
+        quests: [...current.quests, ...questCopies],
+        steps: [...current.steps, ...stepCopies],
+        rewards: [...current.rewards, ...rewards],
+        prerequisites: [...current.prerequisites, ...prerequisites],
+      }
+    })
+    setDirty(true)
+    notify(t('questlineDuplicated'))
+  }, [notify, t])
+
+  // --- Persistence ---
+  const persistDraft = useCallback(async (force: boolean): Promise<{ saveResult: SaveResult; savedData: EditorData }> => {
+    if (!selectedLine) {
+      const saveResult: SaveResult = { questlineId: '', updatedAt: new Date().toISOString() }
+      return { saveResult, savedData: data }
+    }
+    const lineToSave: Questline = { ...selectedLine, status: 'draft' }
+    const questsToSave = getQuestlineQuests(data, selectedLine.id)
+    const questIds = new Set(questsToSave.map((quest) => quest.id))
+    const stepsToSave = data.steps.filter((step) => questIds.has(step.quest_id))
+    const stepIds = new Set(stepsToSave.map((step) => step.id))
+    const savedData: EditorData = {
+      ...data,
+      questlines: data.questlines.map((line) => (line.id === lineToSave.id ? lineToSave : line)),
+      quests: data.quests.map((quest) =>
+        questIds.has(quest.id) ? { ...quest, status: quest.status === 'published' ? 'draft' : quest.status } : quest,
+      ),
+    }
+    const dialoguesToSave = data.dialogues.filter((dialogue) => touchedDialogueIds.current.has(dialogue.id))
+    const dialogueLinesToSave = data.dialogueLines.filter((line) => touchedDialogueIds.current.has(line.dialogue_id))
+    const minigamesToSave = data.minigames.filter((minigame) => touchedMinigameIds.current.has(minigame.id))
+
+    if (!supabase || demoMode) {
+      setData(savedData)
+      questlineVersions.current[lineToSave.id] = new Date().toISOString()
+      touchedDialogueIds.current.clear()
+      touchedMinigameIds.current.clear()
+      deletedQuestIds.current = []
+      deletedStepIds.current = []
+      deletedDialogueIds.current = []
+      deletedMinigameIds.current = []
+      setDirty(false)
+      return { saveResult: { questlineId: lineToSave.id, updatedAt: questlineVersions.current[lineToSave.id] }, savedData }
+    }
+
+    const payload: QuestlineSavePayload = {
+      questline: lineToSave,
+      quests: questsToSave,
+      steps: stepsToSave,
+      prerequisites: data.prerequisites.filter(
+        (edge) => questIds.has(edge.quest_id) || questIds.has(edge.prerequisite_quest_id),
+      ),
+      rewards: data.rewards.filter(
+        (reward) =>
+          (reward.scope === 'quest' && reward.quest_id !== null && questIds.has(reward.quest_id))
+          || (reward.scope === 'step' && reward.step_id !== null && stepIds.has(reward.step_id)),
+      ),
+      dialogues: dialoguesToSave,
+      dialogueLines: dialogueLinesToSave,
+      minigames: minigamesToSave,
+      deletedQuestIds: [...deletedQuestIds.current],
+      deletedStepIds: [...deletedStepIds.current],
+      deletedDialogueIds: [...deletedDialogueIds.current],
+      deletedMinigameIds: [...deletedMinigameIds.current],
+      expectedUpdatedAt: questlineVersions.current[selectedLine.id] ?? null,
+      force,
+    }
+    const saveResult = await saveQuestlineDraft(payload)
+    setData(savedData)
+    questlineVersions.current[selectedLine.id] = saveResult.updatedAt
+    touchedDialogueIds.current.clear()
+    touchedMinigameIds.current.clear()
+    deletedQuestIds.current = []
+    deletedStepIds.current = []
+    deletedDialogueIds.current = []
+    deletedMinigameIds.current = []
+    setDirty(false)
+    return { saveResult, savedData }
+  }, [data, demoMode, selectedLine])
+
+  const saveDraft = useCallback(async (options?: { force?: boolean }) => {
+    setSaving(true)
+    try {
+      await persistDraft(options?.force ?? false)
+      notify(t('draftSaved'))
+    } catch (error) {
+      if (error instanceof SaveConflictError) {
+        setConflictState(true)
+      } else {
+        notify(error instanceof Error ? error.message : t('couldNotSave'), 'error')
+      }
+    } finally {
+      setSaving(false)
+    }
+  }, [notify, persistDraft, t])
+
+  const publish = useCallback(async () => {
+    if (!selectedLine) return
+    const blocking = issues.filter((issue) => issue.severity === 'error')
+    if (blocking.length) {
+      notify(t('fixBeforePublish'), 'error')
+      return
+    }
+    setPublishing(true)
+    try {
+      let snapshotData = data
+      if (dirty) {
+        const { savedData } = await persistDraft(false)
+        snapshotData = savedData
+      }
+      const currentLine = snapshotData.questlines.find((line) => line.key === selectedLine.key) ?? selectedLine
+      const warningCount = issues.filter((issue) => issue.severity === 'warning').length
+      const { revision } = await publishQuestline({
+        data: snapshotData,
+        line: currentLine,
+        userId: user?.id ?? null,
+        warningCount,
+      })
+      setData((current) => ({
+        ...current,
+        questlines: current.questlines.map((line) => (line.id === currentLine.id ? { ...line, status: 'published' } : line)),
+        revisions: [...current.revisions, revision],
+      }))
+      questlineVersions.current[currentLine.id] = revision.published_at ?? revision.created_at ?? new Date().toISOString()
+      setDirty(false)
+      notify(t('publishedRevision', { name: currentLine.display_name, version: revision.version }))
+    } catch (error) {
+      if (error instanceof SaveConflictError) {
+        setConflictState(true)
+      } else {
+        notify(error instanceof Error ? error.message : t('couldNotPublish'), 'error')
+      }
+    } finally {
+      setPublishing(false)
+    }
+  }, [data, dirty, issues, notify, persistDraft, selectedLine, t, user])
+
+  // Auto-save
+  useEffect(() => {
+    if (!dirty || demoMode || !selectedLine || publishing || autoSaveInFlight.current) return
+    const timeout = window.setTimeout(() => {
+      autoSaveInFlight.current = true
+      setSaving(true)
+      void persistDraft(false)
+        .catch((error: unknown) => {
+          if (error instanceof SaveConflictError) {
+            setConflictState(true)
+          } else {
+            notify(error instanceof Error ? t('autoSaveFailedDetail', { message: error.message }) : t('autoSaveFailed'), 'error')
+          }
+        })
+        .finally(() => {
+          autoSaveInFlight.current = false
+          setSaving(false)
+        })
+    }, 1400)
+    return () => window.clearTimeout(timeout)
+  }, [data, dirty, demoMode, notify, persistDraft, publishing, selectedLine, t])
+
+  const retryJoin = useCallback(async () => {
+    if (!supabase || !user) return
+    const displayName = user.email?.split('@')[0] ?? null
+    const { error } = await supabase.rpc('ensure_workspace_member', { p_display_name: displayName })
+    if (error) throw error
+    const loaded = await loadEditorData()
+    setData(loaded)
+    questlineVersions.current = Object.fromEntries(loaded.questlines.map((line) => [line.id, line.updated_at ?? '']))
+    setLoadError('')
+  }, [user])
+
+  const handleSignIn = useCallback(async (email: string, password: string) => {
+    await persistenceSignIn(email, password)
+  }, [])
+
+  const handleSignUp = useCallback(async (email: string, password: string) => {
+    await persistenceSignUp(email, password)
+  }, [])
+
+  const handleSignOut = useCallback(async () => {
+    await persistenceSignOut()
+    setUser(null)
+  }, [])
+
+  const revisionsForLine = useCallback(
+    (questlineId: string) =>
+      data.revisions.filter((revision) => revision.questline_id === questlineId).sort((a, b) => b.version - a.version),
+    [data.revisions],
+  )
+
+  const restoreRevisionAsDraft = useCallback((revision: QuestlineRevision) => {
+    const line = data.questlines.find((item) => item.id === revision.questline_id) ?? selectedLine
+    if (!line) return
+    const doc = (revision.document ?? {}) as {
+      display_name?: string
+      default_giver_external_id?: string | null
+      theme?: string | null
+      quests?: Array<{
+        key: string
+        name: string
+        summary?: string | null
+        level_required?: number
+        giver_external_id?: string | null
+        prerequisites?: string[]
+        rewards?: Array<{ reward_type: string; xp_amount?: number | null; item_external_id?: string | null; amount?: number | null }>
+        steps?: Array<{
+          key: string
+          type: string
+          payload?: Record<string, unknown>
+          rewards?: Array<{ reward_type: string; xp_amount?: number | null; item_external_id?: string | null; amount?: number | null }>
+        }>
+      }>
+    }
+    setData((current) => {
+      const quests: Quest[] = (doc.quests ?? []).map((questDoc, index) => ({
+        id: makeLocalId('quest'),
+        questline_id: line.id,
+        key: questDoc.key || `q${String(index + 1).padStart(2, '0')}_restored`,
+        position: index,
+        name: questDoc.name || t('untitledQuest'),
+        level_required: questDoc.level_required ?? index + 1,
+        giver_external_id: questDoc.giver_external_id ?? null,
+        summary: questDoc.summary ?? null,
+        status: 'draft',
+        source_path: null,
+        source_metadata: { restored_from_revision: revision.version },
+      }))
+      const questIdByKey = new Map(quests.map((quest) => [quest.key, quest.id]))
+      const steps: QuestStep[] = (doc.quests ?? []).flatMap((questDoc) => {
+        const questId = questIdByKey.get(questDoc.key)
+        if (!questId) return []
+        return (questDoc.steps ?? []).map((stepDoc, index) => ({
+          id: makeLocalId('step'),
+          quest_id: questId,
+          key: stepDoc.key || `step_${String(index + 1).padStart(2, '0')}`,
+          position: index,
+          step_type: stepDoc.type,
+          payload: stepDoc.payload ?? {},
+          source_metadata: { restored_from_revision: revision.version },
+        }))
+      })
+      const stepIdByKey = new Map(
+        (doc.quests ?? []).flatMap((questDoc) =>
+          (questDoc.steps ?? []).map((stepDoc, index) => {
+            const questId = questIdByKey.get(questDoc.key)
+            if (!questId) return null
+            const stepId = steps.find(
+              (step) => step.quest_id === questId && step.position === index,
+            )?.id
+            return stepId ? [`${questDoc.key}::${stepDoc.key}`, stepId] : null
+          }).filter((entry): entry is [string, string] => entry !== null),
+        ),
+      )
+      const rewards: QuestReward[] = (doc.quests ?? []).flatMap((questDoc) => {
+        const questId = questIdByKey.get(questDoc.key)
+        if (!questId) return []
+        const questRewards: QuestReward[] = (questDoc.rewards ?? []).map((rewardDoc) => ({
+          id: makeLocalId('reward'),
+          scope: 'quest',
+          quest_id: questId,
+          step_id: null,
+          reward_type: rewardDoc.reward_type === 'item' ? 'item' : 'xp',
+          xp_amount: rewardDoc.xp_amount ?? null,
+          item_external_id: rewardDoc.item_external_id ?? null,
+          amount: rewardDoc.amount ?? null,
+          source_metadata: {},
+        }))
+        const stepRewards: QuestReward[] = (questDoc.steps ?? []).flatMap((stepDoc) => {
+          const stepId = stepIdByKey.get(`${questDoc.key}::${stepDoc.key}`)
+          if (!stepId) return []
+          return (stepDoc.rewards ?? []).map((rewardDoc) => ({
+            id: makeLocalId('reward'),
+            scope: 'step',
+            quest_id: null,
+            step_id: stepId,
+            reward_type: rewardDoc.reward_type === 'item' ? 'item' : 'xp',
+            xp_amount: rewardDoc.xp_amount ?? null,
+            item_external_id: rewardDoc.item_external_id ?? null,
+            amount: rewardDoc.amount ?? null,
+            source_metadata: {},
+          }))
+        })
+        return [...questRewards, ...stepRewards]
+      })
+      const prerequisites: QuestPrerequisite[] = (doc.quests ?? []).flatMap((questDoc) => {
+        const questId = questIdByKey.get(questDoc.key)
+        if (!questId) return []
+        return (questDoc.prerequisites ?? [])
+          .filter((prereqKey) => questIdByKey.has(prereqKey))
+          .map((prereqKey) => ({ quest_id: questId, prerequisite_quest_id: questIdByKey.get(prereqKey)! }))
+      })
+      const oldQuestIds = new Set(current.quests.filter((quest) => quest.questline_id === line.id).map((quest) => quest.id))
+      return {
+        ...current,
+        questlines: current.questlines.map((item) =>
+          item.id === line.id
+            ? {
+              ...item,
+              status: 'draft',
+              display_name: doc.display_name ?? item.display_name,
+              default_giver_external_id: doc.default_giver_external_id ?? item.default_giver_external_id,
+              theme: doc.theme !== undefined ? doc.theme : item.theme,
+            }
+            : item),
+        quests: [...current.quests.filter((quest) => quest.questline_id !== line.id), ...quests],
+        steps: [...current.steps.filter((step) => !oldQuestIds.has(step.quest_id)), ...steps],
+        rewards: [
+          ...current.rewards.filter((reward) => !(reward.quest_id !== null && oldQuestIds.has(reward.quest_id))),
+          ...rewards,
+        ],
+        prerequisites: [
+          ...current.prerequisites.filter(
+            (edge) => !oldQuestIds.has(edge.quest_id) && !oldQuestIds.has(edge.prerequisite_quest_id),
+          ),
+          ...prerequisites,
+        ],
+      }
+    })
+    setSelectedQuestId('')
+    setSelectedStepId('')
+    setDirty(true)
+    notify(t('revisionRestored'))
+  }, [data, notify, selectedLine, t])
+
+  const createQuestFromTemplate = useCallback((kind: 'blank' | 'adventure') => {
+    if (!selectedLine) return
+    const giver = selectedLine.default_giver_external_id ?? 'teacher_maya'
+    setData((current) => {
+      const siblings = getQuestlineQuests(current, selectedLine.id)
+      const position = siblings.length
+      const quest: Quest = {
+        id: makeLocalId('quest'),
+        questline_id: selectedLine.id,
+        key: uniqueQuestKey(current, kind === 'adventure' ? 'learning_adventure' : 'new_quest'),
+        position,
+        name: kind === 'adventure' ? t('templateAdventure') : t('templateBlank'),
+        level_required: Math.max(1, position + 1),
+        giver_external_id: giver,
+        summary: kind === 'adventure' ? t('templateAdventureCopy') : t('templateBlankCopy'),
+        status: 'draft',
+        source_path: null,
+        source_metadata: { local_draft: true, template: kind },
+      }
+      const steps: QuestStep[] = []
+      if (kind === 'adventure') {
+        const firstArea = current.catalog.find((entry) => entry.kind === 'area')
+        const firstMinigame = current.catalog.find((entry) => entry.kind === 'minigame')
+        const firstInteractable = current.catalog.find((entry) => entry.kind === 'interactable')
+        const firstItem = current.catalog.find((entry) => entry.kind === 'item')
+        const pattern: Array<{ type: string; payload: Record<string, unknown> }> = [
+          { type: 'talk_to_npc', payload: { npc_id: giver, dialogue_id: '' } },
+          { type: 'reach_location', payload: { location_id: firstArea?.external_id ?? '', radius: 5 } },
+          {
+            type: 'play_minigame',
+            payload: {
+              minigame_id: firstMinigame?.external_id ?? '',
+              world_object_id: firstInteractable?.external_id ?? '',
+              difficulty: 1,
+              success_required: true,
+            },
+          },
+          {
+            type: 'deliver_item',
+            payload: { npc_id: giver, item_id: firstItem?.external_id ?? '', amount: 1, dialogue_id: '' },
+          },
+        ]
+        pattern.forEach((stepDoc, index) => {
+          steps.push({
+            id: makeLocalId('step'),
+            quest_id: quest.id,
+            key: `${quest.key}_step_${String(index + 1).padStart(2, '0')}`,
+            position: index,
+            step_type: stepDoc.type,
+            payload: stepDoc.payload,
+            source_metadata: { local_draft: true, template: kind },
+          })
+        })
+      }
+      return {
+        ...current,
+        quests: [...current.quests, quest],
+        steps: [...current.steps, ...steps],
+      }
+    })
+    setSelectedQuestId('')
+    setSelectedStepId('')
+    setShowTemplates(false)
+    setDirty(true)
+    notify(t('templateCreated'))
+  }, [notify, selectedLine, selectedQuestId, setSelectedQuestId, setSelectedStepId, setShowTemplates, t])
+
+  const forceSaveAfterConflict = useCallback(async () => {
+    setConflictState(false)
+    await saveDraft({ force: true })
+  }, [saveDraft])
+
+  const value = useMemo<EditorStoreValue>(
+    () => ({
+      demoMode,
+      data,
+      user,
+      authReady,
+      view,
+      setView,
+      selectedQuestlineId,
+      selectedQuestId,
+      selectedStepId,
+      setSelectedQuestlineId,
+      setSelectedQuestId,
+      setSelectedStepId,
+      selectedLine,
+      lineQuests,
+      selectedQuest,
+      questSteps,
+      issues,
+      dirty,
+      saving,
+      publishing,
+      toast,
+      loadError,
+      history: { canUndo: historyIndex.current > 0, canRedo: historyIndex.current < history.current.length - 1 },
+      undo,
+      redo,
+      notify,
+      confirmState,
+      openConfirm,
+      closeConfirm,
+      conflictState,
+      closeConflict,
+      showNewQuestline,
+      setShowNewQuestline,
+      showPublishConfirm,
+      setShowPublishConfirm,
+      showSearch,
+      setShowSearch,
+      showRevisions,
+      setShowRevisions,
+      showTemplates,
+      setShowTemplates,
+      libraryTab,
+      setLibraryTab,
+      updateLine,
+      updateQuest,
+      updateStep,
+      updateDialogue,
+      updateDialogueLine,
+      addDialogueLine,
+      removeDialogueLine,
+      moveDialogueLine,
+      createDialogue,
+      createDialogueForStep,
+      updateMinigame,
+      togglePrerequisite,
+      addReward,
+      updateReward,
+      removeReward,
+      addQuest,
+      addStep,
+      createQuestline,
+      removeQuestline,
+      removeQuest,
+      removeStep,
+      removeDialogue,
+      removeMinigame,
+      duplicateQuest,
+      duplicateStep,
+      duplicateDialogue,
+      duplicateQuestline,
+      moveQuest,
+      moveStep,
+      saveDraft,
+      publish,
+      retryJoin,
+      handleSignIn,
+      handleSignUp,
+      handleSignOut,
+      revisionsForLine,
+      restoreRevisionAsDraft,
+      createQuestFromTemplate,
+      forceSaveAfterConflict,
+    }),
+    [
+      demoMode, data, user, authReady, view, selectedQuestlineId, selectedQuestId, selectedStepId,
+      selectedLine, lineQuests, selectedQuest, questSteps, issues, dirty, saving, publishing,
+      toast, loadError, historyVersion, undo, redo, notify, confirmState, openConfirm, closeConfirm,
+      conflictState, closeConflict, showNewQuestline, showPublishConfirm, showSearch,
+      showRevisions, showTemplates, libraryTab, setLibraryTab, updateLine, updateQuest, updateStep, updateDialogue,
+      updateDialogueLine, addDialogueLine, removeDialogueLine, moveDialogueLine, createDialogue,
+      createDialogueForStep, updateMinigame, togglePrerequisite, addReward, updateReward,
+      removeReward, addQuest, addStep, createQuestline, removeQuestline, removeQuest, removeStep,
+      removeDialogue, removeMinigame, duplicateQuest, duplicateStep, duplicateDialogue, duplicateQuestline,
+      moveQuest, moveStep, saveDraft, publish,
+      retryJoin, handleSignIn, handleSignUp, handleSignOut, revisionsForLine,
+      restoreRevisionAsDraft, createQuestFromTemplate, forceSaveAfterConflict,
+    ],
+  )
+
+  return <EditorStoreContext.Provider value={value}>{children}</EditorStoreContext.Provider>
+}
+
+export function useEditorStore(): EditorStoreValue {
+  const context = useContext(EditorStoreContext)
+  if (!context) throw new Error('useEditorStore must be used within EditorStoreProvider')
+  return context
+}

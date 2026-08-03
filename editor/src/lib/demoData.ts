@@ -241,6 +241,7 @@ const catalogSeed: Array<[CatalogEntry['kind'], string, string, string, string |
   ['interactable', 'Lost_Chest5_Silver_Fountain_Court', 'Lost Chest 5', 'A world station for a short activity.', 'images/interactables/Lost_Chest5_Silver_Fountain_Court.png'],
   ['interactable', 'WoodenCart3_The_Oath_stone_Bridge', 'Wooden Cart 3', 'A cart with a learning challenge.', 'images/interactables/WoodenCart3_The_Oath_stone_Bridge.png'],
   ['item', 'gem', 'Gem', 'A small reward for completing a speaking activity.', 'images/items/gem.png'],
+  ['item', 'coin', 'Coin', 'A currency reward for mastery quests.', null],
   ['item', 'ancient_rune', 'Ancient Rune', 'A collectible for adjective and noun mastery.', 'images/items/ancient_rune.png'],
   ['minigame', 'letter_ordering', 'Letter Ordering', 'Arrange letters into a word.', 'images/minigames/letter_ordering.png'],
   ['minigame', 'word_matching', 'Word Matching', 'Match a word to the missing letter.', 'images/minigames/word_matching.png'],
@@ -260,55 +261,51 @@ function createCatalog(): CatalogEntry[] {
 }
 
 function createStepTypes(): StepTypeDefinition[] {
+  // Must mirror supabase/migrations/20260803100000_quest_editor.sql seed exactly,
+  // so demo mode and connected mode render identical step schemas.
   return [
     {
       id: 'talk_to_npc',
       unity_objective: 'TalkToNpc',
-      description: 'Start a conversation with a character.',
+      description: 'Player initiates dialogue with an NPC',
       fields: [
-        { name: 'npc_id', type: 'string', required: true, ref: 'npcs' },
-        { name: 'dialogue_id', type: 'string', required: true, ref: 'dialogues' },
+        { name: 'npc_id', type: 'string', required: true, ref: 'npcs.yaml' },
+        { name: 'dialogue_id', type: 'string', required: true, ref: '_registry/dialogues/' },
+        { name: 'optional_flag', type: 'string', required: false, description: 'Sets a story flag after dialogue' },
       ],
       metadata: {},
     },
     {
       id: 'return_to_npc',
       unity_objective: 'TalkToNpc',
-      description: 'Return to a character after completing the activity.',
+      description: 'Player returns to an NPC to turn in or continue',
       fields: [
-        { name: 'npc_id', type: 'string', required: true, ref: 'npcs' },
-        { name: 'dialogue_id', type: 'string', required: true, ref: 'dialogues' },
-      ],
-      metadata: {},
-    },
-    {
-      id: 'reach_location',
-      unity_objective: 'EnterArea',
-      description: 'Enter a world location.',
-      fields: [
-        { name: 'location_id', type: 'string', required: true, ref: 'areas' },
-        { name: 'radius', type: 'number', required: false, default: 5 },
+        { name: 'npc_id', type: 'string', required: true, ref: 'npcs.yaml' },
+        { name: 'dialogue_id', type: 'string', required: true, ref: '_registry/dialogues/' },
       ],
       metadata: {},
     },
     {
       id: 'play_minigame',
       unity_objective: 'CompleteMiniGame',
-      description: 'Complete a learning activity at a world station.',
+      description: 'Start and complete a minigame on a world station',
       fields: [
-        { name: 'minigame_id', type: 'string', required: true, ref: 'minigames' },
-        { name: 'world_object_id', type: 'string', required: true, ref: 'interactables' },
+        { name: 'minigame_id', type: 'string', required: true, ref: 'minigames.yaml' },
+        { name: 'world_object_id', type: 'string', required: true, ref: 'interactables.yaml' },
         { name: 'difficulty', type: 'integer', required: true, min: 1, max: 10 },
         { name: 'success_required', type: 'boolean', required: false, default: true },
+        { name: 'instance_id', type: 'string', required: false, ref: '_registry/minigame_instances/' },
+        { name: 'reward_item_id', type: 'string', required: false, ref: 'items.yaml' },
+        { name: 'reward_amount', type: 'integer', required: false, min: 1, default: 1 },
       ],
       metadata: {},
     },
     {
       id: 'collect_item',
       unity_objective: 'Collect',
-      description: 'Collect an item from the world.',
+      description: 'Gather items from the world or drops',
       fields: [
-        { name: 'item_id', type: 'string', required: true, ref: 'items' },
+        { name: 'item_id', type: 'string', required: true, ref: 'items.yaml' },
         { name: 'amount', type: 'integer', required: true, min: 1 },
       ],
       metadata: {},
@@ -316,35 +313,43 @@ function createStepTypes(): StepTypeDefinition[] {
     {
       id: 'deliver_item',
       unity_objective: 'DeliverItem',
-      description: 'Bring an item to a character.',
+      description: 'Bring items to an NPC',
       fields: [
-        { name: 'npc_id', type: 'string', required: true, ref: 'npcs' },
-        { name: 'item_id', type: 'string', required: true, ref: 'items' },
+        { name: 'npc_id', type: 'string', required: true, ref: 'npcs.yaml' },
+        { name: 'item_id', type: 'string', required: true, ref: 'items.yaml' },
         { name: 'amount', type: 'integer', required: true, min: 1 },
-        { name: 'dialogue_id', type: 'string', required: false, ref: 'dialogues' },
+        { name: 'dialogue_id', type: 'string', required: false, ref: '_registry/dialogues/' },
+      ],
+      metadata: {},
+    },
+    {
+      id: 'reach_location',
+      unity_objective: 'EnterArea',
+      description: 'Player must enter a trigger zone',
+      fields: [
+        { name: 'location_id', type: 'string', required: true, ref: 'areas.yaml' },
+        { name: 'radius', type: 'number', required: false, default: 5 },
       ],
       metadata: {},
     },
   ]
 }
 
-function createDialogues(): Dialogue[] {
-  return [
-    {
-      id: 'demo-dialogue-intro',
-      key: 'adjective_knight_oak_log_request',
-      speaker_external_id: 'teacher_maya',
-      source_path: '_registry/dialogues/adjective_crown.yaml',
-      source_metadata: { demo: true },
-    },
-    {
-      id: 'demo-dialogue-complete',
-      key: 'adjective_knight_oak_log_delivered',
-      speaker_external_id: 'teacher_maya',
-      source_path: '_registry/dialogues/adjective_crown.yaml',
-      source_metadata: { demo: true },
-    },
-  ]
+function createDialogues(steps: QuestStep[]): Dialogue[] {
+  const used = new Map<string, string>()
+  for (const step of steps) {
+    const dialogueKey = step.payload.dialogue_id
+    if (typeof dialogueKey !== 'string' || !dialogueKey) continue
+    if (used.has(dialogueKey)) continue
+    used.set(dialogueKey, typeof step.payload.npc_id === 'string' ? step.payload.npc_id : 'teacher_maya')
+  }
+  return [...used.entries()].map(([key, speaker]) => ({
+    id: `demo-dialogue-${key.replaceAll('_', '-')}`,
+    key,
+    speaker_external_id: speaker,
+    source_path: `_registry/dialogues/${key.split('_')[0]}.yaml`,
+    source_metadata: { demo: true },
+  }))
 }
 
 function createDialogueLines(dialogues: Dialogue[]): DialogueLine[] {
@@ -384,7 +389,7 @@ export function createDemoData(): EditorData {
   const questlines = createQuestlines()
   const quests = createQuests()
   const steps = createSteps(quests)
-  const dialogues = createDialogues()
+  const dialogues = createDialogues(steps)
   return {
     questlines,
     quests,

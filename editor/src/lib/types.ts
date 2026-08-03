@@ -13,6 +13,10 @@ export interface Questline {
   level_max: number | null
   source_path: string | null
   source_metadata: Record<string, unknown>
+  created_by?: string | null
+  updated_by?: string | null
+  created_at?: string
+  updated_at?: string
 }
 
 export interface Quest {
@@ -27,6 +31,10 @@ export interface Quest {
   status: QuestStatus
   source_path: string | null
   source_metadata: Record<string, unknown>
+  created_by?: string | null
+  updated_by?: string | null
+  created_at?: string
+  updated_at?: string
 }
 
 export interface QuestStep {

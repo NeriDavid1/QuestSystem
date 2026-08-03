@@ -1,0 +1,173 @@
+import { describe, expect, it } from 'vitest'
+import {
+  DEFAULT_DIALOGUE_LOCALE,
+  buildSnapshotDocument,
+  getCatalogKindForRef,
+  getDialogueLines,
+  getQuestSteps,
+  getQuestlineQuests,
+  isLocalId,
+  makeLocalId,
+  slugify,
+  uniqueDialogueKey,
+  uniqueKey,
+  uniqueQuestKey,
+  uniqueQuestlineKey,
+} from './editorData'
+import { createDemoData } from './demoData'
+
+const data = createDemoData()
+
+describe('slugify', () => {
+  it('lowercases and trims', () => {
+    expect(slugify('  Hello World  ')).toBe('hello_world')
+  })
+
+  it('collapses non-alphanumeric runs to a single underscore', () => {
+    expect(slugify('A--B!!!C')).toBe('a_b_c')
+  })
+
+  it('strips diacritics and transliterates accented latin', () => {
+    expect(slugify('café')).toBe('cafe')
+  })
+
+  it('drops leading and trailing separators', () => {
+    expect(slugify('---walk---')).toBe('walk')
+  })
+
+  it('falls back to a timestamp key for empty input', () => {
+    expect(slugify('   ')).toMatch(/^line_[0-9a-z]+$/)
+  })
+})
+
+describe('uniqueKey', () => {
+  it('returns the base key when free', () => {
+    expect(uniqueKey(['a', 'b'], 'c')).toBe('c')
+  })
+
+  it('appends _2, _3 when the key is taken', () => {
+    expect(uniqueKey(['x', 'x_2'], 'x')).toBe('x_3')
+  })
+
+  it('produces a unique key when the slugified base is empty', () => {
+    const key = uniqueKey(['nope'], '!!!', 'new_item')
+    expect(key).not.toBe('nope')
+    expect(key).not.toBe('new_item')
+    expect(key.length).toBeGreaterThan(0)
+  })
+})
+
+describe('unique* helpers', () => {
+  it('produce keys not present in their scoped collections', () => {
+    const allLineKeys = new Set(data.questlines.map((line) => line.key))
+    const allQuestKeys = new Set(data.quests.map((quest) => quest.key))
+    const allDialogueKeys = new Set(data.dialogues.map((dialogue) => dialogue.key))
+    const lineKey = uniqueQuestlineKey(data, data.questlines[0].key)
+    const questKey = uniqueQuestKey(data, data.quests[0].key)
+    const dialogueKey = uniqueDialogueKey(data, data.dialogues[0].key)
+    expect(allLineKeys.has(lineKey)).toBe(false)
+    expect(allQuestKeys.has(questKey)).toBe(false)
+    expect(allDialogueKeys.has(dialogueKey)).toBe(false)
+  })
+})
+
+describe('makeLocalId', () => {
+  it('generates valid non-prefixed UUIDs ready for direct upserts', () => {
+    const id = makeLocalId('quest')
+    expect(id).toMatch(/^[0-9a-f-]{36}$/)
+    expect(isLocalId(id)).toBe(false)
+  })
+
+  it('generates distinct ids', () => {
+    expect(makeLocalId('quest')).not.toBe(makeLocalId('quest'))
+  })
+})
+
+describe('getCatalogKindForRef', () => {
+  it('maps registry ref patterns to catalog kinds', () => {
+    expect(getCatalogKindForRef('npcs.yaml')).toBe('npc')
+    expect(getCatalogKindForRef('areas.yaml')).toBe('area')
+    expect(getCatalogKindForRef('interactables.yaml')).toBe('interactable')
+    expect(getCatalogKindForRef('items.yaml')).toBe('item')
+    expect(getCatalogKindForRef('minigames.yaml')).toBe('minigame')
+  })
+
+  it('returns null for dialogue refs and unknown refs', () => {
+    expect(getCatalogKindForRef('_registry/dialogues/')).toBeNull()
+    expect(getCatalogKindForRef(undefined)).toBeNull()
+  })
+})
+
+describe('getQuestlineQuests / getQuestSteps', () => {
+  it('sorts quests by position within a questline', () => {
+    const quests = getQuestlineQuests(data, data.questlines[0].id)
+    expect(quests.length).toBeGreaterThan(0)
+    for (let i = 1; i < quests.length; i += 1) {
+      expect(quests[i].position).toBeGreaterThanOrEqual(quests[i - 1].position)
+    }
+  })
+
+  it('sorts steps by position within a quest', () => {
+    const quest = data.quests[0]
+    const steps = getQuestSteps(data, quest.id)
+    for (let i = 1; i < steps.length; i += 1) {
+      expect(steps[i].position).toBeGreaterThanOrEqual(steps[i - 1].position)
+    }
+  })
+})
+
+describe('getDialogueLines', () => {
+  it('orders lines by line_order then locale', () => {
+    const dialogue = data.dialogues[0]
+    const lines = getDialogueLines(data, dialogue.id)
+    for (let i = 1; i < lines.length; i += 1) {
+      const prev = lines[i - 1]
+      const current = lines[i]
+      expect(current.line_order > prev.line_order || (current.line_order === prev.line_order && current.locale >= prev.locale)).toBe(true)
+    }
+  })
+})
+
+describe('buildSnapshotDocument', () => {
+  const line = data.questlines[0]
+  const document = buildSnapshotDocument(data, line)
+
+  it('includes questline fields', () => {
+    expect(document.key).toBe(line.key)
+    expect(document.display_name).toBe(line.display_name)
+    expect(document.theme).toBe(line.theme)
+  })
+
+  it('maps every quest with its steps, rewards, and prerequisites', () => {
+    const quests = document.quests as Array<{
+      key: string
+      steps: Array<{ key: string; type: string; payload: unknown }>
+      rewards: unknown[]
+      prerequisites: string[]
+    }>
+    const sourceQuests = getQuestlineQuests(data, line.id)
+    expect(quests.length).toBe(sourceQuests.length)
+
+    for (const [index, quest] of quests.entries()) {
+      expect(quest.key).toBe(sourceQuests[index].key)
+      const sourceSteps = getQuestSteps(data, sourceQuests[index].id)
+      expect(quest.steps.length).toBe(sourceSteps.length)
+      expect(quest.steps.map((step) => step.type)).toEqual(sourceSteps.map((step) => step.step_type))
+      expect(quest.steps.map((step) => step.key)).toEqual(sourceSteps.map((step) => step.key))
+    }
+  })
+
+  it('keeps step payloads intact', () => {
+    const quests = document.quests as Array<{ steps: Array<{ payload: unknown }> }>
+    const payloads = quests.flatMap((quest) => quest.steps.map((step) => step.payload))
+    const sourceSteps = data.steps.filter((step) => getQuestlineQuests(data, line.id).some((quest) => quest.id === step.quest_id))
+    expect(payloads).toEqual(sourceSteps.map((step) => step.payload))
+  })
+})
+
+describe('demoData contract', () => {
+  it('uses the default dialogue locale constant', () => {
+    expect(DEFAULT_DIALOGUE_LOCALE).toBe('he')
+    expect(data.dialogueLines.every((line) => line.locale === DEFAULT_DIALOGUE_LOCALE)).toBe(true)
+  })
+})
