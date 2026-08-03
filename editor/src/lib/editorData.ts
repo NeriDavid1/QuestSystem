@@ -73,9 +73,22 @@ export function stepHasMinigameField(data: EditorData, step: QuestStep): boolean
   )
 }
 
-/** The localized minigame instance attached to a step via its `instance_id` payload key. */
+/**
+ * The minigame instance key attached to a step. New editor steps store it under
+ * `instance_id`, while steps produced by the import pipeline (YAML -> Supabase)
+ * store the resolved instance key under `instance_key`. Accept both so imported
+ * questlines render their minigame briefs without re-authoring.
+ */
+export function getStepMinigameKey(step: QuestStep): string {
+  const instanceId = typeof step.payload.instance_id === 'string' ? step.payload.instance_id : ''
+  if (instanceId) return instanceId
+  const instanceKey = typeof step.payload.instance_key === 'string' ? step.payload.instance_key : ''
+  return instanceKey
+}
+
+/** The localized minigame instance attached to a step via its instance key payload. */
 export function getStepMinigame(data: EditorData, step: QuestStep): MinigameInstance | undefined {
-  const instanceKey = typeof step.payload.instance_id === 'string' ? step.payload.instance_id : ''
+  const instanceKey = getStepMinigameKey(step)
   if (!instanceKey) return undefined
   return data.minigames.find((minigame) => minigame.key === instanceKey)
 }
@@ -165,6 +178,7 @@ export function buildSnapshotDocument(data: EditorData, line: Questline): Record
       status: quest.status,
       steps,
       summary: quest.summary,
+      wait_for_npc_turn_in: quest.wait_for_npc_turn_in ?? false,
     }
   })
 

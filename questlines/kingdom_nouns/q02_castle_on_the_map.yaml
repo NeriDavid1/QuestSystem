@@ -5,6 +5,7 @@ quest:
   giver_npc: "City Gaurd Info"
   prerequisite: q01_roles_without_names
   summary: "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 450, items: [] }
 

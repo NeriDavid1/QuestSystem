@@ -647,6 +647,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       level_required: Math.max(1, position + 1),
       giver_external_id: selectedLine.default_giver_external_id,
       summary: t('describeLearnerGoal'),
+      wait_for_npc_turn_in: false,
       status: 'draft',
       source_path: null,
       source_metadata: { local_draft: true },
@@ -1196,6 +1197,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         summary?: string | null
         level_required?: number
         giver_external_id?: string | null
+        wait_for_npc_turn_in?: boolean
         prerequisites?: string[]
         rewards?: Array<{ reward_type: string; xp_amount?: number | null; item_external_id?: string | null; amount?: number | null }>
         steps?: Array<{
@@ -1216,6 +1218,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         level_required: questDoc.level_required ?? index + 1,
         giver_external_id: questDoc.giver_external_id ?? null,
         summary: questDoc.summary ?? null,
+        wait_for_npc_turn_in: questDoc.wait_for_npc_turn_in ?? false,
         status: 'draft',
         source_path: null,
         source_metadata: { restored_from_revision: revision.version },
@@ -1332,6 +1335,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         level_required: Math.max(1, position + 1),
         giver_external_id: giver,
         summary: kind === 'adventure' ? t('templateAdventureCopy') : t('templateBlankCopy'),
+        wait_for_npc_turn_in: false,
         status: 'draft',
         source_path: null,
         source_metadata: { local_draft: true, template: kind },

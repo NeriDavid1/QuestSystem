@@ -483,6 +483,7 @@ def build_bundle() -> dict[str, Any]:
                 "level_required": int(entry.get("level") if entry.get("level") is not None else detail.get("level_required") or 0),
                 "giver_external_id": giver,
                 "summary": detail.get("summary") or "",
+                "wait_for_npc_turn_in": bool(detail.get("wait_for_npc_turn_in", False)),
                 "status": detail.get("status") or ("complete" if len(steps_raw) > 1 else "draft"),
                 "prerequisites": [],
                 "steps": [],
@@ -848,15 +849,17 @@ def insert_quests_sql(bundle: dict[str, Any]) -> str:
         for quest in line["quests"]:
             statements.append(
                 "insert into public.quests "
-                "(questline_id, key, position, name, level_required, giver_external_id, summary, status, source_path, source_metadata) values "
+                "(questline_id, key, position, name, level_required, giver_external_id, summary, wait_for_npc_turn_in, status, source_path, source_metadata) values "
                 f"({questline_lookup(line['key'])}, {sql_literal(quest['key'])}, {quest['position']}, "
                 f"{sql_literal(quest['name'])}, {quest['level_required']}, "
                 f"{sql_literal(quest['giver_external_id'])}, {sql_literal(quest['summary'])}, "
+                f"{'true' if quest['wait_for_npc_turn_in'] else 'false'}, "
                 f"{sql_literal(quest['status'])}, {sql_literal(quest['source_path'])}, "
                 f"{json_sql(quest['source_metadata'])}) "
                 "on conflict (questline_id, key) do update set position = excluded.position, "
                 "name = excluded.name, level_required = excluded.level_required, "
                 "giver_external_id = excluded.giver_external_id, summary = excluded.summary, "
+                "wait_for_npc_turn_in = excluded.wait_for_npc_turn_in, "
                 "status = excluded.status, source_path = excluded.source_path, "
                 "source_metadata = excluded.source_metadata, updated_at = now();"
             )

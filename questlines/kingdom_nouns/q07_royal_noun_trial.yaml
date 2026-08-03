@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q06_dragon_identity
   summary: "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya."
+  wait_for_npc_turn_in: false
 
 rewards:
   xp: 700

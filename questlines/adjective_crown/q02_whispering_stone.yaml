@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q01_bridge_too_short
   summary: "Say HOT in the forest, receive one Herbs item, and deliver it to Maya."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 100, items: [] }
 

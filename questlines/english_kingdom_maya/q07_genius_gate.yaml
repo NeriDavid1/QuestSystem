@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q06_butterfly_chaos
   summary: "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו."
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 180

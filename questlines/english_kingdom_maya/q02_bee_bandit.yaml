@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q01_runaway_a
   summary: "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!"
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 60

@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q05_mystery_egg
   summary: "פרפרים מעופפים עם אותיות F על הכנפיים מסביב לגן — כל פעם שהם נוחתים, הם משנים שלט ל-FLY או FRY (צ'יפס מעופף)!"
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 150

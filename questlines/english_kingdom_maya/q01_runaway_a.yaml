@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: null
   summary: "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!"
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 40

@@ -6431,6 +6431,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -6547,7 +6548,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": null,
-              "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya."
+              "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -6558,6 +6560,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q01_bridge_too_short"
@@ -6676,7 +6679,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q01_bridge_too_short",
-              "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya."
+              "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -6687,6 +6691,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q02_whispering_stone"
@@ -6852,7 +6857,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q02_whispering_stone",
-              "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya."
+              "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -6863,6 +6869,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q03_big_and_small_words"
@@ -7488,7 +7495,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q03_big_and_small_words",
-              "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya."
+              "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -7499,6 +7507,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q04_twelve_basic_adjectives"
@@ -7726,7 +7735,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q04_twelve_basic_adjectives",
-              "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya."
+              "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -7737,6 +7747,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q05_from_low_to_high"
@@ -7903,7 +7914,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q05_from_low_to_high",
-              "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya."
+              "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         }
@@ -7932,6 +7944,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -8048,7 +8061,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": null,
-              "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log."
+              "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -8059,6 +8073,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q01_runaway_hammer"
@@ -8177,7 +8192,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "q01_runaway_hammer",
-              "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs."
+              "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -8188,6 +8204,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q02_snoring_anvil"
@@ -8285,7 +8302,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "q02_snoring_anvil",
-              "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability."
+              "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
+              "wait_for_npc_turn_in": true
             }
           }
         }
@@ -8314,6 +8332,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -8423,7 +8442,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": null,
-              "summary": "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!"
+              "summary": "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -8434,6 +8454,7 @@
           "level_required": 2,
           "giver_external_id": "teacher_maya",
           "summary": "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q01_runaway_a"
@@ -8548,7 +8569,8 @@
               "level_required": 2,
               "giver_npc": "teacher_maya",
               "prerequisite": "q01_runaway_a",
-              "summary": "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!"
+              "summary": "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -8559,6 +8581,7 @@
           "level_required": 3,
           "giver_external_id": "teacher_maya",
           "summary": "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q02_bee_bandit"
@@ -8686,7 +8709,8 @@
               "level_required": 3,
               "giver_npc": "teacher_maya",
               "prerequisite": "q02_bee_bandit",
-              "summary": "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!"
+              "summary": "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -8697,6 +8721,7 @@
           "level_required": 4,
           "giver_external_id": "teacher_maya",
           "summary": "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q03_cat_on_c"
@@ -8808,7 +8833,8 @@
               "level_required": 4,
               "giver_npc": "teacher_maya",
               "prerequisite": "q03_cat_on_c",
-              "summary": "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!"
+              "summary": "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -8819,6 +8845,7 @@
           "level_required": 5,
           "giver_external_id": "teacher_maya",
           "summary": "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q04_dog_ate_homework"
@@ -8930,7 +8957,8 @@
               "level_required": 5,
               "giver_npc": "teacher_maya",
               "prerequisite": "q04_dog_ate_homework",
-              "summary": "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות."
+              "summary": "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -8941,6 +8969,7 @@
           "level_required": 6,
           "giver_external_id": "teacher_maya",
           "summary": "פרפרים מעופפים עם אותיות F על הכנפיים מסביב לגן — כל פעם שהם נוחתים, הם משנים שלט ל-FLY או FRY (צ'יפס מעופף)!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q05_mystery_egg"
@@ -9055,7 +9084,8 @@
               "level_required": 6,
               "giver_npc": "teacher_maya",
               "prerequisite": "q05_mystery_egg",
-              "summary": "פרפרים מעופפים עם אותיות F על הכנפיים מסביב לגן — כל פעם שהם נוחתים, הם משנים שלט ל-FLY או FRY (צ'יפס מעופף)!"
+              "summary": "פרפרים מעופפים עם אותיות F על הכנפיים מסביב לגן — כל פעם שהם נוחתים, הם משנים שלט ל-FLY או FRY (צ'יפס מעופף)!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -9066,6 +9096,7 @@
           "level_required": 7,
           "giver_external_id": "teacher_maya",
           "summary": "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q06_butterfly_chaos"
@@ -9193,7 +9224,8 @@
               "level_required": 7,
               "giver_npc": "teacher_maya",
               "prerequisite": "q06_butterfly_chaos",
-              "summary": "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו."
+              "summary": "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -9204,6 +9236,7 @@
           "level_required": 8,
           "giver_external_id": "teacher_maya",
           "summary": "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q07_genius_gate"
@@ -9315,7 +9348,8 @@
               "level_required": 8,
               "giver_npc": "teacher_maya",
               "prerequisite": "q07_genius_gate",
-              "summary": "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם."
+              "summary": "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -9326,6 +9360,7 @@
           "level_required": 9,
           "giver_external_id": "teacher_maya",
           "summary": "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q08_hat_hunt"
@@ -9454,7 +9489,8 @@
               "level_required": 9,
               "giver_npc": "teacher_maya",
               "prerequisite": "q08_hat_hunt",
-              "summary": "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן."
+              "summary": "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -9465,6 +9501,7 @@
           "level_required": 10,
           "giver_external_id": "teacher_maya",
           "summary": "מבחן הסיום בממלכת האנגלית! האות J היא האחרונה — אמורו אותה בקול, ותקבלו תג גיבור המילים. מאיה מבטיחה שאין מבחן פתעים... יש מבחן פתעים.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q09_letter_island"
@@ -9593,7 +9630,8 @@
               "level_required": 10,
               "giver_npc": "teacher_maya",
               "prerequisite": "q09_letter_island",
-              "summary": "מבחן הסיום בממלכת האנגלית! האות J היא האחרונה — אמורו אותה בקול, ותקבלו תג גיבור המילים. מאיה מבטיחה שאין מבחן פתעים... יש מבחן פתעים."
+              "summary": "מבחן הסיום בממלכת האנגלית! האות J היא האחרונה — אמורו אותה בקול, ותקבלו תג גיבור המילים. מאיה מבטיחה שאין מבחן פתעים... יש מבחן פתעים.",
+              "wait_for_npc_turn_in": true
             }
           }
         }
@@ -9622,6 +9660,7 @@
           "level_required": 50,
           "giver_external_id": "teacher_maya",
           "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -9757,7 +9796,8 @@
               "level_required": 50,
               "giver_npc": "teacher_maya",
               "prerequisite": null,
-              "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya."
+              "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -9768,6 +9808,7 @@
           "level_required": 1,
           "giver_external_id": "City Gaurd Info",
           "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q01_roles_without_names"
@@ -9905,7 +9946,8 @@
               "level_required": 1,
               "giver_npc": "City Gaurd Info",
               "prerequisite": "q01_roles_without_names",
-              "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn."
+              "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -9916,6 +9958,7 @@
           "level_required": 1,
           "giver_external_id": "Professor Crazy",
           "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q02_castle_on_the_map"
@@ -10053,7 +10096,8 @@
               "level_required": 1,
               "giver_npc": "Professor Crazy",
               "prerequisite": "q02_castle_on_the_map",
-              "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone."
+              "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -10064,6 +10108,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q03_crown_soup"
@@ -10201,7 +10246,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "q03_crown_soup",
-              "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will."
+              "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -10212,6 +10258,7 @@
           "level_required": 1,
           "giver_external_id": "Old Woman",
           "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q04_soup_shield"
@@ -10349,7 +10396,8 @@
               "level_required": 1,
               "giver_npc": "Old Woman",
               "prerequisite": "q04_soup_shield",
-              "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman."
+              "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -10360,6 +10408,7 @@
           "level_required": 1,
           "giver_external_id": "Cannoneer",
           "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q05_wizard_for_sale"
@@ -10497,7 +10546,8 @@
               "level_required": 1,
               "giver_npc": "Cannoneer",
               "prerequisite": "q05_wizard_for_sale",
-              "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer."
+              "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -10508,6 +10558,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q06_dragon_identity"
@@ -10656,7 +10707,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q06_dragon_identity",
-              "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya."
+              "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         }
@@ -10902,6 +10954,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -11018,7 +11071,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": null,
-              "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya."
+              "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -11029,6 +11083,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q01_bridge_too_short"
@@ -11147,7 +11202,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q01_bridge_too_short",
-              "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya."
+              "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -11158,6 +11214,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q02_whispering_stone"
@@ -11323,7 +11380,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q02_whispering_stone",
-              "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya."
+              "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -11334,6 +11392,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q03_big_and_small_words"
@@ -11959,7 +12018,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q03_big_and_small_words",
-              "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya."
+              "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -11970,6 +12030,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q04_twelve_basic_adjectives"
@@ -12197,7 +12258,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q04_twelve_basic_adjectives",
-              "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya."
+              "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -12208,6 +12270,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q05_from_low_to_high"
@@ -12374,7 +12437,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q05_from_low_to_high",
-              "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya."
+              "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         }
@@ -12393,6 +12457,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -12509,7 +12574,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": null,
-              "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log."
+              "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -12520,6 +12586,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q01_runaway_hammer"
@@ -12638,7 +12705,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "q01_runaway_hammer",
-              "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs."
+              "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -12649,6 +12717,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q02_snoring_anvil"
@@ -12746,7 +12815,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "q02_snoring_anvil",
-              "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability."
+              "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
+              "wait_for_npc_turn_in": true
             }
           }
         }
@@ -12765,6 +12835,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -12874,7 +12945,8 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": null,
-              "summary": "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!"
+              "summary": "מאיה מברכת אתכם בממלכת האנגלית — האות A בורחת כי היא חושבת שהיא המלכה של כל האלף-בית!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -12885,6 +12957,7 @@
           "level_required": 2,
           "giver_external_id": "teacher_maya",
           "summary": "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q01_runaway_a"
@@ -12999,7 +13072,8 @@
               "level_required": 2,
               "giver_npc": "teacher_maya",
               "prerequisite": "q01_runaway_a",
-              "summary": "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!"
+              "summary": "דבורה שובבה גנבה את האות B מהשלט BEE — בלי B, הדבורים שוכחות איך לזמזם באנגלית!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13010,6 +13084,7 @@
           "level_required": 3,
           "giver_external_id": "teacher_maya",
           "summary": "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q02_bee_bandit"
@@ -13137,7 +13212,8 @@
               "level_required": 3,
               "giver_npc": "teacher_maya",
               "prerequisite": "q02_bee_bandit",
-              "summary": "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!"
+              "summary": "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13148,6 +13224,7 @@
           "level_required": 4,
           "giver_external_id": "teacher_maya",
           "summary": "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q03_cat_on_c"
@@ -13259,7 +13336,8 @@
               "level_required": 4,
               "giver_npc": "teacher_maya",
               "prerequisite": "q03_cat_on_c",
-              "summary": "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!"
+              "summary": "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13270,6 +13348,7 @@
           "level_required": 5,
           "giver_external_id": "teacher_maya",
           "summary": "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q04_dog_ate_homework"
@@ -13381,7 +13460,8 @@
               "level_required": 5,
               "giver_npc": "teacher_maya",
               "prerequisite": "q04_dog_ate_homework",
-              "summary": "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות."
+              "summary": "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13392,6 +13472,7 @@
           "level_required": 6,
           "giver_external_id": "teacher_maya",
           "summary": "פרפרים מעופפים עם אותיות F על הכנפיים מסביב לגן — כל פעם שהם נוחתים, הם משנים שלט ל-FLY או FRY (צ'יפס מעופף)!",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q05_mystery_egg"
@@ -13506,7 +13587,8 @@
               "level_required": 6,
               "giver_npc": "teacher_maya",
               "prerequisite": "q05_mystery_egg",
-              "summary": "פרפרים מעופפים עם אותיות F על הכנפיים מסביב לגן — כל פעם שהם נוחתים, הם משנים שלט ל-FLY או FRY (צ'יפס מעופף)!"
+              "summary": "פרפרים מעופפים עם אותיות F על הכנפיים מסביב לגן — כל פעם שהם נוחתים, הם משנים שלט ל-FLY או FRY (צ'יפס מעופף)!",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13517,6 +13599,7 @@
           "level_required": 7,
           "giver_external_id": "teacher_maya",
           "summary": "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q06_butterfly_chaos"
@@ -13644,7 +13727,8 @@
               "level_required": 7,
               "giver_npc": "teacher_maya",
               "prerequisite": "q06_butterfly_chaos",
-              "summary": "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו."
+              "summary": "שער הגאון נעול — הוא מבקש את האות G ושלוש מילים קלות. השער אומר שהוא 'גאון', אבל לא יודע לפתוח את עצמו.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13655,6 +13739,7 @@
           "level_required": 8,
           "giver_external_id": "teacher_maya",
           "summary": "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q07_genius_gate"
@@ -13766,7 +13851,8 @@
               "level_required": 8,
               "giver_npc": "teacher_maya",
               "prerequisite": "q07_genius_gate",
-              "summary": "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם."
+              "summary": "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13777,6 +13863,7 @@
           "level_required": 9,
           "giver_external_id": "teacher_maya",
           "summary": "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q08_hat_hunt"
@@ -13905,7 +13992,8 @@
               "level_required": 9,
               "giver_npc": "teacher_maya",
               "prerequisite": "q08_hat_hunt",
-              "summary": "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן."
+              "summary": "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן.",
+              "wait_for_npc_turn_in": true
             }
           }
         },
@@ -13916,6 +14004,7 @@
           "level_required": 10,
           "giver_external_id": "teacher_maya",
           "summary": "מבחן הסיום בממלכת האנגלית! האות J היא האחרונה — אמורו אותה בקול, ותקבלו תג גיבור המילים. מאיה מבטיחה שאין מבחן פתעים... יש מבחן פתעים.",
+          "wait_for_npc_turn_in": true,
           "status": "complete",
           "prerequisites": [
             "q09_letter_island"
@@ -14044,7 +14133,8 @@
               "level_required": 10,
               "giver_npc": "teacher_maya",
               "prerequisite": "q09_letter_island",
-              "summary": "מבחן הסיום בממלכת האנגלית! האות J היא האחרונה — אמורו אותה בקול, ותקבלו תג גיבור המילים. מאיה מבטיחה שאין מבחן פתעים... יש מבחן פתעים."
+              "summary": "מבחן הסיום בממלכת האנגלית! האות J היא האחרונה — אמורו אותה בקול, ותקבלו תג גיבור המילים. מאיה מבטיחה שאין מבחן פתעים... יש מבחן פתעים.",
+              "wait_for_npc_turn_in": true
             }
           }
         }
@@ -14063,6 +14153,7 @@
           "level_required": 50,
           "giver_external_id": "teacher_maya",
           "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -14198,7 +14289,8 @@
               "level_required": 50,
               "giver_npc": "teacher_maya",
               "prerequisite": null,
-              "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya."
+              "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -14209,6 +14301,7 @@
           "level_required": 1,
           "giver_external_id": "City Gaurd Info",
           "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q01_roles_without_names"
@@ -14346,7 +14439,8 @@
               "level_required": 1,
               "giver_npc": "City Gaurd Info",
               "prerequisite": "q01_roles_without_names",
-              "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn."
+              "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -14357,6 +14451,7 @@
           "level_required": 1,
           "giver_external_id": "Professor Crazy",
           "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q02_castle_on_the_map"
@@ -14494,7 +14589,8 @@
               "level_required": 1,
               "giver_npc": "Professor Crazy",
               "prerequisite": "q02_castle_on_the_map",
-              "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone."
+              "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -14505,6 +14601,7 @@
           "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q03_crown_soup"
@@ -14642,7 +14739,8 @@
               "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "q03_crown_soup",
-              "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will."
+              "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -14653,6 +14751,7 @@
           "level_required": 1,
           "giver_external_id": "Old Woman",
           "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q04_soup_shield"
@@ -14790,7 +14889,8 @@
               "level_required": 1,
               "giver_npc": "Old Woman",
               "prerequisite": "q04_soup_shield",
-              "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman."
+              "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -14801,6 +14901,7 @@
           "level_required": 1,
           "giver_external_id": "Cannoneer",
           "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q05_wizard_for_sale"
@@ -14938,7 +15039,8 @@
               "level_required": 1,
               "giver_npc": "Cannoneer",
               "prerequisite": "q05_wizard_for_sale",
-              "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer."
+              "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
+              "wait_for_npc_turn_in": false
             }
           }
         },
@@ -14949,6 +15051,7 @@
           "level_required": 1,
           "giver_external_id": "teacher_maya",
           "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
+          "wait_for_npc_turn_in": false,
           "status": "complete",
           "prerequisites": [
             "q06_dragon_identity"
@@ -15097,12 +15200,13 @@
               "level_required": 1,
               "giver_npc": "teacher_maya",
               "prerequisite": "q06_dragon_identity",
-              "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya."
+              "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
+              "wait_for_npc_turn_in": false
             }
           }
         }
       ]
     }
   ],
-  "source_digest": "193954907b8c56982ef4a090542cefd4fda5a793c3d3e3b0cf6188c27eceea2f"
+  "source_digest": "6e180d0d8b5ef023662cf34045633d27cebe13038622f8a580fcc814dc34513e"
 }

@@ -7,6 +7,7 @@ import {
   getQuestSteps,
   getQuestlineQuests,
   getStepMinigame,
+  getStepMinigameKey,
   isLocalId,
   makeLocalId,
   slugify,
@@ -147,6 +148,21 @@ describe('stepHasMinigameField / getStepMinigame', () => {
     const playStep = data.steps.find((step) => step.step_type === 'play_minigame')!
     const detached = { ...playStep, payload: { ...playStep.payload, instance_id: '' } }
     expect(getStepMinigame(data, detached)).toBeUndefined()
+  })
+
+  it('resolves steps imported from the pipeline via instance_key', () => {
+    const playStep = data.steps.find((step) => step.step_type === 'play_minigame')!
+    const imported = { ...playStep, payload: { ...playStep.payload, instance_id: '', instance_key: playStep.payload.instance_id } }
+    const minigame = getStepMinigame(data, imported)
+    expect(minigame).toBeDefined()
+    expect(minigame!.key).toBe(playStep.payload.instance_id)
+  })
+
+  it('prefers instance_id over instance_key when both are present', () => {
+    const playStep = data.steps.find((step) => step.step_type === 'play_minigame')!
+    const dual = { ...playStep, payload: { ...playStep.payload, instance_id: 'other', instance_key: playStep.payload.instance_id } }
+    expect(getStepMinigameKey(dual)).toBe('other')
+    expect(getStepMinigame(data, dual)).toBeUndefined()
   })
 
   it('does not flag dialogue steps as minigame steps', () => {

@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q08_hat_hunt
   summary: "על אי האותיות, כל האותיות שלמדתם מתערבבות בערבוביה — האי חושב ש-I נראית כמו 1 ורוצה שתסדרו את הבלגן."
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 260

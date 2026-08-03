@@ -131,6 +131,7 @@ function createQuests(): Quest[] {
       level_required: spec.key === 'kingdom_nouns' && index === 0 ? 50 : index + 1,
       giver_external_id: spec.giver,
       summary: questSummaries[`q${String(index + 1).padStart(2, '0')}`] ?? questSummaries.q01,
+      wait_for_npc_turn_in: spec.key === 'blacksmith_will' || spec.key === 'english_kingdom_maya',
       status: 'complete',
       source_path: `questlines/${spec.key}/q${String(index + 1).padStart(2, '0')}.yaml`,
       source_metadata: { demo: true },

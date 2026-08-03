@@ -97,6 +97,7 @@ export function QuestInspector() {
             <label><FieldLabel hint={t('questGiverHint')}>{t('questGiver')}</FieldLabel><CatalogSelect kind="npc" value={quest.giver_external_id ?? ''} data={data} onChange={(value) => updateQuest({ giver_external_id: value })} /></label>
             <div className="editor-subsection"><FieldLabel hint={t('prerequisitesHint')}>{t('prerequisites')}</FieldLabel><PrerequisiteEditor quest={quest} quests={lineQuests} prerequisites={questPrerequisites} onToggle={(prerequisiteQuestId, enabled) => togglePrerequisite(quest.id, prerequisiteQuestId, enabled)} /></div>
             <div className="editor-subsection"><FieldLabel hint={t('questRewardsHint')}>{t('questRewards')}</FieldLabel><RewardEditor data={data} rewards={questRewards} onAdd={() => addReward('quest', quest.id)} onUpdate={updateReward} onRemove={removeReward} /></div>
+            <label className="checkbox-label"><input type="checkbox" checked={Boolean(quest.wait_for_npc_turn_in)} onChange={(event) => updateQuest({ wait_for_npc_turn_in: event.target.checked })} /><span><FieldLabel hint={t('waitForNpcTurnInHint')}>{t('waitForNpcTurnIn')}</FieldLabel></span></label>
           </div>
         </InspectorSection>
         <InspectorSection title={t('learningSteps', { count: steps.length })} open={openSection === 'steps'} onToggle={() => setOpenSection(openSection === 'steps' ? 'quest' : 'steps')}>

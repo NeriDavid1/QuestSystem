@@ -5,6 +5,7 @@ quest:
   giver_npc: Blacksmith
   prerequisite: q01_runaway_hammer
   summary: "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs."
+  wait_for_npc_turn_in: true
 
 rewards: { xp: 75, items: [] }
 

@@ -5,7 +5,7 @@ import {
   getMinigameParamsForEntry,
   getMinigameVariantsForEntry,
 } from '../../lib/minigameParams'
-import { getStepMinigame, stepHasMinigameField } from '../../lib/editorData'
+import { getStepMinigame, getStepMinigameKey, stepHasMinigameField } from '../../lib/editorData'
 import type { QuestStep } from '../../lib/types'
 import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
@@ -23,9 +23,10 @@ export function StepMinigameEditor({ step }: { step: QuestStep }) {
   const catalogEntry = getMinigameCatalogEntry(data, step)
   const paramFields = getMinigameParamsForEntry(catalogEntry)
   const gameVariants = getMinigameVariantsForEntry(catalogEntry)
-  const instanceKey = typeof step.payload.instance_id === 'string' ? step.payload.instance_id : ''
+  const instanceKey = getStepMinigameKey(step)
   const tasks = minigame ? toTaskList(minigame.tasks) : []
-  const attachInstance = (key: string) => updateStep(step.id, { payload: { ...step.payload, instance_id: key } })
+  const attachInstance = (key: string) =>
+    updateStep(step.id, { payload: { ...step.payload, instance_id: key, instance_key: key } })
   const patchMinigame = (patch: Parameters<typeof updateMinigame>[1]) => {
     if (minigame) updateMinigame(minigame.id, patch)
   }

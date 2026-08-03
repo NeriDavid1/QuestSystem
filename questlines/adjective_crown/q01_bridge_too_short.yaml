@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: null
   summary: "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 50, items: [] }
 

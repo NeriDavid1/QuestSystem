@@ -5,6 +5,7 @@ quest:
   giver_npc: "Professor Crazy"
   prerequisite: q02_castle_on_the_map
   summary: "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 500, items: [] }
 

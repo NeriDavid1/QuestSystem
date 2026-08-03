@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q07_genius_gate
   summary: "מאיה איבדה את הכובע שלה (HAT) — בלי H, הכובע הפך פשוט ל-_AT, וחתול שמח ישב עליו בגשם."
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 220

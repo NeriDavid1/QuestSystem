@@ -5,6 +5,7 @@ quest:
   giver_npc: Blacksmith
   prerequisite: q03_crown_soup
   summary: "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 550, items: [] }
 

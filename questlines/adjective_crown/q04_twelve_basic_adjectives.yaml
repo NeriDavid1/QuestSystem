@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q03_big_and_small_words
   summary: "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 225, items: [] }
 

@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q05_from_low_to_high
   summary: "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya."
+  wait_for_npc_turn_in: false
 
 rewards:
   xp: 350

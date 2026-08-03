@@ -5,33 +5,11 @@
     "compared_quests": 16,
     "unity_quests": 16,
     "source_quests": 26,
-    "errors": 7,
+    "errors": 5,
     "warnings": 5,
     "info": 10
   },
   "issues": [
-    {
-      "severity": "error",
-      "code": "level_mismatch",
-      "message": "level_required differs between authoring source and Unity asset.",
-      "quest": "adjective_crown/q01_bridge_too_short",
-      "context": {
-        "yaml": 1,
-        "unity": 50
-      }
-    },
-    {
-      "severity": "error",
-      "code": "objective_type_mismatch",
-      "message": "Step 3 maps to Unity objective DeliverItem but the asset declares CompleteMiniGame.",
-      "quest": "adjective_crown/q02_whispering_stone",
-      "context": {
-        "step_index": 2,
-        "step_type": "deliver_item",
-        "yaml": "DeliverItem",
-        "unity": "CompleteMiniGame"
-      }
-    },
     {
       "severity": "error",
       "code": "step_count_mismatch",

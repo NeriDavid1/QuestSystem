@@ -124,29 +124,39 @@ class ContentPipelineTests(unittest.TestCase):
         editor = ROOT / "editor"
         package = json.loads((editor / "package.json").read_text(encoding="utf-8"))
         app = (editor / "src" / "App.tsx").read_text(encoding="utf-8")
+        store = (editor / "src" / "state" / "EditorStore.tsx").read_text(encoding="utf-8")
+        messages = (editor / "src" / "i18n" / "messages.ts").read_text(encoding="utf-8")
         supabase = (editor / "src" / "lib" / "supabase.ts").read_text(encoding="utf-8")
         vite = (editor / "vite.config.ts").read_text(encoding="utf-8")
         env_example = (editor / ".env.example").read_text(encoding="utf-8")
 
         self.assertEqual(package["scripts"]["typecheck"], "tsc --noEmit")
         self.assertIn("@supabase/supabase-js", package["dependencies"])
+        for marker in ("AuthScreen", "AccessRequired", "PublishConfirmModal"):
+            self.assertIn(marker, app)
+        # Feature components and store actions moved out of App.tsx during the
+        # localization refactor; assert they exist somewhere in editor/src.
+        source_tree = "\n".join(
+            path.read_text(encoding="utf-8")
+            for path in sorted((editor / "src").rglob("*"))
+            if path.is_file() and path.suffix in {".ts", ".tsx"}
+        )
         for marker in (
-            "AuthScreen",
-            "AccessRequired",
-            "ensure_workspace_member",
-            "Create account & edit",
             "GraphWithStepCounts",
             "PrerequisiteEditor",
             "RewardEditor",
             "DialogueCard",
             "MinigameCard",
             "persistDraft",
-            "PublishConfirmModal",
             "autoSaveInFlight",
             "undo",
             "redo",
         ):
-            self.assertIn(marker, app)
+            self.assertIn(marker, source_tree)
+        # Localized account-creation copy and workspace membership live in the
+        # i18n bundle and the store, which App.tsx consumes.
+        self.assertIn("Create account & edit", messages)
+        self.assertIn("ensure_workspace_member", store)
         self.assertIn("loadEditorData", supabase)
         self.assertIn("VITE_SUPABASE_URL", env_example)
         self.assertIn("VITE_BASE_PATH", vite)
@@ -163,6 +173,46 @@ class ContentPipelineTests(unittest.TestCase):
             "path: site",
         ):
             self.assertIn(marker, workflow)
+
+    def test_wait_for_npc_turn_in_flows_from_yaml_to_db_and_editor(self):
+        """The Unity QuestDefinitionSO.waitForNpcTurnIn flag must be authorable
+        everywhere: quest YAML, the imported bundle, the DB schema, and the editor."""
+        quests_by_key = {
+            quest["key"]: quest
+            for questline in self.bundle["questlines"]
+            for quest in questline["quests"]
+        }
+        self.assertEqual(len(quests_by_key), 26)
+        self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
+        self.assertTrue(quests_by_key["q01_runaway_a"]["wait_for_npc_turn_in"])  # english_kingdom_maya
+        self.assertFalse(quests_by_key["q01_bridge_too_short"]["wait_for_npc_turn_in"])  # adjective_crown
+        self.assertFalse(quests_by_key["q01_roles_without_names"]["wait_for_npc_turn_in"])  # kingdom_nouns
+
+        migration = (ROOT / "supabase" / "migrations" / "20260803140000_quest_wait_turn_in.sql").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("wait_for_npc_turn_in boolean not null default false", migration)
+        self.assertIn("wait_for_npc_turn_in = excluded.wait_for_npc_turn_in", migration)
+
+        editor_types = (ROOT / "editor" / "src" / "lib" / "types.ts").read_text(encoding="utf-8")
+        inspector = (ROOT / "editor" / "src" / "components" / "editor" / "QuestInspector.tsx").read_text(
+            encoding="utf-8"
+        )
+        messages = (ROOT / "editor" / "src" / "i18n" / "messages.ts").read_text(encoding="utf-8")
+        self.assertIn("wait_for_npc_turn_in: boolean", editor_types)
+        self.assertIn("updateQuest({ wait_for_npc_turn_in:", inspector)
+        self.assertIn("waitForNpcTurnIn", messages)
+
+        quests_sql = (ROOT / "supabase" / "seed" / "generated" / "06_quests.sql").read_text(encoding="utf-8")
+        self.assertIn("wait_for_npc_turn_in", quests_sql)
+        # Every quest YAML declares the flag so the editor has a value to show.
+        for questline in self.bundle["questlines"]:
+            for quest in questline["quests"]:
+                self.assertIn(
+                    "wait_for_npc_turn_in:",
+                    (ROOT / quest["source_path"]).read_text(encoding="utf-8"),
+                    f"{quest['key']} YAML must declare wait_for_npc_turn_in",
+                )
 
 
 if __name__ == "__main__":

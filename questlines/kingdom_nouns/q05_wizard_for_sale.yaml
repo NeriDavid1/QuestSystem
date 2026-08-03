@@ -5,6 +5,7 @@ quest:
   giver_npc: "Old Woman"
   prerequisite: q04_soup_shield
   summary: "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 600, items: [] }
 

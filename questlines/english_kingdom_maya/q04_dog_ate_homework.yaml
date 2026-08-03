@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q03_cat_on_c
   summary: "הכלב של מאיה אכל את האות D משיעורי הבית — עכשיו המילה dog נראית כמו _og, והכלב עדיין מקיא אותיות!"
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 100

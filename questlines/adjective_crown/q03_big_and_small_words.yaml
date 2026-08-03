@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q02_whispering_stone
   summary: "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 150, items: [] }
 

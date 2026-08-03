@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q02_bee_bandit
   summary: "החתול של מאיה ישב על האות C וכיווץ אותה לצורת קרואסון — עכשיו כולם קוראים לה 'כרוסון'!"
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 80

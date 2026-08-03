@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: null
   summary: "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 400, items: [] }
 

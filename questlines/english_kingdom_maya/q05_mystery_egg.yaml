@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q04_dog_ate_homework
   summary: "ביצה ענקית חוסמת את שער הגן — היא רוצה לשמוע את האות E לפני שהיא נפתחת. ספוילר: בפנים אין תרנגולת, יש אות."
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 120

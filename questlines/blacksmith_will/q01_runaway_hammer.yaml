@@ -5,6 +5,7 @@ quest:
   giver_npc: Blacksmith
   prerequisite: null
   summary: "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log."
+  wait_for_npc_turn_in: true
 
 rewards: { xp: 50, items: [] }
 

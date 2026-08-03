@@ -28,6 +28,8 @@ export interface Quest {
   level_required: number
   giver_external_id: string | null
   summary: string | null
+  /** Keep the quest in CAN_FINISH until an NPC calls FinishQuest (Unity waitForNpcTurnIn). */
+  wait_for_npc_turn_in: boolean
   status: QuestStatus
   source_path: string | null
   source_metadata: Record<string, unknown>

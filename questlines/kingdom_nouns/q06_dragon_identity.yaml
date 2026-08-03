@@ -5,6 +5,7 @@ quest:
   giver_npc: Cannoneer
   prerequisite: q05_wizard_for_sale
   summary: "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 650, items: [] }
 

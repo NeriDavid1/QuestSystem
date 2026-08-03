@@ -5,6 +5,7 @@ quest:
   giver_npc: Blacksmith
   prerequisite: q02_snoring_anvil
   summary: "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability."
+  wait_for_npc_turn_in: true
 
 rewards:
   xp: 100

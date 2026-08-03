@@ -5,6 +5,7 @@ quest:
   giver_npc: teacher_maya
   prerequisite: q04_twelve_basic_adjectives
   summary: "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya."
+  wait_for_npc_turn_in: false
 
 rewards: { xp: 275, items: [] }
 

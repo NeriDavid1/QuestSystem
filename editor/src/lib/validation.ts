@@ -4,6 +4,7 @@ import {
   getCatalogKindForRef,
   getQuestSteps,
   getQuestlineQuests,
+  getStepMinigameKey,
   getStepType,
 } from './editorData'
 
@@ -119,15 +120,18 @@ export function validateQuestline(
           }
         }
 
-        if (field.ref?.includes('minigame_instances') && value) {
-          const found = data.minigames.some((minigame) => minigame.key === String(value))
-          if (!found) {
-            issues.push({
-              severity: 'warning',
-              code: 'unresolved_minigame',
-              message: t('validationUnresolvedMinigame', { value: String(value) }),
-              entityId: step.id,
-            })
+        if (field.ref?.includes('minigame_instances')) {
+          const minigameValue = getStepMinigameKey(step)
+          if (minigameValue) {
+            const found = data.minigames.some((minigame) => minigame.key === minigameValue)
+            if (!found) {
+              issues.push({
+                severity: 'warning',
+                code: 'unresolved_minigame',
+                message: t('validationUnresolvedMinigame', { value: minigameValue }),
+                entityId: step.id,
+              })
+            }
           }
         }
       }

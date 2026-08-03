@@ -41,6 +41,9 @@ step_types:
   deliver_item:
     unity_objective: DeliverItem
     description: Bring items to an NPC (SoftKitty consume on live quests)
+    # Design rule (Unity QuestAuthoringValidator): a deliver_item step must NOT
+    # carry reward_item_id/reward_amount — Unity errors on DeliverItem stepReward.
+    # Grant the delivered item on the preceding play_minigame/collect step instead.
     fields:
       npc_id: { type: string, required: true, ref: npcs.yaml }
       item_id: { type: string, required: true, ref: items.yaml }
