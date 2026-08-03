@@ -42,7 +42,8 @@ jobs:
           cache-dependency-path: editor/package-lock.json
 
       - name: Install editor dependencies
-        run: npm ci
+        # Prefer a clean lockfile install; fall back if optional platform deps drift.
+        run: npm ci || npm install
         working-directory: editor
 
       - name: Build authenticated quest editor
