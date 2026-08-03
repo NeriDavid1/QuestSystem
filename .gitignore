@@ -7,3 +7,5 @@ venv/
 *.log
 .DS_Store
 Thumbs.db
+editor/dist/
+editor/.vite/

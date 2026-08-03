@@ -29,6 +29,8 @@ ui:
   minigame_target: "מטרה"
   minigame_success: "בהצלחה"
   minigame_missing: "תיאור המיני-משחק טרם נכתב."
+  source_published: "מקור: snapshot שפורסם ב-Supabase"
+  source_yaml: "מקור: YAML / נתיב חזרה"
 
 step_labels:
   talk_to_npc: "שיחה עם דמות"

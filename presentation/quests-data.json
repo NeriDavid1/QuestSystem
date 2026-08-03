@@ -30,7 +30,9 @@
       "minigame_goal": "מה השחקן עושה",
       "minigame_target": "מטרה",
       "minigame_success": "בהצלחה",
-      "minigame_missing": "תיאור המיני-משחק טרם נכתב."
+      "minigame_missing": "תיאור המיני-משחק טרם נכתב.",
+      "source_published": "מקור: snapshot שפורסם ב-Supabase",
+      "source_yaml": "מקור: YAML / נתיב חזרה"
     },
     "step_labels": {
       "talk_to_npc": "שיחה עם דמות",
@@ -51,42 +53,49 @@
   },
   "npcs": {
     "teacher_maya": {
+      "image": "images/npcs/teacher_maya.png",
       "name": "המורה מאיה",
       "title": "מורת אנגלית",
       "location": "כיכר האלף-בית",
       "description": "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים."
     },
     "Blacksmith": {
+      "image": "images/npcs/Blacksmith.png",
       "name": "ויל הנפח",
       "title": "נפח",
       "location": "בית הבנאים",
       "description": "נפח ידידותי שמתקן כלים ואוהב להרעיש בפטיש."
     },
     "City Gaurd Info": {
+      "image": "images/npcs/City Gaurd Info.png",
       "name": "פן הפטפטן",
       "title": "שומר עיר",
       "location": "שער הממלכה",
       "description": "שומר דברן שמכיר כל שמועה בעיר."
     },
     "Main Gate Gaurd 1": {
+      "image": "images/npcs/Main Gate Gaurd 1.png",
       "name": "טומלין המפהק",
       "title": "שומר שער",
       "location": "שער הממלכה",
       "description": "שומר ישנוני שבכל זאת מבחין בצרות."
     },
     "Main Gate Gaurd 2": {
+      "image": "images/npcs/Main Gate Gaurd 2.png",
       "name": "גאריק הבלתי־זז",
       "title": "שומר שער",
       "location": "שער הממלכה",
       "description": "שומר רציני כמעט אף פעם לא עוזב את העמדה."
     },
     "Fisherman": {
+      "image": "images/npcs/Fisherman.png",
       "name": "נמו בלי הרשת",
       "title": "דייג",
       "location": "מפרץ דריפטגולד",
       "description": "דייג שמאבד רשתות ומבקש עזרה."
     },
     "Ghost": {
+      "image": "images/npcs/Ghost.png",
       "name": "בו רדקליף",
       "title": "רוח",
       "location": "האבנים הבוכות",
@@ -129,84 +138,98 @@
       "description": "סבא עדין שמפעיל את המעלית המלכותית."
     },
     "Benny the Builder": {
+      "image": "images/npcs/Benny the Builder.png",
       "name": "בני הבנאי",
       "title": "בנאי",
       "location": "בית הבנאים",
       "description": "בנאי חרוץ שתמיד צריך עוד עץ ועזרה."
     },
     "Cannoneer": {
+      "image": "images/npcs/Cannoneer.png",
       "name": "תותחן",
       "title": "תותחן",
       "location": "המפרץ הנטוש",
       "description": "תותחן רועש ששומר על המפרץ."
     },
     "Secondary Gate Soldier": {
+      "image": "images/npcs/Secondary Gate Soldier.png",
       "name": "חייל שער משני",
       "title": "חייל שער",
       "location": "שער הממלכה",
       "description": "חייל צעיר שמשגיח על השער הצדדי."
     },
     "Secondary Gate Main": {
+      "image": "images/npcs/Secondary Gate Main.png",
       "name": "מפקד שער משני",
       "title": "מפקד שער",
       "location": "שער הממלכה",
       "description": "שומר בכיר שאחראי על השער הצדדי."
     },
     "Old Man": {
+      "image": "images/npcs/Old Man.png",
       "name": "הזקן",
       "title": "זקן",
       "location": "קוטג' נהר הירח",
       "description": "זקן חכם שמספר סיפורים קצרים ליד הקוטג'."
     },
     "Village Head": {
+      "image": "images/npcs/Village Head.png",
       "name": "ראש הכפר",
       "title": "ראש כפר",
       "location": "פארק ורד הפיות",
       "description": "ראש כפר ידידותי שמארגן משימות מקומיות."
     },
     "Farmer V2": {
+      "image": "images/npcs/Farmer V2.png",
       "name": "חקלאי V2",
       "title": "חקלאי",
       "location": "פארק ורד הפיות",
       "description": "חקלאי עסוק שהיבולים שלו תמיד צריכים הצלה."
     },
     "Old Woman": {
+      "image": "images/npcs/Old Woman.png",
       "name": "הזקנה",
       "title": "זקנה",
       "location": "קוטג' נהר הירח",
       "description": "זקנה חמה שמשתפת חטיפים ועצות פשוטות."
     },
     "Professor Crazy": {
+      "image": "images/npcs/Professor Crazy.png",
       "name": "פרופסור משוגע",
       "title": "פרופסור",
       "location": "מגדל הבדידות",
       "description": "פרופסור פראי עם רעיונות גדולים וניסויים מבולגנים."
     },
     "Farmer": {
+      "image": "images/npcs/Farmer.png",
       "name": "חקלאי",
       "title": "חקלאי",
       "location": "פארק ורד הפיות",
       "description": "חקלאי פשוט שצריך עזרה עם חיות ושדות."
     },
     "Flight Guide": {
+      "image": "images/npcs/Flight Guide.png",
       "name": "מדריך טיסה",
       "title": "מדריך טיסה",
       "location": "עץ צריח השמש",
       "description": "מדריך שמלמד מסלולי טיסה סביב העץ."
     },
     "Little Boy": {
+      "image": "images/npcs/Little Boy.png",
       "name": "ילד קטן",
       "title": "ילד",
       "location": "פארק ורד הפיות",
       "description": "ילד סקרן שמאבד צעצועים ושואל הרבה שאלות."
     },
     "Little Girl": {
+      "image": "images/npcs/Little Girl.png",
       "name": "ילדה קטנה",
       "title": "ילדה",
       "location": "פארק ורד הפיות",
       "description": "ילדה שובבה שמתחילה חיפושי אוצר קטנים."
     },
     "Mountain Guide": {
+      "image": "images/npcs/Mountain Guide.png",
       "name": "מדריך הרים",
       "title": "מדריך הרים",
       "location": "מגדל המשמר האבוד",
@@ -219,6 +242,7 @@
       "description": "צייר חולם שמחפש צבעים ורעיונות למילים."
     },
     "Riding Guide": {
+      "image": "images/npcs/Riding Guide.png",
       "name": "מדריך רכיבה",
       "title": "מדריך רכיבה",
       "location": "מפרץ דריפטגולד",
@@ -470,6 +494,7 @@
   },
   "minigames": {
     "letter_ordering": {
+      "image": "images/minigames/letter_ordering.png",
       "name": "סידור אותיות",
       "unity_config": "LetterOrderingQuestConfigSO",
       "unity_content": "LetterOrderingDataSO",
@@ -498,6 +523,7 @@
       ]
     },
     "word_ordering": {
+      "image": "images/minigames/word_ordering.png",
       "name": "סידור מילים",
       "unity_config": "WordOrderingQuestConfigSO",
       "unity_content": "WordOrderingDataSO",
@@ -525,6 +551,7 @@
       ]
     },
     "word_matching": {
+      "image": "images/minigames/word_matching.png",
       "name": "התאמת מילים",
       "unity_config": "LineMatchQuestConfigSO",
       "unity_content": "LetterConnectionLevelConfigSO",
@@ -577,6 +604,7 @@
       ]
     },
     "speak_aloud": {
+      "image": "images/minigames/speak_aloud.png",
       "name": "דיבור בקול",
       "unity_config": "SpeakAloudQuestConfigSO",
       "unity_content": "SpeakAloudDataSO",

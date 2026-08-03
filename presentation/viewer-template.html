@@ -91,6 +91,21 @@
 
     .stats strong { color: var(--text); }
 
+    .source-badge {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .3rem .65rem;
+      font-size: .72rem;
+      color: var(--muted);
+      background: rgba(255,255,255,.03);
+    }
+
+    .source-badge.supabase {
+      border-color: rgba(82,183,136,.45);
+      color: #73d9a6;
+      background: rgba(82,183,136,.09);
+    }
+
     main { padding: 2rem; max-width: 1400px; margin: 0 auto; }
 
     .questline-grid {
@@ -567,7 +582,7 @@
         <h1 id="page-title"></h1>
         <p class="subtitle" id="page-subtitle"></p>
       </div>
-      <div class="stats" id="global-stats"></div>
+      <div class="stats" id="global-stats"><span class="source-badge yaml" id="data-source">מקור: YAML / rollback bridge</span></div>
     </div>
     <nav class="breadcrumb" id="breadcrumb"></nav>
   </header>
@@ -578,10 +593,13 @@
   </main>
 
   <script>
-    const DATA = /*__QUEST_DATA__*/;
-    const UI = DATA.locale?.ui || {};
-    const STEP_LABELS = DATA.locale?.step_labels || {};
-    const FMT = DATA.locale?.step_formats || {};
+    let DATA = /*__QUEST_DATA__*/;
+    const RUNTIME_CONFIG = /*__SUPABASE_CONFIG__*/;
+    const YAML_DATA = DATA;
+    let DATA_SOURCE = "yaml";
+    let UI = DATA.locale?.ui || {};
+    let STEP_LABELS = DATA.locale?.step_labels || {};
+    let FMT = DATA.locale?.step_formats || {};
 
     const THEMES = {
       adjective_crown: { accent: "#7b2cbf", icon: "👑" },
@@ -599,11 +617,121 @@
 
     let state = { view: "home", questlineId: null, questId: null };
 
-    document.documentElement.lang = DATA.lang || "he";
-    document.documentElement.dir = DATA.dir || "rtl";
-    document.title = `${UI.title || "מערכת משימות"} — מפה אינטראקטיבית`;
-    document.getElementById("page-title").textContent = UI.title || "מערכת משימות";
-    document.getElementById("page-subtitle").textContent = UI.subtitle || "";
+    function applyDataMeta() {
+      UI = DATA.locale?.ui || {};
+      STEP_LABELS = DATA.locale?.step_labels || {};
+      FMT = DATA.locale?.step_formats || {};
+      document.documentElement.lang = DATA.lang || "he";
+      document.documentElement.dir = DATA.dir || "rtl";
+      document.title = `${UI.title || "מערכת משימות"} — מפה אינטראקטיבית`;
+      document.getElementById("page-title").textContent = UI.title || "מערכת משימות";
+      document.getElementById("page-subtitle").textContent = UI.subtitle || "";
+      const source = document.getElementById("data-source");
+      if (source) {
+        source.textContent = DATA_SOURCE === "supabase"
+          ? (UI.source_published || "מקור: snapshot שפורסם ב-Supabase")
+          : (UI.source_yaml || "מקור: YAML / rollback bridge");
+        source.className = `source-badge ${DATA_SOURCE}`;
+      }
+    }
+
+    async function fetchPublishedSnapshotData() {
+      const url = (RUNTIME_CONFIG.url || "").replace(/\/$/, "");
+      const anonKey = RUNTIME_CONFIG.anonKey || "";
+      if (!url || !anonKey) return null;
+
+      const headers = {
+        apikey: anonKey,
+        Authorization: `Bearer ${anonKey}`,
+        Accept: "application/json",
+      };
+      const lineUrl = `${url}/rest/v1/questlines?status=eq.published&select=id,key,display_name,theme,default_giver_external_id,level_min,level_max`;
+      const revisionUrl = `${url}/rest/v1/questline_revisions?status=eq.published&select=questline_id,version,document,validation_summary&order=version.desc`;
+      const [lineResponse, revisionResponse] = await Promise.all([
+        fetch(lineUrl, { headers }),
+        fetch(revisionUrl, { headers }),
+      ]);
+      if (!lineResponse.ok || !revisionResponse.ok) {
+        throw new Error(`Published viewer request failed (${lineResponse.status}/${revisionResponse.status})`);
+      }
+      const lines = await lineResponse.json();
+      const revisions = await revisionResponse.json();
+      const latestByLine = new Map();
+      for (const revision of revisions) {
+        if (!latestByLine.has(revision.questline_id)) latestByLine.set(revision.questline_id, revision);
+      }
+      const publishedQuestlines = lines
+        .map((line) => {
+          const revision = latestByLine.get(line.id);
+          if (!revision?.document) return null;
+          return adaptPublishedDocument(line, revision.document);
+        })
+        .filter(Boolean);
+      if (!publishedQuestlines.length) return null;
+      return { ...YAML_DATA, questlines: publishedQuestlines };
+    }
+
+    function staticQuestFor(lineKey, questKey) {
+      const line = YAML_DATA.questlines?.find((candidate) => candidate.id === lineKey);
+      return line?.quests?.find((candidate) => candidate.id === questKey) || null;
+    }
+
+    function adaptPublishedDocument(line, document) {
+      const lineKey = document.key || line.key;
+      const staticLine = YAML_DATA.questlines?.find((candidate) => candidate.id === lineKey);
+      const npcId = document.default_giver_external_id || staticLine?.npcId || null;
+      const npc = (npcId && YAML_DATA.npcs?.[npcId]) || staticLine?.npc || {};
+      const rawQuests = Array.isArray(document.quests) ? document.quests : [];
+      const quests = rawQuests.map((quest) => {
+        const staticQuest = staticQuestFor(lineKey, quest.key);
+        const steps = (quest.steps || []).map((step) => {
+          const flat = { type: step.type, ...(step.payload || {}) };
+          const staticStep = staticQuest?.steps?.find((candidate) =>
+            (candidate.instance_id || candidate.instance_key) === (flat.instance_id || flat.instance_key)
+          );
+          if (staticStep?.minigame_brief) flat.minigame_brief = staticStep.minigame_brief;
+          return flat;
+        });
+        const rewards = Array.isArray(quest.rewards) ? quest.rewards : [];
+        return {
+          id: quest.key,
+          name: staticQuest?.name || quest.name || quest.key,
+          level: quest.level_required,
+          prerequisite: quest.prerequisites?.[0] || null,
+          summary: staticQuest?.summary || quest.summary || "",
+          status: quest.status || "published",
+          rewards: {
+            xp: rewards.filter((reward) => reward.reward_type === "xp").reduce((sum, reward) => sum + (reward.xp_amount || 0), 0),
+            items: rewards.filter((reward) => reward.reward_type === "item").map((reward) => ({
+              id: reward.item_external_id,
+              amount: reward.amount || 1,
+            })),
+          },
+          steps,
+        };
+      });
+      const levels = quests.map((quest) => Number(quest.level || 0)).filter((level) => Number.isFinite(level));
+      return {
+        id: lineKey,
+        folder: lineKey,
+        displayName: staticLine?.displayName || line.display_name || lineKey,
+        theme: staticLine?.theme || document.theme || line.theme || "",
+        levelRange: [
+          line.level_min ?? (levels.length ? Math.min(...levels) : 1),
+          line.level_max ?? (levels.length ? Math.max(...levels) : 1),
+        ],
+        questCount: quests.length,
+        npcId,
+        npc: {
+          id: npcId,
+          name: npc.name || npcId || "",
+          title: npc.title || "",
+          location: npc.location || "",
+          description: npc.description || "",
+        },
+        quests,
+      };
+    }
 
     function npcName(id) {
       return DATA.npcs?.[id]?.name || id;
@@ -629,6 +757,16 @@
       return DATA.dialogues?.[id] || null;
     }
 
+    function safeRichText(value) {
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
+        .replace(/&lt;(\/?)(strong|em|code|br)&gt;/gi, "<$1$2>");
+    }
+
     function dialogueSpeaker(dialogue, fallbackNpcId) {
       const speakerId = dialogue?.speaker || fallbackNpcId;
       return speakerId ? npcName(speakerId) : "";
@@ -642,11 +780,11 @@
       }
       const speaker = dialogueSpeaker(dlg, fallbackNpcId);
       const lines = dlg.lines
-        .map((line) => `<li class="dialogue-line">${line}</li>`)
+        .map((line) => `<li class="dialogue-line">${safeRichText(line)}</li>`)
         .join("");
       return `
         <div class="dialogue-block">
-          <div class="dialogue-speaker">${UI.npc_says || "אומר/ת"}: ${speaker}</div>
+          <div class="dialogue-speaker">${safeRichText(UI.npc_says || "אומר/ת")}: ${safeRichText(speaker)}</div>
           <ul class="dialogue-lines">${lines}</ul>
         </div>`;
     }
@@ -667,22 +805,22 @@
         return `<div class="minigame-block"><div class="minigame-missing">${UI.minigame_missing || "תיאור טרם נכתב."} (<code>${step.minigame_id}</code>)</div></div>`;
       }
       const tasks = (brief.tasks || [])
-        .map((t) => `<li class="minigame-task">${t}</li>`)
+        .map((t) => `<li class="minigame-task">${safeRichText(t)}</li>`)
         .join("");
       const meta = [];
       if (brief.target) {
-        meta.push(`<span class="minigame-meta-chip">${UI.minigame_target || "מטרה"}: <span>${brief.target}</span></span>`);
+        meta.push(`<span class="minigame-meta-chip">${safeRichText(UI.minigame_target || "מטרה")}: <span>${safeRichText(brief.target)}</span></span>`);
       }
       if (brief.variant) {
-        meta.push(`<span class="minigame-meta-chip">${brief.variant}</span>`);
+        meta.push(`<span class="minigame-meta-chip">${safeRichText(brief.variant)}</span>`);
       }
       if (brief.success) {
-        meta.push(`<span class="minigame-meta-chip">${UI.minigame_success || "בהצלחה"}: <span>${brief.success}</span></span>`);
+        meta.push(`<span class="minigame-meta-chip">${safeRichText(UI.minigame_success || "בהצלחה")}: <span>${safeRichText(brief.success)}</span></span>`);
       }
       return `
         <div class="minigame-block">
           <div class="minigame-block-title">🎮 ${UI.minigame_goal || "מה השחקן עושה"}</div>
-          ${brief.instruction ? `<div class="minigame-instruction">${brief.instruction}</div>` : ""}
+          ${brief.instruction ? `<div class="minigame-instruction">${safeRichText(brief.instruction)}</div>` : ""}
           ${tasks ? `<ul class="minigame-tasks">${tasks}</ul>` : ""}
           ${meta.length ? `<div class="minigame-meta">${meta.join("")}</div>` : ""}
         </div>`;
@@ -739,11 +877,14 @@
         (n, ql) => n + ql.quests.filter((q) => q.status !== "draft").length,
         0
       );
-      document.getElementById("global-stats").innerHTML = `
+      const stats = document.getElementById("global-stats");
+      const source = document.getElementById("data-source");
+      stats.innerHTML = `
         <span><strong>${lines}</strong> ${UI.quest_lines || "קווי משימות"}</span>
         <span><strong>${quests}</strong> ${UI.quests || "משימות"}</span>
         <span><strong>${complete}</strong> ${UI.designed || "מעוצבות"}</span>
       `;
+      if (source) stats.appendChild(source);
     }
 
     function renderBreadcrumb() {
@@ -852,7 +993,7 @@
             <div class="step-icon">${STEP_ICONS[step.type] || "•"}</div>
             <div class="step-body">
               <div class="step-type">${i + 1}. ${STEP_LABELS[step.type] || step.type}</div>
-              <div class="step-desc">${formatStep(step)}</div>
+              <div class="step-desc">${safeRichText(formatStep(step))}</div>
               ${minigameHtml}
               ${dialogueHtml}
             </div>
@@ -934,8 +1075,22 @@
       });
     }
 
-    renderStats();
-    goHome();
+    async function bootViewer() {
+      try {
+        const publishedData = await fetchPublishedSnapshotData();
+        if (publishedData) {
+          DATA = publishedData;
+          DATA_SOURCE = "supabase";
+        }
+      } catch (error) {
+        console.warn("Published snapshot unavailable; using YAML fallback.", error);
+      }
+      applyDataMeta();
+      renderStats();
+      goHome();
+    }
+
+    void bootViewer();
   </script>
 </body>
 </html>

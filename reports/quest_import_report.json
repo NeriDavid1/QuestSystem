@@ -1,0 +1,229 @@
+{
+  "importer_version": "1.0.0",
+  "source_digest": "f29980cc656b5ccf4274dcf38ecfa0282fc4fb9035d4aec548d3fc947d06c30b",
+  "counts": {
+    "catalog_entries": 222,
+    "step_type_definitions": 6,
+    "dialogues": 54,
+    "dialogue_lines": 150,
+    "minigame_instances": 52,
+    "questlines": 4,
+    "quests": 26,
+    "steps": 155,
+    "errors": 0,
+    "warnings": 17,
+    "info": 0
+  },
+  "conflicts": [
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml",
+      "context": {
+        "questline": "adjective_crown",
+        "quest_id": "q01_bridge_too_short",
+        "step_type": "deliver_item",
+        "step_key": "q01_bridge_too_short_deliver_item_f3822b04_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\adjective_crown\\q02_whispering_stone.yaml",
+      "context": {
+        "questline": "adjective_crown",
+        "quest_id": "q02_whispering_stone",
+        "step_type": "deliver_item",
+        "step_key": "q02_whispering_stone_deliver_item_a192d91a_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml",
+      "context": {
+        "questline": "adjective_crown",
+        "quest_id": "q03_big_and_small_words",
+        "step_type": "deliver_item",
+        "step_key": "q03_big_and_small_words_deliver_item_bac54875_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml",
+      "context": {
+        "questline": "adjective_crown",
+        "quest_id": "q04_twelve_basic_adjectives",
+        "step_type": "deliver_item",
+        "step_key": "q04_twelve_basic_adjectives_deliver_item_8fffbf88_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml",
+      "context": {
+        "questline": "adjective_crown",
+        "quest_id": "q05_from_low_to_high",
+        "step_type": "deliver_item",
+        "step_key": "q05_from_low_to_high_deliver_item_8382799f_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml",
+      "context": {
+        "questline": "adjective_crown",
+        "quest_id": "q06_adjective_challenge",
+        "step_type": "deliver_item",
+        "step_key": "q06_adjective_challenge_deliver_item_c73e5f4b_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml",
+      "context": {
+        "questline": "blacksmith_will",
+        "quest_id": "q01_runaway_hammer",
+        "step_type": "deliver_item",
+        "step_key": "q01_runaway_hammer_deliver_item_8ad4cdf5_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml",
+      "context": {
+        "questline": "blacksmith_will",
+        "quest_id": "q02_snoring_anvil",
+        "step_type": "deliver_item",
+        "step_key": "q02_snoring_anvil_deliver_item_3819e51d_1"
+      }
+    },
+    {
+      "kind": "minigame_key_mismatch",
+      "severity": "warning",
+      "message": "Minigame brief exists under a different legacy step key.",
+      "path": "questlines\\english_kingdom_maya\\q02_bee_bandit.yaml",
+      "context": {
+        "questline": "english_kingdom_maya",
+        "quest_id": "q02_bee_bandit",
+        "step_position": 2,
+        "expected_key": "q02_bee_bandit_s2",
+        "candidates": [
+          "q02_bee_bandit_s3"
+        ]
+      }
+    },
+    {
+      "kind": "minigame_key_mismatch",
+      "severity": "warning",
+      "message": "Minigame brief exists under a different legacy step key.",
+      "path": "questlines\\english_kingdom_maya\\q06_butterfly_chaos.yaml",
+      "context": {
+        "questline": "english_kingdom_maya",
+        "quest_id": "q06_butterfly_chaos",
+        "step_position": 2,
+        "expected_key": "q06_butterfly_chaos_s2",
+        "candidates": [
+          "q06_butterfly_chaos_s3"
+        ]
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml",
+      "context": {
+        "questline": "kingdom_nouns",
+        "quest_id": "q01_roles_without_names",
+        "step_type": "deliver_item",
+        "step_key": "q01_roles_without_names_deliver_item_65aac09b_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml",
+      "context": {
+        "questline": "kingdom_nouns",
+        "quest_id": "q02_castle_on_the_map",
+        "step_type": "deliver_item",
+        "step_key": "q02_castle_on_the_map_deliver_item_eade7297_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml",
+      "context": {
+        "questline": "kingdom_nouns",
+        "quest_id": "q03_crown_soup",
+        "step_type": "deliver_item",
+        "step_key": "q03_crown_soup_deliver_item_02ad7386_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml",
+      "context": {
+        "questline": "kingdom_nouns",
+        "quest_id": "q04_soup_shield",
+        "step_type": "deliver_item",
+        "step_key": "q04_soup_shield_deliver_item_2241f6d7_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml",
+      "context": {
+        "questline": "kingdom_nouns",
+        "quest_id": "q05_wizard_for_sale",
+        "step_type": "deliver_item",
+        "step_key": "q05_wizard_for_sale_deliver_item_e2e3f01a_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml",
+      "context": {
+        "questline": "kingdom_nouns",
+        "quest_id": "q06_dragon_identity",
+        "step_type": "deliver_item",
+        "step_key": "q06_dragon_identity_deliver_item_b16c8c0b_1"
+      }
+    },
+    {
+      "kind": "ambiguous_step_reward",
+      "severity": "warning",
+      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
+      "path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml",
+      "context": {
+        "questline": "kingdom_nouns",
+        "quest_id": "q07_royal_noun_trial",
+        "step_type": "deliver_item",
+        "step_key": "q07_royal_noun_trial_deliver_item_4d2b6fcb_1"
+      }
+    }
+  ]
+}

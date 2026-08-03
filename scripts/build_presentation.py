@@ -10,6 +10,7 @@ Or both:
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import yaml
@@ -246,7 +247,12 @@ def main() -> None:
 
     if TEMPLATE.exists():
         template = TEMPLATE.read_text(encoding="utf-8")
+        supabase_config = {
+            "url": os.environ.get("QUEST_SUPABASE_URL", "").strip(),
+            "anonKey": os.environ.get("QUEST_SUPABASE_ANON_KEY", "").strip(),
+        }
         html = template.replace("/*__QUEST_DATA__*/", json.dumps(data, ensure_ascii=False))
+        html = html.replace("/*__SUPABASE_CONFIG__*/", json.dumps(supabase_config, ensure_ascii=False))
         OUT_HTML.write_text(html, encoding="utf-8")
         print(f"Wrote {OUT_HTML}")
     else:

@@ -9,6 +9,7 @@ Authoring workspace for English-learning Open World quests. Synced to Unity `Que
 | **Quest creators (you)** | **[Creator catalog](https://neridavid1.github.io/QuestSystem/catalog.html)** — searchable Areas / NPCs / Interactables (with pictures), Items, Minigames, Step types |
 | Creators (local) | Double-click [`presentation/OPEN_CATALOG.bat`](presentation/OPEN_CATALOG.bat) (serves over localhost — opening the HTML file directly stays empty) |
 | Boss / stakeholders (עברית) | **[Quest map](https://neridavid1.github.io/QuestSystem/viewer.html)** · local [`presentation/viewer.html`](presentation/viewer.html) |
+| Authenticated quest editors | **[QuestForge editor](https://neridavid1.github.io/QuestSystem/editor/)** · local `cd editor && npm install && npm run dev` |
 | Landing page | [`presentation/index.html`](presentation/index.html) |
 
 After changing registry YAML or capturing new pictures, rebuild:
@@ -140,3 +141,31 @@ python scripts/build_presentation.py
 ```
 
 Hebrew strings: `presentation/locale/he.yaml`, `_registry/locale/he-content.yaml`.
+
+## Supabase quest editor
+
+Supabase is the canonical source for editor data, drafts, published revisions, and
+the future game-runtime API. The YAML files remain the auditable authoring/export
+bridge until the game consumes the runtime contract directly.
+
+For local editor development, copy [`editor/.env.example`](editor/.env.example)
+to `editor/.env` and set the Supabase project URL and public client key:
+
+```bash
+cd editor
+npm install
+npm run dev
+```
+
+With Supabase variables configured, the editor requires a signed-in user who is
+present in `workspace_members`. When the workspace is empty, the first authenticated
+user can claim the initial admin role from the access screen; later users must be
+added by an admin. Without variables, the editor intentionally runs in local demo
+mode.
+
+The GitHub Pages workflow publishes the Hebrew viewer at the site root and the
+editor at `/editor/`. Configure `QUEST_SUPABASE_URL` as a repository variable and
+`QUEST_SUPABASE_ANON_KEY` as a repository secret. Set the optional
+`QUEST_EDITOR_BASE_PATH` variable only when the site uses a custom base path.
+See [`supabase/RUNTIME_API.md`](supabase/RUNTIME_API.md) for the published snapshot
+contract used by the viewer and future game runtime.
