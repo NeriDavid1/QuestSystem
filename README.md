@@ -164,8 +164,8 @@ accounts join as editors automatically. Without variables, the editor intentiona
 runs in local demo mode.
 
 The GitHub Pages workflow publishes the Hebrew viewer at the site root and the
-editor at `/editor/`. Configure `QUEST_SUPABASE_URL` as a repository variable and
-`QUEST_SUPABASE_ANON_KEY` as a repository secret. Set the optional
+editor at `/editor/`. Configure `QUEST_SUPABASE_URL` (repository variable or
+secret) and `QUEST_SUPABASE_ANON_KEY` as a repository secret. Set the optional
 `QUEST_EDITOR_BASE_PATH` variable only when the site uses a custom base path.
 See [`supabase/RUNTIME_API.md`](supabase/RUNTIME_API.md) for the published snapshot
 contract used by the viewer and future game runtime.

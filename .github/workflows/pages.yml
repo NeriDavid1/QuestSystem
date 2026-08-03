@@ -31,7 +31,8 @@ jobs:
         env:
           # The anon key is intentionally public; RLS still exposes published
           # snapshots only. Leave these unset to keep the YAML fallback.
-          QUEST_SUPABASE_URL: ${{ vars.QUEST_SUPABASE_URL }}
+          # URL may live in Variables or Secrets — both are accepted.
+          QUEST_SUPABASE_URL: ${{ vars.QUEST_SUPABASE_URL || secrets.QUEST_SUPABASE_URL }}
           QUEST_SUPABASE_ANON_KEY: ${{ secrets.QUEST_SUPABASE_ANON_KEY }}
         run: python scripts/build_all.py
 
@@ -48,7 +49,7 @@ jobs:
 
       - name: Build authenticated quest editor
         env:
-          VITE_SUPABASE_URL: ${{ vars.QUEST_SUPABASE_URL }}
+          VITE_SUPABASE_URL: ${{ vars.QUEST_SUPABASE_URL || secrets.QUEST_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.QUEST_SUPABASE_ANON_KEY }}
           VITE_BASE_PATH: ${{ vars.QUEST_EDITOR_BASE_PATH || format('/{0}/editor/', github.event.repository.name) }}
         run: npm run build
