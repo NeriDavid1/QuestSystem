@@ -116,7 +116,7 @@ export interface MinigameInstance {
   key: string
   locale: string
   instruction: string | null
-  tasks: unknown[]
+  tasks: string[]
   target: string | null
   variant: string | null
   success: string | null

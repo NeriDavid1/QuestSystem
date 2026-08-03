@@ -115,6 +115,22 @@ describe('demoData integrity', () => {
     }
   })
 
+  it('attaches every play_minigame step to an existing minigame instance', () => {
+    const minigameKeys = new Set(data.minigames.map((minigame) => minigame.key))
+    for (const step of data.steps.filter((item) => item.step_type === 'play_minigame')) {
+      const instanceKey = step.payload.instance_id
+      expect(instanceKey, `step ${step.key}`).toBeTruthy()
+      expect(minigameKeys.has(String(instanceKey)), `step ${step.key} -> ${String(instanceKey)}`).toBe(true)
+    }
+  })
+
+  it('keeps minigame tasks as plain string arrays', () => {
+    for (const minigame of data.minigames) {
+      expect(Array.isArray(minigame.tasks)).toBe(true)
+      expect(minigame.tasks.every((task) => typeof task === 'string'), `minigame ${minigame.key}`).toBe(true)
+    }
+  })
+
   it('matches every step-type field ref format used by the DB seed', () => {
     for (const type of data.stepTypes) {
       for (const field of type.fields) {

@@ -148,12 +148,13 @@ function createSteps(quests: Quest[]): QuestStep[] {
         ? { npc_id: quest.giver_external_id ?? 'teacher_maya', dialogue_id: `${lineKey}_${quest.key}_intro` }
         : stepType === 'reach_location'
           ? { location_id: position % 2 === 0 ? 'KingdomGate' : 'The Oathstone Bridge' }
-          : {
-              minigame_id: position % 2 === 0 ? 'letter_ordering' : 'word_matching',
-              world_object_id: 'Lost_Chest5_Silver_Fountain_Court',
-              difficulty: Math.min(7, position + 1),
-              success_required: true,
-            }
+        : {
+            minigame_id: position % 2 === 0 ? 'letter_ordering' : 'word_matching',
+            world_object_id: 'Lost_Chest5_Silver_Fountain_Court',
+            difficulty: Math.min(7, position + 1),
+            success_required: true,
+            instance_id: `${quest.key}_minigame`,
+          }
 
     return [
       {
@@ -368,21 +369,38 @@ function createDialogueLines(dialogues: Dialogue[]): DialogueLine[] {
   ])
 }
 
-function createMinigames(): MinigameInstance[] {
-  return [
-    {
-      id: 'demo-minigame-long',
-      key: 'q01_bridge_too_short_s2',
+function createMinigames(steps: QuestStep[]): MinigameInstance[] {
+  const instances = new Map<string, MinigameInstance>()
+  let index = 0
+  for (const step of steps) {
+    if (step.step_type !== 'play_minigame') continue
+    const key = typeof step.payload.instance_id === 'string' && step.payload.instance_id
+      ? step.payload.instance_id
+      : `demo_minigame_${index + 1}`
+    if (instances.has(key)) continue
+    const minigameId = typeof step.payload.minigame_id === 'string' ? step.payload.minigame_id : 'letter_ordering'
+    const spelling = minigameId === 'letter_ordering'
+    index += 1
+    instances.set(key, {
+      id: `demo-minigame-${index}`,
+      key,
       locale: 'he',
-      instruction: 'סדרו את האותיות של LONG',
-      tasks: ['סדרו l, o, n, g', 'צרו long — ארוך'],
-      target: 'long',
-      variant: 'word_spelling',
-      success: 'LONG נכתב נכון; Oak Log נוסף לתיק',
-      source_path: '_registry/minigame_instances/adjective_crown.yaml',
+      instruction: spelling
+        ? 'סדרו את האותיות בסדר הנכון כדי להשלים את המילה.'
+        : 'התאימו את המילה לאות החסרה לפני שהשעון נגמר.',
+      tasks: spelling
+        ? ['סדרו את האותיות l, o, n, g', 'קראו את המילה שנוצרה']
+        : ['מצאו את האות החסרה', 'התאימו את המילה למשמעות שלה'],
+      target: spelling ? 'long' : 'המילה המלאה',
+      variant: minigameId,
+      success: spelling
+        ? 'המילה נכתבה נכון; פרס נוסף לתיק.'
+        : 'התאמה מושלמת! המשימה ממשיכה קדימה.',
+      source_path: `_registry/minigame_instances/${key.split('_')[0]}.yaml`,
       source_metadata: { demo: true },
-    },
-  ]
+    })
+  }
+  return [...instances.values()]
 }
 
 export function createDemoData(): EditorData {
@@ -400,7 +418,7 @@ export function createDemoData(): EditorData {
     stepTypes: createStepTypes(),
     dialogues,
     dialogueLines: createDialogueLines(dialogues),
-    minigames: createMinigames(),
+    minigames: createMinigames(steps),
     revisions: [],
   }
 }

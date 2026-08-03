@@ -130,6 +130,20 @@ describe('validateQuestline', () => {
     }
   })
 
+  it('warns on unresolved minigame instance references', () => {
+    const data = makeData()
+    const playStep = data.steps.find((step) => step.step_type === 'play_minigame')
+    expect(playStep).toBeDefined()
+    const step = playStep!
+    const modified: EditorData = {
+      ...data,
+      steps: data.steps.map((item) =>
+        item.id === step.id ? { ...item, payload: { ...item.payload, instance_id: 'missing_instance_key' } } : item),
+    }
+    const issues = validateQuestline(modified, lineOf(data), t)
+    expect(issues).toContainEqual(expect.objectContaining({ code: 'unresolved_minigame', severity: 'warning', entityId: step.id }))
+  })
+
   it('flags an unknown step type', () => {
     const data = makeData()
     const step = data.steps[0]

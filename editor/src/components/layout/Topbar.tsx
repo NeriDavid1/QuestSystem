@@ -4,11 +4,19 @@ import { Icon } from '../common/Icon'
 
 export function Topbar({ onOpenSearch }: { onOpenSearch: () => void }) {
   const t = useT()
-  const { view, dirty, history, undo, redo, user } = useEditorStore()
+  const { view, dirty, history, undo, redo, user, sidebarCollapsed, toggleSidebar } = useEditorStore()
   const viewLabel =
     view === 'editor' ? t('navEditor') : view === 'overview' ? t('navOverview') : view === 'library' ? t('navLibrary') : view === 'preview' ? t('navPreview') : t('navSettings')
   return (
     <header className="topbar">
+      <button
+        className="icon-button top-icon sidebar-toggle"
+        aria-label={sidebarCollapsed ? t('expandSidebar') : t('collapseSidebar')}
+        title={sidebarCollapsed ? t('expandSidebar') : t('collapseSidebar')}
+        onClick={toggleSidebar}
+      >
+        <Icon name="panel" />
+      </button>
       <div className="breadcrumbs">
         <span>{t('workspaceName')}</span>
         <Icon name="chevron" />

@@ -7,6 +7,7 @@ import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
 import { StepFieldEditor } from './StepFieldEditor'
 import { StepDialogueEditor } from './StepDialogueEditor'
+import { StepMinigameEditor } from './StepMinigameEditor'
 import { RewardEditor } from './RewardEditor'
 
 export function StepEditor({ step }: { step: QuestStep }) {
@@ -15,7 +16,7 @@ export function StepEditor({ step }: { step: QuestStep }) {
   const definition = getStepType(data, step.step_type)
   const [showAdvanced, setShowAdvanced] = useState(false)
   const updatePayload = (patch: Record<string, unknown>) => updateStep(step.id, { payload: { ...step.payload, ...patch } })
-  const payloadFields = definition?.fields.filter((field) => !field.ref?.includes('dialogues')) ?? []
+  const payloadFields = definition?.fields.filter((field) => !field.ref?.includes('dialogues') && !field.ref?.includes('minigame_instances')) ?? []
   const showDialogue = stepHasDialogueField(data, step)
   return (
     <section className="step-editor">
@@ -27,6 +28,7 @@ export function StepEditor({ step }: { step: QuestStep }) {
         <button className="advanced-toggle" onClick={() => setShowAdvanced(!showAdvanced)}>{showAdvanced ? t('hidePayload') : t('showPayload')} <Icon name="chevron" /></button>
         {showAdvanced && <div className="payload-preview"><code>{JSON.stringify(step.payload, null, 2)}</code></div>}
       </div>
+      <StepMinigameEditor step={step} />
       {showDialogue && <StepDialogueEditor step={step} onAttachDialogue={(key) => updatePayload({ dialogue_id: key })} />}
       <div className="editor-subsection"><FieldLabel hint={t('stepRewardsHint')}>{t('stepRewards')}</FieldLabel><RewardEditor data={data} rewards={getStepRewards(data, step.id)} onAdd={() => addReward('step', step.id)} onUpdate={updateReward} onRemove={removeReward} /></div>
     </section>

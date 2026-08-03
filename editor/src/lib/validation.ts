@@ -118,6 +118,18 @@ export function validateQuestline(
             })
           }
         }
+
+        if (field.ref?.includes('minigame_instances') && value) {
+          const found = data.minigames.some((minigame) => minigame.key === String(value))
+          if (!found) {
+            issues.push({
+              severity: 'warning',
+              code: 'unresolved_minigame',
+              message: t('validationUnresolvedMinigame', { value: String(value) }),
+              entityId: step.id,
+            })
+          }
+        }
       }
     }
   }

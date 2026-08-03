@@ -2,6 +2,7 @@ import type {
   CatalogKind,
   DialogueLine,
   EditorData,
+  MinigameInstance,
   Quest,
   QuestPrerequisite,
   QuestReward,
@@ -52,6 +53,10 @@ export function uniqueDialogueKey(data: EditorData, baseKey: string): string {
   return uniqueKey(data.dialogues.map((dialogue) => dialogue.key), baseKey, 'new_dialogue')
 }
 
+export function uniqueMinigameKey(data: EditorData, baseKey: string): string {
+  return uniqueKey(data.minigames.map((minigame) => minigame.key), baseKey, 'new_minigame')
+}
+
 export function getDialogueLines(data: EditorData, dialogueId: string): DialogueLine[] {
   return data.dialogueLines
     .filter((line) => line.dialogue_id === dialogueId)
@@ -60,6 +65,19 @@ export function getDialogueLines(data: EditorData, dialogueId: string): Dialogue
 
 export function stepHasDialogueField(data: EditorData, step: QuestStep): boolean {
   return Boolean(getStepType(data, step.step_type)?.fields.some((field) => field.ref?.includes('dialogues')))
+}
+
+export function stepHasMinigameField(data: EditorData, step: QuestStep): boolean {
+  return Boolean(
+    getStepType(data, step.step_type)?.fields.some((field) => field.ref?.includes('minigame_instances')),
+  )
+}
+
+/** The localized minigame instance attached to a step via its `instance_id` payload key. */
+export function getStepMinigame(data: EditorData, step: QuestStep): MinigameInstance | undefined {
+  const instanceKey = typeof step.payload.instance_id === 'string' ? step.payload.instance_id : ''
+  if (!instanceKey) return undefined
+  return data.minigames.find((minigame) => minigame.key === instanceKey)
 }
 
 export function getQuestlineQuests(data: EditorData, questlineId: string): Quest[] {

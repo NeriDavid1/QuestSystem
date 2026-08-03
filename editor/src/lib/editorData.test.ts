@@ -6,11 +6,14 @@ import {
   getDialogueLines,
   getQuestSteps,
   getQuestlineQuests,
+  getStepMinigame,
   isLocalId,
   makeLocalId,
   slugify,
+  stepHasMinigameField,
   uniqueDialogueKey,
   uniqueKey,
+  uniqueMinigameKey,
   uniqueQuestKey,
   uniqueQuestlineKey,
 } from './editorData'
@@ -125,6 +128,39 @@ describe('getDialogueLines', () => {
       const current = lines[i]
       expect(current.line_order > prev.line_order || (current.line_order === prev.line_order && current.locale >= prev.locale)).toBe(true)
     }
+  })
+})
+
+describe('stepHasMinigameField / getStepMinigame', () => {
+  it('detects play_minigame steps and resolves their attached instance', () => {
+    const playStep = data.steps.find((step) => step.step_type === 'play_minigame')
+    expect(playStep).toBeDefined()
+    const step = playStep!
+    expect(stepHasMinigameField(data, step)).toBe(true)
+    const minigame = getStepMinigame(data, step)
+    expect(minigame).toBeDefined()
+    expect(minigame!.key).toBe(step.payload.instance_id)
+    expect(Array.isArray(minigame!.tasks)).toBe(true)
+  })
+
+  it('returns undefined when no instance is attached', () => {
+    const playStep = data.steps.find((step) => step.step_type === 'play_minigame')!
+    const detached = { ...playStep, payload: { ...playStep.payload, instance_id: '' } }
+    expect(getStepMinigame(data, detached)).toBeUndefined()
+  })
+
+  it('does not flag dialogue steps as minigame steps', () => {
+    const talkStep = data.steps.find((step) => step.step_type === 'talk_to_npc')
+    expect(talkStep).toBeDefined()
+    expect(stepHasMinigameField(data, talkStep!)).toBe(false)
+  })
+})
+
+describe('uniqueMinigameKey', () => {
+  it('produces a key not present in the minigame collection', () => {
+    const keys = new Set(data.minigames.map((minigame) => minigame.key))
+    const key = uniqueMinigameKey(data, data.minigames[0].key)
+    expect(keys.has(key)).toBe(false)
   })
 })
 

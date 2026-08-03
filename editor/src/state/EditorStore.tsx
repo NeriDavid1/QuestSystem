@@ -32,6 +32,7 @@ import {
   makeLocalId,
   slugify,
   uniqueDialogueKey,
+  uniqueMinigameKey,
   uniqueQuestKey,
   uniqueQuestlineKey,
   uniqueKey,
@@ -71,6 +72,8 @@ interface EditorStoreValue {
   authReady: boolean
   view: View
   setView: (view: View) => void
+  sidebarCollapsed: boolean
+  toggleSidebar: () => void
   selectedQuestlineId: string
   selectedQuestId: string
   selectedStepId: string
@@ -118,6 +121,7 @@ interface EditorStoreValue {
   moveDialogueLine: (lineId: string, direction: -1 | 1) => void
   createDialogue: (options?: { speaker?: string | null; baseKey?: string; attachToStepId?: string }) => void
   createDialogueForStep: (stepId: string) => void
+  createMinigameForStep: (stepId: string) => void
   updateMinigame: (minigameId: string, patch: Partial<MinigameInstance>) => void
   togglePrerequisite: (questId: string, prerequisiteQuestId: string, enabled: boolean) => void
   addReward: (scope: 'quest' | 'step', parentId: string) => void
@@ -161,6 +165,13 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const [selectedQuestId, setSelectedQuestId] = useState('')
   const [selectedStepId, setSelectedStepId] = useState('')
   const [view, setView] = useState<View>('editor')
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
+    try {
+      return window.localStorage.getItem('questforge.sidebarCollapsed') === '1'
+    } catch {
+      return false
+    }
+  })
   const [dirty, setDirty] = useState(false)
   const [saving, setSaving] = useState(false)
   const [publishing, setPublishing] = useState(false)
@@ -349,6 +360,17 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
 
   const openConfirm = useCallback((state: ConfirmState) => setConfirmState(state), [])
   const closeConfirm = useCallback(() => setConfirmState(null), [])
+  const toggleSidebar = useCallback(() => {
+    setSidebarCollapsed((collapsed) => {
+      const next = !collapsed
+      try {
+        window.localStorage.setItem('questforge.sidebarCollapsed', next ? '1' : '0')
+      } catch {
+        // storage unavailable — ignore
+      }
+      return next
+    })
+  }, [])
   const closeConflict = useCallback(() => {
     setConflictState(false)
   }, [])
@@ -523,6 +545,42 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     }))
     setDirty(true)
   }, [])
+
+  const createMinigameForStep = useCallback((stepId: string) => {
+    setData((current) => {
+      const step = current.steps.find((item) => item.id === stepId)
+      if (!step) return current
+      const baseMinigame =
+        typeof step.payload.minigame_id === 'string' && step.payload.minigame_id
+          ? current.catalog.find(
+            (entry) => entry.kind === 'minigame' && entry.external_id === step.payload.minigame_id,
+          )
+          : undefined
+      const instance: MinigameInstance = {
+        id: makeLocalId('minigame'),
+        key: uniqueMinigameKey(current, `${selectedQuest?.key ?? 'quest'}_minigame`),
+        locale: DEFAULT_DIALOGUE_LOCALE,
+        instruction: baseMinigame ? t('minigameDefaultInstruction', { name: baseMinigame.name }) : '',
+        tasks: [],
+        target: null,
+        variant: baseMinigame?.external_id ?? null,
+        success: null,
+        source_path: null,
+        source_metadata: { local_draft: true },
+      }
+      touchedMinigameIds.current.add(instance.id)
+      return {
+        ...current,
+        minigames: [...current.minigames, instance],
+        steps: current.steps.map((item) =>
+          item.id === stepId
+            ? { ...item, payload: { ...item.payload, instance_id: instance.key } }
+            : item),
+      }
+    })
+    setDirty(true)
+    notify(t('minigameCreated'))
+  }, [notify, selectedQuest, t])
 
   const togglePrerequisite = useCallback((questId: string, prerequisiteQuestId: string, enabled: boolean) => {
     setData((current) => {
@@ -1337,6 +1395,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       authReady,
       view,
       setView,
+      sidebarCollapsed,
+      toggleSidebar,
       selectedQuestlineId,
       selectedQuestId,
       selectedStepId,
@@ -1384,6 +1444,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       moveDialogueLine,
       createDialogue,
       createDialogueForStep,
+      createMinigameForStep,
       updateMinigame,
       togglePrerequisite,
       addReward,
@@ -1415,13 +1476,13 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       forceSaveAfterConflict,
     }),
     [
-      demoMode, data, user, authReady, view, selectedQuestlineId, selectedQuestId, selectedStepId,
+      demoMode, data, user, authReady, view, sidebarCollapsed, toggleSidebar, selectedQuestlineId, selectedQuestId, selectedStepId,
       selectedLine, lineQuests, selectedQuest, questSteps, issues, dirty, saving, publishing,
       toast, loadError, historyVersion, undo, redo, notify, confirmState, openConfirm, closeConfirm,
       conflictState, closeConflict, showNewQuestline, showPublishConfirm, showSearch,
       showRevisions, showTemplates, libraryTab, setLibraryTab, updateLine, updateQuest, updateStep, updateDialogue,
-      updateDialogueLine, addDialogueLine, removeDialogueLine, moveDialogueLine, createDialogue,
-      createDialogueForStep, updateMinigame, togglePrerequisite, addReward, updateReward,
+      updateDialogueLine, addDialogueLine, removeDialogueLine, moveDialogueLine,       createDialogue,
+      createDialogueForStep, createMinigameForStep, updateMinigame, togglePrerequisite, addReward, updateReward,
       removeReward, addQuest, addStep, createQuestline, removeQuestline, removeQuest, removeStep,
       removeDialogue, removeMinigame, duplicateQuest, duplicateStep, duplicateDialogue, duplicateQuestline,
       moveQuest, moveStep, saveDraft, publish,

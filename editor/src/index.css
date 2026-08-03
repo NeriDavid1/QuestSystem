@@ -414,6 +414,62 @@ code {
   color: #7485a3;
 }
 
+/* Collapsed sidebar — icon-only rail */
+.app-sidebar.collapsed {
+  flex-basis: 68px;
+  align-items: center;
+  padding: 25px 9px 16px;
+}
+
+.app-sidebar.collapsed .app-brand {
+  padding: 0 0 22px;
+}
+
+.app-sidebar.collapsed .app-brand > div:last-child,
+.app-sidebar.collapsed .workspace-switcher,
+.app-sidebar.collapsed .main-nav button span:not(.icon),
+.app-sidebar.collapsed .settings-link span:not(.icon),
+.app-sidebar.collapsed .sidebar-divider,
+.app-sidebar.collapsed .sidebar-section-label,
+.app-sidebar.collapsed .connection-card > div,
+.app-sidebar.collapsed .user-card > span:nth-child(2),
+.app-sidebar.collapsed .user-card > .icon {
+  display: none;
+}
+
+.app-sidebar.collapsed .main-nav,
+.app-sidebar.collapsed .settings-link {
+  width: 100%;
+}
+
+.app-sidebar.collapsed .main-nav button,
+.app-sidebar.collapsed .settings-link {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.app-sidebar.collapsed .main-nav button.active {
+  box-shadow: inset 0 -3px 0 #88e0d2;
+}
+
+.app-sidebar.collapsed .connection-card {
+  width: 28px;
+  height: 28px;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.app-sidebar.collapsed .user-card {
+  justify-content: center;
+  padding: 7px 0;
+}
+
+.sidebar-toggle {
+  margin-right: 14px;
+}
+
 .app-body {
   display: flex;
   min-width: 0;
@@ -1931,6 +1987,112 @@ select:focus {
   line-height: 1.5;
 }
 
+.step-minigame-editor {
+  display: grid;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #e0e7ff;
+  border-radius: 10px;
+  background: #f7f9ff;
+}
+
+.step-minigame-editor .form-stack {
+  gap: 10px;
+}
+
+.minigame-attach-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.minigame-empty-hint {
+  color: #77819e;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.minigame-heading {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.minigame-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 8px;
+  color: #4a6bd6;
+  background: #dde6ff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.minigame-heading strong,
+.minigame-heading small {
+  display: block;
+}
+
+.minigame-heading strong {
+  color: #4a5aa0;
+  font-size: 9px;
+}
+
+.minigame-heading small {
+  margin-top: 2px;
+  color: #8d99c4;
+  font-family: var(--mono);
+  font-size: 7px;
+}
+
+.minigame-params {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e3e9fb;
+  border-radius: 9px;
+  background: #fbfcff;
+}
+
+.minigame-tasks {
+  display: grid;
+  gap: 7px;
+}
+
+.minigame-task-row {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.minigame-task-row label {
+  min-width: 0;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.minigame-task-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  color: #4a6bd6;
+  background: #e4ebff;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.minigame-task-row .icon-button {
+  padding-top: 8px;
+}
+
 .validation-panel {
   display: flex;
   min-width: 0;
@@ -3373,6 +3535,15 @@ select:focus {
 
 [dir='rtl'] .main-nav button.active {
   box-shadow: inset -3px 0 0 #88e0d2;
+}
+
+[dir='rtl'] .app-sidebar.collapsed .main-nav button.active {
+  box-shadow: inset 0 -3px 0 #88e0d2;
+}
+
+[dir='rtl'] .sidebar-toggle {
+  margin-right: 0;
+  margin-left: 14px;
 }
 
 [dir='rtl'] .nav-dirty-dot,

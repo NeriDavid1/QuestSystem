@@ -9,6 +9,7 @@ export function Icon({ name }: { name: string }) {
     grid: '▦',
     lock: '⌑',
     logout: '↪',
+    panel: '☰',
     plus: '+',
     refresh: '↻',
     save: '↓',

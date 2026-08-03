@@ -13,10 +13,10 @@ function getNavItems(t: ReturnType<typeof useT>): Array<{ id: View; label: strin
 
 export function Sidebar() {
   const t = useT()
-  const { view, setView, demoMode, user, dirty, handleSignOut } = useEditorStore()
+  const { view, setView, demoMode, user, dirty, handleSignOut, sidebarCollapsed } = useEditorStore()
   const navItems = getNavItems(t)
   return (
-    <aside className="app-sidebar">
+    <aside className={`app-sidebar${sidebarCollapsed ? ' collapsed' : ''}`}>
       <div className="app-brand"><div className="brand-mark">Q</div><div><strong>{t('brandName')}</strong><span>{t('brandTagline')}</span></div></div>
       <div className="workspace-switcher"><span className="workspace-avatar">EK</span><span><small>{t('workspaceLabel')}</small><strong>{t('workspaceName')}</strong></span><Icon name="chevron" /></div>
       <nav className="main-nav" aria-label={t('navMainAria')}>
