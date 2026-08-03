@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useT } from '../../i18n'
+import { useT, type MessageKey } from '../../i18n'
 import type { MinigameInstance } from '../../lib/types'
 import {
   normalizeParamValue,
@@ -131,8 +131,8 @@ export function MinigameParamsEditor({
           const value = readMinigameParam(minigame, field)
           return (
             <label className="minigame-param-field" key={field.name}>
-              <FieldLabel hint={field.hintKey ? t(field.hintKey) : undefined}>
-                {t(field.labelKey)} <code className="minigame-param-name">{field.name}</code>
+              <FieldLabel hint={field.hintKey ? t(field.hintKey as MessageKey) : undefined}>
+                {t(field.labelKey as MessageKey)} <code className="minigame-param-name">{field.name}</code>
               </FieldLabel>
 
               {field.type === 'boolean' ? (

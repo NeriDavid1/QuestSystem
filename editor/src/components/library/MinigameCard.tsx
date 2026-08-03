@@ -8,7 +8,6 @@ import { Icon } from '../common/Icon'
 import { MinigameParamsEditor } from '../editor/MinigameParamsEditor'
 
 function ParamSummary({ minigame }: { minigame: MinigameInstance }) {
-  const t = useT()
   const entries = Object.entries(minigame.params ?? {}).filter(([, value]) => value !== '' && value !== null && value !== undefined)
   if (entries.length === 0) return null
   return (
