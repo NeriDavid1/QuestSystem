@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Heebo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-family: 'Heebo', 'Manrope', 'Segoe UI', sans-serif;
   color: #14213d;
   background: #f4f7fc;
   font-synthesis: none;
@@ -27,6 +27,30 @@
   --shadow: 0 16px 50px rgba(26, 46, 87, 0.08);
   --small-shadow: 0 7px 22px rgba(26, 46, 87, 0.06);
   --mono: 'DM Mono', Consolas, monospace;
+  --font-ui: 'Heebo', 'Manrope', 'Segoe UI', sans-serif;
+  --font-latin: 'Manrope', 'Heebo', 'Segoe UI', sans-serif;
+}
+
+[dir='ltr'] {
+  font-family: var(--font-latin);
+}
+
+[dir='rtl'] {
+  font-family: var(--font-ui);
+}
+
+.content-text,
+textarea[dir='auto'],
+input[dir='auto'],
+.dialogue-lines p,
+.dialogue-preview p,
+.node-name,
+.preview-quest small,
+.preview-detail > p,
+.library-card-copy h3,
+.minigame-editor textarea,
+.minigame-editor input {
+  unicode-bidi: plaintext;
 }
 
 * {
@@ -1730,6 +1754,59 @@ select:focus {
   background: #f6f5ff;
 }
 
+.step-dialogue-editor {
+  display: grid;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #e2e0ff;
+  border-radius: 10px;
+  background: #f8f7ff;
+}
+
+.step-dialogue-editor .form-stack {
+  gap: 10px;
+}
+
+.dialogue-attach-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dialogue-empty-hint {
+  color: #7a7499;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+.dialogue-lines-editor {
+  display: grid;
+  gap: 10px;
+}
+
+.dialogue-line-row {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.dialogue-line-row label {
+  min-width: 0;
+}
+
+.dialogue-line-actions {
+  display: grid;
+  gap: 4px;
+  padding-top: 18px;
+}
+
+.dialogue-line-actions .icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
 .dialogue-heading {
   display: flex;
   align-items: center;
@@ -1994,12 +2071,18 @@ select:focus {
   border-radius: 14px;
   background: #fff;
   box-shadow: var(--small-shadow);
+  cursor: pointer;
   transition: 160ms ease;
 }
 
 .catalog-card:hover {
   border-color: #c7c2ff;
   transform: translateY(-2px);
+}
+
+.catalog-card:focus-visible {
+  outline: 2px solid #6b63d3;
+  outline-offset: 2px;
 }
 
 .catalog-thumb {
@@ -2109,6 +2192,64 @@ select:focus {
 .catalog-status {
   position: static;
   flex-shrink: 0;
+}
+
+.catalog-preview-modal {
+  width: min(720px, 100%);
+  padding: 20px;
+}
+
+.catalog-preview-image {
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+  min-height: 280px;
+  max-height: min(62vh, 520px);
+  margin-bottom: 16px;
+  border-radius: 12px;
+  color: #8b849f;
+  background:
+    linear-gradient(160deg, #f4f2ff 0%, #eef3fa 55%, #f7f8fb 100%);
+}
+
+.catalog-preview-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: min(62vh, 520px);
+  object-fit: cover;
+}
+
+.catalog-preview-image.contain img {
+  object-fit: contain;
+  padding: 24px;
+}
+
+.catalog-preview-fallback {
+  font-size: 56px;
+}
+
+.catalog-preview-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.catalog-preview-meta .catalog-id-row code {
+  font-size: 11px;
+  padding: 5px 8px;
+}
+
+.catalog-preview-meta .catalog-copy {
+  font-size: 10px;
+  padding: 5px 9px;
+}
+
+.catalog-preview-meta > p {
+  margin: 0;
+  color: #748097;
+  font-size: 12px;
+  line-height: 1.55;
 }
 
 .catalog-status.live {
@@ -3137,3 +3278,135 @@ select:focus {
     flex: 1;
   }
 }
+
+/* RTL layout mirrors — keep quest graph LTR for progression arrows */
+[dir='rtl'] .main-nav button,
+[dir='rtl'] .settings-link,
+[dir='rtl'] .preview-quest,
+[dir='rtl'] .line-row,
+[dir='rtl'] .rail-line,
+[dir='rtl'] .step-row,
+[dir='rtl'] .catalog-card,
+[dir='rtl'] .text-button {
+  text-align: right;
+}
+
+[dir='rtl'] .main-nav button.active {
+  box-shadow: inset -3px 0 0 #88e0d2;
+}
+
+[dir='rtl'] .nav-dirty-dot,
+[dir='rtl'] .heading-actions,
+[dir='rtl'] .topbar-actions .save-state {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir='rtl'] .questline-rail {
+  border-right: 0;
+  border-left: 1px solid var(--line);
+}
+
+[dir='rtl'] .inspector {
+  border-left: 0;
+  border-right: 1px solid var(--line);
+}
+
+[dir='rtl'] .coverage-item {
+  border-right: 0;
+  border-left: 1px solid var(--line);
+}
+
+[dir='rtl'] .coverage-item:last-child {
+  border-left: 0;
+}
+
+[dir='rtl'] .preview-path {
+  border-right: 0;
+  border-left: 1px solid var(--line);
+}
+
+[dir='rtl'] .setting-row strong,
+[dir='rtl'] .setting-row code {
+  text-align: left;
+}
+
+[dir='rtl'] .toast {
+  right: auto;
+  left: 22px;
+}
+
+[dir='rtl'] .library-status {
+  right: auto;
+  left: 13px;
+}
+
+[dir='rtl'] .icon[data-name='chevron'],
+[dir='rtl'] .main-nav .icon:last-child,
+[dir='rtl'] .line-row > .icon:last-child,
+[dir='rtl'] .step-row > .icon:last-child,
+[dir='rtl'] .workspace-switcher > .icon:last-child,
+[dir='rtl'] .user-card > .icon:last-child,
+[dir='rtl'] .breadcrumbs .icon {
+  transform: scaleX(-1);
+}
+
+[dir='rtl'] .button .icon:last-child {
+  transform: scaleX(-1);
+}
+
+[dir='ltr'] .auth-page,
+[dir='ltr'] .loading-screen,
+[dir='ltr'] .page-content,
+[dir='ltr'] .inspector,
+[dir='ltr'] .questline-rail,
+[dir='ltr'] .workspace-main {
+  font-family: var(--font-latin);
+}
+
+.graph-scroll,
+.quest-graph {
+  direction: ltr;
+}
+
+.language-card .setting-row {
+  display: block;
+}
+
+.language-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.language-toggle button {
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  color: var(--ink-soft);
+  background: #f8faff;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.language-toggle button.active {
+  border-color: #c9c3ff;
+  color: #4f46b8;
+  background: var(--purple-soft);
+}
+
+.language-note {
+  margin-top: 10px;
+  color: var(--ink-faint);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  [dir='rtl'] .preview-path {
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
