@@ -2516,6 +2516,33 @@ select:focus {
   margin-top: 24px;
 }
 
+.auth-mode-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 18px 0 0;
+  padding: 4px;
+  border-radius: 10px;
+  background: #eef1f8;
+}
+
+.auth-mode-tabs button {
+  min-height: 34px;
+  border: 0;
+  border-radius: 8px;
+  color: #64748b;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-mode-tabs button.active {
+  color: #1f2937;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .08);
+}
+
 .auth-form input {
   height: 40px;
   margin-top: 1px;
@@ -2525,6 +2552,12 @@ select:focus {
 .form-error {
   margin-top: -3px;
   color: #c0545d;
+  font-size: 10px;
+}
+
+.form-info {
+  margin-top: -3px;
+  color: #2f6b4f;
   font-size: 10px;
 }
 

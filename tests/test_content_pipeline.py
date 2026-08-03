@@ -101,6 +101,7 @@ class ContentPipelineTests(unittest.TestCase):
         schema = (ROOT / "supabase" / "migrations" / "20260803100000_quest_editor.sql").read_text(encoding="utf-8")
         hardening = (ROOT / "supabase" / "migrations" / "20260803102000_security_hardening.sql").read_text(encoding="utf-8")
         performance = (ROOT / "supabase" / "migrations" / "20260803103000_performance_hardening.sql").read_text(encoding="utf-8")
+        open_join = (ROOT / "supabase" / "migrations" / "20260803104000_open_editor_join.sql").read_text(encoding="utf-8")
         for table in (
             "workspace_members",
             "questlines",
@@ -117,6 +118,7 @@ class ContentPipelineTests(unittest.TestCase):
         self.assertIn("revoke execute", hardening.lower())
         self.assertIn("quest_prerequisites_prerequisite_quest_id_idx", performance)
         self.assertIn("(select auth.uid())", performance)
+        self.assertIn("ensure_workspace_member", open_join)
 
     def test_editor_has_auth_persistence_and_navigation_contract(self):
         editor = ROOT / "editor"
@@ -131,7 +133,8 @@ class ContentPipelineTests(unittest.TestCase):
         for marker in (
             "AuthScreen",
             "AccessRequired",
-            "claimFirstAdmin",
+            "ensure_workspace_member",
+            "Create account & edit",
             "GraphWithStepCounts",
             "PrerequisiteEditor",
             "RewardEditor",

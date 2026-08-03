@@ -157,11 +157,11 @@ npm install
 npm run dev
 ```
 
-With Supabase variables configured, the editor requires a signed-in user who is
-present in `workspace_members`. When the workspace is empty, the first authenticated
-user can claim the initial admin role from the access screen; later users must be
-added by an admin. Without variables, the editor intentionally runs in local demo
-mode.
+With Supabase variables configured, editors open
+[`/editor/`](https://neridavid1.github.io/QuestSystem/editor/), create an account
+or sign in, and start editing immediately. The first account becomes admin; later
+accounts join as editors automatically. Without variables, the editor intentionally
+runs in local demo mode.
 
 The GitHub Pages workflow publishes the Hebrew viewer at the site root and the
 editor at `/editor/`. Configure `QUEST_SUPABASE_URL` as a repository variable and

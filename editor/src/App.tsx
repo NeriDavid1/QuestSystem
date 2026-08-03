@@ -351,20 +351,34 @@ function StatusPill({ status }: { status: string }) {
   return <span className={`status-pill status-${status}`}>{status.replace('_', ' ')}</span>
 }
 
-function AuthScreen({ onSubmit }: { onSubmit: (email: string, password: string) => Promise<void> }) {
+function AuthScreen({
+  onSignIn,
+  onSignUp,
+}: {
+  onSignIn: (email: string, password: string) => Promise<void>
+  onSignUp: (email: string, password: string) => Promise<void>
+}) {
+  const [mode, setMode] = useState<'signin' | 'signup'>('signup')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
+  const [info, setInfo] = useState('')
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     setBusy(true)
     setError('')
+    setInfo('')
     try {
-      await onSubmit(email, password)
+      if (mode === 'signup') {
+        await onSignUp(email, password)
+        setInfo('Account ready. Opening the editor…')
+      } else {
+        await onSignIn(email, password)
+      }
     } catch (submissionError) {
-      setError(submissionError instanceof Error ? submissionError.message : 'Unable to sign in.')
+      setError(submissionError instanceof Error ? submissionError.message : 'Unable to enter the editor.')
     } finally {
       setBusy(false)
     }
@@ -374,12 +388,15 @@ function AuthScreen({ onSubmit }: { onSubmit: (email: string, password: string) 
     <main className="auth-page">
       <section className="auth-card">
         <div className="brand-mark large">Q</div>
-        <p className="eyebrow">QuestForge / private workspace</p>
-        <h1>Build better quests.</h1>
+        <p className="eyebrow">QuestForge / start editing</p>
+        <h1>Open the editor and start.</h1>
         <p className="auth-copy">
-          Sign in with your editor account to shape questlines, connect learning steps, and publish
-          a safe snapshot for the game.
+          Create an account or sign in. You go straight into the quest workspace — no invite code, no extra setup.
         </p>
+        <div className="auth-mode-tabs" role="tablist" aria-label="Account mode">
+          <button type="button" role="tab" className={mode === 'signup' ? 'active' : ''} aria-selected={mode === 'signup'} onClick={() => { setMode('signup'); setError(''); setInfo('') }}>Create account</button>
+          <button type="button" role="tab" className={mode === 'signin' ? 'active' : ''} aria-selected={mode === 'signin'} onClick={() => { setMode('signin'); setError(''); setInfo('') }}>Sign in</button>
+        </div>
         <form onSubmit={submit} className="auth-form">
           <label>
             Email
@@ -398,20 +415,22 @@ function AuthScreen({ onSubmit }: { onSubmit: (email: string, password: string) 
               type="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-              placeholder="Your Supabase Auth password"
-              autoComplete="current-password"
+              placeholder={mode === 'signup' ? 'Choose a password (6+ characters)' : 'Your password'}
+              autoComplete={mode === 'signup' ? 'new-password' : 'current-password'}
+              minLength={6}
               required
             />
           </label>
           {error && <p className="form-error">{error}</p>}
+          {info && <p className="form-info">{info}</p>}
           <button className="button primary wide" disabled={busy}>
-            {busy ? 'Signing in…' : 'Enter editor'}
+            {busy ? (mode === 'signup' ? 'Creating account…' : 'Signing in…') : mode === 'signup' ? 'Create account & edit' : 'Enter editor'}
             <Icon name="chevron" />
           </button>
         </form>
         <div className="auth-note">
-          <Icon name="lock" />
-          <span>Only authenticated users in <code>workspace_members</code> can edit content.</span>
+          <Icon name="spark" />
+          <span>The first account becomes admin. Later accounts join as editors automatically.</span>
         </div>
       </section>
       <div className="auth-orbit orbit-one" />
@@ -1190,43 +1209,40 @@ function AccessRequired({
   email,
   message,
   onSignOut,
-  onClaimFirstAdmin,
+  onRetryJoin,
 }: {
   email?: string
   message?: string
   onSignOut: () => Promise<void>
-  onClaimFirstAdmin: (displayName: string) => Promise<void>
+  onRetryJoin: () => Promise<void>
 }) {
-  const [displayName, setDisplayName] = useState('')
-  const [claiming, setClaiming] = useState(false)
-  const [claimError, setClaimError] = useState('')
-  const claim = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    setClaiming(true)
-    setClaimError('')
+  const [joining, setJoining] = useState(false)
+  const [joinError, setJoinError] = useState('')
+  const retry = async () => {
+    setJoining(true)
+    setJoinError('')
     try {
-      await onClaimFirstAdmin(displayName.trim())
+      await onRetryJoin()
     } catch (error) {
-      setClaimError(error instanceof Error ? error.message : 'The first admin claim was not available.')
+      setJoinError(error instanceof Error ? error.message : 'Could not open the workspace.')
     } finally {
-      setClaiming(false)
+      setJoining(false)
     }
   }
   return (
     <main className="auth-page">
       <section className="auth-card access-card">
         <div className="brand-mark large">Q</div>
-        <p className="eyebrow">QuestForge / access check</p>
-        <h1>Workspace access needed.</h1>
+        <p className="eyebrow">QuestForge / almost there</p>
+        <h1>Opening your workspace…</h1>
         <p className="auth-copy">
-          {message ?? 'Your account is authenticated, but it is not listed as an editor or admin in workspace_members.'}
+          {message ?? 'Your account is signed in. Tap below to finish joining the editor workspace.'}
         </p>
-        <div className="auth-note"><Icon name="lock" /><span>{email ?? 'Authenticated account'} · ask a workspace admin to add your membership.</span></div>
-        <form className="claim-admin-form" onSubmit={claim}>
-          <label><FieldLabel hint="Only succeeds when workspace_members is empty">First admin display name</FieldLabel><input value={displayName} onChange={(event) => setDisplayName(event.target.value)} placeholder="Your name" required /></label>
-          {claimError && <p className="form-error">{claimError}</p>}
-          <button className="button primary wide" disabled={claiming}>{claiming ? 'Checking workspace…' : 'Claim first admin role'}</button>
-        </form>
+        <div className="auth-note"><Icon name="spark" /><span>{email ?? 'Authenticated account'}</span></div>
+        {joinError && <p className="form-error">{joinError}</p>}
+        <button className="button primary wide" disabled={joining} onClick={() => void retry()}>
+          {joining ? 'Joining…' : 'Enter editor'}
+        </button>
         <button className="button subtle wide" onClick={() => void onSignOut()}><Icon name="logout" /> Sign out</button>
       </section>
     </main>
@@ -1304,6 +1320,19 @@ function App() {
     if (!hasSupabaseConfig || !supabase) return
     const client = supabase
     let mounted = true
+
+    const enterWorkspace = async (sessionUser: { id: string; email?: string | null }) => {
+      const displayName = sessionUser.email?.split('@')[0] ?? null
+      const { error: membershipError } = await client.rpc('ensure_workspace_member', {
+        p_display_name: displayName,
+      })
+      if (membershipError) throw membershipError
+      const loaded = await loadEditorData()
+      if (!mounted) return
+      setData(loaded)
+      setLoadError('')
+    }
+
     const initialize = async () => {
       const { data: sessionData } = await client.auth.getSession()
       if (!mounted) return
@@ -1311,11 +1340,7 @@ function App() {
       setUser(sessionUser ? { id: sessionUser.id, email: sessionUser.email } : null)
       if (sessionUser) {
         try {
-          const loaded = await loadEditorData()
-          if (mounted) {
-            setData(loaded)
-            setLoadError('')
-          }
+          await enterWorkspace(sessionUser)
         } catch (error) {
           if (mounted) setLoadError(error instanceof Error ? error.message : 'Unable to load the editor.')
         }
@@ -1327,12 +1352,7 @@ function App() {
       const sessionUser = session?.user
       setUser(sessionUser ? { id: sessionUser.id, email: sessionUser.email } : null)
       if (sessionUser) {
-        void loadEditorData().then((loaded) => {
-          if (mounted) {
-            setData(loaded)
-            setLoadError('')
-          }
-        }).catch((error: unknown) => {
+        void enterWorkspace(sessionUser).catch((error: unknown) => {
           if (mounted) setLoadError(error instanceof Error ? error.message : 'Unable to load the editor.')
         })
       } else {
@@ -1392,18 +1412,27 @@ function App() {
     if (error) throw error
   }
 
+  const signUp = async (email: string, password: string) => {
+    if (!supabase) return
+    const { data: signUpData, error } = await supabase.auth.signUp({ email, password })
+    if (error) throw error
+    if (!signUpData.session) {
+      throw new Error('Check your email to confirm the account, then sign in to start editing.')
+    }
+  }
+
   const signOut = async () => {
     if (supabase) await supabase.auth.signOut()
     setUser(null)
   }
 
-  const claimFirstAdmin = async (displayName: string) => {
-    if (!supabase) return
-    const { data: claimed, error } = await supabase.rpc('claim_first_admin', {
-      p_display_name: displayName || null,
+  const ensureMembership = async () => {
+    if (!supabase || !user) return
+    const displayName = user.email?.split('@')[0] ?? null
+    const { error } = await supabase.rpc('ensure_workspace_member', {
+      p_display_name: displayName,
     })
     if (error) throw error
-    if (!claimed) throw new Error('An admin already exists. Ask that admin to add your account.')
     const loaded = await loadEditorData()
     setData(loaded)
     setLoadError('')
@@ -1835,9 +1864,9 @@ function App() {
 
   const signInRequired = hasSupabaseConfig && !user
   if (!authReady) return <main className="loading-screen"><div className="brand-mark">Q</div><span>Opening your workspace…</span></main>
-  if (signInRequired) return <AuthScreen onSubmit={signIn} />
+  if (signInRequired) return <AuthScreen onSignIn={signIn} onSignUp={signUp} />
   if (!demoMode && user && data.questlines.length === 0) {
-    return <AccessRequired email={user.email} message={loadError || undefined} onSignOut={signOut} onClaimFirstAdmin={claimFirstAdmin} />
+    return <AccessRequired email={user.email} message={loadError || undefined} onSignOut={signOut} onRetryJoin={ensureMembership} />
   }
 
   return (
