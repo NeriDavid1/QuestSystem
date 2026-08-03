@@ -5,6 +5,8 @@
 **Difficulty range:** 1–8  
 **Registry:** `_registry/minigames.yaml`
 
+![Word Matching in-game](../../images/minigames/word_matching.png)
+
 ---
 
 ## What it is

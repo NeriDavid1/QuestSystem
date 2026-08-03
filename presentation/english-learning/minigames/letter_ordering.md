@@ -5,6 +5,8 @@
 **Difficulty range:** 1–6  
 **Registry:** `_registry/minigames.yaml`
 
+![Letter Ordering in-game](../../images/minigames/letter_ordering.png)
+
 ---
 
 ## What it is

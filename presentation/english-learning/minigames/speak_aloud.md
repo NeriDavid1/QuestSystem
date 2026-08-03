@@ -6,6 +6,8 @@
 **Registry:** `_registry/minigames.yaml`  
 **Requires:** Microphone permission
 
+![Speak Aloud in-game](../../images/minigames/speak_aloud.png)
+
 ---
 
 ## What it is

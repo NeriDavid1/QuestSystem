@@ -22,7 +22,8 @@
     "areas_with_image": 15,
     "npcs_with_image": 22,
     "interactables_with_image": 14,
-    "items_with_image": 104
+    "items_with_image": 104,
+    "minigames_with_image": 4
   },
   "areas": [
     {
@@ -1806,6 +1807,7 @@
       "id": "letter_drawing"
     },
     {
+      "image": "images/minigames/letter_ordering.png",
       "name": "Letter Ordering",
       "unity_config": "LetterOrderingQuestConfigSO",
       "unity_content": "LetterOrderingDataSO",
@@ -1835,6 +1837,7 @@
       "id": "letter_ordering"
     },
     {
+      "image": "images/minigames/speak_aloud.png",
       "name": "Speak Aloud",
       "unity_config": "SpeakAloudQuestConfigSO",
       "unity_content": "SpeakAloudDataSO",
@@ -1867,6 +1870,7 @@
       "id": "speak_aloud"
     },
     {
+      "image": "images/minigames/word_matching.png",
       "name": "Word Matching",
       "unity_config": "LineMatchQuestConfigSO",
       "unity_content": "LetterConnectionLevelConfigSO",
@@ -1893,6 +1897,7 @@
       "id": "word_matching"
     },
     {
+      "image": "images/minigames/word_ordering.png",
       "name": "Word Ordering",
       "unity_config": "WordOrderingQuestConfigSO",
       "unity_content": "WordOrderingDataSO",

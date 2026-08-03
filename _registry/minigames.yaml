@@ -6,6 +6,7 @@
 minigames:
 
   letter_ordering:
+    image: images/minigames/letter_ordering.png
     name: "Letter Ordering"
     unity_config: LetterOrderingQuestConfigSO
     unity_content: LetterOrderingDataSO
@@ -24,6 +25,7 @@ minigames:
     typical_stations: [chest, cart, tombstone, exam_table]
 
   word_ordering:
+    image: images/minigames/word_ordering.png
     name: "Word Ordering"
     unity_config: WordOrderingQuestConfigSO
     unity_content: WordOrderingDataSO
@@ -42,6 +44,7 @@ minigames:
     typical_stations: [chest, cart, exam_table]
 
   word_matching:
+    image: images/minigames/word_matching.png
     name: "Word Matching"
     unity_config: LineMatchQuestConfigSO
     unity_content: LetterConnectionLevelConfigSO
@@ -77,6 +80,7 @@ minigames:
     typical_stations: [shop, chest, cart]
 
   speak_aloud:
+    image: images/minigames/speak_aloud.png
     name: "Speak Aloud"
     unity_config: SpeakAloudQuestConfigSO
     unity_content: SpeakAloudDataSO

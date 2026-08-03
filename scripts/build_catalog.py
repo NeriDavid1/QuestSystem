@@ -191,13 +191,8 @@ def serialize_step_types(raw: dict) -> list[dict]:
 
 
 def serialize_minigames(raw: dict) -> list[dict]:
-    games: list[dict] = []
-    for gid, meta in (raw or {}).items():
-        item = normalize_entry(str(gid), meta)
-        # JSON-friendly: ensure lists stay lists
-        games.append(item)
-    games.sort(key=lambda e: str(e.get("id", "")).lower())
-    return games
+    """Same as other galleries: attach preview PNG from images/minigames/<id>.png when present."""
+    return build_entries(raw, "minigames")
 
 
 def merge_items() -> dict:
@@ -255,6 +250,7 @@ def build_payload() -> dict:
             "npcs_with_image": sum(1 for e in npcs if e.get("image")),
             "interactables_with_image": sum(1 for e in interactables if e.get("image")),
             "items_with_image": sum(1 for e in items if e.get("image")),
+            "minigames_with_image": sum(1 for e in minigames if e.get("image")),
         },
         "areas": areas,
         "npcs": npcs,
@@ -281,13 +277,14 @@ def sync_presentation_images() -> int:
 
 
 def main() -> None:
-    for sub in ("areas", "npcs", "interactables", "items"):
+    for sub in ("areas", "npcs", "interactables", "items", "minigames"):
         (IMAGES / sub).mkdir(parents=True, exist_ok=True)
 
     # Sync YAML image fields from disk first so subsequent loads see them
     sync_yaml_images(REGISTRY / "areas.yaml", "areas", "areas")
     sync_yaml_images(REGISTRY / "npcs.yaml", "npcs", "npcs")
     sync_yaml_images(REGISTRY / "interactables.yaml", "interactables", "interactables")
+    sync_yaml_images(REGISTRY / "minigames.yaml", "minigames", "minigames")
     if (REGISTRY / "softkitty_items.yaml").exists():
         sync_yaml_images(REGISTRY / "softkitty_items.yaml", "softkitty_items", "items")
 
@@ -334,7 +331,7 @@ def main() -> None:
     )
     write_gallery_md(
         "Minigames",
-        None,
+        "minigames",
         payload["minigames"],
         REGISTRY / "minigames.md",
         extra_columns=[
@@ -350,7 +347,8 @@ def main() -> None:
         f"npcs {c['npcs']} ({c['npcs_with_image']} img),",
         f"interactables {c['interactables']} ({c['interactables_with_image']} img),",
         f"items {c['items']} ({c.get('items_with_image', 0)} img),",
-        f"minigames {c['minigames']}, steps {c['step_types']}",
+        f"minigames {c['minigames']} ({c.get('minigames_with_image', 0)} img),",
+        f"steps {c['step_types']}",
     )
 
 
