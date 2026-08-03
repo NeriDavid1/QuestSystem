@@ -4972,6 +4972,13 @@
       "target": "long",
       "variant": "word_spelling",
       "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום long (ארוך)",
+        "targetWord": "long",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -4987,6 +4994,13 @@
       "target": "king",
       "variant": "word_spelling",
       "success": "המילה KING (מלך) חוזרת לדף אנשי המלוכה",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום king (מלך)",
+        "targetWord": "king",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5002,6 +5016,19 @@
       "target": "king, queen, knight",
       "variant": "repeat_after_npc",
       "success": "Gem אחד נוסף לתיק; שלושת שמות המלוכה נשמעו נכון",
+      "params": {
+        "prompt": "אמרו אחרי הדמות: king, queen, knight",
+        "targetWords": [
+          "king",
+          "queen",
+          "knight"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5018,6 +5045,12 @@
       "target": "A",
       "variant": "trace_guided",
       "success": "האות A נדלקת על הלוח — עכשיו אפשר לאסוף אותה",
+      "params": {
+        "letter": "A",
+        "strokes": [],
+        "previewImage": "",
+        "clip": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5032,6 +5065,13 @@
       "target": "cat",
       "variant": "word_spelling",
       "success": "CAT נכתב נכון; Oak Log אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום cat (חתול)",
+        "targetWord": "cat",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\blacksmith_will.yaml",
       "source_metadata": {}
     },
@@ -5048,6 +5088,12 @@
       "target": "B",
       "variant": "trace_guided",
       "success": "השלט חוזר ל-<strong>BEE</strong> והדבורים יודעות שוב לזמזם",
+      "params": {
+        "letter": "B",
+        "strokes": [],
+        "previewImage": "",
+        "clip": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5063,6 +5109,13 @@
       "target": "castle",
       "variant": "word_spelling",
       "success": "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום castle (טירה)",
+        "targetWord": "castle",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5078,6 +5131,19 @@
       "target": "castle, tower, gate",
       "variant": "repeat_after_npc",
       "success": "Gem אחד נוסף לתיק; שלושת שמות המקומות נשמעו נכון",
+      "params": {
+        "prompt": "אמרו אחרי הדמות: castle, tower, gate",
+        "targetWords": [
+          "castle",
+          "tower",
+          "gate"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5092,6 +5158,13 @@
       "target": "dog",
       "variant": "word_spelling",
       "success": "DOG נכתב נכון; Herbs אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום dog (כלב)",
+        "targetWord": "dog",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\blacksmith_will.yaml",
       "source_metadata": {}
     },
@@ -5106,6 +5179,17 @@
       "target": "hot",
       "variant": "single_word",
       "success": "HOT נקלט; Herbs אחד נוסף לתיק",
+      "params": {
+        "prompt": "אמרו בקול: hot (חם)",
+        "targetWords": [
+          "hot"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5120,6 +5204,13 @@
       "target": "big",
       "variant": "word_spelling",
       "success": "BIG נכתב נכון; Corn אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום big (גדול)",
+        "targetWord": "big",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5134,6 +5225,17 @@
       "target": "small",
       "variant": "single_word",
       "success": "SMALL נקלט; Corn נוסף לתיק — כעת יש שניים",
+      "params": {
+        "prompt": "אמרו בקול: small (קטן)",
+        "targetWords": [
+          "small"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5150,6 +5252,12 @@
       "target": "C",
       "variant": "trace_guided",
       "success": "האות C חזרה לצורה המקורית",
+      "params": {
+        "letter": "C",
+        "strokes": [],
+        "previewImage": "",
+        "clip": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5165,6 +5273,13 @@
       "target": "crown",
       "variant": "word_spelling",
       "success": "הכתר מקבל בחזרה את הכרטיס CROWN",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום crown (כתר)",
+        "targetWord": "crown",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5180,6 +5295,19 @@
       "target": "crown, throne, treasure",
       "variant": "repeat_after_npc",
       "success": "Power Stone אחד נוסף לתיק; שלושת שמות האוצרות נשמעו נכון",
+      "params": {
+        "prompt": "אמרו אחרי הדמות: crown, throne, treasure",
+        "targetWords": [
+          "crown",
+          "throne",
+          "treasure"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5194,6 +5322,13 @@
       "target": "big",
       "variant": "word_spelling",
       "success": "BIG נכתב נכון — חזרו לוויל לקבל Slash",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום big (גדול)",
+        "targetWord": "big",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\blacksmith_will.yaml",
       "source_metadata": {}
     },
@@ -5210,6 +5345,32 @@
       "target": "dog (אות D)",
       "variant": "letter_to_gap",
       "success": "המילה dog נראית שוב שלמה — הכלב מפסיק להקיא אותיות",
+      "params": {
+        "letters": [
+          {
+            "id": "d",
+            "value": "d"
+          },
+          {
+            "id": "o",
+            "value": "o"
+          },
+          {
+            "id": "g",
+            "value": "g"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5225,6 +5386,13 @@
       "target": "shield",
       "variant": "word_spelling",
       "success": "המגן (shield) חוזר להיות מגן במקום מגש מרק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום shield (מגן)",
+        "targetWord": "shield",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5240,6 +5408,19 @@
       "target": "sword, shield, scroll",
       "variant": "repeat_after_npc",
       "success": "Power Stone אחד נוסף לתיק; שלושת שמות הנשקייה נשמעו נכון",
+      "params": {
+        "prompt": "אמרו אחרי הדמות: sword, shield, scroll",
+        "targetWords": [
+          "sword",
+          "shield",
+          "scroll"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5253,6 +5434,13 @@
       "target": "big",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום big (גדול)",
+        "targetWord": "big",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5266,6 +5454,13 @@
       "target": "cold",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום cold (קר)",
+        "targetWord": "cold",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5279,6 +5474,13 @@
       "target": "fast",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום fast (מהיר)",
+        "targetWord": "fast",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5292,6 +5494,13 @@
       "target": "heavy",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום heavy (כבד)",
+        "targetWord": "heavy",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5305,6 +5514,17 @@
       "target": "high",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "אמרו בקול: high (גבוה)",
+        "targetWords": [
+          "high"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5318,6 +5538,17 @@
       "target": "hot",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "אמרו בקול: hot (חם)",
+        "targetWords": [
+          "hot"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5331,6 +5562,17 @@
       "target": "light",
       "variant": "single_word",
       "success": "Ancient Rune נוסף לתיק — כעת יש שנים־עשר",
+      "params": {
+        "prompt": "אמרו בקול: light (קל)",
+        "targetWords": [
+          "light"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5344,6 +5586,17 @@
       "target": "long",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "אמרו בקול: long (ארוך)",
+        "targetWords": [
+          "long"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5357,6 +5610,13 @@
       "target": "low",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום low (נמוך)",
+        "targetWord": "low",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5370,6 +5630,13 @@
       "target": "short",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום short (קצר)",
+        "targetWord": "short",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5383,6 +5650,17 @@
       "target": "slow",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "אמרו בקול: slow (איטי)",
+        "targetWords": [
+          "slow"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5396,6 +5674,17 @@
       "target": "small",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "params": {
+        "prompt": "אמרו בקול: small (קטן)",
+        "targetWords": [
+          "small"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5409,6 +5698,13 @@
       "target": "low",
       "variant": "word_spelling",
       "success": "Power Stone אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום low (נמוך)",
+        "targetWord": "low",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5422,6 +5718,18 @@
       "target": "The place is low.",
       "variant": "sentence_building",
       "success": "Power Stone אחד נוסף לתיק",
+      "params": {
+        "prompt": "סדרו את המשפט: The place is low",
+        "englishWordsInOrder": [
+          "The",
+          "place",
+          "is",
+          "low"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5435,6 +5743,13 @@
       "target": "high",
       "variant": "word_spelling",
       "success": "Power Stone אחד נוסף לתיק",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום high (גבוה)",
+        "targetWord": "high",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5448,6 +5763,18 @@
       "target": "The building is high.",
       "variant": "sentence_building",
       "success": "Power Stone נוסף לתיק — כעת יש ארבעה",
+      "params": {
+        "prompt": "סדרו את המשפט: The building is high",
+        "englishWordsInOrder": [
+          "The",
+          "building",
+          "is",
+          "high"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5465,6 +5792,13 @@
       "target": "egg",
       "variant": "word_spelling",
       "success": "הביצה רוטטת ונפתחת — בפנים האות E!",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום egg (ביצה)",
+        "targetWord": "egg",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5480,6 +5814,13 @@
       "target": "wizard",
       "variant": "word_spelling",
       "success": "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום wizard (קוסם)",
+        "targetWord": "wizard",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5495,6 +5836,19 @@
       "target": "wizard, cook, guard",
       "variant": "repeat_after_npc",
       "success": "Power Stone אחד נוסף לתיק; שלושת שמות אנשי החצר נשמעו נכון",
+      "params": {
+        "prompt": "אמרו אחרי הדמות: wizard, cook, guard",
+        "targetWords": [
+          "wizard",
+          "cook",
+          "guard"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5511,6 +5865,60 @@
       "target": "short, long, cold, hot",
       "variant": "missing_letter_matching",
       "success": "ארבע המילים הראשונות הושלמו",
+      "params": {
+        "letters": [
+          {
+            "id": "s",
+            "value": "s"
+          },
+          {
+            "id": "l",
+            "value": "l"
+          },
+          {
+            "id": "c",
+            "value": "c"
+          },
+          {
+            "id": "h",
+            "value": "h"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "short",
+            "image": "",
+            "fullWord": "short",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "long",
+            "image": "",
+            "fullWord": "long",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cold",
+            "image": "",
+            "fullWord": "cold",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "hot",
+            "image": "",
+            "fullWord": "hot",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5527,6 +5935,60 @@
       "target": "big, small, fast, slow",
       "variant": "missing_letter_matching",
       "success": "ארבע המילים הבאות הושלמו",
+      "params": {
+        "letters": [
+          {
+            "id": "b",
+            "value": "b"
+          },
+          {
+            "id": "s",
+            "value": "s"
+          },
+          {
+            "id": "f",
+            "value": "f"
+          },
+          {
+            "id": "s",
+            "value": "s"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "big",
+            "image": "",
+            "fullWord": "big",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "small",
+            "image": "",
+            "fullWord": "small",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "fast",
+            "image": "",
+            "fullWord": "fast",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "slow",
+            "image": "",
+            "fullWord": "slow",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5543,6 +6005,60 @@
       "target": "low, high, heavy, light",
       "variant": "missing_letter_matching",
       "success": "כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק",
+      "params": {
+        "letters": [
+          {
+            "id": "l",
+            "value": "l"
+          },
+          {
+            "id": "h",
+            "value": "h"
+          },
+          {
+            "id": "h",
+            "value": "h"
+          },
+          {
+            "id": "l",
+            "value": "l"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "low",
+            "image": "",
+            "fullWord": "low",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "high",
+            "image": "",
+            "fullWord": "high",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "heavy",
+            "image": "",
+            "fullWord": "heavy",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "light",
+            "image": "",
+            "fullWord": "light",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
       "source_metadata": {}
     },
@@ -5559,6 +6075,12 @@
       "target": "F",
       "variant": "trace_guided",
       "success": "הפרפרים נוחתים בשקט — השלטים חוזרים ל-FLY הנכון",
+      "params": {
+        "letter": "F",
+        "strokes": [],
+        "previewImage": "",
+        "clip": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5574,6 +6096,13 @@
       "target": "dragon",
       "variant": "word_spelling",
       "success": "כרטיס DRAGON (דרקון) חוזר ליצור הנכון",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום dragon (דרקון)",
+        "targetWord": "dragon",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5589,6 +6118,19 @@
       "target": "dragon, griffin, goblin",
       "variant": "repeat_after_npc",
       "success": "Ancient Rune אחד נוסף לתיק; שלושת שמות היצורים נשמעו נכון",
+      "params": {
+        "prompt": "אמרו אחרי הדמות: dragon, griffin, goblin",
+        "targetWords": [
+          "dragon",
+          "griffin",
+          "goblin"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5606,6 +6148,48 @@
       "target": "G + gate, cat, dog",
       "variant": "word_to_image",
       "success": "השער הגאון נפתח (בקושי) ואומר תודה",
+      "params": {
+        "letters": [
+          {
+            "id": "g",
+            "value": "g"
+          },
+          {
+            "id": "c",
+            "value": "c"
+          },
+          {
+            "id": "d",
+            "value": "d"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "gate",
+            "image": "",
+            "fullWord": "gate",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cat",
+            "image": "",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5623,6 +6207,13 @@
       "target": "queen, castle, throne, shield, dragon",
       "variant": "word_spelling",
       "success": "חמש המילים חוזרות לעמוד האחרון של הספר",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום את המילים queen, castle, throne, shield, dragon",
+        "targetWord": "queen",
+        "extraDistractorCount": 3,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5640,6 +6231,20 @@
       "target": "knight, castle, shield, dragon",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק; ספר ה־nouns של הממלכה נפתח בשלמותו",
+      "params": {
+        "prompt": "אמרו בקול: knight, castle, shield, dragon",
+        "targetWords": [
+          "knight",
+          "castle",
+          "shield",
+          "dragon"
+        ],
+        "targetPhrase": "",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
       "source_metadata": {}
     },
@@ -5657,6 +6262,13 @@
       "target": "hat",
       "variant": "word_spelling",
       "success": "הכובע חוזר ל-HAT — החתול יורד ממנו",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום hat (כובע)",
+        "targetWord": "hat",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5673,6 +6285,52 @@
       "target": "אוצר מילים A–I",
       "variant": "word_to_image + letter_to_gap",
       "success": "האי מסודר — האותיות חוזרות למקומן",
+      "params": {
+        "letters": [
+          {
+            "id": "c",
+            "value": "c"
+          },
+          {
+            "id": "d",
+            "value": "d"
+          },
+          {
+            "id": "h",
+            "value": "h"
+          },
+          {
+            "id": "i",
+            "value": "i"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "cat",
+            "image": "",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "hat",
+            "image": "",
+            "fullWord": "hat",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5689,6 +6347,13 @@
       "target": "island",
       "variant": "word_spelling",
       "success": "האי שמח — I כבר לא נראית כמו 1",
+      "params": {
+        "prompt": "הוראה על המסך: תרשום island (אי)",
+        "targetWord": "island",
+        "extraDistractorCount": 3,
+        "customDistractors": [],
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5705,6 +6370,12 @@
       "target": "J",
       "variant": "free_draw",
       "success": "האות J נדלקת — נשאר רק לומר אותה בקול",
+      "params": {
+        "letter": "J",
+        "strokes": [],
+        "previewImage": "",
+        "clip": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     },
@@ -5721,6 +6392,17 @@
       "target": "J",
       "variant": "single_letter",
       "success": "מזל טוב! אתם גיבורי המילים — A עד J שלמים!",
+      "params": {
+        "prompt": "אמור באנגלית: J",
+        "targetWords": [
+          "J"
+        ],
+        "targetPhrase": "J",
+        "silenceTimeoutSeconds": 3,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": ""
+      },
       "source_path": "_registry\\minigame_instances\\english_kingdom_maya.yaml",
       "source_metadata": {}
     }
@@ -14422,5 +15104,5 @@
       ]
     }
   ],
-  "source_digest": "f29980cc656b5ccf4274dcf38ecfa0282fc4fb9035d4aec548d3fc947d06c30b"
+  "source_digest": "193954907b8c56982ef4a090542cefd4fda5a793c3d3e3b0cf6188c27eceea2f"
 }

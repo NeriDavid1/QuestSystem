@@ -244,9 +244,68 @@ const catalogSeed: Array<[CatalogEntry['kind'], string, string, string, string |
   ['item', 'gem', 'Gem', 'A small reward for completing a speaking activity.', 'images/items/gem.png'],
   ['item', 'coin', 'Coin', 'A currency reward for mastery quests.', null],
   ['item', 'ancient_rune', 'Ancient Rune', 'A collectible for adjective and noun mastery.', 'images/items/ancient_rune.png'],
-  ['minigame', 'letter_ordering', 'Letter Ordering', 'Arrange letters into a word.', 'images/minigames/letter_ordering.png'],
-  ['minigame', 'word_matching', 'Word Matching', 'Match a word to the missing letter.', 'images/minigames/word_matching.png'],
+  ['minigame', 'letter_ordering', 'Letter Ordering', 'Arrange scrambled letter tiles to spell a target English word.', 'images/minigames/letter_ordering.png'],
+  ['minigame', 'word_ordering', 'Word Ordering', 'Arrange scrambled English word tiles into a complete sentence.', 'images/minigames/word_ordering.png'],
+  ['minigame', 'word_matching', 'Word Matching', 'Match English words/fragments (includes opposite pairing / Line Match).', 'images/minigames/word_matching.png'],
+  ['minigame', 'letter_drawing', 'Letter Drawing', 'Trace or draw an English letter on screen.', null],
+  ['minigame', 'speak_aloud', 'Speak Aloud', 'Say an English word or phrase; speech recognition validates it.', 'images/minigames/speak_aloud.png'],
 ]
+
+// Mirrors _registry/minigames.yaml so demo mode renders the same per-game
+// parameter schema (content_fields) that connected mode reads from the catalog.
+const minigameCatalogMetadata: Record<string, Record<string, unknown>> = {
+  letter_ordering: {
+    unity_config: 'LetterOrderingQuestConfigSO',
+    unity_content: 'LetterOrderingDataSO',
+    category: 'spelling',
+    english_focus: 'Spelling, letter recognition',
+    difficulty_range: [1, 6],
+    content_fields: ['prompt', 'targetWord', 'extraDistractorCount', 'customDistractors', 'wordRevealDatabase'],
+    variants: ['word_spelling'],
+    typical_stations: ['chest', 'cart', 'tombstone', 'exam_table'],
+  },
+  word_ordering: {
+    unity_config: 'WordOrderingQuestConfigSO',
+    unity_content: 'WordOrderingDataSO',
+    category: 'grammar',
+    english_focus: 'Sentence structure, adjective placement',
+    difficulty_range: [2, 10],
+    content_fields: ['prompt', 'englishWordsInOrder', 'preFilledIndices', 'distractorWords', 'wordRevealDatabase'],
+    variants: ['sentence_building'],
+    typical_stations: ['chest', 'cart', 'exam_table'],
+  },
+  word_matching: {
+    unity_config: 'LineMatchQuestConfigSO',
+    unity_content: 'LetterConnectionLevelConfigSO',
+    category: 'vocabulary',
+    english_focus: 'Vocabulary, missing-letter recognition, opposites',
+    difficulty_range: [1, 8],
+    content_fields: ['letters', 'wordTasks'],
+    variants: ['word_to_image', 'letter_to_gap', 'opposite_pairing'],
+    typical_stations: ['chest', 'exam_table'],
+  },
+  letter_drawing: {
+    unity_config: 'DrawingQuestConfigSO',
+    unity_content: 'LetterPathSO',
+    category: 'motor_skills',
+    english_focus: 'Letter formation, stroke order',
+    difficulty_range: [1, 4],
+    content_fields: ['letter', 'strokes', 'previewImage', 'clip'],
+    variants: ['trace_guided', 'free_draw'],
+    typical_stations: ['shop', 'chest', 'cart'],
+  },
+  speak_aloud: {
+    unity_config: 'SpeakAloudQuestConfigSO',
+    unity_content: 'SpeakAloudDataSO',
+    category: 'pronunciation',
+    english_focus: 'Pronunciation, spoken production',
+    difficulty_range: [4, 10],
+    content_fields: ['prompt', 'targetWords', 'targetPhrase', 'silenceTimeoutSeconds', 'allowFuzzyMatch', 'referenceClip', 'wordRevealDatabase'],
+    variants: ['single_word', 'short_phrase'],
+    typical_stations: ['fire_camp', 'cart', 'chest'],
+    requires_microphone: true,
+  },
+}
 
 function createCatalog(): CatalogEntry[] {
   return catalogSeed.map(([kind, external_id, name, description, image_path], index) => ({
@@ -257,7 +316,9 @@ function createCatalog(): CatalogEntry[] {
     description,
     status: 'live_used',
     image_path,
-    metadata: { demo: true },
+    metadata: kind === 'minigame'
+      ? { ...(minigameCatalogMetadata[external_id] ?? {}), demo: true }
+      : { demo: true },
   }))
 }
 
@@ -381,6 +442,23 @@ function createMinigames(steps: QuestStep[]): MinigameInstance[] {
     const minigameId = typeof step.payload.minigame_id === 'string' ? step.payload.minigame_id : 'letter_ordering'
     const spelling = minigameId === 'letter_ordering'
     index += 1
+    const target = spelling ? 'long' : 'המילה המלאה'
+    const params: Record<string, unknown> = spelling
+      ? {
+          prompt: 'סדרו את האותיות בסדר הנכון כדי להשלים את המילה',
+          targetWord: target,
+          extraDistractorCount: 2,
+          customDistractors: [],
+          wordRevealDatabase: '',
+        }
+      : {
+          letters: [
+            { id: 'd', value: 'd' },
+            { id: 'o', value: 'o' },
+            { id: 'g', value: 'g' },
+          ],
+          wordTasks: [{ id: 'task_1', image: '', fullWord: 'dog', missingIndices: [0] }],
+        }
     instances.set(key, {
       id: `demo-minigame-${index}`,
       key,
@@ -391,11 +469,12 @@ function createMinigames(steps: QuestStep[]): MinigameInstance[] {
       tasks: spelling
         ? ['סדרו את האותיות l, o, n, g', 'קראו את המילה שנוצרה']
         : ['מצאו את האות החסרה', 'התאימו את המילה למשמעות שלה'],
-      target: spelling ? 'long' : 'המילה המלאה',
-      variant: minigameId,
+      target,
+      variant: spelling ? 'word_spelling' : 'letter_to_gap',
       success: spelling
         ? 'המילה נכתבה נכון; פרס נוסף לתיק.'
         : 'התאמה מושלמת! המשימה ממשיכה קדימה.',
+      params,
       source_path: `_registry/minigame_instances/${key.split('_')[0]}.yaml`,
       source_metadata: { demo: true },
     })

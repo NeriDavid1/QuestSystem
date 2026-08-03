@@ -1,4 +1,5 @@
 # Per-step minigame briefs — Blacksmith Will (CAT / DOG / BIG)
+# `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).
 
 instances:
   q01_runaway_hammer_s2:
@@ -7,6 +8,12 @@ instances:
     target: "cat"
     variant: "word_spelling"
     success: "CAT נכתב נכון; Oak Log אחד נוסף לתיק"
+    params:
+      prompt: "הוראה על המסך: תרשום cat (חתול)"
+      targetWord: "cat"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q02_snoring_anvil_s2:
     instruction: "סדרו את האותיות של DOG"
@@ -14,6 +21,12 @@ instances:
     target: "dog"
     variant: "word_spelling"
     success: "DOG נכתב נכון; Herbs אחד נוסף לתיק"
+    params:
+      prompt: "הוראה על המסך: תרשום dog (כלב)"
+      targetWord: "dog"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q03_first_real_slash_s2:
     instruction: "סדרו את האותיות של BIG"
@@ -21,3 +34,9 @@ instances:
     target: "big"
     variant: "word_spelling"
     success: "BIG נכתב נכון — חזרו לוויל לקבל Slash"
+    params:
+      prompt: "הוראה על המסך: תרשום big (גדול)"
+      targetWord: "big"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""

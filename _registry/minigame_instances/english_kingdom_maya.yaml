@@ -1,5 +1,9 @@
 # Per-step minigame player briefs — English Kingdom (Maya)
 # Keys: {quest_id}_s{step_index} (0-based step index in quest YAML)
+#
+# `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml
+# -> content_fields): LetterOrderingDataSO / WordOrderingDataSO / SpeakAloudDataSO /
+# LetterConnectionLevelConfigSO / LetterPathSO.
 
 instances:
 
@@ -13,6 +17,11 @@ instances:
     target: "A"
     variant: "trace_guided"
     success: "האות A נדלקת על הלוח — עכשיו אפשר לאסוף אותה"
+    params:
+      letter: "A"
+      strokes: []
+      previewImage: ""
+      clip: ""
 
   q02_bee_bandit_s3:
     instruction: "ציירו את האות B כדי לתקן את השלט BEE"
@@ -24,6 +33,11 @@ instances:
     target: "B"
     variant: "trace_guided"
     success: "השלט חוזר ל-<strong>BEE</strong> והדבורים יודעות שוב לזמזם"
+    params:
+      letter: "B"
+      strokes: []
+      previewImage: ""
+      clip: ""
 
   q03_cat_on_c_s2:
     instruction: "ציירו את האות C מחדש בגן האותיות"
@@ -35,6 +49,11 @@ instances:
     target: "C"
     variant: "trace_guided"
     success: "האות C חזרה לצורה המקורית"
+    params:
+      letter: "C"
+      strokes: []
+      previewImage: ""
+      clip: ""
 
   q04_dog_ate_homework_s2:
     instruction: "מצאו את האות החסרה במילה dog"
@@ -46,6 +65,13 @@ instances:
     target: "dog (אות D)"
     variant: "letter_to_gap"
     success: "המילה dog נראית שוב שלמה — הכלב מפסיק להקיא אותיות"
+    params:
+      letters:
+        - { id: "d", value: "d" }
+        - { id: "o", value: "o" }
+        - { id: "g", value: "g" }
+      wordTasks:
+        - { id: "dog", image: "", fullWord: "dog", missingIndices: [0] }
 
   q05_mystery_egg_s2:
     instruction: "סדרו את האותיות כדי לפתוח את הביצה"
@@ -58,6 +84,12 @@ instances:
     target: "egg"
     variant: "word_spelling"
     success: "הביצה רוטטת ונפתחת — בפנים האות E!"
+    params:
+      prompt: "הוראה על המסך: תרשום egg (ביצה)"
+      targetWord: "egg"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q06_butterfly_chaos_s3:
     instruction: "ציירו את האות F כדי להרגיע את הפרפרים"
@@ -69,6 +101,11 @@ instances:
     target: "F"
     variant: "trace_guided"
     success: "הפרפרים נוחתים בשקט — השלטים חוזרים ל-FLY הנכון"
+    params:
+      letter: "F"
+      strokes: []
+      previewImage: ""
+      clip: ""
 
   q07_genius_gate_s2:
     instruction: "התאימו מילים קלות לפתיחת שער הגאון"
@@ -81,6 +118,15 @@ instances:
     target: "G + gate, cat, dog"
     variant: "word_to_image"
     success: "השער הגאון נפתח (בקושי) ואומר תודה"
+    params:
+      letters:
+        - { id: "g", value: "g" }
+        - { id: "c", value: "c" }
+        - { id: "d", value: "d" }
+      wordTasks:
+        - { id: "gate", image: "", fullWord: "gate", missingIndices: [0] }
+        - { id: "cat", image: "", fullWord: "cat", missingIndices: [0] }
+        - { id: "dog", image: "", fullWord: "dog", missingIndices: [0] }
 
   q08_hat_hunt_s2:
     instruction: "סדרו את האותיות של המילה HAT"
@@ -93,6 +139,12 @@ instances:
     target: "hat"
     variant: "word_spelling"
     success: "הכובע חוזר ל-HAT — החתול יורד ממנו"
+    params:
+      prompt: "הוראה על המסך: תרשום hat (כובע)"
+      targetWord: "hat"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q09_letter_island_s2:
     instruction: "התאימו אותיות ומילים מעורבבות על האי"
@@ -104,6 +156,16 @@ instances:
     target: "אוצר מילים A–I"
     variant: "word_to_image + letter_to_gap"
     success: "האי מסודר — האותיות חוזרות למקומן"
+    params:
+      letters:
+        - { id: "c", value: "c" }
+        - { id: "d", value: "d" }
+        - { id: "h", value: "h" }
+        - { id: "i", value: "i" }
+      wordTasks:
+        - { id: "cat", image: "", fullWord: "cat", missingIndices: [0] }
+        - { id: "dog", image: "", fullWord: "dog", missingIndices: [0] }
+        - { id: "hat", image: "", fullWord: "hat", missingIndices: [0] }
 
   q09_letter_island_s3:
     instruction: "איישו את האות I במילה island"
@@ -115,6 +177,12 @@ instances:
     target: "island"
     variant: "word_spelling"
     success: "האי שמח — I כבר לא נראית כמו 1"
+    params:
+      prompt: "הוראה על המסך: תרשום island (אי)"
+      targetWord: "island"
+      extraDistractorCount: 3
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q10_word_hero_s2:
     instruction: "ציירו את האות J — האות האחרונה"
@@ -126,6 +194,11 @@ instances:
     target: "J"
     variant: "free_draw"
     success: "האות J נדלקת — נשאר רק לומר אותה בקול"
+    params:
+      letter: "J"
+      strokes: []
+      previewImage: ""
+      clip: ""
 
   q10_word_hero_s3:
     instruction: "אמרו את האות J בקול רם"
@@ -137,3 +210,11 @@ instances:
     target: "J"
     variant: "single_letter"
     success: "מזל טוב! אתם גיבורי המילים — A עד J שלמים!"
+    params:
+      prompt: "אמור באנגלית: J"
+      targetWords: ["J"]
+      targetPhrase: "J"
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""

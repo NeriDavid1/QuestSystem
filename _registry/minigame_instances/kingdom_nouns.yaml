@@ -1,6 +1,7 @@
 # Per-step minigame briefs — The Kingdom Book of Nouns.
 # Keys use {quest_id}_s{zero-based step index}.
 # Instructions/tasks use Hebrew meanings; letters and spoken targets stay English.
+# `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).
 
 instances:
   q01_roles_without_names_s2:
@@ -12,6 +13,12 @@ instances:
     target: "king"
     variant: "word_spelling"
     success: "המילה KING (מלך) חוזרת לדף אנשי המלוכה"
+    params:
+      prompt: "הוראה על המסך: תרשום king (מלך)"
+      targetWord: "king"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q01_roles_without_names_s3:
     instruction: "אמרו באנגלית: מלך, מלכה ואביר"
@@ -22,6 +29,14 @@ instances:
     target: "king, queen, knight"
     variant: "repeat_after_npc"
     success: "Gem אחד נוסף לתיק; שלושת שמות המלוכה נשמעו נכון"
+    params:
+      prompt: "אמרו אחרי הדמות: king, queen, knight"
+      targetWords: ["king", "queen", "knight"]
+      targetPhrase: ""
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""
 
   q02_castle_on_the_map_s2:
     instruction: "סדרו את האותיות כדי לשחזר את המילה טירה באנגלית"
@@ -32,6 +47,12 @@ instances:
     target: "castle"
     variant: "word_spelling"
     success: "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה"
+    params:
+      prompt: "הוראה על המסך: תרשום castle (טירה)"
+      targetWord: "castle"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q02_castle_on_the_map_s3:
     instruction: "אמרו באנגלית: טירה, מגדל ושער"
@@ -42,6 +63,14 @@ instances:
     target: "castle, tower, gate"
     variant: "repeat_after_npc"
     success: "Gem אחד נוסף לתיק; שלושת שמות המקומות נשמעו נכון"
+    params:
+      prompt: "אמרו אחרי הדמות: castle, tower, gate"
+      targetWords: ["castle", "tower", "gate"]
+      targetPhrase: ""
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""
 
   q03_crown_soup_s2:
     instruction: "סדרו את האותיות כדי לשחזר את המילה כתר באנגלית"
@@ -52,6 +81,12 @@ instances:
     target: "crown"
     variant: "word_spelling"
     success: "הכתר מקבל בחזרה את הכרטיס CROWN"
+    params:
+      prompt: "הוראה על המסך: תרשום crown (כתר)"
+      targetWord: "crown"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q03_crown_soup_s3:
     instruction: "אמרו באנגלית: כתר, כיסא־מלכות ואוצר"
@@ -62,6 +97,14 @@ instances:
     target: "crown, throne, treasure"
     variant: "repeat_after_npc"
     success: "Power Stone אחד נוסף לתיק; שלושת שמות האוצרות נשמעו נכון"
+    params:
+      prompt: "אמרו אחרי הדמות: crown, throne, treasure"
+      targetWords: ["crown", "throne", "treasure"]
+      targetPhrase: ""
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""
 
   q04_soup_shield_s2:
     instruction: "סדרו את האותיות כדי לשחזר את המילה מגן באנגלית"
@@ -72,6 +115,12 @@ instances:
     target: "shield"
     variant: "word_spelling"
     success: "המגן (shield) חוזר להיות מגן במקום מגש מרק"
+    params:
+      prompt: "הוראה על המסך: תרשום shield (מגן)"
+      targetWord: "shield"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q04_soup_shield_s3:
     instruction: "אמרו באנגלית: חרב, מגן ומגילה"
@@ -82,6 +131,14 @@ instances:
     target: "sword, shield, scroll"
     variant: "repeat_after_npc"
     success: "Power Stone אחד נוסף לתיק; שלושת שמות הנשקייה נשמעו נכון"
+    params:
+      prompt: "אמרו אחרי הדמות: sword, shield, scroll"
+      targetWords: ["sword", "shield", "scroll"]
+      targetPhrase: ""
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""
 
   q05_wizard_for_sale_s2:
     instruction: "סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית"
@@ -92,6 +149,12 @@ instances:
     target: "wizard"
     variant: "word_spelling"
     success: "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון"
+    params:
+      prompt: "הוראה על המסך: תרשום wizard (קוסם)"
+      targetWord: "wizard"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q05_wizard_for_sale_s3:
     instruction: "אמרו באנגלית: קוסם, טבח ושומר"
@@ -102,6 +165,14 @@ instances:
     target: "wizard, cook, guard"
     variant: "repeat_after_npc"
     success: "Power Stone אחד נוסף לתיק; שלושת שמות אנשי החצר נשמעו נכון"
+    params:
+      prompt: "אמרו אחרי הדמות: wizard, cook, guard"
+      targetWords: ["wizard", "cook", "guard"]
+      targetPhrase: ""
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""
 
   q06_dragon_identity_s2:
     instruction: "סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית"
@@ -112,6 +183,12 @@ instances:
     target: "dragon"
     variant: "word_spelling"
     success: "כרטיס DRAGON (דרקון) חוזר ליצור הנכון"
+    params:
+      prompt: "הוראה על המסך: תרשום dragon (דרקון)"
+      targetWord: "dragon"
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q06_dragon_identity_s3:
     instruction: "אמרו באנגלית: דרקון, גריפין וגובלין"
@@ -122,6 +199,14 @@ instances:
     target: "dragon, griffin, goblin"
     variant: "repeat_after_npc"
     success: "Ancient Rune אחד נוסף לתיק; שלושת שמות היצורים נשמעו נכון"
+    params:
+      prompt: "אמרו אחרי הדמות: dragon, griffin, goblin"
+      targetWords: ["dragon", "griffin", "goblin"]
+      targetPhrase: ""
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""
 
   q07_royal_noun_trial_s2:
     instruction: "שחזרו באנגלית חמש מילים מוכרות מן הספר"
@@ -134,6 +219,12 @@ instances:
     target: "queen, castle, throne, shield, dragon"
     variant: "word_spelling"
     success: "חמש המילים חוזרות לעמוד האחרון של הספר"
+    params:
+      prompt: "הוראה על המסך: תרשום את המילים queen, castle, throne, shield, dragon"
+      targetWord: "queen"
+      extraDistractorCount: 3
+      customDistractors: []
+      wordRevealDatabase: ""
 
   q07_royal_noun_trial_s3:
     instruction: "אמרו באנגלית מילה אחת מכל קבוצה"
@@ -146,3 +237,11 @@ instances:
     target: "knight, castle, shield, dragon"
     variant: "single_word"
     success: "Ancient Rune אחד נוסף לתיק; ספר ה־nouns של הממלכה נפתח בשלמותו"
+    params:
+      prompt: "אמרו בקול: knight, castle, shield, dragon"
+      targetWords: ["knight", "castle", "shield", "dragon"]
+      targetPhrase: ""
+      silenceTimeoutSeconds: 3
+      allowFuzzyMatch: true
+      referenceClip: ""
+      wordRevealDatabase: ""

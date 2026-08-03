@@ -120,6 +120,12 @@ export interface MinigameInstance {
   target: string | null
   variant: string | null
   success: string | null
+  /**
+   * Per-game content parameters mirroring the Unity config data SOs
+   * (e.g. LetterOrderingDataSO fields: prompt, targetWord, extraDistractorCount…).
+   * The catalog minigame entry's `content_fields` metadata lists which keys apply.
+   */
+  params: Record<string, unknown>
   source_path: string | null
   source_metadata: Record<string, unknown>
 }

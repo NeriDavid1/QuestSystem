@@ -275,6 +275,7 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
           target: minigame.target,
           variant: minigame.variant,
           success: minigame.success,
+          params: minigame.params,
           source_path: minigame.source_path,
           source_metadata: minigame.source_metadata,
           updated_by: userId,

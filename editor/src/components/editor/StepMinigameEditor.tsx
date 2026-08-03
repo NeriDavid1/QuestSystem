@@ -1,9 +1,15 @@
 import { useT } from '../../i18n'
 import { useEditorStore } from '../../state/EditorStore'
+import {
+  getMinigameCatalogEntry,
+  getMinigameParamsForEntry,
+  getMinigameVariantsForEntry,
+} from '../../lib/minigameParams'
 import { getStepMinigame, stepHasMinigameField } from '../../lib/editorData'
 import type { QuestStep } from '../../lib/types'
 import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
+import { MinigameParamsEditor } from './MinigameParamsEditor'
 
 function toTaskList(tasks: unknown): string[] {
   if (!Array.isArray(tasks)) return []
@@ -14,6 +20,9 @@ export function StepMinigameEditor({ step }: { step: QuestStep }) {
   const t = useT()
   const { data, updateStep, updateMinigame, createMinigameForStep } = useEditorStore()
   const minigame = getStepMinigame(data, step)
+  const catalogEntry = getMinigameCatalogEntry(data, step)
+  const paramFields = getMinigameParamsForEntry(catalogEntry)
+  const gameVariants = getMinigameVariantsForEntry(catalogEntry)
   const instanceKey = typeof step.payload.instance_id === 'string' ? step.payload.instance_id : ''
   const tasks = minigame ? toTaskList(minigame.tasks) : []
   const attachInstance = (key: string) => updateStep(step.id, { payload: { ...step.payload, instance_id: key } })
@@ -21,6 +30,9 @@ export function StepMinigameEditor({ step }: { step: QuestStep }) {
     if (minigame) updateMinigame(minigame.id, patch)
   }
   if (!stepHasMinigameField(data, step)) return null
+
+  const currentVariant = minigame?.variant ?? ''
+  const variantOptions = gameVariants.includes(currentVariant) ? gameVariants : [...gameVariants, currentVariant].filter(Boolean)
 
   return (
     <div className="step-minigame-editor">
@@ -58,7 +70,16 @@ export function StepMinigameEditor({ step }: { step: QuestStep }) {
               </label>
               <label>
                 <FieldLabel>{t('minigameVariant')}</FieldLabel>
-                <input dir="ltr" value={minigame.variant ?? ''} placeholder="word_spelling" onChange={(event) => patchMinigame({ variant: event.target.value || null })} />
+                {variantOptions.length > 0 ? (
+                  <select dir="ltr" value={currentVariant} onChange={(event) => patchMinigame({ variant: event.target.value || null })}>
+                    <option value="">—</option>
+                    {variantOptions.map((variant) => (
+                      <option key={variant} value={variant}>{variant}</option>
+                    ))}
+                  </select>
+                ) : (
+                  <input dir="ltr" value={currentVariant} placeholder="word_spelling" onChange={(event) => patchMinigame({ variant: event.target.value || null })} />
+                )}
               </label>
             </div>
             <label>
@@ -105,6 +126,18 @@ export function StepMinigameEditor({ step }: { step: QuestStep }) {
               <button type="button" className="button subtle compact" onClick={() => patchMinigame({ tasks: [...tasks, ''] })}>
                 <Icon name="plus" /> {t('addTask')}
               </button>
+            </div>
+
+            <div className="minigame-game-params">
+              <div className="minigame-params-heading">
+                <strong>{t('minigameParamsTitle')}</strong>
+                <small>{catalogEntry ? catalogEntry.name : t('minigameParamsUnknownGame')}</small>
+              </div>
+              <MinigameParamsEditor
+                minigame={minigame}
+                fields={paramFields}
+                onChange={(params) => patchMinigame({ params })}
+              />
             </div>
           </div>
         ) : (

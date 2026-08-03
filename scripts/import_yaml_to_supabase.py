@@ -267,6 +267,9 @@ def dialogue_bundle(conflicts: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return dialogues
 
 
+GENERIC_MINI_KEY_FIELDS = {"instruction", "tasks", "target", "variant", "success", "params"}
+
+
 def minigame_bundle() -> list[dict[str, Any]]:
     instances: list[dict[str, Any]] = []
     instance_dir = REGISTRY / "minigame_instances"
@@ -280,6 +283,9 @@ def minigame_bundle() -> list[dict[str, Any]]:
                 "variant": raw_instance.get("variant"),
                 "success": raw_instance.get("success"),
             }
+            params = normalize(raw_instance.get("params") or {})
+            if not isinstance(params, dict):
+                params = {}
             instances.append(
                 {
                     "key": str(key),
@@ -287,13 +293,13 @@ def minigame_bundle() -> list[dict[str, Any]]:
                     if HEBREW_RE.search(canonical_json(content_values))
                     else "en",
                     **content_values,
+                    "params": params,
                     "source_path": str(path.relative_to(ROOT)),
                     "source_metadata": normalize(
                         {
                             key_name: value
                             for key_name, value in raw_instance.items()
-                            if key_name
-                            not in {"instruction", "tasks", "target", "variant", "success"}
+                            if key_name not in GENERIC_MINI_KEY_FIELDS
                         }
                     ),
                 }
@@ -787,14 +793,14 @@ def insert_minigames_sql(bundle: dict[str, Any], source_path: str | None = None)
     ]
     return (
         "insert into public.minigame_instances "
-        "(key, locale, instruction, tasks, target, variant, success, source_path, source_metadata) "
-        f"select key, locale, instruction, tasks, target, variant, success, source_path, source_metadata "
+        "(key, locale, instruction, tasks, target, variant, success, params, source_path, source_metadata) "
+        f"select key, locale, instruction, tasks, target, variant, success, params, source_path, source_metadata "
         f"from jsonb_to_recordset({dollar_json(instances)}) as entries("
         "key text, locale text, instruction text, tasks jsonb, target text, variant text, "
-        "success text, source_path text, source_metadata jsonb) "
+        "success text, params jsonb, source_path text, source_metadata jsonb) "
         "on conflict (key, locale) do update set instruction = excluded.instruction, "
         "tasks = excluded.tasks, target = excluded.target, variant = excluded.variant, "
-        "success = excluded.success, source_path = excluded.source_path, "
+        "success = excluded.success, params = excluded.params, source_path = excluded.source_path, "
         "source_metadata = excluded.source_metadata, updated_at = now();\n"
     )
 

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { createDemoData } from './demoData'
 import { getCatalogKindForRef, getQuestSteps, getQuestlineQuests, getStepType } from './editorData'
+import { getMinigameParamFieldNames, MINIGAME_PARAM_FIELDS } from './minigameParams'
 
 describe('demoData integrity', () => {
   const data = createDemoData()
@@ -128,6 +129,38 @@ describe('demoData integrity', () => {
     for (const minigame of data.minigames) {
       expect(Array.isArray(minigame.tasks)).toBe(true)
       expect(minigame.tasks.every((task) => typeof task === 'string'), `minigame ${minigame.key}`).toBe(true)
+    }
+  })
+
+  it('keeps a params record on every minigame with known field keys', () => {
+    for (const minigame of data.minigames) {
+      expect(minigame.params, `minigame ${minigame.key}`).toBeDefined()
+      for (const key of Object.keys(minigame.params)) {
+        expect(MINIGAME_PARAM_FIELDS[key], `minigame ${minigame.key} param ${key}`).toBeDefined()
+      }
+    }
+  })
+
+  it('uses only gameplay variants declared on the catalog minigame entry', () => {
+    const minigameById = new Map(data.minigames.map((minigame) => [minigame.key, minigame]))
+    const catalogByExternalId = new Map(
+      data.catalog
+        .filter((entry) => entry.kind === 'minigame')
+        .map((entry) => [entry.external_id, entry]),
+    )
+    for (const minigame of data.minigames) {
+      expect(minigame.variant, `minigame ${minigame.key}`).toBeTruthy()
+    }
+    for (const step of data.steps.filter((item) => item.step_type === 'play_minigame')) {
+      const instance = minigameById.get(String(step.payload.instance_id))
+      const catalogEntry = catalogByExternalId.get(String(step.payload.minigame_id))
+      expect(instance, `step ${step.key}`).toBeDefined()
+      expect(catalogEntry, `step ${step.key} minigame ${step.payload.minigame_id}`).toBeDefined()
+      if (!instance || !catalogEntry) continue
+      const declared = getMinigameParamFieldNames(catalogEntry)
+      for (const key of Object.keys(instance.params)) {
+        expect(declared, `minigame ${instance.key} param ${key}`).toContain(key)
+      }
     }
   })
 

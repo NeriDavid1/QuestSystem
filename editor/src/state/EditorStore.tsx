@@ -26,6 +26,11 @@ import { emptyEditorData } from '../lib/types'
 import { hasSupabaseConfig, loadEditorData, supabase } from '../lib/supabase'
 import { createDemoData } from '../lib/demoData'
 import {
+  defaultParamsForEntry,
+  getMinigameCatalogEntry,
+  getMinigameVariantsForEntry,
+} from '../lib/minigameParams'
+import {
   DEFAULT_DIALOGUE_LOCALE,
   getQuestSteps,
   getQuestlineQuests,
@@ -550,12 +555,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     setData((current) => {
       const step = current.steps.find((item) => item.id === stepId)
       if (!step) return current
-      const baseMinigame =
-        typeof step.payload.minigame_id === 'string' && step.payload.minigame_id
-          ? current.catalog.find(
-            (entry) => entry.kind === 'minigame' && entry.external_id === step.payload.minigame_id,
-          )
-          : undefined
+      const baseMinigame = getMinigameCatalogEntry(current, step)
+      const variants = getMinigameVariantsForEntry(baseMinigame)
       const instance: MinigameInstance = {
         id: makeLocalId('minigame'),
         key: uniqueMinigameKey(current, `${selectedQuest?.key ?? 'quest'}_minigame`),
@@ -563,8 +564,9 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         instruction: baseMinigame ? t('minigameDefaultInstruction', { name: baseMinigame.name }) : '',
         tasks: [],
         target: null,
-        variant: baseMinigame?.external_id ?? null,
+        variant: variants[0] ?? baseMinigame?.external_id ?? null,
         success: null,
+        params: defaultParamsForEntry(baseMinigame),
         source_path: null,
         source_metadata: { local_draft: true },
       }
