@@ -27,5 +27,3 @@ steps:
     item_id: oak_log
     amount: 1
     dialogue_id: will_runaway_hammer_done
-    reward_item_id: oak_log
-    reward_amount: 1

@@ -38,5 +38,3 @@ steps:
     item_id: power_stone
     amount: 1
     dialogue_id: nouns_professor_treasury_restored
-    reward_item_id: power_stone
-    reward_amount: 1

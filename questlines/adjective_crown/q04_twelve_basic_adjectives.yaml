@@ -152,5 +152,3 @@ steps:
     item_id: ancient_rune
     amount: 12
     dialogue_id: adjective_knight_runes_delivered
-    reward_item_id: ancient_rune
-    reward_amount: 12

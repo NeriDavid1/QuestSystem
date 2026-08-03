@@ -27,5 +27,3 @@ steps:
     item_id: herbs
     amount: 1
     dialogue_id: will_snoring_anvil_done
-    reward_item_id: herbs
-    reward_amount: 1

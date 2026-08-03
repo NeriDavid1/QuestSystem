@@ -38,5 +38,3 @@ steps:
     item_id: ancient_rune
     amount: 1
     dialogue_id: nouns_cannoneer_names_restored
-    reward_item_id: ancient_rune
-    reward_amount: 1

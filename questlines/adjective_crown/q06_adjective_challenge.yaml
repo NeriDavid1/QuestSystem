@@ -45,5 +45,3 @@ steps:
     item_id: gem
     amount: 1
     dialogue_id: adjective_knight_gem_delivered
-    reward_item_id: gem
-    reward_amount: 1

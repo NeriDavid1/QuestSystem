@@ -6495,35 +6495,20 @@
               ]
             },
             {
-              "key": "q01_bridge_too_short_deliver_item_f3822b04_1",
+              "key": "q01_bridge_too_short_deliver_item_744bdd62_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "oak_log",
                 "amount": 1,
-                "dialogue_id": "adjective_knight_oak_log_delivered",
-                "reward_item_id": "oak_log",
-                "reward_amount": 1
+                "dialogue_id": "adjective_knight_oak_log_delivered"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q01_bridge_too_short_deliver_item_f3822b04_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "oak_log",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -6626,35 +6611,20 @@
               ]
             },
             {
-              "key": "q02_whispering_stone_deliver_item_a192d91a_1",
+              "key": "q02_whispering_stone_deliver_item_559bd948_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "herbs",
                 "amount": 1,
-                "dialogue_id": "adjective_water_man_herbs_delivered",
-                "reward_item_id": "herbs",
-                "reward_amount": 1
+                "dialogue_id": "adjective_water_man_herbs_delivered"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q02_whispering_stone_deliver_item_a192d91a_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "herbs",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -6804,35 +6774,20 @@
               ]
             },
             {
-              "key": "q03_big_and_small_words_deliver_item_bac54875_1",
+              "key": "q03_big_and_small_words_deliver_item_f862910a_1",
               "position": 5,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "corn",
                 "amount": 2,
-                "dialogue_id": "adjective_grandmother_corn_delivered",
-                "reward_item_id": "corn",
-                "reward_amount": 2
+                "dialogue_id": "adjective_grandmother_corn_delivered"
               },
               "source_metadata": {
                 "source_position": 5,
                 "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q03_big_and_small_words_deliver_item_bac54875_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "corn",
-                  "amount": 2,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -7442,35 +7397,20 @@
               ]
             },
             {
-              "key": "q04_twelve_basic_adjectives_deliver_item_8fffbf88_1",
+              "key": "q04_twelve_basic_adjectives_deliver_item_03479566_1",
               "position": 25,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "ancient_rune",
                 "amount": 12,
-                "dialogue_id": "adjective_knight_runes_delivered",
-                "reward_item_id": "ancient_rune",
-                "reward_amount": 12
+                "dialogue_id": "adjective_knight_runes_delivered"
               },
               "source_metadata": {
                 "source_position": 25,
                 "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_deliver_item_8fffbf88_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "ancient_rune",
-                  "amount": 12,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -7682,35 +7622,20 @@
               ]
             },
             {
-              "key": "q05_from_low_to_high_deliver_item_8382799f_1",
+              "key": "q05_from_low_to_high_deliver_item_36ce9b4b_1",
               "position": 7,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "power_stone",
                 "amount": 4,
-                "dialogue_id": "adjective_knight_power_stones_delivered",
-                "reward_item_id": "power_stone",
-                "reward_amount": 4
+                "dialogue_id": "adjective_knight_power_stones_delivered"
               },
               "source_metadata": {
                 "source_position": 7,
                 "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q05_from_low_to_high_deliver_item_8382799f_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 4,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -7850,35 +7775,20 @@
               ]
             },
             {
-              "key": "q06_adjective_challenge_deliver_item_c73e5f4b_1",
+              "key": "q06_adjective_challenge_deliver_item_76516f4b_1",
               "position": 5,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "gem",
                 "amount": 1,
-                "dialogue_id": "adjective_knight_gem_delivered",
-                "reward_item_id": "gem",
-                "reward_amount": 1
+                "dialogue_id": "adjective_knight_gem_delivered"
               },
               "source_metadata": {
                 "source_position": 5,
                 "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q06_adjective_challenge_deliver_item_c73e5f4b_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "gem",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -8008,35 +7918,20 @@
               ]
             },
             {
-              "key": "q01_runaway_hammer_deliver_item_8ad4cdf5_1",
+              "key": "q01_runaway_hammer_deliver_item_a2e00a7f_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Blacksmith",
                 "item_id": "oak_log",
                 "amount": 1,
-                "dialogue_id": "will_runaway_hammer_done",
-                "reward_item_id": "oak_log",
-                "reward_amount": 1
+                "dialogue_id": "will_runaway_hammer_done"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q01_runaway_hammer_deliver_item_8ad4cdf5_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "oak_log",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -8139,35 +8034,20 @@
               ]
             },
             {
-              "key": "q02_snoring_anvil_deliver_item_3819e51d_1",
+              "key": "q02_snoring_anvil_deliver_item_bad563ca_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Blacksmith",
                 "item_id": "herbs",
                 "amount": 1,
-                "dialogue_id": "will_snoring_anvil_done",
-                "reward_item_id": "herbs",
-                "reward_amount": 1
+                "dialogue_id": "will_snoring_anvil_done"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q02_snoring_anvil_deliver_item_3819e51d_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "herbs",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -9743,35 +9623,20 @@
               ]
             },
             {
-              "key": "q01_roles_without_names_deliver_item_65aac09b_1",
+              "key": "q01_roles_without_names_deliver_item_cb3f8029_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "gem",
                 "amount": 1,
-                "dialogue_id": "nouns_maya_roles_restored",
-                "reward_item_id": "gem",
-                "reward_amount": 1
+                "dialogue_id": "nouns_maya_roles_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q01_roles_without_names_deliver_item_65aac09b_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "gem",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -9893,35 +9758,20 @@
               ]
             },
             {
-              "key": "q02_castle_on_the_map_deliver_item_eade7297_1",
+              "key": "q02_castle_on_the_map_deliver_item_6d40ea5f_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "City Gaurd Info",
                 "item_id": "gem",
                 "amount": 1,
-                "dialogue_id": "nouns_fenn_places_restored",
-                "reward_item_id": "gem",
-                "reward_amount": 1
+                "dialogue_id": "nouns_fenn_places_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q02_castle_on_the_map_deliver_item_eade7297_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "gem",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -10043,35 +9893,20 @@
               ]
             },
             {
-              "key": "q03_crown_soup_deliver_item_02ad7386_1",
+              "key": "q03_crown_soup_deliver_item_70246b08_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Professor Crazy",
                 "item_id": "power_stone",
                 "amount": 1,
-                "dialogue_id": "nouns_professor_treasury_restored",
-                "reward_item_id": "power_stone",
-                "reward_amount": 1
+                "dialogue_id": "nouns_professor_treasury_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q03_crown_soup_deliver_item_02ad7386_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -10193,35 +10028,20 @@
               ]
             },
             {
-              "key": "q04_soup_shield_deliver_item_2241f6d7_1",
+              "key": "q04_soup_shield_deliver_item_9c8e6580_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Blacksmith",
                 "item_id": "power_stone",
                 "amount": 1,
-                "dialogue_id": "nouns_blacksmith_equipment_restored",
-                "reward_item_id": "power_stone",
-                "reward_amount": 1
+                "dialogue_id": "nouns_blacksmith_equipment_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q04_soup_shield_deliver_item_2241f6d7_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -10343,35 +10163,20 @@
               ]
             },
             {
-              "key": "q05_wizard_for_sale_deliver_item_e2e3f01a_1",
+              "key": "q05_wizard_for_sale_deliver_item_7befed46_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Old Woman",
                 "item_id": "power_stone",
                 "amount": 1,
-                "dialogue_id": "nouns_old_woman_roles_restored",
-                "reward_item_id": "power_stone",
-                "reward_amount": 1
+                "dialogue_id": "nouns_old_woman_roles_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q05_wizard_for_sale_deliver_item_e2e3f01a_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -10493,35 +10298,20 @@
               ]
             },
             {
-              "key": "q06_dragon_identity_deliver_item_b16c8c0b_1",
+              "key": "q06_dragon_identity_deliver_item_4c0c80a7_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Cannoneer",
                 "item_id": "ancient_rune",
                 "amount": 1,
-                "dialogue_id": "nouns_cannoneer_names_restored",
-                "reward_item_id": "ancient_rune",
-                "reward_amount": 1
+                "dialogue_id": "nouns_cannoneer_names_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q06_dragon_identity_deliver_item_b16c8c0b_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "ancient_rune",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -10643,35 +10433,20 @@
               ]
             },
             {
-              "key": "q07_royal_noun_trial_deliver_item_4d2b6fcb_1",
+              "key": "q07_royal_noun_trial_deliver_item_fe407c11_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "ancient_rune",
                 "amount": 1,
-                "dialogue_id": "nouns_maya_book_restored",
-                "reward_item_id": "ancient_rune",
-                "reward_amount": 1
+                "dialogue_id": "nouns_maya_book_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q07_royal_noun_trial_deliver_item_4d2b6fcb_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "ancient_rune",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -10717,102 +10492,6 @@
   ],
   "conflicts": [
     {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml",
-      "context": {
-        "questline": "adjective_crown",
-        "quest_id": "q01_bridge_too_short",
-        "step_type": "deliver_item",
-        "step_key": "q01_bridge_too_short_deliver_item_f3822b04_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\adjective_crown\\q02_whispering_stone.yaml",
-      "context": {
-        "questline": "adjective_crown",
-        "quest_id": "q02_whispering_stone",
-        "step_type": "deliver_item",
-        "step_key": "q02_whispering_stone_deliver_item_a192d91a_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml",
-      "context": {
-        "questline": "adjective_crown",
-        "quest_id": "q03_big_and_small_words",
-        "step_type": "deliver_item",
-        "step_key": "q03_big_and_small_words_deliver_item_bac54875_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml",
-      "context": {
-        "questline": "adjective_crown",
-        "quest_id": "q04_twelve_basic_adjectives",
-        "step_type": "deliver_item",
-        "step_key": "q04_twelve_basic_adjectives_deliver_item_8fffbf88_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml",
-      "context": {
-        "questline": "adjective_crown",
-        "quest_id": "q05_from_low_to_high",
-        "step_type": "deliver_item",
-        "step_key": "q05_from_low_to_high_deliver_item_8382799f_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml",
-      "context": {
-        "questline": "adjective_crown",
-        "quest_id": "q06_adjective_challenge",
-        "step_type": "deliver_item",
-        "step_key": "q06_adjective_challenge_deliver_item_c73e5f4b_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml",
-      "context": {
-        "questline": "blacksmith_will",
-        "quest_id": "q01_runaway_hammer",
-        "step_type": "deliver_item",
-        "step_key": "q01_runaway_hammer_deliver_item_8ad4cdf5_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml",
-      "context": {
-        "questline": "blacksmith_will",
-        "quest_id": "q02_snoring_anvil",
-        "step_type": "deliver_item",
-        "step_key": "q02_snoring_anvil_deliver_item_3819e51d_1"
-      }
-    },
-    {
       "kind": "minigame_key_mismatch",
       "severity": "warning",
       "message": "Minigame brief exists under a different legacy step key.",
@@ -10841,90 +10520,6 @@
           "q06_butterfly_chaos_s3"
         ]
       }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml",
-      "context": {
-        "questline": "kingdom_nouns",
-        "quest_id": "q01_roles_without_names",
-        "step_type": "deliver_item",
-        "step_key": "q01_roles_without_names_deliver_item_65aac09b_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml",
-      "context": {
-        "questline": "kingdom_nouns",
-        "quest_id": "q02_castle_on_the_map",
-        "step_type": "deliver_item",
-        "step_key": "q02_castle_on_the_map_deliver_item_eade7297_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml",
-      "context": {
-        "questline": "kingdom_nouns",
-        "quest_id": "q03_crown_soup",
-        "step_type": "deliver_item",
-        "step_key": "q03_crown_soup_deliver_item_02ad7386_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml",
-      "context": {
-        "questline": "kingdom_nouns",
-        "quest_id": "q04_soup_shield",
-        "step_type": "deliver_item",
-        "step_key": "q04_soup_shield_deliver_item_2241f6d7_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml",
-      "context": {
-        "questline": "kingdom_nouns",
-        "quest_id": "q05_wizard_for_sale",
-        "step_type": "deliver_item",
-        "step_key": "q05_wizard_for_sale_deliver_item_e2e3f01a_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml",
-      "context": {
-        "questline": "kingdom_nouns",
-        "quest_id": "q06_dragon_identity",
-        "step_type": "deliver_item",
-        "step_key": "q06_dragon_identity_deliver_item_b16c8c0b_1"
-      }
-    },
-    {
-      "kind": "ambiguous_step_reward",
-      "severity": "warning",
-      "message": "Step reward fields are not defined for this step type; kept as a step reward and preserved in payload.",
-      "path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml",
-      "context": {
-        "questline": "kingdom_nouns",
-        "quest_id": "q07_royal_noun_trial",
-        "step_type": "deliver_item",
-        "step_key": "q07_royal_noun_trial_deliver_item_4d2b6fcb_1"
-      }
     }
   ],
   "counts": {
@@ -10937,7 +10532,7 @@
     "quests": 26,
     "steps": 155,
     "errors": 0,
-    "warnings": 17,
+    "warnings": 2,
     "info": 0
   },
   "revision_documents": [
@@ -11018,35 +10613,20 @@
               ]
             },
             {
-              "key": "q01_bridge_too_short_deliver_item_f3822b04_1",
+              "key": "q01_bridge_too_short_deliver_item_744bdd62_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "oak_log",
                 "amount": 1,
-                "dialogue_id": "adjective_knight_oak_log_delivered",
-                "reward_item_id": "oak_log",
-                "reward_amount": 1
+                "dialogue_id": "adjective_knight_oak_log_delivered"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q01_bridge_too_short_deliver_item_f3822b04_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "oak_log",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -11149,35 +10729,20 @@
               ]
             },
             {
-              "key": "q02_whispering_stone_deliver_item_a192d91a_1",
+              "key": "q02_whispering_stone_deliver_item_559bd948_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "herbs",
                 "amount": 1,
-                "dialogue_id": "adjective_water_man_herbs_delivered",
-                "reward_item_id": "herbs",
-                "reward_amount": 1
+                "dialogue_id": "adjective_water_man_herbs_delivered"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q02_whispering_stone_deliver_item_a192d91a_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "herbs",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -11327,35 +10892,20 @@
               ]
             },
             {
-              "key": "q03_big_and_small_words_deliver_item_bac54875_1",
+              "key": "q03_big_and_small_words_deliver_item_f862910a_1",
               "position": 5,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "corn",
                 "amount": 2,
-                "dialogue_id": "adjective_grandmother_corn_delivered",
-                "reward_item_id": "corn",
-                "reward_amount": 2
+                "dialogue_id": "adjective_grandmother_corn_delivered"
               },
               "source_metadata": {
                 "source_position": 5,
                 "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q03_big_and_small_words_deliver_item_bac54875_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "corn",
-                  "amount": 2,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -11965,35 +11515,20 @@
               ]
             },
             {
-              "key": "q04_twelve_basic_adjectives_deliver_item_8fffbf88_1",
+              "key": "q04_twelve_basic_adjectives_deliver_item_03479566_1",
               "position": 25,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "ancient_rune",
                 "amount": 12,
-                "dialogue_id": "adjective_knight_runes_delivered",
-                "reward_item_id": "ancient_rune",
-                "reward_amount": 12
+                "dialogue_id": "adjective_knight_runes_delivered"
               },
               "source_metadata": {
                 "source_position": 25,
                 "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_deliver_item_8fffbf88_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "ancient_rune",
-                  "amount": 12,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -12205,35 +11740,20 @@
               ]
             },
             {
-              "key": "q05_from_low_to_high_deliver_item_8382799f_1",
+              "key": "q05_from_low_to_high_deliver_item_36ce9b4b_1",
               "position": 7,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "power_stone",
                 "amount": 4,
-                "dialogue_id": "adjective_knight_power_stones_delivered",
-                "reward_item_id": "power_stone",
-                "reward_amount": 4
+                "dialogue_id": "adjective_knight_power_stones_delivered"
               },
               "source_metadata": {
                 "source_position": 7,
                 "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q05_from_low_to_high_deliver_item_8382799f_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 4,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -12373,35 +11893,20 @@
               ]
             },
             {
-              "key": "q06_adjective_challenge_deliver_item_c73e5f4b_1",
+              "key": "q06_adjective_challenge_deliver_item_76516f4b_1",
               "position": 5,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "gem",
                 "amount": 1,
-                "dialogue_id": "adjective_knight_gem_delivered",
-                "reward_item_id": "gem",
-                "reward_amount": 1
+                "dialogue_id": "adjective_knight_gem_delivered"
               },
               "source_metadata": {
                 "source_position": 5,
                 "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q06_adjective_challenge_deliver_item_c73e5f4b_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "gem",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -12521,35 +12026,20 @@
               ]
             },
             {
-              "key": "q01_runaway_hammer_deliver_item_8ad4cdf5_1",
+              "key": "q01_runaway_hammer_deliver_item_a2e00a7f_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Blacksmith",
                 "item_id": "oak_log",
                 "amount": 1,
-                "dialogue_id": "will_runaway_hammer_done",
-                "reward_item_id": "oak_log",
-                "reward_amount": 1
+                "dialogue_id": "will_runaway_hammer_done"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q01_runaway_hammer_deliver_item_8ad4cdf5_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "oak_log",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -12652,35 +12142,20 @@
               ]
             },
             {
-              "key": "q02_snoring_anvil_deliver_item_3819e51d_1",
+              "key": "q02_snoring_anvil_deliver_item_bad563ca_1",
               "position": 3,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Blacksmith",
                 "item_id": "herbs",
                 "amount": 1,
-                "dialogue_id": "will_snoring_anvil_done",
-                "reward_item_id": "herbs",
-                "reward_amount": 1
+                "dialogue_id": "will_snoring_anvil_done"
               },
               "source_metadata": {
                 "source_position": 3,
                 "source_path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q02_snoring_anvil_deliver_item_3819e51d_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "herbs",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -14236,35 +13711,20 @@
               ]
             },
             {
-              "key": "q01_roles_without_names_deliver_item_65aac09b_1",
+              "key": "q01_roles_without_names_deliver_item_cb3f8029_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "gem",
                 "amount": 1,
-                "dialogue_id": "nouns_maya_roles_restored",
-                "reward_item_id": "gem",
-                "reward_amount": 1
+                "dialogue_id": "nouns_maya_roles_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q01_roles_without_names_deliver_item_65aac09b_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "gem",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -14386,35 +13846,20 @@
               ]
             },
             {
-              "key": "q02_castle_on_the_map_deliver_item_eade7297_1",
+              "key": "q02_castle_on_the_map_deliver_item_6d40ea5f_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "City Gaurd Info",
                 "item_id": "gem",
                 "amount": 1,
-                "dialogue_id": "nouns_fenn_places_restored",
-                "reward_item_id": "gem",
-                "reward_amount": 1
+                "dialogue_id": "nouns_fenn_places_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q02_castle_on_the_map_deliver_item_eade7297_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "gem",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -14536,35 +13981,20 @@
               ]
             },
             {
-              "key": "q03_crown_soup_deliver_item_02ad7386_1",
+              "key": "q03_crown_soup_deliver_item_70246b08_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Professor Crazy",
                 "item_id": "power_stone",
                 "amount": 1,
-                "dialogue_id": "nouns_professor_treasury_restored",
-                "reward_item_id": "power_stone",
-                "reward_amount": 1
+                "dialogue_id": "nouns_professor_treasury_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q03_crown_soup_deliver_item_02ad7386_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -14686,35 +14116,20 @@
               ]
             },
             {
-              "key": "q04_soup_shield_deliver_item_2241f6d7_1",
+              "key": "q04_soup_shield_deliver_item_9c8e6580_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Blacksmith",
                 "item_id": "power_stone",
                 "amount": 1,
-                "dialogue_id": "nouns_blacksmith_equipment_restored",
-                "reward_item_id": "power_stone",
-                "reward_amount": 1
+                "dialogue_id": "nouns_blacksmith_equipment_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q04_soup_shield_deliver_item_2241f6d7_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -14836,35 +14251,20 @@
               ]
             },
             {
-              "key": "q05_wizard_for_sale_deliver_item_e2e3f01a_1",
+              "key": "q05_wizard_for_sale_deliver_item_7befed46_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Old Woman",
                 "item_id": "power_stone",
                 "amount": 1,
-                "dialogue_id": "nouns_old_woman_roles_restored",
-                "reward_item_id": "power_stone",
-                "reward_amount": 1
+                "dialogue_id": "nouns_old_woman_roles_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q05_wizard_for_sale_deliver_item_e2e3f01a_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "power_stone",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -14986,35 +14386,20 @@
               ]
             },
             {
-              "key": "q06_dragon_identity_deliver_item_b16c8c0b_1",
+              "key": "q06_dragon_identity_deliver_item_4c0c80a7_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "Cannoneer",
                 "item_id": "ancient_rune",
                 "amount": 1,
-                "dialogue_id": "nouns_cannoneer_names_restored",
-                "reward_item_id": "ancient_rune",
-                "reward_amount": 1
+                "dialogue_id": "nouns_cannoneer_names_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q06_dragon_identity_deliver_item_b16c8c0b_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "ancient_rune",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -15136,35 +14521,20 @@
               ]
             },
             {
-              "key": "q07_royal_noun_trial_deliver_item_4d2b6fcb_1",
+              "key": "q07_royal_noun_trial_deliver_item_fe407c11_1",
               "position": 4,
               "type": "deliver_item",
               "payload": {
                 "npc_id": "teacher_maya",
                 "item_id": "ancient_rune",
                 "amount": 1,
-                "dialogue_id": "nouns_maya_book_restored",
-                "reward_item_id": "ancient_rune",
-                "reward_amount": 1
+                "dialogue_id": "nouns_maya_book_restored"
               },
               "source_metadata": {
                 "source_position": 4,
                 "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
               },
-              "rewards": [
-                {
-                  "scope": "step",
-                  "step_key": "q07_royal_noun_trial_deliver_item_4d2b6fcb_1",
-                  "reward_type": "item",
-                  "xp_amount": null,
-                  "item_external_id": "ancient_rune",
-                  "amount": 1,
-                  "source_metadata": {
-                    "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml",
-                    "source_field": "reward_item_id"
-                  }
-                }
-              ]
+              "rewards": []
             }
           ],
           "rewards": [
@@ -15208,5 +14578,5 @@
       ]
     }
   ],
-  "source_digest": "6e180d0d8b5ef023662cf34045633d27cebe13038622f8a580fcc814dc34513e"
+  "source_digest": "814f040abf91ccb18d9614c9ec66e9baadf12c80e4ed355c01e8e4e97e252496"
 }

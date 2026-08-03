@@ -40,5 +40,3 @@ steps:
     item_id: corn
     amount: 2
     dialogue_id: adjective_grandmother_corn_delivered
-    reward_item_id: corn
-    reward_amount: 2

@@ -70,6 +70,13 @@ class QuestlineExportTests(unittest.TestCase):
                     [step["type"] for step in steps],
                 )
 
+    def test_quest_files_preserve_turn_in_flag(self):
+        for doc in self.documents:
+            for quest in doc["quests"]:
+                text = self.exported[doc["key"]][f"{quest['key']}.yaml"]
+                expected = str(bool(quest.get("wait_for_npc_turn_in", False))).lower()
+                self.assertIn(f"  wait_for_npc_turn_in: {expected}", text)
+
     def test_pipeline_instance_key_is_exported_as_instance_id(self):
         seen = 0
         for doc in self.documents:
@@ -122,7 +129,7 @@ class QuestlineExportTests(unittest.TestCase):
                     ),
                     None,
                 )
-                self.assertIn(f"    id: {quest['key']}", index)
+                self.assertIn(f"  - id: {quest['key']}", index)
                 self.assertIn(f"    level: {quest.get('level_required')}", index)
                 if item:
                     self.assertIn(

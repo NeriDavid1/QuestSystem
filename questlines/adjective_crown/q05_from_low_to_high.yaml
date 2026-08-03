@@ -50,5 +50,3 @@ steps:
     item_id: power_stone
     amount: 4
     dialogue_id: adjective_knight_power_stones_delivered
-    reward_item_id: power_stone
-    reward_amount: 4

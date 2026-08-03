@@ -38,5 +38,3 @@ steps:
     item_id: gem
     amount: 1
     dialogue_id: nouns_fenn_places_restored
-    reward_item_id: gem
-    reward_amount: 1

@@ -168,6 +168,7 @@ def _quest_yaml(quest: dict, doc: dict) -> str:
         f"  giver_npc: {_scalar(giver)}",
         f"  prerequisite: {_flow_prerequisite(quest.get('prerequisites'))}",
         f"  summary: {_scalar(quest.get('summary') or '')}",
+        f"  wait_for_npc_turn_in: {str(bool(quest.get('wait_for_npc_turn_in', False))).lower()}",
         "",
         f"rewards: {_flow_rewards(xp, items)}",
         "",
