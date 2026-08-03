@@ -6,9 +6,11 @@ import {
   type FormEvent,
   type ReactNode,
 } from 'react'
+import { catalogImageUrl } from './lib/catalogImages'
 import { createDemoData } from './lib/demoData'
 import { hasSupabaseConfig, loadEditorData, supabase } from './lib/supabase'
 import type {
+  CatalogEntry,
   CatalogKind,
   Dialogue,
   EditorData,
@@ -1062,17 +1064,68 @@ function Library({
   const [tab, setTab] = useState<LibraryTab>('catalog')
   const [search, setSearch] = useState('')
   const [kind, setKind] = useState<CatalogKind | 'all'>('all')
+  const [statusFilter, setStatusFilter] = useState<'all' | 'live_used' | 'catalog_stub' | 'has_image'>('all')
+  const [copiedId, setCopiedId] = useState<string | null>(null)
   const normalizedSearch = search.toLowerCase().trim()
-  const entries = data.catalog.filter((entry) => (kind === 'all' || entry.kind === kind) && `${entry.name} ${entry.external_id}`.toLowerCase().includes(normalizedSearch))
+  const entries = data.catalog.filter((entry) => {
+    if (kind !== 'all' && entry.kind !== kind) return false
+    if (statusFilter === 'live_used' && entry.status !== 'live_used') return false
+    if (statusFilter === 'catalog_stub' && entry.status !== 'catalog_stub') return false
+    if (statusFilter === 'has_image' && !entry.image_path) return false
+    return `${entry.name} ${entry.external_id} ${entry.description ?? ''}`.toLowerCase().includes(normalizedSearch)
+  })
   const dialogues = data.dialogues.filter((dialogue) => `${dialogue.key} ${dialogue.speaker_external_id ?? ''}`.toLowerCase().includes(normalizedSearch))
   const minigames = data.minigames.filter((minigame) => `${minigame.key} ${minigame.instruction ?? ''}`.toLowerCase().includes(normalizedSearch))
 
+  const copyId = async (id: string) => {
+    try {
+      await navigator.clipboard.writeText(id)
+      setCopiedId(id)
+      window.setTimeout(() => setCopiedId((current) => (current === id ? null : current)), 1200)
+    } catch {
+      /* clipboard may be blocked */
+    }
+  }
+
   return (
     <div className="page-content library-page">
-      <div className="page-heading"><div><p className="eyebrow">Reusable building blocks</p><h1>Content library</h1><p className="page-subtitle">Pick exact world IDs, dialogue keys, and learning activities without guessing.</p></div><div className="library-count"><strong>{data.catalog.length + data.dialogues.length + data.minigames.length}</strong><span>imported entries</span></div></div>
-      <div className="library-tabs"><button className={tab === 'catalog' ? 'active' : ''} onClick={() => setTab('catalog')}><Icon name="grid" /> World catalog <span>{data.catalog.length}</span></button><button className={tab === 'dialogues' ? 'active' : ''} onClick={() => setTab('dialogues')}><Icon name="book" /> Dialogues <span>{data.dialogues.length}</span></button><button className={tab === 'minigames' ? 'active' : ''} onClick={() => setTab('minigames')}><Icon name="spark" /> Minigame briefs <span>{data.minigames.length}</span></button></div>
-      <div className="library-toolbar"><div className="search-box"><Icon name="search" /><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search by name or exact ID" /></div>{tab === 'catalog' && <select value={kind} onChange={(event) => setKind(event.target.value as CatalogKind | 'all')}><option value="all">All types</option>{Object.entries(catalogKindLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select>}</div>
-      {tab === 'catalog' && <div className="library-grid">{entries.map((entry) => <LibraryCard key={entry.id} icon={catalogKindIcons[entry.kind]} eyebrow={catalogKindLabels[entry.kind].slice(0, -1)} title={entry.name} id={entry.external_id} description={entry.description ?? 'Imported from the world registry.'} status={entry.status ?? 'catalog'} />)}</div>}
+      <div className="page-heading">
+        <div>
+          <p className="eyebrow">Reusable building blocks</p>
+          <h1>Content library</h1>
+          <p className="page-subtitle">Browse exact Unity world IDs with pictures, then copy them into quest steps.</p>
+        </div>
+        <div className="library-count"><strong>{data.catalog.length + data.dialogues.length + data.minigames.length}</strong><span>imported entries</span></div>
+      </div>
+      <div className="library-tabs">
+        <button className={tab === 'catalog' ? 'active' : ''} onClick={() => setTab('catalog')}><Icon name="grid" /> World catalog <span>{data.catalog.length}</span></button>
+        <button className={tab === 'dialogues' ? 'active' : ''} onClick={() => setTab('dialogues')}><Icon name="book" /> Dialogues <span>{data.dialogues.length}</span></button>
+        <button className={tab === 'minigames' ? 'active' : ''} onClick={() => setTab('minigames')}><Icon name="spark" /> Minigame briefs <span>{data.minigames.length}</span></button>
+      </div>
+      <div className="library-toolbar">
+        <div className="search-box"><Icon name="search" /><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Search by name or exact ID" /></div>
+        {tab === 'catalog' && (
+          <>
+            <select value={kind} onChange={(event) => setKind(event.target.value as CatalogKind | 'all')}>
+              <option value="all">All types</option>
+              {Object.entries(catalogKindLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+            </select>
+            <select value={statusFilter} onChange={(event) => setStatusFilter(event.target.value as typeof statusFilter)}>
+              <option value="all">All statuses</option>
+              <option value="live_used">Live used</option>
+              <option value="catalog_stub">Catalog stub</option>
+              <option value="has_image">Has image</option>
+            </select>
+          </>
+        )}
+      </div>
+      {tab === 'catalog' && (
+        <div className="catalog-grid">
+          {entries.map((entry) => (
+            <CatalogCard key={entry.id} entry={entry} copied={copiedId === entry.external_id} onCopy={() => void copyId(entry.external_id)} />
+          ))}
+        </div>
+      )}
       {tab === 'dialogues' && <div className="library-list">{dialogues.map((dialogue) => <DialogueCard key={dialogue.id} dialogue={dialogue} lines={data.dialogueLines.filter((line) => line.dialogue_id === dialogue.id)} onUpdate={onUpdateDialogue} onUpdateLine={onUpdateDialogueLine} />)}</div>}
       {tab === 'minigames' && <div className="library-grid">{minigames.map((minigame) => <MinigameCard key={`${minigame.key}-${minigame.locale}`} minigame={minigame} onUpdate={onUpdateMinigame} />)}</div>}
       {((tab === 'catalog' && entries.length === 0) || (tab === 'dialogues' && dialogues.length === 0) || (tab === 'minigames' && minigames.length === 0)) && <EmptyState icon="⌕" title="Nothing found" copy="Try another search term or clear the filter." />}
@@ -1080,8 +1133,36 @@ function Library({
   )
 }
 
-function LibraryCard({ icon, eyebrow, title, id, description, status }: { icon: string; eyebrow: string; title: string; id: string; description: string; status: string }) {
-  return <article className="library-card"><div className="library-card-icon">{icon}</div><div className="library-card-copy"><p className="eyebrow">{eyebrow}</p><h3>{title}</h3><code>{id}</code><p>{description}</p></div><span className="library-status">{status}</span></article>
+function CatalogCard({ entry, copied, onCopy }: { entry: CatalogEntry; copied: boolean; onCopy: () => void }) {
+  const imageUrl = catalogImageUrl(entry.image_path)
+  const [imageFailed, setImageFailed] = useState(false)
+  const showImage = Boolean(imageUrl) && !imageFailed
+  const status = entry.status ?? 'catalog'
+  const statusClass = status === 'live_used' ? 'live' : status === 'catalog_stub' ? 'stub' : ''
+
+  return (
+    <article className="catalog-card">
+      <div className={`catalog-thumb ${entry.kind === 'item' || entry.kind === 'minigame' ? 'contain' : ''}`}>
+        {showImage ? (
+          <img src={imageUrl!} alt={entry.name} loading="lazy" onError={() => setImageFailed(true)} />
+        ) : (
+          <span className="catalog-thumb-fallback">{catalogKindIcons[entry.kind]}</span>
+        )}
+      </div>
+      <div className="catalog-card-body">
+        <div className="catalog-card-top">
+          <p className="eyebrow">{catalogKindLabels[entry.kind].slice(0, -1)}</p>
+          <span className={`library-status catalog-status ${statusClass}`}>{status}</span>
+        </div>
+        <h3>{entry.name}</h3>
+        <div className="catalog-id-row">
+          <code title={entry.external_id}>{entry.external_id}</code>
+          <button type="button" className={`catalog-copy ${copied ? 'copied' : ''}`} onClick={onCopy}>{copied ? 'Copied' : 'Copy'}</button>
+        </div>
+        <p>{entry.description ?? 'Imported from the world registry.'}</p>
+      </div>
+    </article>
+  )
 }
 
 function DialogueCard({

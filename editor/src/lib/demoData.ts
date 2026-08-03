@@ -228,29 +228,29 @@ function createRewards(quests: Quest[], steps: QuestStep[]): QuestReward[] {
   return [...questRewards, ...stepRewards]
 }
 
-const catalogSeed: Array<[CatalogEntry['kind'], string, string, string]> = [
-  ['area', 'KingdomGate', 'Kingdom Gate', 'The main gate into the learning kingdom.'],
-  ['area', 'The Oathstone Bridge', 'The Oathstone Bridge', 'A bridge where spelling quests begin.'],
-  ['area', 'SilverFountainCourt', 'Silver Fountain Court', 'A bright court near the letter island.'],
-  ['npc', 'teacher_maya', 'Teacher Maya', 'The friendly guide for the English Kingdom.'],
-  ['npc', 'Blacksmith', 'Blacksmith Will', 'A noisy but kind forge master.'],
-  ['interactable', 'Lost_Chest5_Silver_Fountain_Court', 'Lost Chest 5', 'A world station for a short activity.'],
-  ['interactable', 'WoodenCart3_The_Oath_stone_Bridge', 'Wooden Cart 3', 'A cart with a learning challenge.'],
-  ['item', 'gem', 'Gem', 'A small reward for completing a speaking activity.'],
-  ['item', 'ancient_rune', 'Ancient Rune', 'A collectible for adjective and noun mastery.'],
-  ['minigame', 'letter_ordering', 'Letter Ordering', 'Arrange letters into a word.'],
-  ['minigame', 'word_matching', 'Word Matching', 'Match a word to the missing letter.'],
+const catalogSeed: Array<[CatalogEntry['kind'], string, string, string, string | null]> = [
+  ['area', 'KingdomGate', 'Kingdom Gate', 'The main gate into the learning kingdom.', 'images/areas/KingdomGate.png'],
+  ['area', 'The Oathstone Bridge', 'The Oathstone Bridge', 'A bridge where spelling quests begin.', null],
+  ['area', 'SilverFountainCourt', 'Silver Fountain Court', 'A bright court near the letter island.', 'images/areas/SilverFountainCourt.png'],
+  ['npc', 'teacher_maya', 'Teacher Maya', 'The friendly guide for the English Kingdom.', 'images/npcs/teacher_maya.png'],
+  ['npc', 'Blacksmith', 'Blacksmith Will', 'A noisy but kind forge master.', 'images/npcs/Blacksmith.png'],
+  ['interactable', 'Lost_Chest5_Silver_Fountain_Court', 'Lost Chest 5', 'A world station for a short activity.', 'images/interactables/Lost_Chest5_Silver_Fountain_Court.png'],
+  ['interactable', 'WoodenCart3_The_Oath_stone_Bridge', 'Wooden Cart 3', 'A cart with a learning challenge.', 'images/interactables/WoodenCart3_The_Oath_stone_Bridge.png'],
+  ['item', 'gem', 'Gem', 'A small reward for completing a speaking activity.', 'images/items/gem.png'],
+  ['item', 'ancient_rune', 'Ancient Rune', 'A collectible for adjective and noun mastery.', 'images/items/ancient_rune.png'],
+  ['minigame', 'letter_ordering', 'Letter Ordering', 'Arrange letters into a word.', 'images/minigames/letter_ordering.png'],
+  ['minigame', 'word_matching', 'Word Matching', 'Match a word to the missing letter.', 'images/minigames/word_matching.png'],
 ]
 
 function createCatalog(): CatalogEntry[] {
-  return catalogSeed.map(([kind, external_id, name, description], index) => ({
+  return catalogSeed.map(([kind, external_id, name, description, image_path], index) => ({
     id: index + 1,
     kind,
     external_id,
     name,
     description,
     status: 'live_used',
-    image_path: null,
+    image_path,
     metadata: { demo: true },
   }))
 }
