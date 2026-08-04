@@ -1,6 +1,6 @@
 import { useT } from '../../i18n'
 import { useEditorStore } from '../../state/EditorStore'
-import { getDialogueLines } from '../../lib/editorData'
+import { getDialogueLines, slugify } from '../../lib/editorData'
 import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
 import { CatalogSelect } from './CatalogSelect'
@@ -52,6 +52,17 @@ export function DialogueAttachmentEditor({
         </div>
         {dialogue ? (
           <>
+            <label>
+              <FieldLabel hint={t('dialogueKeyHint')}>{t('dialogueKey')}</FieldLabel>
+              <input
+                dir="ltr"
+                value={dialogue.key}
+                onChange={(event) => {
+                  const next = slugify(event.target.value) || dialogue.key
+                  updateDialogue(dialogue.id, { key: next })
+                }}
+              />
+            </label>
             <label>
               <FieldLabel hint={t('speakerHint')}>{t('speaker')}</FieldLabel>
               <CatalogSelect

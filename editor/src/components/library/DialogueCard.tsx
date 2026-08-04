@@ -34,7 +34,7 @@ export const DialogueCard = memo(function DialogueCard({
       </div>
       {editing ? (
         <div className="dialogue-editor">
-          <label><FieldLabel>{t('dialogueKey')}</FieldLabel><input dir="ltr" value={dialogue.key} onChange={(event) => updateDialogue(dialogue.id, { key: slugify(event.target.value) || dialogue.key })} /></label>
+          <label><FieldLabel hint={t('dialogueKeyHint')}>{t('dialogueKey')}</FieldLabel><input dir="ltr" value={dialogue.key} onChange={(event) => updateDialogue(dialogue.id, { key: slugify(event.target.value) || dialogue.key })} /></label>
           <label><FieldLabel>{t('speaker')}</FieldLabel><CatalogSelect kind="npc" value={dialogue.speaker_external_id ?? ''} data={data} onChange={(value) => updateDialogue(dialogue.id, { speaker_external_id: value || null })} /></label>
           <DialogueLinesEditor dialogueId={dialogue.id} lines={lines} />
           <button type="button" className="button subtle compact" onClick={() => setEditing(false)}>{t('doneEditing')}</button>

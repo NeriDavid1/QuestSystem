@@ -36,6 +36,7 @@ import {
   getQuestlineQuests,
   makeLocalId,
   slugify,
+  suggestDialogueBaseKey,
   uniqueDialogueKey,
   uniqueMinigameKey,
   uniqueQuestKey,
@@ -422,12 +423,16 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     touchedDialogueIds.current.add(dialogueId)
     setData((current) => {
       const existing = current.dialogues.find((dialogue) => dialogue.id === dialogueId)
-      const previousKey = existing?.key
-      const nextKey = patch.key ?? previousKey
+      if (!existing) return current
+      const resolvedPatch = patch.key !== undefined
+        ? { ...patch, key: uniqueDialogueKey(current, patch.key || existing.key, dialogueId) }
+        : patch
+      const previousKey = existing.key
+      const nextKey = resolvedPatch.key ?? previousKey
       const rewriteKey = Boolean(previousKey && nextKey && previousKey !== nextKey)
       return {
         ...current,
-        dialogues: current.dialogues.map((dialogue) => (dialogue.id === dialogueId ? { ...dialogue, ...patch } : dialogue)),
+        dialogues: current.dialogues.map((dialogue) => (dialogue.id === dialogueId ? { ...dialogue, ...resolvedPatch } : dialogue)),
         steps: rewriteKey
           ? current.steps.map((step) =>
             step.payload.dialogue_id === previousKey
@@ -567,22 +572,33 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   }, [notify, selectedQuest, t])
 
   const createDialogueForStep = useCallback((stepId: string) => {
+    const step = data.steps.find((item) => item.id === stepId)
+    const quest = data.quests.find((item) => item.id === step?.quest_id) ?? selectedQuest
+    const line = data.questlines.find((item) => item.id === quest?.questline_id)
+    // step.key already includes the quest key (e.g. q01_new_quest_step_01)
+    const baseKey = suggestDialogueBaseKey(line?.key, step?.key ?? `${quest?.key ?? 'quest'}_step`)
     createDialogue({
-      baseKey: `${selectedQuest?.key ?? 'quest'}_dialogue`,
-      speaker: selectedQuest?.giver_external_id ?? null,
+      baseKey,
+      speaker: quest?.giver_external_id ?? selectedQuest?.giver_external_id ?? null,
       attachToStepId: stepId,
     })
-  }, [createDialogue, selectedQuest])
+  }, [createDialogue, data.questlines, data.quests, data.steps, selectedQuest])
 
   const createDialogueForQuest = useCallback((questId: string, slot: 'start' | 'turn_in') => {
     const quest = data.quests.find((item) => item.id === questId)
+    const line = data.questlines.find((item) => item.id === quest?.questline_id)
+    const baseKey = suggestDialogueBaseKey(
+      line?.key,
+      quest?.key,
+      slot === 'turn_in' ? 'turn_in' : 'start',
+    )
     createDialogue({
-      baseKey: `${quest?.key ?? 'quest'}_${slot === 'turn_in' ? 'turn_in' : 'start'}`,
+      baseKey,
       speaker: quest?.giver_external_id ?? selectedQuest?.giver_external_id ?? null,
       attachToQuestId: questId,
       questSlot: slot,
     })
-  }, [createDialogue, data.quests, selectedQuest])
+  }, [createDialogue, data.questlines, data.quests, selectedQuest])
 
   const updateMinigame = useCallback((minigameId: string, patch: Partial<MinigameInstance>) => {
     touchedMinigameIds.current.add(minigameId)

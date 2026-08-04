@@ -12,6 +12,7 @@ import {
   makeLocalId,
   slugify,
   stepHasMinigameField,
+  suggestDialogueBaseKey,
   uniqueDialogueKey,
   uniqueKey,
   uniqueMinigameKey,
@@ -72,6 +73,28 @@ describe('unique* helpers', () => {
     expect(allLineKeys.has(lineKey)).toBe(false)
     expect(allQuestKeys.has(questKey)).toBe(false)
     expect(allDialogueKeys.has(dialogueKey)).toBe(false)
+  })
+
+  it('uniqueDialogueKey can keep the current dialogue key when renaming', () => {
+    const dialogue = data.dialogues[0]
+    expect(uniqueDialogueKey(data, dialogue.key, dialogue.id)).toBe(dialogue.key)
+    expect(uniqueDialogueKey(data, dialogue.key)).not.toBe(dialogue.key)
+  })
+})
+
+describe('suggestDialogueBaseKey', () => {
+  it('joins questline, quest, and role segments', () => {
+    expect(suggestDialogueBaseKey('kingdom_nouns', 'q01_walk', 'start')).toBe('kingdom_nouns_q01_walk_start')
+    expect(suggestDialogueBaseKey('kingdom_nouns', 'q01_walk_step_01')).toBe('kingdom_nouns_q01_walk_step_01')
+  })
+
+  it('skips empty and non-slugifiable segments', () => {
+    expect(suggestDialogueBaseKey(null, 'q01_walk', 'turn_in')).toBe('q01_walk_turn_in')
+    expect(suggestDialogueBaseKey('שלום', 'q01_walk', 'start')).toBe('q01_walk_start')
+  })
+
+  it('falls back when nothing usable remains', () => {
+    expect(suggestDialogueBaseKey(null, '', '!!!')).toBe('new_dialogue')
   })
 })
 

@@ -49,12 +49,35 @@ export function uniqueQuestlineKey(data: EditorData, baseKey: string): string {
   return uniqueKey(data.questlines.map((line) => line.key), baseKey, 'new_questline')
 }
 
-export function uniqueDialogueKey(data: EditorData, baseKey: string): string {
-  return uniqueKey(data.dialogues.map((dialogue) => dialogue.key), baseKey, 'new_dialogue')
+export function uniqueDialogueKey(data: EditorData, baseKey: string, excludeDialogueId?: string): string {
+  const existing = data.dialogues
+    .filter((dialogue) => dialogue.id !== excludeDialogueId)
+    .map((dialogue) => dialogue.key)
+  return uniqueKey(existing, baseKey, 'new_dialogue')
 }
 
 export function uniqueMinigameKey(data: EditorData, baseKey: string): string {
   return uniqueKey(data.minigames.map((minigame) => minigame.key), baseKey, 'new_minigame')
+}
+
+/**
+ * Build a stable dialogue key stem from questline / quest / role (step key, start, turn_in).
+ * Empty or non-slugifiable segments are skipped so Hebrew display names don't inject timestamps.
+ */
+export function suggestDialogueBaseKey(...segments: Array<string | null | undefined>): string {
+  const parts: string[] = []
+  for (const segment of segments) {
+    if (!segment?.trim()) continue
+    const ascii = segment
+      .trim()
+      .toLowerCase()
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '_')
+      .replace(/^_|_$/g, '')
+    if (ascii) parts.push(ascii)
+  }
+  return parts.join('_') || 'new_dialogue'
 }
 
 export function getDialogueLines(data: EditorData, dialogueId: string): DialogueLine[] {
