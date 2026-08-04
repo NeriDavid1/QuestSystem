@@ -179,6 +179,8 @@ export function buildSnapshotDocument(data: EditorData, line: Questline): Record
       steps,
       summary: quest.summary,
       wait_for_npc_turn_in: quest.wait_for_npc_turn_in ?? false,
+      start_dialogue_id: quest.start_dialogue_id || null,
+      turn_in_dialogue_id: quest.turn_in_dialogue_id || null,
     }
   })
 

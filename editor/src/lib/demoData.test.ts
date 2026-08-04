@@ -125,7 +125,16 @@ describe('demoData integrity', () => {
     }
   })
 
-  it('keeps minigame tasks as plain string arrays', () => {
+  it('includes quest-level start and turn-in dialogue fields', () => {
+    for (const quest of data.quests) {
+      expect(quest).toHaveProperty('start_dialogue_id')
+      expect(quest).toHaveProperty('turn_in_dialogue_id')
+      expect(quest.start_dialogue_id === null || typeof quest.start_dialogue_id === 'string').toBe(true)
+      expect(quest.turn_in_dialogue_id === null || typeof quest.turn_in_dialogue_id === 'string').toBe(true)
+    }
+  })
+
+  it('keeps minigame tasks as plain string arrays for DB compatibility', () => {
     for (const minigame of data.minigames) {
       expect(Array.isArray(minigame.tasks)).toBe(true)
       expect(minigame.tasks.every((task) => typeof task === 'string'), `minigame ${minigame.key}`).toBe(true)

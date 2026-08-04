@@ -59,6 +59,29 @@ export function Preview() {
                   </div>
                 )}
                 <RewardList rewards={getQuestRewards(data, quest.id)} />
+                {(quest.start_dialogue_id || quest.turn_in_dialogue_id) && (
+                  <div className="preview-quest-dialogues">
+                    {([
+                      { key: quest.start_dialogue_id, label: t('previewStartDialogue') },
+                      { key: quest.turn_in_dialogue_id, label: t('previewTurnInDialogue') },
+                    ] as const).map((slot) => {
+                      if (!slot.key) return null
+                      const dialogue = data.dialogues.find((item) => item.key === slot.key)
+                      const dialogueLines = dialogue
+                        ? data.dialogueLines.filter((line) => line.dialogue_id === dialogue.id).sort((a, b) => a.line_order - b.line_order)
+                        : []
+                      if (!dialogue || dialogueLines.length === 0) return null
+                      return (
+                        <div className="preview-dialogue" key={slot.label}>
+                          <small className="eyebrow">{slot.label}</small>
+                          {dialogueLines.slice(0, 3).map((line) => (
+                            <p className="content-text" dir="auto" key={line.id}>“{line.content || '…'}”</p>
+                          ))}
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
                 <div className="preview-steps">
                   {getQuestSteps(data, quest.id).map((step, index) => {
                     const dialogue = typeof step.payload.dialogue_id === 'string' && step.payload.dialogue_id

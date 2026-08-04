@@ -215,6 +215,16 @@ describe('buildSnapshotDocument', () => {
     const sourceSteps = data.steps.filter((step) => getQuestlineQuests(data, line.id).some((quest) => quest.id === step.quest_id))
     expect(payloads).toEqual(sourceSteps.map((step) => step.payload))
   })
+
+  it('includes quest-level dialogue keys on each quest snapshot', () => {
+    const quests = document.quests as Array<Record<string, unknown>>
+    expect(quests.length).toBeGreaterThan(0)
+    for (const quest of quests) {
+      expect(quest).toHaveProperty('start_dialogue_id')
+      expect(quest).toHaveProperty('turn_in_dialogue_id')
+      expect(quest).toHaveProperty('wait_for_npc_turn_in')
+    }
+  })
 })
 
 describe('demoData contract', () => {

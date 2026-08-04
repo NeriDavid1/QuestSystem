@@ -30,6 +30,10 @@ export interface Quest {
   summary: string | null
   /** Keep the quest in CAN_FINISH until an NPC calls FinishQuest (Unity waitForNpcTurnIn). */
   wait_for_npc_turn_in: boolean
+  /** Dialogue key for Unity startDialogue. */
+  start_dialogue_id: string | null
+  /** Dialogue key for Unity turnInDialogue (close / turn-in). */
+  turn_in_dialogue_id: string | null
   status: QuestStatus
   source_path: string | null
   source_metadata: Record<string, unknown>

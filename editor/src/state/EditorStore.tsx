@@ -29,7 +29,6 @@ import {
   defaultParamsForEntry,
   getMinigameCatalogEntry,
   getMinigameVariantsForEntry,
-  seedParamsFromBrief,
 } from '../lib/minigameParams'
 import {
   DEFAULT_DIALOGUE_LOCALE,
@@ -125,8 +124,15 @@ interface EditorStoreValue {
   addDialogueLine: (dialogueId: string, locale?: string) => void
   removeDialogueLine: (lineId: string) => void
   moveDialogueLine: (lineId: string, direction: -1 | 1) => void
-  createDialogue: (options?: { speaker?: string | null; baseKey?: string; attachToStepId?: string }) => void
+  createDialogue: (options?: {
+    speaker?: string | null
+    baseKey?: string
+    attachToStepId?: string
+    attachToQuestId?: string
+    questSlot?: 'start' | 'turn_in'
+  }) => void
   createDialogueForStep: (stepId: string) => void
+  createDialogueForQuest: (questId: string, slot: 'start' | 'turn_in') => void
   createMinigameForStep: (stepId: string) => void
   updateMinigame: (minigameId: string, patch: Partial<MinigameInstance>) => void
   togglePrerequisite: (questId: string, prerequisiteQuestId: string, enabled: boolean) => void
@@ -414,15 +420,23 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       const existing = current.dialogues.find((dialogue) => dialogue.id === dialogueId)
       const previousKey = existing?.key
       const nextKey = patch.key ?? previousKey
+      const rewriteKey = Boolean(previousKey && nextKey && previousKey !== nextKey)
       return {
         ...current,
         dialogues: current.dialogues.map((dialogue) => (dialogue.id === dialogueId ? { ...dialogue, ...patch } : dialogue)),
-        steps: previousKey && nextKey && previousKey !== nextKey
+        steps: rewriteKey
           ? current.steps.map((step) =>
             step.payload.dialogue_id === previousKey
               ? { ...step, payload: { ...step.payload, dialogue_id: nextKey } }
               : step)
           : current.steps,
+        quests: rewriteKey
+          ? current.quests.map((quest) => ({
+            ...quest,
+            start_dialogue_id: quest.start_dialogue_id === previousKey ? nextKey! : quest.start_dialogue_id,
+            turn_in_dialogue_id: quest.turn_in_dialogue_id === previousKey ? nextKey! : quest.turn_in_dialogue_id,
+          }))
+          : current.quests,
       }
     })
     setDirty(true)
@@ -500,7 +514,13 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     setDirty(true)
   }, [])
 
-  const createDialogue = useCallback((options?: { speaker?: string | null; baseKey?: string; attachToStepId?: string }) => {
+  const createDialogue = useCallback((options?: {
+    speaker?: string | null
+    baseKey?: string
+    attachToStepId?: string
+    attachToQuestId?: string
+    questSlot?: 'start' | 'turn_in'
+  }) => {
     setData((current) => {
       const key = uniqueDialogueKey(current, options?.baseKey ?? 'new_dialogue')
       const dialogue: Dialogue = {
@@ -519,6 +539,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         content: '',
         line_format: 'plain_text',
       }
+      const slotField = options?.questSlot === 'turn_in' ? 'turn_in_dialogue_id' : 'start_dialogue_id'
       return {
         ...current,
         dialogues: [...current.dialogues, dialogue],
@@ -529,6 +550,12 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
               ? { ...step, payload: { ...step.payload, dialogue_id: key } }
               : step)
           : current.steps,
+        quests: options?.attachToQuestId
+          ? current.quests.map((quest) =>
+            quest.id === options.attachToQuestId
+              ? { ...quest, [slotField]: key }
+              : quest)
+          : current.quests,
       }
     })
     setDirty(true)
@@ -542,6 +569,16 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       attachToStepId: stepId,
     })
   }, [createDialogue, selectedQuest])
+
+  const createDialogueForQuest = useCallback((questId: string, slot: 'start' | 'turn_in') => {
+    const quest = data.quests.find((item) => item.id === questId)
+    createDialogue({
+      baseKey: `${quest?.key ?? 'quest'}_${slot === 'turn_in' ? 'turn_in' : 'start'}`,
+      speaker: quest?.giver_external_id ?? selectedQuest?.giver_external_id ?? null,
+      attachToQuestId: questId,
+      questSlot: slot,
+    })
+  }, [createDialogue, data.quests, selectedQuest])
 
   const updateMinigame = useCallback((minigameId: string, patch: Partial<MinigameInstance>) => {
     touchedMinigameIds.current.add(minigameId)
@@ -558,18 +595,17 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       if (!step) return current
       const baseMinigame = getMinigameCatalogEntry(current, step)
       const variants = getMinigameVariantsForEntry(baseMinigame)
-      const instruction = baseMinigame ? t('minigameDefaultInstruction', { name: baseMinigame.name }) : ''
       const instance: MinigameInstance = {
         id: makeLocalId('minigame'),
         key: uniqueMinigameKey(current, `${selectedQuest?.key ?? 'quest'}_minigame`),
         locale: DEFAULT_DIALOGUE_LOCALE,
-        instruction,
+        instruction: null,
         tasks: [],
         target: null,
         variant: variants[0] ?? null,
         success: null,
         minigame_id: baseMinigame?.external_id ?? (typeof step.payload.minigame_id === 'string' ? step.payload.minigame_id : null),
-        params: seedParamsFromBrief(baseMinigame, defaultParamsForEntry(baseMinigame), null, instruction),
+        params: defaultParamsForEntry(baseMinigame),
         source_path: null,
         source_metadata: { local_draft: true },
       }
@@ -651,6 +687,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       giver_external_id: selectedLine.default_giver_external_id,
       summary: t('describeLearnerGoal'),
       wait_for_npc_turn_in: false,
+      start_dialogue_id: null,
+      turn_in_dialogue_id: null,
       status: 'draft',
       source_path: null,
       source_metadata: { local_draft: true },
@@ -744,8 +782,11 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const removeDialogue = useCallback((dialogueId: string) => {
     const dialogue = data.dialogues.find((item) => item.id === dialogueId)
     if (!dialogue) return
-    const referenced = data.steps.some((step) => step.payload.dialogue_id === dialogue.key)
-    if (referenced) {
+    const referencedByStep = data.steps.some((step) => step.payload.dialogue_id === dialogue.key)
+    const referencedByQuest = data.quests.some(
+      (quest) => quest.start_dialogue_id === dialogue.key || quest.turn_in_dialogue_id === dialogue.key,
+    )
+    if (referencedByStep || referencedByQuest) {
       notify(t('dialogueInUse'), 'error')
       return
     }
@@ -1204,6 +1245,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         level_required?: number
         giver_external_id?: string | null
         wait_for_npc_turn_in?: boolean
+        start_dialogue_id?: string | null
+        turn_in_dialogue_id?: string | null
         prerequisites?: string[]
         rewards?: Array<{ reward_type: string; xp_amount?: number | null; item_external_id?: string | null; amount?: number | null }>
         steps?: Array<{
@@ -1225,6 +1268,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         giver_external_id: questDoc.giver_external_id ?? null,
         summary: questDoc.summary ?? null,
         wait_for_npc_turn_in: questDoc.wait_for_npc_turn_in ?? false,
+        start_dialogue_id: questDoc.start_dialogue_id || null,
+        turn_in_dialogue_id: questDoc.turn_in_dialogue_id || null,
         status: 'draft',
         source_path: null,
         source_metadata: { restored_from_revision: revision.version },
@@ -1342,6 +1387,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         giver_external_id: giver,
         summary: kind === 'adventure' ? t('templateAdventureCopy') : t('templateBlankCopy'),
         wait_for_npc_turn_in: false,
+        start_dialogue_id: null,
+        turn_in_dialogue_id: null,
         status: 'draft',
         source_path: null,
         source_metadata: { local_draft: true, template: kind },
@@ -1456,6 +1503,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       moveDialogueLine,
       createDialogue,
       createDialogueForStep,
+      createDialogueForQuest,
       createMinigameForStep,
       updateMinigame,
       togglePrerequisite,
@@ -1494,7 +1542,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       conflictState, closeConflict, showNewQuestline, showPublishConfirm, showSearch,
       showRevisions, showTemplates, libraryTab, setLibraryTab, updateLine, updateQuest, updateStep, updateDialogue,
       updateDialogueLine, addDialogueLine, removeDialogueLine, moveDialogueLine,       createDialogue,
-      createDialogueForStep, createMinigameForStep, updateMinigame, togglePrerequisite, addReward, updateReward,
+      createDialogueForStep, createDialogueForQuest, createMinigameForStep, updateMinigame, togglePrerequisite, addReward, updateReward,
       removeReward, addQuest, addStep, createQuestline, removeQuestline, removeQuest, removeStep,
       removeDialogue, removeMinigame, duplicateQuest, duplicateStep, duplicateDialogue, duplicateQuestline,
       moveQuest, moveStep, saveDraft, publish,

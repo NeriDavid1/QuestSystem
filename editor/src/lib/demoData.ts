@@ -132,6 +132,8 @@ function createQuests(): Quest[] {
       giver_external_id: spec.giver,
       summary: questSummaries[`q${String(index + 1).padStart(2, '0')}`] ?? questSummaries.q01,
       wait_for_npc_turn_in: spec.key === 'blacksmith_will' || spec.key === 'english_kingdom_maya',
+      start_dialogue_id: null,
+      turn_in_dialogue_id: null,
       status: 'complete',
       source_path: `questlines/${spec.key}/q${String(index + 1).padStart(2, '0')}.yaml`,
       source_metadata: { demo: true },

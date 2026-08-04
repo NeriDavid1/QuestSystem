@@ -170,6 +170,8 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
         giver_external_id: quest.giver_external_id,
         summary: quest.summary,
         wait_for_npc_turn_in: quest.wait_for_npc_turn_in ?? false,
+        start_dialogue_id: quest.start_dialogue_id || null,
+        turn_in_dialogue_id: quest.turn_in_dialogue_id || null,
         status: quest.status === 'published' ? 'draft' : quest.status,
         source_path: quest.source_path,
         source_metadata: quest.source_metadata,

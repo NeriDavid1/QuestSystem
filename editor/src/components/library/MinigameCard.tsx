@@ -3,9 +3,13 @@ import { useT } from '../../i18n'
 import { useEditorStore } from '../../state/EditorStore'
 import type { MinigameInstance } from '../../lib/types'
 import { getMinigameParamFieldsForInstance } from '../../lib/minigameParams'
-import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
 import { MinigameParamsEditor } from '../editor/MinigameParamsEditor'
+
+function promptPreview(minigame: MinigameInstance): string {
+  const prompt = minigame.params?.prompt
+  return typeof prompt === 'string' && prompt.trim() ? prompt.trim() : minigame.key
+}
 
 function ParamSummary({ minigame }: { minigame: MinigameInstance }) {
   const entries = Object.entries(minigame.params ?? {}).filter(([, value]) => value !== '' && value !== null && value !== undefined)
@@ -38,16 +42,9 @@ export const MinigameCard = memo(function MinigameCard({
       <div className="library-card-icon">✦</div>
       {editing ? (
         <div className="library-card-copy minigame-editor">
-          <p className="eyebrow">{[minigame.minigame_id, minigame.variant, minigame.locale].filter(Boolean).join(' · ') || t('activity')}</p>
+          <p className="eyebrow">{[minigame.minigame_id, minigame.variant].filter(Boolean).join(' · ') || t('activity')}</p>
           <h3 dir="ltr">{minigame.key}</h3>
-          <section className="minigame-section">
-            <div className="minigame-params-heading">
-              <strong>{t('minigameBriefTitle')}</strong>
-            </div>
-            <label><FieldLabel>{t('instruction')}</FieldLabel><textarea className="content-text" dir="auto" rows={2} value={minigame.instruction ?? ''} onChange={(event) => updateMinigame(minigame.id, { instruction: event.target.value || null })} /></label>
-            <label><FieldLabel>{t('successMessage')}</FieldLabel><input className="content-text" dir="auto" value={minigame.success ?? ''} onChange={(event) => updateMinigame(minigame.id, { success: event.target.value || null })} /></label>
-          </section>
-          {paramFields.length > 0 && (
+          {paramFields.length > 0 ? (
             <div className="minigame-game-params minigame-section">
               <div className="minigame-params-heading">
                 <strong>{t('minigameParamsTitle')}</strong>
@@ -58,20 +55,21 @@ export const MinigameCard = memo(function MinigameCard({
                 onChange={(params) => updateMinigame(minigame.id, { params })}
               />
             </div>
+          ) : (
+            <p className="minigame-empty-hint">{t('minigameParamsUnknownGame')}</p>
           )}
           <button type="button" className="button subtle compact" onClick={() => setEditing(false)}>{t('doneEditing')}</button>
         </div>
       ) : (
         <div className="library-card-copy">
-          <p className="eyebrow">{[minigame.minigame_id, minigame.variant, minigame.locale].filter(Boolean).join(' · ') || t('activity')}</p>
-          <h3 className="content-text" dir="auto">{minigame.instruction ?? minigame.key}</h3>
+          <p className="eyebrow">{[minigame.minigame_id, minigame.variant].filter(Boolean).join(' · ') || t('activity')}</p>
+          <h3 className="content-text" dir="auto">{promptPreview(minigame)}</h3>
           <code>{minigame.key}</code>
           <ParamSummary minigame={minigame} />
-          <p className="content-text" dir="auto">{minigame.success ?? t('localizedMinigame')}</p>
-          <button type="button" className="button subtle compact" onClick={() => setEditing(true)}>{t('editBrief')}</button>
+          <button type="button" className="button subtle compact" onClick={() => setEditing(true)}>{t('editMinigameParams')}</button>
         </div>
       )}
-      <span className="library-status">{minigame.locale}</span>
+      <span className="library-status">{minigame.minigame_id ?? minigame.variant ?? '—'}</span>
       <button type="button" className="icon-button tiny minigame-delete" aria-label={t('deleteMinigameAria')} title={t('deleteMinigameAria')} onClick={onDelete}><Icon name="close" /></button>
     </article>
   )

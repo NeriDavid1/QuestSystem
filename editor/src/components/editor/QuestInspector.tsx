@@ -5,6 +5,7 @@ import { getQuestPrerequisites, getQuestRewards, getQuestSteps, getQuestlineQues
 import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
 import { CatalogSelect } from './CatalogSelect'
+import { DialogueAttachmentEditor } from './DialogueAttachmentEditor'
 import { InspectorSection } from './InspectorSection'
 import { PrerequisiteEditor } from './PrerequisiteEditor'
 import { RewardEditor } from './RewardEditor'
@@ -31,6 +32,7 @@ export function QuestInspector() {
     duplicateQuest,
     duplicateStep,
     openConfirm,
+    createDialogueForQuest,
     issues,
   } = useEditorStore()
   const [openSection, setOpenSection] = useState<'quest' | 'steps' | 'line'>('quest')
@@ -98,6 +100,24 @@ export function QuestInspector() {
             <div className="editor-subsection"><FieldLabel hint={t('prerequisitesHint')}>{t('prerequisites')}</FieldLabel><PrerequisiteEditor quest={quest} quests={lineQuests} prerequisites={questPrerequisites} onToggle={(prerequisiteQuestId, enabled) => togglePrerequisite(quest.id, prerequisiteQuestId, enabled)} /></div>
             <div className="editor-subsection"><FieldLabel hint={t('questRewardsHint')}>{t('questRewards')}</FieldLabel><RewardEditor data={data} rewards={questRewards} onAdd={() => addReward('quest', quest.id)} onUpdate={updateReward} onRemove={removeReward} /></div>
             <label className="checkbox-label"><input type="checkbox" checked={Boolean(quest.wait_for_npc_turn_in)} onChange={(event) => updateQuest({ wait_for_npc_turn_in: event.target.checked })} /><span><FieldLabel hint={t('waitForNpcTurnInHint')}>{t('waitForNpcTurnIn')}</FieldLabel></span></label>
+            <div className="editor-subsection">
+              <DialogueAttachmentEditor
+                dialogueKey={quest.start_dialogue_id ?? ''}
+                title={t('startDialogue')}
+                createLabel={t('createStartDialogue')}
+                onAttach={(key) => updateQuest({ start_dialogue_id: key || null })}
+                onCreate={() => createDialogueForQuest(quest.id, 'start')}
+              />
+            </div>
+            <div className="editor-subsection">
+              <DialogueAttachmentEditor
+                dialogueKey={quest.turn_in_dialogue_id ?? ''}
+                title={t('turnInDialogue')}
+                createLabel={t('createTurnInDialogue')}
+                onAttach={(key) => updateQuest({ turn_in_dialogue_id: key || null })}
+                onCreate={() => createDialogueForQuest(quest.id, 'turn_in')}
+              />
+            </div>
           </div>
         </InspectorSection>
         <InspectorSection title={t('learningSteps', { count: steps.length })} open={openSection === 'steps'} onToggle={() => setOpenSection(openSection === 'steps' ? 'quest' : 'steps')}>

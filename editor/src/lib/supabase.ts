@@ -61,7 +61,12 @@ export async function loadEditorData(): Promise<EditorData> {
 
   return {
     questlines: questlines.data ?? [],
-    quests: quests.data ?? [],
+    quests: (quests.data ?? []).map((quest) => ({
+      ...quest,
+      wait_for_npc_turn_in: quest.wait_for_npc_turn_in ?? false,
+      start_dialogue_id: quest.start_dialogue_id ?? null,
+      turn_in_dialogue_id: quest.turn_in_dialogue_id ?? null,
+    })),
     steps: steps.data ?? [],
     prerequisites: prerequisites.data ?? [],
     rewards: rewards.data ?? [],
