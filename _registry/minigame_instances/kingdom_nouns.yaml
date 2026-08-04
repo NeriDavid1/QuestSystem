@@ -1,247 +1,301 @@
-# Per-step minigame briefs — The Kingdom Book of Nouns.
-# Keys use {quest_id}_s{zero-based step index}.
-# Instructions/tasks use Hebrew meanings; letters and spoken targets stay English.
+# Per-step minigame briefs — kingdom_nouns
 # `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).
-
 instances:
   q01_roles_without_names_s2:
-    instruction: "סדרו את האותיות כדי לשחזר את המילה מלך באנגלית"
+    instruction: סדרו את האותיות כדי לשחזר את המילה מלך באנגלית
     tasks:
-      - "גררו את האותיות <strong>k, i, n, g</strong> למשבצות"
-      - "התעלמו מאותיות המסיחות"
-      - "קראו את המילה השלמה: <strong>king</strong> — מלך"
-    target: "king"
-    variant: "word_spelling"
-    success: "המילה KING (מלך) חוזרת לדף אנשי המלוכה"
+      - גררו את האותיות <strong>k, i, n, g</strong> למשבצות
+      - התעלמו מאותיות המסיחות
+      - 'קראו את המילה השלמה: <strong>king</strong> — מלך'
+    target: king
+    variant: word_spelling
+    success: המילה KING (מלך) חוזרת לדף אנשי המלוכה
     params:
-      prompt: "הוראה על המסך: תרשום king (מלך)"
-      targetWord: "king"
+      prompt: סדרו את האותיות כדי לשחזר את המילה מלך באנגלית
+      targetWord: king
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q01_roles_without_names_s3:
-    instruction: "אמרו באנגלית: מלך, מלכה ואביר"
+    instruction: 'אמרו באנגלית: מלך, מלכה ואביר'
     tasks:
-      - "לחצו על Hear it והקשיבו ל־<strong>king</strong>, ואז אמרו king — מלך"
-      - "הקשיבו ל־<strong>queen</strong>, ואז אמרו queen — מלכה"
-      - "הקשיבו ל־<strong>knight</strong>, ואז אמרו knight — אביר (האות K אינה נשמעת)"
-    target: "king, queen, knight"
-    variant: "repeat_after_npc"
-    success: "Gem אחד נוסף לתיק; שלושת שמות המלוכה נשמעו נכון"
+      - לחצו על Hear it והקשיבו ל־<strong>king</strong>, ואז אמרו king — מלך
+      - הקשיבו ל־<strong>queen</strong>, ואז אמרו queen — מלכה
+      - הקשיבו ל־<strong>knight</strong>, ואז אמרו knight — אביר (האות K אינה נשמעת)
+    target: king, queen, knight
+    variant: repeat_after_npc
+    success: Gem אחד נוסף לתיק; שלושת שמות המלוכה נשמעו נכון
     params:
-      prompt: "אמרו אחרי הדמות: king, queen, knight"
-      targetWords: ["king", "queen", "knight"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: 'אמרו באנגלית: מלך, מלכה ואביר'
+      targetWords:
+        - king
+        - queen
+        - knight
+      targetPhrase: king queen knight
+      silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q02_castle_on_the_map_s2:
-    instruction: "סדרו את האותיות כדי לשחזר את המילה טירה באנגלית"
+    instruction: סדרו את האותיות כדי לשחזר את המילה טירה באנגלית
     tasks:
-      - "גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות"
-      - "התעלמו מאותיות המסיחות"
-      - "קראו את המילה השלמה: <strong>castle</strong> — טירה"
-    target: "castle"
-    variant: "word_spelling"
-    success: "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה"
+      - גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות
+      - התעלמו מאותיות המסיחות
+      - 'קראו את המילה השלמה: <strong>castle</strong> — טירה'
+    target: castle
+    variant: word_spelling
+    success: הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה
     params:
-      prompt: "הוראה על המסך: תרשום castle (טירה)"
-      targetWord: "castle"
+      prompt: סדרו את האותיות כדי לשחזר את המילה טירה באנגלית
+      targetWord: castle
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q02_castle_on_the_map_s3:
-    instruction: "אמרו באנגלית: טירה, מגדל ושער"
+    instruction: 'אמרו באנגלית: טירה, מגדל ושער'
     tasks:
-      - "הקשיבו ואמרו <strong>castle</strong> — טירה"
-      - "הקשיבו ואמרו <strong>tower</strong> — מגדל"
-      - "הקשיבו ואמרו <strong>gate</strong> — שער"
-    target: "castle, tower, gate"
-    variant: "repeat_after_npc"
-    success: "Gem אחד נוסף לתיק; שלושת שמות המקומות נשמעו נכון"
+      - הקשיבו ואמרו <strong>castle</strong> — טירה
+      - הקשיבו ואמרו <strong>tower</strong> — מגדל
+      - הקשיבו ואמרו <strong>gate</strong> — שער
+    target: castle, tower, gate
+    variant: repeat_after_npc
+    success: Gem אחד נוסף לתיק; שלושת שמות המקומות נשמעו נכון
     params:
-      prompt: "אמרו אחרי הדמות: castle, tower, gate"
-      targetWords: ["castle", "tower", "gate"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: 'אמרו באנגלית: טירה, מגדל ושער'
+      targetWords:
+        - castle
+        - tower
+        - gate
+      targetPhrase: castle tower gate
+      silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q03_crown_soup_s2:
-    instruction: "סדרו את האותיות כדי לשחזר את המילה כתר באנגלית"
+    instruction: סדרו את האותיות כדי לשחזר את המילה כתר באנגלית
     tasks:
-      - "גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר"
-      - "בדקו שהמילה מתחילה ב־C ומסתיימת ב־N"
-      - "קראו את המילה: <strong>crown</strong> — כתר"
-    target: "crown"
-    variant: "word_spelling"
-    success: "הכתר מקבל בחזרה את הכרטיס CROWN"
+      - גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר
+      - בדקו שהמילה מתחילה ב־C ומסתיימת ב־N
+      - 'קראו את המילה: <strong>crown</strong> — כתר'
+    target: crown
+    variant: word_spelling
+    success: הכתר מקבל בחזרה את הכרטיס CROWN
     params:
-      prompt: "הוראה על המסך: תרשום crown (כתר)"
-      targetWord: "crown"
+      prompt: סדרו את האותיות כדי לשחזר את המילה כתר באנגלית
+      targetWord: crown
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q03_crown_soup_s3:
-    instruction: "אמרו באנגלית: כתר, כיסא־מלכות ואוצר"
+    instruction: 'אמרו באנגלית: כתר, כיסא־מלכות ואוצר'
     tasks:
-      - "הקשיבו ואמרו <strong>crown</strong> — כתר"
-      - "הקשיבו ואמרו <strong>throne</strong> — כיסא־מלכות (הצליל TH בתחילת המילה)"
-      - "הקשיבו ואמרו <strong>treasure</strong> — אוצר"
-    target: "crown, throne, treasure"
-    variant: "repeat_after_npc"
-    success: "Power Stone אחד נוסף לתיק; שלושת שמות האוצרות נשמעו נכון"
+      - הקשיבו ואמרו <strong>crown</strong> — כתר
+      - הקשיבו ואמרו <strong>throne</strong> — כיסא־מלכות (הצליל TH בתחילת המילה)
+      - הקשיבו ואמרו <strong>treasure</strong> — אוצר
+    target: crown, throne, treasure
+    variant: repeat_after_npc
+    success: Power Stone אחד נוסף לתיק; שלושת שמות האוצרות נשמעו נכון
     params:
-      prompt: "אמרו אחרי הדמות: crown, throne, treasure"
-      targetWords: ["crown", "throne", "treasure"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: 'אמרו באנגלית: כתר, כיסא־מלכות ואוצר'
+      targetWords:
+        - crown
+        - throne
+        - treasure
+      targetPhrase: crown throne treasure
+      silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q04_soup_shield_s2:
-    instruction: "סדרו את האותיות כדי לשחזר את המילה מגן באנגלית"
+    instruction: סדרו את האותיות כדי לשחזר את המילה מגן באנגלית
     tasks:
-      - "גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות"
-      - "שימו לב לצירוף <strong>sh</strong> בתחילת המילה"
-      - "קראו את המילה השלמה: <strong>shield</strong> — מגן"
-    target: "shield"
-    variant: "word_spelling"
-    success: "המגן (shield) חוזר להיות מגן במקום מגש מרק"
+      - גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות
+      - שימו לב לצירוף <strong>sh</strong> בתחילת המילה
+      - 'קראו את המילה השלמה: <strong>shield</strong> — מגן'
+    target: shield
+    variant: word_spelling
+    success: המגן (shield) חוזר להיות מגן במקום מגש מרק
     params:
-      prompt: "הוראה על המסך: תרשום shield (מגן)"
-      targetWord: "shield"
+      prompt: סדרו את האותיות כדי לשחזר את המילה מגן באנגלית
+      targetWord: shield
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q04_soup_shield_s3:
-    instruction: "אמרו באנגלית: חרב, מגן ומגילה"
+    instruction: 'אמרו באנגלית: חרב, מגן ומגילה'
     tasks:
-      - "הקשיבו ואמרו <strong>sword</strong> — חרב (האות W אינה נשמעת)"
-      - "הקשיבו ואמרו <strong>shield</strong> — מגן"
-      - "הקשיבו ואמרו <strong>scroll</strong> — מגילה"
-    target: "sword, shield, scroll"
-    variant: "repeat_after_npc"
-    success: "Power Stone אחד נוסף לתיק; שלושת שמות הנשקייה נשמעו נכון"
+      - הקשיבו ואמרו <strong>sword</strong> — חרב (האות W אינה נשמעת)
+      - הקשיבו ואמרו <strong>shield</strong> — מגן
+      - הקשיבו ואמרו <strong>scroll</strong> — מגילה
+    target: sword, shield, scroll
+    variant: repeat_after_npc
+    success: Power Stone אחד נוסף לתיק; שלושת שמות הנשקייה נשמעו נכון
     params:
-      prompt: "אמרו אחרי הדמות: sword, shield, scroll"
-      targetWords: ["sword", "shield", "scroll"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: 'אמרו באנגלית: חרב, מגן ומגילה'
+      targetWords:
+        - sword
+        - shield
+        - scroll
+      targetPhrase: sword shield scroll
+      silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q05_wizard_for_sale_s2:
-    instruction: "סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית"
+    instruction: סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית
     tasks:
-      - "גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות"
-      - "התעלמו מאותיות המסיחות"
-      - "קראו את המילה השלמה: <strong>wizard</strong> — קוסם"
-    target: "wizard"
-    variant: "word_spelling"
-    success: "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון"
+      - גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות
+      - התעלמו מאותיות המסיחות
+      - 'קראו את המילה השלמה: <strong>wizard</strong> — קוסם'
+    target: wizard
+    variant: word_spelling
+    success: הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון
     params:
-      prompt: "הוראה על המסך: תרשום wizard (קוסם)"
-      targetWord: "wizard"
+      prompt: סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית
+      targetWord: wizard
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q05_wizard_for_sale_s3:
-    instruction: "אמרו באנגלית: קוסם, טבח ושומר"
+    instruction: 'אמרו באנגלית: קוסם, טבח ושומר'
     tasks:
-      - "הקשיבו ואמרו <strong>wizard</strong> — קוסם"
-      - "הקשיבו ואמרו <strong>cook</strong> — טבח"
-      - "הקשיבו ואמרו <strong>guard</strong> — שומר"
-    target: "wizard, cook, guard"
-    variant: "repeat_after_npc"
-    success: "Power Stone אחד נוסף לתיק; שלושת שמות אנשי החצר נשמעו נכון"
+      - הקשיבו ואמרו <strong>wizard</strong> — קוסם
+      - הקשיבו ואמרו <strong>cook</strong> — טבח
+      - הקשיבו ואמרו <strong>guard</strong> — שומר
+    target: wizard, cook, guard
+    variant: repeat_after_npc
+    success: Power Stone אחד נוסף לתיק; שלושת שמות אנשי החצר נשמעו נכון
     params:
-      prompt: "אמרו אחרי הדמות: wizard, cook, guard"
-      targetWords: ["wizard", "cook", "guard"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: 'אמרו באנגלית: קוסם, טבח ושומר'
+      targetWords:
+        - wizard
+        - cook
+        - guard
+      targetPhrase: wizard cook guard
+      silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q06_dragon_identity_s2:
-    instruction: "סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית"
+    instruction: סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית
     tasks:
-      - "גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות"
-      - "התעלמו מאותיות המסיחות"
-      - "קראו את המילה השלמה: <strong>dragon</strong> — דרקון"
-    target: "dragon"
-    variant: "word_spelling"
-    success: "כרטיס DRAGON (דרקון) חוזר ליצור הנכון"
+      - גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות
+      - התעלמו מאותיות המסיחות
+      - 'קראו את המילה השלמה: <strong>dragon</strong> — דרקון'
+    target: dragon
+    variant: word_spelling
+    success: כרטיס DRAGON (דרקון) חוזר ליצור הנכון
     params:
-      prompt: "הוראה על המסך: תרשום dragon (דרקון)"
-      targetWord: "dragon"
+      prompt: סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית
+      targetWord: dragon
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q06_dragon_identity_s3:
-    instruction: "אמרו באנגלית: דרקון, גריפין וגובלין"
+    instruction: 'אמרו באנגלית: דרקון, גריפין וגובלין'
     tasks:
-      - "הקשיבו ואמרו <strong>dragon</strong> — דרקון"
-      - "הקשיבו ואמרו <strong>griffin</strong> — גריפין"
-      - "הקשיבו ואמרו <strong>goblin</strong> — גובלין"
-    target: "dragon, griffin, goblin"
-    variant: "repeat_after_npc"
-    success: "Ancient Rune אחד נוסף לתיק; שלושת שמות היצורים נשמעו נכון"
+      - הקשיבו ואמרו <strong>dragon</strong> — דרקון
+      - הקשיבו ואמרו <strong>griffin</strong> — גריפין
+      - הקשיבו ואמרו <strong>goblin</strong> — גובלין
+    target: dragon, griffin, goblin
+    variant: repeat_after_npc
+    success: Ancient Rune אחד נוסף לתיק; שלושת שמות היצורים נשמעו נכון
     params:
-      prompt: "אמרו אחרי הדמות: dragon, griffin, goblin"
-      targetWords: ["dragon", "griffin", "goblin"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: 'אמרו באנגלית: דרקון, גריפין וגובלין'
+      targetWords:
+        - dragon
+        - griffin
+        - goblin
+      targetPhrase: dragon griffin goblin
+      silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
-  q07_royal_noun_trial_s2:
-    instruction: "שחזרו באנגלית חמש מילים מוכרות מן הספר"
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q07_royal_noun_trial_castle:
+    instruction: סדרו את המילה טירה באנגלית
     tasks:
-      - "סדרו את המילה מלכה: <strong>queen</strong>"
-      - "סדרו את המילה טירה: <strong>castle</strong>"
-      - "סדרו את המילה כיסא־מלכות: <strong>throne</strong>"
-      - "סדרו את המילה מגן: <strong>shield</strong>"
-      - "סדרו את המילה דרקון: <strong>dragon</strong>"
-    target: "queen, castle, throne, shield, dragon"
-    variant: "word_spelling"
-    success: "חמש המילים חוזרות לעמוד האחרון של הספר"
+      - סדרו את המילה טירה באנגלית
+    target: castle
+    variant: word_spelling
+    success: CASTLE נכתב נכון
     params:
-      prompt: "הוראה על המסך: תרשום את המילים queen, castle, throne, shield, dragon"
-      targetWord: "queen"
-      extraDistractorCount: 3
+      prompt: סדרו את המילה טירה באנגלית
+      targetWord: castle
+      extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
-  q07_royal_noun_trial_s3:
-    instruction: "אמרו באנגלית מילה אחת מכל קבוצה"
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q07_royal_noun_trial_dragon:
+    instruction: סדרו את המילה דרקון באנגלית
     tasks:
-      - "הקשיבו פעם אחת, ואז אמרו <strong>knight</strong> — אביר"
-      - "אמרו <strong>castle</strong> — טירה"
-      - "אמרו <strong>shield</strong> — מגן"
-      - "אמרו <strong>dragon</strong> — דרקון"
-      - "בשלב האחרון אין שינוי של המילים — רק פחות תמיכה כדי לבדוק זכירה"
-    target: "knight, castle, shield, dragon"
-    variant: "single_word"
-    success: "Ancient Rune אחד נוסף לתיק; ספר ה־nouns של הממלכה נפתח בשלמותו"
+      - סדרו את המילה דרקון באנגלית
+    target: dragon
+    variant: word_spelling
+    success: DRAGON נכתב נכון
     params:
-      prompt: "אמרו בקול: knight, castle, shield, dragon"
-      targetWords: ["knight", "castle", "shield", "dragon"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: סדרו את המילה דרקון באנגלית
+      targetWord: dragon
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q07_royal_noun_trial_queen:
+    instruction: סדרו את המילה מלכה באנגלית
+    tasks:
+      - סדרו את המילה מלכה באנגלית
+    target: queen
+    variant: word_spelling
+    success: QUEEN נכתב נכון
+    params:
+      prompt: סדרו את המילה מלכה באנגלית
+      targetWord: queen
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q07_royal_noun_trial_s3:
+    instruction: אמרו באנגלית מילה אחת מכל קבוצה
+    tasks:
+      - הקשיבו פעם אחת, ואז אמרו <strong>knight</strong> — אביר
+      - אמרו <strong>castle</strong> — טירה
+      - אמרו <strong>shield</strong> — מגן
+      - אמרו <strong>dragon</strong> — דרקון
+      - בשלב האחרון אין שינוי של המילים — רק פחות תמיכה כדי לבדוק זכירה
+    target: knight, castle, shield, dragon
+    variant: single_word
+    success: Ancient Rune אחד נוסף לתיק; ספר ה־nouns של הממלכה נפתח בשלמותו
+    params:
+      prompt: אמרו באנגלית מילה אחת מכל קבוצה
+      targetWords:
+        - knight
+        - castle
+        - shield
+        - dragon
+      targetPhrase: knight castle shield dragon
+      silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q07_royal_noun_trial_shield:
+    instruction: סדרו את המילה מגן באנגלית
+    tasks:
+      - סדרו את המילה מגן באנגלית
+    target: shield
+    variant: word_spelling
+    success: SHIELD נכתב נכון
+    params:
+      prompt: סדרו את המילה מגן באנגלית
+      targetWord: shield
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q07_royal_noun_trial_throne:
+    instruction: סדרו את המילה כיסא־מלכות באנגלית
+    tasks:
+      - סדרו את המילה כיסא־מלכות באנגלית
+    target: throne
+    variant: word_spelling
+    success: THRONE נכתב נכון
+    params:
+      prompt: סדרו את המילה כיסא־מלכות באנגלית
+      targetWord: throne
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

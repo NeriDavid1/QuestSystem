@@ -1,53 +1,62 @@
 questline:
   id: kingdom_nouns
   npc_id: teacher_maya
-  display_name: "The Kingdom Book of Nouns"
-  theme: "Kingdom nouns through comic mix-ups — spell and speak (q01 level 50; rest level 1)"
+  display_name: The Kingdom Book of Nouns
+  theme: Kingdom nouns through comic mix-ups — spell and speak (q01 level 50; rest
+    level 1)
   quest_count: 7
-  level_range: [1, 50]
-
+  level_range:
+    - 1
+    - 50
 quests:
   - id: q01_roles_without_names
-    name: "Roles Without Names"
+    name: Roles Without Names
     level: 50
     prerequisite: null
-    rewards: { xp: 400, items: [] }
-
+    rewards:
+      xp: 400
+      items: []
   - id: q02_castle_on_the_map
-    name: "The Castle That Became a Tower"
+    name: The Castle That Became a Tower
     level: 1
     prerequisite: q01_roles_without_names
-    rewards: { xp: 450, items: [] }
-
+    rewards:
+      xp: 450
+      items: []
   - id: q03_crown_soup
-    name: "The Crown Soup"
+    name: The Crown Soup
     level: 1
     prerequisite: q02_castle_on_the_map
-    rewards: { xp: 500, items: [] }
-
+    rewards:
+      xp: 500
+      items: []
   - id: q04_soup_shield
-    name: "The Soup Shield"
+    name: The Soup Shield
     level: 1
     prerequisite: q03_crown_soup
-    rewards: { xp: 550, items: [] }
-
+    rewards:
+      xp: 550
+      items: []
   - id: q05_wizard_for_sale
-    name: "The Wizard in the Kitchen"
+    name: The Wizard in the Kitchen
     level: 1
     prerequisite: q04_soup_shield
-    rewards: { xp: 600, items: [] }
-
+    rewards:
+      xp: 600
+      items: []
   - id: q06_dragon_identity
-    name: "The Dragon Who Became a Goblin"
+    name: The Dragon Who Became a Goblin
     level: 1
     prerequisite: q05_wizard_for_sale
-    rewards: { xp: 650, items: [] }
-
+    rewards:
+      xp: 650
+      items: []
   - id: q07_royal_noun_trial
-    name: "The Royal Noun Trial"
+    name: The Royal Noun Trial
     level: 1
     prerequisite: q06_dragon_identity
     rewards:
       xp: 700
       items:
-        - { id: coin, amount: 10 }
+        - id: coin
+          amount: 10

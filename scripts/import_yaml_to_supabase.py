@@ -959,21 +959,47 @@ delete from public.catalog_entries;
 """
 
 
+_DOLLAR_TAG_RE = re.compile(r"\$(?:[A-Za-z_][A-Za-z0-9_]*)?\$")
+
+
 def split_sql_statements(sql: str, max_chars: int = 90000) -> list[str]:
-    """Split generated SQL without splitting semicolons inside string literals."""
+    """Split generated SQL without splitting semicolons inside string literals.
+
+    Handles both single-quoted literals (with '' escapes) and PostgreSQL
+    dollar-quoted strings ($tag$ ... $tag$, e.g. the `$seed$` JSON payloads),
+    so `;` inside JSON text does not break statements apart.
+    """
     statements: list[str] = []
     current: list[str] = []
     in_string = False
+    dollar_tag: str | None = None
     index = 0
-    while index < len(sql):
+    length = len(sql)
+    while index < length:
         char = sql[index]
+        if dollar_tag:
+            if sql.startswith(dollar_tag, index):
+                current.append(dollar_tag)
+                index += len(dollar_tag)
+                dollar_tag = None
+            else:
+                current.append(char)
+                index += 1
+            continue
         current.append(char)
         if char == "'":
-            if in_string and index + 1 < len(sql) and sql[index + 1] == "'":
+            if in_string and index + 1 < length and sql[index + 1] == "'":
                 current.append(sql[index + 1])
                 index += 1
             else:
                 in_string = not in_string
+        elif char == "$":
+            match = _DOLLAR_TAG_RE.match(sql, index)
+            if match:
+                tag = match.group(0)
+                dollar_tag = tag
+                current.append(tag[1:])
+                index += len(tag) - 1
         elif char == ";" and not in_string:
             statement = "".join(current).strip()
             if statement:
@@ -1022,6 +1048,19 @@ def write_outputs(bundle: dict[str, Any], output_dir: Path, report_path: Path, s
         encoding="utf-8",
     )
 
+    dialogue_batches = {
+        f"03_dialogues_{path.stem}.sql": insert_dialogues_sql(
+            bundle, str(path.relative_to(ROOT))
+        )
+        for path in sorted((REGISTRY / "dialogues").glob("*.yaml"))
+    }
+    minigame_batches = {
+        f"04_minigames_{path.stem}.sql": insert_minigames_sql(
+            bundle, str(path.relative_to(ROOT))
+        )
+        for path in sorted((REGISTRY / "minigame_instances").glob("*.yaml"))
+    }
+
     batches = {
         "00_reset.sql": reset_sql(),
         "01_catalog_area.sql": insert_catalog_sql(bundle, "area"),
@@ -1030,42 +1069,17 @@ def write_outputs(bundle: dict[str, Any], output_dir: Path, report_path: Path, s
         "01_catalog_item.sql": insert_catalog_sql(bundle, "item"),
         "01_catalog_minigame.sql": insert_catalog_sql(bundle, "minigame"),
         "02_step_types.sql": insert_step_types_sql(bundle),
-        "03_dialogues_adjective.sql": insert_dialogues_sql(
-            bundle, "_registry\\dialogues\\adjective_crown.yaml"
-        ),
-        "03_dialogues_teacher.sql": insert_dialogues_sql(
-            bundle, "_registry\\dialogues\\teacher_maya.yaml"
-        ),
-        "03_dialogues_nouns.sql": insert_dialogues_sql(
-            bundle, "_registry\\dialogues\\kingdom_nouns.yaml"
-        ),
-        "03_dialogues_blacksmith.sql": insert_dialogues_sql(
-            bundle, "_registry\\dialogues\\blacksmith.yaml"
-        ),
-        "04_minigames_adjective.sql": insert_minigames_sql(
-            bundle, "_registry\\minigame_instances\\adjective_crown.yaml"
-        ),
-        "04_minigames_maya.sql": insert_minigames_sql(
-            bundle, "_registry\\minigame_instances\\english_kingdom_maya.yaml"
-        ),
-        "04_minigames_blacksmith_nouns.sql": insert_minigames_sql(
-            bundle, "_registry\\minigame_instances\\blacksmith_will.yaml"
-        ),
-        "04_minigames_kingdom_nouns.sql": insert_minigames_sql(
-            bundle, "_registry\\minigame_instances\\kingdom_nouns.yaml"
-        ),
+        **dialogue_batches,
+        **minigame_batches,
         "05_questlines.sql": insert_questlines_sql(bundle),
         "06_quests.sql": insert_quests_sql(bundle),
         "07_steps.sql": insert_steps_sql(bundle),
         "08_edges_rewards.sql": insert_edges_and_rewards_sql(bundle),
         "09_revisions.sql": insert_revisions_sql(bundle),
     }
-    for old_file in sql_dir.glob("01_catalog*.sql"):
-        old_file.unlink()
-    for old_file in sql_dir.glob("03_dialogues*.sql"):
-        old_file.unlink()
-    for old_file in sql_dir.glob("04_minigames*.sql"):
-        old_file.unlink()
+    for prefix in ("01_catalog", "02_step_types", "03_dialogues", "04_minigames"):
+        for old_file in sql_dir.glob(f"{prefix}*.sql"):
+            old_file.unlink()
     for filename, content in batches.items():
         chunks = split_sql_statements(content)
         if len(chunks) == 1:

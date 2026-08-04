@@ -1,29 +1,33 @@
 quest:
   id: q02_whispering_stone
-  name: "The Whispering Stone"
+  name: The Whispering Stone
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q01_bridge_too_short
-  summary: "Say HOT in the forest, receive one Herbs item, and deliver it to Maya."
+  summary: Say HOT in the forest, receive one Herbs item, and deliver it to Maya.
   wait_for_npc_turn_in: false
-
-rewards: { xp: 100, items: [] }
-
+rewards:
+  xp: 100
+  items: []
 steps:
   - type: talk_to_npc
     npc_id: teacher_maya
     dialogue_id: adjective_water_man_herbs_request
   - type: reach_location
     location_id: TowerOfLostVigil
+    display_text: Reach TowerOfLostVigil
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
     difficulty: 2
     success_required: true
+    instance_id: q02_whispering_stone_s2
     reward_item_id: herbs
     reward_amount: 1
+    display_text: אמרו HOT בקול
   - type: deliver_item
     npc_id: teacher_maya
     item_id: herbs
     amount: 1
     dialogue_id: adjective_water_man_herbs_delivered
+    display_text: Deliver 1 herbs to Maya

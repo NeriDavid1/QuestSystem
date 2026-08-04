@@ -1,22 +1,22 @@
 quest:
   id: q04_twelve_basic_adjectives
-  name: "Twelve Basic Adjectives"
+  name: Twelve Basic Adjectives
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q03_big_and_small_words
-  summary: "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya."
+  summary: Complete twelve adjective minigames, receive twelve Ancient Runes, and
+    deliver all twelve to Maya.
   wait_for_npc_turn_in: false
-
-rewards: { xp: 225, items: [] }
-
+rewards:
+  xp: 225
+  items: []
 steps:
   - type: talk_to_npc
     npc_id: teacher_maya
     dialogue_id: adjective_knight_runes_request
-
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -25,9 +25,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_short
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: סדרו SHORT
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -36,9 +37,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_long
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: אמרו LONG
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -47,9 +49,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_cold
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: סדרו COLD
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -58,9 +61,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_hot
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: אמרו HOT
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -69,9 +73,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_big
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: סדרו BIG
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -80,9 +85,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_small
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: אמרו SMALL
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -91,9 +97,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_fast
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: סדרו FAST
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -102,9 +109,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_slow
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: אמרו SLOW
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -113,9 +121,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_low
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: סדרו LOW
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -124,9 +133,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_high
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: אמרו HIGH
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -135,9 +145,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_heavy
     reward_item_id: ancient_rune
     reward_amount: 1
+    display_text: סדרו HEAVY
   - type: reach_location
     location_id: The Weeping Stones
-
+    display_text: Reach The Weeping Stones
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Tomb_Stone_The_Weeping_Stones
@@ -146,9 +157,10 @@ steps:
     instance_id: q04_twelve_basic_adjectives_light
     reward_item_id: ancient_rune
     reward_amount: 1
-
+    display_text: אמרו LIGHT
   - type: deliver_item
     npc_id: teacher_maya
     item_id: ancient_rune
     amount: 12
     dialogue_id: adjective_knight_runes_delivered
+    display_text: Deliver 12 ancient rune to Maya

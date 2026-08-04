@@ -1,47 +1,56 @@
 quest:
   id: q06_adjective_challenge
-  name: "The Adjective Challenge"
+  name: The Adjective Challenge
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q05_from_low_to_high
-  summary: "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya."
+  summary: Complete three sprite-free matching games covering the twelve learned adjectives
+    (4 words each), receive one Gem on the last game, and deliver it to Maya.
   wait_for_npc_turn_in: false
-
 rewards:
   xp: 350
   items:
     - id: coin
       amount: 10
-
 steps:
   - type: talk_to_npc
     npc_id: teacher_maya
     dialogue_id: adjective_knight_gem_request
   - type: reach_location
     location_id: Sanctum of Whispering Light
-
+    display_text: Reach Sanctum of Whispering Light
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: 4
+    success_required: true
     instance_id: q06_adjective_challenge_s1
-    difficulty: 3
-    success_required: true
+    display_text: 'השלימו אותיות חסרות: SHORT LONG COLD HOT'
+  - type: reach_location
+    location_id: Sanctum of Whispering Light
+    display_text: Reach Sanctum of Whispering Light
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: 4
+    success_required: true
     instance_id: q06_adjective_challenge_s2
-    difficulty: 3
-    success_required: true
+    display_text: 'השלימו אותיות חסרות: BIG SMALL HEAVY LIGHT'
+  - type: reach_location
+    location_id: Sanctum of Whispering Light
+    display_text: Reach Sanctum of Whispering Light
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
-    instance_id: q06_adjective_challenge_s3
-    difficulty: 3
+    difficulty: 4
     success_required: true
+    instance_id: q06_adjective_challenge_s3
     reward_item_id: gem
     reward_amount: 1
+    display_text: 'השלימו אותיות חסרות: FAST SLOW LOW HIGH'
   - type: deliver_item
     npc_id: teacher_maya
     item_id: gem
     amount: 1
     dialogue_id: adjective_knight_gem_delivered
+    display_text: Deliver 1 gem to Maya

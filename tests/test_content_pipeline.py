@@ -36,7 +36,7 @@ class ContentPipelineTests(unittest.TestCase):
                 "quests": 26,
                 "steps": 155,
                 "errors": 0,
-                "warnings": 17,
+                "warnings": 0,
                 "info": 0,
             },
         )
@@ -76,7 +76,7 @@ class ContentPipelineTests(unittest.TestCase):
             for quest in questline["quests"]
         )
         self.assertEqual(prerequisites, 22)
-        self.assertEqual(rewards, 84)
+        self.assertEqual(rewards, 69)
 
     def test_report_and_generated_bundle_are_present(self):
         report = json.loads((ROOT / "reports" / "quest_import_report.json").read_text(encoding="utf-8"))

@@ -1,40 +1,41 @@
 quest:
   id: q05_wizard_for_sale
-  name: "The Wizard in the Kitchen"
+  name: The Wizard in the Kitchen
   level_required: 1
-  giver_npc: "Old Woman"
+  giver_npc: Old Woman
   prerequisite: q04_soup_shield
-  summary: "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman."
+  summary: WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver
+    a Power Stone to the Old Woman.
   wait_for_npc_turn_in: false
-
-rewards: { xp: 600, items: [] }
-
+rewards:
+  xp: 600
+  items: []
 steps:
   - type: talk_to_npc
-    npc_id: "Old Woman"
+    npc_id: Old Woman
     dialogue_id: nouns_old_woman_new_roles
-
   - type: reach_location
     location_id: TowerOfLostVigil
-
+    display_text: Reach TowerOfLostVigil
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    instance_id: q05_wizard_for_sale_s2
     difficulty: 5
     success_required: true
-
+    instance_id: q05_wizard_for_sale_s2
+    display_text: סדרו את האותיות של WIZARD
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    instance_id: q05_wizard_for_sale_s3
     difficulty: 6
     success_required: true
+    instance_id: q05_wizard_for_sale_s3
     reward_item_id: power_stone
     reward_amount: 1
-
+    display_text: 'אמרו באנגלית: קוסם, טבח ושומר'
   - type: deliver_item
-    npc_id: "Old Woman"
+    npc_id: Old Woman
     item_id: power_stone
     amount: 1
     dialogue_id: nouns_old_woman_roles_restored
+    display_text: Deliver 1 power stone to Old Woman

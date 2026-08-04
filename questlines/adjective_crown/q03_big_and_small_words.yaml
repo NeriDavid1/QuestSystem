@@ -1,42 +1,46 @@
 quest:
   id: q03_big_and_small_words
-  name: "Big and Small Words"
+  name: Big and Small Words
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q02_whispering_stone
-  summary: "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya."
+  summary: Complete BIG and say SMALL, receive two Corn items, and deliver both to
+    Maya.
   wait_for_npc_turn_in: false
-
-rewards: { xp: 150, items: [] }
-
+rewards:
+  xp: 150
+  items: []
 steps:
   - type: talk_to_npc
     npc_id: teacher_maya
     dialogue_id: adjective_grandmother_corn_request
   - type: reach_location
     location_id: The Sunspire Tree
-
+    display_text: Reach The Sunspire Tree
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest7_The_Sunspire_Tree
-    instance_id: q03_big_and_small_words_s1
     difficulty: 2
     success_required: true
+    instance_id: q03_big_and_small_words_s1
     reward_item_id: corn
     reward_amount: 1
+    display_text: סדרו את האותיות של BIG
   - type: reach_location
     location_id: The Sunspire Tree
-
+    display_text: Reach The Sunspire Tree
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest7_The_Sunspire_Tree
-    instance_id: q03_big_and_small_words_s2
     difficulty: 2
     success_required: true
+    instance_id: q03_big_and_small_words_s2
     reward_item_id: corn
     reward_amount: 1
+    display_text: אמרו SMALL בקול
   - type: deliver_item
     npc_id: teacher_maya
     item_id: corn
     amount: 2
     dialogue_id: adjective_grandmother_corn_delivered
+    display_text: Deliver 2 corn to Maya

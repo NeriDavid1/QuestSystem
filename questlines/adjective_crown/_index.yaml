@@ -1,44 +1,55 @@
 questline:
   id: adjective_crown
   npc_id: teacher_maya
-  display_name: "The Adjective Crown"
-  theme: "Basic English adjectives through completion, speaking, and final matching games"
+  display_name: The Adjective Crown
+  theme: Basic English adjectives through completion, speaking, and final matching
+    games
   quest_count: 6
-  level_range: [1, 10]
-
+  level_range:
+    - 1
+    - 1
 quests:
   - id: q01_bridge_too_short
-    name: "The Bridge Is Too Short"
+    name: The Bridge Is Too Short
     level: 1
     prerequisite: null
-    rewards: { xp: 50, items: [] }
-
+    rewards:
+      xp: 50
+      items: []
   - id: q02_whispering_stone
-    name: "The Whispering Stone"
+    name: The Whispering Stone
     level: 1
     prerequisite: q01_bridge_too_short
-    rewards: { xp: 100, items: [] }
-
+    rewards:
+      xp: 100
+      items: []
   - id: q03_big_and_small_words
-    name: "Big and Small Words"
+    name: Big and Small Words
     level: 1
     prerequisite: q02_whispering_stone
-    rewards: { xp: 150, items: [] }
-
+    rewards:
+      xp: 150
+      items: []
   - id: q04_twelve_basic_adjectives
-    name: "Twelve Basic Adjectives"
+    name: Twelve Basic Adjectives
     level: 1
     prerequisite: q03_big_and_small_words
-    rewards: { xp: 225, items: [] }
-
+    rewards:
+      xp: 225
+      items: []
   - id: q05_from_low_to_high
-    name: "From Low to High"
+    name: From Low to High
     level: 1
     prerequisite: q04_twelve_basic_adjectives
-    rewards: { xp: 275, items: [] }
-
+    rewards:
+      xp: 275
+      items: []
   - id: q06_adjective_challenge
-    name: "The Adjective Challenge"
+    name: The Adjective Challenge
     level: 1
     prerequisite: q05_from_low_to_high
-    rewards: { xp: 350, items: [{ id: coin, amount: 10 }] }
+    rewards:
+      xp: 350
+      items:
+        - id: coin
+          amount: 10

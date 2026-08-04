@@ -1,52 +1,64 @@
 quest:
   id: q05_from_low_to_high
-  name: "From Low to High"
+  name: From Low to High
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q04_twelve_basic_adjectives
-  summary: "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya."
+  summary: Complete four LOW/HIGH word activities, receive four Power Stones, and
+    deliver them to Maya.
   wait_for_npc_turn_in: false
-
-rewards: { xp: 275, items: [] }
-
+rewards:
+  xp: 275
+  items: []
 steps:
   - type: talk_to_npc
     npc_id: teacher_maya
     dialogue_id: adjective_knight_power_stones_request
   - type: reach_location
     location_id: The Last Roar
+    display_text: Reach The Last Roar
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 2
     success_required: true
+    instance_id: q05_from_low_to_high_s2
     reward_item_id: power_stone
     reward_amount: 1
+    display_text: סדרו LOW
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 3
     success_required: true
+    instance_id: q05_from_low_to_high_s3
     reward_item_id: power_stone
     reward_amount: 1
+    display_text: סדרו את המשפט THE PLACE IS LOW
   - type: reach_location
     location_id: The Last Roar
+    display_text: Reach The Last Roar
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 2
     success_required: true
+    instance_id: q05_from_low_to_high_s5
     reward_item_id: power_stone
     reward_amount: 1
+    display_text: סדרו HIGH
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest6_The_Last_Roar
     difficulty: 3
     success_required: true
+    instance_id: q05_from_low_to_high_s6
     reward_item_id: power_stone
     reward_amount: 1
+    display_text: סדרו את המשפט THE BUILDING IS HIGH
   - type: deliver_item
     npc_id: teacher_maya
     item_id: power_stone
     amount: 4
     dialogue_id: adjective_knight_power_stones_delivered
+    display_text: Deliver 4 power stone to Maya

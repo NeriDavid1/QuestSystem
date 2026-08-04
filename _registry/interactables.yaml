@@ -1,281 +1,232 @@
-# Interactable registry — IDs must match Unity InteractableCatalog_OpenWorld.
-# play_minigame.world_object_id must be the world station gameId (chest/cart/camp/table),
-# NOT a semantic stub like letter_ordering_long, unless that stub is the actual Unity gameId.
-#
-# kind: collectible (0) | minigame (1) | custom (2)  — Unity InteractableCatalogKind
-# status: live_used = used by authored quest steps | catalog_stub = catalog only
-
+# Interactable registry exported from Unity InteractableCatalog_OpenWorld.
+# play_minigame.world_object_id must be a world station gameId.
 interactables:
-
-  # ── Semantic / catalog stubs (content labels; prefer Open World stations for steps) ──
-
   mystery_egg:
-    name: "Mystery Egg"
+    name: Mystery Egg
     kind: collectible
     status: catalog_stub
-    description: "Collectible catalog stub."
-
+    description: Collectible catalog stub.
   letter_drawing_a:
-    name: "Draw Letter A"
+    name: Draw Letter A
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Small_Shop_Moonriver."
-
+    description: Semantic stub — Maya uses Small_Shop_Moonriver.
   letter_drawing_b:
-    name: "Draw Letter B"
+    name: Draw Letter B
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Lost_Chest1_BuildersHomeArea."
-
+    description: Semantic stub — Maya uses Lost_Chest1_BuildersHomeArea.
   letter_drawing_c:
-    name: "Draw Letter C"
+    name: Draw Letter C
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Lost_Chest2_Driftgold_Bay."
-
+    description: Semantic stub — Maya uses Lost_Chest2_Driftgold_Bay.
   letter_drawing_f:
-    name: "Draw Letter F"
+    name: Draw Letter F
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Wooden_Cart1_Inside_Gate."
-
+    description: Semantic stub — Maya uses Wooden_Cart1_Inside_Gate.
   letter_drawing_j:
-    name: "Draw Letter J"
+    name: Draw Letter J
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses WoodenCart2_Solitude_Tower."
-
+    description: Semantic stub — Maya uses WoodenCart2_Solitude_Tower.
   word_matching_d:
-    name: "Match DOG Letters"
+    name: Match DOG Letters
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Exam_Table_Fairy_Rose_Park."
-
+    description: Semantic stub — Maya uses Exam_Table_Fairy_Rose_Park.
   word_matching_g:
-    name: "Genius Gate Words"
+    name: Genius Gate Words
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Exam_Table1_Outside_Gate."
-
+    description: Semantic stub — Maya uses Exam_Table1_Outside_Gate.
   word_matching_i:
-    name: "Letter Island Match"
+    name: Letter Island Match
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court."
-
+    description: Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.
   letter_ordering_egg:
-    name: "Spell EGG"
+    name: Spell EGG
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Lost_Chest3_Forsaken_Cove."
-
+    description: Semantic stub — Maya uses Lost_Chest3_Forsaken_Cove.
   letter_ordering_h:
-    name: "Spell HAT"
+    name: Spell HAT
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Lost_Chest4_Sanctum_Of_Whispering_Light."
-
+    description: Semantic stub — Maya uses Lost_Chest4_Sanctum_Of_Whispering_Light.
   letter_ordering_i:
-    name: "Spell ISLAND"
+    name: Spell ISLAND
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court."
-
+    description: Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.
   speak_aloud_j:
-    name: "Speak Letter J"
+    name: Speak Letter J
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — Maya uses WoodenCart2_Solitude_Tower."
-
+    description: Semantic stub — Maya uses WoodenCart2_Solitude_Tower.
   speak_aloud_hot:
-    name: "Speak word HOT"
+    name: Speak word HOT
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — live q02 uses Fire_Camp_Tower_Of_Lost_Vigil."
-
+    description: Semantic stub — live q02 uses Fire_Camp_Tower_Of_Lost_Vigil.
   letter_ordering_long:
-    name: "Spell word LONG"
+    name: Spell word LONG
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — live q01 uses WoodenCart3_The_Oath_stone_Bridge."
-
+    description: Semantic stub — live q01 uses WoodenCart3_The_Oath_stone_Bridge.
   letter_ordering_small:
-    name: "Spell word SMALL"
+    name: Spell word SMALL
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — live q03 uses Lost_Chest7_The_Sunspire_Tree."
-
+    description: Semantic stub — live q03 uses Lost_Chest7_The_Sunspire_Tree.
   letter_ordering_slow:
-    name: "Spell word SLOW"
+    name: Spell word SLOW
     kind: minigame
     status: catalog_stub
-    description: "Semantic letter-ordering stub."
-
+    description: Semantic letter-ordering stub.
   speak_aloud_slow:
-    name: "Speak word SLOW"
+    name: Speak word SLOW
     kind: minigame
     status: catalog_stub
-    description: "Semantic speak-aloud stub."
-
+    description: Semantic speak-aloud stub.
   letter_ordering_light:
-    name: "Choose word LIGHT"
+    name: Choose word LIGHT
     kind: minigame
     status: catalog_stub
-    description: "Semantic letter-ordering stub."
-
+    description: Semantic letter-ordering stub.
   word_matching_adjective_crown:
-    name: "Adjective matching test"
+    name: Adjective matching test
     kind: minigame
     status: catalog_stub
-    description: "Semantic stub — live q06 uses Lost_Chest4_Sanctum_Of_Whispering_Light."
-
+    description: Semantic stub — live q06 uses Lost_Chest4_Sanctum_Of_Whispering_Light.
   letter_ordering_adjective_crown:
-    name: "Adjective spelling test"
+    name: Adjective spelling test
     kind: minigame
     status: catalog_stub
-    description: "Semantic adjective spelling stub."
-
+    description: Semantic adjective spelling stub.
   speak_aloud_adjective_crown:
-    name: "Spoken adjective test"
+    name: Spoken adjective test
     kind: minigame
     status: catalog_stub
-    description: "Semantic spoken adjective stub."
-
+    description: Semantic spoken adjective stub.
   small_sheep:
-    name: "Small Sheep"
+    name: Small Sheep
     kind: collectible
     status: catalog_stub
-    description: "Small sheep collectible stub."
-
+    description: Small sheep collectible stub.
   adjective_small_zombie:
-    name: "Small Zombie"
+    name: Small Zombie
     kind: collectible
     status: catalog_stub
-    description: "Catalog collectible — no DefeatEnemy objective in live system."
-
+    description: Catalog collectible — no DefeatEnemy objective in live system.
   adjective_small_guardian:
-    name: "Small Guardian"
+    name: Small Guardian
     kind: collectible
     status: catalog_stub
-    description: "Catalog collectible — no DefeatEnemy objective in live system."
-
-  # ── Open World stations (use these as world_object_id) ───────────────────
-
+    description: Catalog collectible — no DefeatEnemy objective in live system.
   Small_Shop_Moonriver:
-    name: "Small Shop"
+    name: Small Shop
     kind: minigame
     status: live_used
     area: MoonriverCottage
-    description: "Shop station at Moonriver Cottage."
-
+    description: Shop station at Moonriver Cottage.
   Lost_Chest7_The_Sunspire_Tree:
     image: images/interactables/Lost_Chest7_The_Sunspire_Tree.png
-    name: "Lost Chest 7"
+    name: Lost Chest 7
     kind: minigame
     status: live_used
-    area: "The Sunspire Tree"
-    description: "Chest station at The Sunspire Tree (big/small games)."
-
+    area: The Sunspire Tree
+    description: Chest station at The Sunspire Tree (big/small games).
   WoodenCart3_The_Oath_stone_Bridge:
     image: images/interactables/WoodenCart3_The_Oath_stone_Bridge.png
-    name: "Wooden Cart 3"
+    name: Wooden Cart 3
     kind: minigame
     status: live_used
-    area: "The Oathstone Bridge"
-    description: "Cart station on The Oathstone Bridge (LONG spelling)."
-
+    area: The Oathstone Bridge
+    description: Cart station on The Oathstone Bridge (LONG spelling).
   Lost_Chest6_The_Last_Roar:
     image: images/interactables/Lost_Chest6_The_Last_Roar.png
-    name: "Lost Chest 6"
+    name: Lost Chest 6
     kind: minigame
     status: live_used
-    area: "The Last Roar"
-    description: "Chest station at The Last Roar (low/high games)."
-
+    area: The Last Roar
+    description: Chest station at The Last Roar (low/high games).
   Lost_Chest1_BuildersHomeArea:
     image: images/interactables/Lost_Chest1_BuildersHomeArea.png
-    name: "Lost Chest 1"
+    name: Lost Chest 1
     kind: minigame
     status: live_used
     area: BuildersHome
-    description: "Chest station at Builders Home."
-
+    description: Chest station at Builders Home.
   Lost_Chest2_Driftgold_Bay:
     image: images/interactables/Lost_Chest2_Driftgold_Bay.png
-    name: "Lost Chest 2"
+    name: Lost Chest 2
     kind: minigame
     status: live_used
-    area: "Driftgold Bay"
-    description: "Chest station at Driftgold Bay."
-
+    area: Driftgold Bay
+    description: Chest station at Driftgold Bay.
   Exam_Table_Fairy_Rose_Park:
     image: images/interactables/Exam_Table_Fairy_Rose_Park.png
-    name: "Exam Table"
+    name: Exam Table
     kind: minigame
     status: live_used
     area: FairyRosePark
-    description: "Exam table in Fairy Rose Park."
-
+    description: Exam table in Fairy Rose Park.
   Fire_Camp_Tower_Of_Lost_Vigil:
     image: images/interactables/Fire_Camp_Tower_Of_Lost_Vigil.png
-    name: "Fire Camp"
+    name: Fire Camp
     kind: minigame
     status: live_used
     area: TowerOfLostVigil
-    description: "Fire camp at Tower of Lost Vigil (HOT speaking)."
-
+    description: Fire camp at Tower of Lost Vigil (HOT speaking).
   Tomb_Stone_The_Weeping_Stones:
     image: images/interactables/Tomb_Stone_The_Weeping_Stones.png
-    name: "Tomb Stone"
+    name: Tomb Stone
     kind: minigame
     status: live_used
-    area: "The Weeping Stones"
-    description: "Tombstone station for twelve basic adjectives."
-
+    area: The Weeping Stones
+    description: Tombstone station for twelve basic adjectives.
   Lost_Chest3_Forsaken_Cove:
     image: images/interactables/Lost_Chest3_Forsaken_Cove.png
-    name: "Lost Chest 3"
+    name: Lost Chest 3
     kind: minigame
     status: live_used
-    area: "Forsaken Cove"
-    description: "Chest station at Forsaken Cove."
-
+    area: Forsaken Cove
+    description: Chest station at Forsaken Cove.
   Wooden_Cart1_Inside_Gate:
     image: images/interactables/Wooden_Cart1_Inside_Gate.png
-    name: "Wooden Cart 1"
+    name: Wooden Cart 1
     kind: minigame
     status: live_used
     area: KingdomGate
-    description: "Cart station inside the Kingdom Gate."
-
+    description: Cart station inside the Kingdom Gate.
   Exam_Table1_Outside_Gate:
     image: images/interactables/Exam_Table1_Outside_Gate.png
-    name: "Exam Table 1"
+    name: Exam Table 1
     kind: minigame
     status: live_used
     area: KingdomGate
-    description: "Exam table outside the Kingdom Gate."
-
+    description: Exam table outside the Kingdom Gate.
   Lost_Chest4_Sanctum_Of_Whispering_Light:
     image: images/interactables/Lost_Chest4_Sanctum_Of_Whispering_Light.png
-    name: "Lost Chest 4"
+    name: Lost Chest 4
     kind: minigame
     status: live_used
-    area: "Sanctum of Whispering Light"
-    description: "Chest station for the final adjective challenge."
-
+    area: Sanctum of Whispering Light
+    description: Chest station for the final adjective challenge.
   Lost_Chest5_Silver_Fountain_Court:
     image: images/interactables/Lost_Chest5_Silver_Fountain_Court.png
-    name: "Lost Chest 5"
+    name: Lost Chest 5
     kind: minigame
     status: live_used
     area: SilverFountainCourt
-    description: "Chest station at Silver Fountain Court."
-
+    description: Chest station at Silver Fountain Court.
   WoodenCart2_Solitude_Tower:
     image: images/interactables/WoodenCart2_Solitude_Tower.png
-    name: "Wooden Cart 2"
+    name: Wooden Cart 2
     kind: minigame
     status: live_used
-    area: "Solitude Tower"
-    description: "Cart station at Solitude Tower."
+    area: Solitude Tower
+    description: Cart station at Solitude Tower.

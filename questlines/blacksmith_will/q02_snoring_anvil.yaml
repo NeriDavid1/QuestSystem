@@ -1,29 +1,34 @@
 quest:
   id: q02_snoring_anvil
-  name: "The Snoring Anvil"
+  name: The Snoring Anvil
   level_required: 1
   giver_npc: Blacksmith
   prerequisite: q01_runaway_hammer
-  summary: "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs."
+  summary: The anvil only wakes for a dog story — spell DOG at Builders Home, bring
+    back one Herbs.
   wait_for_npc_turn_in: true
-
-rewards: { xp: 75, items: [] }
-
+rewards:
+  xp: 75
+  items: []
 steps:
   - type: talk_to_npc
     npc_id: Blacksmith
     dialogue_id: will_snoring_anvil_start
   - type: reach_location
     location_id: BuildersHome
+    display_text: Reach BuildersHome
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest1_BuildersHomeArea
     difficulty: 1
     success_required: true
+    instance_id: q02_snoring_anvil_s2
     reward_item_id: herbs
     reward_amount: 1
+    display_text: תסדר את המילה כלב באנגלית
   - type: deliver_item
     npc_id: Blacksmith
     item_id: herbs
     amount: 1
     dialogue_id: will_snoring_anvil_done
+    display_text: Deliver 1 herbs to Will

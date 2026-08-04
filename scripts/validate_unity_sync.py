@@ -89,7 +89,44 @@ def load_unity_yaml(path: Path) -> dict[str, Any]:
     return mono if isinstance(mono, dict) else {}
 
 
-def parse_quest_definition(path: Path) -> dict[str, Any] | None:
+def build_guid_index(unity_root: Path) -> dict[str, Path]:
+    """Map asset guid -> path by scanning .meta files under a Unity folder."""
+    import re as _re
+
+    index: dict[str, Path] = {}
+    for meta in unity_root.rglob("*.meta"):
+        try:
+            text = meta.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        match = _re.search(r"^guid:\s*([0-9a-fA-F]{32})\s*$", text, _re.MULTILINE)
+        if match:
+            index[match.group(1).lower()] = meta.parent / meta.stem
+    return index
+
+
+def parse_reward_definition(path: Path) -> list[dict[str, Any]]:
+    """Extract item rewards granted by a RewardDefinitionSO asset bundle."""
+    data = load_unity_yaml(path)
+    bundle = data.get("bundle") or {}
+    rewards: list[dict[str, Any]] = []
+    for item in bundle.get("items") or []:
+        if isinstance(item, dict) and item.get("itemId") is not None:
+            rewards.append(
+                {
+                    "itemId": item["itemId"],
+                    "amount": int(item.get("count") or item.get("amount") or 1),
+                }
+            )
+    for coin in bundle.get("legacyCoins") or []:
+        if isinstance(coin, dict):
+            rewards.append({"itemId": "coin", "amount": int(coin.get("amount") or 1)})
+    for _ability in bundle.get("abilities") or []:
+        rewards.append({"itemId": "slash_ability", "amount": 1})
+    return rewards
+
+
+def parse_quest_definition(path: Path, guid_index: dict[str, Path] | None = None) -> dict[str, Any] | None:
     """Extract the authoring-relevant fields from a QuestDefinitionSO .asset."""
     data = load_unity_yaml(path)
     quest_id = data.get("id")
@@ -118,6 +155,12 @@ def parse_quest_definition(path: Path) -> dict[str, Any] | None:
         )
 
     rewards = data.get("rewards") or {}
+    reward_definition_items: list[dict[str, Any]] = []
+    reward_definition = data.get("rewardDefinition")
+    if isinstance(reward_definition, dict) and reward_definition.get("guid") and guid_index:
+        reward_path = guid_index.get(str(reward_definition["guid"]).lower())
+        if reward_path and reward_path.is_file():
+            reward_definition_items = parse_reward_definition(reward_path)
     return {
         "path": str(path.relative_to(Path(DEFAULT_UNITY_ROOT))),
         "id": quest_id,
@@ -135,6 +178,7 @@ def parse_quest_definition(path: Path) -> dict[str, Any] | None:
             for item in (rewards.get("items") or [])
             if isinstance(item, dict) and item.get("itemId")
         ],
+        "rewardDefinitionItems": reward_definition_items,
         "objectives": objectives,
     }
 
@@ -144,8 +188,9 @@ def collect_unity_quests(unity_root: Path) -> dict[str, dict[str, Any]]:
     quests: dict[str, dict[str, Any]] = {}
     if not unity_root.is_dir():
         return quests
+    guid_index = build_guid_index(unity_root)
     for asset in sorted(unity_root.glob("*/QuestDefinition_*.asset")):
-        definition = parse_quest_definition(asset)
+        definition = parse_quest_definition(asset, guid_index=guid_index)
         if not definition:
             continue
         line_key = asset.parent.name
@@ -224,6 +269,29 @@ def softkitty_id_for(item_id: str, items: dict[str, dict[str, Any]]) -> int | No
         return None
 
 
+def resolve_item_key(item_id: Any, items: dict[str, dict[str, Any]]) -> str:
+    """Map a Unity item id (numeric softkitty id or authoring key) to the YAML key."""
+    if isinstance(item_id, str):
+        if item_id in items:
+            return item_id
+        try:
+            numeric = int(item_id)
+        except ValueError:
+            return item_id
+        item_id = numeric
+    if isinstance(item_id, int):
+        for key, meta in items.items():
+            raw = meta.get("softkitty_id") if isinstance(meta, dict) else None
+            if raw is None:
+                continue
+            try:
+                if int(raw) == item_id:
+                    return key
+            except (TypeError, ValueError):
+                continue
+    return str(item_id)
+
+
 def compare_quest(
     line_key: str,
     bundle_quest: dict[str, Any],
@@ -296,15 +364,20 @@ def compare_quest(
             yaml=yaml_xp,
             unity=unity_quest["rewardsXp"],
         )
-    unity_items = {item["itemId"]: item["amount"] for item in unity_quest["rewardsItems"]}
-    # Item rewards may be granted through a RewardDefinitionSO asset reference
-    # instead of inline items, so a strict inline comparison is unreliable.
-    unity_items = {item["itemId"]: item["amount"] for item in unity_quest["rewardsItems"]}
+    # Item rewards may be granted inline, via a RewardDefinitionSO asset, or
+    # through a mix of both; resolve all sources into the authoring key space.
+    unity_items: dict[str, int] = {}
+    for item in unity_quest["rewardsItems"]:
+        key = resolve_item_key(item["itemId"], items)
+        unity_items[key] = unity_items.get(key, 0) + int(item["amount"] or 1)
+    for item in unity_quest.get("rewardDefinitionItems") or []:
+        key = resolve_item_key(item["itemId"], items)
+        unity_items[key] = unity_items.get(key, 0) + int(item["amount"] or 1)
     if yaml_items and yaml_items != unity_items:
         issue(
             "warning",
             "item_reward_mismatch",
-            "Quest item rewards are declared in authoring source but not as inline rewards in the Unity asset (may be granted via rewardDefinition).",
+            "Quest item rewards differ between authoring source and Unity asset (including rewardDefinition grants).",
             yaml=yaml_items,
             unity=unity_items,
         )

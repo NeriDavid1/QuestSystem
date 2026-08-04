@@ -1,201 +1,180 @@
-# NPC registry — IDs must match Unity NpcCatalog_OpenWorld exactly.
+# NPC registry exported from Unity NpcCatalog_OpenWorld.
 # Use the key as npc_id in quest steps (not the display name).
-# Some IDs contain spaces or typos (e.g. "City Gaurd Info") — copy them exactly.
-
 npcs:
-
   teacher_maya:
     image: images/npcs/teacher_maya.png
-    name: "Teacher Maya"
-    title: "English Teacher"
-    location: "Alphabet Plaza"
-    description: "Cheerful teacher who sends kids on letter and word adventures."
-
+    name: Teacher Maya
+    title: English Teacher
+    location: Alphabet Plaza
+    description: Cheerful teacher who sends kids on letter and word adventures.
   Blacksmith:
     image: images/npcs/Blacksmith.png
-    name: "Will The Smith"
-    title: "Blacksmith"
-    location: "BuildersHome"
-    description: "Friendly smith who fixes tools and loves loud hammering."
-
-  "City Gaurd Info":
+    name: Will The Smith
+    title: Blacksmith
+    location: BuildersHome
+    description: Friendly smith who fixes tools and loves loud hammering.
+  City Gaurd Info:
     image: images/npcs/City Gaurd Info.png
-    name: "Fenn the Chatty"
-    title: "City Guard"
-    location: "KingdomGate"
-    description: "Talkative guard who knows every rumor in town."
-
-  "Main Gate Gaurd 1":
+    name: Fenn the Chatty
+    title: City Guard
+    location: KingdomGate
+    description: Talkative guard who knows every rumor in town.
+  Main Gate Gaurd 1:
     image: images/npcs/Main Gate Gaurd 1.png
-    name: "Tomlin the Yawner"
-    title: "Gate Guard"
-    location: "KingdomGate"
-    description: "Sleepy gate guard who still somehow spots trouble."
-
-  "Main Gate Gaurd 2":
+    name: Tomlin the Yawner
+    title: Gate Guard
+    location: KingdomGate
+    description: Sleepy gate guard who still somehow spots trouble.
+  Main Gate Gaurd 2:
     image: images/npcs/Main Gate Gaurd 2.png
-    name: "Garrick the Unmoving"
-    title: "Gate Guard"
-    location: "KingdomGate"
-    description: "Serious guard who almost never leaves his post."
-
+    name: Garrick the Unmoving
+    title: Gate Guard
+    location: KingdomGate
+    description: Serious guard who almost never leaves his post.
   Fisherman:
     image: images/npcs/Fisherman.png
-    name: "Nemo the Netless"
-    title: "Fisherman"
-    location: "Driftgold Bay"
-    description: "Fisherman who keeps losing his nets and asking for help."
-
+    name: Nemo the Netless
+    title: Fisherman
+    location: Driftgold Bay
+    description: Fisherman who keeps losing his nets and asking for help.
   Ghost:
     image: images/npcs/Ghost.png
-    name: "Boo Radcliff"
-    title: "Ghost"
-    location: "The Weeping Stones"
-    description: "Friendly ghost who haunts quiet places and loves surprises."
-
+    name: Boo Radcliff
+    title: Ghost
+    location: The Weeping Stones
+    description: Friendly ghost who haunts quiet places and loves surprises.
   adjective_knight:
-    name: "Adjective Knight"
-    title: "Adjective Knight"
-    location: "adjective_crown_shrine"
-    description: "Brave knight who teaches describing words like big, hot, and slow."
-
+    name: Adjective Knight
+    title: Adjective Knight
+    location: adjective_crown_shrine
+    description: Brave knight who teaches describing words like big, hot, and slow.
   adjective_water_man:
-    name: "Water Man"
-    title: "Water Man"
-    location: "adjective_frozen_spring"
-    description: "Quiet helper who watches springs and water paths."
-
+    name: Water Man
+    title: Water Man
+    location: adjective_frozen_spring
+    description: Quiet helper who watches springs and water paths.
   adjective_grandmother:
-    name: "Grandmother"
-    title: "Grandmother"
-    location: "adjective_mixed_meadow"
-    description: "Kind grandmother who cares for meadow animals and corn."
-
+    name: Grandmother
+    title: Grandmother
+    location: adjective_mixed_meadow
+    description: Kind grandmother who cares for meadow animals and corn.
   adjective_village_chief:
-    name: "Village Chief"
-    title: "Village Chief"
-    location: "adjective_village_gate"
-    description: "Village leader who keeps the gate safe and tidy."
-
+    name: Village Chief
+    title: Village Chief
+    location: adjective_village_gate
+    description: Village leader who keeps the gate safe and tidy.
   adjective_crazy_old_man:
-    name: "Crazy Old Man"
-    title: "Crazy Old Man"
-    location: "adjective_trade_road"
-    description: "Odd old man who notices every strange thing on the road."
-
+    name: Crazy Old Man
+    title: Crazy Old Man
+    location: adjective_trade_road
+    description: Odd old man who notices every strange thing on the road.
   adjective_grandfather:
-    name: "Grandfather"
-    title: "Grandfather"
-    location: "adjective_royal_lift"
-    description: "Gentle grandfather who runs the royal lift."
-
-  "Benny the Builder":
+    name: Grandfather
+    title: Grandfather
+    location: adjective_royal_lift
+    description: Gentle grandfather who runs the royal lift.
+  Benny the Builder:
     image: images/npcs/Benny the Builder.png
-    name: "Benny the Builder"
-    title: "Builder"
-    location: "BuildersHome"
-    description: "Hard-working builder who always needs more wood and help."
-
+    name: Benny the Builder
+    title: Builder
+    location: BuildersHome
+    description: Hard-working builder who always needs more wood and help.
   Cannoneer:
     image: images/npcs/Cannoneer.png
-    name: "Cannoneer"
-    title: "Cannoneer"
-    location: "Forsaken Cove"
-    description: "Loud cannoneer who guards the cove and loves big booms."
-
-  "Secondary Gate Soldier":
+    name: Cannoneer
+    title: Cannoneer
+    location: Forsaken Cove
+    description: Loud cannoneer who guards the cove and loves big booms.
+  Secondary Gate Soldier:
     image: images/npcs/Secondary Gate Soldier.png
-    name: "Secondary Gate Soldier"
-    title: "Gate Soldier"
-    location: "KingdomGate"
-    description: "Young soldier watching the side gate."
-
-  "Secondary Gate Main":
+    name: Secondary Gate Soldier
+    title: Gate Soldier
+    location: KingdomGate
+    description: Young soldier watching the side gate.
+  Secondary Gate Main:
     image: images/npcs/Secondary Gate Main.png
-    name: "Secondary Gate Main"
-    title: "Gate Captain"
-    location: "KingdomGate"
-    description: "Senior guard in charge of the side gate."
-
-  "Old Man":
+    name: Secondary Gate Main
+    title: Gate Captain
+    location: KingdomGate
+    description: Senior guard in charge of the side gate.
+  Palace Guard:
+    name: Palace Guard
+  Dark Wizard:
+    name: Dark Wizard
+  Old Man:
     image: images/npcs/Old Man.png
-    name: "Old Man"
-    title: "Old Man"
-    location: "MoonriverCottage"
-    description: "Wise old man who sits by the cottage and tells short stories."
-
-  "Village Head":
+    name: Old Man
+    title: Old Man
+    location: MoonriverCottage
+    description: Wise old man who sits by the cottage and tells short stories.
+  Village Head:
     image: images/npcs/Village Head.png
-    name: "Village Head"
-    title: "Village Head"
-    location: "FairyRosePark"
-    description: "Friendly village head who organizes local chores."
-
-  "Farmer V2":
+    name: Village Head
+    title: Village Head
+    location: FairyRosePark
+    description: Friendly village head who organizes local chores.
+  Farmer V2:
     image: images/npcs/Farmer V2.png
-    name: "Farmer V2"
-    title: "Farmer"
-    location: "FairyRosePark"
-    description: "Busy farmer with crops that always need saving."
-
-  "Old Woman":
+    name: Farmer V2
+    title: Farmer
+    location: FairyRosePark
+    description: Busy farmer with crops that always need saving.
+  King Numbers:
+    name: King Numbers
+  Old Woman:
     image: images/npcs/Old Woman.png
-    name: "Old Woman"
-    title: "Old Woman"
-    location: "MoonriverCottage"
-    description: "Warm old woman who shares snacks and simple advice."
-
-  "Professor Crazy":
+    name: Old Woman
+    title: Old Woman
+    location: MoonriverCottage
+    description: Warm old woman who shares snacks and simple advice.
+  Professor Crazy:
     image: images/npcs/Professor Crazy.png
-    name: "Professor Crazy"
-    title: "Professor"
-    location: "Solitude Tower"
-    description: "Wild professor with big ideas and messy experiments."
-
+    name: Professor Crazy
+    title: Professor
+    location: Solitude Tower
+    description: Wild professor with big ideas and messy experiments.
+  Chef:
+    name: Chef
   Farmer:
     image: images/npcs/Farmer.png
-    name: "Farmer"
-    title: "Farmer"
-    location: "FairyRosePark"
-    description: "Simple farmer who needs help with animals and fields."
-
-  "Flight Guide":
+    name: Farmer
+    title: Farmer
+    location: FairyRosePark
+    description: Simple farmer who needs help with animals and fields.
+  Flight Guide:
     image: images/npcs/Flight Guide.png
-    name: "Flight Guide"
-    title: "Flight Guide"
-    location: "The Sunspire Tree"
-    description: "Guide who helps kids learn flying routes around the tree."
-
-  "Little Boy":
+    name: Flight Guide
+    title: Flight Guide
+    location: The Sunspire Tree
+    description: Guide who helps kids learn flying routes around the tree.
+  Little Boy:
     image: images/npcs/Little Boy.png
-    name: "Little Boy"
-    title: "Child"
-    location: "FairyRosePark"
-    description: "Curious boy who loses toys and asks lots of questions."
-
-  "Little Girl":
+    name: Little Boy
+    title: Child
+    location: FairyRosePark
+    description: Curious boy who loses toys and asks lots of questions.
+  Little Girl:
     image: images/npcs/Little Girl.png
-    name: "Little Girl"
-    title: "Child"
-    location: "FairyRosePark"
-    description: "Playful girl who starts small scavenger hunts."
-
-  "Mountain Guide":
+    name: Little Girl
+    title: Child
+    location: FairyRosePark
+    description: Playful girl who starts small scavenger hunts.
+  Mountain Guide:
     image: images/npcs/Mountain Guide.png
-    name: "Mountain Guide"
-    title: "Mountain Guide"
-    location: "TowerOfLostVigil"
-    description: "Guide who knows the high paths and lonely towers."
-
+    name: Mountain Guide
+    title: Mountain Guide
+    location: TowerOfLostVigil
+    description: Guide who knows the high paths and lonely towers.
+  Museum Clerk:
+    name: Museum Clerk
   Painter:
-    name: "Painter"
-    title: "Painter"
-    location: "The Sunspire Tree"
-    description: "Dreamy painter looking for colors and word ideas."
-
-  "Riding Guide":
+    name: Painter
+    title: Painter
+    location: The Sunspire Tree
+    description: Dreamy painter looking for colors and word ideas.
+  Riding Guide:
     image: images/npcs/Riding Guide.png
-    name: "Riding Guide"
-    title: "Riding Guide"
-    location: "Driftgold Bay"
-    description: "Guide who teaches safe riding near the bay paths."
+    name: Riding Guide
+    title: Riding Guide
+    location: Driftgold Bay
+    description: Guide who teaches safe riding near the bay paths.

@@ -1,42 +1,45 @@
-# Per-step minigame briefs — Blacksmith Will (CAT / DOG / BIG)
+# Per-step minigame briefs — blacksmith_will
 # `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).
-
 instances:
   q01_runaway_hammer_s2:
-    instruction: "סדרו את האותיות של CAT"
-    tasks: ["סדרו <strong>c, a, t</strong>", "צרו <strong>cat</strong> — חתול"]
-    target: "cat"
-    variant: "word_spelling"
-    success: "CAT נכתב נכון; Oak Log אחד נוסף לתיק"
+    instruction: סדרו את האותיות של CAT
+    tasks:
+      - סדרו <strong>c, a, t</strong>
+      - צרו <strong>cat</strong> — חתול
+    target: cat
+    variant: word_spelling
+    success: CAT נכתב נכון; Oak Log אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום cat (חתול)"
-      targetWord: "cat"
+      prompt: תסדר את המילה חתול באנגלית
+      targetWord: cat
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q02_snoring_anvil_s2:
-    instruction: "סדרו את האותיות של DOG"
-    tasks: ["סדרו <strong>d, o, g</strong>", "צרו <strong>dog</strong> — כלב"]
-    target: "dog"
-    variant: "word_spelling"
-    success: "DOG נכתב נכון; Herbs אחד נוסף לתיק"
+    instruction: סדרו את האותיות של DOG
+    tasks:
+      - סדרו <strong>d, o, g</strong>
+      - צרו <strong>dog</strong> — כלב
+    target: dog
+    variant: word_spelling
+    success: DOG נכתב נכון; Herbs אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום dog (כלב)"
-      targetWord: "dog"
+      prompt: תסדר את המילה כלב באנגלית
+      targetWord: dog
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q03_first_real_slash_s2:
-    instruction: "סדרו את האותיות של BIG"
-    tasks: ["סדרו <strong>b, i, g</strong>", "צרו <strong>big</strong> — גדול"]
-    target: "big"
-    variant: "word_spelling"
-    success: "BIG נכתב נכון — חזרו לוויל לקבל Slash"
+    instruction: סדרו את האותיות של BIG
+    tasks:
+      - סדרו <strong>b, i, g</strong>
+      - צרו <strong>big</strong> — גדול
+    target: big
+    variant: word_spelling
+    success: BIG נכתב נכון — חזרו לוויל לקבל Slash
     params:
-      prompt: "הוראה על המסך: תרשום big (גדול)"
-      targetWord: "big"
+      prompt: תסדר את המילה גדול באנגלית
+      targetWord: big
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset

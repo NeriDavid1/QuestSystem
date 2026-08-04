@@ -16,18 +16,14 @@ questlines:
     note: "QuestDefinitionSO assets exist; wired on QuestLine_adjective_crown"
     giver_npc: teacher_maya
     catalog_set: QuestWorldCatalogSet_OpenWorld
-  english_kingdom_maya:
-    status: authored_here
-    note: "OpenWorld area/interactable stubs exist; no QuestDefinitionSO assets yet"
-    giver_npc: teacher_maya
   blacksmith_will:
-    status: authored_here
-    note: "Beginner forge line; Slash unlock via slash_ability item; no QuestDefinitionSO assets yet"
+    status: live_in_unity
+    note: "QuestDefinitionSO assets exist; wired on QuestLine_blacksmith_will"
     giver_npc: Blacksmith
     catalog_set: QuestWorldCatalogSet_OpenWorld
   kingdom_nouns:
-    status: authored_here
-    note: "Kingdom nouns (spell + speak); SoftKitty deliver loop; no QuestDefinitionSO assets yet"
+    status: live_in_unity
+    note: "QuestDefinitionSO assets exist; wired on QuestLine_kingdom_nouns"
     giver_npc: teacher_maya
     catalog_set: QuestWorldCatalogSet_OpenWorld
 

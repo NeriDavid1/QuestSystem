@@ -1,49 +1,18 @@
 {
   "importer_version": "1.0.0",
-  "source_digest": "814f040abf91ccb18d9614c9ec66e9baadf12c80e4ed355c01e8e4e97e252496",
+  "source_digest": "3e008097858bc8719e3237d6a3a1abd9a27693492daf8cbb06d0b7aad6716758",
   "counts": {
-    "catalog_entries": 222,
+    "catalog_entries": 227,
     "step_type_definitions": 6,
-    "dialogues": 54,
-    "dialogue_lines": 150,
-    "minigame_instances": 52,
-    "questlines": 4,
-    "quests": 26,
-    "steps": 155,
+    "dialogues": 32,
+    "dialogue_lines": 87,
+    "minigame_instances": 44,
+    "questlines": 3,
+    "quests": 16,
+    "steps": 107,
     "errors": 0,
-    "warnings": 2,
+    "warnings": 0,
     "info": 0
   },
-  "conflicts": [
-    {
-      "kind": "minigame_key_mismatch",
-      "severity": "warning",
-      "message": "Minigame brief exists under a different legacy step key.",
-      "path": "questlines\\english_kingdom_maya\\q02_bee_bandit.yaml",
-      "context": {
-        "questline": "english_kingdom_maya",
-        "quest_id": "q02_bee_bandit",
-        "step_position": 2,
-        "expected_key": "q02_bee_bandit_s2",
-        "candidates": [
-          "q02_bee_bandit_s3"
-        ]
-      }
-    },
-    {
-      "kind": "minigame_key_mismatch",
-      "severity": "warning",
-      "message": "Minigame brief exists under a different legacy step key.",
-      "path": "questlines\\english_kingdom_maya\\q06_butterfly_chaos.yaml",
-      "context": {
-        "questline": "english_kingdom_maya",
-        "quest_id": "q06_butterfly_chaos",
-        "step_position": 2,
-        "expected_key": "q06_butterfly_chaos_s2",
-        "candidates": [
-          "q06_butterfly_chaos_s3"
-        ]
-      }
-    }
-  ]
+  "conflicts": []
 }

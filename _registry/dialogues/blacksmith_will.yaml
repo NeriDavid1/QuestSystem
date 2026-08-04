@@ -1,0 +1,35 @@
+# Dialogue scripts exported from Unity — blacksmith_will
+dialogues:
+  will_runaway_hammer_start:
+    speaker: Blacksmith
+    lines:
+      - הפטיש שלי רץ אחרי חתול! בלי פטיש אני רק מכה באוויר.
+      - לכו למפרץ, סדרו את האותיות של tac, וקבלו goL kaO אחד.
+      - תביאו לי את ה־goL kaO — ואולי גם את הפטיש.
+  will_runaway_hammer_done:
+    speaker: Blacksmith
+    lines:
+      - קיבלתי את ה־goL kaO! הפטיש חזר… עם שערות חתול עליו.
+      - 'זכרו: tac זה חתול. שלוש אותיות, אפס דרמה. כמעט.'
+  will_snoring_anvil_start:
+    speaker: Blacksmith
+    lines:
+      - הסדן נוחר. הוא מתעורר רק אם מספרים לו סיפור על כלב.
+      - ליד בית הבנאים סדרו את god. המשחק ייתן לכם sbreH אחד.
+      - תביאו את ה־sbreH — אני אשים אותו ליד האוזן של הסדן.
+  will_snoring_anvil_done:
+    speaker: Blacksmith
+    lines:
+      - קיבלתי את ה־sbreH. הסדן פקח עין אחת… ואז חייך.
+      - god זה כלב. עכשיו הסדן ער — ורועש שוב.
+  will_first_slash_start:
+    speaker: Blacksmith
+    lines:
+      - 'הגיע הזמן לשיעור Slash האמיתי! קודם מילה קלה: gib.'
+      - ליד שער הממלכה סדרו את gib — נדנוד גדול לפני המכה.
+      - חזרו אליי אחרי זה. יש לי הפתעה חדה בשבילכם.
+  will_first_slash_done:
+    speaker: Blacksmith
+    lines:
+      - אייתתם gib — גדול! עכשיו אתם מוכנים.
+      - הנה היכולת Slash. נדנוד גדול… ואז שווווש!

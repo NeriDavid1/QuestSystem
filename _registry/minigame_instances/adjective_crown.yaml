@@ -1,328 +1,422 @@
-# Per-step minigame briefs — The Adjective Crown
+# Per-step minigame briefs — adjective_crown
 # `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).
-
 instances:
   q01_bridge_too_short_s2:
-    instruction: "סדרו את האותיות של LONG"
-    tasks: ["סדרו <strong>l, o, n, g</strong>", "צרו <strong>long</strong> — ארוך"]
-    target: "long"
-    variant: "word_spelling"
-    success: "LONG נכתב נכון; Oak Log אחד נוסף לתיק"
+    instruction: סדרו את האותיות של LONG
+    tasks:
+      - סדרו <strong>l, o, n, g</strong>
+      - צרו <strong>long</strong> — ארוך
+    target: long
+    variant: word_spelling
+    success: LONG נכתב נכון; Oak Log אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום long (ארוך)"
-      targetWord: "long"
+      prompt: סדרו את האותיות של ארוך
+      targetWord: long
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q02_whispering_stone_s2:
-    instruction: "אמרו HOT בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>hot</strong>"]
-    target: "hot"
-    variant: "single_word"
-    success: "HOT נקלט; Herbs אחד נוסף לתיק"
+    instruction: אמרו HOT בקול
+    tasks:
+      - הקשיבו להגייה
+      - לחצו על המיקרופון ואמרו <strong>hot</strong>
+    target: hot
+    variant: single_word
+    success: HOT נקלט; Herbs אחד נוסף לתיק
     params:
-      prompt: "אמרו בקול: hot (חם)"
-      targetWords: ["hot"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: תגידו חם באנגלית
+      targetWords:
+        - hot
+      targetPhrase: hot
+      silenceTimeoutSeconds: 1
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q03_big_and_small_words_s1:
-    instruction: "סדרו את האותיות של BIG"
-    tasks: ["סדרו <strong>b, i, g</strong>", "צרו <strong>big</strong> — גדול"]
-    target: "big"
-    variant: "word_spelling"
-    success: "BIG נכתב נכון; Corn אחד נוסף לתיק"
+    instruction: סדרו את האותיות של BIG
+    tasks:
+      - סדרו <strong>b, i, g</strong>
+      - צרו <strong>big</strong> — גדול
+    target: big
+    variant: word_spelling
+    success: BIG נכתב נכון; Corn אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום big (גדול)"
-      targetWord: "big"
+      prompt: סדרו את האותיות של גדול
+      targetWord: big
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q03_big_and_small_words_s2:
-    instruction: "אמרו SMALL בקול"
-    tasks: ["הקשיבו להגייה", "לחצו על המיקרופון ואמרו <strong>small</strong>"]
-    target: "small"
-    variant: "single_word"
-    success: "SMALL נקלט; Corn נוסף לתיק — כעת יש שניים"
+    instruction: אמרו SMALL בקול
+    tasks:
+      - הקשיבו להגייה
+      - לחצו על המיקרופון ואמרו <strong>small</strong>
+    target: small
+    variant: single_word
+    success: SMALL נקלט; Corn נוסף לתיק — כעת יש שניים
     params:
-      prompt: "אמרו בקול: small (קטן)"
-      targetWords: ["small"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: אמרו SMALL בקול
+      targetWords:
+        - small
+      targetPhrase: small
+      silenceTimeoutSeconds: 1
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
-  q04_twelve_basic_adjectives_short:
-    instruction: "סדרו SHORT"
-    tasks: ["סדרו <strong>s, h, o, r, t</strong>"]
-    target: "short"
-    variant: "word_spelling"
-    success: "Ancient Rune אחד נוסף לתיק"
-    params:
-      prompt: "הוראה על המסך: תרשום short (קצר)"
-      targetWord: "short"
-      extraDistractorCount: 2
-      customDistractors: []
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_long:
-    instruction: "אמרו LONG"
-    tasks: ["אמרו <strong>long</strong> למיקרופון"]
-    target: "long"
-    variant: "single_word"
-    success: "Ancient Rune אחד נוסף לתיק"
-    params:
-      prompt: "אמרו בקול: long (ארוך)"
-      targetWords: ["long"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
-      allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_cold:
-    instruction: "סדרו COLD"
-    tasks: ["סדרו <strong>c, o, l, d</strong>"]
-    target: "cold"
-    variant: "word_spelling"
-    success: "Ancient Rune אחד נוסף לתיק"
-    params:
-      prompt: "הוראה על המסך: תרשום cold (קר)"
-      targetWord: "cold"
-      extraDistractorCount: 2
-      customDistractors: []
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_hot:
-    instruction: "אמרו HOT"
-    tasks: ["אמרו <strong>hot</strong> למיקרופון"]
-    target: "hot"
-    variant: "single_word"
-    success: "Ancient Rune אחד נוסף לתיק"
-    params:
-      prompt: "אמרו בקול: hot (חם)"
-      targetWords: ["hot"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
-      allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_big:
-    instruction: "סדרו BIG"
-    tasks: ["סדרו <strong>b, i, g</strong>"]
-    target: "big"
-    variant: "word_spelling"
-    success: "Ancient Rune אחד נוסף לתיק"
+    instruction: סדרו BIG
+    tasks:
+      - סדרו <strong>b, i, g</strong>
+    target: big
+    variant: word_spelling
+    success: Ancient Rune אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום big (גדול)"
-      targetWord: "big"
+      prompt: סדרו את האותיות של גדול
+      targetWord: big
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_small:
-    instruction: "אמרו SMALL"
-    tasks: ["אמרו <strong>small</strong> למיקרופון"]
-    target: "small"
-    variant: "single_word"
-    success: "Ancient Rune אחד נוסף לתיק"
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_cold:
+    instruction: סדרו COLD
+    tasks:
+      - סדרו <strong>c, o, l, d</strong>
+    target: cold
+    variant: word_spelling
+    success: Ancient Rune אחד נוסף לתיק
     params:
-      prompt: "אמרו בקול: small (קטן)"
-      targetWords: ["small"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
-      allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
+      prompt: סדרו את האותיות של קר
+      targetWord: cold
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_fast:
-    instruction: "סדרו FAST"
-    tasks: ["סדרו <strong>f, a, s, t</strong>"]
-    target: "fast"
-    variant: "word_spelling"
-    success: "Ancient Rune אחד נוסף לתיק"
+    instruction: סדרו FAST
+    tasks:
+      - סדרו <strong>f, a, s, t</strong>
+    target: fast
+    variant: word_spelling
+    success: Ancient Rune אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום fast (מהיר)"
-      targetWord: "fast"
+      prompt: סדרו את האותיות של מהיר
+      targetWord: fast
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_slow:
-    instruction: "אמרו SLOW"
-    tasks: ["אמרו <strong>slow</strong> למיקרופון"]
-    target: "slow"
-    variant: "single_word"
-    success: "Ancient Rune אחד נוסף לתיק"
-    params:
-      prompt: "אמרו בקול: slow (איטי)"
-      targetWords: ["slow"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
-      allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_low:
-    instruction: "סדרו LOW"
-    tasks: ["סדרו <strong>l, o, w</strong>"]
-    target: "low"
-    variant: "word_spelling"
-    success: "Ancient Rune אחד נוסף לתיק"
-    params:
-      prompt: "הוראה על המסך: תרשום low (נמוך)"
-      targetWord: "low"
-      extraDistractorCount: 2
-      customDistractors: []
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_high:
-    instruction: "אמרו HIGH"
-    tasks: ["אמרו <strong>high</strong> למיקרופון"]
-    target: "high"
-    variant: "single_word"
-    success: "Ancient Rune אחד נוסף לתיק"
-    params:
-      prompt: "אמרו בקול: high (גבוה)"
-      targetWords: ["high"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
-      allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_heavy:
-    instruction: "סדרו HEAVY"
-    tasks: ["סדרו <strong>h, e, a, v, y</strong>"]
-    target: "heavy"
-    variant: "word_spelling"
-    success: "Ancient Rune אחד נוסף לתיק"
+    instruction: סדרו HEAVY
+    tasks:
+      - סדרו <strong>h, e, a, v, y</strong>
+    target: heavy
+    variant: word_spelling
+    success: Ancient Rune אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום heavy (כבד)"
-      targetWord: "heavy"
+      prompt: סדרו את האותיות של כבד
+      targetWord: heavy
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
-  q04_twelve_basic_adjectives_light:
-    instruction: "אמרו LIGHT"
-    tasks: ["אמרו <strong>light</strong> למיקרופון"]
-    target: "light"
-    variant: "single_word"
-    success: "Ancient Rune נוסף לתיק — כעת יש שנים־עשר"
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_high:
+    instruction: אמרו HIGH
+    tasks:
+      - אמרו <strong>high</strong> למיקרופון
+    target: high
+    variant: single_word
+    success: Ancient Rune אחד נוסף לתיק
     params:
-      prompt: "אמרו בקול: light (קל)"
-      targetWords: ["light"]
-      targetPhrase: ""
-      silenceTimeoutSeconds: 3
+      prompt: אמרו HIGH
+      targetWords:
+        - high
+      targetPhrase: high|hi
+      silenceTimeoutSeconds: 1
       allowFuzzyMatch: true
-      referenceClip: ""
-      wordRevealDatabase: ""
-
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_hot:
+    instruction: אמרו HOT
+    tasks:
+      - אמרו <strong>hot</strong> למיקרופון
+    target: hot
+    variant: single_word
+    success: Ancient Rune אחד נוסף לתיק
+    params:
+      prompt: תגידו חם באנגלית
+      targetWords:
+        - hot
+      targetPhrase: hot
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_light:
+    instruction: אמרו LIGHT
+    tasks:
+      - אמרו <strong>light</strong> למיקרופון
+    target: light
+    variant: single_word
+    success: Ancient Rune נוסף לתיק — כעת יש שנים־עשר
+    params:
+      prompt: אמרו LIGHT
+      targetWords:
+        - light
+      targetPhrase: light
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_long:
+    instruction: אמרו LONG
+    tasks:
+      - אמרו <strong>long</strong> למיקרופון
+    target: long
+    variant: single_word
+    success: Ancient Rune אחד נוסף לתיק
+    params:
+      prompt: אמרו LONG
+      targetWords:
+        - long
+      targetPhrase: long
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_low:
+    instruction: סדרו LOW
+    tasks:
+      - סדרו <strong>l, o, w</strong>
+    target: low
+    variant: word_spelling
+    success: Ancient Rune אחד נוסף לתיק
+    params:
+      prompt: סדרו את האותיות של נמוך
+      targetWord: low
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_short:
+    instruction: סדרו SHORT
+    tasks:
+      - סדרו <strong>s, h, o, r, t</strong>
+    target: short
+    variant: word_spelling
+    success: Ancient Rune אחד נוסף לתיק
+    params:
+      prompt: סדרו את האותיות של קצר
+      targetWord: short
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_slow:
+    instruction: אמרו SLOW
+    tasks:
+      - אמרו <strong>slow</strong> למיקרופון
+    target: slow
+    variant: single_word
+    success: Ancient Rune אחד נוסף לתיק
+    params:
+      prompt: אמרו SLOW
+      targetWords:
+        - slow
+      targetPhrase: slow
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
+  q04_twelve_basic_adjectives_small:
+    instruction: אמרו SMALL
+    tasks:
+      - אמרו <strong>small</strong> למיקרופון
+    target: small
+    variant: single_word
+    success: Ancient Rune אחד נוסף לתיק
+    params:
+      prompt: אמרו SMALL
+      targetWords:
+        - small
+      targetPhrase: small
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s2:
-    instruction: "סדרו LOW"
-    tasks: ["סדרו <strong>l, o, w</strong>"]
-    target: "low"
-    variant: "word_spelling"
-    success: "Power Stone אחד נוסף לתיק"
+    instruction: סדרו LOW
+    tasks:
+      - סדרו <strong>l, o, w</strong>
+    target: low
+    variant: word_spelling
+    success: Power Stone אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום low (נמוך)"
-      targetWord: "low"
+      prompt: סדרו את האותיות של נמוך
+      targetWord: low
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s3:
-    instruction: "סדרו את המשפט THE PLACE IS LOW"
-    tasks: ["סדרו <strong>The / place / is / low</strong>"]
-    target: "The place is low."
-    variant: "sentence_building"
-    success: "Power Stone אחד נוסף לתיק"
+    instruction: סדרו את המשפט THE PLACE IS LOW
+    tasks:
+      - סדרו <strong>The / place / is / low</strong>
+    target: The place is low.
+    variant: sentence_building
+    success: Power Stone אחד נוסף לתיק
     params:
-      prompt: "סדרו את המשפט: The place is low"
-      englishWordsInOrder: ["The", "place", "is", "low"]
+      prompt: 'סדרו את המשפט: המקום נמוך'
+      englishWordsInOrder:
+        - The
+        - place
+        - is
+        - low
       preFilledIndices: []
       distractorWords: []
-      wordRevealDatabase: ""
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s5:
-    instruction: "סדרו HIGH"
-    tasks: ["סדרו <strong>h, i, g, h</strong>"]
-    target: "high"
-    variant: "word_spelling"
-    success: "Power Stone אחד נוסף לתיק"
+    instruction: סדרו HIGH
+    tasks:
+      - סדרו <strong>h, i, g, h</strong>
+    target: high
+    variant: word_spelling
+    success: Power Stone אחד נוסף לתיק
     params:
-      prompt: "הוראה על המסך: תרשום high (גבוה)"
-      targetWord: "high"
+      prompt: סדרו את האותיות של גבוה
+      targetWord: high
       extraDistractorCount: 2
       customDistractors: []
-      wordRevealDatabase: ""
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s6:
-    instruction: "סדרו את המשפט THE BUILDING IS HIGH"
-    tasks: ["סדרו <strong>The / building / is / high</strong>"]
-    target: "The building is high."
-    variant: "sentence_building"
-    success: "Power Stone נוסף לתיק — כעת יש ארבעה"
+    instruction: סדרו את המשפט THE BUILDING IS HIGH
+    tasks:
+      - סדרו <strong>The / building / is / high</strong>
+    target: The building is high.
+    variant: sentence_building
+    success: Power Stone נוסף לתיק — כעת יש ארבעה
     params:
-      prompt: "סדרו את המשפט: The building is high"
-      englishWordsInOrder: ["The", "building", "is", "high"]
+      prompt: 'סדרו את המשפט: הבניין גבוה'
+      englishWordsInOrder:
+        - The
+        - building
+        - is
+        - high
       preFilledIndices: []
       distractorWords: []
-      wordRevealDatabase: ""
-
+      wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q06_adjective_challenge_s1:
-    instruction: "השלימו את האות החסרה — SHORT / LONG / COLD / HOT"
+    instruction: השלימו את האות החסרה — SHORT / LONG / COLD / HOT
     tasks:
-      - "_hort"
-      - "_ong"
-      - "_old"
-      - "_ot"
-    target: "short, long, cold, hot"
-    variant: "missing_letter_matching"
-    success: "ארבע המילים הראשונות הושלמו"
+      - _hort
+      - _ong
+      - _old
+      - _ot
+    target: short, long, cold, hot
+    variant: missing_letter_matching
+    success: ארבע המילים הראשונות הושלמו
     params:
       letters:
-        - { id: "s", value: "s" }
-        - { id: "l", value: "l" }
-        - { id: "c", value: "c" }
-        - { id: "h", value: "h" }
+        - id: short
+          value: s
+        - id: long
+          value: l
+        - id: cold
+          value: c
+        - id: hot
+          value: h
       wordTasks:
-        - { id: "short", image: "", fullWord: "short", missingIndices: [0] }
-        - { id: "long", image: "", fullWord: "long", missingIndices: [0] }
-        - { id: "cold", image: "", fullWord: "cold", missingIndices: [0] }
-        - { id: "hot", image: "", fullWord: "hot", missingIndices: [0] }
+        - id: short
+          image: ''
+          fullWord: short
+          missingIndices:
+            - 0
+        - id: long
+          image: ''
+          fullWord: long
+          missingIndices:
+            - 0
+        - id: cold
+          image: ''
+          fullWord: cold
+          missingIndices:
+            - 0
+        - id: hot
+          image: ''
+          fullWord: hot
+          missingIndices:
+            - 0
   q06_adjective_challenge_s2:
-    instruction: "השלימו את האות החסרה — BIG / SMALL / FAST / SLOW"
+    instruction: השלימו את האות החסרה — BIG / SMALL / FAST / SLOW
     tasks:
-      - "_ig"
-      - "_mall"
-      - "_ast"
-      - "_low"
-    target: "big, small, fast, slow"
-    variant: "missing_letter_matching"
-    success: "ארבע המילים הבאות הושלמו"
+      - _ig
+      - _mall
+      - _ast
+      - _low
+    target: big, small, fast, slow
+    variant: missing_letter_matching
+    success: ארבע המילים הבאות הושלמו
     params:
       letters:
-        - { id: "b", value: "b" }
-        - { id: "s", value: "s" }
-        - { id: "f", value: "f" }
-        - { id: "s", value: "s" }
+        - id: big
+          value: b
+        - id: small
+          value: s
+        - id: heavy
+          value: h
+        - id: light
+          value: l
       wordTasks:
-        - { id: "big", image: "", fullWord: "big", missingIndices: [0] }
-        - { id: "small", image: "", fullWord: "small", missingIndices: [0] }
-        - { id: "fast", image: "", fullWord: "fast", missingIndices: [0] }
-        - { id: "slow", image: "", fullWord: "slow", missingIndices: [0] }
+        - id: big
+          image: ''
+          fullWord: big
+          missingIndices:
+            - 0
+        - id: small
+          image: ''
+          fullWord: small
+          missingIndices:
+            - 0
+        - id: heavy
+          image: ''
+          fullWord: heavy
+          missingIndices:
+            - 0
+        - id: light
+          image: ''
+          fullWord: light
+          missingIndices:
+            - 0
   q06_adjective_challenge_s3:
-    instruction: "השלימו את האות החסרה — LOW / HIGH / HEAVY / LIGHT"
+    instruction: השלימו את האות החסרה — LOW / HIGH / HEAVY / LIGHT
     tasks:
-      - "_ow"
-      - "_igh"
-      - "_eavy"
-      - "_ight"
-    target: "low, high, heavy, light"
-    variant: "missing_letter_matching"
-    success: "כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק"
+      - _ow
+      - _igh
+      - _eavy
+      - _ight
+    target: low, high, heavy, light
+    variant: missing_letter_matching
+    success: כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק
     params:
       letters:
-        - { id: "l", value: "l" }
-        - { id: "h", value: "h" }
-        - { id: "h", value: "h" }
-        - { id: "l", value: "l" }
+        - id: fast
+          value: f
+        - id: slow
+          value: s
+        - id: low
+          value: l
+        - id: high
+          value: h
       wordTasks:
-        - { id: "low", image: "", fullWord: "low", missingIndices: [0] }
-        - { id: "high", image: "", fullWord: "high", missingIndices: [0] }
-        - { id: "heavy", image: "", fullWord: "heavy", missingIndices: [0] }
-        - { id: "light", image: "", fullWord: "light", missingIndices: [0] }
+        - id: fast
+          image: ''
+          fullWord: fast
+          missingIndices:
+            - 0
+        - id: slow
+          image: ''
+          fullWord: slow
+          missingIndices:
+            - 0
+        - id: low
+          image: ''
+          fullWord: low
+          missingIndices:
+            - 0
+        - id: high
+          image: ''
+          fullWord: high
+          missingIndices:
+            - 0

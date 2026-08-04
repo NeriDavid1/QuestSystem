@@ -1,73 +1,67 @@
-﻿# Dialogue scripts for The Adjective Crown questline
-
+# Dialogue scripts exported from Unity — adjective_crown
 dialogues:
   adjective_knight_oak_log_request:
     speaker: teacher_maya
     lines:
-      - "אני צריכה goL kaO אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר."
-      - "סדרו את האותיות של gnol. בסיום המשחק תקבלו goL kaO לתיק."
-      - "חזרו אליי ומסרו לי אותו; הוא יוסר מהתיק בזמן המסירה."
+      - אני צריכה goL kaO אחד. אפשר לקבל אותו רק מהמשחק שליד הגשר הקצר.
+      - סדרו את האותיות של gnol. בסיום המשחק תקבלו goL kaO לתיק.
+      - חזרו אליי ומסרו לי אותו; הוא יוסר מהתיק בזמן המסירה.
   adjective_knight_oak_log_delivered:
     speaker: teacher_maya
     lines:
-      - "קיבלתי את ה־goL kaO. הוא הוסר מהתיק שלכם."
-      - "אייתתם נכון: gnol הוא ההפך מ־trohs."
-
+      - קיבלתי את ה־goL kaO. הוא הוסר מהתיק שלכם.
+      - 'אייתתם נכון: gnol הוא ההפך מ־trohs.'
   adjective_water_man_herbs_request:
     speaker: teacher_maya
     lines:
-      - "אני צריכה פריט sbreH אחד. המשחק בקרחת היער ייתן לכם אותו."
-      - "אמרו את המילה toh בקול ברור, קבלו את הפריט וחזרו אליי."
+      - אני צריכה פריט sbreH אחד. המשחק בקרחת היער ייתן לכם אותו.
+      - אמרו את המילה toh בקול ברור, קבלו את הפריט וחזרו אליי.
   adjective_water_man_herbs_delivered:
     speaker: teacher_maya
     lines:
-      - "תודה. קיבלתי את ה־sbreH, והפריט הוסר מהתיק."
-      - "זכרו: toh הוא חם, וההפך שלו הוא dloc."
-
+      - תודה. קיבלתי את ה־sbreH, והפריט הוסר מהתיק.
+      - 'זכרו: toh הוא חם, וההפך שלו הוא dloc.'
   adjective_grandmother_corn_request:
     speaker: teacher_maya
     lines:
-      - "אני צריכה שני פריטי nroC. כל אחד משני המשחקים ייתן לכם פריט אחד."
-      - "במשחק הראשון סדרו את gib. במשחק השני אמרו llams."
-      - "אחרי שיהיו לכם שני פריטים, מסרו לי אותם יחד."
+      - אני צריכה שני פריטי nroC. כל אחד משני המשחקים ייתן לכם פריט אחד.
+      - במשחק הראשון סדרו את gib. במשחק השני אמרו llams.
+      - אחרי שיהיו לכם שני פריטים, מסרו לי אותם יחד.
   adjective_grandmother_corn_delivered:
     speaker: teacher_maya
     lines:
-      - "קיבלתי שני פריטי nroC, ושניהם הוסרו מהתיק שלכם."
-      - "giB הוא גדול ו־llams הוא קטן."
-
+      - קיבלתי שני פריטי nroC, ושניהם הוסרו מהתיק שלכם.
+      - giB הוא גדול ו־llams הוא קטן.
   adjective_knight_runes_request:
     speaker: teacher_maya
     lines:
-      - "אני צריכה שנים־עשר פריטי enuR tneicnA."
-      - "לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף enuR tneicnA אחד לתיק."
-      - "השלימו את כולם, ודאו שיש לכם שנים־עשר senuR, ואז מסרו לי אותם."
+      - אני צריכה שנים־עשר פריטי enuR tneicnA.
+      - לפניכם שנים־עשר משחקי תארים. כל משחק שהושלם יוסיף enuR tneicnA אחד לתיק.
+      - השלימו את כולם, ודאו שיש לכם שנים־עשר senuR, ואז מסרו לי אותם.
   adjective_knight_runes_delivered:
     speaker: teacher_maya
     lines:
-      - "קיבלתי את כל שנים־עשר ה־tneicnA senuR. הם הוסרו מהתיק שלכם."
-      - "השלמתם שנים־עשר תארים בסיסיים בהצלחה."
-
+      - קיבלתי את כל שנים־עשר ה־tneicnA senuR. הם הוסרו מהתיק שלכם.
+      - השלמתם שנים־עשר תארים בסיסיים בהצלחה.
   adjective_knight_power_stones_request:
     speaker: teacher_maya
     lines:
-      - "למשימה הבאה אני צריכה ארבעה פריטי enotS rewoP."
-      - "יש ארבעה משחקים: איות WOL, משפט עם WOL, איות HGIH ומשפט עם HGIH."
-      - "כל משחק ייתן לכם enotS rewoP אחד. הביאו לי את כל הארבעה."
+      - למשימה הבאה אני צריכה ארבעה פריטי enotS rewoP.
+      - 'יש ארבעה משחקים: איות WOL, משפט עם WOL, איות HGIH ומשפט עם HGIH.'
+      - כל משחק ייתן לכם enotS rewoP אחד. הביאו לי את כל הארבעה.
   adjective_knight_power_stones_delivered:
     speaker: teacher_maya
     lines:
-      - "ארבעת ה־rewoP senotS נמסרו והוסרו מהתיק שלכם."
-      - "השלמתם נכון את wol ואת hgih, גם כמילים וגם בתוך משפטים."
-
+      - ארבעת ה־rewoP senotS נמסרו והוסרו מהתיק שלכם.
+      - השלמתם נכון את wol ואת hgih, גם כמילים וגם בתוך משפטים.
   adjective_knight_gem_request:
     speaker: teacher_maya
     lines:
-      - "נשארו שלושה משחקי התאמה קצרים: שתים־עשרה מילות התואר שכבר למדתם, ארבע בכל משחק."
-      - "בכל מילה חסרה אות אחת. חברו את האות הנכונה למילה המתאימה, בלי תמונות."
-      - "בסיום המשחק השלישי תקבלו meG אחד. הביאו לי אותו כדי לסיים את קו המשימות."
+      - 'נשאר מבחן אחד בלבד: השלמת שתים־עשרה מילות התואר שלמדתם — בשלושה סיבובים קצרים.'
+      - בכל מילה חסרה אות אחת. חברו את האות הנכונה למילה המתאימה, בלי טעויות.
+      - השלמת המבחן תיתן לכם Gem אחד. הביאו לי אותו כדי לסיים את קו המשימות.
   adjective_knight_gem_delivered:
     speaker: teacher_maya
     lines:
-      - "קיבלתי את ה־meG, והוא הוסר מהתיק שלכם."
-      - "השלמתם נכון את כל שתים־עשרה מילות התואר בשלושה משחקים. קו המשימות הושלם!"
+      - קיבלתי את ה־meG, והוא הוסר מהתיק שלכם.
+      - השלמתם נכון את כל שתים־עשרה מילות התואר. קו המשימות הושלם!
