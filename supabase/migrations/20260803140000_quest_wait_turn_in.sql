@@ -35,7 +35,7 @@ declare
   v_quest_ids uuid[];
   v_step_ids uuid[];
 begin
-  if not public.is_quest_editor() then
+  if not private.is_quest_editor() then
     raise exception 'Editor access required';
   end if;
 

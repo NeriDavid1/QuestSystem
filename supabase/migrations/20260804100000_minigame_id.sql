@@ -35,7 +35,7 @@ declare
   v_quest_ids uuid[];
   v_step_ids uuid[];
 begin
-  if not public.is_quest_editor() then
+  if not private.is_quest_editor() then
     raise exception 'Editor access required';
   end if;
 
@@ -117,7 +117,7 @@ begin
     updated_by = excluded.updated_by;
 
   insert into public.quest_steps (
-    id, quest_id, key, position, step_type, payload, source_metadata, updated_by
+    id, quest_id, key, position, step_type, payload, source_metadata
   )
   select
     (s->>'id')::uuid,
@@ -126,8 +126,7 @@ begin
     (s->>'position')::integer,
     s->>'step_type',
     coalesce(s->'payload', '{}'::jsonb),
-    coalesce(s->'source_metadata', '{}'::jsonb),
-    auth.uid()
+    coalesce(s->'source_metadata', '{}'::jsonb)
   from jsonb_array_elements(p_steps) s
   on conflict (id) do update set
     quest_id = excluded.quest_id,
@@ -135,8 +134,7 @@ begin
     position = excluded.position,
     step_type = excluded.step_type,
     payload = excluded.payload,
-    source_metadata = excluded.source_metadata,
-    updated_by = excluded.updated_by;
+    source_metadata = excluded.source_metadata;
 
   -- Prerequisites: replace only edges touching this line's quests.
   select array_agg(id) into v_quest_ids
@@ -182,23 +180,20 @@ begin
 
   -- Dialogues: upsert only the ones explicitly touched by the editor.
   insert into public.dialogues (
-    id, key, speaker_external_id, source_path, source_metadata, created_by, updated_by
+    id, key, speaker_external_id, source_path, source_metadata
   )
   select
     (d->>'id')::uuid,
     d->>'key',
     d->>'speaker_external_id',
     d->>'source_path',
-    coalesce(d->'source_metadata', '{}'::jsonb),
-    auth.uid(),
-    auth.uid()
+    coalesce(d->'source_metadata', '{}'::jsonb)
   from jsonb_array_elements(p_dialogues) d
   on conflict (id) do update set
     key = excluded.key,
     speaker_external_id = excluded.speaker_external_id,
     source_path = excluded.source_path,
-    source_metadata = excluded.source_metadata,
-    updated_by = excluded.updated_by;
+    source_metadata = excluded.source_metadata;
 
   -- Dialogue lines: replace lines only for the touched dialogues.
   delete from public.dialogue_lines
@@ -220,7 +215,7 @@ begin
   -- Minigames: upsert only the ones explicitly touched by the editor.
   insert into public.minigame_instances (
     id, key, locale, instruction, tasks, target, variant, success,
-    minigame_id, params, source_path, source_metadata, updated_by
+    minigame_id, params, source_path, source_metadata
   )
   select
     (m->>'id')::uuid,
@@ -234,8 +229,7 @@ begin
     nullif(m->>'minigame_id', ''),
     coalesce(m->'params', '{}'::jsonb),
     m->>'source_path',
-    coalesce(m->'source_metadata', '{}'::jsonb),
-    auth.uid()
+    coalesce(m->'source_metadata', '{}'::jsonb)
   from jsonb_array_elements(p_minigames) m
   on conflict (id) do update set
     key = excluded.key,
@@ -248,8 +242,7 @@ begin
     minigame_id = excluded.minigame_id,
     params = excluded.params,
     source_path = excluded.source_path,
-    source_metadata = excluded.source_metadata,
-    updated_by = excluded.updated_by;
+    source_metadata = excluded.source_metadata;
 
   -- Explicit deletions (cascade handles owned children).
   if array_length(p_deleted_quest_ids, 1) > 0 then

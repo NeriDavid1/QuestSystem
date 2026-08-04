@@ -1,13 +1,4 @@
--- Scoped questline save RPC.
---
--- Saves one questline with its owned rows (quests, steps, rewards, prerequisites)
--- and only the shared rows (dialogues, dialogue lines, minigames) that the editor
--- explicitly touched in the current session. Deletes only explicitly removed rows.
--- Everything runs in a single transaction, so a save is atomic.
---
--- Conflict protection: when p_expected_updated_at is provided and differs from the
--- current questlines.updated_at, the function raises 'CONFLICT' so the editor can
--- ask the user to choose between overwriting and reloading.
+-- Align save_questline with real columns: quest_steps/dialogues/minigame_instances have no updated_by/created_by.
 
 create or replace function public.save_questline(
   p_questline jsonb,
@@ -86,7 +77,7 @@ begin
 
   insert into public.quests (
     id, questline_id, key, position, name, level_required, giver_external_id,
-    summary, status, source_path, source_metadata, created_by, updated_by
+    summary, wait_for_npc_turn_in, status, source_path, source_metadata, created_by, updated_by
   )
   select
     (q->>'id')::uuid,
@@ -97,6 +88,7 @@ begin
     (q->>'level_required')::integer,
     q->>'giver_external_id',
     q->>'summary',
+    coalesce((q->>'wait_for_npc_turn_in')::boolean, false),
     case when q->>'status' = 'published' then 'draft' else coalesce(q->>'status', 'draft') end,
     q->>'source_path',
     coalesce(q->'source_metadata', '{}'::jsonb),
@@ -111,13 +103,14 @@ begin
     level_required = excluded.level_required,
     giver_external_id = excluded.giver_external_id,
     summary = excluded.summary,
+    wait_for_npc_turn_in = excluded.wait_for_npc_turn_in,
     status = excluded.status,
     source_path = excluded.source_path,
     source_metadata = excluded.source_metadata,
     updated_by = excluded.updated_by;
 
   insert into public.quest_steps (
-    id, quest_id, key, position, step_type, payload, source_metadata, updated_by
+    id, quest_id, key, position, step_type, payload, source_metadata
   )
   select
     (s->>'id')::uuid,
@@ -126,8 +119,7 @@ begin
     (s->>'position')::integer,
     s->>'step_type',
     coalesce(s->'payload', '{}'::jsonb),
-    coalesce(s->'source_metadata', '{}'::jsonb),
-    auth.uid()
+    coalesce(s->'source_metadata', '{}'::jsonb)
   from jsonb_array_elements(p_steps) s
   on conflict (id) do update set
     quest_id = excluded.quest_id,
@@ -135,8 +127,7 @@ begin
     position = excluded.position,
     step_type = excluded.step_type,
     payload = excluded.payload,
-    source_metadata = excluded.source_metadata,
-    updated_by = excluded.updated_by;
+    source_metadata = excluded.source_metadata;
 
   -- Prerequisites: replace only edges touching this line's quests.
   select array_agg(id) into v_quest_ids
@@ -182,23 +173,20 @@ begin
 
   -- Dialogues: upsert only the ones explicitly touched by the editor.
   insert into public.dialogues (
-    id, key, speaker_external_id, source_path, source_metadata, created_by, updated_by
+    id, key, speaker_external_id, source_path, source_metadata
   )
   select
     (d->>'id')::uuid,
     d->>'key',
     d->>'speaker_external_id',
     d->>'source_path',
-    coalesce(d->'source_metadata', '{}'::jsonb),
-    auth.uid(),
-    auth.uid()
+    coalesce(d->'source_metadata', '{}'::jsonb)
   from jsonb_array_elements(p_dialogues) d
   on conflict (id) do update set
     key = excluded.key,
     speaker_external_id = excluded.speaker_external_id,
     source_path = excluded.source_path,
-    source_metadata = excluded.source_metadata,
-    updated_by = excluded.updated_by;
+    source_metadata = excluded.source_metadata;
 
   -- Dialogue lines: replace lines only for the touched dialogues.
   delete from public.dialogue_lines
@@ -220,7 +208,7 @@ begin
   -- Minigames: upsert only the ones explicitly touched by the editor.
   insert into public.minigame_instances (
     id, key, locale, instruction, tasks, target, variant, success,
-    source_path, source_metadata, updated_by
+    minigame_id, params, source_path, source_metadata
   )
   select
     (m->>'id')::uuid,
@@ -231,9 +219,10 @@ begin
     m->>'target',
     m->>'variant',
     m->>'success',
+    nullif(m->>'minigame_id', ''),
+    coalesce(m->'params', '{}'::jsonb),
     m->>'source_path',
-    coalesce(m->'source_metadata', '{}'::jsonb),
-    auth.uid()
+    coalesce(m->'source_metadata', '{}'::jsonb)
   from jsonb_array_elements(p_minigames) m
   on conflict (id) do update set
     key = excluded.key,
@@ -243,9 +232,10 @@ begin
     target = excluded.target,
     variant = excluded.variant,
     success = excluded.success,
+    minigame_id = excluded.minigame_id,
+    params = excluded.params,
     source_path = excluded.source_path,
-    source_metadata = excluded.source_metadata,
-    updated_by = excluded.updated_by;
+    source_metadata = excluded.source_metadata;
 
   -- Explicit deletions (cascade handles owned children).
   if array_length(p_deleted_quest_ids, 1) > 0 then

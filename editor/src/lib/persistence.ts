@@ -74,7 +74,7 @@ function isFunctionMissingError(error: unknown): boolean {
 async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
   if (!supabase) throw new Error('Supabase is not configured')
   // #region agent log
-  fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaRpc:entry',message:'save_questline RPC call starting',data:{questlineId:payload.questline.id,expectedUpdatedAt:payload.expectedUpdatedAt,force:payload.force??false,questCount:payload.quests.length,stepCount:payload.steps.length,minigameCount:payload.minigames.length,dialogueCount:payload.dialogues.length,hasEmptyExpectedAt:payload.expectedUpdatedAt===''},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+  fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',runId:'post-fix',location:'persistence.ts:saveViaRpc:entry',message:'save_questline RPC call starting',data:{questlineId:payload.questline.id,expectedUpdatedAt:payload.expectedUpdatedAt,force:payload.force??false,questCount:payload.quests.length,stepCount:payload.steps.length,minigameCount:payload.minigames.length,dialogueCount:payload.dialogues.length,hasEmptyExpectedAt:payload.expectedUpdatedAt===''},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
   // #endregion
   const { data, error } = await supabase.rpc('save_questline', {
     p_questline: payload.questline,
@@ -95,7 +95,7 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
   if (error) {
     const missing = isFunctionMissingError(error)
     // #region agent log
-    fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaRpc:error',message:'save_questline RPC error',data:{message:error.message,code:(error as {code?:string}).code,details:(error as {details?:string}).details,hint:(error as {hint?:string}).hint,isFunctionMissing:missing,name:error.name,isErrorInstance:error instanceof Error},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+    fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',runId:'post-fix',location:'persistence.ts:saveViaRpc:error',message:'save_questline RPC error',data:{message:error.message,code:(error as {code?:string}).code,details:(error as {details?:string}).details,hint:(error as {hint?:string}).hint,isFunctionMissing:missing,name:error.name,isErrorInstance:error instanceof Error},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
     // #endregion
     if (missing) {
       // #region agent log
@@ -118,7 +118,7 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
     throw error
   }
   // #region agent log
-  fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaRpc:ok',message:'save_questline RPC succeeded',data:{questlineId:(data as {questline_id?:string}|null)?.questline_id,updatedAt:(data as {updated_at?:string}|null)?.updated_at},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+  fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',runId:'post-fix',location:'persistence.ts:saveViaRpc:ok',message:'save_questline RPC succeeded',data:{questlineId:(data as {questline_id?:string}|null)?.questline_id,updatedAt:(data as {updated_at?:string}|null)?.updated_at},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
   // #endregion
   const result = data as { questline_id?: string; updated_at?: string } | null
   return {
@@ -193,7 +193,6 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
         step_type: step.step_type,
         payload: step.payload,
         source_metadata: step.source_metadata,
-        updated_by: userId,
       })),
       { onConflict: 'id' },
     )
@@ -264,8 +263,6 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
           speaker_external_id: dialogue.speaker_external_id,
           source_path: dialogue.source_path,
           source_metadata: dialogue.source_metadata,
-          created_by: userId,
-          updated_by: userId,
         })),
         { onConflict: 'id' },
       )
@@ -307,7 +304,6 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
           params: minigame.params,
           source_path: minigame.source_path,
           source_metadata: minigame.source_metadata,
-          updated_by: userId,
         })),
         { onConflict: 'id' },
       )
