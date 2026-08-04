@@ -1,7 +1,8 @@
 # Per-step minigame briefs — blacksmith_will
-# `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
 instances:
   q01_runaway_hammer_s2:
+    minigame_id: letter_ordering
     instruction: סדרו את האותיות של CAT
     tasks:
       - סדרו <strong>c, a, t</strong>
@@ -16,6 +17,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q02_snoring_anvil_s2:
+    minigame_id: letter_ordering
     instruction: סדרו את האותיות של DOG
     tasks:
       - סדרו <strong>d, o, g</strong>
@@ -30,6 +32,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q03_first_real_slash_s2:
+    minigame_id: letter_ordering
     instruction: סדרו את האותיות של BIG
     tasks:
       - סדרו <strong>b, i, g</strong>

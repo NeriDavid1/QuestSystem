@@ -127,22 +127,83 @@ export function defaultParamsForEntry(entry: CatalogEntry | undefined): Record<s
 
 /**
  * Fields for a minigame instance regardless of step context.
- * Editor-created instances store the game id in `variant`; seeded instances fall
- * back to the parameter keys that are already present on the instance.
+ * Prefer `minigame_id` (catalog kind). Fall back to legacy variant=external_id,
+ * then to keys already present on params.
  */
 export function getMinigameParamFieldsForInstance(
   data: EditorData,
   minigame: MinigameInstance,
 ): MinigameParamField[] {
-  const byVariant = data.catalog.find(
-    (entry) => entry.kind === 'minigame' && entry.external_id === minigame.variant,
+  const kind = minigame.minigame_id || minigame.variant
+  const byKind = data.catalog.find(
+    (entry) => entry.kind === 'minigame' && entry.external_id === kind,
   )
-  if (byVariant) return getMinigameParamsForEntry(byVariant)
+  if (byKind) return getMinigameParamsForEntry(byKind)
   const present = Object.keys(minigame.params ?? {})
   if (present.length === 0) return []
   return present
     .map((name) => MINIGAME_PARAM_FIELDS[name])
     .filter((field): field is MinigameParamField => Boolean(field))
+}
+
+/** Catalog entry for an instance's minigame_id (or legacy variant). */
+export function getMinigameCatalogEntryForInstance(
+  data: EditorData,
+  minigame: MinigameInstance,
+): CatalogEntry | undefined {
+  const kind = minigame.minigame_id || minigame.variant
+  if (!kind) return undefined
+  return data.catalog.find((entry) => entry.kind === 'minigame' && entry.external_id === kind)
+}
+
+/**
+ * Seed gameplay params from a brief target when creating or attaching an instance.
+ * Does not overwrite keys that already have a non-empty value.
+ */
+export function seedParamsFromBrief(
+  entry: CatalogEntry | undefined,
+  params: Record<string, unknown>,
+  target: string | null | undefined,
+  instruction: string | null | undefined,
+): Record<string, unknown> {
+  const next = { ...params }
+  const fields = new Set(getMinigameParamFieldNames(entry))
+  const trimmedTarget = (target ?? '').trim()
+  const trimmedInstruction = (instruction ?? '').trim()
+
+  if (fields.has('prompt')) {
+    const currentPrompt = typeof next.prompt === 'string' ? next.prompt.trim() : ''
+    const promptDefault = typeof MINIGAME_PARAM_FIELDS.prompt.default === 'string'
+      ? MINIGAME_PARAM_FIELDS.prompt.default
+      : ''
+    if ((!currentPrompt || currentPrompt === promptDefault) && trimmedInstruction) {
+      next.prompt = trimmedInstruction
+    }
+  }
+  if (!trimmedTarget) return next
+
+  if (fields.has('targetWord') && !next.targetWord) {
+    next.targetWord = trimmedTarget
+  }
+  if (fields.has('englishWordsInOrder')) {
+    const existing = next.englishWordsInOrder
+    if (!Array.isArray(existing) || existing.length === 0) {
+      next.englishWordsInOrder = trimmedTarget
+        .split(/\s+/)
+        .map((word) => word.replace(/[.,!?;:]+$/g, ''))
+        .filter(Boolean)
+    }
+  }
+  if (fields.has('targetWords')) {
+    const existing = next.targetWords
+    if (!Array.isArray(existing) || existing.length === 0) {
+      next.targetWords = [trimmedTarget]
+    }
+  }
+  if (fields.has('targetPhrase') && !next.targetPhrase) {
+    next.targetPhrase = trimmedTarget
+  }
+  return next
 }
 
 /** Read a parameter value, falling back to the field default when unset. */

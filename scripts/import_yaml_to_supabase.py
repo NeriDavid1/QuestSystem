@@ -267,7 +267,41 @@ def dialogue_bundle(conflicts: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return dialogues
 
 
-GENERIC_MINI_KEY_FIELDS = {"instruction", "tasks", "target", "variant", "success", "params"}
+GENERIC_MINI_KEY_FIELDS = {
+    "instruction",
+    "tasks",
+    "target",
+    "variant",
+    "success",
+    "params",
+    "minigame_id",
+}
+CATALOG_MINIGAME_IDS = {
+    "letter_ordering",
+    "word_ordering",
+    "speak_aloud",
+    "word_matching",
+    "letter_drawing",
+}
+
+
+def infer_minigame_id(params: dict[str, Any], variant: Any = None) -> str | None:
+    """Infer catalog kind from Unity-shaped params or a legacy variant=external_id."""
+    if not isinstance(params, dict):
+        params = {}
+    if "targetWord" in params:
+        return "letter_ordering"
+    if "englishWordsInOrder" in params:
+        return "word_ordering"
+    if "targetWords" in params or "targetPhrase" in params:
+        return "speak_aloud"
+    if "letters" in params or "wordTasks" in params:
+        return "word_matching"
+    if "strokes" in params or ("letter" in params and "previewImage" in params):
+        return "letter_drawing"
+    if isinstance(variant, str) and variant in CATALOG_MINIGAME_IDS:
+        return variant
+    return None
 
 
 def minigame_bundle() -> list[dict[str, Any]]:
@@ -286,6 +320,12 @@ def minigame_bundle() -> list[dict[str, Any]]:
             params = normalize(raw_instance.get("params") or {})
             if not isinstance(params, dict):
                 params = {}
+            explicit_id = raw_instance.get("minigame_id")
+            minigame_id = (
+                str(explicit_id)
+                if isinstance(explicit_id, str) and explicit_id in CATALOG_MINIGAME_IDS
+                else infer_minigame_id(params, content_values.get("variant"))
+            )
             instances.append(
                 {
                     "key": str(key),
@@ -293,6 +333,7 @@ def minigame_bundle() -> list[dict[str, Any]]:
                     if HEBREW_RE.search(canonical_json(content_values))
                     else "en",
                     **content_values,
+                    "minigame_id": minigame_id,
                     "params": params,
                     "source_path": str(path.relative_to(ROOT)),
                     "source_metadata": normalize(
@@ -794,14 +835,15 @@ def insert_minigames_sql(bundle: dict[str, Any], source_path: str | None = None)
     ]
     return (
         "insert into public.minigame_instances "
-        "(key, locale, instruction, tasks, target, variant, success, params, source_path, source_metadata) "
-        f"select key, locale, instruction, tasks, target, variant, success, params, source_path, source_metadata "
+        "(key, locale, instruction, tasks, target, variant, success, minigame_id, params, source_path, source_metadata) "
+        f"select key, locale, instruction, tasks, target, variant, success, minigame_id, params, source_path, source_metadata "
         f"from jsonb_to_recordset({dollar_json(instances)}) as entries("
         "key text, locale text, instruction text, tasks jsonb, target text, variant text, "
-        "success text, params jsonb, source_path text, source_metadata jsonb) "
+        "success text, minigame_id text, params jsonb, source_path text, source_metadata jsonb) "
         "on conflict (key, locale) do update set instruction = excluded.instruction, "
         "tasks = excluded.tasks, target = excluded.target, variant = excluded.variant, "
-        "success = excluded.success, params = excluded.params, source_path = excluded.source_path, "
+        "success = excluded.success, minigame_id = excluded.minigame_id, params = excluded.params, "
+        "source_path = excluded.source_path, "
         "source_metadata = excluded.source_metadata, updated_at = now();\n"
     )
 

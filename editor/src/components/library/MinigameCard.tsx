@@ -38,12 +38,17 @@ export const MinigameCard = memo(function MinigameCard({
       <div className="library-card-icon">✦</div>
       {editing ? (
         <div className="library-card-copy minigame-editor">
-          <p className="eyebrow">{minigame.variant ?? t('activity')} · {minigame.locale}</p>
+          <p className="eyebrow">{[minigame.minigame_id, minigame.variant, minigame.locale].filter(Boolean).join(' · ') || t('activity')}</p>
           <h3 dir="ltr">{minigame.key}</h3>
-          <label><FieldLabel>{t('instruction')}</FieldLabel><textarea className="content-text" dir="auto" rows={2} value={minigame.instruction ?? ''} onChange={(event) => updateMinigame(minigame.id, { instruction: event.target.value || null })} /></label>
-          <label><FieldLabel>{t('successMessage')}</FieldLabel><input className="content-text" dir="auto" value={minigame.success ?? ''} onChange={(event) => updateMinigame(minigame.id, { success: event.target.value || null })} /></label>
+          <section className="minigame-section">
+            <div className="minigame-params-heading">
+              <strong>{t('minigameBriefTitle')}</strong>
+            </div>
+            <label><FieldLabel>{t('instruction')}</FieldLabel><textarea className="content-text" dir="auto" rows={2} value={minigame.instruction ?? ''} onChange={(event) => updateMinigame(minigame.id, { instruction: event.target.value || null })} /></label>
+            <label><FieldLabel>{t('successMessage')}</FieldLabel><input className="content-text" dir="auto" value={minigame.success ?? ''} onChange={(event) => updateMinigame(minigame.id, { success: event.target.value || null })} /></label>
+          </section>
           {paramFields.length > 0 && (
-            <div className="minigame-game-params">
+            <div className="minigame-game-params minigame-section">
               <div className="minigame-params-heading">
                 <strong>{t('minigameParamsTitle')}</strong>
               </div>
@@ -58,7 +63,7 @@ export const MinigameCard = memo(function MinigameCard({
         </div>
       ) : (
         <div className="library-card-copy">
-          <p className="eyebrow">{minigame.variant ?? t('activity')} · {minigame.locale}</p>
+          <p className="eyebrow">{[minigame.minigame_id, minigame.variant, minigame.locale].filter(Boolean).join(' · ') || t('activity')}</p>
           <h3 className="content-text" dir="auto">{minigame.instruction ?? minigame.key}</h3>
           <code>{minigame.key}</code>
           <ParamSummary minigame={minigame} />

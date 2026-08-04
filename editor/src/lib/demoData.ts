@@ -475,6 +475,7 @@ function createMinigames(steps: QuestStep[]): MinigameInstance[] {
       success: spelling
         ? 'המילה נכתבה נכון; פרס נוסף לתיק.'
         : 'התאמה מושלמת! המשימה ממשיכה קדימה.',
+      minigame_id: minigameId,
       params,
       source_path: `_registry/minigame_instances/${key.split('_')[0]}.yaml`,
       source_metadata: { demo: true },

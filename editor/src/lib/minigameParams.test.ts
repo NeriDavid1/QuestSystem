@@ -9,6 +9,7 @@ import {
   getMinigameVariantsForEntry,
   normalizeParamValue,
   readMinigameParam,
+  seedParamsFromBrief,
   type MinigameParamField,
 } from './minigameParams'
 import type { CatalogEntry, EditorData, MinigameInstance } from './types'
@@ -53,6 +54,7 @@ function minigame(overrides: Partial<MinigameInstance> = {}): MinigameInstance {
     target: null,
     variant: null,
     success: null,
+    minigame_id: null,
     params: {},
     source_path: null,
     source_metadata: {},
@@ -105,6 +107,12 @@ describe('defaultParamsForEntry', () => {
 })
 
 describe('getMinigameParamFieldsForInstance', () => {
+  it('resolves fields by minigame_id catalog kind', () => {
+    const instance = minigame({ minigame_id: 'letter_ordering', variant: 'word_spelling', params: { prompt: 'x' } })
+    const fields = getMinigameParamFieldsForInstance(data, instance)
+    expect(fields.map((field) => field.name)).toContain('targetWord')
+  })
+
   it('resolves fields by catalog variant when the variant is a game external id', () => {
     const instance = minigame({ variant: 'letter_ordering', params: { prompt: 'x' } })
     const fields = getMinigameParamFieldsForInstance(data, instance)
@@ -119,6 +127,30 @@ describe('getMinigameParamFieldsForInstance', () => {
 
   it('returns an empty field list for an instance with no params', () => {
     expect(getMinigameParamFieldsForInstance(data, minigame())).toEqual([])
+  })
+})
+
+describe('seedParamsFromBrief', () => {
+  it('fills letter_ordering targetWord and prompt from the brief', () => {
+    const seeded = seedParamsFromBrief(
+      letterOrdering,
+      defaultParamsForEntry(letterOrdering),
+      'cat',
+      'Spell cat',
+    )
+    expect(seeded.targetWord).toBe('cat')
+    expect(seeded.prompt).toBe('Spell cat')
+  })
+
+  it('does not overwrite existing gameplay values', () => {
+    const seeded = seedParamsFromBrief(
+      letterOrdering,
+      { ...defaultParamsForEntry(letterOrdering), targetWord: 'dog', prompt: 'Keep me' },
+      'cat',
+      'Spell cat',
+    )
+    expect(seeded.targetWord).toBe('dog')
+    expect(seeded.prompt).toBe('Keep me')
   })
 })
 

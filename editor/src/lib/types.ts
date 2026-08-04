@@ -120,8 +120,11 @@ export interface MinigameInstance {
   instruction: string | null
   tasks: string[]
   target: string | null
+  /** Gameplay label (word_spelling, sentence_building, …) — not the catalog kind. */
   variant: string | null
   success: string | null
+  /** Catalog minigame external_id (letter_ordering, word_ordering, …). */
+  minigame_id: string | null
   /**
    * Per-game content parameters mirroring the Unity config data SOs
    * (e.g. LetterOrderingDataSO fields: prompt, targetWord, extraDistractorCount…).

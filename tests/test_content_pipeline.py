@@ -27,14 +27,14 @@ class ContentPipelineTests(unittest.TestCase):
         self.assertEqual(
             self.bundle["counts"],
             {
-                "catalog_entries": 222,
+                "catalog_entries": 227,
                 "step_type_definitions": 6,
-                "dialogues": 54,
-                "dialogue_lines": 150,
-                "minigame_instances": 52,
-                "questlines": 4,
-                "quests": 26,
-                "steps": 155,
+                "dialogues": 32,
+                "dialogue_lines": 87,
+                "minigame_instances": 44,
+                "questlines": 3,
+                "quests": 16,
+                "steps": 107,
                 "errors": 0,
                 "warnings": 0,
                 "info": 0,
@@ -75,8 +75,8 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         )
-        self.assertEqual(prerequisites, 22)
-        self.assertEqual(rewards, 69)
+        self.assertEqual(prerequisites, 13)
+        self.assertEqual(rewards, 49)
 
     def test_report_and_generated_bundle_are_present(self):
         report = json.loads((ROOT / "reports" / "quest_import_report.json").read_text(encoding="utf-8"))
@@ -182,12 +182,18 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         }
-        self.assertEqual(len(quests_by_key), 26)
+        self.assertEqual(len(quests_by_key), 16)
         self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
-        self.assertTrue(quests_by_key["q01_runaway_a"]["wait_for_npc_turn_in"])  # english_kingdom_maya
         self.assertFalse(quests_by_key["q01_bridge_too_short"]["wait_for_npc_turn_in"])  # adjective_crown
         self.assertFalse(quests_by_key["q01_roles_without_names"]["wait_for_npc_turn_in"])  # kingdom_nouns
 
+        for instance in self.bundle["minigame_instances"]:
+            self.assertIn(
+                instance.get("minigame_id"),
+                {"letter_ordering", "word_ordering", "speak_aloud", "word_matching", "letter_drawing"},
+                msg=f"instance {instance.get('key')} missing catalog minigame_id",
+            )
+            self.assertIsInstance(instance.get("params"), dict)
         migration = (ROOT / "supabase" / "migrations" / "20260803140000_quest_wait_turn_in.sql").read_text(
             encoding="utf-8"
         )

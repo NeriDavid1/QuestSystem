@@ -17,6 +17,7 @@ What is compared per quest (when the quest exists on both sides):
 * step target ids         -> objective.targetId (npc/area/interactable)
 * deliver item            -> objective.requiredItemId (SoftKitty id via _registry/items.yaml)
 * wait_for_npc_turn_in    -> QuestDefinitionSO.waitForNpcTurnIn
+* play_minigame params    -> nested Data SO fields vs minigame_instances.params
 
 Mismatches are reported to `reports/unity_sync_report.json` and on stdout. The
 exit code is non-zero when any `error`-severity issue is reported (or when
@@ -40,10 +41,20 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from import_yaml_to_supabase import build_bundle, load_yaml, merged_items  # noqa: E402
+from unity_to_yaml import (  # noqa: E402
+    CONFIG_CLASS_TO_MINIGAME,
+    extract_params,
+    guid_of,
+    minigame_type_for_config,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "_registry"
 REPORT_PATH = ROOT / "reports" / "unity_sync_report.json"
+
+DEFAULT_OUR_ASSETS = Path(
+    r"C:\Users\123ne\source\repos\Animal-English-World\English Kingdom\Assets\_OurAssets"
+)
 
 # Unity QuestObjectiveType enum (EnglishKingdom.QuestSystem.QuestObjectiveType)
 QUEST_OBJECTIVE_NAMES = {
@@ -65,10 +76,13 @@ STEP_TO_OBJECTIVE = {
     "deliver_item": "DeliverItem",
 }
 
-DEFAULT_UNITY_ROOT = (
-    r"C:\Users\123ne\source\repos\Animal-English-World"
-    r"\English Kingdom\Assets\_OurAssets\Data\Quests\Lines"
-)
+DEFAULT_UNITY_ROOT = str(DEFAULT_OUR_ASSETS / "Data" / "Quests" / "Lines")
+
+CONTENT_FIELD_NAMES = {
+    "data",
+    "levelConfig",
+    "letterPath",
+}
 
 
 def load_unity_yaml(path: Path) -> dict[str, Any]:
@@ -94,16 +108,96 @@ def build_guid_index(unity_root: Path) -> dict[str, Path]:
     import re as _re
 
     index: dict[str, Path] = {}
-    for meta in unity_root.rglob("*.meta"):
-        try:
-            text = meta.read_text(encoding="utf-8", errors="ignore")
-        except OSError:
-            continue
-        match = _re.search(r"^guid:\s*([0-9a-fA-F]{32})\s*$", text, _re.MULTILINE)
-        if match:
-            index[match.group(1).lower()] = meta.parent / meta.stem
+    scan_roots = [unity_root]
+    # Also index minigame content when validating Lines-only trees.
+    our_assets = unity_root
+    for _ in range(4):
+        if our_assets.name == "_OurAssets":
+            break
+        our_assets = our_assets.parent
+    if our_assets.name == "_OurAssets":
+        for relative in ("Data/MiniGames", "Art/Prefabs/UI/GamePlay/MiniGame", "Data/Quests"):
+            candidate = our_assets / relative
+            if candidate.is_dir() and candidate not in scan_roots:
+                scan_roots.append(candidate)
+
+    for root in scan_roots:
+        for meta in root.rglob("*.meta"):
+            try:
+                text = meta.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            match = _re.search(r"^guid:\s*([0-9a-fA-F]{32})\s*$", text, _re.MULTILINE)
+            if match:
+                index[match.group(1).lower()] = meta.parent / meta.stem
     return index
 
+
+def load_minigame_instances() -> dict[str, dict[str, Any]]:
+    """Map instance key -> authored brief + params."""
+    instances: dict[str, dict[str, Any]] = {}
+    instance_dir = REGISTRY / "minigame_instances"
+    for path in sorted(instance_dir.glob("*.yaml")):
+        for key, raw in (load_yaml(path).get("instances") or {}).items():
+            if isinstance(raw, dict):
+                instances[str(key)] = raw
+    return instances
+
+
+def content_fields_by_minigame() -> dict[str, list[str]]:
+    catalog = load_yaml(REGISTRY / "minigames.yaml").get("minigames") or {}
+    return {
+        str(minigame_id): [str(field) for field in (meta.get("content_fields") or [])]
+        for minigame_id, meta in catalog.items()
+        if isinstance(meta, dict)
+    }
+
+
+def normalize_param_value(value: Any) -> Any:
+    if isinstance(value, list):
+        return [normalize_param_value(item) for item in value]
+    if isinstance(value, dict):
+        return {str(key): normalize_param_value(item) for key, item in value.items()}
+    if isinstance(value, float) and value.is_integer():
+        return int(value)
+    return value
+
+
+def params_equal(left: Any, right: Any) -> bool:
+    return normalize_param_value(left) == normalize_param_value(right)
+
+
+def extract_unity_minigame_params(
+    config_guid: str | None,
+    guid_index: dict[str, Path],
+    our_assets: Path,
+    content_fields: dict[str, list[str]],
+) -> tuple[str | None, dict[str, Any]]:
+    if not config_guid:
+        return None, {}
+    config_path = guid_index.get(config_guid.lower())
+    if not config_path or not config_path.is_file():
+        return None, {}
+    config_data = load_unity_yaml(config_path)
+    minigame_id = minigame_type_for_config(config_data)
+    if not minigame_id:
+        identifier = str(config_data.get("m_EditorClassIdentifier") or "")
+        for class_name, mapped in CONFIG_CLASS_TO_MINIGAME.items():
+            if class_name in identifier:
+                minigame_id = mapped
+                break
+    content_guid = None
+    for field in CONTENT_FIELD_NAMES:
+        content_guid = guid_of(config_data.get(field))
+        if content_guid:
+            break
+    if not content_guid:
+        return minigame_id, {}
+    content_path = guid_index.get(content_guid.lower())
+    if not content_path or not content_path.is_file():
+        return minigame_id, {}
+    content_data = load_unity_yaml(content_path)
+    return minigame_id, extract_params(minigame_id or "", content_data, guid_index, our_assets, content_fields)
 
 def parse_reward_definition(path: Path) -> list[dict[str, Any]]:
     """Extract item rewards granted by a RewardDefinitionSO asset bundle."""
@@ -142,6 +236,7 @@ def parse_quest_definition(path: Path, guid_index: dict[str, Path] | None = None
             if isinstance(parameter, dict) and parameter.get("key"):
                 parameters[str(parameter["key"])] = str(parameter.get("value") or "")
         step_reward = objective.get("stepReward")
+        mini_game_config = objective.get("miniGameConfig")
         objectives.append(
             {
                 "type": objective.get("type"),
@@ -150,6 +245,7 @@ def parse_quest_definition(path: Path, guid_index: dict[str, Path] | None = None
                 "count": objective.get("count", 1),
                 "requiredItemId": objective.get("requiredItemId") or 0,
                 "stepRewardGuid": step_reward.get("guid") if isinstance(step_reward, dict) else None,
+                "miniGameConfigGuid": mini_game_config.get("guid") if isinstance(mini_game_config, dict) else None,
                 "parameters": parameters,
             }
         )
@@ -297,10 +393,19 @@ def compare_quest(
     bundle_quest: dict[str, Any],
     unity_quest: dict[str, Any],
     items: dict[str, dict[str, Any]],
+    *,
+    instances: dict[str, dict[str, Any]] | None = None,
+    guid_index: dict[str, Path] | None = None,
+    our_assets: Path | None = None,
+    content_fields: dict[str, list[str]] | None = None,
 ) -> list[dict[str, Any]]:
     """Compare one quest on both sides and return a list of issues."""
     issues: list[dict[str, Any]] = []
     quest_label = f"{line_key}/{bundle_quest['key']}"
+    instances = instances or {}
+    guid_index = guid_index or {}
+    our_assets = our_assets or DEFAULT_OUR_ASSETS
+    content_fields = content_fields or {}
 
     def issue(severity: str, code: str, message: str, **context: Any) -> None:
         issues.append(
@@ -476,6 +581,43 @@ def compare_quest(
                     unity=unity_difficulty,
                 )
 
+            instance_key = str(payload.get("instance_key") or payload.get("instance_id") or "")
+            authored = instances.get(instance_key) if instance_key else None
+            authored_params = (authored or {}).get("params") if isinstance(authored, dict) else None
+            unity_minigame_id, unity_params = extract_unity_minigame_params(
+                unity_objective.get("miniGameConfigGuid"),
+                guid_index,
+                our_assets,
+                content_fields,
+            )
+            if isinstance(authored_params, dict) and unity_params:
+                mismatched = []
+                for key, unity_value in unity_params.items():
+                    if key not in authored_params:
+                        mismatched.append(key)
+                        continue
+                    if not params_equal(authored_params.get(key), unity_value):
+                        mismatched.append(key)
+                if mismatched:
+                    issue(
+                        "warning",
+                        "minigame_params_mismatch",
+                        f"Step {index + 1} minigame params differ between YAML and Unity Data SO.",
+                        step_index=index,
+                        instance_key=instance_key,
+                        fields=mismatched,
+                        yaml_minigame_id=(authored or {}).get("minigame_id"),
+                        unity_minigame_id=unity_minigame_id,
+                    )
+            elif instance_key and not authored:
+                issue(
+                    "warning",
+                    "minigame_instance_missing",
+                    f"Step {index + 1} references minigame instance '{instance_key}' which is not in YAML.",
+                    step_index=index,
+                    instance_key=instance_key,
+                )
+
     return issues
 
 
@@ -483,6 +625,16 @@ def validate(unity_root: Path) -> dict[str, Any]:
     bundle = build_bundle()
     unity_quests = collect_unity_quests(unity_root)
     items = merged_items()
+    instances = load_minigame_instances()
+    guid_index = build_guid_index(unity_root)
+    content_fields = content_fields_by_minigame()
+    our_assets = unity_root
+    for _ in range(4):
+        if our_assets.name == "_OurAssets":
+            break
+        our_assets = our_assets.parent
+    if our_assets.name != "_OurAssets":
+        our_assets = DEFAULT_OUR_ASSETS
     issues: list[dict[str, Any]] = []
     compared = 0
 
@@ -506,7 +658,18 @@ def validate(unity_root: Path) -> dict[str, Any]:
             )
             continue
         line_key, bundle_quest = bundle_by_key[key]
-        issues.extend(compare_quest(line_key, bundle_quest, unity_quest, items))
+        issues.extend(
+            compare_quest(
+                line_key,
+                bundle_quest,
+                unity_quest,
+                items,
+                instances=instances,
+                guid_index=guid_index,
+                our_assets=our_assets,
+                content_fields=content_fields,
+            )
+        )
         compared += 1
 
     for key in sorted(set(bundle_by_key) - unity_paths):
@@ -536,7 +699,6 @@ def validate(unity_root: Path) -> dict[str, Any]:
         "issues": issues,
     }
     return report
-
 
 def print_report(report: dict[str, Any]) -> None:
     counts = report["counts"]

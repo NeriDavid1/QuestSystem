@@ -9,6 +9,9 @@ import {
 import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
 
+type LetterTile = { id: string; value: string }
+type WordTask = { id: string; image: string; fullWord: string; missingIndices: number[] }
+
 function isJsonText(value: unknown): boolean {
   try {
     JSON.parse(String(value))
@@ -16,6 +19,39 @@ function isJsonText(value: unknown): boolean {
   } catch {
     return false
   }
+}
+
+function asLetterTiles(value: unknown): LetterTile[] {
+  if (!Array.isArray(value)) return []
+  return value.map((item, index) => {
+    if (item && typeof item === 'object') {
+      const record = item as Record<string, unknown>
+      return {
+        id: String(record.id ?? `letter_${index + 1}`),
+        value: String(record.value ?? ''),
+      }
+    }
+    return { id: `letter_${index + 1}`, value: String(item ?? '') }
+  })
+}
+
+function asWordTasks(value: unknown): WordTask[] {
+  if (!Array.isArray(value)) return []
+  return value.map((item, index) => {
+    if (item && typeof item === 'object') {
+      const record = item as Record<string, unknown>
+      const missing = Array.isArray(record.missingIndices)
+        ? record.missingIndices.map((entry) => Math.trunc(Number(entry))).filter((entry) => Number.isFinite(entry))
+        : []
+      return {
+        id: String(record.id ?? `task_${index + 1}`),
+        image: String(record.image ?? ''),
+        fullWord: String(record.fullWord ?? ''),
+        missingIndices: missing,
+      }
+    }
+    return { id: `task_${index + 1}`, image: '', fullWord: String(item ?? ''), missingIndices: [] }
+  })
 }
 
 function JsonParamInput({
@@ -103,6 +139,195 @@ function ArrayParamInput({
   )
 }
 
+function LettersEditor({
+  minigame,
+  onChange,
+}: {
+  minigame: MinigameInstance
+  onChange: (params: Record<string, unknown>) => void
+}) {
+  const t = useT()
+  const letters = asLetterTiles(readMinigameParam(minigame, { name: 'letters', labelKey: 'minigameParamLetters', type: 'json' }))
+  const commit = (next: LetterTile[]) => onChange({ ...(minigame.params ?? {}), letters: next })
+
+  return (
+    <div className="minigame-structured-list">
+      {letters.length === 0 && <p className="minigame-empty-hint">{t('minigameParamsArrayEmpty')}</p>}
+      {letters.map((letter, index) => (
+        <div className="minigame-structured-row" key={`${letter.id}-${index}`}>
+          <label>
+            <span className="minigame-task-index">id</span>
+            <input
+              className="content-text"
+              dir="ltr"
+              value={letter.id}
+              onChange={(event) =>
+                commit(letters.map((entry, entryIndex) => (entryIndex === index ? { ...entry, id: event.target.value } : entry)))
+              }
+            />
+          </label>
+          <label>
+            <span className="minigame-task-index">{t('minigameParamLetter')}</span>
+            <input
+              className="content-text"
+              dir="ltr"
+              maxLength={4}
+              value={letter.value}
+              onChange={(event) =>
+                commit(letters.map((entry, entryIndex) => (entryIndex === index ? { ...entry, value: event.target.value } : entry)))
+              }
+            />
+          </label>
+          <button
+            type="button"
+            className="icon-button tiny"
+            aria-label={t('minigameParamRemove', { n: index + 1 })}
+            onClick={() => commit(letters.filter((_, entryIndex) => entryIndex !== index))}
+          >
+            <Icon name="close" />
+          </button>
+        </div>
+      ))}
+      <button
+        type="button"
+        className="button subtle compact"
+        onClick={() => commit([...letters, { id: `letter_${letters.length + 1}`, value: '' }])}
+      >
+        <Icon name="plus" /> {t('minigameParamAddLetter')}
+      </button>
+    </div>
+  )
+}
+
+function WordTasksEditor({
+  minigame,
+  onChange,
+}: {
+  minigame: MinigameInstance
+  onChange: (params: Record<string, unknown>) => void
+}) {
+  const t = useT()
+  const tasks = asWordTasks(readMinigameParam(minigame, { name: 'wordTasks', labelKey: 'minigameParamWordTasks', type: 'json' }))
+  const commit = (next: WordTask[]) => onChange({ ...(minigame.params ?? {}), wordTasks: next })
+
+  return (
+    <div className="minigame-structured-list">
+      {tasks.length === 0 && <p className="minigame-empty-hint">{t('minigameParamsArrayEmpty')}</p>}
+      {tasks.map((task, index) => (
+        <div className="minigame-word-task-card" key={`${task.id}-${index}`}>
+          <div className="minigame-structured-row">
+            <label>
+              <span className="minigame-task-index">id</span>
+              <input
+                className="content-text"
+                dir="ltr"
+                value={task.id}
+                onChange={(event) =>
+                  commit(tasks.map((entry, entryIndex) => (entryIndex === index ? { ...entry, id: event.target.value } : entry)))
+                }
+              />
+            </label>
+            <label>
+              <span className="minigame-task-index">{t('minigameParamFullWord')}</span>
+              <input
+                className="content-text"
+                dir="ltr"
+                value={task.fullWord}
+                onChange={(event) =>
+                  commit(tasks.map((entry, entryIndex) => (entryIndex === index ? { ...entry, fullWord: event.target.value } : entry)))
+                }
+              />
+            </label>
+            <button
+              type="button"
+              className="icon-button tiny"
+              aria-label={t('minigameParamRemove', { n: index + 1 })}
+              onClick={() => commit(tasks.filter((_, entryIndex) => entryIndex !== index))}
+            >
+              <Icon name="close" />
+            </button>
+          </div>
+          <label>
+            <FieldLabel hint={t('minigameParamMissingIndicesHint')}>{t('minigameParamMissingIndices')}</FieldLabel>
+            <input
+              className="content-text"
+              dir="ltr"
+              value={task.missingIndices.join(', ')}
+              placeholder="0, 2"
+              onChange={(event) => {
+                const missingIndices = event.target.value
+                  .split(/[,\s]+/)
+                  .map((part) => part.trim())
+                  .filter(Boolean)
+                  .map((part) => Math.trunc(Number(part)))
+                  .filter((part) => Number.isFinite(part))
+                commit(tasks.map((entry, entryIndex) => (entryIndex === index ? { ...entry, missingIndices } : entry)))
+              }}
+            />
+          </label>
+          <label>
+            <FieldLabel>{t('minigameParamTaskImage')}</FieldLabel>
+            <input
+              className="content-text"
+              dir="ltr"
+              value={task.image}
+              placeholder="Assets/… or relative path"
+              onChange={(event) =>
+                commit(tasks.map((entry, entryIndex) => (entryIndex === index ? { ...entry, image: event.target.value } : entry)))
+              }
+            />
+          </label>
+        </div>
+      ))}
+      <button
+        type="button"
+        className="button subtle compact"
+        onClick={() =>
+          commit([...tasks, { id: `task_${tasks.length + 1}`, image: '', fullWord: '', missingIndices: [] }])
+        }
+      >
+        <Icon name="plus" /> {t('minigameParamAddWordTask')}
+      </button>
+    </div>
+  )
+}
+
+function AdvancedAssetField({
+  field,
+  minigame,
+  onChange,
+}: {
+  field: MinigameParamField
+  minigame: MinigameInstance
+  onChange: (params: Record<string, unknown>) => void
+}) {
+  const t = useT()
+  const [open, setOpen] = useState(Boolean(readMinigameParam(minigame, field)))
+  const value = readMinigameParam(minigame, field)
+
+  return (
+    <div className="minigame-param-advanced">
+      <button type="button" className="button subtle compact" onClick={() => setOpen((current) => !current)}>
+        <Icon name={open ? 'close' : 'plus'} /> {t('minigameParamAdvancedToggle')}
+      </button>
+      {open && (
+        <label className="minigame-param-field">
+          <FieldLabel hint={field.hintKey ? t(field.hintKey as MessageKey) : undefined}>
+            {t(field.labelKey as MessageKey)} <code className="minigame-param-name">{field.name}</code>
+          </FieldLabel>
+          <input
+            className="content-text"
+            dir="ltr"
+            value={String(value ?? '')}
+            placeholder="Assets/…"
+            onChange={(event) => onChange({ ...(minigame.params ?? {}), [field.name]: event.target.value })}
+          />
+        </label>
+      )}
+    </div>
+  )
+}
+
 /**
  * Renders the per-game content parameters declared by the catalog minigame entry
  * (its `content_fields` metadata), matching the Unity data ScriptableObjects.
@@ -128,6 +353,26 @@ export function MinigameParamsEditor({
         <p className="minigame-empty-hint">{t('minigameParamsNone')}</p>
       ) : (
         fields.map((field) => {
+          if (field.name === 'letters') {
+            return (
+              <div className="minigame-param-field" key={field.name}>
+                <FieldLabel>{t(field.labelKey as MessageKey)} <code className="minigame-param-name">{field.name}</code></FieldLabel>
+                <LettersEditor minigame={minigame} onChange={onChange} />
+              </div>
+            )
+          }
+          if (field.name === 'wordTasks') {
+            return (
+              <div className="minigame-param-field" key={field.name}>
+                <FieldLabel>{t(field.labelKey as MessageKey)} <code className="minigame-param-name">{field.name}</code></FieldLabel>
+                <WordTasksEditor minigame={minigame} onChange={onChange} />
+              </div>
+            )
+          }
+          if (field.name === 'wordRevealDatabase') {
+            return <AdvancedAssetField key={field.name} field={field} minigame={minigame} onChange={onChange} />
+          }
+
           const value = readMinigameParam(minigame, field)
           return (
             <label className="minigame-param-field" key={field.name}>

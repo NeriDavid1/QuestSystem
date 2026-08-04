@@ -721,6 +721,7 @@ def process_line(
         else:
             brief = default_brief(info["minigame_id"], info["data"], params)
         entry = OrderedDict()
+        entry["minigame_id"] = info["minigame_id"]
         for field in ("instruction", "tasks", "target", "variant", "success"):
             entry[field] = brief.get(field)
         entry["params"] = params
@@ -730,7 +731,7 @@ def process_line(
         instances_doc,
         [
             f"Per-step minigame briefs — {line_key}",
-            "`params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).",
+            "`minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.",
         ],
     )
 

@@ -29,7 +29,7 @@ class QuestlineExportTests(unittest.TestCase):
 
     def test_load_documents_accepts_bundle_single_and_list_shapes(self):
         exporter = self.exporter
-        self.assertEqual(len(self.documents), 4)
+        self.assertEqual(len(self.documents), 3)
         self.assertEqual(exporter.load_documents(self.documents[0]), [self.documents[0]])
         self.assertEqual(exporter.load_documents({"document": self.documents[0]}), [self.documents[0]])
         self.assertEqual(exporter.load_documents({"questlines": self.documents}), self.documents)

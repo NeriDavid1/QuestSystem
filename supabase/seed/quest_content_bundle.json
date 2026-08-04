@@ -4473,6 +4473,7 @@
       "target": "long",
       "variant": "word_spelling",
       "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של ארוך",
         "targetWord": "long",
@@ -4495,6 +4496,7 @@
       "target": "king",
       "variant": "word_spelling",
       "success": "המילה KING (מלך) חוזרת לדף אנשי המלוכה",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות כדי לשחזר את המילה מלך באנגלית",
         "targetWord": "king",
@@ -4517,6 +4519,7 @@
       "target": "king, queen, knight",
       "variant": "repeat_after_npc",
       "success": "Gem אחד נוסף לתיק; שלושת שמות המלוכה נשמעו נכון",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו באנגלית: מלך, מלכה ואביר",
         "targetWords": [
@@ -4544,6 +4547,7 @@
       "target": "cat",
       "variant": "word_spelling",
       "success": "CAT נכתב נכון; Oak Log אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "תסדר את המילה חתול באנגלית",
         "targetWord": "cat",
@@ -4566,6 +4570,7 @@
       "target": "castle",
       "variant": "word_spelling",
       "success": "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות כדי לשחזר את המילה טירה באנגלית",
         "targetWord": "castle",
@@ -4588,6 +4593,7 @@
       "target": "castle, tower, gate",
       "variant": "repeat_after_npc",
       "success": "Gem אחד נוסף לתיק; שלושת שמות המקומות נשמעו נכון",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו באנגלית: טירה, מגדל ושער",
         "targetWords": [
@@ -4615,6 +4621,7 @@
       "target": "dog",
       "variant": "word_spelling",
       "success": "DOG נכתב נכון; Herbs אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "תסדר את המילה כלב באנגלית",
         "targetWord": "dog",
@@ -4636,6 +4643,7 @@
       "target": "hot",
       "variant": "single_word",
       "success": "HOT נקלט; Herbs אחד נוסף לתיק",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "תגידו חם באנגלית",
         "targetWords": [
@@ -4661,6 +4669,7 @@
       "target": "big",
       "variant": "word_spelling",
       "success": "BIG נכתב נכון; Corn אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של גדול",
         "targetWord": "big",
@@ -4682,6 +4691,7 @@
       "target": "small",
       "variant": "single_word",
       "success": "SMALL נקלט; Corn נוסף לתיק — כעת יש שניים",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו SMALL בקול",
         "targetWords": [
@@ -4708,6 +4718,7 @@
       "target": "crown",
       "variant": "word_spelling",
       "success": "הכתר מקבל בחזרה את הכרטיס CROWN",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות כדי לשחזר את המילה כתר באנגלית",
         "targetWord": "crown",
@@ -4730,6 +4741,7 @@
       "target": "crown, throne, treasure",
       "variant": "repeat_after_npc",
       "success": "Power Stone אחד נוסף לתיק; שלושת שמות האוצרות נשמעו נכון",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו באנגלית: כתר, כיסא־מלכות ואוצר",
         "targetWords": [
@@ -4757,6 +4769,7 @@
       "target": "big",
       "variant": "word_spelling",
       "success": "BIG נכתב נכון — חזרו לוויל לקבל Slash",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "תסדר את המילה גדול באנגלית",
         "targetWord": "big",
@@ -4779,6 +4792,7 @@
       "target": "shield",
       "variant": "word_spelling",
       "success": "המגן (shield) חוזר להיות מגן במקום מגש מרק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות כדי לשחזר את המילה מגן באנגלית",
         "targetWord": "shield",
@@ -4801,6 +4815,7 @@
       "target": "sword, shield, scroll",
       "variant": "repeat_after_npc",
       "success": "Power Stone אחד נוסף לתיק; שלושת שמות הנשקייה נשמעו נכון",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו באנגלית: חרב, מגן ומגילה",
         "targetWords": [
@@ -4827,6 +4842,7 @@
       "target": "big",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של גדול",
         "targetWord": "big",
@@ -4847,6 +4863,7 @@
       "target": "cold",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של קר",
         "targetWord": "cold",
@@ -4867,6 +4884,7 @@
       "target": "fast",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של מהיר",
         "targetWord": "fast",
@@ -4887,6 +4905,7 @@
       "target": "heavy",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של כבד",
         "targetWord": "heavy",
@@ -4907,6 +4926,7 @@
       "target": "high",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו HIGH",
         "targetWords": [
@@ -4931,6 +4951,7 @@
       "target": "hot",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "תגידו חם באנגלית",
         "targetWords": [
@@ -4955,6 +4976,7 @@
       "target": "light",
       "variant": "single_word",
       "success": "Ancient Rune נוסף לתיק — כעת יש שנים־עשר",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו LIGHT",
         "targetWords": [
@@ -4979,6 +5001,7 @@
       "target": "long",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו LONG",
         "targetWords": [
@@ -5003,6 +5026,7 @@
       "target": "low",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של נמוך",
         "targetWord": "low",
@@ -5023,6 +5047,7 @@
       "target": "short",
       "variant": "word_spelling",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של קצר",
         "targetWord": "short",
@@ -5043,6 +5068,7 @@
       "target": "slow",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו SLOW",
         "targetWords": [
@@ -5067,6 +5093,7 @@
       "target": "small",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו SMALL",
         "targetWords": [
@@ -5091,6 +5118,7 @@
       "target": "low",
       "variant": "word_spelling",
       "success": "Power Stone אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של נמוך",
         "targetWord": "low",
@@ -5111,6 +5139,7 @@
       "target": "The place is low.",
       "variant": "sentence_building",
       "success": "Power Stone אחד נוסף לתיק",
+      "minigame_id": "word_ordering",
       "params": {
         "prompt": "סדרו את המשפט: המקום נמוך",
         "englishWordsInOrder": [
@@ -5136,6 +5165,7 @@
       "target": "high",
       "variant": "word_spelling",
       "success": "Power Stone אחד נוסף לתיק",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות של גבוה",
         "targetWord": "high",
@@ -5156,6 +5186,7 @@
       "target": "The building is high.",
       "variant": "sentence_building",
       "success": "Power Stone נוסף לתיק — כעת יש ארבעה",
+      "minigame_id": "word_ordering",
       "params": {
         "prompt": "סדרו את המשפט: הבניין גבוה",
         "englishWordsInOrder": [
@@ -5183,6 +5214,7 @@
       "target": "wizard",
       "variant": "word_spelling",
       "success": "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית",
         "targetWord": "wizard",
@@ -5205,6 +5237,7 @@
       "target": "wizard, cook, guard",
       "variant": "repeat_after_npc",
       "success": "Power Stone אחד נוסף לתיק; שלושת שמות אנשי החצר נשמעו נכון",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו באנגלית: קוסם, טבח ושומר",
         "targetWords": [
@@ -5234,6 +5267,7 @@
       "target": "short, long, cold, hot",
       "variant": "missing_letter_matching",
       "success": "ארבע המילים הראשונות הושלמו",
+      "minigame_id": "word_matching",
       "params": {
         "letters": [
           {
@@ -5304,6 +5338,7 @@
       "target": "big, small, fast, slow",
       "variant": "missing_letter_matching",
       "success": "ארבע המילים הבאות הושלמו",
+      "minigame_id": "word_matching",
       "params": {
         "letters": [
           {
@@ -5374,6 +5409,7 @@
       "target": "low, high, heavy, light",
       "variant": "missing_letter_matching",
       "success": "כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק",
+      "minigame_id": "word_matching",
       "params": {
         "letters": [
           {
@@ -5443,6 +5479,7 @@
       "target": "dragon",
       "variant": "word_spelling",
       "success": "כרטיס DRAGON (דרקון) חוזר ליצור הנכון",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית",
         "targetWord": "dragon",
@@ -5465,6 +5502,7 @@
       "target": "dragon, griffin, goblin",
       "variant": "repeat_after_npc",
       "success": "Ancient Rune אחד נוסף לתיק; שלושת שמות היצורים נשמעו נכון",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו באנגלית: דרקון, גריפין וגובלין",
         "targetWords": [
@@ -5491,6 +5529,7 @@
       "target": "castle",
       "variant": "word_spelling",
       "success": "CASTLE נכתב נכון",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את המילה טירה באנגלית",
         "targetWord": "castle",
@@ -5511,6 +5550,7 @@
       "target": "dragon",
       "variant": "word_spelling",
       "success": "DRAGON נכתב נכון",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את המילה דרקון באנגלית",
         "targetWord": "dragon",
@@ -5531,6 +5571,7 @@
       "target": "queen",
       "variant": "word_spelling",
       "success": "QUEEN נכתב נכון",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את המילה מלכה באנגלית",
         "targetWord": "queen",
@@ -5555,6 +5596,7 @@
       "target": "knight, castle, shield, dragon",
       "variant": "single_word",
       "success": "Ancient Rune אחד נוסף לתיק; ספר ה־nouns של הממלכה נפתח בשלמותו",
+      "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו באנגלית מילה אחת מכל קבוצה",
         "targetWords": [
@@ -5582,6 +5624,7 @@
       "target": "shield",
       "variant": "word_spelling",
       "success": "SHIELD נכתב נכון",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את המילה מגן באנגלית",
         "targetWord": "shield",
@@ -5602,6 +5645,7 @@
       "target": "throne",
       "variant": "word_spelling",
       "success": "THRONE נכתב נכון",
+      "minigame_id": "letter_ordering",
       "params": {
         "prompt": "סדרו את המילה כיסא־מלכות באנגלית",
         "targetWord": "throne",
@@ -11501,5 +11545,5 @@
       ]
     }
   ],
-  "source_digest": "3e008097858bc8719e3237d6a3a1abd9a27693492daf8cbb06d0b7aad6716758"
+  "source_digest": "f74b1927b06484b979410ce6e3c2f26e440d00d0fca6283533fe366bfc6cd0ce"
 }

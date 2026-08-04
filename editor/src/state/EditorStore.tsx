@@ -29,6 +29,7 @@ import {
   defaultParamsForEntry,
   getMinigameCatalogEntry,
   getMinigameVariantsForEntry,
+  seedParamsFromBrief,
 } from '../lib/minigameParams'
 import {
   DEFAULT_DIALOGUE_LOCALE,
@@ -557,16 +558,18 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       if (!step) return current
       const baseMinigame = getMinigameCatalogEntry(current, step)
       const variants = getMinigameVariantsForEntry(baseMinigame)
+      const instruction = baseMinigame ? t('minigameDefaultInstruction', { name: baseMinigame.name }) : ''
       const instance: MinigameInstance = {
         id: makeLocalId('minigame'),
         key: uniqueMinigameKey(current, `${selectedQuest?.key ?? 'quest'}_minigame`),
         locale: DEFAULT_DIALOGUE_LOCALE,
-        instruction: baseMinigame ? t('minigameDefaultInstruction', { name: baseMinigame.name }) : '',
+        instruction,
         tasks: [],
         target: null,
-        variant: variants[0] ?? baseMinigame?.external_id ?? null,
+        variant: variants[0] ?? null,
         success: null,
-        params: defaultParamsForEntry(baseMinigame),
+        minigame_id: baseMinigame?.external_id ?? (typeof step.payload.minigame_id === 'string' ? step.payload.minigame_id : null),
+        params: seedParamsFromBrief(baseMinigame, defaultParamsForEntry(baseMinigame), null, instruction),
         source_path: null,
         source_metadata: { local_draft: true },
       }

@@ -2058,6 +2058,41 @@ select:focus {
   background: #fbfcff;
 }
 
+.minigame-section {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e8edf8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.minigame-structured-list {
+  display: grid;
+  gap: 8px;
+}
+
+.minigame-structured-row {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  align-items: end;
+}
+
+.minigame-word-task-card {
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  border: 1px dashed #d7def0;
+  border-radius: 8px;
+  background: #f8faff;
+}
+
+.minigame-param-advanced {
+  display: grid;
+  gap: 8px;
+}
+
 .minigame-tasks {
   display: grid;
   gap: 7px;

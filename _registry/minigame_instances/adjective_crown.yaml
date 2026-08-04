@@ -1,7 +1,8 @@
 # Per-step minigame briefs — adjective_crown
-# `params` mirrors the Unity config data SO content fields (see _registry/minigames.yaml).
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
 instances:
   q01_bridge_too_short_s2:
+    minigame_id: letter_ordering
     instruction: סדרו את האותיות של LONG
     tasks:
       - סדרו <strong>l, o, n, g</strong>
@@ -16,6 +17,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q02_whispering_stone_s2:
+    minigame_id: speak_aloud
     instruction: אמרו HOT בקול
     tasks:
       - הקשיבו להגייה
@@ -33,6 +35,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q03_big_and_small_words_s1:
+    minigame_id: letter_ordering
     instruction: סדרו את האותיות של BIG
     tasks:
       - סדרו <strong>b, i, g</strong>
@@ -47,6 +50,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q03_big_and_small_words_s2:
+    minigame_id: speak_aloud
     instruction: אמרו SMALL בקול
     tasks:
       - הקשיבו להגייה
@@ -64,6 +68,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_big:
+    minigame_id: letter_ordering
     instruction: סדרו BIG
     tasks:
       - סדרו <strong>b, i, g</strong>
@@ -77,6 +82,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_cold:
+    minigame_id: letter_ordering
     instruction: סדרו COLD
     tasks:
       - סדרו <strong>c, o, l, d</strong>
@@ -90,6 +96,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_fast:
+    minigame_id: letter_ordering
     instruction: סדרו FAST
     tasks:
       - סדרו <strong>f, a, s, t</strong>
@@ -103,6 +110,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_heavy:
+    minigame_id: letter_ordering
     instruction: סדרו HEAVY
     tasks:
       - סדרו <strong>h, e, a, v, y</strong>
@@ -116,6 +124,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_high:
+    minigame_id: speak_aloud
     instruction: אמרו HIGH
     tasks:
       - אמרו <strong>high</strong> למיקרופון
@@ -132,6 +141,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_hot:
+    minigame_id: speak_aloud
     instruction: אמרו HOT
     tasks:
       - אמרו <strong>hot</strong> למיקרופון
@@ -148,6 +158,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_light:
+    minigame_id: speak_aloud
     instruction: אמרו LIGHT
     tasks:
       - אמרו <strong>light</strong> למיקרופון
@@ -164,6 +175,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_long:
+    minigame_id: speak_aloud
     instruction: אמרו LONG
     tasks:
       - אמרו <strong>long</strong> למיקרופון
@@ -180,6 +192,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_low:
+    minigame_id: letter_ordering
     instruction: סדרו LOW
     tasks:
       - סדרו <strong>l, o, w</strong>
@@ -193,6 +206,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_short:
+    minigame_id: letter_ordering
     instruction: סדרו SHORT
     tasks:
       - סדרו <strong>s, h, o, r, t</strong>
@@ -206,6 +220,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_slow:
+    minigame_id: speak_aloud
     instruction: אמרו SLOW
     tasks:
       - אמרו <strong>slow</strong> למיקרופון
@@ -222,6 +237,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q04_twelve_basic_adjectives_small:
+    minigame_id: speak_aloud
     instruction: אמרו SMALL
     tasks:
       - אמרו <strong>small</strong> למיקרופון
@@ -238,6 +254,7 @@ instances:
       referenceClip: ''
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s2:
+    minigame_id: letter_ordering
     instruction: סדרו LOW
     tasks:
       - סדרו <strong>l, o, w</strong>
@@ -251,6 +268,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s3:
+    minigame_id: word_ordering
     instruction: סדרו את המשפט THE PLACE IS LOW
     tasks:
       - סדרו <strong>The / place / is / low</strong>
@@ -268,6 +286,7 @@ instances:
       distractorWords: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s5:
+    minigame_id: letter_ordering
     instruction: סדרו HIGH
     tasks:
       - סדרו <strong>h, i, g, h</strong>
@@ -281,6 +300,7 @@ instances:
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s6:
+    minigame_id: word_ordering
     instruction: סדרו את המשפט THE BUILDING IS HIGH
     tasks:
       - סדרו <strong>The / building / is / high</strong>
@@ -298,6 +318,7 @@ instances:
       distractorWords: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q06_adjective_challenge_s1:
+    minigame_id: word_matching
     instruction: השלימו את האות החסרה — SHORT / LONG / COLD / HOT
     tasks:
       - _hort
@@ -339,6 +360,7 @@ instances:
           missingIndices:
             - 0
   q06_adjective_challenge_s2:
+    minigame_id: word_matching
     instruction: השלימו את האות החסרה — BIG / SMALL / FAST / SLOW
     tasks:
       - _ig
@@ -380,6 +402,7 @@ instances:
           missingIndices:
             - 0
   q06_adjective_challenge_s3:
+    minigame_id: word_matching
     instruction: השלימו את האות החסרה — LOW / HIGH / HEAVY / LIGHT
     tasks:
       - _ow
