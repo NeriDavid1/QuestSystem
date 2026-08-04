@@ -67,11 +67,15 @@ export const signOut = async (): Promise<void> => {
 
 function isFunctionMissingError(error: unknown): boolean {
   const message = error instanceof Error ? error.message : String(error)
-  return message.includes('PGRST202') || message.includes('Could not find the function')
+  const code = typeof error === 'object' && error && 'code' in error ? String((error as { code?: unknown }).code ?? '') : ''
+  return code === 'PGRST202' || message.includes('PGRST202') || message.includes('Could not find the function')
 }
 
 async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
   if (!supabase) throw new Error('Supabase is not configured')
+  // #region agent log
+  fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaRpc:entry',message:'save_questline RPC call starting',data:{questlineId:payload.questline.id,expectedUpdatedAt:payload.expectedUpdatedAt,force:payload.force??false,questCount:payload.quests.length,stepCount:payload.steps.length,minigameCount:payload.minigames.length,dialogueCount:payload.dialogues.length,hasEmptyExpectedAt:payload.expectedUpdatedAt===''},timestamp:Date.now(),hypothesisId:'C'})}).catch(()=>{});
+  // #endregion
   const { data, error } = await supabase.rpc('save_questline', {
     p_questline: payload.questline,
     p_quests: payload.quests,
@@ -89,10 +93,33 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
     p_force: payload.force ?? false,
   })
   if (error) {
-    if (isFunctionMissingError(error)) return saveViaClient(payload)
+    const missing = isFunctionMissingError(error)
+    // #region agent log
+    fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaRpc:error',message:'save_questline RPC error',data:{message:error.message,code:(error as {code?:string}).code,details:(error as {details?:string}).details,hint:(error as {hint?:string}).hint,isFunctionMissing:missing,name:error.name,isErrorInstance:error instanceof Error},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+    // #endregion
+    if (missing) {
+      // #region agent log
+      fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaRpc:fallback',message:'falling back to saveViaClient',data:{questlineId:payload.questline.id},timestamp:Date.now(),hypothesisId:'B'})}).catch(()=>{});
+      // #endregion
+      try {
+        const result = await saveViaClient(payload)
+        // #region agent log
+        fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaClient:ok',message:'saveViaClient succeeded',data:{questlineId:result.questlineId,updatedAt:result.updatedAt},timestamp:Date.now(),hypothesisId:'B'})}).catch(()=>{});
+        // #endregion
+        return result
+      } catch (fallbackError: unknown) {
+        // #region agent log
+        fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaClient:error',message:'saveViaClient failed',data:{message:fallbackError instanceof Error?fallbackError.message:String(fallbackError),code:typeof fallbackError==='object'&&fallbackError&&'code' in fallbackError?String((fallbackError as {code?:unknown}).code??''):''},timestamp:Date.now(),hypothesisId:'B'})}).catch(()=>{});
+        // #endregion
+        throw fallbackError
+      }
+    }
     if (error.message?.includes('CONFLICT')) throw new SaveConflictError()
     throw error
   }
+  // #region agent log
+  fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'persistence.ts:saveViaRpc:ok',message:'save_questline RPC succeeded',data:{questlineId:(data as {questline_id?:string}|null)?.questline_id,updatedAt:(data as {updated_at?:string}|null)?.updated_at},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+  // #endregion
   const result = data as { questline_id?: string; updated_at?: string } | null
   return {
     questlineId: result?.questline_id ?? payload.questline.id,

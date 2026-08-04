@@ -1143,6 +1143,9 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       setSaving(true)
       void persistDraft(false)
         .catch((error: unknown) => {
+          // #region agent log
+          fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'EditorStore.tsx:autoSave:catch',message:'auto-save failed in UI',data:{message:error instanceof Error?error.message:String(error),name:error instanceof Error?error.name:typeof error,code:typeof error==='object'&&error&&'code' in error?String((error as {code?:unknown}).code??''):'',isConflict:error instanceof SaveConflictError},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
+          // #endregion
           if (error instanceof SaveConflictError) {
             setConflictState(true)
           } else {
