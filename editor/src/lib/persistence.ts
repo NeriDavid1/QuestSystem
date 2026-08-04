@@ -110,7 +110,9 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
  */
 async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult> {
   if (!supabase) throw new Error('Supabase is not configured')
-  const userId = (await supabase.auth.getUser()).data.user?.id ?? null
+  // Nested callbacks do not retain the null narrowing on the module binding.
+  const db = supabase
+  const userId = (await db.auth.getUser()).data.user?.id ?? null
   const line = payload.questline
 
   await supabase
@@ -165,7 +167,7 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
   if (payload.steps.length) {
     await Promise.all(
       payload.steps.map((step, index) =>
-        supabase
+        db
           .from('quest_steps')
           .update({ position: -1 - index })
           .eq('id', step.id)
