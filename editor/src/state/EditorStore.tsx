@@ -202,6 +202,9 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const historyIndex = useRef(-1)
   const restoringHistory = useRef(false)
   const autoSaveInFlight = useRef(false)
+  /** When set to the current data generation, auto-save will not retry until the user edits again. */
+  const autoSaveFailedGeneration = useRef<number | null>(null)
+  const dataGeneration = useRef(0)
   const toastTimer = useRef<number | null>(null)
   const [historyVersion, setHistoryVersion] = useState(0)
 
@@ -216,6 +219,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
 
   // --- History tracking ---
   useEffect(() => {
+    dataGeneration.current += 1
     if (restoringHistory.current) {
       restoringHistory.current = false
       return
@@ -1115,6 +1119,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     deletedStepIds.current = []
     deletedDialogueIds.current = []
     deletedMinigameIds.current = []
+    autoSaveFailedGeneration.current = null
     setDirty(false)
     return { saveResult, savedData }
   }, [data, demoMode, selectedLine])
@@ -1162,7 +1167,6 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         questlines: current.questlines.map((line) => (line.id === currentLine.id ? { ...line, status: 'published' } : line)),
         revisions: [...current.revisions, revision],
       }))
-      questlineVersions.current[currentLine.id] = revision.published_at ?? revision.created_at ?? new Date().toISOString()
       setDirty(false)
       notify(t('publishedRevision', { name: currentLine.display_name, version: revision.version }))
     } catch (error) {
@@ -1179,14 +1183,13 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   // Auto-save
   useEffect(() => {
     if (!dirty || demoMode || !selectedLine || publishing || autoSaveInFlight.current) return
+    if (autoSaveFailedGeneration.current === dataGeneration.current) return
     const timeout = window.setTimeout(() => {
       autoSaveInFlight.current = true
       setSaving(true)
       void persistDraft(false)
         .catch((error: unknown) => {
-          // #region agent log
-          fetch('http://127.0.0.1:7700/ingest/b79cf068-617b-4c53-a8a8-a8c23231b185',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'d5bb10'},body:JSON.stringify({sessionId:'d5bb10',location:'EditorStore.tsx:autoSave:catch',message:'auto-save failed in UI',data:{message:error instanceof Error?error.message:String(error),name:error instanceof Error?error.name:typeof error,code:typeof error==='object'&&error&&'code' in error?String((error as {code?:unknown}).code??''):'',isConflict:error instanceof SaveConflictError},timestamp:Date.now(),hypothesisId:'A'})}).catch(()=>{});
-          // #endregion
+          autoSaveFailedGeneration.current = dataGeneration.current
           if (error instanceof SaveConflictError) {
             setConflictState(true)
           } else {
