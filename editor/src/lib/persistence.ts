@@ -164,12 +164,13 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
     })
 
   // Bump positions first so reorders don't hit unique (quest_id, position).
+  // Use a high positive offset (not negatives) — position has CHECK (position >= 0).
   if (payload.steps.length) {
     await Promise.all(
       payload.steps.map((step, index) =>
         db
           .from('quest_steps')
-          .update({ position: -1 - index })
+          .update({ position: 1_000_000 + index })
           .eq('id', step.id)
           .then((result) => {
             if (result.error) throw result.error
