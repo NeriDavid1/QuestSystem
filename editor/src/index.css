@@ -1204,6 +1204,8 @@ code {
 
 .heading-actions {
   gap: 9px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .graph-card {
