@@ -32,8 +32,11 @@ import {
 } from '../lib/minigameParams'
 import {
   DEFAULT_DIALOGUE_LOCALE,
+  getDialogueLines,
   getQuestSteps,
   getQuestlineQuests,
+  getStepMinigame,
+  getStepMinigameKey,
   makeLocalId,
   slugify,
   suggestDialogueBaseKey,
@@ -167,6 +170,14 @@ interface EditorStoreValue {
 }
 
 const EditorStoreContext = createContext<EditorStoreValue | null>(null)
+
+function cloneJson<T>(value: T): T {
+  return JSON.parse(JSON.stringify(value)) as T
+}
+
+function nextPosition(items: Array<{ position: number }>): number {
+  return items.length === 0 ? 0 : Math.max(...items.map((item) => item.position)) + 1
+}
 
 export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const t = useT()
@@ -635,7 +646,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         minigames: [...current.minigames, instance],
         steps: current.steps.map((item) =>
           item.id === stepId
-            ? { ...item, payload: { ...item.payload, instance_id: instance.key } }
+            ? { ...item, payload: { ...item.payload, instance_id: instance.key, instance_key: instance.key } }
             : item),
       }
     })
@@ -696,11 +707,11 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const addQuest = useCallback(() => {
     if (!selectedLine) return
     const quests = getQuestlineQuests(data, selectedLine.id)
-    const position = quests.length
+    const position = nextPosition(quests)
     const newQuest: Quest = {
       id: makeLocalId('quest'),
       questline_id: selectedLine.id,
-      key: `q${String(position + 1).padStart(2, '0')}_new_quest`,
+      key: uniqueQuestKey(data, `q${String(position + 1).padStart(2, '0')}_new_quest`),
       position,
       name: t('newLearningQuest'),
       level_required: Math.max(1, position + 1),
@@ -722,7 +733,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const addStep = useCallback(() => {
     if (!selectedQuest) return
     const steps = getQuestSteps(data, selectedQuest.id)
-    const position = steps.length
+    const position = nextPosition(steps)
     const newStep: QuestStep = {
       id: makeLocalId('step'),
       quest_id: selectedQuest.id,
@@ -856,12 +867,114 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     notify(t('questlineDeleted'))
   }, [notify, selectedQuestlineId, t])
 
+  const cloneDialogueByKey = useCallback((
+    current: EditorData,
+    dialogueKey: string,
+    cache: Map<string, string>,
+  ): { key: string; dialogue?: Dialogue; lines: DialogueLine[] } => {
+    const cached = cache.get(dialogueKey)
+    if (cached) return { key: cached, lines: [] }
+
+    const source = current.dialogues.find((dialogue) => dialogue.key === dialogueKey)
+    if (!source) return { key: dialogueKey, lines: [] }
+
+    const copyId = makeLocalId('dialogue')
+    const usedKeys = [...current.dialogues.map((dialogue) => dialogue.key), ...cache.values()]
+    const key = uniqueKey(usedKeys, `${source.key}_copy`, 'dialogue_copy')
+    const dialogue: Dialogue = {
+      ...source,
+      id: copyId,
+      key,
+      source_path: null,
+      source_metadata: { ...cloneJson(source.source_metadata), local_draft: true, copied_from: source.key },
+    }
+    const lines = getDialogueLines(current, source.id).map((line) => ({
+      ...line,
+      id: makeLocalId('dline'),
+      dialogue_id: copyId,
+    }))
+
+    cache.set(dialogueKey, key)
+    touchedDialogueIds.current.add(copyId)
+    return { key, dialogue, lines }
+  }, [])
+
+  const cloneMinigameForStep = useCallback((
+    current: EditorData,
+    step: QuestStep,
+    cache: Map<string, string>,
+  ): { key: string; minigame?: MinigameInstance } | null => {
+    const instanceKey = getStepMinigameKey(step)
+    if (!instanceKey) return null
+
+    const cached = cache.get(instanceKey)
+    if (cached) return { key: cached }
+
+    const source = getStepMinigame(current, step)
+    if (!source) return { key: instanceKey }
+
+    const usedKeys = [...current.minigames.map((minigame) => minigame.key), ...cache.values()]
+    const key = uniqueKey(usedKeys, `${source.key}_copy`, 'minigame_copy')
+    const minigame: MinigameInstance = {
+      ...source,
+      id: makeLocalId('minigame'),
+      key,
+      tasks: cloneJson(source.tasks),
+      params: cloneJson(source.params),
+      source_path: null,
+      source_metadata: { ...cloneJson(source.source_metadata), local_draft: true, copied_from: source.key },
+    }
+
+    cache.set(instanceKey, key)
+    touchedMinigameIds.current.add(minigame.id)
+    return { key, minigame }
+  }, [])
+
+  const cloneStepPayloadAttachments = useCallback((
+    current: EditorData,
+    step: QuestStep,
+    dialogueCache: Map<string, string>,
+    minigameCache: Map<string, string>,
+  ): {
+    payload: Record<string, unknown>
+    dialogues: Dialogue[]
+    dialogueLines: DialogueLine[]
+    minigames: MinigameInstance[]
+  } => {
+    const payload = cloneJson(step.payload)
+    const dialogues: Dialogue[] = []
+    const dialogueLines: DialogueLine[] = []
+    const minigames: MinigameInstance[] = []
+
+    const dialogueKey = typeof payload.dialogue_id === 'string' ? payload.dialogue_id : ''
+    if (dialogueKey) {
+      const cloned = cloneDialogueByKey(current, dialogueKey, dialogueCache)
+      payload.dialogue_id = cloned.key
+      if (cloned.dialogue) dialogues.push(cloned.dialogue)
+      dialogueLines.push(...cloned.lines)
+    }
+
+    const clonedMinigame = cloneMinigameForStep(current, step, minigameCache)
+    if (clonedMinigame) {
+      payload.instance_id = clonedMinigame.key
+      payload.instance_key = clonedMinigame.key
+      if (clonedMinigame.minigame) minigames.push(clonedMinigame.minigame)
+    }
+
+    return { payload, dialogues, dialogueLines, minigames }
+  }, [cloneDialogueByKey, cloneMinigameForStep])
+
   const duplicateQuest = useCallback((questId: string) => {
     setData((current) => {
       const source = current.quests.find((quest) => quest.id === questId)
       if (!source) return current
+      const dialogueCache = new Map<string, string>()
+      const minigameCache = new Map<string, string>()
+      const copiedDialogues: Dialogue[] = []
+      const copiedDialogueLines: DialogueLine[] = []
+      const copiedMinigames: MinigameInstance[] = []
       const siblings = getQuestlineQuests(current, source.questline_id)
-      const newPosition = siblings.length
+      const newPosition = nextPosition(siblings)
       const newQuest: Quest = {
         ...source,
         id: makeLocalId('quest'),
@@ -869,17 +982,35 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         position: newPosition,
         name: `${source.name} (${t('copySuffix')})`,
         status: 'draft',
-        source_metadata: { ...source.source_metadata, local_draft: true },
+        source_metadata: { ...cloneJson(source.source_metadata), local_draft: true },
+      }
+      if (source.start_dialogue_id) {
+        const cloned = cloneDialogueByKey(current, source.start_dialogue_id, dialogueCache)
+        newQuest.start_dialogue_id = cloned.key
+        if (cloned.dialogue) copiedDialogues.push(cloned.dialogue)
+        copiedDialogueLines.push(...cloned.lines)
+      }
+      if (source.turn_in_dialogue_id) {
+        const cloned = cloneDialogueByKey(current, source.turn_in_dialogue_id, dialogueCache)
+        newQuest.turn_in_dialogue_id = cloned.key
+        if (cloned.dialogue) copiedDialogues.push(cloned.dialogue)
+        copiedDialogueLines.push(...cloned.lines)
       }
       const sourceSteps = getQuestSteps(current, source.id)
-      const steps: QuestStep[] = sourceSteps.map((step, index) => ({
-        ...step,
-        id: makeLocalId('step'),
-        quest_id: newQuest.id,
-        key: `${newQuest.key}_step_${String(index + 1).padStart(2, '0')}`,
-        payload: { ...step.payload },
-        source_metadata: { ...step.source_metadata, local_draft: true },
-      }))
+      const steps: QuestStep[] = sourceSteps.map((step, index) => {
+        const attachments = cloneStepPayloadAttachments(current, step, dialogueCache, minigameCache)
+        copiedDialogues.push(...attachments.dialogues)
+        copiedDialogueLines.push(...attachments.dialogueLines)
+        copiedMinigames.push(...attachments.minigames)
+        return {
+          ...step,
+          id: makeLocalId('step'),
+          quest_id: newQuest.id,
+          key: `${newQuest.key}_step_${String(index + 1).padStart(2, '0')}`,
+          payload: attachments.payload,
+          source_metadata: { ...cloneJson(step.source_metadata), local_draft: true },
+        }
+      })
       const stepIdMap = new Map(sourceSteps.map((step, index) => [step.id, steps[index].id]))
       const rewards: QuestReward[] = current.rewards
         .filter((reward) =>
@@ -902,11 +1033,14 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         steps: [...current.steps, ...steps],
         rewards: [...current.rewards, ...rewards],
         prerequisites: [...current.prerequisites, ...prerequisites],
+        dialogues: [...current.dialogues, ...copiedDialogues],
+        dialogueLines: [...current.dialogueLines, ...copiedDialogueLines],
+        minigames: [...current.minigames, ...copiedMinigames],
       }
     })
     setDirty(true)
     notify(t('questDuplicated'))
-  }, [notify, t])
+  }, [cloneDialogueByKey, cloneStepPayloadAttachments, notify, t])
 
   const moveQuest = useCallback((questId: string, direction: -1 | 1) => {
     setData((current) => {
@@ -951,13 +1085,14 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       const source = current.steps.find((step) => step.id === stepId)
       if (!source) return current
       const siblings = getQuestSteps(current, source.quest_id)
+      const attachments = cloneStepPayloadAttachments(current, source, new Map(), new Map())
       const copy: QuestStep = {
         ...source,
         id: makeLocalId('step'),
         key: uniqueKey(siblings.map((step) => step.key), `${source.key}_copy`, `${source.key}_copy`),
-        position: siblings.length,
-        payload: { ...source.payload },
-        source_metadata: { ...source.source_metadata, local_draft: true },
+        position: nextPosition(siblings),
+        payload: attachments.payload,
+        source_metadata: { ...cloneJson(source.source_metadata), local_draft: true },
       }
       const rewards: QuestReward[] = current.rewards
         .filter((reward) => reward.scope === 'step' && reward.step_id === source.id)
@@ -966,11 +1101,14 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         ...current,
         steps: [...current.steps, copy],
         rewards: [...current.rewards, ...rewards],
+        dialogues: [...current.dialogues, ...attachments.dialogues],
+        dialogueLines: [...current.dialogueLines, ...attachments.dialogueLines],
+        minigames: [...current.minigames, ...attachments.minigames],
       }
     })
     setDirty(true)
     notify(t('stepDuplicated'))
-  }, [notify, t])
+  }, [cloneStepPayloadAttachments, notify, t])
 
   const duplicateDialogue = useCallback((dialogueId: string) => {
     setData((current) => {
@@ -981,7 +1119,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         ...source,
         id: copyId,
         key: uniqueDialogueKey(current, `${source.key}_copy`),
-        source_metadata: { ...source.source_metadata, local_draft: true },
+        source_path: null,
+        source_metadata: { ...cloneJson(source.source_metadata), local_draft: true, copied_from: source.key },
       }
       const lines: DialogueLine[] = current.dialogueLines
         .filter((line) => line.dialogue_id === source.id)
@@ -1001,6 +1140,11 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     setData((current) => {
       const source = current.questlines.find((line) => line.id === questlineId)
       if (!source) return current
+      const dialogueCache = new Map<string, string>()
+      const minigameCache = new Map<string, string>()
+      const copiedDialogues: Dialogue[] = []
+      const copiedDialogueLines: DialogueLine[] = []
+      const copiedMinigames: MinigameInstance[] = []
       const lineCopyId = makeLocalId('questline')
       const lineCopy: Questline = {
         ...source,
@@ -1008,18 +1152,36 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         key: uniqueQuestlineKey(current, `${source.key}_copy`),
         display_name: `${source.display_name} (${t('copySuffix')})`,
         status: 'draft',
-        source_metadata: { ...source.source_metadata, local_draft: true },
+        source_metadata: { ...cloneJson(source.source_metadata), local_draft: true },
       }
       const sourceQuests = getQuestlineQuests(current, source.id)
-      const questCopies: Quest[] = sourceQuests.map((quest, index) => ({
-        ...quest,
-        id: makeLocalId('quest'),
-        questline_id: lineCopyId,
-        key: uniqueKey(current.quests.map((item) => item.key), `${quest.key}_copy`, `${quest.key}_copy`),
-        position: index,
-        status: 'draft',
-        source_metadata: { ...quest.source_metadata, local_draft: true },
-      }))
+      const usedQuestKeys = new Set(current.quests.map((item) => item.key))
+      const questCopies: Quest[] = sourceQuests.map((quest, index) => {
+        const key = uniqueKey(usedQuestKeys, `${quest.key}_copy`, `${quest.key}_copy`)
+        usedQuestKeys.add(key)
+        const copy: Quest = {
+          ...quest,
+          id: makeLocalId('quest'),
+          questline_id: lineCopyId,
+          key,
+          position: index,
+          status: 'draft',
+          source_metadata: { ...cloneJson(quest.source_metadata), local_draft: true },
+        }
+        if (quest.start_dialogue_id) {
+          const cloned = cloneDialogueByKey(current, quest.start_dialogue_id, dialogueCache)
+          copy.start_dialogue_id = cloned.key
+          if (cloned.dialogue) copiedDialogues.push(cloned.dialogue)
+          copiedDialogueLines.push(...cloned.lines)
+        }
+        if (quest.turn_in_dialogue_id) {
+          const cloned = cloneDialogueByKey(current, quest.turn_in_dialogue_id, dialogueCache)
+          copy.turn_in_dialogue_id = cloned.key
+          if (cloned.dialogue) copiedDialogues.push(cloned.dialogue)
+          copiedDialogueLines.push(...cloned.lines)
+        }
+        return copy
+      })
       const questIdMap = new Map(sourceQuests.map((quest, index) => [quest.id, questCopies[index].id]))
 
       const usedStepKeys = new Set(current.steps.map((step) => step.key))
@@ -1027,13 +1189,17 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       const stepCopies: QuestStep[] = sourceSteps.map((step) => {
         const copyKey = uniqueKey(usedStepKeys, step.key, step.key)
         usedStepKeys.add(copyKey)
+        const attachments = cloneStepPayloadAttachments(current, step, dialogueCache, minigameCache)
+        copiedDialogues.push(...attachments.dialogues)
+        copiedDialogueLines.push(...attachments.dialogueLines)
+        copiedMinigames.push(...attachments.minigames)
         return {
           ...step,
           id: makeLocalId('step'),
           quest_id: questIdMap.get(step.quest_id)!,
           key: copyKey,
-          payload: { ...step.payload },
-          source_metadata: { ...step.source_metadata, local_draft: true },
+          payload: attachments.payload,
+          source_metadata: { ...cloneJson(step.source_metadata), local_draft: true },
         }
       })
       const stepIdMap = new Map(sourceSteps.map((step, index) => [step.id, stepCopies[index].id]))
@@ -1063,11 +1229,14 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         steps: [...current.steps, ...stepCopies],
         rewards: [...current.rewards, ...rewards],
         prerequisites: [...current.prerequisites, ...prerequisites],
+        dialogues: [...current.dialogues, ...copiedDialogues],
+        dialogueLines: [...current.dialogueLines, ...copiedDialogueLines],
+        minigames: [...current.minigames, ...copiedMinigames],
       }
     })
     setDirty(true)
     notify(t('questlineDuplicated'))
-  }, [notify, t])
+  }, [cloneDialogueByKey, cloneStepPayloadAttachments, notify, t])
 
   // --- Persistence ---
   const persistDraft = useCallback(async (force: boolean): Promise<{ saveResult: SaveResult; savedData: EditorData }> => {
