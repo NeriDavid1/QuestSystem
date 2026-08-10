@@ -61,6 +61,33 @@ describe('validateQuestline', () => {
     expect(issues).toContainEqual(expect.objectContaining({ code: 'duplicate_quest_key', entityId: second.id }))
   })
 
+  it('flags duplicate quest keys across questlines', () => {
+    const data = makeData()
+    expect(data.questlines.length).toBeGreaterThan(1)
+    const line = data.questlines[0]
+    const otherLine = data.questlines[1]
+    const localQuest = data.quests.find((quest) => quest.questline_id === line.id)!
+    const foreignQuest = data.quests.find((quest) => quest.questline_id === otherLine.id)!
+    const modified: EditorData = {
+      ...data,
+      quests: data.quests.map((item) => (item.id === localQuest.id ? { ...item, key: foreignQuest.key } : item)),
+    }
+    const issues = validateQuestline(modified, line, t)
+    expect(issues).toContainEqual(expect.objectContaining({ code: 'duplicate_quest_key', entityId: localQuest.id }))
+  })
+
+  it('warns when a quest key is missing the line scope prefix', () => {
+    const data = makeData()
+    const line = lineOf(data)
+    const quest = data.quests.find((item) => item.questline_id === line.id)!
+    const modified: EditorData = {
+      ...data,
+      quests: data.quests.map((item) => (item.id === quest.id ? { ...item, key: 'q01_legacy_unscoped' } : item)),
+    }
+    const issues = validateQuestline(modified, line, t)
+    expect(issues).toContainEqual(expect.objectContaining({ code: 'unscoped_quest_key', severity: 'warning', entityId: quest.id }))
+  })
+
   it('flags a quest with no steps', () => {
     const data = makeData()
     const quest = data.quests[0]

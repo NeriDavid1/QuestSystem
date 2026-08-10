@@ -1,13 +1,14 @@
 # Copy this file when creating new quests in other questlines.
-# Rename to qXX_<snake_name>.yaml and fill in all TODO fields.
+# Prefer QuestForge auto keys. Manual form: {lineKey}__qNN_snake_name.yaml
+# Quest keys MUST be unique across the entire OpenWorld game (not just this line).
 # Delete this comment block when done.
 
 quest:
-  id: qXX_quest_id
+  id: line_key__q01_quest_id
   name: "Quest Display Name"
   level_required: 1
   giver_npc: npc_id
-  prerequisite: null  # or qXX_previous_quest
+  prerequisite: null  # or line_key__q01_previous_quest
   summary: "One-line description for presenters and designers."
   status: draft  # remove when complete
 

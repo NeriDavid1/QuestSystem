@@ -23,8 +23,8 @@ python scripts/build_catalog.py      # creator catalog + galleries
 ## How to write a quest
 
 1. Browse the **[Creator catalog](presentation/catalog.html)** and copy exact IDs (prefer `live_used` over `catalog_stub`).
-2. Open the target questline folder under [`questlines/`](questlines/).
-3. Add `qXX_<snake_name>.yaml` using an existing quest in that line as the format reference.
+2. Prefer **[QuestForge](editor/)** — quest keys are auto-generated as `{lineKey}__qNN_slug` and must be **unique across the whole OpenWorld game**.
+3. If editing YAML by hand: open the target questline folder under [`questlines/`](questlines/) and use a globally unique key (line-scoped form above). Do not reuse bare `q01_*` across lines.
 4. Use only step types from [`_registry/systems.yaml`](_registry/systems.yaml).
 5. Update that line’s `_index.yaml` and `_graph.mmd`.
 
@@ -77,6 +77,9 @@ Writes `_registry/softkitty_items.yaml` + `_registry/images/items/*.png` (shown 
 
 ### ID rules
 
+- **Quest keys** must be unique across the entire OpenWorld game (Unity `QuestDefinitionSO.id` / Guider / QuestManager). Auto form: `{lineKey}__qNN_slug`.
+- Step keys: `{questKey}_sNN` (auto in QuestForge).
+- Dialogue / minigame instance keys: auto-suggested from line + quest + role; uniqueness enforced globally where the DB requires it.
 - `npc_id`, `location_id`, `world_object_id` must be **exact** Unity catalog IDs (spaces allowed — copy them).
 - Prefer `status: live_used` over `catalog_stub`.
 - `play_minigame.world_object_id` = world station (chest/cart/camp/table), **not** a minigame type name.

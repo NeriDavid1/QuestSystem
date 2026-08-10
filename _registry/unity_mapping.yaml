@@ -1,6 +1,12 @@
 # Unity ↔ QuestSystem authoring map
 # Source of truth: QuestWorldCatalogSet_OpenWorld
 
+# Content identity (OpenWorld)
+# - QuestDefinitionSO.id / YAML quest.key must be UNIQUE across the entire game.
+# - New keys: {lineKey}__qNN_slug (auto in QuestForge + Unity New Quest Wizard).
+# - Legacy unscoped keys (q01_*) may remain if still globally unique.
+# - Guider / QuestManager group and look up by this id; duplicates hide missions.
+
 source_of_truth:
   catalog_set: QuestWorldCatalogSet_OpenWorld
   unity_path: "Assets/_OurAssets/Data/Quests/Lines/OpenWorld/Catalogs/"

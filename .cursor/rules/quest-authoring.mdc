@@ -71,12 +71,15 @@ Do not create Theron/Lina/Marcus/Elara/Vex/Vocabulary lines, or restore deleted 
 
 ## When creating a new quest
 
-1. Pick the next `qXX` ID from the questline `_index.yaml`
-2. Create `qXX_<snake_name>.yaml` using existing quests in that line as format reference
-3. Use only step types defined in `systems.yaml`
-4. Reference NPCs / areas / interactables / items by registry ID (copy from Creator catalog)
-5. Append a summary row to `_index.yaml` (id, name, level, prerequisite, rewards)
-6. Add the node to `_graph.mmd` with prerequisite arrow
+1. Prefer **QuestForge** (`editor/`) — quest content keys are **auto-generated** as `{lineKey}__qNN_{slug}` and must be unique across the whole OpenWorld game (not just the line).
+2. If authoring YAML by hand: do **not** invent bare `q01_*` ids that another line already uses. Use `{lineKey}__qNN_{snake_name}` (e.g. `adjective_crown__q01_bridge_too_short`). Existing live unscoped keys may stay if still globally unique.
+3. Create the quest file using existing quests in that line as format reference (filename can match the key).
+4. Use only step types defined in `systems.yaml`
+5. Reference NPCs / areas / interactables / items by registry ID (copy from Creator catalog)
+6. Append a summary row to `_index.yaml` (id, name, level, prerequisite, rewards)
+7. Add the node to `_graph.mmd` with prerequisite arrow
+
+World catalog IDs (`npc_id`, `location_id`, `world_object_id`) are **picked** from Unity catalogs — never invent them.
 
 ## File format
 

@@ -36,6 +36,7 @@ export function QuestInspector() {
     issues,
   } = useEditorStore()
   const [openSection, setOpenSection] = useState<'quest' | 'steps' | 'line'>('quest')
+  const [showKeyEdit, setShowKeyEdit] = useState(false)
 
   if (!selectedLine || !selectedQuest) {
     return (
@@ -91,6 +92,13 @@ export function QuestInspector() {
         <InspectorSection title={t('questDetails')} open={openSection === 'quest'} onToggle={() => setOpenSection(openSection === 'quest' ? 'steps' : 'quest')}>
           <div className="form-stack">
             <label><FieldLabel hint={t('questNameHint')}>{t('questName')}</FieldLabel><input className="content-text" dir="auto" value={quest.name} onChange={(event) => updateQuest({ name: event.target.value })} /></label>
+            <label>
+              <FieldLabel hint={t('questContentKeyHint')}>{t('questContentKey')}</FieldLabel>
+              <input dir="ltr" value={quest.key} readOnly={!showKeyEdit} onChange={(event) => updateQuest({ key: event.target.value })} />
+              <button type="button" className="button subtle tiny" onClick={() => setShowKeyEdit((open) => !open)}>
+                {t('advancedCustomizeKey')}
+              </button>
+            </label>
             <label><FieldLabel hint={t('playerSummaryHint')}>{t('playerSummary')}</FieldLabel><textarea className="content-text" dir="auto" value={quest.summary ?? ''} onChange={(event) => updateQuest({ summary: event.target.value })} rows={3} /></label>
             <div className="form-row">
               <label><FieldLabel>{t('level')}</FieldLabel><input type="number" min={0} value={quest.level_required} onChange={(event) => updateQuest({ level_required: Number(event.target.value) })} /></label>

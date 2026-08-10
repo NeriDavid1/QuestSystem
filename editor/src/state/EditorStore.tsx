@@ -32,20 +32,27 @@ import {
 } from '../lib/minigameParams'
 import {
   DEFAULT_DIALOGUE_LOCALE,
+  allocateQuestKey,
+  allocateStepKey,
   getQuestSteps,
   getQuestlineQuests,
   makeLocalId,
+  normalizeContentKey,
+  refreshDraftQuestKey,
   slugify,
   suggestDialogueBaseKey,
+  suggestQuestBaseKey,
+  suggestStepKey,
   uniqueDialogueKey,
+  uniqueExactKey,
   uniqueMinigameKey,
   uniqueQuestKey,
   uniqueQuestlineKey,
-  uniqueKey,
 } from '../lib/editorData'
 import { validateQuestline } from '../lib/validation'
 import {
   SaveConflictError,
+  deleteQuestlines,
   publishQuestline,
   saveQuestlineDraft,
   signIn as persistenceSignIn,
@@ -212,6 +219,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   // Scoped-save tracking: shared rows the user created/edited/deleted this session.
   const touchedDialogueIds = useRef(new Set<string>())
   const touchedMinigameIds = useRef(new Set<string>())
+  const deletedQuestlineIds = useRef<string[]>([])
   const deletedQuestIds = useRef<string[]>([])
   const deletedStepIds = useRef<string[]>([])
   const deletedDialogueIds = useRef<string[]>([])
@@ -403,13 +411,29 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   }, [selectedLine])
 
   const updateQuest = useCallback((patch: Partial<Quest>) => {
-    if (!selectedQuest) return
-    setData((current) => ({
-      ...current,
-      quests: current.quests.map((quest) => (quest.id === selectedQuest.id ? { ...quest, ...patch } : quest)),
-    }))
+    if (!selectedQuest || !selectedLine) return
+    setData((current) => {
+      const existing = current.quests.find((quest) => quest.id === selectedQuest.id)
+      if (!existing) return current
+      let nextPatch = { ...patch }
+      if (patch.key !== undefined) {
+        nextPatch.key = uniqueQuestKey(current, patch.key || existing.key, existing.id)
+      } else if (patch.name !== undefined && patch.name !== existing.name) {
+        const refreshed = refreshDraftQuestKey(
+          current,
+          { ...existing, ...nextPatch },
+          selectedLine.key,
+          patch.name,
+        )
+        if (refreshed) nextPatch.key = refreshed
+      }
+      return {
+        ...current,
+        quests: current.quests.map((quest) => (quest.id === selectedQuest.id ? { ...quest, ...nextPatch } : quest)),
+      }
+    })
     setDirty(true)
-  }, [selectedQuest])
+  }, [selectedLine, selectedQuest])
 
   const updateStep = useCallback((stepId: string, patch: Partial<QuestStep>) => {
     setData((current) => ({
@@ -575,7 +599,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     const step = data.steps.find((item) => item.id === stepId)
     const quest = data.quests.find((item) => item.id === step?.quest_id) ?? selectedQuest
     const line = data.questlines.find((item) => item.id === quest?.questline_id)
-    // step.key already includes the quest key (e.g. q01_new_quest_step_01)
+    // step.key already includes the quest key (e.g. adjective_crown__q01_new_quest_s01)
     const baseKey = suggestDialogueBaseKey(line?.key, step?.key ?? `${quest?.key ?? 'quest'}_step`)
     createDialogue({
       baseKey,
@@ -697,12 +721,13 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     if (!selectedLine) return
     const quests = getQuestlineQuests(data, selectedLine.id)
     const position = quests.length
+    const name = t('newLearningQuest')
     const newQuest: Quest = {
       id: makeLocalId('quest'),
       questline_id: selectedLine.id,
-      key: `q${String(position + 1).padStart(2, '0')}_new_quest`,
+      key: allocateQuestKey(data, selectedLine.key, position, name),
       position,
-      name: t('newLearningQuest'),
+      name,
       level_required: Math.max(1, position + 1),
       giver_external_id: selectedLine.default_giver_external_id,
       summary: t('describeLearnerGoal'),
@@ -726,7 +751,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     const newStep: QuestStep = {
       id: makeLocalId('step'),
       quest_id: selectedQuest.id,
-      key: `${selectedQuest.key}_step_${String(position + 1).padStart(2, '0')}`,
+      key: allocateStepKey(data, selectedQuest.id, selectedQuest.key, position),
       position,
       step_type: 'talk_to_npc',
       payload: { npc_id: selectedQuest.giver_external_id ?? 'teacher_maya', dialogue_id: '' },
@@ -739,20 +764,23 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   }, [data, notify, selectedQuest, t])
 
   const createQuestline = useCallback((name: string, key: string, theme: string) => {
-    const line: Questline = {
-      id: makeLocalId('questline'),
-      key: key || slugify(name),
-      display_name: name || t('untitledQuestline'),
-      theme: theme || null,
-      default_giver_external_id: 'teacher_maya',
-      status: 'draft',
-      level_min: 1,
-      level_max: null,
-      source_path: null,
-      source_metadata: { local_draft: true },
-    }
-    setData((current) => ({ ...current, questlines: [...current.questlines, line] }))
-    setSelectedQuestlineId(line.id)
+    const lineId = makeLocalId('questline')
+    setData((current) => {
+      const line: Questline = {
+        id: lineId,
+        key: uniqueQuestlineKey(current, key || slugify(name)),
+        display_name: name || t('untitledQuestline'),
+        theme: theme || null,
+        default_giver_external_id: 'teacher_maya',
+        status: 'draft',
+        level_min: 1,
+        level_max: null,
+        source_path: null,
+        source_metadata: { local_draft: true },
+      }
+      return { ...current, questlines: [...current.questlines, line] }
+    })
+    setSelectedQuestlineId(lineId)
     setSelectedQuestId('')
     setSelectedStepId('')
     setShowNewQuestline(false)
@@ -830,17 +858,34 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   }, [notify, t])
 
   const removeQuestline = useCallback((questlineId: string) => {
+    deletedQuestlineIds.current.push(questlineId)
+    let nextSelectedId = selectedQuestlineId
     setData((current) => {
       const quests = current.quests.filter((quest) => quest.questline_id === questlineId)
-      for (const quest of quests) deletedQuestIds.current.push(quest.id)
       const questIds = new Set(quests.map((quest) => quest.id))
+      for (const quest of quests) deletedQuestIds.current.push(quest.id)
+      const stepIds = new Set<string>()
+      for (const step of current.steps) {
+        if (questIds.has(step.quest_id)) {
+          stepIds.add(step.id)
+          deletedStepIds.current.push(step.id)
+        }
+      }
+      const remaining = current.questlines.filter((line) => line.id !== questlineId)
+      if (selectedQuestlineId === questlineId) {
+        nextSelectedId = remaining[0]?.id ?? ''
+      }
       return {
         ...current,
-        questlines: current.questlines.filter((line) => line.id !== questlineId),
+        questlines: remaining,
         quests: current.quests.filter((quest) => quest.questline_id !== questlineId),
         steps: current.steps.filter((step) => !questIds.has(step.quest_id)),
         rewards: current.rewards.filter(
-          (reward) => !(reward.quest_id !== null && questIds.has(reward.quest_id)),
+          (reward) =>
+            !(
+              (reward.quest_id !== null && questIds.has(reward.quest_id))
+              || (reward.step_id !== null && stepIds.has(reward.step_id))
+            ),
         ),
         prerequisites: current.prerequisites.filter(
           (edge) => !questIds.has(edge.quest_id) && !questIds.has(edge.prerequisite_quest_id),
@@ -849,7 +894,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     })
     setDirty(true)
     if (selectedQuestlineId === questlineId) {
-      setSelectedQuestlineId('')
+      // Keep a selection when possible so auto-save can still flush the deletion.
+      setSelectedQuestlineId(nextSelectedId)
       setSelectedQuestId('')
       setSelectedStepId('')
     }
@@ -860,14 +906,16 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     setData((current) => {
       const source = current.quests.find((quest) => quest.id === questId)
       if (!source) return current
+      const line = current.questlines.find((item) => item.id === source.questline_id)
       const siblings = getQuestlineQuests(current, source.questline_id)
       const newPosition = siblings.length
+      const copyName = `${source.name} (${t('copySuffix')})`
       const newQuest: Quest = {
         ...source,
         id: makeLocalId('quest'),
-        key: uniqueQuestKey(current, `${source.key}_copy`),
+        key: allocateQuestKey(current, line?.key ?? 'questline', newPosition, copyName),
         position: newPosition,
-        name: `${source.name} (${t('copySuffix')})`,
+        name: copyName,
         status: 'draft',
         source_metadata: { ...source.source_metadata, local_draft: true },
       }
@@ -876,7 +924,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         ...step,
         id: makeLocalId('step'),
         quest_id: newQuest.id,
-        key: `${newQuest.key}_step_${String(index + 1).padStart(2, '0')}`,
+        key: suggestStepKey(newQuest.key, index),
         payload: { ...step.payload },
         source_metadata: { ...step.source_metadata, local_draft: true },
       }))
@@ -951,10 +999,14 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       const source = current.steps.find((step) => step.id === stepId)
       if (!source) return current
       const siblings = getQuestSteps(current, source.quest_id)
+      const quest = current.quests.find((item) => item.id === source.quest_id)
       const copy: QuestStep = {
         ...source,
         id: makeLocalId('step'),
-        key: uniqueKey(siblings.map((step) => step.key), `${source.key}_copy`, `${source.key}_copy`),
+        key: uniqueExactKey(
+          siblings.map((step) => step.key),
+          normalizeContentKey(`${source.key}_copy`, suggestStepKey(quest?.key ?? 'quest', siblings.length)),
+        ),
         position: siblings.length,
         payload: { ...source.payload },
         source_metadata: { ...source.source_metadata, local_draft: true },
@@ -1011,21 +1063,32 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         source_metadata: { ...source.source_metadata, local_draft: true },
       }
       const sourceQuests = getQuestlineQuests(current, source.id)
-      const questCopies: Quest[] = sourceQuests.map((quest, index) => ({
-        ...quest,
-        id: makeLocalId('quest'),
-        questline_id: lineCopyId,
-        key: uniqueKey(current.quests.map((item) => item.key), `${quest.key}_copy`, `${quest.key}_copy`),
-        position: index,
-        status: 'draft',
-        source_metadata: { ...quest.source_metadata, local_draft: true },
-      }))
+      const usedQuestKeys = new Set(current.quests.map((item) => item.key))
+      const questCopies: Quest[] = sourceQuests.map((quest, index) => {
+        const key = uniqueExactKey(
+          usedQuestKeys,
+          normalizeContentKey(suggestQuestBaseKey(lineCopy.key, index, quest.name)),
+        )
+        usedQuestKeys.add(key)
+        return {
+          ...quest,
+          id: makeLocalId('quest'),
+          questline_id: lineCopyId,
+          key,
+          position: index,
+          status: 'draft',
+          source_metadata: { ...quest.source_metadata, local_draft: true },
+        }
+      })
       const questIdMap = new Map(sourceQuests.map((quest, index) => [quest.id, questCopies[index].id]))
+      const questKeyByOldId = new Map(sourceQuests.map((quest, index) => [quest.id, questCopies[index].key]))
 
       const usedStepKeys = new Set(current.steps.map((step) => step.key))
       const sourceSteps = current.steps.filter((step) => questIdMap.has(step.quest_id))
       const stepCopies: QuestStep[] = sourceSteps.map((step) => {
-        const copyKey = uniqueKey(usedStepKeys, step.key, step.key)
+        const newQuestKey = questKeyByOldId.get(step.quest_id) ?? 'quest'
+        const preferred = suggestStepKey(newQuestKey, step.position)
+        const copyKey = uniqueExactKey(usedStepKeys, normalizeContentKey(preferred))
         usedStepKeys.add(copyKey)
         return {
           ...step,
@@ -1071,10 +1134,56 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
 
   // --- Persistence ---
   const persistDraft = useCallback(async (force: boolean): Promise<{ saveResult: SaveResult; savedData: EditorData }> => {
-    if (!selectedLine) {
-      const saveResult: SaveResult = { questlineId: '', updatedAt: new Date().toISOString() }
-      return { saveResult, savedData: data }
+    const pendingDeletedQuestlines = [...deletedQuestlineIds.current]
+
+    const clearDeletionBuffers = () => {
+      deletedQuestlineIds.current = []
+      deletedQuestIds.current = []
+      deletedStepIds.current = []
+      deletedDialogueIds.current = []
+      deletedMinigameIds.current = []
     }
+
+    if (!supabase || demoMode) {
+      clearDeletionBuffers()
+      touchedDialogueIds.current.clear()
+      touchedMinigameIds.current.clear()
+      if (!selectedLine) {
+        setDirty(false)
+        return { saveResult: { questlineId: '', updatedAt: new Date().toISOString() }, savedData: data }
+      }
+      const lineToSave: Questline = { ...selectedLine, status: 'draft' }
+      const questsToSave = getQuestlineQuests(data, selectedLine.id)
+      const questIds = new Set(questsToSave.map((quest) => quest.id))
+      const savedData: EditorData = {
+        ...data,
+        questlines: data.questlines.map((line) => (line.id === lineToSave.id ? lineToSave : line)),
+        quests: data.quests.map((quest) =>
+          questIds.has(quest.id) ? { ...quest, status: quest.status === 'published' ? 'draft' : quest.status } : quest,
+        ),
+      }
+      setData(savedData)
+      questlineVersions.current[lineToSave.id] = new Date().toISOString()
+      setDirty(false)
+      return { saveResult: { questlineId: lineToSave.id, updatedAt: questlineVersions.current[lineToSave.id] }, savedData }
+    }
+
+    if (pendingDeletedQuestlines.length) {
+      await deleteQuestlines(pendingDeletedQuestlines)
+      deletedQuestlineIds.current = []
+      for (const id of pendingDeletedQuestlines) delete questlineVersions.current[id]
+    }
+
+    if (!selectedLine) {
+      // Questline deletion (and cascades) may be the only pending work.
+      deletedQuestIds.current = []
+      deletedStepIds.current = []
+      deletedDialogueIds.current = []
+      deletedMinigameIds.current = []
+      setDirty(false)
+      return { saveResult: { questlineId: '', updatedAt: new Date().toISOString() }, savedData: data }
+    }
+
     const lineToSave: Questline = { ...selectedLine, status: 'draft' }
     const questsToSave = getQuestlineQuests(data, selectedLine.id)
     const questIds = new Set(questsToSave.map((quest) => quest.id))
@@ -1090,19 +1199,6 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     const dialoguesToSave = data.dialogues.filter((dialogue) => touchedDialogueIds.current.has(dialogue.id))
     const dialogueLinesToSave = data.dialogueLines.filter((line) => touchedDialogueIds.current.has(line.dialogue_id))
     const minigamesToSave = data.minigames.filter((minigame) => touchedMinigameIds.current.has(minigame.id))
-
-    if (!supabase || demoMode) {
-      setData(savedData)
-      questlineVersions.current[lineToSave.id] = new Date().toISOString()
-      touchedDialogueIds.current.clear()
-      touchedMinigameIds.current.clear()
-      deletedQuestIds.current = []
-      deletedStepIds.current = []
-      deletedDialogueIds.current = []
-      deletedMinigameIds.current = []
-      setDirty(false)
-      return { saveResult: { questlineId: lineToSave.id, updatedAt: questlineVersions.current[lineToSave.id] }, savedData }
-    }
 
     const payload: QuestlineSavePayload = {
       questline: lineToSave,
@@ -1198,7 +1294,9 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
 
   // Auto-save
   useEffect(() => {
-    if (!dirty || demoMode || !selectedLine || publishing || autoSaveInFlight.current) return
+    if (!dirty || demoMode || publishing || autoSaveInFlight.current) return
+    // Allow flushing questline deletions even when nothing is selected (last line removed).
+    if (!selectedLine && deletedQuestlineIds.current.length === 0) return
     if (autoSaveFailedGeneration.current === dataGeneration.current) return
     const timeout = window.setTimeout(() => {
       autoSaveInFlight.current = true
@@ -1277,30 +1375,44 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       }>
     }
     setData((current) => {
-      const quests: Quest[] = (doc.quests ?? []).map((questDoc, index) => ({
-        id: makeLocalId('quest'),
-        questline_id: line.id,
-        key: questDoc.key || `q${String(index + 1).padStart(2, '0')}_restored`,
-        position: index,
-        name: questDoc.name || t('untitledQuest'),
-        level_required: questDoc.level_required ?? index + 1,
-        giver_external_id: questDoc.giver_external_id ?? null,
-        summary: questDoc.summary ?? null,
-        wait_for_npc_turn_in: questDoc.wait_for_npc_turn_in ?? false,
-        start_dialogue_id: questDoc.start_dialogue_id || null,
-        turn_in_dialogue_id: questDoc.turn_in_dialogue_id || null,
-        status: 'draft',
-        source_path: null,
-        source_metadata: { restored_from_revision: revision.version },
-      }))
-      const questIdByKey = new Map(quests.map((quest) => [quest.key, quest.id]))
-      const steps: QuestStep[] = (doc.quests ?? []).flatMap((questDoc) => {
-        const questId = questIdByKey.get(questDoc.key)
-        if (!questId) return []
+      const usedQuestKeys = new Set(
+        current.quests.filter((quest) => quest.questline_id !== line.id).map((quest) => quest.key),
+      )
+      const quests: Quest[] = (doc.quests ?? []).map((questDoc, index) => {
+        const preferred = questDoc.key || suggestQuestBaseKey(line.key, index, questDoc.name || 'restored')
+        const key = uniqueExactKey(usedQuestKeys, normalizeContentKey(preferred))
+        usedQuestKeys.add(key)
+        return {
+          id: makeLocalId('quest'),
+          questline_id: line.id,
+          key,
+          position: index,
+          name: questDoc.name || t('untitledQuest'),
+          level_required: questDoc.level_required ?? index + 1,
+          giver_external_id: questDoc.giver_external_id ?? null,
+          summary: questDoc.summary ?? null,
+          wait_for_npc_turn_in: questDoc.wait_for_npc_turn_in ?? false,
+          start_dialogue_id: questDoc.start_dialogue_id || null,
+          turn_in_dialogue_id: questDoc.turn_in_dialogue_id || null,
+          status: 'draft',
+          source_path: null,
+          source_metadata: { restored_from_revision: revision.version },
+        }
+      })
+      // Map both original doc keys and allocated keys so prerequisites still resolve.
+      const questIdByKey = new Map<string, string>()
+      ;(doc.quests ?? []).forEach((questDoc, index) => {
+        questIdByKey.set(quests[index].key, quests[index].id)
+        if (questDoc.key) questIdByKey.set(questDoc.key, quests[index].id)
+      })
+      const steps: QuestStep[] = (doc.quests ?? []).flatMap((questDoc, questIndex) => {
+        const questId = quests[questIndex]?.id
+        const questKey = quests[questIndex]?.key
+        if (!questId || !questKey) return []
         return (questDoc.steps ?? []).map((stepDoc, index) => ({
           id: makeLocalId('step'),
           quest_id: questId,
-          key: stepDoc.key || `step_${String(index + 1).padStart(2, '0')}`,
+          key: stepDoc.key || suggestStepKey(questKey, index),
           position: index,
           step_type: stepDoc.type,
           payload: stepDoc.payload ?? {},
@@ -1308,14 +1420,15 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         }))
       })
       const stepIdByKey = new Map(
-        (doc.quests ?? []).flatMap((questDoc) =>
+        (doc.quests ?? []).flatMap((questDoc, questIndex) =>
           (questDoc.steps ?? []).map((stepDoc, index) => {
-            const questId = questIdByKey.get(questDoc.key)
+            const questId = quests[questIndex]?.id
             if (!questId) return null
             const stepId = steps.find(
               (step) => step.quest_id === questId && step.position === index,
             )?.id
-            return stepId ? [`${questDoc.key}::${stepDoc.key}`, stepId] : null
+            const docKey = questDoc.key || quests[questIndex]?.key
+            return stepId && docKey ? [`${docKey}::${stepDoc.key}`, stepId] : null
           }).filter((entry): entry is [string, string] => entry !== null),
         ),
       )
@@ -1396,12 +1509,13 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     setData((current) => {
       const siblings = getQuestlineQuests(current, selectedLine.id)
       const position = siblings.length
+      const name = kind === 'adventure' ? t('templateAdventure') : t('templateBlank')
       const quest: Quest = {
         id: makeLocalId('quest'),
         questline_id: selectedLine.id,
-        key: uniqueQuestKey(current, kind === 'adventure' ? 'learning_adventure' : 'new_quest'),
+        key: allocateQuestKey(current, selectedLine.key, position, name),
         position,
-        name: kind === 'adventure' ? t('templateAdventure') : t('templateBlank'),
+        name,
         level_required: Math.max(1, position + 1),
         giver_external_id: giver,
         summary: kind === 'adventure' ? t('templateAdventureCopy') : t('templateBlankCopy'),
@@ -1439,7 +1553,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
           steps.push({
             id: makeLocalId('step'),
             quest_id: quest.id,
-            key: `${quest.key}_step_${String(index + 1).padStart(2, '0')}`,
+            key: suggestStepKey(quest.key, index),
             position: index,
             step_type: stepDoc.type,
             payload: stepDoc.payload,
@@ -1458,7 +1572,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     setShowTemplates(false)
     setDirty(true)
     notify(t('templateCreated'))
-  }, [notify, selectedLine, selectedQuestId, setSelectedQuestId, setSelectedStepId, setShowTemplates, t])
+  }, [notify, selectedLine, t])
 
   const forceSaveAfterConflict = useCallback(async () => {
     setConflictState(false)

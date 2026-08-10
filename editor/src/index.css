@@ -1067,11 +1067,23 @@ code {
   padding: 10px 8px;
 }
 
+.rail-line-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border-radius: 9px;
+}
+
+.rail-line-wrap.active {
+  background: #eeecff;
+}
+
 .rail-line {
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   padding: 9px 8px;
   border-radius: 9px;
   color: var(--ink);
@@ -1083,8 +1095,8 @@ code {
   background: #f2f4fa;
 }
 
-.rail-line.active {
-  background: #eeecff;
+.rail-line-wrap.active .rail-line {
+  background: transparent;
 }
 
 .rail-line-icon {

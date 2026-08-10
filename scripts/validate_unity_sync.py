@@ -684,6 +684,49 @@ def validate(unity_root: Path) -> dict[str, Any]:
             }
         )
 
+    # Unity runtime / Guider index by quest id alone — duplicates hide missions under the wrong line.
+    owners: dict[str, list[str]] = {}
+    for key, unity_quest in unity_quests.items():
+        quest_id = unity_quest.get("id") or key.split("/", 1)[-1]
+        owners.setdefault(str(quest_id), []).append(key)
+    for quest_id, paths in sorted(owners.items()):
+        if len(paths) < 2:
+            continue
+        issues.append(
+            {
+                "severity": "error",
+                "code": "duplicate_unity_quest_id",
+                "message": (
+                    "QuestDefinitionSO.id must be unique across the entire OpenWorld game. "
+                    "Duplicates cause QuestManager / Guider to keep the first registration only."
+                ),
+                "quest": quest_id,
+                "context": {"owners": paths},
+            }
+        )
+
+    source_owners: dict[str, list[str]] = {}
+    for key, (line_key, quest) in bundle_by_key.items():
+        quest_key = str(quest.get("key") or "")
+        if not quest_key:
+            continue
+        source_owners.setdefault(quest_key, []).append(key)
+    for quest_key, paths in sorted(source_owners.items()):
+        if len(paths) < 2:
+            continue
+        issues.append(
+            {
+                "severity": "error",
+                "code": "duplicate_source_quest_key",
+                "message": (
+                    "Authoring quest key must be globally unique (Unity OpenWorld identity). "
+                    "Prefer line-scoped keys: {lineKey}__qNN_slug."
+                ),
+                "quest": quest_key,
+                "context": {"owners": paths},
+            }
+        )
+
     counts = {
         "compared_quests": compared,
         "unity_quests": len(unity_quests),
