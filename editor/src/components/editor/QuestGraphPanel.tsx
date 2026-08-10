@@ -1,12 +1,15 @@
 import { useEditorStore } from '../../state/EditorStore'
-import { useT } from '../../i18n'
+import { useLocale, useT } from '../../i18n'
 import { Icon } from '../common/Icon'
 import { StatusPill } from '../common/StatusPill'
 import { EmptyState } from '../common/EmptyState'
 import { GraphWithStepCounts } from './QuestGraph'
+import { buildQuestlineExportFiles } from '../../lib/questlineExport'
+import { createZipBlob, downloadBlob } from '../../lib/zip'
 
 export function QuestGraphPanel() {
   const t = useT()
+  const { locale } = useLocale()
   const {
     data,
     selectedLine,
@@ -18,6 +21,7 @@ export function QuestGraphPanel() {
     duplicateQuest,
     removeQuest,
     moveQuest,
+    notify,
     openConfirm,
     setShowTemplates,
     setShowRevisions,
@@ -35,6 +39,21 @@ export function QuestGraphPanel() {
     (edge) => lineQuests.some((quest) => quest.id === edge.quest_id) && lineQuests.some((quest) => quest.id === edge.prerequisite_quest_id),
   )
   const selectedQuestIndex = lineQuests.findIndex((quest) => quest.id === selectedQuestId)
+  const exportLabel = locale === 'he' ? 'הורדת קו משימות' : 'Download questline'
+  const exportTitle = locale === 'he' ? 'הורדת קו המשימות הנוכחי כקובץ ZIP' : 'Download the current questline as a ZIP file'
+  const exportSuccess = locale === 'he' ? 'קובץ ה-ZIP של קו המשימות הורד' : 'Questline ZIP downloaded'
+  const exportFailure = locale === 'he' ? 'לא ניתן להוריד את קו המשימות' : 'Could not download this questline'
+
+  const exportSelectedQuestline = () => {
+    try {
+      const files = buildQuestlineExportFiles(data, selectedLine)
+      const zip = createZipBlob(files)
+      downloadBlob(zip, `${selectedLine.key || 'questline'}-questline.zip`)
+      notify(exportSuccess)
+    } catch (error) {
+      notify(error instanceof Error ? error.message : exportFailure, 'error')
+    }
+  }
 
   const confirmDeleteSelected = () => {
     const quest = lineQuests.find((item) => item.id === selectedQuestId)
@@ -60,6 +79,9 @@ export function QuestGraphPanel() {
           <StatusPill status={selectedLine.status} />
           <button className="button subtle" onClick={() => setShowRevisions(true)} title={t('revisionHistoryTitle')}>
             <Icon name="refresh" /> {t('revisionHistoryTitle')}
+          </button>
+          <button className="button subtle" onClick={exportSelectedQuestline} title={exportTitle}>
+            <Icon name="download" /> {exportLabel}
           </button>
           <button className="button subtle" onClick={() => setShowTemplates(true)}>
             <Icon name="plus" /> {t('templateTitle')}

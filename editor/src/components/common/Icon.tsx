@@ -11,6 +11,7 @@ export function Icon({ name }: { name: string }) {
     logout: '↪',
     panel: '☰',
     plus: '+',
+    download: '↓',
     refresh: '↻',
     save: '↓',
     search: '⌕',

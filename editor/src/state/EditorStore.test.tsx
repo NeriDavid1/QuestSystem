@@ -3,10 +3,27 @@ import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { LocaleProvider } from '../i18n'
 import { EditorStoreProvider, useEditorStore } from './EditorStore'
+import { getStepMinigame, getStepMinigameKey } from '../lib/editorData'
 
 function Probe() {
-  const { data, issues, addQuest, addStep, updateQuest, removeQuestline, selectedQuestlineId } = useEditorStore()
+  const {
+    data,
+    issues,
+    addQuest,
+    addStep,
+    updateQuest,
+    removeQuestline,
+    selectedQuestlineId,
+    duplicateStep,
+    updateMinigame,
+  } = useEditorStore()
   const errors = issues.filter((issue) => issue.severity === 'error').length
+  const sourcePlayStep = data.steps.find((step) => step.step_type === 'play_minigame')
+  const copiedPlayStep = sourcePlayStep
+    ? data.steps.find((step) => step.id !== sourcePlayStep.id && step.key.startsWith(`${sourcePlayStep.key}_copy`))
+    : undefined
+  const sourceMinigame = sourcePlayStep ? getStepMinigame(data, sourcePlayStep) : undefined
+  const copiedMinigame = copiedPlayStep ? getStepMinigame(data, copiedPlayStep) : undefined
   return (
     <div>
       <span data-testid="quest-count">{data.quests.length}</span>
@@ -14,8 +31,15 @@ function Probe() {
       <span data-testid="questline-count">{data.questlines.length}</span>
       <span data-testid="selected-questline">{selectedQuestlineId}</span>
       <span data-testid="error-count">{errors}</span>
+      <span data-testid="minigame-count">{data.minigames.length}</span>
+      <span data-testid="source-instance">{sourcePlayStep ? getStepMinigameKey(sourcePlayStep) : ''}</span>
+      <span data-testid="copy-instance">{copiedPlayStep ? getStepMinigameKey(copiedPlayStep) : ''}</span>
+      <span data-testid="source-target">{String(sourceMinigame?.params.targetWord ?? '')}</span>
+      <span data-testid="copy-target">{String(copiedMinigame?.params.targetWord ?? '')}</span>
       <button onClick={addQuest}>add-quest</button>
       <button onClick={addStep}>add-step</button>
+      <button onClick={() => sourcePlayStep && duplicateStep(sourcePlayStep.id)}>duplicate-play-step</button>
+      <button onClick={() => copiedMinigame && updateMinigame(copiedMinigame.id, { params: { ...copiedMinigame.params, targetWord: 'copy-only' } })}>edit-copy-minigame</button>
       <button onClick={() => {
         const quest = data.quests[data.quests.length - 1]
         if (quest) updateQuest({ name: 'Named quest' })
@@ -99,5 +123,31 @@ describe('EditorStore critical flow', () => {
       expect(screen.getByTestId('selected-questline').textContent).not.toBe(removedId)
       expect(screen.getByTestId('selected-questline').textContent).not.toBe('')
     })
+  })
+
+  it('duplicates a minigame step with an independent minigame instance', async () => {
+    const user = userEvent.setup()
+    render(
+      <LocaleProvider>
+        <EditorStoreProvider>
+          <Probe />
+        </EditorStoreProvider>
+      </LocaleProvider>,
+    )
+
+    const initialMinigames = Number(screen.getByTestId('minigame-count').textContent)
+    const originalInstance = screen.getByTestId('source-instance').textContent
+
+    await user.click(screen.getByRole('button', { name: 'duplicate-play-step' }))
+
+    await waitFor(() => expect(screen.getByTestId('minigame-count').textContent).toBe(String(initialMinigames + 1)))
+    const copiedInstance = screen.getByTestId('copy-instance').textContent
+    expect(copiedInstance).toBeTruthy()
+    expect(copiedInstance).not.toBe(originalInstance)
+
+    await user.click(screen.getByRole('button', { name: 'edit-copy-minigame' }))
+
+    await waitFor(() => expect(screen.getByTestId('copy-target').textContent).toBe('copy-only'))
+    expect(screen.getByTestId('source-target').textContent).not.toBe('copy-only')
   })
 })
