@@ -75,6 +75,22 @@ export function validateQuestline(
       })
     }
 
+    if (!quest.start_dialogue_id) {
+      issues.push({
+        severity: 'warning',
+        code: 'missing_start_dialogue',
+        message: t('validationMissingStartDialogue', { name: quest.name || t('untitledQuest') }),
+        entityId: quest.id,
+      })
+    } else if (!data.dialogues.some((dialogue) => dialogue.key === quest.start_dialogue_id)) {
+      issues.push({
+        severity: 'warning',
+        code: 'unresolved_start_dialogue',
+        message: t('validationUnresolvedDialogue', { value: quest.start_dialogue_id }),
+        entityId: quest.id,
+      })
+    }
+
     const steps = getQuestSteps(data, quest.id)
     if (steps.length === 0) {
       issues.push({
