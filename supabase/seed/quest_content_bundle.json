@@ -423,34 +423,6 @@
     },
     {
       "kind": "interactable",
-      "external_id": "adjective_small_guardian",
-      "name": "Small Guardian",
-      "description": "Catalog collectible — no DefeatEnemy objective in live system.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Small Guardian",
-        "kind": "collectible",
-        "status": "catalog_stub",
-        "description": "Catalog collectible — no DefeatEnemy objective in live system."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "adjective_small_zombie",
-      "name": "Small Zombie",
-      "description": "Catalog collectible — no DefeatEnemy objective in live system.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Small Zombie",
-        "kind": "collectible",
-        "status": "catalog_stub",
-        "description": "Catalog collectible — no DefeatEnemy objective in live system."
-      }
-    },
-    {
-      "kind": "interactable",
       "external_id": "Exam_Table1_Outside_Gate",
       "name": "Exam Table 1",
       "description": "Exam table outside the Kingdom Gate.",
@@ -495,188 +467,6 @@
         "status": "live_used",
         "area": "TowerOfLostVigil",
         "description": "Fire camp at Tower of Lost Vigil (HOT speaking)."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_drawing_a",
-      "name": "Draw Letter A",
-      "description": "Semantic stub — Maya uses Small_Shop_Moonriver.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Draw Letter A",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Small_Shop_Moonriver."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_drawing_b",
-      "name": "Draw Letter B",
-      "description": "Semantic stub — Maya uses Lost_Chest1_BuildersHomeArea.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Draw Letter B",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Lost_Chest1_BuildersHomeArea."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_drawing_c",
-      "name": "Draw Letter C",
-      "description": "Semantic stub — Maya uses Lost_Chest2_Driftgold_Bay.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Draw Letter C",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Lost_Chest2_Driftgold_Bay."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_drawing_f",
-      "name": "Draw Letter F",
-      "description": "Semantic stub — Maya uses Wooden_Cart1_Inside_Gate.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Draw Letter F",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Wooden_Cart1_Inside_Gate."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_drawing_j",
-      "name": "Draw Letter J",
-      "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Draw Letter J",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_adjective_crown",
-      "name": "Adjective spelling test",
-      "description": "Semantic adjective spelling stub.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Adjective spelling test",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic adjective spelling stub."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_egg",
-      "name": "Spell EGG",
-      "description": "Semantic stub — Maya uses Lost_Chest3_Forsaken_Cove.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Spell EGG",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Lost_Chest3_Forsaken_Cove."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_h",
-      "name": "Spell HAT",
-      "description": "Semantic stub — Maya uses Lost_Chest4_Sanctum_Of_Whispering_Light.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Spell HAT",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Lost_Chest4_Sanctum_Of_Whispering_Light."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_i",
-      "name": "Spell ISLAND",
-      "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Spell ISLAND",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_light",
-      "name": "Choose word LIGHT",
-      "description": "Semantic letter-ordering stub.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Choose word LIGHT",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic letter-ordering stub."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_long",
-      "name": "Spell word LONG",
-      "description": "Semantic stub — live q01 uses WoodenCart3_The_Oath_stone_Bridge.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Spell word LONG",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — live q01 uses WoodenCart3_The_Oath_stone_Bridge."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_slow",
-      "name": "Spell word SLOW",
-      "description": "Semantic letter-ordering stub.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Spell word SLOW",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic letter-ordering stub."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "letter_ordering_small",
-      "name": "Spell word SMALL",
-      "description": "Semantic stub — live q03 uses Lost_Chest7_The_Sunspire_Tree.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Spell word SMALL",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — live q03 uses Lost_Chest7_The_Sunspire_Tree."
       }
     },
     {
@@ -793,105 +583,6 @@
     },
     {
       "kind": "interactable",
-      "external_id": "mystery_egg",
-      "name": "Mystery Egg",
-      "description": "Collectible catalog stub.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Mystery Egg",
-        "kind": "collectible",
-        "status": "catalog_stub",
-        "description": "Collectible catalog stub."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "small_sheep",
-      "name": "Small Sheep",
-      "description": "Small sheep collectible stub.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Small Sheep",
-        "kind": "collectible",
-        "status": "catalog_stub",
-        "description": "Small sheep collectible stub."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "Small_Shop_Moonriver",
-      "name": "Small Shop",
-      "description": "Shop station at Moonriver Cottage.",
-      "status": "live_used",
-      "image_path": null,
-      "metadata": {
-        "name": "Small Shop",
-        "kind": "minigame",
-        "status": "live_used",
-        "area": "MoonriverCottage",
-        "description": "Shop station at Moonriver Cottage."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "speak_aloud_adjective_crown",
-      "name": "Spoken adjective test",
-      "description": "Semantic spoken adjective stub.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Spoken adjective test",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic spoken adjective stub."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "speak_aloud_hot",
-      "name": "Speak word HOT",
-      "description": "Semantic stub — live q02 uses Fire_Camp_Tower_Of_Lost_Vigil.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Speak word HOT",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — live q02 uses Fire_Camp_Tower_Of_Lost_Vigil."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "speak_aloud_j",
-      "name": "Speak Letter J",
-      "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Speak Letter J",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "speak_aloud_slow",
-      "name": "Speak word SLOW",
-      "description": "Semantic speak-aloud stub.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Speak word SLOW",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic speak-aloud stub."
-      }
-    },
-    {
-      "kind": "interactable",
       "external_id": "Tomb_Stone_The_Weeping_Stones",
       "name": "Tomb Stone",
       "description": "Tombstone station for twelve basic adjectives.",
@@ -952,62 +643,6 @@
         "status": "live_used",
         "area": "The Oathstone Bridge",
         "description": "Cart station on The Oathstone Bridge (LONG spelling)."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "word_matching_adjective_crown",
-      "name": "Adjective matching test",
-      "description": "Semantic stub — live q06 uses Lost_Chest4_Sanctum_Of_Whispering_Light.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Adjective matching test",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — live q06 uses Lost_Chest4_Sanctum_Of_Whispering_Light."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "word_matching_d",
-      "name": "Match DOG Letters",
-      "description": "Semantic stub — Maya uses Exam_Table_Fairy_Rose_Park.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Match DOG Letters",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Exam_Table_Fairy_Rose_Park."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "word_matching_g",
-      "name": "Genius Gate Words",
-      "description": "Semantic stub — Maya uses Exam_Table1_Outside_Gate.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Genius Gate Words",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Exam_Table1_Outside_Gate."
-      }
-    },
-    {
-      "kind": "interactable",
-      "external_id": "word_matching_i",
-      "name": "Letter Island Match",
-      "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Letter Island Match",
-        "kind": "minigame",
-        "status": "catalog_stub",
-        "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court."
       }
     },
     {
@@ -3022,90 +2657,6 @@
     },
     {
       "kind": "npc",
-      "external_id": "adjective_crazy_old_man",
-      "name": "Crazy Old Man",
-      "description": "Odd old man who notices every strange thing on the road.",
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "Crazy Old Man",
-        "title": "Crazy Old Man",
-        "location": "adjective_trade_road",
-        "description": "Odd old man who notices every strange thing on the road."
-      }
-    },
-    {
-      "kind": "npc",
-      "external_id": "adjective_grandfather",
-      "name": "Grandfather",
-      "description": "Gentle grandfather who runs the royal lift.",
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "Grandfather",
-        "title": "Grandfather",
-        "location": "adjective_royal_lift",
-        "description": "Gentle grandfather who runs the royal lift."
-      }
-    },
-    {
-      "kind": "npc",
-      "external_id": "adjective_grandmother",
-      "name": "Grandmother",
-      "description": "Kind grandmother who cares for meadow animals and corn.",
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "Grandmother",
-        "title": "Grandmother",
-        "location": "adjective_mixed_meadow",
-        "description": "Kind grandmother who cares for meadow animals and corn."
-      }
-    },
-    {
-      "kind": "npc",
-      "external_id": "adjective_knight",
-      "name": "Adjective Knight",
-      "description": "Brave knight who teaches describing words like big, hot, and slow.",
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "Adjective Knight",
-        "title": "Adjective Knight",
-        "location": "adjective_crown_shrine",
-        "description": "Brave knight who teaches describing words like big, hot, and slow."
-      }
-    },
-    {
-      "kind": "npc",
-      "external_id": "adjective_village_chief",
-      "name": "Village Chief",
-      "description": "Village leader who keeps the gate safe and tidy.",
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "Village Chief",
-        "title": "Village Chief",
-        "location": "adjective_village_gate",
-        "description": "Village leader who keeps the gate safe and tidy."
-      }
-    },
-    {
-      "kind": "npc",
-      "external_id": "adjective_water_man",
-      "name": "Water Man",
-      "description": "Quiet helper who watches springs and water paths.",
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "Water Man",
-        "title": "Water Man",
-        "location": "adjective_frozen_spring",
-        "description": "Quiet helper who watches springs and water paths."
-      }
-    },
-    {
-      "kind": "npc",
       "external_id": "Benny the Builder",
       "name": "Benny the Builder",
       "description": "Hard-working builder who always needs more wood and help.",
@@ -3155,8 +2706,9 @@
       "name": "Chef",
       "description": null,
       "status": null,
-      "image_path": null,
+      "image_path": "images/npcs/Chef.png",
       "metadata": {
+        "image": "images/npcs/Chef.png",
         "name": "Chef"
       }
     },
@@ -3173,17 +2725,6 @@
         "title": "City Guard",
         "location": "KingdomGate",
         "description": "Talkative guard who knows every rumor in town."
-      }
-    },
-    {
-      "kind": "npc",
-      "external_id": "Dark Wizard",
-      "name": "Dark Wizard",
-      "description": null,
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "Dark Wizard"
       }
     },
     {
@@ -3259,17 +2800,6 @@
         "title": "Ghost",
         "location": "The Weeping Stones",
         "description": "Friendly ghost who haunts quiet places and loves surprises."
-      }
-    },
-    {
-      "kind": "npc",
-      "external_id": "King Numbers",
-      "name": "King Numbers",
-      "description": null,
-      "status": null,
-      "image_path": null,
-      "metadata": {
-        "name": "King Numbers"
       }
     },
     {
@@ -3353,8 +2883,9 @@
       "name": "Museum Clerk",
       "description": null,
       "status": null,
-      "image_path": null,
+      "image_path": "images/npcs/Museum Clerk.png",
       "metadata": {
+        "image": "images/npcs/Museum Clerk.png",
         "name": "Museum Clerk"
       }
     },
@@ -3394,8 +2925,9 @@
       "name": "Painter",
       "description": "Dreamy painter looking for colors and word ideas.",
       "status": null,
-      "image_path": null,
+      "image_path": "images/npcs/Painter.png",
       "metadata": {
+        "image": "images/npcs/Painter.png",
         "name": "Painter",
         "title": "Painter",
         "location": "The Sunspire Tree",
@@ -3408,8 +2940,9 @@
       "name": "Palace Guard",
       "description": null,
       "status": null,
-      "image_path": null,
+      "image_path": "images/npcs/Palace Guard.png",
       "metadata": {
+        "image": "images/npcs/Palace Guard.png",
         "name": "Palace Guard"
       }
     },
@@ -8611,7 +8144,7 @@
   ],
   "conflicts": [],
   "counts": {
-    "catalog_entries": 227,
+    "catalog_entries": 193,
     "step_type_definitions": 6,
     "dialogues": 32,
     "dialogue_lines": 87,
@@ -11545,5 +11078,5 @@
       ]
     }
   ],
-  "source_digest": "f74b1927b06484b979410ce6e3c2f26e440d00d0fca6283533fe366bfc6cd0ce"
+  "source_digest": "e4db811f7ac35e3bebac13d0f481c00e93fe89afd7037aac7dab863913280940"
 }

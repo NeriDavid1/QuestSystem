@@ -43,36 +43,6 @@ npcs:
     title: Ghost
     location: The Weeping Stones
     description: Friendly ghost who haunts quiet places and loves surprises.
-  adjective_knight:
-    name: Adjective Knight
-    title: Adjective Knight
-    location: adjective_crown_shrine
-    description: Brave knight who teaches describing words like big, hot, and slow.
-  adjective_water_man:
-    name: Water Man
-    title: Water Man
-    location: adjective_frozen_spring
-    description: Quiet helper who watches springs and water paths.
-  adjective_grandmother:
-    name: Grandmother
-    title: Grandmother
-    location: adjective_mixed_meadow
-    description: Kind grandmother who cares for meadow animals and corn.
-  adjective_village_chief:
-    name: Village Chief
-    title: Village Chief
-    location: adjective_village_gate
-    description: Village leader who keeps the gate safe and tidy.
-  adjective_crazy_old_man:
-    name: Crazy Old Man
-    title: Crazy Old Man
-    location: adjective_trade_road
-    description: Odd old man who notices every strange thing on the road.
-  adjective_grandfather:
-    name: Grandfather
-    title: Grandfather
-    location: adjective_royal_lift
-    description: Gentle grandfather who runs the royal lift.
   Benny the Builder:
     image: images/npcs/Benny the Builder.png
     name: Benny the Builder
@@ -98,9 +68,8 @@ npcs:
     location: KingdomGate
     description: Senior guard in charge of the side gate.
   Palace Guard:
+    image: images/npcs/Palace Guard.png
     name: Palace Guard
-  Dark Wizard:
-    name: Dark Wizard
   Old Man:
     image: images/npcs/Old Man.png
     name: Old Man
@@ -119,8 +88,6 @@ npcs:
     title: Farmer
     location: FairyRosePark
     description: Busy farmer with crops that always need saving.
-  King Numbers:
-    name: King Numbers
   Old Woman:
     image: images/npcs/Old Woman.png
     name: Old Woman
@@ -134,6 +101,7 @@ npcs:
     location: Solitude Tower
     description: Wild professor with big ideas and messy experiments.
   Chef:
+    image: images/npcs/Chef.png
     name: Chef
   Farmer:
     image: images/npcs/Farmer.png
@@ -166,8 +134,10 @@ npcs:
     location: TowerOfLostVigil
     description: Guide who knows the high paths and lonely towers.
   Museum Clerk:
+    image: images/npcs/Museum Clerk.png
     name: Museum Clerk
   Painter:
+    image: images/npcs/Painter.png
     name: Painter
     title: Painter
     location: The Sunspire Tree
