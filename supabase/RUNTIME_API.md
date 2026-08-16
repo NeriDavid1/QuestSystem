@@ -55,6 +55,33 @@ The `version` and `schema_version` columns are part of the cache key. A runtime
 client should cache `(questline key, version)` and atomically replace its local
 copy when a newer version is published.
 
+Newer publish snapshots also embed referenced content for self-contained viewing:
+
+```json
+{
+  "dialogues": {
+    "maya_intro": { "speaker": "teacher_maya", "lines": ["..."] }
+  },
+  "minigames": {
+    "q01_bridge_too_short_s2": {
+      "minigame_id": "letter_ordering",
+      "instruction": "...",
+      "tasks": [],
+      "params": {}
+    }
+  }
+}
+```
+
+Existing published revisions (without embedded extras) are supported by:
+
+```text
+POST /rest/v1/rpc/get_published_viewer_extras
+```
+
+which returns the same `dialogues` / `minigames` maps for keys referenced by any
+published revision document. Grant is to `anon` + `authenticated`.
+
 ## Publish and rollback rules
 
 1. Editors update draft tables and create a new `questline_revisions` row.

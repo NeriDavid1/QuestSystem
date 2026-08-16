@@ -185,16 +185,25 @@ function StepVisual({ data, step, index }: { data: EditorData; step: QuestStep; 
         )}
         {step.step_type === 'play_minigame' && (() => {
           const instance = getStepMinigame(data, step)
-          const kind = instance?.minigame_id || minigameId
+          // Prefer the step's catalog kind for mock layout; instance.minigame_id can drift
+          // when params were edited under a different type (common authoring mismatch).
+          const kind = minigameId || instance?.minigame_id
           if (!kind) return null
           const params: Record<string, unknown> = { ...(instance?.params || {}) }
           if (!params.targetWord && instance?.target) params.targetWord = instance.target
           if (!params.targetPhrase && instance?.target) params.targetPhrase = instance.target
+          // If word_ordering params were seeded as a single target string, normalize.
+          if (kind === 'word_ordering' && typeof params.englishWordsInOrder === 'string') {
+            params.englishWordsInOrder = String(params.englishWordsInOrder)
+              .split(/\s+/)
+              .map((word) => word.replace(/[.,!?;:]+$/g, ''))
+              .filter(Boolean)
+          }
           return (
             <MinigameMock
               minigameId={kind}
               params={params}
-              instruction={instance?.instruction}
+              instruction={instance?.instruction || (typeof params.prompt === 'string' ? params.prompt : null)}
               seed={instance?.key || step.key}
             />
           )

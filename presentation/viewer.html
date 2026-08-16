@@ -1058,31 +1058,61 @@
         apikey: anonKey,
         Authorization: `Bearer ${anonKey}`,
         Accept: "application/json",
+        "Content-Type": "application/json",
       };
       const lineUrl = `${url}/rest/v1/questlines?status=eq.published&select=id,key,display_name,theme,default_giver_external_id,level_min,level_max`;
       const revisionUrl = `${url}/rest/v1/questline_revisions?status=eq.published&select=questline_id,version,document,validation_summary&order=version.desc`;
-      const [lineResponse, revisionResponse] = await Promise.all([
+      const extrasUrl = `${url}/rest/v1/rpc/get_published_viewer_extras`;
+      const [lineResponse, revisionResponse, extrasResponse] = await Promise.all([
         fetch(lineUrl, { headers }),
         fetch(revisionUrl, { headers }),
+        fetch(extrasUrl, { method: "POST", headers, body: "{}" }),
       ]);
       if (!lineResponse.ok || !revisionResponse.ok) {
         throw new Error(`Published viewer request failed (${lineResponse.status}/${revisionResponse.status})`);
       }
       const lines = await lineResponse.json();
       const revisions = await revisionResponse.json();
+      let extras = { dialogues: {}, minigames: {} };
+      if (extrasResponse.ok) {
+        try {
+          extras = await extrasResponse.json() || extras;
+        } catch (_) {
+          /* keep empty extras */
+        }
+      }
       const latestByLine = new Map();
       for (const revision of revisions) {
         if (!latestByLine.has(revision.questline_id)) latestByLine.set(revision.questline_id, revision);
+      }
+      const publishedDialogues = { ...(YAML_DATA.dialogues || {}) };
+      const publishedMinigames = { ...(extras.minigames || {}) };
+      if (extras.dialogues && typeof extras.dialogues === "object") {
+        Object.assign(publishedDialogues, extras.dialogues);
+      }
+      for (const revision of latestByLine.values()) {
+        const doc = revision.document || {};
+        if (doc.dialogues && typeof doc.dialogues === "object") {
+          Object.assign(publishedDialogues, doc.dialogues);
+        }
+        if (doc.minigames && typeof doc.minigames === "object") {
+          Object.assign(publishedMinigames, doc.minigames);
+        }
       }
       const publishedQuestlines = lines
         .map((line) => {
           const revision = latestByLine.get(line.id);
           if (!revision?.document) return null;
-          return adaptPublishedDocument(line, revision.document);
+          return adaptPublishedDocument(line, revision.document, publishedMinigames);
         })
         .filter(Boolean);
       if (!publishedQuestlines.length) return null;
-      return { ...YAML_DATA, questlines: publishedQuestlines };
+      return {
+        ...YAML_DATA,
+        dialogues: publishedDialogues,
+        publishedMinigames,
+        questlines: publishedQuestlines,
+      };
     }
 
     function staticQuestFor(lineKey, questKey) {
@@ -1090,20 +1120,63 @@
       return line?.quests?.find((candidate) => candidate.id === questKey) || null;
     }
 
-    function adaptPublishedDocument(line, document) {
+    function briefFromMinigameRecord(record) {
+      if (!record || typeof record !== "object") return null;
+      const params = record.params && typeof record.params === "object" ? record.params : {};
+      const tasks = Array.isArray(record.tasks)
+        ? record.tasks.filter((t) => typeof t === "string" && t)
+        : [];
+      let instruction = typeof record.instruction === "string" ? record.instruction : "";
+      if (!instruction && typeof params.prompt === "string" && params.prompt) {
+        instruction = params.prompt;
+      }
+      if (!instruction && Array.isArray(params.englishWordsInOrder) && params.englishWordsInOrder.length) {
+        instruction = params.englishWordsInOrder.join(" ");
+      }
+      if (!instruction && typeof params.targetWord === "string" && params.targetWord) {
+        instruction = params.targetWord;
+      }
+      if (!instruction && typeof params.targetPhrase === "string" && params.targetPhrase) {
+        instruction = params.targetPhrase;
+      }
+      const hasContent = instruction || tasks.length || record.target || record.variant || record.success
+        || (params && Object.keys(params).length > 0);
+      if (!hasContent) return null;
+      return {
+        minigame_id: record.minigame_id || null,
+        instruction: instruction || null,
+        tasks,
+        target: record.target || (Array.isArray(params.englishWordsInOrder) ? params.englishWordsInOrder.join(" ") : null),
+        variant: record.variant || null,
+        success: record.success || null,
+        params,
+      };
+    }
+
+    function adaptPublishedDocument(line, document, publishedMinigames = {}) {
       const lineKey = document.key || line.key;
       const staticLine = YAML_DATA.questlines?.find((candidate) => candidate.id === lineKey);
       const npcId = document.default_giver_external_id || staticLine?.npcId || null;
       const npc = (npcId && YAML_DATA.npcs?.[npcId]) || staticLine?.npc || {};
+      const docMinigames = {
+        ...(publishedMinigames || {}),
+        ...((document.minigames && typeof document.minigames === "object") ? document.minigames : {}),
+      };
       const rawQuests = Array.isArray(document.quests) ? document.quests : [];
       const quests = rawQuests.map((quest) => {
         const staticQuest = staticQuestFor(lineKey, quest.key);
         const steps = (quest.steps || []).map((step) => {
           const flat = { type: step.type, ...(step.payload || {}) };
+          const instanceKey = flat.instance_id || flat.instance_key;
           const staticStep = staticQuest?.steps?.find((candidate) =>
-            (candidate.instance_id || candidate.instance_key) === (flat.instance_id || flat.instance_key)
+            (candidate.instance_id || candidate.instance_key) === instanceKey
           );
-          if (staticStep?.minigame_brief) flat.minigame_brief = staticStep.minigame_brief;
+          if (staticStep?.minigame_brief) {
+            flat.minigame_brief = staticStep.minigame_brief;
+          } else if (instanceKey && docMinigames[instanceKey]) {
+            const brief = briefFromMinigameRecord(docMinigames[instanceKey]);
+            if (brief) flat.minigame_brief = brief;
+          }
           return flat;
         });
         const rewards = Array.isArray(quest.rewards) ? quest.rewards : [];
@@ -1142,7 +1215,7 @@
       return {
         id: lineKey,
         folder: lineKey,
-        displayName: staticLine?.displayName || line.display_name || lineKey,
+        displayName: staticLine?.displayName || document.display_name || line.display_name || lineKey,
         theme: staticLine?.theme || document.theme || line.theme || "",
         levelRange: [
           line.level_min ?? (levels.length ? Math.min(...levels) : 1),

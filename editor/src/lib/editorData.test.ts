@@ -348,6 +348,13 @@ describe('buildSnapshotDocument', () => {
       expect(quest).toHaveProperty('wait_for_npc_turn_in')
     }
   })
+
+  it('embeds referenced dialogues and minigame instances', () => {
+    expect(document).toHaveProperty('dialogues')
+    expect(document).toHaveProperty('minigames')
+    expect(typeof document.dialogues).toBe('object')
+    expect(typeof document.minigames).toBe('object')
+  })
 })
 
 describe('demoData contract', () => {

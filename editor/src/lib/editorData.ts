@@ -303,11 +303,67 @@ export function buildSnapshotDocument(data: EditorData, line: Questline): Record
     }
   })
 
+  const dialogueKeys = new Set<string>()
+  const minigameKeys = new Set<string>()
+  for (const quest of quests) {
+    if (typeof quest.start_dialogue_id === 'string' && quest.start_dialogue_id) {
+      dialogueKeys.add(quest.start_dialogue_id)
+    }
+    if (typeof quest.turn_in_dialogue_id === 'string' && quest.turn_in_dialogue_id) {
+      dialogueKeys.add(quest.turn_in_dialogue_id)
+    }
+    for (const step of quest.steps) {
+      const payload = step.payload && typeof step.payload === 'object'
+        ? (step.payload as Record<string, unknown>)
+        : {}
+      if (typeof payload.dialogue_id === 'string' && payload.dialogue_id) {
+        dialogueKeys.add(payload.dialogue_id)
+      }
+      if (typeof payload.instance_id === 'string' && payload.instance_id) {
+        minigameKeys.add(payload.instance_id)
+      }
+      if (typeof payload.instance_key === 'string' && payload.instance_key) {
+        minigameKeys.add(payload.instance_key)
+      }
+    }
+  }
+
+  const dialogues: Record<string, { speaker: string | null; lines: string[] }> = {}
+  for (const key of dialogueKeys) {
+    const dialogue = data.dialogues.find((item) => item.key === key)
+    if (!dialogue) continue
+    const lines = data.dialogueLines
+      .filter((line) => line.dialogue_id === dialogue.id)
+      .sort((a, b) => a.line_order - b.line_order || a.locale.localeCompare(b.locale))
+      .map((line) => line.content)
+    dialogues[key] = {
+      speaker: dialogue.speaker_external_id,
+      lines,
+    }
+  }
+
+  const minigames: Record<string, Record<string, unknown>> = {}
+  for (const key of minigameKeys) {
+    const instance = data.minigames.find((item) => item.key === key)
+    if (!instance) continue
+    minigames[key] = {
+      minigame_id: instance.minigame_id,
+      instruction: instance.instruction,
+      tasks: instance.tasks,
+      target: instance.target,
+      variant: instance.variant,
+      success: instance.success,
+      params: instance.params,
+    }
+  }
+
   return {
     default_giver_external_id: line.default_giver_external_id,
     display_name: line.display_name,
     key: line.key,
     quests,
     theme: line.theme,
+    dialogues,
+    minigames,
   }
 }
