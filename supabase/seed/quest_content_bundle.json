@@ -5,97 +5,6 @@
   "catalog_entries": [
     {
       "kind": "area",
-      "external_id": "adjective_crown_shrine",
-      "name": "Crown Shrine",
-      "description": "Shrine of the Adjective Crown and knight lessons.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Crown Shrine",
-        "status": "catalog_stub",
-        "description": "Shrine of the Adjective Crown and knight lessons."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "adjective_frozen_spring",
-      "name": "Frozen Spring",
-      "description": "Cold spring watched by the Water Man.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Frozen Spring",
-        "status": "catalog_stub",
-        "description": "Cold spring watched by the Water Man."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "adjective_mixed_meadow",
-      "name": "Mixed Meadow",
-      "description": "Meadow with mixed animals and grandmother chores.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Mixed Meadow",
-        "status": "catalog_stub",
-        "description": "Meadow with mixed animals and grandmother chores."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "adjective_royal_lift",
-      "name": "Royal Lift",
-      "description": "Lift operated by Grandfather.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Royal Lift",
-        "status": "catalog_stub",
-        "description": "Lift operated by Grandfather."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "adjective_short_bridge",
-      "name": "Short Bridge",
-      "description": "Short bridge catalog stub — live q01 uses The Oathstone Bridge.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Short Bridge",
-        "status": "catalog_stub",
-        "description": "Short bridge catalog stub — live q01 uses The Oathstone Bridge."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "adjective_trade_road",
-      "name": "Trade Road",
-      "description": "Busy road where the Crazy Old Man watches everything.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Trade Road",
-        "status": "catalog_stub",
-        "description": "Busy road where the Crazy Old Man watches everything."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "adjective_village_gate",
-      "name": "Village Gate",
-      "description": "Village entrance watched by the Village Chief.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Village Gate",
-        "status": "catalog_stub",
-        "description": "Village entrance watched by the Village Chief."
-      }
-    },
-    {
-      "kind": "area",
       "external_id": "BuildersHome",
       "name": "Builders Home",
       "description": "Workshop home for builders, chefs, and smith work.",
@@ -190,123 +99,6 @@
         "name": "Runaway A Zone",
         "status": "catalog_stub",
         "description": "Catalog stub — Maya q01 uses MoonriverCottage instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q02_bee_garden",
-      "name": "Bee Garden",
-      "description": "Catalog stub — Maya q02 uses BuildersHome instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Bee Garden",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q02 uses BuildersHome instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q03_cat_tree",
-      "name": "Cat Tree",
-      "description": "Catalog stub — Maya q03 uses Driftgold Bay instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Cat Tree",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q03 uses Driftgold Bay instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q04_dog_house",
-      "name": "Dog House",
-      "description": "Catalog stub — Maya q04 uses FairyRosePark instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Dog House",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q04 uses FairyRosePark instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q05_garden_gate",
-      "name": "Garden Gate",
-      "description": "Catalog stub — Maya q05 uses Forsaken Cove instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Garden Gate",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q05 uses Forsaken Cove instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q06_butterfly_garden",
-      "name": "Butterfly Garden",
-      "description": "Catalog stub — Maya q06 uses KingdomGate instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Butterfly Garden",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q06 uses KingdomGate instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q07_genius_gate",
-      "name": "Genius Gate",
-      "description": "Catalog stub — Maya q07 uses KingdomGate instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Genius Gate",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q07 uses KingdomGate instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q08_hat_location",
-      "name": "Hat Location",
-      "description": "Catalog stub — Maya q08 uses Sanctum of Whispering Light instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Hat Location",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q08 uses Sanctum of Whispering Light instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q09_letter_island",
-      "name": "Letter Island",
-      "description": "Catalog stub — Maya q09 uses SilverFountainCourt instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Letter Island",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q09 uses SilverFountainCourt instead."
-      }
-    },
-    {
-      "kind": "area",
-      "external_id": "q10_graduation_stage",
-      "name": "Graduation Stage",
-      "description": "Catalog stub — Maya q10 uses Solitude Tower instead.",
-      "status": "catalog_stub",
-      "image_path": null,
-      "metadata": {
-        "name": "Graduation Stage",
-        "status": "catalog_stub",
-        "description": "Catalog stub — Maya q10 uses Solitude Tower instead."
       }
     },
     {
@@ -8144,7 +7936,7 @@
   ],
   "conflicts": [],
   "counts": {
-    "catalog_entries": 193,
+    "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 32,
     "dialogue_lines": 87,
@@ -11078,5 +10870,5 @@
       ]
     }
   ],
-  "source_digest": "e4db811f7ac35e3bebac13d0f481c00e93fe89afd7037aac7dab863913280940"
+  "source_digest": "6f5b04d69dedd06ea973dcec97b683c9be98a11327ea8f450abd0872148e01ce"
 }

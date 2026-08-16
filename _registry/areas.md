@@ -6,13 +6,6 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 
 | id | name | status | preview |
 |----|----|----|----|
-| `adjective_crown_shrine` | Crown Shrine | catalog_stub | *(no image)* |
-| `adjective_frozen_spring` | Frozen Spring | catalog_stub | *(no image)* |
-| `adjective_mixed_meadow` | Mixed Meadow | catalog_stub | *(no image)* |
-| `adjective_royal_lift` | Royal Lift | catalog_stub | *(no image)* |
-| `adjective_short_bridge` | Short Bridge | catalog_stub | *(no image)* |
-| `adjective_trade_road` | Trade Road | catalog_stub | *(no image)* |
-| `adjective_village_gate` | Village Gate | catalog_stub | *(no image)* |
 | `BuildersHome` | Builders Home | live_used | ![Builders Home](images/areas/BuildersHome.png) |
 | `Driftgold Bay` | Driftgold Bay | live_used | ![Driftgold Bay](images/areas/Driftgold Bay.png) |
 | `FairyRosePark` | Fairy Rose Park | live_used | ![Fairy Rose Park](images/areas/FairyRosePark.png) |
@@ -20,15 +13,6 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 | `KingdomGate` | Kingdom Gate | live_used | ![Kingdom Gate](images/areas/KingdomGate.png) |
 | `MoonriverCottage` | Moonriver Cottage | live_used | ![Moonriver Cottage](images/areas/MoonriverCottage.png) |
 | `q01_runaway_a_zone` | Runaway A Zone | catalog_stub | ![Runaway A Zone](images/areas/q01_runaway_a_zone.png) |
-| `q02_bee_garden` | Bee Garden | catalog_stub | *(no image)* |
-| `q03_cat_tree` | Cat Tree | catalog_stub | *(no image)* |
-| `q04_dog_house` | Dog House | catalog_stub | *(no image)* |
-| `q05_garden_gate` | Garden Gate | catalog_stub | *(no image)* |
-| `q06_butterfly_garden` | Butterfly Garden | catalog_stub | *(no image)* |
-| `q07_genius_gate` | Genius Gate | catalog_stub | *(no image)* |
-| `q08_hat_location` | Hat Location | catalog_stub | *(no image)* |
-| `q09_letter_island` | Letter Island | catalog_stub | *(no image)* |
-| `q10_graduation_stage` | Graduation Stage | catalog_stub | *(no image)* |
 | `Sanctum of Whispering Light` | Sanctum of Whispering Light | live_used | ![Sanctum of Whispering Light](images/areas/Sanctum of Whispering Light.png) |
 | `SilverFountainCourt` | Silver Fountain Court | live_used | ![Silver Fountain Court](images/areas/SilverFountainCourt.png) |
 | `Solitude Tower` | Solitude Tower | live_used | ![Solitude Tower](images/areas/Solitude Tower.png) |

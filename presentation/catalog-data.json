@@ -13,7 +13,7 @@
     }
   },
   "counts": {
-    "areas": 31,
+    "areas": 15,
     "npcs": 26,
     "interactables": 14,
     "items": 117,
@@ -26,48 +26,6 @@
     "minigames_with_image": 4
   },
   "areas": [
-    {
-      "name": "Crown Shrine",
-      "status": "catalog_stub",
-      "description": "Shrine of the Adjective Crown and knight lessons.",
-      "id": "adjective_crown_shrine"
-    },
-    {
-      "name": "Frozen Spring",
-      "status": "catalog_stub",
-      "description": "Cold spring watched by the Water Man.",
-      "id": "adjective_frozen_spring"
-    },
-    {
-      "name": "Mixed Meadow",
-      "status": "catalog_stub",
-      "description": "Meadow with mixed animals and grandmother chores.",
-      "id": "adjective_mixed_meadow"
-    },
-    {
-      "name": "Royal Lift",
-      "status": "catalog_stub",
-      "description": "Lift operated by Grandfather.",
-      "id": "adjective_royal_lift"
-    },
-    {
-      "name": "Short Bridge",
-      "status": "catalog_stub",
-      "description": "Short bridge catalog stub — live q01 uses The Oathstone Bridge.",
-      "id": "adjective_short_bridge"
-    },
-    {
-      "name": "Trade Road",
-      "status": "catalog_stub",
-      "description": "Busy road where the Crazy Old Man watches everything.",
-      "id": "adjective_trade_road"
-    },
-    {
-      "name": "Village Gate",
-      "status": "catalog_stub",
-      "description": "Village entrance watched by the Village Chief.",
-      "id": "adjective_village_gate"
-    },
     {
       "image": "images/areas/BuildersHome.png",
       "name": "Builders Home",
@@ -116,60 +74,6 @@
       "status": "catalog_stub",
       "description": "Catalog stub — Maya q01 uses MoonriverCottage instead.",
       "id": "q01_runaway_a_zone"
-    },
-    {
-      "name": "Bee Garden",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q02 uses BuildersHome instead.",
-      "id": "q02_bee_garden"
-    },
-    {
-      "name": "Cat Tree",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q03 uses Driftgold Bay instead.",
-      "id": "q03_cat_tree"
-    },
-    {
-      "name": "Dog House",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q04 uses FairyRosePark instead.",
-      "id": "q04_dog_house"
-    },
-    {
-      "name": "Garden Gate",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q05 uses Forsaken Cove instead.",
-      "id": "q05_garden_gate"
-    },
-    {
-      "name": "Butterfly Garden",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q06 uses KingdomGate instead.",
-      "id": "q06_butterfly_garden"
-    },
-    {
-      "name": "Genius Gate",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q07 uses KingdomGate instead.",
-      "id": "q07_genius_gate"
-    },
-    {
-      "name": "Hat Location",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q08 uses Sanctum of Whispering Light instead.",
-      "id": "q08_hat_location"
-    },
-    {
-      "name": "Letter Island",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q09 uses SilverFountainCourt instead.",
-      "id": "q09_letter_island"
-    },
-    {
-      "name": "Graduation Stage",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q10 uses Solitude Tower instead.",
-      "id": "q10_graduation_stage"
     },
     {
       "image": "images/areas/Sanctum of Whispering Light.png",
