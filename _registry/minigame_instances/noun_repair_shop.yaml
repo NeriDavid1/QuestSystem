@@ -6,7 +6,7 @@ instances:
     - _OY
     - _IRL
     - _ING
-    - _UEEN
+    - _UEE_
     target: boy, girl, king, queen
     variant: missing_letter_matching
     success: ארבעה nouns של אנשים הושלמו
@@ -20,6 +20,8 @@ instances:
         value: k
       - id: queen
         value: q
+      - id: queen_n
+        value: n
       wordTasks:
       - id: boy
         image: ''
@@ -41,6 +43,7 @@ instances:
         fullWord: queen
         missingIndices:
         - 0
+        - 4
   noun_repair_q01_book:
     minigame_id: letter_ordering
     instruction: כתבו את המילה ספר באנגלית.

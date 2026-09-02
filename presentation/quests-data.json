@@ -4308,7 +4308,7 @@
                   "_OY",
                   "_IRL",
                   "_ING",
-                  "_UEEN"
+                  "_UEE_"
                 ],
                 "target": "boy, girl, king, queen",
                 "variant": "missing_letter_matching",
@@ -4330,6 +4330,10 @@
                     {
                       "id": "queen",
                       "value": "q"
+                    },
+                    {
+                      "id": "queen_n",
+                      "value": "n"
                     }
                   ],
                   "wordTasks": [
@@ -4362,7 +4366,8 @@
                       "image": "",
                       "fullWord": "queen",
                       "missingIndices": [
-                        0
+                        0,
+                        4
                       ]
                     }
                   ]

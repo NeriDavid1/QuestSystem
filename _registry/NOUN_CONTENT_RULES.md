@@ -6,6 +6,7 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 - Every `word_matching` instance must define `params.letters` as the available letter tiles. Each tile has a stable `id` and its single-letter `value`.
 - Every `word_matching` instance must also define `params.wordTasks`. Each task has an `id`, the complete `fullWord`, and `missingIndices` containing one or more zero-based indices of the missing letters.
+- Every character at every `missingIndices` position must exist in `params.letters[].value`. If a word has two missing letters, both letters must be available in the letter pool.
 - Do not always remove the first letter. Vary the missing position when it serves the exercise: the beginning, middle, end, or two positions may be used, while every index must be valid for `fullWord`.
 - The player-facing `instruction`, quest `display_text`, and task copy must not reveal the completed answer. Use Hebrew guidance such as `השלימו את האות החסרה במילה` (or a subject-specific equivalent such as `במילת ה־noun`).
 
