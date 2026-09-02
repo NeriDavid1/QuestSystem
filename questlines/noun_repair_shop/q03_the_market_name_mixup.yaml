@@ -27,7 +27,7 @@ steps:
   difficulty: 2
   success_required: true
   instance_id: noun_repair_q03_market
-  display_text: כתבו את המילה MARKET — שוק
+  display_text: כתבו את המילה שוק באנגלית.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Lost_Chest5_Silver_Fountain_Court

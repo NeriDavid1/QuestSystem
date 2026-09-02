@@ -4313,7 +4313,7 @@
     {
       "key": "noun_repair_q01_book",
       "locale": "he",
-      "instruction": "כתבו את המילה BOOK — ספר",
+      "instruction": "כתבו את המילה ספר באנגלית.",
       "tasks": [
         "B",
         "O",
@@ -4326,7 +4326,7 @@
       "minigame_id": "letter_ordering",
       "params": {
         "targetWord": "book",
-        "prompt": "כתבו את המילה BOOK — ספר"
+        "prompt": "כתבו את המילה ספר באנגלית."
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -4746,7 +4746,7 @@
     {
       "key": "noun_repair_q02_pencil",
       "locale": "he",
-      "instruction": "כתבו את המילה PENCIL — עיפרון",
+      "instruction": "כתבו את המילה עיפרון באנגלית.",
       "tasks": [
         "P",
         "E",
@@ -4761,7 +4761,7 @@
       "minigame_id": "letter_ordering",
       "params": {
         "targetWord": "pencil",
-        "prompt": "כתבו את המילה PENCIL — עיפרון"
+        "prompt": "כתבו את המילה עיפרון באנגלית."
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -5183,7 +5183,7 @@
     {
       "key": "noun_repair_q03_market",
       "locale": "he",
-      "instruction": "כתבו את המילה MARKET — שוק",
+      "instruction": "כתבו את המילה שוק באנגלית.",
       "tasks": [
         "M",
         "A",
@@ -5198,7 +5198,7 @@
       "minigame_id": "letter_ordering",
       "params": {
         "targetWord": "market",
-        "prompt": "כתבו את המילה MARKET — שוק"
+        "prompt": "כתבו את המילה שוק באנגלית."
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -5670,7 +5670,7 @@
     {
       "key": "noun_repair_q04_spoon",
       "locale": "he",
-      "instruction": "כתבו את המילה SPOON — כף",
+      "instruction": "כתבו את המילה כף באנגלית.",
       "tasks": [
         "S",
         "P",
@@ -5684,7 +5684,7 @@
       "minigame_id": "letter_ordering",
       "params": {
         "targetWord": "spoon",
-        "prompt": "כתבו את המילה SPOON — כף"
+        "prompt": "כתבו את המילה כף באנגלית."
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -6033,7 +6033,7 @@
     {
       "key": "noun_repair_q05_treasure",
       "locale": "he",
-      "instruction": "כתבו את המילה TREASURE — אוצר",
+      "instruction": "כתבו את המילה אוצר באנגלית.",
       "tasks": [
         "T",
         "R",
@@ -6050,7 +6050,7 @@
       "minigame_id": "letter_ordering",
       "params": {
         "targetWord": "treasure",
-        "prompt": "כתבו את המילה TREASURE — אוצר"
+        "prompt": "כתבו את המילה אוצר באנגלית."
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -6130,7 +6130,7 @@
     {
       "key": "noun_repair_q06_book",
       "locale": "he",
-      "instruction": "כתבו את המילה NOUN — שם עצם",
+      "instruction": "כתבו את המילה שם עצם באנגלית.",
       "tasks": [
         "N",
         "O",
@@ -6143,7 +6143,7 @@
       "minigame_id": "letter_ordering",
       "params": {
         "targetWord": "noun",
-        "prompt": "כתבו את המילה NOUN — שם עצם"
+        "prompt": "כתבו את המילה שם עצם באנגלית."
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -6555,7 +6555,7 @@
     {
       "key": "numbers_q01_spell_sixteen",
       "locale": "he",
-      "instruction": "כתבו את המילה SIXTEEN — שש עשרה",
+      "instruction": "כתבו את המילה שש עשרה באנגלית.",
       "tasks": [
         "s",
         "i",
@@ -6570,7 +6570,7 @@
       "success": "נכון! SIXTEEN הוא 16.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה SIXTEEN — שש עשרה",
+        "prompt": "כתבו את המילה שש עשרה באנגלית.",
         "targetWord": "sixteen",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6581,7 +6581,7 @@
     {
       "key": "numbers_q01_spell_ten",
       "locale": "he",
-      "instruction": "כתבו את המילה TEN — עשר",
+      "instruction": "כתבו את המילה עשר באנגלית.",
       "tasks": [
         "t",
         "e",
@@ -6592,7 +6592,7 @@
       "success": "נכון! TEN הוא 10.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה TEN — עשר",
+        "prompt": "כתבו את המילה עשר באנגלית.",
         "targetWord": "ten",
         "extraDistractorCount": 1,
         "customDistractors": []
@@ -6740,7 +6740,7 @@
     {
       "key": "numbers_q02_spell_fifty",
       "locale": "he",
-      "instruction": "כתבו את המילה FIFTY — חמישים",
+      "instruction": "כתבו את המילה חמישים באנגלית.",
       "tasks": [
         "f",
         "i",
@@ -6753,7 +6753,7 @@
       "success": "נכון! FIFTY הוא 50.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה FIFTY — חמישים",
+        "prompt": "כתבו את המילה חמישים באנגלית.",
         "targetWord": "fifty",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6764,7 +6764,7 @@
     {
       "key": "numbers_q02_spell_twenty",
       "locale": "he",
-      "instruction": "כתבו את המילה TWENTY — עשרים",
+      "instruction": "כתבו את המילה עשרים באנגלית.",
       "tasks": [
         "t",
         "w",
@@ -6778,7 +6778,7 @@
       "success": "נכון! TWENTY הוא 20.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה TWENTY — עשרים",
+        "prompt": "כתבו את המילה עשרים באנגלית.",
         "targetWord": "twenty",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6939,7 +6939,7 @@
     {
       "key": "numbers_q03_spell_hundred",
       "locale": "he",
-      "instruction": "כתבו את המילה HUNDRED — מאה",
+      "instruction": "כתבו את המילה מאה באנגלית.",
       "tasks": [
         "h",
         "u",
@@ -6954,7 +6954,7 @@
       "success": "נכון! HUNDRED הוא מאה.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה HUNDRED — מאה",
+        "prompt": "כתבו את המילה מאה באנגלית.",
         "targetWord": "hundred",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6965,7 +6965,7 @@
     {
       "key": "numbers_q03_spell_thousand",
       "locale": "he",
-      "instruction": "כתבו את המילה THOUSAND — אלף",
+      "instruction": "כתבו את המילה אלף באנגלית.",
       "tasks": [
         "t",
         "h",
@@ -6981,7 +6981,7 @@
       "success": "נכון! THOUSAND הוא אלף.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה THOUSAND — אלף",
+        "prompt": "כתבו את המילה אלף באנגלית.",
         "targetWord": "thousand",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6992,7 +6992,7 @@
     {
       "key": "q01_bridge_too_short_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה LONG — ארוך",
+      "instruction": "כתבו את המילה ארוך באנגלית.",
       "tasks": [
         "סדרו <strong>l, o, n, g</strong>",
         "צרו <strong>long</strong> — ארוך"
@@ -7002,7 +7002,7 @@
       "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה LONG — ארוך",
+        "prompt": "כתבו את המילה ארוך באנגלית.",
         "targetWord": "long",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7014,7 +7014,7 @@
     {
       "key": "q01_roles_without_names_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה KING — מלך",
+      "instruction": "כתבו את המילה מלך באנגלית.",
       "tasks": [
         "גררו את האותיות <strong>k, i, n, g</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -7025,7 +7025,7 @@
       "success": "המילה KING (מלך) חוזרת לדף אנשי המלוכה",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה KING — מלך",
+        "prompt": "כתבו את המילה מלך באנגלית.",
         "targetWord": "king",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7066,7 +7066,7 @@
     {
       "key": "q01_runaway_hammer_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה CAT — חתול",
+      "instruction": "כתבו את המילה חתול באנגלית.",
       "tasks": [
         "סדרו <strong>c, a, t</strong>",
         "צרו <strong>cat</strong> — חתול"
@@ -7076,7 +7076,7 @@
       "success": "CAT נכתב נכון; Oak Log אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה CAT — חתול",
+        "prompt": "כתבו את המילה חתול באנגלית.",
         "targetWord": "cat",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7088,7 +7088,7 @@
     {
       "key": "q02_castle_on_the_map_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה CASTLE — טירה",
+      "instruction": "כתבו את המילה טירה באנגלית.",
       "tasks": [
         "גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -7099,7 +7099,7 @@
       "success": "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה CASTLE — טירה",
+        "prompt": "כתבו את המילה טירה באנגלית.",
         "targetWord": "castle",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7140,7 +7140,7 @@
     {
       "key": "q02_snoring_anvil_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה DOG — כלב",
+      "instruction": "כתבו את המילה כלב באנגלית.",
       "tasks": [
         "סדרו <strong>d, o, g</strong>",
         "צרו <strong>dog</strong> — כלב"
@@ -7150,7 +7150,7 @@
       "success": "DOG נכתב נכון; Herbs אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה DOG — כלב",
+        "prompt": "כתבו את המילה כלב באנגלית.",
         "targetWord": "dog",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7188,7 +7188,7 @@
     {
       "key": "q03_big_and_small_words_s1",
       "locale": "he",
-      "instruction": "כתבו את המילה BIG — גדול",
+      "instruction": "כתבו את המילה גדול באנגלית.",
       "tasks": [
         "סדרו <strong>b, i, g</strong>",
         "צרו <strong>big</strong> — גדול"
@@ -7198,7 +7198,7 @@
       "success": "BIG נכתב נכון; Corn אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה BIG — גדול",
+        "prompt": "כתבו את המילה גדול באנגלית.",
         "targetWord": "big",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7236,7 +7236,7 @@
     {
       "key": "q03_crown_soup_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה CROWN — כתר",
+      "instruction": "כתבו את המילה כתר באנגלית.",
       "tasks": [
         "גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר",
         "בדקו שהמילה מתחילה ב־C ומסתיימת ב־N",
@@ -7247,7 +7247,7 @@
       "success": "הכתר מקבל בחזרה את הכרטיס CROWN",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה CROWN — כתר",
+        "prompt": "כתבו את המילה כתר באנגלית.",
         "targetWord": "crown",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7288,7 +7288,7 @@
     {
       "key": "q03_first_real_slash_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה BIG — גדול",
+      "instruction": "כתבו את המילה גדול באנגלית.",
       "tasks": [
         "סדרו <strong>b, i, g</strong>",
         "צרו <strong>big</strong> — גדול"
@@ -7298,7 +7298,7 @@
       "success": "BIG נכתב נכון — חזרו לוויל לקבל Slash",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה BIG — גדול",
+        "prompt": "כתבו את המילה גדול באנגלית.",
         "targetWord": "big",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7310,7 +7310,7 @@
     {
       "key": "q04_soup_shield_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה SHIELD — מגן",
+      "instruction": "כתבו את המילה מגן באנגלית.",
       "tasks": [
         "גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות",
         "שימו לב לצירוף <strong>sh</strong> בתחילת המילה",
@@ -7321,7 +7321,7 @@
       "success": "המגן (shield) חוזר להיות מגן במקום מגש מרק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה SHIELD — מגן",
+        "prompt": "כתבו את המילה מגן באנגלית.",
         "targetWord": "shield",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7362,7 +7362,7 @@
     {
       "key": "q04_twelve_basic_adjectives_big",
       "locale": "he",
-      "instruction": "כתבו את המילה BIG — גדול",
+      "instruction": "כתבו את המילה גדול באנגלית.",
       "tasks": [
         "סדרו <strong>b, i, g</strong>"
       ],
@@ -7371,7 +7371,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה BIG — גדול",
+        "prompt": "כתבו את המילה גדול באנגלית.",
         "targetWord": "big",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7383,7 +7383,7 @@
     {
       "key": "q04_twelve_basic_adjectives_cold",
       "locale": "he",
-      "instruction": "כתבו את המילה COLD — קר",
+      "instruction": "כתבו את המילה קר באנגלית.",
       "tasks": [
         "סדרו <strong>c, o, l, d</strong>"
       ],
@@ -7392,7 +7392,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה COLD — קר",
+        "prompt": "כתבו את המילה קר באנגלית.",
         "targetWord": "cold",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7404,7 +7404,7 @@
     {
       "key": "q04_twelve_basic_adjectives_fast",
       "locale": "he",
-      "instruction": "כתבו את המילה FAST — מהיר",
+      "instruction": "כתבו את המילה מהיר באנגלית.",
       "tasks": [
         "סדרו <strong>f, a, s, t</strong>"
       ],
@@ -7413,7 +7413,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה FAST — מהיר",
+        "prompt": "כתבו את המילה מהיר באנגלית.",
         "targetWord": "fast",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7425,7 +7425,7 @@
     {
       "key": "q04_twelve_basic_adjectives_heavy",
       "locale": "he",
-      "instruction": "כתבו את המילה HEAVY — כבד",
+      "instruction": "כתבו את המילה כבד באנגלית.",
       "tasks": [
         "סדרו <strong>h, e, a, v, y</strong>"
       ],
@@ -7434,7 +7434,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה HEAVY — כבד",
+        "prompt": "כתבו את המילה כבד באנגלית.",
         "targetWord": "heavy",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7546,7 +7546,7 @@
     {
       "key": "q04_twelve_basic_adjectives_low",
       "locale": "he",
-      "instruction": "כתבו את המילה LOW — נמוך",
+      "instruction": "כתבו את המילה נמוך באנגלית.",
       "tasks": [
         "סדרו <strong>l, o, w</strong>"
       ],
@@ -7555,7 +7555,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה LOW — נמוך",
+        "prompt": "כתבו את המילה נמוך באנגלית.",
         "targetWord": "low",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7567,7 +7567,7 @@
     {
       "key": "q04_twelve_basic_adjectives_short",
       "locale": "he",
-      "instruction": "כתבו את המילה SHORT — קצר",
+      "instruction": "כתבו את המילה קצר באנגלית.",
       "tasks": [
         "סדרו <strong>s, h, o, r, t</strong>"
       ],
@@ -7576,7 +7576,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה SHORT — קצר",
+        "prompt": "כתבו את המילה קצר באנגלית.",
         "targetWord": "short",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7638,7 +7638,7 @@
     {
       "key": "q05_from_low_to_high_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה LOW — נמוך",
+      "instruction": "כתבו את המילה נמוך באנגלית.",
       "tasks": [
         "סדרו <strong>l, o, w</strong>"
       ],
@@ -7647,7 +7647,7 @@
       "success": "Power Stone אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה LOW — נמוך",
+        "prompt": "כתבו את המילה נמוך באנגלית.",
         "targetWord": "low",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7686,7 +7686,7 @@
     {
       "key": "q05_from_low_to_high_s5",
       "locale": "he",
-      "instruction": "כתבו את המילה HIGH — גבוה",
+      "instruction": "כתבו את המילה גבוה באנגלית.",
       "tasks": [
         "סדרו <strong>h, i, g, h</strong>"
       ],
@@ -7695,7 +7695,7 @@
       "success": "Power Stone אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה HIGH — גבוה",
+        "prompt": "כתבו את המילה גבוה באנגלית.",
         "targetWord": "high",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7734,7 +7734,7 @@
     {
       "key": "q05_wizard_for_sale_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה WIZARD — קוסם",
+      "instruction": "כתבו את המילה קוסם באנגלית.",
       "tasks": [
         "גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -7745,7 +7745,7 @@
       "success": "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה WIZARD — קוסם",
+        "prompt": "כתבו את המילה קוסם באנגלית.",
         "targetWord": "wizard",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7999,7 +7999,7 @@
     {
       "key": "q06_dragon_identity_s2",
       "locale": "he",
-      "instruction": "כתבו את המילה DRAGON — דרקון",
+      "instruction": "כתבו את המילה דרקון באנגלית.",
       "tasks": [
         "גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -8010,7 +8010,7 @@
       "success": "כרטיס DRAGON (דרקון) חוזר ליצור הנכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה DRAGON — דרקון",
+        "prompt": "כתבו את המילה דרקון באנגלית.",
         "targetWord": "dragon",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8051,7 +8051,7 @@
     {
       "key": "q07_royal_noun_trial_castle",
       "locale": "he",
-      "instruction": "כתבו את המילה CASTLE — טירה",
+      "instruction": "כתבו את המילה טירה באנגלית.",
       "tasks": [
         "סדרו את המילה טירה באנגלית"
       ],
@@ -8060,7 +8060,7 @@
       "success": "CASTLE נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה CASTLE — טירה",
+        "prompt": "כתבו את המילה טירה באנגלית.",
         "targetWord": "castle",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8072,7 +8072,7 @@
     {
       "key": "q07_royal_noun_trial_dragon",
       "locale": "he",
-      "instruction": "כתבו את המילה DRAGON — דרקון",
+      "instruction": "כתבו את המילה דרקון באנגלית.",
       "tasks": [
         "סדרו את המילה דרקון באנגלית"
       ],
@@ -8081,7 +8081,7 @@
       "success": "DRAGON נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה DRAGON — דרקון",
+        "prompt": "כתבו את המילה דרקון באנגלית.",
         "targetWord": "dragon",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8093,7 +8093,7 @@
     {
       "key": "q07_royal_noun_trial_queen",
       "locale": "he",
-      "instruction": "כתבו את המילה QUEEN — מלכה",
+      "instruction": "כתבו את המילה מלכה באנגלית.",
       "tasks": [
         "סדרו את המילה מלכה באנגלית"
       ],
@@ -8102,7 +8102,7 @@
       "success": "QUEEN נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה QUEEN — מלכה",
+        "prompt": "כתבו את המילה מלכה באנגלית.",
         "targetWord": "queen",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8146,7 +8146,7 @@
     {
       "key": "q07_royal_noun_trial_shield",
       "locale": "he",
-      "instruction": "כתבו את המילה SHIELD — מגן",
+      "instruction": "כתבו את המילה מגן באנגלית.",
       "tasks": [
         "סדרו את המילה מגן באנגלית"
       ],
@@ -8155,7 +8155,7 @@
       "success": "SHIELD נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה SHIELD — מגן",
+        "prompt": "כתבו את המילה מגן באנגלית.",
         "targetWord": "shield",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8167,7 +8167,7 @@
     {
       "key": "q07_royal_noun_trial_throne",
       "locale": "he",
-      "instruction": "כתבו את המילה THRONE — כס",
+      "instruction": "כתבו את המילה כס באנגלית.",
       "tasks": [
         "סדרו את המילה כיסא־מלכות באנגלית"
       ],
@@ -8176,7 +8176,7 @@
       "success": "THRONE נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה THRONE — כס",
+        "prompt": "כתבו את המילה כס באנגלית.",
         "targetWord": "throne",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8243,7 +8243,7 @@
               "rewards": []
             },
             {
-              "key": "q01_bridge_too_short_play_minigame_ef8b0d5b_1",
+              "key": "q01_bridge_too_short_play_minigame_3c3cd72a_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -8254,7 +8254,7 @@
                 "instance_id": "q01_bridge_too_short_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה LONG — ארוך",
+                "display_text": "כתבו את המילה ארוך באנגלית.",
                 "instance_key": "q01_bridge_too_short_s2"
               },
               "source_metadata": {
@@ -8264,7 +8264,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_bridge_too_short_play_minigame_ef8b0d5b_1",
+                  "step_key": "q01_bridge_too_short_play_minigame_3c3cd72a_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -8483,7 +8483,7 @@
               "rewards": []
             },
             {
-              "key": "q03_big_and_small_words_play_minigame_71019cf0_1",
+              "key": "q03_big_and_small_words_play_minigame_97c971ac_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -8494,7 +8494,7 @@
                 "instance_id": "q03_big_and_small_words_s1",
                 "reward_item_id": "corn",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה BIG — גדול",
+                "display_text": "כתבו את המילה גדול באנגלית.",
                 "instance_key": "q03_big_and_small_words_s1"
               },
               "source_metadata": {
@@ -8504,7 +8504,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q03_big_and_small_words_play_minigame_71019cf0_1",
+                  "step_key": "q03_big_and_small_words_play_minigame_97c971ac_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "corn",
@@ -8651,7 +8651,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_a7d7e8cd_1",
+              "key": "q04_twelve_basic_adjectives_play_minigame_19210579_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -8662,7 +8662,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_short",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה SHORT — קצר",
+                "display_text": "כתבו את המילה קצר באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_short"
               },
               "source_metadata": {
@@ -8672,7 +8672,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_a7d7e8cd_1",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_19210579_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -8747,7 +8747,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_757344a3_3",
+              "key": "q04_twelve_basic_adjectives_play_minigame_0e01499d_3",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -8758,7 +8758,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_cold",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה COLD — קר",
+                "display_text": "כתבו את המילה קר באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_cold"
               },
               "source_metadata": {
@@ -8768,7 +8768,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_757344a3_3",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_0e01499d_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -8843,7 +8843,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_cc786ce5_5",
+              "key": "q04_twelve_basic_adjectives_play_minigame_656ce52c_5",
               "position": 10,
               "type": "play_minigame",
               "payload": {
@@ -8854,7 +8854,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_big",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה BIG — גדול",
+                "display_text": "כתבו את המילה גדול באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_big"
               },
               "source_metadata": {
@@ -8864,7 +8864,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_cc786ce5_5",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_656ce52c_5",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -8939,7 +8939,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_af66e8e3_7",
+              "key": "q04_twelve_basic_adjectives_play_minigame_b3969c9c_7",
               "position": 14,
               "type": "play_minigame",
               "payload": {
@@ -8950,7 +8950,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_fast",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה FAST — מהיר",
+                "display_text": "כתבו את המילה מהיר באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_fast"
               },
               "source_metadata": {
@@ -8960,7 +8960,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_af66e8e3_7",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_b3969c9c_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -9035,7 +9035,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_5d79d363_9",
+              "key": "q04_twelve_basic_adjectives_play_minigame_a91c8946_9",
               "position": 18,
               "type": "play_minigame",
               "payload": {
@@ -9046,7 +9046,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_low",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה LOW — נמוך",
+                "display_text": "כתבו את המילה נמוך באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_low"
               },
               "source_metadata": {
@@ -9056,7 +9056,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_5d79d363_9",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_a91c8946_9",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -9131,7 +9131,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_518705ea_11",
+              "key": "q04_twelve_basic_adjectives_play_minigame_44c26bb2_11",
               "position": 22,
               "type": "play_minigame",
               "payload": {
@@ -9142,7 +9142,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_heavy",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה HEAVY — כבד",
+                "display_text": "כתבו את המילה כבד באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_heavy"
               },
               "source_metadata": {
@@ -9152,7 +9152,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_518705ea_11",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_44c26bb2_11",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -9299,7 +9299,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_9a41426c_1",
+              "key": "q05_from_low_to_high_play_minigame_ecbce356_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9310,7 +9310,7 @@
                 "instance_id": "q05_from_low_to_high_s2",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה LOW — נמוך",
+                "display_text": "כתבו את המילה נמוך באנגלית.",
                 "instance_key": "q05_from_low_to_high_s2"
               },
               "source_metadata": {
@@ -9320,7 +9320,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_9a41426c_1",
+                  "step_key": "q05_from_low_to_high_play_minigame_ecbce356_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -9381,7 +9381,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_07644fa7_3",
+              "key": "q05_from_low_to_high_play_minigame_b19b9b60_3",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -9392,7 +9392,7 @@
                 "instance_id": "q05_from_low_to_high_s5",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה HIGH — גבוה",
+                "display_text": "כתבו את המילה גבוה באנגלית.",
                 "instance_key": "q05_from_low_to_high_s5"
               },
               "source_metadata": {
@@ -9402,7 +9402,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_07644fa7_3",
+                  "step_key": "q05_from_low_to_high_play_minigame_b19b9b60_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -9748,7 +9748,7 @@
               "rewards": []
             },
             {
-              "key": "q01_runaway_hammer_play_minigame_bacaf3ac_1",
+              "key": "q01_runaway_hammer_play_minigame_b2ec558c_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9759,7 +9759,7 @@
                 "instance_id": "q01_runaway_hammer_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה CAT — חתול",
+                "display_text": "כתבו את המילה חתול באנגלית.",
                 "instance_key": "q01_runaway_hammer_s2"
               },
               "source_metadata": {
@@ -9769,7 +9769,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_runaway_hammer_play_minigame_bacaf3ac_1",
+                  "step_key": "q01_runaway_hammer_play_minigame_b2ec558c_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -9868,7 +9868,7 @@
               "rewards": []
             },
             {
-              "key": "q02_snoring_anvil_play_minigame_ecc50a0c_1",
+              "key": "q02_snoring_anvil_play_minigame_d348f27c_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9879,7 +9879,7 @@
                 "instance_id": "q02_snoring_anvil_s2",
                 "reward_item_id": "herbs",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה DOG — כלב",
+                "display_text": "כתבו את המילה כלב באנגלית.",
                 "instance_key": "q02_snoring_anvil_s2"
               },
               "source_metadata": {
@@ -9889,7 +9889,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q02_snoring_anvil_play_minigame_ecc50a0c_1",
+                  "step_key": "q02_snoring_anvil_play_minigame_d348f27c_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "herbs",
@@ -9988,7 +9988,7 @@
               "rewards": []
             },
             {
-              "key": "q03_first_real_slash_play_minigame_1c337110_1",
+              "key": "q03_first_real_slash_play_minigame_716923dd_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9997,7 +9997,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "q03_first_real_slash_s2",
-                "display_text": "כתבו את המילה BIG — גדול",
+                "display_text": "כתבו את המילה גדול באנגלית.",
                 "instance_key": "q03_first_real_slash_s2"
               },
               "source_metadata": {
@@ -10117,7 +10117,7 @@
               "rewards": []
             },
             {
-              "key": "q01_roles_without_names_play_minigame_fdf6bd0d_1",
+              "key": "q01_roles_without_names_play_minigame_eff2f11e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10126,7 +10126,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q01_roles_without_names_s2",
-                "display_text": "כתבו את המילה KING — מלך",
+                "display_text": "כתבו את המילה מלך באנגלית.",
                 "instance_key": "q01_roles_without_names_s2"
               },
               "source_metadata": {
@@ -10256,7 +10256,7 @@
               "rewards": []
             },
             {
-              "key": "q02_castle_on_the_map_play_minigame_b0f06ce9_1",
+              "key": "q02_castle_on_the_map_play_minigame_b01b1b1e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10265,7 +10265,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q02_castle_on_the_map_s2",
-                "display_text": "כתבו את המילה CASTLE — טירה",
+                "display_text": "כתבו את המילה טירה באנגלית.",
                 "instance_key": "q02_castle_on_the_map_s2"
               },
               "source_metadata": {
@@ -10395,7 +10395,7 @@
               "rewards": []
             },
             {
-              "key": "q03_crown_soup_play_minigame_850beb4a_1",
+              "key": "q03_crown_soup_play_minigame_7620ce42_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10404,7 +10404,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q03_crown_soup_s2",
-                "display_text": "כתבו את המילה CROWN — כתר",
+                "display_text": "כתבו את המילה כתר באנגלית.",
                 "instance_key": "q03_crown_soup_s2"
               },
               "source_metadata": {
@@ -10534,7 +10534,7 @@
               "rewards": []
             },
             {
-              "key": "q04_soup_shield_play_minigame_78b498a1_1",
+              "key": "q04_soup_shield_play_minigame_d567d1c6_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10543,7 +10543,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q04_soup_shield_s2",
-                "display_text": "כתבו את המילה SHIELD — מגן",
+                "display_text": "כתבו את המילה מגן באנגלית.",
                 "instance_key": "q04_soup_shield_s2"
               },
               "source_metadata": {
@@ -10673,7 +10673,7 @@
               "rewards": []
             },
             {
-              "key": "q05_wizard_for_sale_play_minigame_5d9102ed_1",
+              "key": "q05_wizard_for_sale_play_minigame_c57933b1_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10682,7 +10682,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q05_wizard_for_sale_s2",
-                "display_text": "כתבו את המילה WIZARD — קוסם",
+                "display_text": "כתבו את המילה קוסם באנגלית.",
                 "instance_key": "q05_wizard_for_sale_s2"
               },
               "source_metadata": {
@@ -10812,7 +10812,7 @@
               "rewards": []
             },
             {
-              "key": "q06_dragon_identity_play_minigame_10843dc6_1",
+              "key": "q06_dragon_identity_play_minigame_306a6715_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10821,7 +10821,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q06_dragon_identity_s2",
-                "display_text": "כתבו את המילה DRAGON — דרקון",
+                "display_text": "כתבו את המילה דרקון באנגלית.",
                 "instance_key": "q06_dragon_identity_s2"
               },
               "source_metadata": {
@@ -10951,7 +10951,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_9485b21c_1",
+              "key": "q07_royal_noun_trial_play_minigame_6524d618_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10960,7 +10960,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_queen",
-                "display_text": "כתבו את המילה QUEEN — מלכה",
+                "display_text": "כתבו את המילה מלכה באנגלית.",
                 "instance_key": "q07_royal_noun_trial_queen"
               },
               "source_metadata": {
@@ -10970,7 +10970,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_7be51ab3_2",
+              "key": "q07_royal_noun_trial_play_minigame_37a671b4_2",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -10979,7 +10979,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_castle",
-                "display_text": "כתבו את המילה CASTLE — טירה",
+                "display_text": "כתבו את המילה טירה באנגלית.",
                 "instance_key": "q07_royal_noun_trial_castle"
               },
               "source_metadata": {
@@ -10989,7 +10989,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_ad462389_3",
+              "key": "q07_royal_noun_trial_play_minigame_c4736547_3",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -10998,7 +10998,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_throne",
-                "display_text": "כתבו את המילה THRONE — כס",
+                "display_text": "כתבו את המילה כס באנגלית.",
                 "instance_key": "q07_royal_noun_trial_throne"
               },
               "source_metadata": {
@@ -11008,7 +11008,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_e2de1e78_4",
+              "key": "q07_royal_noun_trial_play_minigame_0cc8bb6e_4",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -11017,7 +11017,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_shield",
-                "display_text": "כתבו את המילה SHIELD — מגן",
+                "display_text": "כתבו את המילה מגן באנגלית.",
                 "instance_key": "q07_royal_noun_trial_shield"
               },
               "source_metadata": {
@@ -11027,7 +11027,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_3b02875b_5",
+              "key": "q07_royal_noun_trial_play_minigame_3de7896d_5",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -11036,7 +11036,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_dragon",
-                "display_text": "כתבו את המילה DRAGON — דרקון",
+                "display_text": "כתבו את המילה דרקון באנגלית.",
                 "instance_key": "q07_royal_noun_trial_dragon"
               },
               "source_metadata": {
@@ -11198,7 +11198,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_aa688811_2",
+              "key": "q01_the_broken_noun_book_play_minigame_7b05ab1b_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11207,7 +11207,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_book",
-                "display_text": "כתבו את המילה BOOK — ספר",
+                "display_text": "כתבו את המילה ספר באנגלית.",
                 "instance_key": "noun_repair_q01_book"
               },
               "source_metadata": {
@@ -11418,7 +11418,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_ba19c7fe_2",
+              "key": "q02_the_runaway_objects_play_minigame_fa683f98_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11427,7 +11427,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_pencil",
-                "display_text": "כתבו את המילה PENCIL — עיפרון",
+                "display_text": "כתבו את המילה עיפרון באנגלית.",
                 "instance_key": "noun_repair_q02_pencil"
               },
               "source_metadata": {
@@ -11638,7 +11638,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_7789f623_2",
+              "key": "q03_the_market_name_mixup_play_minigame_97d67a01_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11647,7 +11647,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_market",
-                "display_text": "כתבו את המילה MARKET — שוק",
+                "display_text": "כתבו את המילה שוק באנגלית.",
                 "instance_key": "noun_repair_q03_market"
               },
               "source_metadata": {
@@ -11858,7 +11858,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_445d5734_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_52ae3755_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11867,7 +11867,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_spoon",
-                "display_text": "כתבו את המילה SPOON — כף",
+                "display_text": "כתבו את המילה כף באנגלית.",
                 "instance_key": "noun_repair_q04_spoon"
               },
               "source_metadata": {
@@ -12078,7 +12078,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_866d2f8a_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_a5cb2b41_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -12087,7 +12087,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_treasure",
-                "display_text": "כתבו את המילה TREASURE — אוצר",
+                "display_text": "כתבו את המילה אוצר באנגלית.",
                 "instance_key": "noun_repair_q05_treasure"
               },
               "source_metadata": {
@@ -12298,7 +12298,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_2cfcc44c_2",
+              "key": "q06_the_great_noun_reopening_play_minigame_44080747_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -12307,7 +12307,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_book",
-                "display_text": "כתבו את המילה NOUN — שם עצם",
+                "display_text": "כתבו את המילה שם עצם באנגלית.",
                 "instance_key": "noun_repair_q06_book"
               },
               "source_metadata": {
@@ -12526,7 +12526,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_426bc878_1",
+              "key": "q01_numbers_10_20_play_minigame_57e3c4e9_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -12535,7 +12535,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_ten",
-                "display_text": "כתבו את המילה TEN — עשר",
+                "display_text": "כתבו את המילה עשר באנגלית.",
                 "instance_key": "numbers_q01_spell_ten"
               },
               "source_metadata": {
@@ -12583,7 +12583,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_4d630673_4",
+              "key": "q01_numbers_10_20_play_minigame_93b562fc_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -12592,7 +12592,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_sixteen",
-                "display_text": "כתבו את המילה SIXTEEN — שש עשרה",
+                "display_text": "כתבו את המילה שש עשרה באנגלית.",
                 "instance_key": "numbers_q01_spell_sixteen"
               },
               "source_metadata": {
@@ -12731,7 +12731,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_4d65b318_1",
+              "key": "q02_numbers_20_100_play_minigame_06e6c476_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -12740,7 +12740,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_twenty",
-                "display_text": "כתבו את המילה TWENTY — עשרים",
+                "display_text": "כתבו את המילה עשרים באנגלית.",
                 "instance_key": "numbers_q02_spell_twenty"
               },
               "source_metadata": {
@@ -12788,7 +12788,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_0d52765e_4",
+              "key": "q02_numbers_20_100_play_minigame_8739fef1_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -12797,7 +12797,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_fifty",
-                "display_text": "כתבו את המילה FIFTY — חמישים",
+                "display_text": "כתבו את המילה חמישים באנגלית.",
                 "instance_key": "numbers_q02_spell_fifty"
               },
               "source_metadata": {
@@ -12936,7 +12936,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_f1cbd5c3_1",
+              "key": "q03_numbers_100_1000_play_minigame_f5d3966a_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -12945,7 +12945,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_hundred",
-                "display_text": "כתבו את המילה HUNDRED — מאה",
+                "display_text": "כתבו את המילה מאה באנגלית.",
                 "instance_key": "numbers_q03_spell_hundred"
               },
               "source_metadata": {
@@ -12993,7 +12993,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_47d1adde_4",
+              "key": "q03_numbers_100_1000_play_minigame_6529bdce_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -13002,7 +13002,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_thousand",
-                "display_text": "כתבו את המילה THOUSAND — אלף",
+                "display_text": "כתבו את המילה אלף באנגלית.",
                 "instance_key": "numbers_q03_spell_thousand"
               },
               "source_metadata": {
@@ -13177,7 +13177,7 @@
               "rewards": []
             },
             {
-              "key": "q01_bridge_too_short_play_minigame_ef8b0d5b_1",
+              "key": "q01_bridge_too_short_play_minigame_3c3cd72a_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13188,7 +13188,7 @@
                 "instance_id": "q01_bridge_too_short_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה LONG — ארוך",
+                "display_text": "כתבו את המילה ארוך באנגלית.",
                 "instance_key": "q01_bridge_too_short_s2"
               },
               "source_metadata": {
@@ -13198,7 +13198,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_bridge_too_short_play_minigame_ef8b0d5b_1",
+                  "step_key": "q01_bridge_too_short_play_minigame_3c3cd72a_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -13417,7 +13417,7 @@
               "rewards": []
             },
             {
-              "key": "q03_big_and_small_words_play_minigame_71019cf0_1",
+              "key": "q03_big_and_small_words_play_minigame_97c971ac_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13428,7 +13428,7 @@
                 "instance_id": "q03_big_and_small_words_s1",
                 "reward_item_id": "corn",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה BIG — גדול",
+                "display_text": "כתבו את המילה גדול באנגלית.",
                 "instance_key": "q03_big_and_small_words_s1"
               },
               "source_metadata": {
@@ -13438,7 +13438,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q03_big_and_small_words_play_minigame_71019cf0_1",
+                  "step_key": "q03_big_and_small_words_play_minigame_97c971ac_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "corn",
@@ -13585,7 +13585,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_a7d7e8cd_1",
+              "key": "q04_twelve_basic_adjectives_play_minigame_19210579_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13596,7 +13596,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_short",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה SHORT — קצר",
+                "display_text": "כתבו את המילה קצר באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_short"
               },
               "source_metadata": {
@@ -13606,7 +13606,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_a7d7e8cd_1",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_19210579_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13681,7 +13681,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_757344a3_3",
+              "key": "q04_twelve_basic_adjectives_play_minigame_0e01499d_3",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -13692,7 +13692,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_cold",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה COLD — קר",
+                "display_text": "כתבו את המילה קר באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_cold"
               },
               "source_metadata": {
@@ -13702,7 +13702,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_757344a3_3",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_0e01499d_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13777,7 +13777,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_cc786ce5_5",
+              "key": "q04_twelve_basic_adjectives_play_minigame_656ce52c_5",
               "position": 10,
               "type": "play_minigame",
               "payload": {
@@ -13788,7 +13788,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_big",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה BIG — גדול",
+                "display_text": "כתבו את המילה גדול באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_big"
               },
               "source_metadata": {
@@ -13798,7 +13798,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_cc786ce5_5",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_656ce52c_5",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13873,7 +13873,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_af66e8e3_7",
+              "key": "q04_twelve_basic_adjectives_play_minigame_b3969c9c_7",
               "position": 14,
               "type": "play_minigame",
               "payload": {
@@ -13884,7 +13884,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_fast",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה FAST — מהיר",
+                "display_text": "כתבו את המילה מהיר באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_fast"
               },
               "source_metadata": {
@@ -13894,7 +13894,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_af66e8e3_7",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_b3969c9c_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13969,7 +13969,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_5d79d363_9",
+              "key": "q04_twelve_basic_adjectives_play_minigame_a91c8946_9",
               "position": 18,
               "type": "play_minigame",
               "payload": {
@@ -13980,7 +13980,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_low",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה LOW — נמוך",
+                "display_text": "כתבו את המילה נמוך באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_low"
               },
               "source_metadata": {
@@ -13990,7 +13990,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_5d79d363_9",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_a91c8946_9",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -14065,7 +14065,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_518705ea_11",
+              "key": "q04_twelve_basic_adjectives_play_minigame_44c26bb2_11",
               "position": 22,
               "type": "play_minigame",
               "payload": {
@@ -14076,7 +14076,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_heavy",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה HEAVY — כבד",
+                "display_text": "כתבו את המילה כבד באנגלית.",
                 "instance_key": "q04_twelve_basic_adjectives_heavy"
               },
               "source_metadata": {
@@ -14086,7 +14086,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_518705ea_11",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_44c26bb2_11",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -14233,7 +14233,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_9a41426c_1",
+              "key": "q05_from_low_to_high_play_minigame_ecbce356_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14244,7 +14244,7 @@
                 "instance_id": "q05_from_low_to_high_s2",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה LOW — נמוך",
+                "display_text": "כתבו את המילה נמוך באנגלית.",
                 "instance_key": "q05_from_low_to_high_s2"
               },
               "source_metadata": {
@@ -14254,7 +14254,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_9a41426c_1",
+                  "step_key": "q05_from_low_to_high_play_minigame_ecbce356_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -14315,7 +14315,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_07644fa7_3",
+              "key": "q05_from_low_to_high_play_minigame_b19b9b60_3",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -14326,7 +14326,7 @@
                 "instance_id": "q05_from_low_to_high_s5",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה HIGH — גבוה",
+                "display_text": "כתבו את המילה גבוה באנגלית.",
                 "instance_key": "q05_from_low_to_high_s5"
               },
               "source_metadata": {
@@ -14336,7 +14336,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_07644fa7_3",
+                  "step_key": "q05_from_low_to_high_play_minigame_b19b9b60_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -14672,7 +14672,7 @@
               "rewards": []
             },
             {
-              "key": "q01_runaway_hammer_play_minigame_bacaf3ac_1",
+              "key": "q01_runaway_hammer_play_minigame_b2ec558c_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14683,7 +14683,7 @@
                 "instance_id": "q01_runaway_hammer_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה CAT — חתול",
+                "display_text": "כתבו את המילה חתול באנגלית.",
                 "instance_key": "q01_runaway_hammer_s2"
               },
               "source_metadata": {
@@ -14693,7 +14693,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_runaway_hammer_play_minigame_bacaf3ac_1",
+                  "step_key": "q01_runaway_hammer_play_minigame_b2ec558c_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -14792,7 +14792,7 @@
               "rewards": []
             },
             {
-              "key": "q02_snoring_anvil_play_minigame_ecc50a0c_1",
+              "key": "q02_snoring_anvil_play_minigame_d348f27c_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14803,7 +14803,7 @@
                 "instance_id": "q02_snoring_anvil_s2",
                 "reward_item_id": "herbs",
                 "reward_amount": 1,
-                "display_text": "כתבו את המילה DOG — כלב",
+                "display_text": "כתבו את המילה כלב באנגלית.",
                 "instance_key": "q02_snoring_anvil_s2"
               },
               "source_metadata": {
@@ -14813,7 +14813,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q02_snoring_anvil_play_minigame_ecc50a0c_1",
+                  "step_key": "q02_snoring_anvil_play_minigame_d348f27c_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "herbs",
@@ -14912,7 +14912,7 @@
               "rewards": []
             },
             {
-              "key": "q03_first_real_slash_play_minigame_1c337110_1",
+              "key": "q03_first_real_slash_play_minigame_716923dd_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14921,7 +14921,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "q03_first_real_slash_s2",
-                "display_text": "כתבו את המילה BIG — גדול",
+                "display_text": "כתבו את המילה גדול באנגלית.",
                 "instance_key": "q03_first_real_slash_s2"
               },
               "source_metadata": {
@@ -15031,7 +15031,7 @@
               "rewards": []
             },
             {
-              "key": "q01_roles_without_names_play_minigame_fdf6bd0d_1",
+              "key": "q01_roles_without_names_play_minigame_eff2f11e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15040,7 +15040,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q01_roles_without_names_s2",
-                "display_text": "כתבו את המילה KING — מלך",
+                "display_text": "כתבו את המילה מלך באנגלית.",
                 "instance_key": "q01_roles_without_names_s2"
               },
               "source_metadata": {
@@ -15170,7 +15170,7 @@
               "rewards": []
             },
             {
-              "key": "q02_castle_on_the_map_play_minigame_b0f06ce9_1",
+              "key": "q02_castle_on_the_map_play_minigame_b01b1b1e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15179,7 +15179,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q02_castle_on_the_map_s2",
-                "display_text": "כתבו את המילה CASTLE — טירה",
+                "display_text": "כתבו את המילה טירה באנגלית.",
                 "instance_key": "q02_castle_on_the_map_s2"
               },
               "source_metadata": {
@@ -15309,7 +15309,7 @@
               "rewards": []
             },
             {
-              "key": "q03_crown_soup_play_minigame_850beb4a_1",
+              "key": "q03_crown_soup_play_minigame_7620ce42_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15318,7 +15318,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q03_crown_soup_s2",
-                "display_text": "כתבו את המילה CROWN — כתר",
+                "display_text": "כתבו את המילה כתר באנגלית.",
                 "instance_key": "q03_crown_soup_s2"
               },
               "source_metadata": {
@@ -15448,7 +15448,7 @@
               "rewards": []
             },
             {
-              "key": "q04_soup_shield_play_minigame_78b498a1_1",
+              "key": "q04_soup_shield_play_minigame_d567d1c6_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15457,7 +15457,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q04_soup_shield_s2",
-                "display_text": "כתבו את המילה SHIELD — מגן",
+                "display_text": "כתבו את המילה מגן באנגלית.",
                 "instance_key": "q04_soup_shield_s2"
               },
               "source_metadata": {
@@ -15587,7 +15587,7 @@
               "rewards": []
             },
             {
-              "key": "q05_wizard_for_sale_play_minigame_5d9102ed_1",
+              "key": "q05_wizard_for_sale_play_minigame_c57933b1_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15596,7 +15596,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q05_wizard_for_sale_s2",
-                "display_text": "כתבו את המילה WIZARD — קוסם",
+                "display_text": "כתבו את המילה קוסם באנגלית.",
                 "instance_key": "q05_wizard_for_sale_s2"
               },
               "source_metadata": {
@@ -15726,7 +15726,7 @@
               "rewards": []
             },
             {
-              "key": "q06_dragon_identity_play_minigame_10843dc6_1",
+              "key": "q06_dragon_identity_play_minigame_306a6715_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15735,7 +15735,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q06_dragon_identity_s2",
-                "display_text": "כתבו את המילה DRAGON — דרקון",
+                "display_text": "כתבו את המילה דרקון באנגלית.",
                 "instance_key": "q06_dragon_identity_s2"
               },
               "source_metadata": {
@@ -15865,7 +15865,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_9485b21c_1",
+              "key": "q07_royal_noun_trial_play_minigame_6524d618_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15874,7 +15874,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_queen",
-                "display_text": "כתבו את המילה QUEEN — מלכה",
+                "display_text": "כתבו את המילה מלכה באנגלית.",
                 "instance_key": "q07_royal_noun_trial_queen"
               },
               "source_metadata": {
@@ -15884,7 +15884,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_7be51ab3_2",
+              "key": "q07_royal_noun_trial_play_minigame_37a671b4_2",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -15893,7 +15893,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_castle",
-                "display_text": "כתבו את המילה CASTLE — טירה",
+                "display_text": "כתבו את המילה טירה באנגלית.",
                 "instance_key": "q07_royal_noun_trial_castle"
               },
               "source_metadata": {
@@ -15903,7 +15903,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_ad462389_3",
+              "key": "q07_royal_noun_trial_play_minigame_c4736547_3",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -15912,7 +15912,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_throne",
-                "display_text": "כתבו את המילה THRONE — כס",
+                "display_text": "כתבו את המילה כס באנגלית.",
                 "instance_key": "q07_royal_noun_trial_throne"
               },
               "source_metadata": {
@@ -15922,7 +15922,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_e2de1e78_4",
+              "key": "q07_royal_noun_trial_play_minigame_0cc8bb6e_4",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -15931,7 +15931,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_shield",
-                "display_text": "כתבו את המילה SHIELD — מגן",
+                "display_text": "כתבו את המילה מגן באנגלית.",
                 "instance_key": "q07_royal_noun_trial_shield"
               },
               "source_metadata": {
@@ -15941,7 +15941,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_3b02875b_5",
+              "key": "q07_royal_noun_trial_play_minigame_3de7896d_5",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -15950,7 +15950,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_dragon",
-                "display_text": "כתבו את המילה DRAGON — דרקון",
+                "display_text": "כתבו את המילה דרקון באנגלית.",
                 "instance_key": "q07_royal_noun_trial_dragon"
               },
               "source_metadata": {
@@ -16102,7 +16102,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_aa688811_2",
+              "key": "q01_the_broken_noun_book_play_minigame_7b05ab1b_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16111,7 +16111,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_book",
-                "display_text": "כתבו את המילה BOOK — ספר",
+                "display_text": "כתבו את המילה ספר באנגלית.",
                 "instance_key": "noun_repair_q01_book"
               },
               "source_metadata": {
@@ -16322,7 +16322,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_ba19c7fe_2",
+              "key": "q02_the_runaway_objects_play_minigame_fa683f98_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16331,7 +16331,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_pencil",
-                "display_text": "כתבו את המילה PENCIL — עיפרון",
+                "display_text": "כתבו את המילה עיפרון באנגלית.",
                 "instance_key": "noun_repair_q02_pencil"
               },
               "source_metadata": {
@@ -16542,7 +16542,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_7789f623_2",
+              "key": "q03_the_market_name_mixup_play_minigame_97d67a01_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16551,7 +16551,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_market",
-                "display_text": "כתבו את המילה MARKET — שוק",
+                "display_text": "כתבו את המילה שוק באנגלית.",
                 "instance_key": "noun_repair_q03_market"
               },
               "source_metadata": {
@@ -16762,7 +16762,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_445d5734_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_52ae3755_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16771,7 +16771,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_spoon",
-                "display_text": "כתבו את המילה SPOON — כף",
+                "display_text": "כתבו את המילה כף באנגלית.",
                 "instance_key": "noun_repair_q04_spoon"
               },
               "source_metadata": {
@@ -16982,7 +16982,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_866d2f8a_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_a5cb2b41_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16991,7 +16991,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_treasure",
-                "display_text": "כתבו את המילה TREASURE — אוצר",
+                "display_text": "כתבו את המילה אוצר באנגלית.",
                 "instance_key": "noun_repair_q05_treasure"
               },
               "source_metadata": {
@@ -17202,7 +17202,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_2cfcc44c_2",
+              "key": "q06_the_great_noun_reopening_play_minigame_44080747_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -17211,7 +17211,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_book",
-                "display_text": "כתבו את המילה NOUN — שם עצם",
+                "display_text": "כתבו את המילה שם עצם באנגלית.",
                 "instance_key": "noun_repair_q06_book"
               },
               "source_metadata": {
@@ -17420,7 +17420,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_426bc878_1",
+              "key": "q01_numbers_10_20_play_minigame_57e3c4e9_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -17429,7 +17429,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_ten",
-                "display_text": "כתבו את המילה TEN — עשר",
+                "display_text": "כתבו את המילה עשר באנגלית.",
                 "instance_key": "numbers_q01_spell_ten"
               },
               "source_metadata": {
@@ -17477,7 +17477,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_4d630673_4",
+              "key": "q01_numbers_10_20_play_minigame_93b562fc_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -17486,7 +17486,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_sixteen",
-                "display_text": "כתבו את המילה SIXTEEN — שש עשרה",
+                "display_text": "כתבו את המילה שש עשרה באנגלית.",
                 "instance_key": "numbers_q01_spell_sixteen"
               },
               "source_metadata": {
@@ -17625,7 +17625,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_4d65b318_1",
+              "key": "q02_numbers_20_100_play_minigame_06e6c476_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -17634,7 +17634,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_twenty",
-                "display_text": "כתבו את המילה TWENTY — עשרים",
+                "display_text": "כתבו את המילה עשרים באנגלית.",
                 "instance_key": "numbers_q02_spell_twenty"
               },
               "source_metadata": {
@@ -17682,7 +17682,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_0d52765e_4",
+              "key": "q02_numbers_20_100_play_minigame_8739fef1_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -17691,7 +17691,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_fifty",
-                "display_text": "כתבו את המילה FIFTY — חמישים",
+                "display_text": "כתבו את המילה חמישים באנגלית.",
                 "instance_key": "numbers_q02_spell_fifty"
               },
               "source_metadata": {
@@ -17830,7 +17830,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_f1cbd5c3_1",
+              "key": "q03_numbers_100_1000_play_minigame_f5d3966a_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -17839,7 +17839,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_hundred",
-                "display_text": "כתבו את המילה HUNDRED — מאה",
+                "display_text": "כתבו את המילה מאה באנגלית.",
                 "instance_key": "numbers_q03_spell_hundred"
               },
               "source_metadata": {
@@ -17887,7 +17887,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_47d1adde_4",
+              "key": "q03_numbers_100_1000_play_minigame_6529bdce_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -17896,7 +17896,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_thousand",
-                "display_text": "כתבו את המילה THOUSAND — אלף",
+                "display_text": "כתבו את המילה אלף באנגלית.",
                 "instance_key": "numbers_q03_spell_thousand"
               },
               "source_metadata": {
@@ -18010,5 +18010,5 @@
       ]
     }
   ],
-  "source_digest": "9d7cb47bb2c003c9229e17f90830e761c9c1fbadb7bb0d8f4ce62f715dd284a8"
+  "source_digest": "cd23d26ca3c47dee97b5c5a5b93c472041995ad49b2e22e5f1a5ca62d0534c53"
 }

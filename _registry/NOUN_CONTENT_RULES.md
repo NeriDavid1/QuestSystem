@@ -11,7 +11,8 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 ## Letter Ordering and Word Ordering
 
-- Letter Ordering must tell the learner which word to write and give its Hebrew meaning. Use a Hebrew command followed by the English target and an em dash with the Hebrew meaning, for example `כתבו את המילה BOOK — ספר`.
+- Letter Ordering must never reveal the English answer in the instruction. Give the Hebrew meaning and explicitly require the English answer, for example `כתבו את המילה ספר באנגלית.`
+- All player-facing minigame instructions must avoid revealing the answer. Use Hebrew task guidance; show English answers only as runtime tiles, targets, or other elements that the learner must actively solve or say.
 - Word Ordering must not write the completed sentence in the player-facing instruction. Give a Hebrew prompt such as `בנו משפט לפי התרגום בעברית` and show the Hebrew translation.
 - Word Ordering tasks must include a Hebrew translation in `params.translation`, while the English word array remains runtime data.
 

@@ -1,7 +1,7 @@
 instances:
   q01_runaway_hammer_s2:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה CAT — חתול
+    instruction: כתבו את המילה חתול באנגלית.
     tasks:
     - סדרו <strong>c, a, t</strong>
     - צרו <strong>cat</strong> — חתול
@@ -9,14 +9,14 @@ instances:
     variant: word_spelling
     success: CAT נכתב נכון; Oak Log אחד נוסף לתיק
     params:
-      prompt: כתבו את המילה CAT — חתול
+      prompt: כתבו את המילה חתול באנגלית.
       targetWord: cat
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q02_snoring_anvil_s2:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה DOG — כלב
+    instruction: כתבו את המילה כלב באנגלית.
     tasks:
     - סדרו <strong>d, o, g</strong>
     - צרו <strong>dog</strong> — כלב
@@ -24,14 +24,14 @@ instances:
     variant: word_spelling
     success: DOG נכתב נכון; Herbs אחד נוסף לתיק
     params:
-      prompt: כתבו את המילה DOG — כלב
+      prompt: כתבו את המילה כלב באנגלית.
       targetWord: dog
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q03_first_real_slash_s2:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה BIG — גדול
+    instruction: כתבו את המילה גדול באנגלית.
     tasks:
     - סדרו <strong>b, i, g</strong>
     - צרו <strong>big</strong> — גדול
@@ -39,7 +39,7 @@ instances:
     variant: word_spelling
     success: BIG נכתב נכון — חזרו לוויל לקבל Slash
     params:
-      prompt: כתבו את המילה BIG — גדול
+      prompt: כתבו את המילה גדול באנגלית.
       targetWord: big
       extraDistractorCount: 2
       customDistractors: []

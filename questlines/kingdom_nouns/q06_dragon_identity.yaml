@@ -23,7 +23,7 @@ steps:
   difficulty: 6
   success_required: true
   instance_id: q06_dragon_identity_s2
-  display_text: כתבו את המילה DRAGON — דרקון
+  display_text: כתבו את המילה דרקון באנגלית.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Lost_Chest3_Forsaken_Cove

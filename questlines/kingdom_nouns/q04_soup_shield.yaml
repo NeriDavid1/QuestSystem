@@ -23,7 +23,7 @@ steps:
   difficulty: 5
   success_required: true
   instance_id: q04_soup_shield_s2
-  display_text: כתבו את המילה SHIELD — מגן
+  display_text: כתבו את המילה מגן באנגלית.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: WoodenCart3_The_Oath_stone_Bridge

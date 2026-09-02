@@ -25,7 +25,7 @@ steps:
   instance_id: q05_from_low_to_high_s2
   reward_item_id: power_stone
   reward_amount: 1
-  display_text: כתבו את המילה LOW — נמוך
+  display_text: כתבו את המילה נמוך באנגלית.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Lost_Chest6_The_Last_Roar
@@ -46,7 +46,7 @@ steps:
   instance_id: q05_from_low_to_high_s5
   reward_item_id: power_stone
   reward_amount: 1
-  display_text: כתבו את המילה HIGH — גבוה
+  display_text: כתבו את המילה גבוה באנגלית.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Lost_Chest6_The_Last_Roar

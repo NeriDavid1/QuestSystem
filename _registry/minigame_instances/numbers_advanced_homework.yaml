@@ -1,7 +1,7 @@
 instances:
   numbers_q01_spell_ten:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה TEN — עשר
+    instruction: כתבו את המילה עשר באנגלית.
     tasks:
     - t
     - e
@@ -10,7 +10,7 @@ instances:
     variant: word_spelling
     success: נכון! TEN הוא 10.
     params:
-      prompt: כתבו את המילה TEN — עשר
+      prompt: כתבו את המילה עשר באנגלית.
       targetWord: ten
       extraDistractorCount: 1
       customDistractors: []
@@ -54,7 +54,7 @@ instances:
       referenceClip: ''
   numbers_q01_spell_sixteen:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה SIXTEEN — שש עשרה
+    instruction: כתבו את המילה שש עשרה באנגלית.
     tasks:
     - s
     - i
@@ -67,7 +67,7 @@ instances:
     variant: word_spelling
     success: נכון! SIXTEEN הוא 16.
     params:
-      prompt: כתבו את המילה SIXTEEN — שש עשרה
+      prompt: כתבו את המילה שש עשרה באנגלית.
       targetWord: sixteen
       extraDistractorCount: 2
       customDistractors: []
@@ -132,7 +132,7 @@ instances:
       distractorWords: []
   numbers_q02_spell_twenty:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה TWENTY — עשרים
+    instruction: כתבו את המילה עשרים באנגלית.
     tasks:
     - t
     - w
@@ -144,7 +144,7 @@ instances:
     variant: word_spelling
     success: נכון! TWENTY הוא 20.
     params:
-      prompt: כתבו את המילה TWENTY — עשרים
+      prompt: כתבו את המילה עשרים באנגלית.
       targetWord: twenty
       extraDistractorCount: 2
       customDistractors: []
@@ -188,7 +188,7 @@ instances:
       referenceClip: ''
   numbers_q02_spell_fifty:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה FIFTY — חמישים
+    instruction: כתבו את המילה חמישים באנגלית.
     tasks:
     - f
     - i
@@ -199,7 +199,7 @@ instances:
     variant: word_spelling
     success: נכון! FIFTY הוא 50.
     params:
-      prompt: כתבו את המילה FIFTY — חמישים
+      prompt: כתבו את המילה חמישים באנגלית.
       targetWord: fifty
       extraDistractorCount: 2
       customDistractors: []
@@ -264,7 +264,7 @@ instances:
       distractorWords: []
   numbers_q03_spell_hundred:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה HUNDRED — מאה
+    instruction: כתבו את המילה מאה באנגלית.
     tasks:
     - h
     - u
@@ -277,7 +277,7 @@ instances:
     variant: word_spelling
     success: נכון! HUNDRED הוא מאה.
     params:
-      prompt: כתבו את המילה HUNDRED — מאה
+      prompt: כתבו את המילה מאה באנגלית.
       targetWord: hundred
       extraDistractorCount: 2
       customDistractors: []
@@ -326,7 +326,7 @@ instances:
       referenceClip: ''
   numbers_q03_spell_thousand:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה THOUSAND — אלף
+    instruction: כתבו את המילה אלף באנגלית.
     tasks:
     - t
     - h
@@ -340,7 +340,7 @@ instances:
     variant: word_spelling
     success: נכון! THOUSAND הוא אלף.
     params:
-      prompt: כתבו את המילה THOUSAND — אלף
+      prompt: כתבו את המילה אלף באנגלית.
       targetWord: thousand
       extraDistractorCount: 2
       customDistractors: []

@@ -25,7 +25,7 @@ steps:
   instance_id: q03_big_and_small_words_s1
   reward_item_id: corn
   reward_amount: 1
-  display_text: כתבו את המילה BIG — גדול
+  display_text: כתבו את המילה גדול באנגלית.
 - type: reach_location
   location_id: The Sunspire Tree
   display_text: Reach The Sunspire Tree
