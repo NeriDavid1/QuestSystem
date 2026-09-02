@@ -72,7 +72,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   const steps: QuestStep[] = []
   const stepIds = new Map<string, string>()
   for (const questDoc of questDocs) {
-    const questId = questIds.get(String(questDoc.key)); if (!questId) continue
+    const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); if (!questId) continue
     for (const [index, stepDoc] of (Array.isArray(questDoc.steps) ? questDoc.steps : []).entries()) {
       const id = makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
       steps.push({ id, quest_id: questId, key: String(stepDoc.key), position: index, step_type: String(stepDoc.type), payload: stepDoc.payload ?? {}, source_metadata: stepDoc.source_metadata ?? {} })
@@ -80,14 +80,14 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   }
   const rewards: QuestReward[] = []
   for (const questDoc of questDocs) {
-    const questId = questIds.get(String(questDoc.key)); if (!questId) continue
+    const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); if (!questId) continue
     for (const reward of (Array.isArray(questDoc.rewards) ? questDoc.rewards : [])) rewards.push({ id: makeLocalId('reward'), scope: 'quest', quest_id: questId, step_id: null, reward_type: reward.reward_type === 'item' ? 'item' : 'xp', xp_amount: reward.xp_amount ?? null, item_external_id: reward.item_external_id ?? null, amount: reward.amount ?? null, source_metadata: reward.source_metadata ?? {} })
     for (const stepDoc of (Array.isArray(questDoc.steps) ? questDoc.steps : [])) {
       const stepId = stepIds.get(`${questDoc.key}::${stepDoc.key}`); if (!stepId) continue
       for (const reward of (Array.isArray(stepDoc.rewards) ? stepDoc.rewards : [])) rewards.push({ id: makeLocalId('reward'), scope: 'step', quest_id: null, step_id: stepId, reward_type: reward.reward_type === 'item' ? 'item' : 'xp', xp_amount: reward.xp_amount ?? null, item_external_id: reward.item_external_id ?? null, amount: reward.amount ?? null, source_metadata: reward.source_metadata ?? {} })
     }
   }
-  const prerequisites: QuestPrerequisite[] = questDocs.flatMap((questDoc) => (questDoc.prerequisites ?? []).flatMap((key: string) => { const questId = questIds.get(String(questDoc.key)); const prerequisiteQuestId = questIds.get(key); return questId && prerequisiteQuestId ? [{ quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] : [] }))
+  const prerequisites: QuestPrerequisite[] = questDocs.flatMap((questDoc) => (questDoc.prerequisites ?? []).flatMap((key: string) => { const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); const prerequisiteQuestId = questIds.get(`${line.key}__${String(key)}`); return questId && prerequisiteQuestId ? [{ quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] : [] }))
 
   const usedDialogueKeys = new Set<string>(); const usedMinigameKeys = new Set<string>()
   for (const step of steps) { const p = step.payload; if (typeof p.dialogue_id === 'string') usedDialogueKeys.add(p.dialogue_id); if (typeof p.instance_id === 'string') usedMinigameKeys.add(p.instance_id); if (typeof p.instance_key === 'string') usedMinigameKeys.add(p.instance_key) }
