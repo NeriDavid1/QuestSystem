@@ -49,11 +49,23 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   const oldStepIds = current.steps.filter((step) => oldQuestIds.includes(step.quest_id)).map((step) => step.id)
   const questDocs = Array.isArray(doc.quests) ? doc.quests : []
   const quests: Quest[] = questDocs.map((item, index) => ({
+    // The generated revision document keeps dialogue references on steps.
+    // Promote the first/last NPC dialogue to the quest-level slots expected by
+    // the editor and Unity runtime.
+    ...(() => {
+      const sourceSteps = Array.isArray(item.steps) ? item.steps : []
+      const start = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
+      const finish = [...sourceSteps].reverse().find((step: Record<string, any>) => step.type === 'deliver_item' || step.type === 'talk_to_npc')
+      return {
+        start_dialogue_id: start?.payload?.dialogue_id ?? null,
+        turn_in_dialogue_id: finish?.payload?.dialogue_id ?? null,
+      }
+    })(),
     id: makeLocalId('quest'), questline_id: line.id, key: String(item.key), position: index,
     name: String(item.name ?? item.key), level_required: Number(item.level_required ?? 1),
     giver_external_id: item.giver_external_id ?? null, summary: item.summary ?? null,
-    wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in), start_dialogue_id: item.start_dialogue_id ?? null,
-    turn_in_dialogue_id: item.turn_in_dialogue_id ?? null, status: 'draft', source_path: item.source_path ?? null,
+    wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in),
+    status: 'draft', source_path: item.source_path ?? null,
     source_metadata: item.source_metadata ?? {},
   }))
   const questIds = new Map(quests.map((quest) => [quest.key, quest.id]))
