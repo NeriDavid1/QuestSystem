@@ -24,7 +24,7 @@ steps:
     difficulty: 1
     success_required: true
     instance_id: noun_repair_q01_book
-    display_text: "זוכרים איך כותבים את שם העצם?"
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest5_Silver_Fountain_Court
@@ -61,7 +61,7 @@ steps:
     instance_id: noun_repair_q01_say
     reward_item_id: gem
     reward_amount: 1
-    display_text: "תגידו את שם העצם בקול"
+    display_text: "אמרו את המילים הבאות בקול"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: gem

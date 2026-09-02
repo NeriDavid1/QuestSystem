@@ -24,7 +24,7 @@ steps:
     difficulty: 1
     success_required: true
     instance_id: q03_first_real_slash_s2
-    display_text: תסדר את המילה גדול באנגלית
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: return_to_npc
     npc_id: Blacksmith
     dialogue_id: will_first_slash_done

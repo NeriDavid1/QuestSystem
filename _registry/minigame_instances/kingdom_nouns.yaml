@@ -3,7 +3,7 @@
 instances:
   q01_roles_without_names_s2:
     minigame_id: letter_ordering
-    instruction: סדרו את האותיות כדי לשחזר את המילה מלך באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - גררו את האותיות <strong>k, i, n, g</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -12,14 +12,14 @@ instances:
     variant: word_spelling
     success: המילה KING (מלך) חוזרת לדף אנשי המלוכה
     params:
-      prompt: סדרו את האותיות כדי לשחזר את המילה מלך באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: king
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q01_roles_without_names_s3:
     minigame_id: speak_aloud
-    instruction: 'אמרו באנגלית: מלך, מלכה ואביר'
+    instruction: "אמרו את המילים הבאות בקול"
     tasks:
       - לחצו על Hear it והקשיבו ל־<strong>king</strong>, ואז אמרו king — מלך
       - הקשיבו ל־<strong>queen</strong>, ואז אמרו queen — מלכה
@@ -28,7 +28,7 @@ instances:
     variant: repeat_after_npc
     success: Gem אחד נוסף לתיק; שלושת שמות המלוכה נשמעו נכון
     params:
-      prompt: 'אמרו באנגלית: מלך, מלכה ואביר'
+      prompt: אמרו את המילים הבאות בקול
       targetWords:
         - king
         - queen
@@ -40,7 +40,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q02_castle_on_the_map_s2:
     minigame_id: letter_ordering
-    instruction: סדרו את האותיות כדי לשחזר את המילה טירה באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -49,14 +49,14 @@ instances:
     variant: word_spelling
     success: הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה
     params:
-      prompt: סדרו את האותיות כדי לשחזר את המילה טירה באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: castle
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q02_castle_on_the_map_s3:
     minigame_id: speak_aloud
-    instruction: 'אמרו באנגלית: טירה, מגדל ושער'
+    instruction: "אמרו את המילים הבאות בקול"
     tasks:
       - הקשיבו ואמרו <strong>castle</strong> — טירה
       - הקשיבו ואמרו <strong>tower</strong> — מגדל
@@ -65,7 +65,7 @@ instances:
     variant: repeat_after_npc
     success: Gem אחד נוסף לתיק; שלושת שמות המקומות נשמעו נכון
     params:
-      prompt: 'אמרו באנגלית: טירה, מגדל ושער'
+      prompt: אמרו את המילים הבאות בקול
       targetWords:
         - castle
         - tower
@@ -77,7 +77,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q03_crown_soup_s2:
     minigame_id: letter_ordering
-    instruction: סדרו את האותיות כדי לשחזר את המילה כתר באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר
       - בדקו שהמילה מתחילה ב־C ומסתיימת ב־N
@@ -86,14 +86,14 @@ instances:
     variant: word_spelling
     success: הכתר מקבל בחזרה את הכרטיס CROWN
     params:
-      prompt: סדרו את האותיות כדי לשחזר את המילה כתר באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: crown
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q03_crown_soup_s3:
     minigame_id: speak_aloud
-    instruction: 'אמרו באנגלית: כתר, כיסא־מלכות ואוצר'
+    instruction: "אמרו את המילים הבאות בקול"
     tasks:
       - הקשיבו ואמרו <strong>crown</strong> — כתר
       - הקשיבו ואמרו <strong>throne</strong> — כיסא־מלכות (הצליל TH בתחילת המילה)
@@ -102,7 +102,7 @@ instances:
     variant: repeat_after_npc
     success: Power Stone אחד נוסף לתיק; שלושת שמות האוצרות נשמעו נכון
     params:
-      prompt: 'אמרו באנגלית: כתר, כיסא־מלכות ואוצר'
+      prompt: אמרו את המילים הבאות בקול
       targetWords:
         - crown
         - throne
@@ -114,7 +114,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q04_soup_shield_s2:
     minigame_id: letter_ordering
-    instruction: סדרו את האותיות כדי לשחזר את המילה מגן באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות
       - שימו לב לצירוף <strong>sh</strong> בתחילת המילה
@@ -123,14 +123,14 @@ instances:
     variant: word_spelling
     success: המגן (shield) חוזר להיות מגן במקום מגש מרק
     params:
-      prompt: סדרו את האותיות כדי לשחזר את המילה מגן באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: shield
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q04_soup_shield_s3:
     minigame_id: speak_aloud
-    instruction: 'אמרו באנגלית: חרב, מגן ומגילה'
+    instruction: "אמרו את המילים הבאות בקול"
     tasks:
       - הקשיבו ואמרו <strong>sword</strong> — חרב (האות W אינה נשמעת)
       - הקשיבו ואמרו <strong>shield</strong> — מגן
@@ -139,7 +139,7 @@ instances:
     variant: repeat_after_npc
     success: Power Stone אחד נוסף לתיק; שלושת שמות הנשקייה נשמעו נכון
     params:
-      prompt: 'אמרו באנגלית: חרב, מגן ומגילה'
+      prompt: אמרו את המילים הבאות בקול
       targetWords:
         - sword
         - shield
@@ -151,7 +151,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q05_wizard_for_sale_s2:
     minigame_id: letter_ordering
-    instruction: סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -160,14 +160,14 @@ instances:
     variant: word_spelling
     success: הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון
     params:
-      prompt: סדרו את האותיות כדי לשחזר את המילה קוסם באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: wizard
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q05_wizard_for_sale_s3:
     minigame_id: speak_aloud
-    instruction: 'אמרו באנגלית: קוסם, טבח ושומר'
+    instruction: "אמרו את המילים הבאות בקול"
     tasks:
       - הקשיבו ואמרו <strong>wizard</strong> — קוסם
       - הקשיבו ואמרו <strong>cook</strong> — טבח
@@ -176,7 +176,7 @@ instances:
     variant: repeat_after_npc
     success: Power Stone אחד נוסף לתיק; שלושת שמות אנשי החצר נשמעו נכון
     params:
-      prompt: 'אמרו באנגלית: קוסם, טבח ושומר'
+      prompt: אמרו את המילים הבאות בקול
       targetWords:
         - wizard
         - cook
@@ -188,7 +188,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q06_dragon_identity_s2:
     minigame_id: letter_ordering
-    instruction: סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -197,14 +197,14 @@ instances:
     variant: word_spelling
     success: כרטיס DRAGON (דרקון) חוזר ליצור הנכון
     params:
-      prompt: סדרו את האותיות כדי לשחזר את המילה דרקון באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: dragon
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q06_dragon_identity_s3:
     minigame_id: speak_aloud
-    instruction: 'אמרו באנגלית: דרקון, גריפין וגובלין'
+    instruction: "אמרו את המילים הבאות בקול"
     tasks:
       - הקשיבו ואמרו <strong>dragon</strong> — דרקון
       - הקשיבו ואמרו <strong>griffin</strong> — גריפין
@@ -213,7 +213,7 @@ instances:
     variant: repeat_after_npc
     success: Ancient Rune אחד נוסף לתיק; שלושת שמות היצורים נשמעו נכון
     params:
-      prompt: 'אמרו באנגלית: דרקון, גריפין וגובלין'
+      prompt: אמרו את המילים הבאות בקול
       targetWords:
         - dragon
         - griffin
@@ -225,49 +225,49 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_castle:
     minigame_id: letter_ordering
-    instruction: סדרו את המילה טירה באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - סדרו את המילה טירה באנגלית
     target: castle
     variant: word_spelling
     success: CASTLE נכתב נכון
     params:
-      prompt: סדרו את המילה טירה באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: castle
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_dragon:
     minigame_id: letter_ordering
-    instruction: סדרו את המילה דרקון באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - סדרו את המילה דרקון באנגלית
     target: dragon
     variant: word_spelling
     success: DRAGON נכתב נכון
     params:
-      prompt: סדרו את המילה דרקון באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: dragon
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_queen:
     minigame_id: letter_ordering
-    instruction: סדרו את המילה מלכה באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - סדרו את המילה מלכה באנגלית
     target: queen
     variant: word_spelling
     success: QUEEN נכתב נכון
     params:
-      prompt: סדרו את המילה מלכה באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: queen
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_s3:
     minigame_id: speak_aloud
-    instruction: אמרו באנגלית מילה אחת מכל קבוצה
+    instruction: "אמרו את המילים הבאות בקול"
     tasks:
       - הקשיבו פעם אחת, ואז אמרו <strong>knight</strong> — אביר
       - אמרו <strong>castle</strong> — טירה
@@ -278,7 +278,7 @@ instances:
     variant: single_word
     success: Ancient Rune אחד נוסף לתיק; ספר ה־nouns של הממלכה נפתח בשלמותו
     params:
-      prompt: אמרו באנגלית מילה אחת מכל קבוצה
+      prompt: אמרו את המילים הבאות בקול
       targetWords:
         - knight
         - castle
@@ -291,28 +291,28 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_shield:
     minigame_id: letter_ordering
-    instruction: סדרו את המילה מגן באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - סדרו את המילה מגן באנגלית
     target: shield
     variant: word_spelling
     success: SHIELD נכתב נכון
     params:
-      prompt: סדרו את המילה מגן באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: shield
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_throne:
     minigame_id: letter_ordering
-    instruction: סדרו את המילה כיסא־מלכות באנגלית
+    instruction: "זוכרים איך כותבים את המילה?"
     tasks:
       - סדרו את המילה כיסא־מלכות באנגלית
     target: throne
     variant: word_spelling
     success: THRONE נכתב נכון
     params:
-      prompt: סדרו את המילה כיסא־מלכות באנגלית
+      prompt: זוכרים איך כותבים את המילה?
       targetWord: throne
       extraDistractorCount: 2
       customDistractors: []

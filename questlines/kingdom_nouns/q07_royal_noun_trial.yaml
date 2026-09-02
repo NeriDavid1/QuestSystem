@@ -25,35 +25,35 @@ steps:
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_queen
-    display_text: סדרו QUEEN
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_castle
-    display_text: סדרו CASTLE
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_throne
-    display_text: סדרו THRONE
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_shield
-    display_text: סדרו SHIELD
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_dragon
-    display_text: סדרו DRAGON
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
@@ -62,7 +62,7 @@ steps:
     instance_id: q07_royal_noun_trial_s3
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: אמרו באנגלית מילה אחת מכל קבוצה
+    display_text: "אמרו את המילים הבאות בקול"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: ancient_rune

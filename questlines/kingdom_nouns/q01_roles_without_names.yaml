@@ -23,7 +23,7 @@ steps:
     difficulty: 4
     success_required: true
     instance_id: q01_roles_without_names_s2
-    display_text: סדרו את האותיות של KING
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest5_Silver_Fountain_Court
@@ -32,7 +32,7 @@ steps:
     instance_id: q01_roles_without_names_s3
     reward_item_id: gem
     reward_amount: 1
-    display_text: 'אמרו באנגלית: מלך, מלכה ואביר'
+    display_text: "אמרו את המילים הבאות בקול"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: gem

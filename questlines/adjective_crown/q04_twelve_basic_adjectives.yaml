@@ -25,7 +25,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_short
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: סדרו SHORT
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -37,7 +37,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_long
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: אמרו LONG
+    display_text: "אמרו את המילים הבאות בקול"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -49,7 +49,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_cold
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: סדרו COLD
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -61,7 +61,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_hot
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: אמרו HOT
+    display_text: "אמרו את המילים הבאות בקול"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -73,7 +73,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_big
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: סדרו BIG
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -85,7 +85,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_small
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: אמרו SMALL
+    display_text: "אמרו את המילים הבאות בקול"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -97,7 +97,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_fast
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: סדרו FAST
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -109,7 +109,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_slow
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: אמרו SLOW
+    display_text: "אמרו את המילים הבאות בקול"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -121,7 +121,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_low
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: סדרו LOW
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -133,7 +133,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_high
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: אמרו HIGH
+    display_text: "אמרו את המילים הבאות בקול"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -145,7 +145,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_heavy
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: סדרו HEAVY
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: reach_location
     location_id: The Weeping Stones
     display_text: Reach The Weeping Stones
@@ -157,7 +157,7 @@ steps:
     instance_id: q04_twelve_basic_adjectives_light
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: אמרו LIGHT
+    display_text: "אמרו את המילים הבאות בקול"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: ancient_rune

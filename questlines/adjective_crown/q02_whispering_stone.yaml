@@ -24,7 +24,7 @@ steps:
     instance_id: q02_whispering_stone_s2
     reward_item_id: herbs
     reward_amount: 1
-    display_text: אמרו HOT בקול
+    display_text: "אמרו את המילים הבאות בקול"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: herbs

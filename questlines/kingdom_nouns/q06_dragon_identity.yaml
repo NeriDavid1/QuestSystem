@@ -23,7 +23,7 @@ steps:
     difficulty: 6
     success_required: true
     instance_id: q06_dragon_identity_s2
-    display_text: סדרו את האותיות של DRAGON
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest3_Forsaken_Cove
@@ -32,7 +32,7 @@ steps:
     instance_id: q06_dragon_identity_s3
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: 'אמרו באנגלית: דרקון, גריפין וגובלין'
+    display_text: "אמרו את המילים הבאות בקול"
   - type: deliver_item
     npc_id: Cannoneer
     item_id: ancient_rune

@@ -25,7 +25,7 @@ steps:
     instance_id: q02_snoring_anvil_s2
     reward_item_id: herbs
     reward_amount: 1
-    display_text: תסדר את המילה כלב באנגלית
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: deliver_item
     npc_id: Blacksmith
     item_id: herbs

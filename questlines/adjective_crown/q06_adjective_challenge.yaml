@@ -25,7 +25,7 @@ steps:
     difficulty: 4
     success_required: true
     instance_id: q06_adjective_challenge_s1
-    display_text: 'השלימו אותיות חסרות: SHORT LONG COLD HOT'
+    display_text: "השלימו את האות החסרה במילה"
   - type: reach_location
     location_id: Sanctum of Whispering Light
     display_text: Reach Sanctum of Whispering Light
@@ -35,7 +35,7 @@ steps:
     difficulty: 4
     success_required: true
     instance_id: q06_adjective_challenge_s2
-    display_text: 'השלימו אותיות חסרות: BIG SMALL HEAVY LIGHT'
+    display_text: "השלימו את האות החסרה במילה"
   - type: reach_location
     location_id: Sanctum of Whispering Light
     display_text: Reach Sanctum of Whispering Light
@@ -47,7 +47,7 @@ steps:
     instance_id: q06_adjective_challenge_s3
     reward_item_id: gem
     reward_amount: 1
-    display_text: 'השלימו אותיות חסרות: FAST SLOW LOW HIGH'
+    display_text: "השלימו את האות החסרה במילה"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: gem

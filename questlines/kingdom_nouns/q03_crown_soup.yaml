@@ -23,7 +23,7 @@ steps:
     difficulty: 5
     success_required: true
     instance_id: q03_crown_soup_s2
-    display_text: סדרו את האותיות של CROWN
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: WoodenCart2_Solitude_Tower
@@ -32,7 +32,7 @@ steps:
     instance_id: q03_crown_soup_s3
     reward_item_id: power_stone
     reward_amount: 1
-    display_text: 'אמרו באנגלית: כתר, כיסא־מלכות ואוצר'
+    display_text: "אמרו את המילים הבאות בקול"
   - type: deliver_item
     npc_id: Professor Crazy
     item_id: power_stone

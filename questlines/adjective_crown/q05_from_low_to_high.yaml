@@ -25,7 +25,7 @@ steps:
     instance_id: q05_from_low_to_high_s2
     reward_item_id: power_stone
     reward_amount: 1
-    display_text: סדרו LOW
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest6_The_Last_Roar
@@ -34,7 +34,7 @@ steps:
     instance_id: q05_from_low_to_high_s3
     reward_item_id: power_stone
     reward_amount: 1
-    display_text: סדרו את המשפט THE PLACE IS LOW
+    display_text: "בנו משפט לפי התרגום בעברית"
   - type: reach_location
     location_id: The Last Roar
     display_text: Reach The Last Roar
@@ -46,7 +46,7 @@ steps:
     instance_id: q05_from_low_to_high_s5
     reward_item_id: power_stone
     reward_amount: 1
-    display_text: סדרו HIGH
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest6_The_Last_Roar
@@ -55,7 +55,7 @@ steps:
     instance_id: q05_from_low_to_high_s6
     reward_item_id: power_stone
     reward_amount: 1
-    display_text: סדרו את המשפט THE BUILDING IS HIGH
+    display_text: "בנו משפט לפי התרגום בעברית"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: power_stone

@@ -25,7 +25,7 @@ steps:
     instance_id: q01_runaway_hammer_s2
     reward_item_id: oak_log
     reward_amount: 1
-    display_text: תסדר את המילה חתול באנגלית
+    display_text: "זוכרים איך כותבים את המילה?"
   - type: deliver_item
     npc_id: Blacksmith
     item_id: oak_log
