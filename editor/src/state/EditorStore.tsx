@@ -1673,15 +1673,35 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
 
   const importBundle = useCallback((bundle: unknown, sourceKey?: string) => {
     if (!selectedLine) return
-    const imported = importBundleIntoLine(bundle, data, selectedLine, sourceKey)
+    const bundleRecord = (bundle ?? {}) as { revision_documents?: Array<Record<string, any>>; questlines?: Array<Record<string, any>> }
+    const requestedDocument = Array.isArray(bundleRecord.revision_documents)
+      ? bundleRecord.revision_documents.find((document) => document.key === sourceKey)
+      : undefined
+    const existingLine = sourceKey ? data.questlines.find((item) => item.key === sourceKey) : selectedLine
+    const createLine = Boolean(sourceKey && !existingLine && requestedDocument)
+    const targetLine = existingLine ?? (createLine ? {
+      id: makeLocalId('questline'),
+      key: sourceKey!,
+      display_name: String(requestedDocument!.display_name ?? sourceKey),
+      theme: requestedDocument!.theme ?? null,
+      default_giver_external_id: requestedDocument!.default_giver_external_id ?? null,
+      status: 'draft' as const,
+      level_min: 1,
+      level_max: 1,
+      source_path: requestedDocument!.source_path ?? null,
+      source_metadata: requestedDocument!.source_metadata ?? { imported_bundle: true },
+    } : selectedLine)
+    const imported = importBundleIntoLine(bundle, data, targetLine, sourceKey)
     imported.dialogues.forEach((dialogue) => touchedDialogueIds.current.add(dialogue.id))
     imported.minigames.forEach((minigame) => touchedMinigameIds.current.add(minigame.id))
     imported.oldQuestIds.forEach((id) => deletedQuestIds.current.push(id))
     imported.oldStepIds.forEach((id) => deletedStepIds.current.push(id))
     setData((current) => ({
       ...current,
-      questlines: current.questlines.map((item) => item.id === selectedLine.id ? imported.line : item),
-      quests: [...current.quests.filter((quest) => quest.questline_id !== selectedLine.id), ...imported.quests],
+      questlines: current.questlines.some((item) => item.id === targetLine.id)
+        ? current.questlines.map((item) => item.id === targetLine.id ? imported.line : item)
+        : [...current.questlines, imported.line],
+      quests: [...current.quests.filter((quest) => quest.questline_id !== targetLine.id), ...imported.quests],
       steps: [...current.steps.filter((step) => !imported.oldStepIds.includes(step.id)), ...imported.steps],
       prerequisites: [...current.prerequisites.filter((edge) => !imported.oldQuestIds.includes(edge.quest_id) && !imported.oldQuestIds.includes(edge.prerequisite_quest_id)), ...imported.prerequisites],
       rewards: [...current.rewards.filter((reward) => !(reward.quest_id && imported.oldQuestIds.includes(reward.quest_id)) && !(reward.step_id && imported.oldStepIds.includes(reward.step_id))), ...imported.rewards],
@@ -1691,6 +1711,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     }))
     setSelectedQuestId('')
     setSelectedStepId('')
+    setSelectedQuestlineId(targetLine.id)
     setDirty(true)
     notify('Bundle imported as a draft')
   }, [data, notify, selectedLine])
