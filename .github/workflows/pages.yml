@@ -62,6 +62,7 @@ jobs:
           mkdir -p site/editor
           cp -R presentation/. site/
           cp -R editor/dist/. site/editor/
+          cp supabase/seed/quest_content_bundle.json site/editor/quest_content_bundle.json
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
