@@ -1,0 +1,25 @@
+questline:
+  id: numbers_advanced_homework
+  npc_id: Little Boy
+  display_name: "Numbers Advanced - שיעורי בית"
+  theme: "The Lost Number Map: a guided Numbers Advanced homework journey from 10 to 1000"
+  quest_count: 3
+  level_range:
+    - 1
+    - 1
+quests:
+  - id: q01_numbers_10_20
+    name: "Numbers 10-20: המספרים 10-20"
+    level: 1
+    prerequisite: null
+    rewards: { xp: 100, items: [] }
+  - id: q02_numbers_20_100
+    name: "Numbers 20-100: המספרים 20-100"
+    level: 1
+    prerequisite: q01_numbers_10_20
+    rewards: { xp: 150, items: [] }
+  - id: q03_numbers_100_1000
+    name: "Numbers 100-1000: המספרים 100-1000"
+    level: 1
+    prerequisite: q02_numbers_20_100
+    rewards: { xp: 200, items: [] }

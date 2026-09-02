@@ -15,20 +15,25 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 | `Benny the Builder` | Benny the Builder | Builder | BuildersHome | ![Benny the Builder](images/npcs/Benny the Builder.png) |
 | `Blacksmith` | Will The Smith | Blacksmith | BuildersHome | ![Will The Smith](images/npcs/Blacksmith.png) |
 | `Cannoneer` | Cannoneer | Cannoneer | Forsaken Cove | ![Cannoneer](images/npcs/Cannoneer.png) |
+| `Chef` | Chef |  |  | ![Chef](images/npcs/Chef.png) |
 | `City Gaurd Info` | Fenn the Chatty | City Guard | KingdomGate | ![Fenn the Chatty](images/npcs/City Gaurd Info.png) |
+| `Dark Wizard` | Dark Wizard |  |  | *(no image)* |
 | `Farmer` | Farmer | Farmer | FairyRosePark | ![Farmer](images/npcs/Farmer.png) |
 | `Farmer V2` | Farmer V2 | Farmer | FairyRosePark | ![Farmer V2](images/npcs/Farmer V2.png) |
 | `Fisherman` | Nemo the Netless | Fisherman | Driftgold Bay | ![Nemo the Netless](images/npcs/Fisherman.png) |
 | `Flight Guide` | Flight Guide | Flight Guide | The Sunspire Tree | ![Flight Guide](images/npcs/Flight Guide.png) |
 | `Ghost` | Boo Radcliff | Ghost | The Weeping Stones | ![Boo Radcliff](images/npcs/Ghost.png) |
+| `King Numbers` | King Numbers |  |  | *(no image)* |
 | `Little Boy` | Little Boy | Child | FairyRosePark | ![Little Boy](images/npcs/Little Boy.png) |
 | `Little Girl` | Little Girl | Child | FairyRosePark | ![Little Girl](images/npcs/Little Girl.png) |
 | `Main Gate Gaurd 1` | Tomlin the Yawner | Gate Guard | KingdomGate | ![Tomlin the Yawner](images/npcs/Main Gate Gaurd 1.png) |
 | `Main Gate Gaurd 2` | Garrick the Unmoving | Gate Guard | KingdomGate | ![Garrick the Unmoving](images/npcs/Main Gate Gaurd 2.png) |
 | `Mountain Guide` | Mountain Guide | Mountain Guide | TowerOfLostVigil | ![Mountain Guide](images/npcs/Mountain Guide.png) |
+| `Museum Clerk` | Museum Clerk |  |  | ![Museum Clerk](images/npcs/Museum Clerk.png) |
 | `Old Man` | Old Man | Old Man | MoonriverCottage | ![Old Man](images/npcs/Old Man.png) |
 | `Old Woman` | Old Woman | Old Woman | MoonriverCottage | ![Old Woman](images/npcs/Old Woman.png) |
 | `Painter` | Painter | Painter | The Sunspire Tree | *(no image)* |
+| `Palace Guard` | Palace Guard |  |  | ![Palace Guard](images/npcs/Palace Guard.png) |
 | `Professor Crazy` | Professor Crazy | Professor | Solitude Tower | ![Professor Crazy](images/npcs/Professor Crazy.png) |
 | `Riding Guide` | Riding Guide | Riding Guide | Driftgold Bay | ![Riding Guide](images/npcs/Riding Guide.png) |
 | `Secondary Gate Main` | Secondary Gate Main | Gate Captain | KingdomGate | ![Secondary Gate Main](images/npcs/Secondary Gate Main.png) |

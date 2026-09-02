@@ -14,13 +14,13 @@
   },
   "counts": {
     "areas": 31,
-    "npcs": 29,
+    "npcs": 34,
     "interactables": 40,
     "items": 117,
     "minigames": 5,
     "step_types": 6,
     "areas_with_image": 15,
-    "npcs_with_image": 22,
+    "npcs_with_image": 25,
     "interactables_with_image": 14,
     "items_with_image": 104,
     "minigames_with_image": 4
@@ -296,12 +296,21 @@
       "id": "Cannoneer"
     },
     {
+      "image": "images/npcs/Chef.png",
+      "name": "Chef",
+      "id": "Chef"
+    },
+    {
       "image": "images/npcs/City Gaurd Info.png",
       "name": "Fenn the Chatty",
       "title": "City Guard",
       "location": "KingdomGate",
       "description": "Talkative guard who knows every rumor in town.",
       "id": "City Gaurd Info"
+    },
+    {
+      "name": "Dark Wizard",
+      "id": "Dark Wizard"
     },
     {
       "image": "images/npcs/Farmer.png",
@@ -344,6 +353,10 @@
       "id": "Ghost"
     },
     {
+      "name": "King Numbers",
+      "id": "King Numbers"
+    },
+    {
       "image": "images/npcs/Little Boy.png",
       "name": "Little Boy",
       "title": "Child",
@@ -384,6 +397,11 @@
       "id": "Mountain Guide"
     },
     {
+      "image": "images/npcs/Museum Clerk.png",
+      "name": "Museum Clerk",
+      "id": "Museum Clerk"
+    },
+    {
       "image": "images/npcs/Old Man.png",
       "name": "Old Man",
       "title": "Old Man",
@@ -405,6 +423,11 @@
       "location": "The Sunspire Tree",
       "description": "Dreamy painter looking for colors and word ideas.",
       "id": "Painter"
+    },
+    {
+      "image": "images/npcs/Palace Guard.png",
+      "name": "Palace Guard",
+      "id": "Palace Guard"
     },
     {
       "image": "images/npcs/Professor Crazy.png",

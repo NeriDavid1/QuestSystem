@@ -1,0 +1,170 @@
+# Hebrew instructions with small English number targets.
+instances:
+  numbers_q01_spell_ten:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של 10 — TEN."
+    tasks: [t, e, n]
+    target: ten
+    variant: word_spelling
+    success: "נכון! TEN הוא 10."
+    params: { prompt: "סדרו את האותיות של 10 — TEN.", targetWord: ten, extraDistractorCount: 1, customDistractors: [] }
+  numbers_q01_sentence_twelve:
+    minigame_id: word_ordering
+    instruction: "סדרו את המילים למשפט נכון על 12."
+    tasks: [The, number, is, twelve]
+    target: "The number is twelve."
+    variant: sentence_building
+    success: "נכון! המשפט מתאים למספר 12."
+    params: { prompt: "בנו משפט קצר על 12.", englishWordsInOrder: [The, number, is, twelve], preFilledIndices: [], distractorWords: [] }
+  numbers_q01_say_fourteen:
+    minigame_id: speak_aloud
+    instruction: "אמרו בקול את המילה של 14 — מעט English."
+    tasks: [fourteen, 14]
+    target: fourteen
+    variant: single_word
+    success: "נשמע טוב! FOURTEEN נקלט."
+    params: { prompt: "אמרו בקול: FOURTEEN — 14.", targetWords: [fourteen], targetPhrase: fourteen, silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
+  numbers_q01_spell_sixteen:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של 16 — SIXTEEN."
+    tasks: [s, i, x, t, e, e, n]
+    target: sixteen
+    variant: word_spelling
+    success: "נכון! SIXTEEN הוא 16."
+    params: { prompt: "סדרו את האותיות של 16 — SIXTEEN.", targetWord: sixteen, extraDistractorCount: 2, customDistractors: [] }
+  numbers_q01_sentence_eighteen:
+    minigame_id: word_ordering
+    instruction: "סדרו את המשפט של המספר 18."
+    tasks: [The, number, is, eighteen]
+    target: "The number is eighteen."
+    variant: sentence_building
+    success: "המשפט נכון."
+    params: { prompt: "סדרו משפט קצר על 18.", englishWordsInOrder: [The, number, is, eighteen], preFilledIndices: [], distractorWords: [] }
+  numbers_q01_say_twenty:
+    minigame_id: speak_aloud
+    instruction: "אמרו בקול את המספר 20 — TWENTY."
+    tasks: [twenty, 20]
+    target: twenty
+    variant: single_word
+    success: "נכון! TWENTY נקלט."
+    params: { prompt: "אמרו בקול: TWENTY — 20.", targetWords: [twenty], targetPhrase: twenty, silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
+  numbers_q01_review_10_20:
+    minigame_id: word_ordering
+    instruction: "תרגול סיום: סדרו משפט עם מספר בין 10 ל־20."
+    tasks: [The, number, is, fifteen]
+    target: "The number is fifteen."
+    variant: sentence_building
+    success: "סיימתם את תרגול 10–20."
+    params: { prompt: "סדרו את המשפט של 15.", englishWordsInOrder: [The, number, is, fifteen], preFilledIndices: [], distractorWords: [] }
+  numbers_q02_spell_twenty:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של 20 — TWENTY."
+    tasks: [t, w, e, n, t, y]
+    target: twenty
+    variant: word_spelling
+    success: "נכון! TWENTY הוא 20."
+    params: { prompt: "סדרו את האותיות של 20 — TWENTY.", targetWord: twenty, extraDistractorCount: 2, customDistractors: [] }
+  numbers_q02_sentence_thirty_five:
+    minigame_id: word_ordering
+    instruction: "בנו משפט על המספר 35."
+    tasks: [The, number, is, thirty-five]
+    target: "The number is thirty-five."
+    variant: sentence_building
+    success: "המשפט נכון."
+    params: { prompt: "בנו משפט קצר על 35.", englishWordsInOrder: [The, number, is, thirty-five], preFilledIndices: [], distractorWords: [] }
+  numbers_q02_say_forty:
+    minigame_id: speak_aloud
+    instruction: "אמרו בקול את המילה של 40 — FORTY."
+    tasks: [forty, 40]
+    target: forty
+    variant: single_word
+    success: "נכון! FORTY נקלט."
+    params: { prompt: "אמרו בקול: FORTY — 40.", targetWords: [forty], targetPhrase: forty, silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
+  numbers_q02_spell_fifty:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של 50 — FIFTY."
+    tasks: [f, i, f, t, y]
+    target: fifty
+    variant: word_spelling
+    success: "נכון! FIFTY הוא 50."
+    params: { prompt: "סדרו את האותיות של 50 — FIFTY.", targetWord: fifty, extraDistractorCount: 2, customDistractors: [] }
+  numbers_q02_sentence_sixty_two:
+    minigame_id: word_ordering
+    instruction: "סדרו את המשפט של 62."
+    tasks: [The, number, is, sixty-two]
+    target: "The number is sixty-two."
+    variant: sentence_building
+    success: "המשפט נכון."
+    params: { prompt: "סדרו משפט קצר על 62.", englishWordsInOrder: [The, number, is, sixty-two], preFilledIndices: [], distractorWords: [] }
+  numbers_q02_say_seventy:
+    minigame_id: speak_aloud
+    instruction: "אמרו בקול את המילה של 70 — SEVENTY."
+    tasks: [seventy, 70]
+    target: seventy
+    variant: single_word
+    success: "נכון! SEVENTY נקלט."
+    params: { prompt: "אמרו בקול: SEVENTY — 70.", targetWords: [seventy], targetPhrase: seventy, silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
+  numbers_q02_review_20_100:
+    minigame_id: word_ordering
+    instruction: "תרגול סיום: סדרו משפט על מספר בין 20 ל־100."
+    tasks: [The, number, is, ninety]
+    target: "The number is ninety."
+    variant: sentence_building
+    success: "סיימתם את תרגול 20–100."
+    params: { prompt: "סדרו את המשפט של 90.", englishWordsInOrder: [The, number, is, ninety], preFilledIndices: [], distractorWords: [] }
+  numbers_q03_spell_hundred:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של 100 — HUNDRED."
+    tasks: [h, u, n, d, r, e, d]
+    target: hundred
+    variant: word_spelling
+    success: "נכון! HUNDRED הוא מאה."
+    params: { prompt: "סדרו את האותיות של 100 — HUNDRED.", targetWord: hundred, extraDistractorCount: 2, customDistractors: [] }
+  numbers_q03_sentence_two_hundred_fifty:
+    minigame_id: word_ordering
+    instruction: "בנו משפט על המספר 250."
+    tasks: [The, number, is, two, hundred, fifty]
+    target: "The number is two hundred fifty."
+    variant: sentence_building
+    success: "המשפט נכון."
+    params: { prompt: "בנו משפט קצר על 250.", englishWordsInOrder: [The, number, is, two, hundred, fifty], preFilledIndices: [], distractorWords: [] }
+  numbers_q03_say_three_hundred:
+    minigame_id: speak_aloud
+    instruction: "אמרו בקול: 300 — THREE HUNDRED."
+    tasks: [three, hundred, 300]
+    target: "three hundred"
+    variant: single_word
+    success: "נכון! THREE HUNDRED נקלט."
+    params: { prompt: "אמרו בקול: THREE HUNDRED — 300.", targetWords: ["three hundred"], targetPhrase: "three hundred", silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
+  numbers_q03_spell_thousand:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של 1000 — THOUSAND."
+    tasks: [t, h, o, u, s, a, n, d]
+    target: thousand
+    variant: word_spelling
+    success: "נכון! THOUSAND הוא אלף."
+    params: { prompt: "סדרו את האותיות של 1000 — THOUSAND.", targetWord: thousand, extraDistractorCount: 2, customDistractors: [] }
+  numbers_q03_sentence_seven_hundred_twenty:
+    minigame_id: word_ordering
+    instruction: "סדרו את המשפט של 720."
+    tasks: [The, number, is, seven, hundred, twenty]
+    target: "The number is seven hundred twenty."
+    variant: sentence_building
+    success: "המשפט נכון."
+    params: { prompt: "סדרו משפט קצר על 720.", englishWordsInOrder: [The, number, is, seven, hundred, twenty], preFilledIndices: [], distractorWords: [] }
+  numbers_q03_say_nine_hundred_ninety_nine:
+    minigame_id: speak_aloud
+    instruction: "אמרו בקול את המספר 999."
+    tasks: [nine, hundred, ninety-nine, 999]
+    target: "nine hundred ninety-nine"
+    variant: single_word
+    success: "נכון! 999 נקלט."
+    params: { prompt: "אמרו בקול: NINE HUNDRED NINETY-NINE — 999.", targetWords: ["nine hundred ninety-nine"], targetPhrase: "nine hundred ninety-nine", silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
+  numbers_q03_review_100_1000:
+    minigame_id: word_ordering
+    instruction: "תרגול סיום: סדרו משפט על מספר בין 100 ל־1000."
+    tasks: [The, number, is, one, thousand]
+    target: "The number is one thousand."
+    variant: sentence_building
+    success: "סיימתם את כל שיעורי הבית."
+    params: { prompt: "סדרו את המשפט של 1000.", englishWordsInOrder: [The, number, is, one, thousand], preFilledIndices: [], distractorWords: [] }

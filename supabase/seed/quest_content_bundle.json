@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "importer_version": "1.0.0",
-  "source_root": "C:\\Users\\123ne\\OneDrive\\מסמכים\\QuestSystem",
+  "source_root": "C:\\English Room\\QuestSystem",
   "catalog_entries": [
     {
       "kind": "area",
@@ -3155,8 +3155,9 @@
       "name": "Chef",
       "description": null,
       "status": null,
-      "image_path": null,
+      "image_path": "images/npcs/Chef.png",
       "metadata": {
+        "image": "images/npcs/Chef.png",
         "name": "Chef"
       }
     },
@@ -3353,8 +3354,9 @@
       "name": "Museum Clerk",
       "description": null,
       "status": null,
-      "image_path": null,
+      "image_path": "images/npcs/Museum Clerk.png",
       "metadata": {
+        "image": "images/npcs/Museum Clerk.png",
         "name": "Museum Clerk"
       }
     },
@@ -3408,8 +3410,9 @@
       "name": "Palace Guard",
       "description": null,
       "status": null,
-      "image_path": null,
+      "image_path": "images/npcs/Palace Guard.png",
       "metadata": {
+        "image": "images/npcs/Palace Guard.png",
         "name": "Palace Guard"
       }
     },
@@ -4323,6 +4326,144 @@
       ]
     },
     {
+      "key": "numbers_advanced_q01_finish",
+      "speaker_external_id": "Little Boy",
+      "source_path": "_registry\\dialogues\\numbers_advanced_homework.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "יש! החלק הראשון של המפה חזר למקום. עכשיו אני יודע לקרוא 10 עד 20.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את המפה ל־Farmer. בשוק חסרים השלטים של 20 עד 100.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "numbers_advanced_q01_start",
+      "speaker_external_id": "Little Boy",
+      "source_path": "_registry\\dialogues\\numbers_advanced_homework.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "אוי לא! מפת המספרים שלי התפרקה, ואני לא מצליח לסדר את החלק הראשון.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "החלק הראשון מכיל את המספרים 10 עד 20. תעזרו לי למצוא את המילים החסרות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "קראו את ההוראות בעברית. באנגלית תראו רק את המילה שצריך ללמוד, כמו TEN.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "numbers_advanced_q02_finish",
+      "speaker_external_id": "Farmer",
+      "source_path": "_registry\\dialogues\\numbers_advanced_homework.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצוין! השוק מסודר, והשלטים של 20 עד 100 ברורים לכולם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את המפה ל־Professor Crazy. הוא שומר על המגדל של המאות.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "numbers_advanced_q02_start",
+      "speaker_external_id": "Farmer",
+      "source_path": "_registry\\dialogues\\numbers_advanced_homework.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "ברוכים הבאים לשוק. הרוח פיזרה את שלטי העשרות בין הדוכנים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "סדרו את המספרים מ־20 עד 100, כדי שכל קונה ימצא את הדוכן הנכון.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "המשימות בעברית, ובכל פעם נתרגל רק מילה או משפט קצר באנגלית.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "numbers_advanced_q03_finish",
+      "speaker_external_id": "Professor Crazy",
+      "source_path": "_registry\\dialogues\\numbers_advanced_homework.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הצלחתם! מפת המספרים שלמה, ואתם יכולים לקרוא מספרים מ־10 עד 1000.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "זהו סיום שיעורי הבית Numbers Advanced. כל הכבוד על עבודה מדויקת!",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "numbers_advanced_q03_start",
+      "speaker_external_id": "Professor Crazy",
+      "source_path": "_registry\\dialogues\\numbers_advanced_homework.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הגעתם בזמן. במגדל נשאר החלק האחרון של המפה: 100 עד 1000.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "נלמד את HUNDRED ואת THOUSAND, ונחבר אותם למספרים גדולים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "עבדו שלב־שלב: סדרו אותיות, סדרו משפטים ואמרו מספרים בקול.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
       "key": "will_first_slash_done",
       "speaker_external_id": "Blacksmith",
       "source_path": "_registry\\dialogues\\blacksmith_will.yaml",
@@ -4462,6 +4603,571 @@
     }
   ],
   "minigame_instances": [
+    {
+      "key": "numbers_q01_review_10_20",
+      "locale": "he",
+      "instruction": "תרגול סיום: סדרו משפט עם מספר בין 10 ל־20.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "fifteen"
+      ],
+      "target": "The number is fifteen.",
+      "variant": "sentence_building",
+      "success": "סיימתם את תרגול 10–20.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט של 15.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "fifteen"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q01_say_fourteen",
+      "locale": "he",
+      "instruction": "אמרו בקול את המילה של 14 — מעט English.",
+      "tasks": [
+        "fourteen",
+        14
+      ],
+      "target": "fourteen",
+      "variant": "single_word",
+      "success": "נשמע טוב! FOURTEEN נקלט.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו בקול: FOURTEEN — 14.",
+        "targetWords": [
+          "fourteen"
+        ],
+        "targetPhrase": "fourteen",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q01_say_twenty",
+      "locale": "he",
+      "instruction": "אמרו בקול את המספר 20 — TWENTY.",
+      "tasks": [
+        "twenty",
+        20
+      ],
+      "target": "twenty",
+      "variant": "single_word",
+      "success": "נכון! TWENTY נקלט.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו בקול: TWENTY — 20.",
+        "targetWords": [
+          "twenty"
+        ],
+        "targetPhrase": "twenty",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q01_sentence_eighteen",
+      "locale": "he",
+      "instruction": "סדרו את המשפט של המספר 18.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "eighteen"
+      ],
+      "target": "The number is eighteen.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו משפט קצר על 18.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "eighteen"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q01_sentence_twelve",
+      "locale": "he",
+      "instruction": "סדרו את המילים למשפט נכון על 12.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "twelve"
+      ],
+      "target": "The number is twelve.",
+      "variant": "sentence_building",
+      "success": "נכון! המשפט מתאים למספר 12.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו משפט קצר על 12.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "twelve"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q01_spell_sixteen",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של 16 — SIXTEEN.",
+      "tasks": [
+        "s",
+        "i",
+        "x",
+        "t",
+        "e",
+        "e",
+        "n"
+      ],
+      "target": "sixteen",
+      "variant": "word_spelling",
+      "success": "נכון! SIXTEEN הוא 16.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "סדרו את האותיות של 16 — SIXTEEN.",
+        "targetWord": "sixteen",
+        "extraDistractorCount": 2,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q01_spell_ten",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של 10 — TEN.",
+      "tasks": [
+        "t",
+        "e",
+        "n"
+      ],
+      "target": "ten",
+      "variant": "word_spelling",
+      "success": "נכון! TEN הוא 10.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "סדרו את האותיות של 10 — TEN.",
+        "targetWord": "ten",
+        "extraDistractorCount": 1,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q02_review_20_100",
+      "locale": "he",
+      "instruction": "תרגול סיום: סדרו משפט על מספר בין 20 ל־100.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "ninety"
+      ],
+      "target": "The number is ninety.",
+      "variant": "sentence_building",
+      "success": "סיימתם את תרגול 20–100.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט של 90.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "ninety"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q02_say_forty",
+      "locale": "he",
+      "instruction": "אמרו בקול את המילה של 40 — FORTY.",
+      "tasks": [
+        "forty",
+        40
+      ],
+      "target": "forty",
+      "variant": "single_word",
+      "success": "נכון! FORTY נקלט.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו בקול: FORTY — 40.",
+        "targetWords": [
+          "forty"
+        ],
+        "targetPhrase": "forty",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q02_say_seventy",
+      "locale": "he",
+      "instruction": "אמרו בקול את המילה של 70 — SEVENTY.",
+      "tasks": [
+        "seventy",
+        70
+      ],
+      "target": "seventy",
+      "variant": "single_word",
+      "success": "נכון! SEVENTY נקלט.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו בקול: SEVENTY — 70.",
+        "targetWords": [
+          "seventy"
+        ],
+        "targetPhrase": "seventy",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q02_sentence_sixty_two",
+      "locale": "he",
+      "instruction": "סדרו את המשפט של 62.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "sixty-two"
+      ],
+      "target": "The number is sixty-two.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו משפט קצר על 62.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "sixty-two"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q02_sentence_thirty_five",
+      "locale": "he",
+      "instruction": "בנו משפט על המספר 35.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "thirty-five"
+      ],
+      "target": "The number is thirty-five.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו משפט קצר על 35.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "thirty-five"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q02_spell_fifty",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של 50 — FIFTY.",
+      "tasks": [
+        "f",
+        "i",
+        "f",
+        "t",
+        "y"
+      ],
+      "target": "fifty",
+      "variant": "word_spelling",
+      "success": "נכון! FIFTY הוא 50.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "סדרו את האותיות של 50 — FIFTY.",
+        "targetWord": "fifty",
+        "extraDistractorCount": 2,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q02_spell_twenty",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של 20 — TWENTY.",
+      "tasks": [
+        "t",
+        "w",
+        "e",
+        "n",
+        "t",
+        "y"
+      ],
+      "target": "twenty",
+      "variant": "word_spelling",
+      "success": "נכון! TWENTY הוא 20.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "סדרו את האותיות של 20 — TWENTY.",
+        "targetWord": "twenty",
+        "extraDistractorCount": 2,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q03_review_100_1000",
+      "locale": "he",
+      "instruction": "תרגול סיום: סדרו משפט על מספר בין 100 ל־1000.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "one",
+        "thousand"
+      ],
+      "target": "The number is one thousand.",
+      "variant": "sentence_building",
+      "success": "סיימתם את כל שיעורי הבית.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט של 1000.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "one",
+          "thousand"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q03_say_nine_hundred_ninety_nine",
+      "locale": "he",
+      "instruction": "אמרו בקול את המספר 999.",
+      "tasks": [
+        "nine",
+        "hundred",
+        "ninety-nine",
+        999
+      ],
+      "target": "nine hundred ninety-nine",
+      "variant": "single_word",
+      "success": "נכון! 999 נקלט.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו בקול: NINE HUNDRED NINETY-NINE — 999.",
+        "targetWords": [
+          "nine hundred ninety-nine"
+        ],
+        "targetPhrase": "nine hundred ninety-nine",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q03_say_three_hundred",
+      "locale": "he",
+      "instruction": "אמרו בקול: 300 — THREE HUNDRED.",
+      "tasks": [
+        "three",
+        "hundred",
+        300
+      ],
+      "target": "three hundred",
+      "variant": "single_word",
+      "success": "נכון! THREE HUNDRED נקלט.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו בקול: THREE HUNDRED — 300.",
+        "targetWords": [
+          "three hundred"
+        ],
+        "targetPhrase": "three hundred",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q03_sentence_seven_hundred_twenty",
+      "locale": "he",
+      "instruction": "סדרו את המשפט של 720.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "seven",
+        "hundred",
+        "twenty"
+      ],
+      "target": "The number is seven hundred twenty.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו משפט קצר על 720.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "seven",
+          "hundred",
+          "twenty"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q03_sentence_two_hundred_fifty",
+      "locale": "he",
+      "instruction": "בנו משפט על המספר 250.",
+      "tasks": [
+        "The",
+        "number",
+        "is",
+        "two",
+        "hundred",
+        "fifty"
+      ],
+      "target": "The number is two hundred fifty.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו משפט קצר על 250.",
+        "englishWordsInOrder": [
+          "The",
+          "number",
+          "is",
+          "two",
+          "hundred",
+          "fifty"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q03_spell_hundred",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של 100 — HUNDRED.",
+      "tasks": [
+        "h",
+        "u",
+        "n",
+        "d",
+        "r",
+        "e",
+        "d"
+      ],
+      "target": "hundred",
+      "variant": "word_spelling",
+      "success": "נכון! HUNDRED הוא מאה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "סדרו את האותיות של 100 — HUNDRED.",
+        "targetWord": "hundred",
+        "extraDistractorCount": 2,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "numbers_q03_spell_thousand",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של 1000 — THOUSAND.",
+      "tasks": [
+        "t",
+        "h",
+        "o",
+        "u",
+        "s",
+        "a",
+        "n",
+        "d"
+      ],
+      "target": "thousand",
+      "variant": "word_spelling",
+      "success": "נכון! THOUSAND הוא אלף.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "סדרו את האותיות של 1000 — THOUSAND.",
+        "targetWord": "thousand",
+        "extraDistractorCount": 2,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\numbers_advanced_homework.yaml",
+      "source_metadata": {}
+    },
     {
       "key": "q01_bridge_too_short_s2",
       "locale": "he",
@@ -8607,18 +9313,649 @@
           }
         }
       ]
+    },
+    {
+      "key": "numbers_advanced_homework",
+      "display_name": "Numbers Advanced - שיעורי בית",
+      "theme": "The Lost Number Map: a guided Numbers Advanced homework journey from 10 to 1000",
+      "default_giver_external_id": "Little Boy",
+      "status": "draft",
+      "level_min": 1,
+      "level_max": 1,
+      "source_path": "questlines\\numbers_advanced_homework\\_index.yaml",
+      "source_metadata": {
+        "source_status": null,
+        "source_note": null,
+        "catalog_set": null,
+        "quest_count": 3
+      },
+      "quests": [
+        {
+          "key": "q01_numbers_10_20",
+          "position": 0,
+          "name": "Numbers 10-20: המספרים 10-20",
+          "level_required": 1,
+          "giver_external_id": "Little Boy",
+          "summary": "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "q01_numbers_10_20_talk_to_npc_eb5fa2bf_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Little Boy",
+                "dialogue_id": "numbers_advanced_q01_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_a9fe038b_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q01_spell_ten",
+                "display_text": "חלק 1: סדרו את האותיות של 10 — TEN",
+                "instance_key": "numbers_q01_spell_ten"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_11d536e9_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q01_sentence_twelve",
+                "display_text": "חלק 2: בנו משפט קצר על 12",
+                "instance_key": "numbers_q01_sentence_twelve"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_8dfea182_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q01_say_fourteen",
+                "display_text": "חלק 3: אמרו בקול את 14 — FOURTEEN",
+                "instance_key": "numbers_q01_say_fourteen"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_7c0e89f2_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q01_spell_sixteen",
+                "display_text": "חלק 4: סדרו את האותיות של 16 — SIXTEEN",
+                "instance_key": "numbers_q01_spell_sixteen"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_dee019a9_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q01_sentence_eighteen",
+                "display_text": "חלק 5: סדרו משפט על 18",
+                "instance_key": "numbers_q01_sentence_eighteen"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_39434314_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q01_say_twenty",
+                "display_text": "חלק 6: אמרו בקול את 20 — TWENTY",
+                "instance_key": "numbers_q01_say_twenty"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_f8943ad8_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q01_review_10_20",
+                "display_text": "חלק 7: מבחן סיום על המספרים 10–20",
+                "instance_key": "numbers_q01_review_10_20"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_deliver_item_1c284f63_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Little Boy",
+                "item_id": "coin",
+                "amount": 1,
+                "dialogue_id": "numbers_advanced_q01_finish",
+                "display_text": "חזרו ל־Teacher Maya לקבלת המשימה הבאה"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 100,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\numbers_advanced_homework\\_index.yaml",
+            "source_detail": {
+              "id": "q01_numbers_10_20",
+              "name": "Numbers 10-20: המספרים 10-20",
+              "level_required": 1,
+              "giver_npc": "Little Boy",
+              "prerequisite": null,
+              "summary": "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q02_numbers_20_100",
+          "position": 1,
+          "name": "Numbers 20-100: המספרים 20-100",
+          "level_required": 1,
+          "giver_external_id": "Farmer",
+          "summary": "עזרו ל־Farmer לסדר את שלטי השוק ולבנות את רצף המספרים 20–100.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q01_numbers_10_20"
+          ],
+          "steps": [
+            {
+              "key": "q02_numbers_20_100_talk_to_npc_8409dc5a_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "numbers_advanced_q02_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_32ba5dca_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q02_spell_twenty",
+                "display_text": "חלק 1: סדרו את האותיות של 20 — TWENTY",
+                "instance_key": "numbers_q02_spell_twenty"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_fb220569_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q02_sentence_thirty_five",
+                "display_text": "חלק 2: בנו משפט על 35",
+                "instance_key": "numbers_q02_sentence_thirty_five"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_604cf841_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q02_say_forty",
+                "display_text": "חלק 3: אמרו בקול את 40 — FORTY",
+                "instance_key": "numbers_q02_say_forty"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_72fc28ed_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q02_spell_fifty",
+                "display_text": "חלק 4: סדרו את האותיות של 50 — FIFTY",
+                "instance_key": "numbers_q02_spell_fifty"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_ba4a2a45_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q02_sentence_sixty_two",
+                "display_text": "חלק 5: סדרו משפט על 62",
+                "instance_key": "numbers_q02_sentence_sixty_two"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_69901229_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q02_say_seventy",
+                "display_text": "חלק 6: אמרו בקול את 70 — SEVENTY",
+                "instance_key": "numbers_q02_say_seventy"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_548fd6f6_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q02_review_20_100",
+                "display_text": "חלק 7: מבחן סיום על המספרים 20–100",
+                "instance_key": "numbers_q02_review_20_100"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_deliver_item_5f5afc17_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Farmer",
+                "item_id": "coin",
+                "amount": 1,
+                "dialogue_id": "numbers_advanced_q02_finish",
+                "display_text": "חזרו ל־Farmer לקבלת המשימה הבאה"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 150,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\numbers_advanced_homework\\_index.yaml",
+            "source_detail": {
+              "id": "q02_numbers_20_100",
+              "name": "Numbers 20-100: המספרים 20-100",
+              "level_required": 1,
+              "giver_npc": "Farmer",
+              "prerequisite": "q01_numbers_10_20",
+              "summary": "עזרו ל־Farmer לסדר את שלטי השוק ולבנות את רצף המספרים 20–100.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q03_numbers_100_1000",
+          "position": 2,
+          "name": "Numbers 100-1000: המספרים 100-1000",
+          "level_required": 1,
+          "giver_external_id": "Professor Crazy",
+          "summary": "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q02_numbers_20_100"
+          ],
+          "steps": [
+            {
+              "key": "q03_numbers_100_1000_talk_to_npc_666b0b9f_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "numbers_advanced_q03_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_605bc60a_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q03_spell_hundred",
+                "display_text": "חלק 1: סדרו את האותיות של 100 — HUNDRED",
+                "instance_key": "numbers_q03_spell_hundred"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_cdac3591_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q03_sentence_two_hundred_fifty",
+                "display_text": "חלק 2: בנו משפט על 250",
+                "instance_key": "numbers_q03_sentence_two_hundred_fifty"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_4b0f1ebb_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q03_say_three_hundred",
+                "display_text": "חלק 3: אמרו בקול את 300 — THREE HUNDRED",
+                "instance_key": "numbers_q03_say_three_hundred"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_cf8f6da7_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q03_spell_thousand",
+                "display_text": "חלק 4: סדרו את האותיות של 1000 — THOUSAND",
+                "instance_key": "numbers_q03_spell_thousand"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_49f35f4a_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "numbers_q03_sentence_seven_hundred_twenty",
+                "display_text": "חלק 5: סדרו משפט על 720",
+                "instance_key": "numbers_q03_sentence_seven_hundred_twenty"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_a1f7030c_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "numbers_q03_say_nine_hundred_ninety_nine",
+                "display_text": "חלק 6: אמרו בקול את 999",
+                "instance_key": "numbers_q03_say_nine_hundred_ninety_nine"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_339d8f59_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "numbers_q03_review_100_1000",
+                "display_text": "חלק 7: מבחן הגמר על המספרים 100–1000",
+                "instance_key": "numbers_q03_review_100_1000"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_deliver_item_661c3f30_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "item_id": "coin",
+                "amount": 1,
+                "dialogue_id": "numbers_advanced_q03_finish",
+                "display_text": "חזרו ל־Professor Crazy לסיום שיעורי הבית"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\numbers_advanced_homework\\_index.yaml",
+            "source_detail": {
+              "id": "q03_numbers_100_1000",
+              "name": "Numbers 100-1000: המספרים 100-1000",
+              "level_required": 1,
+              "giver_npc": "Professor Crazy",
+              "prerequisite": "q02_numbers_20_100",
+              "summary": "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
     }
   ],
   "conflicts": [],
   "counts": {
     "catalog_entries": 227,
     "step_type_definitions": 6,
-    "dialogues": 32,
-    "dialogue_lines": 87,
-    "minigame_instances": 44,
-    "questlines": 3,
-    "quests": 16,
-    "steps": 107,
+    "dialogues": 38,
+    "dialogue_lines": 102,
+    "minigame_instances": 65,
+    "questlines": 4,
+    "quests": 19,
+    "steps": 134,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -11543,7 +12880,628 @@
           }
         }
       ]
+    },
+    {
+      "key": "numbers_advanced_homework",
+      "display_name": "Numbers Advanced - שיעורי בית",
+      "theme": "The Lost Number Map: a guided Numbers Advanced homework journey from 10 to 1000",
+      "default_giver_external_id": "Little Boy",
+      "quests": [
+        {
+          "key": "q01_numbers_10_20",
+          "position": 0,
+          "name": "Numbers 10-20: המספרים 10-20",
+          "level_required": 1,
+          "giver_external_id": "Little Boy",
+          "summary": "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "q01_numbers_10_20_talk_to_npc_eb5fa2bf_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Little Boy",
+                "dialogue_id": "numbers_advanced_q01_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_a9fe038b_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q01_spell_ten",
+                "display_text": "חלק 1: סדרו את האותיות של 10 — TEN",
+                "instance_key": "numbers_q01_spell_ten"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_11d536e9_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q01_sentence_twelve",
+                "display_text": "חלק 2: בנו משפט קצר על 12",
+                "instance_key": "numbers_q01_sentence_twelve"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_8dfea182_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q01_say_fourteen",
+                "display_text": "חלק 3: אמרו בקול את 14 — FOURTEEN",
+                "instance_key": "numbers_q01_say_fourteen"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_7c0e89f2_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q01_spell_sixteen",
+                "display_text": "חלק 4: סדרו את האותיות של 16 — SIXTEEN",
+                "instance_key": "numbers_q01_spell_sixteen"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_dee019a9_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q01_sentence_eighteen",
+                "display_text": "חלק 5: סדרו משפט על 18",
+                "instance_key": "numbers_q01_sentence_eighteen"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_39434314_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q01_say_twenty",
+                "display_text": "חלק 6: אמרו בקול את 20 — TWENTY",
+                "instance_key": "numbers_q01_say_twenty"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_play_minigame_f8943ad8_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q01_review_10_20",
+                "display_text": "חלק 7: מבחן סיום על המספרים 10–20",
+                "instance_key": "numbers_q01_review_10_20"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_numbers_10_20_deliver_item_1c284f63_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Little Boy",
+                "item_id": "coin",
+                "amount": 1,
+                "dialogue_id": "numbers_advanced_q01_finish",
+                "display_text": "חזרו ל־Teacher Maya לקבלת המשימה הבאה"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 100,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\numbers_advanced_homework\\_index.yaml",
+            "source_detail": {
+              "id": "q01_numbers_10_20",
+              "name": "Numbers 10-20: המספרים 10-20",
+              "level_required": 1,
+              "giver_npc": "Little Boy",
+              "prerequisite": null,
+              "summary": "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q02_numbers_20_100",
+          "position": 1,
+          "name": "Numbers 20-100: המספרים 20-100",
+          "level_required": 1,
+          "giver_external_id": "Farmer",
+          "summary": "עזרו ל־Farmer לסדר את שלטי השוק ולבנות את רצף המספרים 20–100.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q01_numbers_10_20"
+          ],
+          "steps": [
+            {
+              "key": "q02_numbers_20_100_talk_to_npc_8409dc5a_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "numbers_advanced_q02_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_32ba5dca_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "numbers_q02_spell_twenty",
+                "display_text": "חלק 1: סדרו את האותיות של 20 — TWENTY",
+                "instance_key": "numbers_q02_spell_twenty"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_fb220569_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q02_sentence_thirty_five",
+                "display_text": "חלק 2: בנו משפט על 35",
+                "instance_key": "numbers_q02_sentence_thirty_five"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_604cf841_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q02_say_forty",
+                "display_text": "חלק 3: אמרו בקול את 40 — FORTY",
+                "instance_key": "numbers_q02_say_forty"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_72fc28ed_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q02_spell_fifty",
+                "display_text": "חלק 4: סדרו את האותיות של 50 — FIFTY",
+                "instance_key": "numbers_q02_spell_fifty"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_ba4a2a45_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q02_sentence_sixty_two",
+                "display_text": "חלק 5: סדרו משפט על 62",
+                "instance_key": "numbers_q02_sentence_sixty_two"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_69901229_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q02_say_seventy",
+                "display_text": "חלק 6: אמרו בקול את 70 — SEVENTY",
+                "instance_key": "numbers_q02_say_seventy"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_play_minigame_548fd6f6_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q02_review_20_100",
+                "display_text": "חלק 7: מבחן סיום על המספרים 20–100",
+                "instance_key": "numbers_q02_review_20_100"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_numbers_20_100_deliver_item_5f5afc17_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Farmer",
+                "item_id": "coin",
+                "amount": 1,
+                "dialogue_id": "numbers_advanced_q02_finish",
+                "display_text": "חזרו ל־Farmer לקבלת המשימה הבאה"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 150,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\numbers_advanced_homework\\_index.yaml",
+            "source_detail": {
+              "id": "q02_numbers_20_100",
+              "name": "Numbers 20-100: המספרים 20-100",
+              "level_required": 1,
+              "giver_npc": "Farmer",
+              "prerequisite": "q01_numbers_10_20",
+              "summary": "עזרו ל־Farmer לסדר את שלטי השוק ולבנות את רצף המספרים 20–100.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q03_numbers_100_1000",
+          "position": 2,
+          "name": "Numbers 100-1000: המספרים 100-1000",
+          "level_required": 1,
+          "giver_external_id": "Professor Crazy",
+          "summary": "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q02_numbers_20_100"
+          ],
+          "steps": [
+            {
+              "key": "q03_numbers_100_1000_talk_to_npc_666b0b9f_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "numbers_advanced_q03_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_605bc60a_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "numbers_q03_spell_hundred",
+                "display_text": "חלק 1: סדרו את האותיות של 100 — HUNDRED",
+                "instance_key": "numbers_q03_spell_hundred"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_cdac3591_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q03_sentence_two_hundred_fifty",
+                "display_text": "חלק 2: בנו משפט על 250",
+                "instance_key": "numbers_q03_sentence_two_hundred_fifty"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_4b0f1ebb_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "numbers_q03_say_three_hundred",
+                "display_text": "חלק 3: אמרו בקול את 300 — THREE HUNDRED",
+                "instance_key": "numbers_q03_say_three_hundred"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_cf8f6da7_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "numbers_q03_spell_thousand",
+                "display_text": "חלק 4: סדרו את האותיות של 1000 — THOUSAND",
+                "instance_key": "numbers_q03_spell_thousand"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_49f35f4a_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "numbers_q03_sentence_seven_hundred_twenty",
+                "display_text": "חלק 5: סדרו משפט על 720",
+                "instance_key": "numbers_q03_sentence_seven_hundred_twenty"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_a1f7030c_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "numbers_q03_say_nine_hundred_ninety_nine",
+                "display_text": "חלק 6: אמרו בקול את 999",
+                "instance_key": "numbers_q03_say_nine_hundred_ninety_nine"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_play_minigame_339d8f59_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "numbers_q03_review_100_1000",
+                "display_text": "חלק 7: מבחן הגמר על המספרים 100–1000",
+                "instance_key": "numbers_q03_review_100_1000"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_numbers_100_1000_deliver_item_661c3f30_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "item_id": "coin",
+                "amount": 1,
+                "dialogue_id": "numbers_advanced_q03_finish",
+                "display_text": "חזרו ל־Professor Crazy לסיום שיעורי הבית"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\numbers_advanced_homework\\_index.yaml",
+            "source_detail": {
+              "id": "q03_numbers_100_1000",
+              "name": "Numbers 100-1000: המספרים 100-1000",
+              "level_required": 1,
+              "giver_npc": "Professor Crazy",
+              "prerequisite": "q02_numbers_20_100",
+              "summary": "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
     }
   ],
-  "source_digest": "f74b1927b06484b979410ce6e3c2f26e440d00d0fca6283533fe366bfc6cd0ce"
+  "source_digest": "09440d4b712cadafc10164056966cb5a0e538d2388014622804d970769442c1a"
 }

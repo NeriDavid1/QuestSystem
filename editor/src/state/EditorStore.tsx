@@ -47,6 +47,7 @@ import {
   uniqueKey,
 } from '../lib/editorData'
 import { validateQuestline } from '../lib/validation'
+import { importBundleIntoLine } from '../lib/bundleImport'
 import {
   SaveConflictError,
   publishQuestline,
@@ -166,6 +167,7 @@ interface EditorStoreValue {
   revisionsForLine: (questlineId: string) => QuestlineRevision[]
   restoreRevisionAsDraft: (revision: QuestlineRevision) => void
   createQuestFromTemplate: (kind: 'blank' | 'adventure') => void
+  importBundle: (bundle: unknown) => void
   forceSaveAfterConflict: () => Promise<void>
 }
 
@@ -1559,6 +1561,30 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     notify(t('revisionRestored'))
   }, [data, notify, selectedLine, t])
 
+  const importBundle = useCallback((bundle: unknown) => {
+    if (!selectedLine) return
+    const imported = importBundleIntoLine(bundle, data, selectedLine)
+    imported.dialogues.forEach((dialogue) => touchedDialogueIds.current.add(dialogue.id))
+    imported.minigames.forEach((minigame) => touchedMinigameIds.current.add(minigame.id))
+    imported.oldQuestIds.forEach((id) => deletedQuestIds.current.push(id))
+    imported.oldStepIds.forEach((id) => deletedStepIds.current.push(id))
+    setData((current) => ({
+      ...current,
+      questlines: current.questlines.map((item) => item.id === selectedLine.id ? imported.line : item),
+      quests: [...current.quests.filter((quest) => quest.questline_id !== selectedLine.id), ...imported.quests],
+      steps: [...current.steps.filter((step) => !imported.oldStepIds.includes(step.id)), ...imported.steps],
+      prerequisites: [...current.prerequisites.filter((edge) => !imported.oldQuestIds.includes(edge.quest_id) && !imported.oldQuestIds.includes(edge.prerequisite_quest_id)), ...imported.prerequisites],
+      rewards: [...current.rewards.filter((reward) => !(reward.quest_id && imported.oldQuestIds.includes(reward.quest_id)) && !(reward.step_id && imported.oldStepIds.includes(reward.step_id))), ...imported.rewards],
+      dialogues: [...current.dialogues.filter((item) => !imported.dialogues.some((next) => next.key === item.key)), ...imported.dialogues],
+      dialogueLines: [...current.dialogueLines.filter((item) => !imported.dialogues.some((dialogue) => dialogue.id === item.dialogue_id)), ...imported.dialogueLines],
+      minigames: [...current.minigames.filter((item) => !imported.minigames.some((next) => next.key === item.key)), ...imported.minigames],
+    }))
+    setSelectedQuestId('')
+    setSelectedStepId('')
+    setDirty(true)
+    notify('Bundle imported as a draft')
+  }, [data, notify, selectedLine])
+
   const createQuestFromTemplate = useCallback((kind: 'blank' | 'adventure') => {
     if (!selectedLine) return
     const giver = selectedLine.default_giver_external_id ?? 'teacher_maya'
@@ -1722,6 +1748,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       restoreRevisionAsDraft,
       createQuestFromTemplate,
       forceSaveAfterConflict,
+      importBundle,
     }),
     [
       demoMode, data, user, authReady, view, sidebarCollapsed, toggleSidebar, selectedQuestlineId, selectedQuestId, selectedStepId,
@@ -1735,7 +1762,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       removeDialogue, removeMinigame, duplicateQuest, duplicateStep, duplicateDialogue, duplicateQuestline,
       moveQuest, moveStep, saveDraft, publish,
       retryJoin, handleSignIn, handleSignUp, handleSignOut, revisionsForLine,
-      restoreRevisionAsDraft, createQuestFromTemplate, forceSaveAfterConflict,
+      restoreRevisionAsDraft, createQuestFromTemplate, forceSaveAfterConflict, importBundle,
     ],
   )
 

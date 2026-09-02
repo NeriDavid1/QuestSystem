@@ -98,6 +98,7 @@ npcs:
     location: KingdomGate
     description: Senior guard in charge of the side gate.
   Palace Guard:
+    image: images/npcs/Palace Guard.png
     name: Palace Guard
   Dark Wizard:
     name: Dark Wizard
@@ -134,6 +135,7 @@ npcs:
     location: Solitude Tower
     description: Wild professor with big ideas and messy experiments.
   Chef:
+    image: images/npcs/Chef.png
     name: Chef
   Farmer:
     image: images/npcs/Farmer.png
@@ -166,6 +168,7 @@ npcs:
     location: TowerOfLostVigil
     description: Guide who knows the high paths and lonely towers.
   Museum Clerk:
+    image: images/npcs/Museum Clerk.png
     name: Museum Clerk
   Painter:
     name: Painter
