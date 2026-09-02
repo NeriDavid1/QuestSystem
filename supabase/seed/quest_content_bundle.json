@@ -4325,7 +4325,8 @@
       "success": "BOOK נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "targetWord": "book"
+        "targetWord": "book",
+        "prompt": "כתבו את המילה BOOK"
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -4759,7 +4760,8 @@
       "success": "PENCIL נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "targetWord": "pencil"
+        "targetWord": "pencil",
+        "prompt": "כתבו את המילה PENCIL"
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -5195,7 +5197,8 @@
       "success": "MARKET נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "targetWord": "market"
+        "targetWord": "market",
+        "prompt": "כתבו את המילה MARKET"
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -5680,7 +5683,8 @@
       "success": "SPOON נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "targetWord": "spoon"
+        "targetWord": "spoon",
+        "prompt": "כתבו את המילה SPOON"
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -6045,7 +6049,8 @@
       "success": "TREASURE נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "targetWord": "treasure"
+        "targetWord": "treasure",
+        "prompt": "כתבו את המילה TREASURE"
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -6137,7 +6142,8 @@
       "success": "NOUN נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "targetWord": "noun"
+        "targetWord": "noun",
+        "prompt": "כתבו את המילה NOUN"
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
       "source_metadata": {}
@@ -18004,5 +18010,5 @@
       ]
     }
   ],
-  "source_digest": "dd1492dee6b2196222f054dae9569f6184c7c2eca2ff37093083fa1d00dffb12"
+  "source_digest": "ccc63962cb45ef0855030c1b7c36b9e79cfe80422af2b9f6befc2c5b1a43c432"
 }
