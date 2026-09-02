@@ -3,10 +3,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _OY
-    - _IRL
-    - _ING
-    - _UEE_
+    - B_Y
+    - GI_L
+    - KIN_
+    - _U_EN
     target: boy, girl, king, queen
     variant: missing_letter_matching
     success: ארבעה nouns של אנשים הושלמו
@@ -22,28 +22,34 @@ instances:
         value: q
       - id: queen_n
         value: n
+      - id: noun_repair_q01_people_boy_1
+        value: o
+      - id: noun_repair_q01_people_girl_2
+        value: r
+      - id: noun_repair_q01_people_queen_2
+        value: e
       wordTasks:
       - id: boy
         image: ''
         fullWord: boy
         missingIndices:
-        - 0
+        - 1
       - id: girl
         image: ''
         fullWord: girl
         missingIndices:
-        - 0
+        - 2
       - id: king
         image: ''
         fullWord: king
         missingIndices:
-        - 0
+        - 3
       - id: queen
         image: ''
         fullWord: queen
         missingIndices:
         - 0
-        - 4
+        - 2
   noun_repair_q01_book:
     minigame_id: letter_ordering
     instruction: כתבו את המילה ספר באנגלית.
@@ -62,10 +68,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ASTLE
-    - _ATE
-    - _OWER
-    - _ARK
+    - CASTL_
+    - G_TE
+    - TO_ER
+    - P_RK
     target: castle, gate, tower, park
     variant: missing_letter_matching
     success: ארבעה nouns של מקומות הושלמו
@@ -79,27 +85,33 @@ instances:
         value: t
       - id: park
         value: p
+      - id: noun_repair_q01_places_castle_5
+        value: e
+      - id: noun_repair_q01_places_gate_1
+        value: a
+      - id: noun_repair_q01_places_tower_2
+        value: w
       wordTasks:
       - id: castle
         image: ''
         fullWord: castle
         missingIndices:
-        - 0
+        - 5
       - id: gate
         image: ''
         fullWord: gate
         missingIndices:
-        - 0
+        - 1
       - id: tower
         image: ''
         fullWord: tower
         missingIndices:
-        - 0
+        - 2
       - id: park
         image: ''
         fullWord: park
         missingIndices:
-        - 0
+        - 1
   noun_repair_q01_sentence:
     minigame_id: word_ordering
     instruction: השלימו את המשפט לפי התרגום בעברית
@@ -131,10 +143,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ABLE
-    - _HAIR
-    - _OX
-    - _AG
+    - TABL_
+    - CHAI_
+    - BO_
+    - B_G
     target: table, chair, box, bag
     variant: missing_letter_matching
     success: ארבעה nouns של חפצים הושלמו
@@ -148,27 +160,35 @@ instances:
         value: b
       - id: bag
         value: b
+      - id: noun_repair_q01_objects_table_4
+        value: e
+      - id: noun_repair_q01_objects_chair_4
+        value: r
+      - id: noun_repair_q01_objects_box_2
+        value: x
+      - id: noun_repair_q01_objects_bag_1
+        value: a
       wordTasks:
       - id: table
         image: ''
         fullWord: table
         missingIndices:
-        - 0
+        - 4
       - id: chair
         image: ''
         fullWord: chair
         missingIndices:
-        - 0
+        - 4
       - id: box
         image: ''
         fullWord: box
         missingIndices:
-        - 0
+        - 2
       - id: bag
         image: ''
         fullWord: bag
         missingIndices:
-        - 0
+        - 1
   noun_repair_q01_say:
     minigame_id: speak_aloud
     instruction: אמרו את המילים הבאות בקול
@@ -186,10 +206,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _AT
-    - _OG
-    - _ISH
-    - _IRD
+    - CA_
+    - DO_
+    - FIS_
+    - BIR_
     target: cat, dog, fish, bird
     variant: missing_letter_matching
     success: שמות החיות תוקנו
@@ -203,35 +223,41 @@ instances:
         value: f
       - id: bird
         value: b
+      - id: noun_repair_q01_animals_cat_2
+        value: t
+      - id: noun_repair_q01_animals_dog_2
+        value: g
+      - id: noun_repair_q01_animals_fish_3
+        value: h
       wordTasks:
       - id: cat
         image: ''
         fullWord: cat
         missingIndices:
-        - 0
+        - 2
       - id: dog
         image: ''
         fullWord: dog
         missingIndices:
-        - 0
+        - 2
       - id: fish
         image: ''
         fullWord: fish
         missingIndices:
-        - 0
+        - 3
       - id: bird
         image: ''
         fullWord: bird
         missingIndices:
-        - 0
+        - 3
   noun_repair_q02_bag:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _AG
-    - _OX
-    - _OOK
-    - _EN
+    - BA_
+    - BO_
+    - BOO_
+    - P_N
     target: bag, box, book, pen
     variant: missing_letter_matching
     success: שמות החפצים נמצאו
@@ -245,27 +271,35 @@ instances:
         value: b
       - id: pen
         value: p
+      - id: noun_repair_q02_bag_bag_2
+        value: g
+      - id: noun_repair_q02_bag_box_2
+        value: x
+      - id: noun_repair_q02_bag_book_3
+        value: k
+      - id: noun_repair_q02_bag_pen_1
+        value: e
       wordTasks:
       - id: bag
         image: ''
         fullWord: bag
         missingIndices:
-        - 0
+        - 2
       - id: box
         image: ''
         fullWord: box
         missingIndices:
-        - 0
+        - 2
       - id: book
         image: ''
         fullWord: book
         missingIndices:
-        - 0
+        - 3
       - id: pen
         image: ''
         fullWord: pen
         missingIndices:
-        - 0
+        - 1
   noun_repair_q02_pencil:
     minigame_id: letter_ordering
     instruction: כתבו את המילה עיפרון באנגלית.
@@ -286,10 +320,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ALL
-    - _OY
-    - _AR
-    - _OLL
+    - B_LL
+    - T_Y
+    - CA_
+    - DO_L
     target: ball, toy, car, doll
     variant: missing_letter_matching
     success: ארבעה nouns של צעצועים הושלמו
@@ -303,27 +337,35 @@ instances:
         value: c
       - id: doll
         value: d
+      - id: noun_repair_q02_toys_ball_1
+        value: a
+      - id: noun_repair_q02_toys_toy_1
+        value: o
+      - id: noun_repair_q02_toys_car_2
+        value: r
+      - id: noun_repair_q02_toys_doll_2
+        value: l
       wordTasks:
       - id: ball
         image: ''
         fullWord: ball
         missingIndices:
-        - 0
+        - 1
       - id: toy
         image: ''
         fullWord: toy
         missingIndices:
-        - 0
+        - 1
       - id: car
         image: ''
         fullWord: car
         missingIndices:
-        - 0
+        - 2
       - id: doll
         image: ''
         fullWord: doll
         missingIndices:
-        - 0
+        - 2
   noun_repair_q02_sentence:
     minigame_id: word_ordering
     instruction: השלימו את המשפט לפי התרגום בעברית
@@ -361,10 +403,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _AT
-    - _OG
-    - _ISH
-    - _IRD
+    - CA_
+    - DO_
+    - FI_H
+    - BI_D
     target: cat, dog, fish, bird
     variant: missing_letter_matching
     success: שמות החיות הושלמו
@@ -378,27 +420,35 @@ instances:
         value: f
       - id: bird
         value: b
+      - id: noun_repair_q02_animals_cat_2
+        value: t
+      - id: noun_repair_q02_animals_dog_2
+        value: g
+      - id: noun_repair_q02_animals_fish_2
+        value: s
+      - id: noun_repair_q02_animals_bird_2
+        value: r
       wordTasks:
       - id: cat
         image: ''
         fullWord: cat
         missingIndices:
-        - 0
+        - 2
       - id: dog
         image: ''
         fullWord: dog
         missingIndices:
-        - 0
+        - 2
       - id: fish
         image: ''
         fullWord: fish
         missingIndices:
-        - 0
+        - 2
       - id: bird
         image: ''
         fullWord: bird
         missingIndices:
-        - 0
+        - 2
   noun_repair_q02_say:
     minigame_id: speak_aloud
     instruction: אמרו את המילים הבאות בקול
@@ -416,10 +466,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ARK
-    - _ATE
-    - _OWER
-    - _ASTLE
+    - PA_K
+    - GAT_
+    - T_WER
+    - CA_TLE
     target: park, gate, tower, castle
     variant: missing_letter_matching
     success: שמות המקומות תוקנו
@@ -433,35 +483,43 @@ instances:
         value: t
       - id: castle
         value: c
+      - id: noun_repair_q02_places_park_2
+        value: r
+      - id: noun_repair_q02_places_gate_3
+        value: e
+      - id: noun_repair_q02_places_tower_1
+        value: o
+      - id: noun_repair_q02_places_castle_2
+        value: s
       wordTasks:
       - id: park
         image: ''
         fullWord: park
         missingIndices:
-        - 0
+        - 2
       - id: gate
         image: ''
         fullWord: gate
         missingIndices:
-        - 0
+        - 3
       - id: tower
         image: ''
         fullWord: tower
         missingIndices:
-        - 0
+        - 1
       - id: castle
         image: ''
         fullWord: castle
         missingIndices:
-        - 0
+        - 2
   noun_repair_q03_fruit:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _PPLE
-    - _EAR
-    - _EMON
-    - _ANGO
+    - A_PLE
+    - P_AR
+    - LE_ON
+    - MAN_O
     target: apple, pear, lemon, mango
     variant: missing_letter_matching
     success: שמות הפירות הושלמו
@@ -475,27 +533,31 @@ instances:
         value: l
       - id: mango
         value: m
+      - id: noun_repair_q03_fruit_pear_1
+        value: e
+      - id: noun_repair_q03_fruit_mango_3
+        value: g
       wordTasks:
       - id: apple
         image: ''
         fullWord: apple
         missingIndices:
-        - 0
+        - 1
       - id: pear
         image: ''
         fullWord: pear
         missingIndices:
-        - 0
+        - 1
       - id: lemon
         image: ''
         fullWord: lemon
         missingIndices:
-        - 0
+        - 2
       - id: mango
         image: ''
         fullWord: mango
         missingIndices:
-        - 0
+        - 3
   noun_repair_q03_market:
     minigame_id: letter_ordering
     instruction: כתבו את המילה שוק באנגלית.
@@ -516,10 +578,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _READ
-    - _ICE
-    - _OUP
-    - _AKE
+    - BREA_
+    - RIC_
+    - S_UP
+    - C_KE
     target: bread, rice, soup, cake
     variant: missing_letter_matching
     success: שמות האוכל הושלמו
@@ -533,27 +595,35 @@ instances:
         value: s
       - id: cake
         value: c
+      - id: noun_repair_q03_food_bread_4
+        value: d
+      - id: noun_repair_q03_food_rice_3
+        value: e
+      - id: noun_repair_q03_food_soup_1
+        value: o
+      - id: noun_repair_q03_food_cake_1
+        value: a
       wordTasks:
       - id: bread
         image: ''
         fullWord: bread
         missingIndices:
-        - 0
+        - 4
       - id: rice
         image: ''
         fullWord: rice
         missingIndices:
-        - 0
+        - 3
       - id: soup
         image: ''
         fullWord: soup
         missingIndices:
-        - 0
+        - 1
       - id: cake
         image: ''
         fullWord: cake
         missingIndices:
-        - 0
+        - 1
   noun_repair_q03_sentence:
     minigame_id: word_ordering
     instruction: השלימו את המשפט לפי התרגום בעברית
@@ -588,10 +658,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _OX
-    - _AN
-    - _UP
-    - _ASK
+    - BO_
+    - PA_
+    - CU_
+    - MA_K
     target: box, pan, cup, mask
     variant: missing_letter_matching
     success: שמות כלי העבודה הושלמו
@@ -605,27 +675,33 @@ instances:
         value: c
       - id: mask
         value: m
+      - id: noun_repair_q03_tools_box_2
+        value: x
+      - id: noun_repair_q03_tools_pan_2
+        value: n
+      - id: noun_repair_q03_tools_mask_2
+        value: s
       wordTasks:
       - id: box
         image: ''
         fullWord: box
         missingIndices:
-        - 0
+        - 2
       - id: pan
         image: ''
         fullWord: pan
         missingIndices:
-        - 0
+        - 2
       - id: cup
         image: ''
         fullWord: cup
         missingIndices:
-        - 0
+        - 2
       - id: mask
         image: ''
         fullWord: mask
         missingIndices:
-        - 0
+        - 2
   noun_repair_q03_say:
     minigame_id: speak_aloud
     instruction: אמרו את המילים הבאות בקול
@@ -643,10 +719,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _OG
-    - _AT
-    - _ISH
-    - _IRD
+    - D_G
+    - C_T
+    - FIS_
+    - BIR_
     target: dog, cat, fish, bird
     variant: missing_letter_matching
     success: שמות החיות תוקנו
@@ -660,35 +736,41 @@ instances:
         value: f
       - id: bird
         value: b
+      - id: noun_repair_q03_animals_dog_1
+        value: o
+      - id: noun_repair_q03_animals_cat_1
+        value: a
+      - id: noun_repair_q03_animals_fish_3
+        value: h
       wordTasks:
       - id: dog
         image: ''
         fullWord: dog
         missingIndices:
-        - 0
+        - 1
       - id: cat
         image: ''
         fullWord: cat
         missingIndices:
-        - 0
+        - 1
       - id: fish
         image: ''
         fullWord: fish
         missingIndices:
-        - 0
+        - 3
       - id: bird
         image: ''
         fullWord: bird
         missingIndices:
-        - 0
+        - 3
   noun_repair_q04_kitchen:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _POON
-    - _LATE
-    - _UP
-    - _NIFE
+    - SP_ON
+    - PLAT_
+    - C_P
+    - KNIF_
     target: spoon, plate, cup, knife
     variant: missing_letter_matching
     success: שמות כלי המטבח הושלמו
@@ -702,27 +784,33 @@ instances:
         value: c
       - id: knife
         value: k
+      - id: noun_repair_q04_kitchen_spoon_2
+        value: o
+      - id: noun_repair_q04_kitchen_plate_4
+        value: e
+      - id: noun_repair_q04_kitchen_cup_1
+        value: u
       wordTasks:
       - id: spoon
         image: ''
         fullWord: spoon
         missingIndices:
-        - 0
+        - 2
       - id: plate
         image: ''
         fullWord: plate
         missingIndices:
-        - 0
+        - 4
       - id: cup
         image: ''
         fullWord: cup
         missingIndices:
-        - 0
+        - 1
       - id: knife
         image: ''
         fullWord: knife
         missingIndices:
-        - 0
+        - 4
   noun_repair_q04_spoon:
     minigame_id: letter_ordering
     instruction: כתבו את המילה כף באנגלית.
@@ -742,10 +830,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _HEF
-    - _AKER
-    - _UARD
-    - _IZARD
+    - CH_F
+    - BAK_R
+    - GUA_D
+    - WI_ARD
     target: chef, baker, guard, wizard
     variant: missing_letter_matching
     success: שמות האנשים הושלמו
@@ -759,27 +847,33 @@ instances:
         value: g
       - id: wizard
         value: w
+      - id: noun_repair_q04_people_chef_2
+        value: e
+      - id: noun_repair_q04_people_guard_3
+        value: r
+      - id: noun_repair_q04_people_wizard_2
+        value: z
       wordTasks:
       - id: chef
         image: ''
         fullWord: chef
         missingIndices:
-        - 0
+        - 2
       - id: baker
         image: ''
         fullWord: baker
         missingIndices:
-        - 0
+        - 3
       - id: guard
         image: ''
         fullWord: guard
         missingIndices:
-        - 0
+        - 3
       - id: wizard
         image: ''
         fullWord: wizard
         missingIndices:
-        - 0
+        - 2
   noun_repair_q04_sentence:
     minigame_id: word_ordering
     instruction: השלימו את המשפט לפי התרגום בעברית
@@ -814,10 +908,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ABLE
-    - _EN
-    - _UP
-    - _OWL
+    - T_BLE
+    - PE_
+    - C_P
+    - BO_L
     target: table, pen, cup, bowl
     variant: missing_letter_matching
     success: שמות החפצים הושלמו
@@ -831,27 +925,35 @@ instances:
         value: c
       - id: bowl
         value: b
+      - id: noun_repair_q04_objects_table_1
+        value: a
+      - id: noun_repair_q04_objects_pen_2
+        value: n
+      - id: noun_repair_q04_objects_cup_1
+        value: u
+      - id: noun_repair_q04_objects_bowl_2
+        value: w
       wordTasks:
       - id: table
         image: ''
         fullWord: table
         missingIndices:
-        - 0
+        - 1
       - id: pen
         image: ''
         fullWord: pen
         missingIndices:
-        - 0
+        - 2
       - id: cup
         image: ''
         fullWord: cup
         missingIndices:
-        - 0
+        - 1
       - id: bowl
         image: ''
         fullWord: bowl
         missingIndices:
-        - 0
+        - 2
   noun_repair_q04_say:
     minigame_id: speak_aloud
     instruction: אמרו את המילים הבאות בקול
@@ -869,10 +971,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ATE
-    - _ARK
-    - _OWER
-    - _ASTLE
+    - GAT_
+    - PAR_
+    - TOWE_
+    - CAST_E
     target: gate, park, tower, castle
     variant: missing_letter_matching
     success: שמות המקומות תוקנו
@@ -886,35 +988,43 @@ instances:
         value: t
       - id: castle
         value: c
+      - id: noun_repair_q04_places_gate_3
+        value: e
+      - id: noun_repair_q04_places_park_3
+        value: k
+      - id: noun_repair_q04_places_tower_4
+        value: r
+      - id: noun_repair_q04_places_castle_4
+        value: l
       wordTasks:
       - id: gate
         image: ''
         fullWord: gate
         missingIndices:
-        - 0
+        - 3
       - id: park
         image: ''
         fullWord: park
         missingIndices:
-        - 0
+        - 3
       - id: tower
         image: ''
         fullWord: tower
         missingIndices:
-        - 0
+        - 4
       - id: castle
         image: ''
         fullWord: castle
         missingIndices:
-        - 0
+        - 4
   noun_repair_q05_castle:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ASTLE
-    - _OWER
-    - _HRONE
-    - _ROWN
+    - CA_TLE
+    - T_WER
+    - THR_NE
+    - CR_WN
     target: castle, tower, throne, crown
     variant: missing_letter_matching
     success: שמות הארמון הושלמו
@@ -928,27 +1038,31 @@ instances:
         value: t
       - id: crown
         value: c
+      - id: noun_repair_q05_castle_castle_2
+        value: s
+      - id: noun_repair_q05_castle_tower_1
+        value: o
       wordTasks:
       - id: castle
         image: ''
         fullWord: castle
         missingIndices:
-        - 0
+        - 2
       - id: tower
         image: ''
         fullWord: tower
         missingIndices:
-        - 0
+        - 1
       - id: throne
         image: ''
         fullWord: throne
         missingIndices:
-        - 0
+        - 3
       - id: crown
         image: ''
         fullWord: crown
         missingIndices:
-        - 0
+        - 2
   noun_repair_q05_treasure:
     minigame_id: letter_ordering
     instruction: כתבו את המילה אוצר באנגלית.
@@ -971,10 +1085,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ING
-    - _UEEN
-    - _NIGHT
-    - _UARD
+    - KIN_
+    - Q_EEN
+    - KNIG_T
+    - GUAR_
     target: king, queen, knight, guard
     variant: missing_letter_matching
     success: שמות התפקידים הושלמו
@@ -988,27 +1102,33 @@ instances:
         value: k
       - id: guard
         value: g
+      - id: noun_repair_q05_roles_queen_1
+        value: u
+      - id: noun_repair_q05_roles_knight_4
+        value: h
+      - id: noun_repair_q05_roles_guard_4
+        value: d
       wordTasks:
       - id: king
         image: ''
         fullWord: king
         missingIndices:
-        - 0
+        - 3
       - id: queen
         image: ''
         fullWord: queen
         missingIndices:
-        - 0
+        - 1
       - id: knight
         image: ''
         fullWord: knight
         missingIndices:
-        - 0
+        - 4
       - id: guard
         image: ''
         fullWord: guard
         missingIndices:
-        - 0
+        - 4
   noun_repair_q05_sentence:
     minigame_id: word_ordering
     instruction: השלימו את המשפט לפי התרגום בעברית
@@ -1046,10 +1166,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _WORD
-    - _HIELD
-    - _CROLL
-    - _OOK
+    - SW_RD
+    - SHI_LD
+    - SCRO_L
+    - B_OK
     target: sword, shield, scroll, book
     variant: missing_letter_matching
     success: שמות החפצים המלכותיים הושלמו
@@ -1063,27 +1183,33 @@ instances:
         value: s
       - id: book
         value: b
+      - id: noun_repair_q05_objects_sword_2
+        value: o
+      - id: noun_repair_q05_objects_shield_3
+        value: e
+      - id: noun_repair_q05_objects_scroll_4
+        value: l
       wordTasks:
       - id: sword
         image: ''
         fullWord: sword
         missingIndices:
-        - 0
+        - 2
       - id: shield
         image: ''
         fullWord: shield
         missingIndices:
-        - 0
+        - 3
       - id: scroll
         image: ''
         fullWord: scroll
         missingIndices:
-        - 0
+        - 4
       - id: book
         image: ''
         fullWord: book
         missingIndices:
-        - 0
+        - 1
   noun_repair_q05_say:
     minigame_id: speak_aloud
     instruction: אמרו את המילים הבאות בקול
@@ -1101,10 +1227,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _RAGON
-    - _ABBIT
-    - _OG
-    - _AT
+    - DRA_ON
+    - RABBI_
+    - DO_
+    - CA_
     target: dragon, rabbit, dog, cat
     variant: missing_letter_matching
     success: שמות החיות תוקנו
@@ -1118,35 +1244,39 @@ instances:
         value: d
       - id: cat
         value: c
+      - id: noun_repair_q05_animals_dragon_3
+        value: g
+      - id: noun_repair_q05_animals_rabbit_5
+        value: t
       wordTasks:
       - id: dragon
         image: ''
         fullWord: dragon
         missingIndices:
-        - 0
+        - 3
       - id: rabbit
         image: ''
         fullWord: rabbit
         missingIndices:
-        - 0
+        - 5
       - id: dog
         image: ''
         fullWord: dog
         missingIndices:
-        - 0
+        - 2
       - id: cat
         image: ''
         fullWord: cat
         missingIndices:
-        - 0
+        - 2
   noun_repair_q06_people:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _OY
-    - _IRL
-    - _ING
-    - _UEEN
+    - BO_
+    - G_RL
+    - K_NG
+    - Q_EEN
     target: boy, girl, king, queen
     variant: missing_letter_matching
     success: שמות האנשים הושלמו
@@ -1160,27 +1290,33 @@ instances:
         value: k
       - id: queen
         value: q
+      - id: noun_repair_q06_people_boy_2
+        value: y
+      - id: noun_repair_q06_people_girl_1
+        value: i
+      - id: noun_repair_q06_people_queen_1
+        value: u
       wordTasks:
       - id: boy
         image: ''
         fullWord: boy
         missingIndices:
-        - 0
+        - 2
       - id: girl
         image: ''
         fullWord: girl
         missingIndices:
-        - 0
+        - 1
       - id: king
         image: ''
         fullWord: king
         missingIndices:
-        - 0
+        - 1
       - id: queen
         image: ''
         fullWord: queen
         missingIndices:
-        - 0
+        - 1
   noun_repair_q06_book:
     minigame_id: letter_ordering
     instruction: כתבו את המילה שם עצם באנגלית.
@@ -1199,10 +1335,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _ASTLE
-    - _ATE
-    - _ARK
-    - _OWER
+    - CAST_E
+    - G_TE
+    - PAR_
+    - TOWE_
     target: castle, gate, park, tower
     variant: missing_letter_matching
     success: שמות המקומות הושלמו
@@ -1216,27 +1352,35 @@ instances:
         value: p
       - id: tower
         value: t
+      - id: noun_repair_q06_places_castle_4
+        value: l
+      - id: noun_repair_q06_places_gate_1
+        value: a
+      - id: noun_repair_q06_places_park_3
+        value: k
+      - id: noun_repair_q06_places_tower_4
+        value: r
       wordTasks:
       - id: castle
         image: ''
         fullWord: castle
         missingIndices:
-        - 0
+        - 4
       - id: gate
         image: ''
         fullWord: gate
         missingIndices:
-        - 0
+        - 1
       - id: park
         image: ''
         fullWord: park
         missingIndices:
-        - 0
+        - 3
       - id: tower
         image: ''
         fullWord: tower
         missingIndices:
-        - 0
+        - 4
   noun_repair_q06_sentence:
     minigame_id: word_ordering
     instruction: השלימו את המשפט לפי התרגום בעברית
@@ -1271,10 +1415,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _OG
-    - _AT
-    - _ISH
-    - _IRD
+    - D_G
+    - CA_
+    - FI_H
+    - B_RD
     target: dog, cat, fish, bird
     variant: missing_letter_matching
     success: שמות החיות הושלמו
@@ -1288,27 +1432,35 @@ instances:
         value: f
       - id: bird
         value: b
+      - id: noun_repair_q06_animals_dog_1
+        value: o
+      - id: noun_repair_q06_animals_cat_2
+        value: t
+      - id: noun_repair_q06_animals_fish_2
+        value: s
+      - id: noun_repair_q06_animals_bird_1
+        value: i
       wordTasks:
       - id: dog
         image: ''
         fullWord: dog
         missingIndices:
-        - 0
+        - 1
       - id: cat
         image: ''
         fullWord: cat
         missingIndices:
-        - 0
+        - 2
       - id: fish
         image: ''
         fullWord: fish
         missingIndices:
-        - 0
+        - 2
       - id: bird
         image: ''
         fullWord: bird
         missingIndices:
-        - 0
+        - 1
   noun_repair_q06_say:
     minigame_id: speak_aloud
     instruction: אמרו את המילים הבאות בקול
@@ -1326,10 +1478,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
     tasks:
-    - _OOK
-    - _ABLE
-    - _EN
-    - _AG
+    - BO_K
+    - TAB_E
+    - PE_
+    - B_G
     target: book, table, pen, bag
     variant: missing_letter_matching
     success: שמות החפצים תוקנו
@@ -1343,24 +1495,32 @@ instances:
         value: p
       - id: bag
         value: b
+      - id: noun_repair_q06_objects_book_2
+        value: o
+      - id: noun_repair_q06_objects_table_3
+        value: l
+      - id: noun_repair_q06_objects_pen_2
+        value: n
+      - id: noun_repair_q06_objects_bag_1
+        value: a
       wordTasks:
       - id: book
         image: ''
         fullWord: book
         missingIndices:
-        - 0
+        - 2
       - id: table
         image: ''
         fullWord: table
         missingIndices:
-        - 0
+        - 3
       - id: pen
         image: ''
         fullWord: pen
         missingIndices:
-        - 0
+        - 2
       - id: bag
         image: ''
         fullWord: bag
         missingIndices:
-        - 0
+        - 1

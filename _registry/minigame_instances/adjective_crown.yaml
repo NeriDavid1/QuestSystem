@@ -321,10 +321,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילה
     tasks:
-    - _HORT
-    - _ONG
-    - _OLD
-    - _OT
+    - SH_RT
+    - LON_
+    - COL_
+    - H_T
     target: short, long, cold, hot
     variant: missing_letter_matching
     success: ארבע המילים הראשונות הושלמו
@@ -338,35 +338,41 @@ instances:
         value: c
       - id: hot
         value: h
+      - id: q06_adjective_challenge_s1_short_2
+        value: o
+      - id: q06_adjective_challenge_s1_long_3
+        value: g
+      - id: q06_adjective_challenge_s1_cold_3
+        value: d
       wordTasks:
       - id: short
         image: ''
         fullWord: short
         missingIndices:
-        - 0
+        - 2
       - id: long
         image: ''
         fullWord: long
         missingIndices:
-        - 0
+        - 3
       - id: cold
         image: ''
         fullWord: cold
         missingIndices:
-        - 0
+        - 3
       - id: hot
         image: ''
         fullWord: hot
         missingIndices:
-        - 0
+        - 1
   q06_adjective_challenge_s2:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילה
     tasks:
-    - _IG
-    - _MALL
-    - _AST
-    - _LOW
+    - B_G
+    - SM_LL
+    - F_ST
+    - S_OW
     target: big, small, fast, slow
     variant: missing_letter_matching
     success: ארבע המילים הבאות הושלמו
@@ -380,35 +386,41 @@ instances:
         value: f
       - id: slow
         value: s
+      - id: q06_adjective_challenge_s2_big_1
+        value: i
+      - id: q06_adjective_challenge_s2_small_2
+        value: a
+      - id: q06_adjective_challenge_s2_slow_1
+        value: l
       wordTasks:
       - id: big
         image: ''
         fullWord: big
         missingIndices:
-        - 0
+        - 1
       - id: small
         image: ''
         fullWord: small
         missingIndices:
-        - 0
+        - 2
       - id: fast
         image: ''
         fullWord: fast
         missingIndices:
-        - 0
+        - 1
       - id: slow
         image: ''
         fullWord: slow
         missingIndices:
-        - 0
+        - 1
   q06_adjective_challenge_s3:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילה
     tasks:
-    - _OW
-    - _IGH
-    - _EAVY
-    - _IGHT
+    - LO_
+    - H_GH
+    - HEAV_
+    - LI_HT
     target: low, high, heavy, light
     variant: missing_letter_matching
     success: כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק
@@ -422,24 +434,32 @@ instances:
         value: h
       - id: light
         value: l
+      - id: q06_adjective_challenge_s3_low_2
+        value: w
+      - id: q06_adjective_challenge_s3_high_1
+        value: i
+      - id: q06_adjective_challenge_s3_heavy_4
+        value: y
+      - id: q06_adjective_challenge_s3_light_2
+        value: g
       wordTasks:
       - id: low
         image: ''
         fullWord: low
         missingIndices:
-        - 0
+        - 2
       - id: high
         image: ''
         fullWord: high
         missingIndices:
-        - 0
+        - 1
       - id: heavy
         image: ''
         fullWord: heavy
         missingIndices:
-        - 0
+        - 4
       - id: light
         image: ''
         fullWord: light
         missingIndices:
-        - 0
+        - 2
