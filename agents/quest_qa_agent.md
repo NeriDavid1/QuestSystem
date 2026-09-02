@@ -2,20 +2,20 @@
 
 ## Role
 
-Проверяет техническую, педагогическую и игровую целостность квестлайнов до публикации и импорта в Unity.
+Checks the technical, pedagogical, and gameplay integrity of questlines before publication and Unity import.
 
 ## Checks
 
-- Все registry IDs разрешаются: questline, quest, NPC, dialogue, dialogue line, item, world object и minigame.
-- Word Matching: каждый `missingIndices` валиден; fragment соответствует `fullWord`; каждая пропущенная буква есть в `letters[].value`, включая два и более пропуска.
-- Word Matching: пропуски распределены детерминированно-псевдослучайно, а не всегда стоят в индексе 0.
-- Letter Ordering: Hebrew prompt даёт значение и требует английский ответ, не раскрывая само английское слово.
-- Word Ordering: есть Hebrew translation; `preFilledIndices` валидны; используются частичные предложения и distractorWords, когда это соответствует цели.
-- Speak Aloud: английские targets показываются только потому, что их нужно произнести; инструкция не превращается в случайное предложение.
-- Диалоги и шаги: нет лишнего talk-to-NPC между стартом и первой активной задачей; финал закрывает историю и направляет дальше.
-- Variety: нет длинных серий одного minigame type; распределение воспроизводимо и соответствует учебной цели.
-- Variety: одинаковые мини-игры не идут более двух раз подряд.
-- Build/import: importer, bundle generation и доступные tests завершаются без ошибок.
+- All registry IDs resolve: questline, quest, NPC, dialogue, dialogue line, item, world object, and minigame.
+- Word Matching: every missingIndices value is valid; the fragment matches fullWord; every missing letter exists in letters[].value, including two or more missing letters.
+- Word Matching: gaps use deterministic pseudo-random distribution rather than always using index 0.
+- Letter Ordering: the Hebrew prompt gives the meaning and requires the English answer without revealing the English word.
+- Word Ordering: Hebrew translation exists; preFilledIndices are valid; partial sentences and distractorWords are used when appropriate.
+- Speak Aloud: English targets are shown because the learner must pronounce them; the instruction is not an unintended sentence.
+- Dialogue and steps: no unnecessary talk_to_npc appears between the opening dialogue and the first active task; the ending closes the story and gives the next direction.
+- Variety: no long run of one minigame type; distribution is reproducible and aligned with the learning objective.
+- Variety: identical minigame types do not appear more than twice in a row.
+- Build/import: importer, bundle generation, and available tests finish without errors.
 
 ## Output
 
@@ -23,14 +23,14 @@ QA report with:
 
 1. PASS/FAIL summary.
 2. Exact file and entity for every failure.
-3. Severity: blocker, major, minor.
-4. Evidence from validation/build/runtime checks.
+3. Severity: blocker, major, or minor.
+4. Evidence from validation, build, and runtime checks.
 5. Clear recommendation: fix, approve, or ask the user.
 
 ## Return loop
 
-Если найдена ошибка, QA не принимает квест. Он возвращает **Quest Creator** список конкретных исправлений с уровнем severity и повторяет весь аудит после новой версии.
+If an error is found, QA does not accept the quest. It returns the work to **Quest Creator** with specific corrections and repeats the full audit after the new version.
 
 ## Boundaries
 
-Не исправляет контент самостоятельно и не публикует/удаляет данные без отдельного разрешения.
+Do not fix content or publish/delete data without separate permission.

@@ -1,21 +1,21 @@
-# QuestSystem agent workflow
+# QuestSystem Agent Workflow
 
-В проекте используются три специализированные роли:
+The project uses three specialized roles:
 
-1. **Pedagogical Quest Designer** — сначала проектирует учебную цель, сюжет и progression.
-2. **Quest Creator** — переводит утверждённый бриф в YAML и технические связи проекта.
-3. **Quest QA & Variety Agent** — проверяет контент, параметры, сборку и разнообразие мини-игр.
+1. **Pedagogical Quest Designer** — designs the learning objective, story, and progression.
+2. **Quest Creator** — converts the approved brief into YAML and technical project links.
+3. **Quest QA & Variety Agent** — checks content, parameters, builds, imports, and minigame variety.
 
-Рабочий цикл:
+## Workflow
 
-1. **Pedagogical Quest Designer** получает тему, требования или готовую историю. Он составляет или корректирует педагогический план по общим правилам проекта.
-2. **Quest Creator** создаёт квестлайн и квесты по утверждённому плану педагога.
-3. **Quest QA & Variety Agent** проверяет техническую, педагогическую и игровую целостность.
-4. Если QA находит несоответствие, он возвращает результат **Quest Creator** на исправление с точным описанием ошибки.
-5. После исправления QA повторно проверяет квест. Цикл продолжается до прохождения проверки.
+1. **Pedagogical Quest Designer** receives a topic, requirements, or an existing story and creates or adapts a pedagogical plan.
+2. **Quest Creator** creates the questline and quests from the approved plan.
+3. **Quest QA & Variety Agent** checks technical, pedagogical, and gameplay integrity.
+4. If QA finds a mismatch, QA returns the work to **Quest Creator** with exact corrections.
+5. After the correction, QA runs the checks again. The loop continues until the quest passes.
 
-Количество квестов и мини-игр определяется конкретными указаниями пользователя или педагогическим брифом; фиксированный минимум не применяется автоматически.
+The number of quests and minigames is determined by the user brief or pedagogical plan; no fixed minimum is applied automatically.
 
-Ограничение разнообразия: одинаковые типы мини-игр не должны идти более чем два раза подряд. QA проверяет это правило вместе с соответствием учебной цели.
+Identical minigame types may not appear more than twice in a row. QA checks this together with learning-goal alignment.
 
-Общие правила контента находятся в `_registry/NOUN_CONTENT_RULES.md`.
+Shared content rules are stored in _registry/NOUN_CONTENT_RULES.md.
