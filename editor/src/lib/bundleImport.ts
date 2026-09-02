@@ -61,7 +61,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
         turn_in_dialogue_id: finish?.payload?.dialogue_id ?? null,
       }
     })(),
-    id: makeLocalId('quest'), questline_id: line.id, key: String(item.key), position: index,
+    id: makeLocalId('quest'), questline_id: line.id, key: `${line.key}__${String(item.key)}`, position: index,
     name: String(item.name ?? item.key), level_required: Number(item.level_required ?? 1),
     giver_external_id: item.giver_external_id ?? null, summary: item.summary ?? null,
     wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in),
