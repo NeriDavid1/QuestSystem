@@ -13,61 +13,19 @@
     }
   },
   "counts": {
-    "areas": 31,
-    "npcs": 34,
-    "interactables": 40,
+    "areas": 15,
+    "npcs": 26,
+    "interactables": 14,
     "items": 117,
     "minigames": 5,
     "step_types": 6,
     "areas_with_image": 15,
-    "npcs_with_image": 25,
+    "npcs_with_image": 26,
     "interactables_with_image": 14,
     "items_with_image": 104,
     "minigames_with_image": 4
   },
   "areas": [
-    {
-      "name": "Crown Shrine",
-      "status": "catalog_stub",
-      "description": "Shrine of the Adjective Crown and knight lessons.",
-      "id": "adjective_crown_shrine"
-    },
-    {
-      "name": "Frozen Spring",
-      "status": "catalog_stub",
-      "description": "Cold spring watched by the Water Man.",
-      "id": "adjective_frozen_spring"
-    },
-    {
-      "name": "Mixed Meadow",
-      "status": "catalog_stub",
-      "description": "Meadow with mixed animals and grandmother chores.",
-      "id": "adjective_mixed_meadow"
-    },
-    {
-      "name": "Royal Lift",
-      "status": "catalog_stub",
-      "description": "Lift operated by Grandfather.",
-      "id": "adjective_royal_lift"
-    },
-    {
-      "name": "Short Bridge",
-      "status": "catalog_stub",
-      "description": "Short bridge catalog stub — live q01 uses The Oathstone Bridge.",
-      "id": "adjective_short_bridge"
-    },
-    {
-      "name": "Trade Road",
-      "status": "catalog_stub",
-      "description": "Busy road where the Crazy Old Man watches everything.",
-      "id": "adjective_trade_road"
-    },
-    {
-      "name": "Village Gate",
-      "status": "catalog_stub",
-      "description": "Village entrance watched by the Village Chief.",
-      "id": "adjective_village_gate"
-    },
     {
       "image": "images/areas/BuildersHome.png",
       "name": "Builders Home",
@@ -116,60 +74,6 @@
       "status": "catalog_stub",
       "description": "Catalog stub — Maya q01 uses MoonriverCottage instead.",
       "id": "q01_runaway_a_zone"
-    },
-    {
-      "name": "Bee Garden",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q02 uses BuildersHome instead.",
-      "id": "q02_bee_garden"
-    },
-    {
-      "name": "Cat Tree",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q03 uses Driftgold Bay instead.",
-      "id": "q03_cat_tree"
-    },
-    {
-      "name": "Dog House",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q04 uses FairyRosePark instead.",
-      "id": "q04_dog_house"
-    },
-    {
-      "name": "Garden Gate",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q05 uses Forsaken Cove instead.",
-      "id": "q05_garden_gate"
-    },
-    {
-      "name": "Butterfly Garden",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q06 uses KingdomGate instead.",
-      "id": "q06_butterfly_garden"
-    },
-    {
-      "name": "Genius Gate",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q07 uses KingdomGate instead.",
-      "id": "q07_genius_gate"
-    },
-    {
-      "name": "Hat Location",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q08 uses Sanctum of Whispering Light instead.",
-      "id": "q08_hat_location"
-    },
-    {
-      "name": "Letter Island",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q09 uses SilverFountainCourt instead.",
-      "id": "q09_letter_island"
-    },
-    {
-      "name": "Graduation Stage",
-      "status": "catalog_stub",
-      "description": "Catalog stub — Maya q10 uses Solitude Tower instead.",
-      "id": "q10_graduation_stage"
     },
     {
       "image": "images/areas/Sanctum of Whispering Light.png",
@@ -230,48 +134,6 @@
   ],
   "npcs": [
     {
-      "name": "Crazy Old Man",
-      "title": "Crazy Old Man",
-      "location": "adjective_trade_road",
-      "description": "Odd old man who notices every strange thing on the road.",
-      "id": "adjective_crazy_old_man"
-    },
-    {
-      "name": "Grandfather",
-      "title": "Grandfather",
-      "location": "adjective_royal_lift",
-      "description": "Gentle grandfather who runs the royal lift.",
-      "id": "adjective_grandfather"
-    },
-    {
-      "name": "Grandmother",
-      "title": "Grandmother",
-      "location": "adjective_mixed_meadow",
-      "description": "Kind grandmother who cares for meadow animals and corn.",
-      "id": "adjective_grandmother"
-    },
-    {
-      "name": "Adjective Knight",
-      "title": "Adjective Knight",
-      "location": "adjective_crown_shrine",
-      "description": "Brave knight who teaches describing words like big, hot, and slow.",
-      "id": "adjective_knight"
-    },
-    {
-      "name": "Village Chief",
-      "title": "Village Chief",
-      "location": "adjective_village_gate",
-      "description": "Village leader who keeps the gate safe and tidy.",
-      "id": "adjective_village_chief"
-    },
-    {
-      "name": "Water Man",
-      "title": "Water Man",
-      "location": "adjective_frozen_spring",
-      "description": "Quiet helper who watches springs and water paths.",
-      "id": "adjective_water_man"
-    },
-    {
       "image": "images/npcs/Benny the Builder.png",
       "name": "Benny the Builder",
       "title": "Builder",
@@ -307,10 +169,6 @@
       "location": "KingdomGate",
       "description": "Talkative guard who knows every rumor in town.",
       "id": "City Gaurd Info"
-    },
-    {
-      "name": "Dark Wizard",
-      "id": "Dark Wizard"
     },
     {
       "image": "images/npcs/Farmer.png",
@@ -351,10 +209,6 @@
       "location": "The Weeping Stones",
       "description": "Friendly ghost who haunts quiet places and loves surprises.",
       "id": "Ghost"
-    },
-    {
-      "name": "King Numbers",
-      "id": "King Numbers"
     },
     {
       "image": "images/npcs/Little Boy.png",
@@ -418,6 +272,7 @@
       "id": "Old Woman"
     },
     {
+      "image": "images/npcs/Painter.png",
       "name": "Painter",
       "title": "Painter",
       "location": "The Sunspire Tree",
@@ -480,20 +335,6 @@
   ],
   "interactables": [
     {
-      "name": "Small Guardian",
-      "kind": "collectible",
-      "status": "catalog_stub",
-      "description": "Catalog collectible — no DefeatEnemy objective in live system.",
-      "id": "adjective_small_guardian"
-    },
-    {
-      "name": "Small Zombie",
-      "kind": "collectible",
-      "status": "catalog_stub",
-      "description": "Catalog collectible — no DefeatEnemy objective in live system.",
-      "id": "adjective_small_zombie"
-    },
-    {
       "image": "images/interactables/Exam_Table1_Outside_Gate.png",
       "name": "Exam Table 1",
       "kind": "minigame",
@@ -519,97 +360,6 @@
       "area": "TowerOfLostVigil",
       "description": "Fire camp at Tower of Lost Vigil (HOT speaking).",
       "id": "Fire_Camp_Tower_Of_Lost_Vigil"
-    },
-    {
-      "name": "Draw Letter A",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Small_Shop_Moonriver.",
-      "id": "letter_drawing_a"
-    },
-    {
-      "name": "Draw Letter B",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Lost_Chest1_BuildersHomeArea.",
-      "id": "letter_drawing_b"
-    },
-    {
-      "name": "Draw Letter C",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Lost_Chest2_Driftgold_Bay.",
-      "id": "letter_drawing_c"
-    },
-    {
-      "name": "Draw Letter F",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Wooden_Cart1_Inside_Gate.",
-      "id": "letter_drawing_f"
-    },
-    {
-      "name": "Draw Letter J",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower.",
-      "id": "letter_drawing_j"
-    },
-    {
-      "name": "Adjective spelling test",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic adjective spelling stub.",
-      "id": "letter_ordering_adjective_crown"
-    },
-    {
-      "name": "Spell EGG",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Lost_Chest3_Forsaken_Cove.",
-      "id": "letter_ordering_egg"
-    },
-    {
-      "name": "Spell HAT",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Lost_Chest4_Sanctum_Of_Whispering_Light.",
-      "id": "letter_ordering_h"
-    },
-    {
-      "name": "Spell ISLAND",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.",
-      "id": "letter_ordering_i"
-    },
-    {
-      "name": "Choose word LIGHT",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic letter-ordering stub.",
-      "id": "letter_ordering_light"
-    },
-    {
-      "name": "Spell word LONG",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — live q01 uses WoodenCart3_The_Oath_stone_Bridge.",
-      "id": "letter_ordering_long"
-    },
-    {
-      "name": "Spell word SLOW",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic letter-ordering stub.",
-      "id": "letter_ordering_slow"
-    },
-    {
-      "name": "Spell word SMALL",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — live q03 uses Lost_Chest7_The_Sunspire_Tree.",
-      "id": "letter_ordering_small"
     },
     {
       "image": "images/interactables/Lost_Chest1_BuildersHomeArea.png",
@@ -675,56 +425,6 @@
       "id": "Lost_Chest7_The_Sunspire_Tree"
     },
     {
-      "name": "Mystery Egg",
-      "kind": "collectible",
-      "status": "catalog_stub",
-      "description": "Collectible catalog stub.",
-      "id": "mystery_egg"
-    },
-    {
-      "name": "Small Sheep",
-      "kind": "collectible",
-      "status": "catalog_stub",
-      "description": "Small sheep collectible stub.",
-      "id": "small_sheep"
-    },
-    {
-      "name": "Small Shop",
-      "kind": "minigame",
-      "status": "live_used",
-      "area": "MoonriverCottage",
-      "description": "Shop station at Moonriver Cottage.",
-      "id": "Small_Shop_Moonriver"
-    },
-    {
-      "name": "Spoken adjective test",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic spoken adjective stub.",
-      "id": "speak_aloud_adjective_crown"
-    },
-    {
-      "name": "Speak word HOT",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — live q02 uses Fire_Camp_Tower_Of_Lost_Vigil.",
-      "id": "speak_aloud_hot"
-    },
-    {
-      "name": "Speak Letter J",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses WoodenCart2_Solitude_Tower.",
-      "id": "speak_aloud_j"
-    },
-    {
-      "name": "Speak word SLOW",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic speak-aloud stub.",
-      "id": "speak_aloud_slow"
-    },
-    {
       "image": "images/interactables/Tomb_Stone_The_Weeping_Stones.png",
       "name": "Tomb Stone",
       "kind": "minigame",
@@ -759,34 +459,6 @@
       "area": "The Oathstone Bridge",
       "description": "Cart station on The Oathstone Bridge (LONG spelling).",
       "id": "WoodenCart3_The_Oath_stone_Bridge"
-    },
-    {
-      "name": "Adjective matching test",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — live q06 uses Lost_Chest4_Sanctum_Of_Whispering_Light.",
-      "id": "word_matching_adjective_crown"
-    },
-    {
-      "name": "Match DOG Letters",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Exam_Table_Fairy_Rose_Park.",
-      "id": "word_matching_d"
-    },
-    {
-      "name": "Genius Gate Words",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Exam_Table1_Outside_Gate.",
-      "id": "word_matching_g"
-    },
-    {
-      "name": "Letter Island Match",
-      "kind": "minigame",
-      "status": "catalog_stub",
-      "description": "Semantic stub — Maya uses Lost_Chest5_Silver_Fountain_Court.",
-      "id": "word_matching_i"
     }
   ],
   "items": [

@@ -6,7 +6,17 @@ import { EditorStoreProvider, useEditorStore } from './EditorStore'
 import { getStepMinigame, getStepMinigameKey } from '../lib/editorData'
 
 function Probe() {
-  const { data, issues, addQuest, addStep, updateQuest, duplicateStep, updateMinigame } = useEditorStore()
+  const {
+    data,
+    issues,
+    addQuest,
+    addStep,
+    updateQuest,
+    removeQuestline,
+    selectedQuestlineId,
+    duplicateStep,
+    updateMinigame,
+  } = useEditorStore()
   const errors = issues.filter((issue) => issue.severity === 'error').length
   const sourcePlayStep = data.steps.find((step) => step.step_type === 'play_minigame')
   const copiedPlayStep = sourcePlayStep
@@ -18,6 +28,8 @@ function Probe() {
     <div>
       <span data-testid="quest-count">{data.quests.length}</span>
       <span data-testid="step-count">{data.steps.length}</span>
+      <span data-testid="questline-count">{data.questlines.length}</span>
+      <span data-testid="selected-questline">{selectedQuestlineId}</span>
       <span data-testid="error-count">{errors}</span>
       <span data-testid="minigame-count">{data.minigames.length}</span>
       <span data-testid="source-instance">{sourcePlayStep ? getStepMinigameKey(sourcePlayStep) : ''}</span>
@@ -32,6 +44,10 @@ function Probe() {
         const quest = data.quests[data.quests.length - 1]
         if (quest) updateQuest({ name: 'Named quest' })
       }}>name-quest</button>
+      <button onClick={() => {
+        const lineId = selectedQuestlineId || data.questlines[0]?.id
+        if (lineId) removeQuestline(lineId)
+      }}>remove-questline</button>
     </div>
   )
 }
@@ -82,6 +98,31 @@ describe('EditorStore critical flow', () => {
     // Store registers Ctrl/Cmd+Z undo via a window keydown listener.
     await user.keyboard('{Control>}z{/Control}')
     await waitFor(() => expect(screen.getByTestId('quest-count').textContent).toBe(String(before)))
+  })
+
+  it('removeQuestline drops the line and selects another remaining line', async () => {
+    const user = userEvent.setup()
+    render(
+      <LocaleProvider>
+        <EditorStoreProvider>
+          <Probe />
+        </EditorStoreProvider>
+      </LocaleProvider>,
+    )
+
+    await waitFor(() => expect(Number(screen.getByTestId('questline-count').textContent)).toBeGreaterThan(1))
+    const beforeLines = Number(screen.getByTestId('questline-count').textContent)
+    const beforeQuests = Number(screen.getByTestId('quest-count').textContent)
+    const removedId = screen.getByTestId('selected-questline').textContent ?? ''
+
+    await user.click(screen.getByRole('button', { name: 'remove-questline' }))
+
+    await waitFor(() => {
+      expect(screen.getByTestId('questline-count').textContent).toBe(String(beforeLines - 1))
+      expect(Number(screen.getByTestId('quest-count').textContent)).toBeLessThan(beforeQuests)
+      expect(screen.getByTestId('selected-questline').textContent).not.toBe(removedId)
+      expect(screen.getByTestId('selected-questline').textContent).not.toBe('')
+    })
   })
 
   it('duplicates a minigame step with an independent minigame instance', async () => {

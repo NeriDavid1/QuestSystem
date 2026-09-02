@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import {
   DEFAULT_DIALOGUE_LOCALE,
+  allocateQuestKey,
+  allocateStepKey,
   buildSnapshotDocument,
   getCatalogKindForRef,
   getDialogueLines,
@@ -8,12 +10,19 @@ import {
   getQuestlineQuests,
   getStepMinigame,
   getStepMinigameKey,
+  isAutoManagedQuestKey,
+  isLineScopedQuestKey,
   isLocalId,
   makeLocalId,
+  normalizeContentKey,
+  refreshDraftQuestKey,
   slugify,
   stepHasMinigameField,
   suggestDialogueBaseKey,
+  suggestQuestBaseKey,
+  suggestStepKey,
   uniqueDialogueKey,
+  uniqueExactKey,
   uniqueKey,
   uniqueMinigameKey,
   uniqueQuestKey,
@@ -59,6 +68,97 @@ describe('uniqueKey', () => {
     expect(key).not.toBe('nope')
     expect(key).not.toBe('new_item')
     expect(key.length).toBeGreaterThan(0)
+  })
+})
+
+describe('uniqueExactKey / normalizeContentKey', () => {
+  it('preserves double-underscore line scopes', () => {
+    expect(normalizeContentKey('adjective_crown__q01_bridge')).toBe('adjective_crown__q01_bridge')
+    expect(uniqueExactKey(['adjective_crown__q01_bridge'], 'adjective_crown__q01_bridge')).toBe(
+      'adjective_crown__q01_bridge_2',
+    )
+  })
+})
+
+describe('suggestQuestBaseKey / allocateQuestKey', () => {
+  it('builds line-scoped keys from line, position, and name', () => {
+    expect(suggestQuestBaseKey('adjective_crown', 0, 'Bridge Too Short')).toBe(
+      'adjective_crown__q01_bridge_too_short',
+    )
+    expect(suggestQuestBaseKey('kingdom_nouns', 6, 'Royal Noun Trial')).toBe(
+      'kingdom_nouns__q07_royal_noun_trial',
+    )
+  })
+
+  it('falls back to new_quest for Hebrew or empty names', () => {
+    expect(suggestQuestBaseKey('linetest', 0, 'משימה חדשה')).toBe('linetest__q01_new_quest')
+    expect(suggestQuestBaseKey('linetest', 1, '   ')).toBe('linetest__q02_new_quest')
+  })
+
+  it('allocates a globally unique key across all questlines', () => {
+    const line = data.questlines[0]
+    const key = allocateQuestKey(data, line.key, 0, 'Bridge Too Short')
+    expect(key.startsWith(`${line.key}__`)).toBe(true)
+    expect(data.quests.some((quest) => quest.key === key)).toBe(false)
+  })
+
+  it('does not collide with an existing scoped key', () => {
+    const taken = suggestQuestBaseKey('demo_line', 0, 'Walk')
+    const withTaken = {
+      ...data,
+      quests: [
+        ...data.quests,
+        {
+          ...data.quests[0],
+          id: 'taken-quest',
+          questline_id: 'other-line',
+          key: taken,
+        },
+      ],
+    }
+    expect(allocateQuestKey(withTaken, 'demo_line', 0, 'Walk')).toBe(`${taken}_2`)
+  })
+})
+
+describe('suggestStepKey / allocateStepKey', () => {
+  it('derives step keys from the quest key', () => {
+    expect(suggestStepKey('adjective_crown__q01_bridge', 0)).toBe('adjective_crown__q01_bridge_s01')
+    expect(suggestStepKey('q01_walk', 2)).toBe('q01_walk_s03')
+  })
+
+  it('allocates unique step keys within a quest', () => {
+    const quest = data.quests[0]
+    const key = allocateStepKey(data, quest.id, quest.key, 0)
+    expect(key.startsWith(`${quest.key}_s`)).toBe(true)
+    expect(data.steps.some((step) => step.quest_id === quest.id && step.key === key)).toBe(false)
+  })
+})
+
+describe('isAutoManagedQuestKey / refreshDraftQuestKey', () => {
+  it('treats scoped and placeholder keys as auto-managed', () => {
+    expect(isAutoManagedQuestKey('adjective_crown__q01_bridge', 'adjective_crown')).toBe(true)
+    expect(isAutoManagedQuestKey('q01_new_quest', 'linetest')).toBe(true)
+    expect(isLineScopedQuestKey('adjective_crown__q01_bridge', 'adjective_crown')).toBe(true)
+    expect(isLineScopedQuestKey('q01_bridge_too_short', 'adjective_crown')).toBe(false)
+  })
+
+  it('refreshes draft auto keys when the name changes', () => {
+    const line = data.questlines[0]
+    const draft = {
+      ...data.quests[0],
+      key: `${line.key}__q01_new_quest`,
+      status: 'draft' as const,
+      name: 'Old',
+    }
+    const withDraft = { ...data, quests: data.quests.map((quest) => (quest.id === draft.id ? draft : quest)) }
+    const next = refreshDraftQuestKey(withDraft, draft, line.key, 'Bridge Too Short')
+    expect(next).toBe(`${line.key}__q01_bridge_too_short`)
+  })
+
+  it('freezes published quest keys', () => {
+    const line = data.questlines[0]
+    const published = { ...data.quests[0], status: 'published' as const, key: `${line.key}__q01_new_quest` }
+    expect(refreshDraftQuestKey(data, published, line.key, 'Bridge Too Short')).toBeNull()
   })
 })
 
@@ -247,6 +347,13 @@ describe('buildSnapshotDocument', () => {
       expect(quest).toHaveProperty('turn_in_dialogue_id')
       expect(quest).toHaveProperty('wait_for_npc_turn_in')
     }
+  })
+
+  it('embeds referenced dialogues and minigame instances', () => {
+    expect(document).toHaveProperty('dialogues')
+    expect(document).toHaveProperty('minigames')
+    expect(typeof document.dialogues).toBe('object')
+    expect(typeof document.minigames).toBe('object')
   })
 })
 

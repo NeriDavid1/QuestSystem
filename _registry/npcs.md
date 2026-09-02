@@ -6,24 +6,16 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 
 | id | name | title | location | preview |
 |----|----|----|----|----|
-| `adjective_crazy_old_man` | Crazy Old Man | Crazy Old Man | adjective_trade_road | *(no image)* |
-| `adjective_grandfather` | Grandfather | Grandfather | adjective_royal_lift | *(no image)* |
-| `adjective_grandmother` | Grandmother | Grandmother | adjective_mixed_meadow | *(no image)* |
-| `adjective_knight` | Adjective Knight | Adjective Knight | adjective_crown_shrine | *(no image)* |
-| `adjective_village_chief` | Village Chief | Village Chief | adjective_village_gate | *(no image)* |
-| `adjective_water_man` | Water Man | Water Man | adjective_frozen_spring | *(no image)* |
 | `Benny the Builder` | Benny the Builder | Builder | BuildersHome | ![Benny the Builder](images/npcs/Benny the Builder.png) |
 | `Blacksmith` | Will The Smith | Blacksmith | BuildersHome | ![Will The Smith](images/npcs/Blacksmith.png) |
 | `Cannoneer` | Cannoneer | Cannoneer | Forsaken Cove | ![Cannoneer](images/npcs/Cannoneer.png) |
 | `Chef` | Chef |  |  | ![Chef](images/npcs/Chef.png) |
 | `City Gaurd Info` | Fenn the Chatty | City Guard | KingdomGate | ![Fenn the Chatty](images/npcs/City Gaurd Info.png) |
-| `Dark Wizard` | Dark Wizard |  |  | *(no image)* |
 | `Farmer` | Farmer | Farmer | FairyRosePark | ![Farmer](images/npcs/Farmer.png) |
 | `Farmer V2` | Farmer V2 | Farmer | FairyRosePark | ![Farmer V2](images/npcs/Farmer V2.png) |
 | `Fisherman` | Nemo the Netless | Fisherman | Driftgold Bay | ![Nemo the Netless](images/npcs/Fisherman.png) |
 | `Flight Guide` | Flight Guide | Flight Guide | The Sunspire Tree | ![Flight Guide](images/npcs/Flight Guide.png) |
 | `Ghost` | Boo Radcliff | Ghost | The Weeping Stones | ![Boo Radcliff](images/npcs/Ghost.png) |
-| `King Numbers` | King Numbers |  |  | *(no image)* |
 | `Little Boy` | Little Boy | Child | FairyRosePark | ![Little Boy](images/npcs/Little Boy.png) |
 | `Little Girl` | Little Girl | Child | FairyRosePark | ![Little Girl](images/npcs/Little Girl.png) |
 | `Main Gate Gaurd 1` | Tomlin the Yawner | Gate Guard | KingdomGate | ![Tomlin the Yawner](images/npcs/Main Gate Gaurd 1.png) |
@@ -32,7 +24,7 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 | `Museum Clerk` | Museum Clerk |  |  | ![Museum Clerk](images/npcs/Museum Clerk.png) |
 | `Old Man` | Old Man | Old Man | MoonriverCottage | ![Old Man](images/npcs/Old Man.png) |
 | `Old Woman` | Old Woman | Old Woman | MoonriverCottage | ![Old Woman](images/npcs/Old Woman.png) |
-| `Painter` | Painter | Painter | The Sunspire Tree | *(no image)* |
+| `Painter` | Painter | Painter | The Sunspire Tree | ![Painter](images/npcs/Painter.png) |
 | `Palace Guard` | Palace Guard |  |  | ![Palace Guard](images/npcs/Palace Guard.png) |
 | `Professor Crazy` | Professor Crazy | Professor | Solitude Tower | ![Professor Crazy](images/npcs/Professor Crazy.png) |
 | `Riding Guide` | Riding Guide | Riding Guide | Driftgold Bay | ![Riding Guide](images/npcs/Riding Guide.png) |

@@ -49,6 +49,61 @@ describe('validateQuestline', () => {
     expect(issues).toContainEqual(expect.objectContaining({ code: 'missing_giver', severity: 'warning', entityId: quest.id }))
   })
 
+  it('warns when a quest has no start dialogue', () => {
+    const data = makeData()
+    const quest = data.quests[0]
+    const modified: EditorData = {
+      ...data,
+      quests: data.quests.map((item) =>
+        item.id === quest.id ? { ...item, start_dialogue_id: null, turn_in_dialogue_id: null } : item),
+    }
+    const issues = validateQuestline(modified, lineOf(data), t)
+    expect(issues).toContainEqual(
+      expect.objectContaining({ code: 'missing_start_dialogue', severity: 'warning', entityId: quest.id }),
+    )
+    expect(issues.filter((issue) => issue.code === 'missing_turn_in_dialogue')).toHaveLength(0)
+  })
+
+  it('does not warn about missing turn-in dialogue when start dialogue is set', () => {
+    const data = makeData()
+    const quest = data.quests[0]
+    const dialogueKey = 'quest_start_dialogue_ok'
+    const modified: EditorData = {
+      ...data,
+      dialogues: [
+        ...data.dialogues,
+        {
+          id: 'dlg-start-ok',
+          key: dialogueKey,
+          speaker_external_id: null,
+          source_path: null,
+          source_metadata: {},
+        },
+      ],
+      quests: data.quests.map((item) =>
+        item.id === quest.id
+          ? { ...item, start_dialogue_id: dialogueKey, turn_in_dialogue_id: null }
+          : item),
+    }
+    const issues = validateQuestline(modified, lineOf(data), t)
+    expect(issues.filter((issue) => issue.entityId === quest.id && issue.code === 'missing_start_dialogue')).toHaveLength(0)
+    expect(issues.filter((issue) => issue.code === 'missing_turn_in_dialogue')).toHaveLength(0)
+  })
+
+  it('warns when start dialogue key is unresolved', () => {
+    const data = makeData()
+    const quest = data.quests[0]
+    const modified: EditorData = {
+      ...data,
+      quests: data.quests.map((item) =>
+        item.id === quest.id ? { ...item, start_dialogue_id: 'missing_start_dialogue_key' } : item),
+    }
+    const issues = validateQuestline(modified, lineOf(data), t)
+    expect(issues).toContainEqual(
+      expect.objectContaining({ code: 'unresolved_start_dialogue', severity: 'warning', entityId: quest.id }),
+    )
+  })
+
   it('flags duplicate quest keys within a questline', () => {
     const data = makeData()
     const first = data.quests[0]
@@ -59,6 +114,33 @@ describe('validateQuestline', () => {
     }
     const issues = validateQuestline(modified, lineOf(data), t)
     expect(issues).toContainEqual(expect.objectContaining({ code: 'duplicate_quest_key', entityId: second.id }))
+  })
+
+  it('flags duplicate quest keys across questlines', () => {
+    const data = makeData()
+    expect(data.questlines.length).toBeGreaterThan(1)
+    const line = data.questlines[0]
+    const otherLine = data.questlines[1]
+    const localQuest = data.quests.find((quest) => quest.questline_id === line.id)!
+    const foreignQuest = data.quests.find((quest) => quest.questline_id === otherLine.id)!
+    const modified: EditorData = {
+      ...data,
+      quests: data.quests.map((item) => (item.id === localQuest.id ? { ...item, key: foreignQuest.key } : item)),
+    }
+    const issues = validateQuestline(modified, line, t)
+    expect(issues).toContainEqual(expect.objectContaining({ code: 'duplicate_quest_key', entityId: localQuest.id }))
+  })
+
+  it('warns when a quest key is missing the line scope prefix', () => {
+    const data = makeData()
+    const line = lineOf(data)
+    const quest = data.quests.find((item) => item.questline_id === line.id)!
+    const modified: EditorData = {
+      ...data,
+      quests: data.quests.map((item) => (item.id === quest.id ? { ...item, key: 'q01_legacy_unscoped' } : item)),
+    }
+    const issues = validateQuestline(modified, line, t)
+    expect(issues).toContainEqual(expect.objectContaining({ code: 'unscoped_quest_key', severity: 'warning', entityId: quest.id }))
   })
 
   it('flags a quest with no steps', () => {

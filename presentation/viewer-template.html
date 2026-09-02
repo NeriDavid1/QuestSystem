@@ -147,14 +147,22 @@
     .questline-card:active { transform: translateY(-1px); }
 
     .card-icon {
-      width: 52px;
-      height: 52px;
+      width: 64px;
+      height: 64px;
       border-radius: 14px;
       display: grid;
       place-items: center;
       font-size: 1.6rem;
       background: color-mix(in srgb, var(--card-accent) 18%, transparent);
       margin-bottom: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .card-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .card-title { font-size: 1.15rem; font-weight: 700; margin-bottom: .25rem; }
@@ -184,8 +192,8 @@
 
     .questline-layout {
       display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 1.5rem;
+      grid-template-columns: 260px 1fr;
+      gap: 1.25rem;
       align-items: start;
     }
 
@@ -197,93 +205,95 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.5rem;
+      padding: 1.1rem;
       overflow: hidden;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      display: flex;
+      flex-direction: column;
     }
 
-    .chain-header { margin-bottom: 1.25rem; }
-    .chain-header h2 { font-size: 1.25rem; margin-bottom: .35rem; }
-    .chain-header p { color: var(--muted); font-size: .9rem; line-height: 1.55; }
+    .chain-header { margin-bottom: 1rem; flex-shrink: 0; }
+    .chain-header h2 { font-size: 1.05rem; margin-bottom: .35rem; }
+    .chain-header p { color: var(--muted); font-size: .8rem; line-height: 1.45; }
 
     .chain-scroll {
-      overflow-x: auto;
-      padding-bottom: .5rem;
+      overflow-y: auto;
+      flex: 1;
+      min-height: 0;
       -webkit-overflow-scrolling: touch;
     }
 
     .chain {
       display: flex;
-      align-items: center;
-      gap: 0;
-      min-width: min-content;
-      padding: .5rem 0;
-    }
-
-    .chain-arrow {
-      color: var(--muted);
-      font-size: 1.1rem;
-      padding: 0 .15rem;
-      flex-shrink: 0;
-      opacity: .5;
+      flex-direction: column;
+      gap: .4rem;
     }
 
     .quest-node {
       --node-accent: var(--accent);
-      flex-shrink: 0;
-      width: 148px;
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      width: 100%;
       background: var(--surface2);
-      border: 2px solid var(--border);
-      border-radius: 14px;
-      padding: 1rem .85rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .55rem .65rem;
       cursor: pointer;
-      transition: all .2s;
-      text-align: center;
+      transition: border-color .15s, background .15s, box-shadow .15s;
+      text-align: right;
       color: inherit;
       font: inherit;
     }
 
     .quest-node:hover {
       border-color: var(--node-accent);
-      transform: scale(1.03);
     }
 
     .quest-node.selected {
       border-color: var(--node-accent);
       background: color-mix(in srgb, var(--node-accent) 12%, var(--surface2));
-      box-shadow: 0 0 0 3px color-mix(in srgb, var(--node-accent) 25%, transparent);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--node-accent) 22%, transparent);
     }
 
-    .quest-node.draft { opacity: .72; }
-    .quest-node.draft .node-status { display: inline-block; }
+    .quest-node.draft { opacity: .75; }
 
-    .node-level {
+    .quest-node-num {
       font-size: .7rem;
-      font-weight: 600;
-      color: var(--node-accent);
-      margin-bottom: .4rem;
+      font-weight: 700;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+      min-width: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .quest-node-body {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .15rem;
     }
 
     .node-name {
-      font-size: .82rem;
+      font-size: .8rem;
       font-weight: 600;
-      line-height: 1.35;
-      margin-bottom: .5rem;
-      min-height: 2.6em;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .node-xp {
-      font-size: .72rem;
-      color: var(--muted);
-      font-family: "JetBrains Mono", monospace;
+    .node-level {
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--node-accent);
     }
 
     .node-status {
-      display: none;
-      font-size: .65rem;
-      margin-top: .35rem;
+      font-size: .62rem;
       color: #f4a261;
     }
 
@@ -291,11 +301,8 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.5rem;
-      position: sticky;
-      top: 100px;
-      max-height: calc(100vh - 120px);
-      overflow-y: auto;
+      padding: 1.35rem 1.5rem;
+      min-height: 320px;
     }
 
     .detail-empty {
@@ -324,8 +331,11 @@
     }
 
     .reward-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
       font-size: .8rem;
-      padding: .4rem .75rem;
+      padding: .35rem .7rem .35rem .4rem;
       border-radius: 8px;
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -334,6 +344,13 @@
     .reward-chip.xp {
       border-color: rgba(82,183,136,.4);
       color: #52b788;
+      padding: .4rem .75rem;
+    }
+
+    .reward-chip .list-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
     }
 
     .steps-title {
@@ -350,42 +367,188 @@
       gap: 0;
     }
 
+    .npc-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: .85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .npc-hero-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      padding: .85rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      text-align: right;
+      transition: border-color .15s, box-shadow .15s;
+    }
+
+    .npc-hero-btn:hover,
+    .npc-hero-btn.open {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 20%, transparent);
+    }
+
+    .npc-hero-photo {
+      width: 88px;
+      height: 88px;
+      border-radius: 14px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .npc-hero-photo .list-thumb,
+    .npc-hero-photo .npc-hero-photo-inner,
+    .npc-hero-photo > div {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 14px;
+    }
+
+    .npc-hero-meta { flex: 1; min-width: 0; }
+    .npc-hero-meta strong { display: block; font-size: 1.05rem; margin-bottom: .2rem; }
+    .npc-hero-meta span { display: block; font-size: .8rem; color: var(--muted); }
+    .npc-hero-hint { font-size: .72rem; color: var(--accent); margin-top: .45rem; }
+
+    .story-block {
+      background: rgba(0,0,0,.18);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+    }
+
+    .story-block.collapsed { display: none; }
+
+    .story-block-title {
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: .75rem;
+    }
+
+    .close-block {
+      margin-top: 1.25rem;
+      background: rgba(244,162,97,.08);
+      border: 1px solid rgba(244,162,97,.35);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+    }
+
+    .close-block-header {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: .65rem;
+    }
+
+    .close-block-header .story-block-title {
+      margin-bottom: .2rem;
+      color: #f4a261;
+    }
+
+    .close-block-badge {
+      font-size: .68rem;
+      color: var(--muted);
+    }
+
+    .close-block .dialogue-block {
+      margin-top: .35rem;
+    }
+
+    .thumb,
+    .thumb-fallback {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+
+    .thumb-fallback {
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--muted);
+      font-size: .65rem;
+      text-align: center;
+      padding: .25rem;
+      line-height: 1.2;
+    }
+
+    .list-thumb {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+
     .step-item {
       display: flex;
       gap: .85rem;
       position: relative;
-      padding-bottom: 1.1rem;
+      padding-bottom: 1rem;
     }
 
     .step-item:not(:last-child)::before {
       content: "";
       position: absolute;
-      right: 17px;
-      top: 36px;
+      right: 27px;
+      top: 56px;
       bottom: 0;
       width: 2px;
       background: var(--border);
     }
 
-    .step-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      display: grid;
-      place-items: center;
-      font-size: 1rem;
+    .step-media {
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
       flex-shrink: 0;
       z-index: 1;
     }
 
+    .step-photo {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .step-photo.sm {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+
     .step-body { flex: 1; min-width: 0; }
+
+    .step-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .85rem .95rem;
+    }
 
     .step-type {
       font-weight: 600;
       font-size: .88rem;
-      margin-bottom: .2rem;
+      margin-bottom: .25rem;
     }
 
     .step-desc {
@@ -404,19 +567,31 @@
       display: inline-block;
     }
 
-    .story-block {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem 1.1rem;
-      margin-bottom: 1.25rem;
+    .step-photos-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-top: .65rem;
     }
 
-    .story-block-title {
-      font-size: .75rem;
-      font-weight: 600;
+    .step-photo-label {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      align-items: center;
+      max-width: 88px;
+    }
+
+    .step-photo-label .step-photo {
+      width: 72px;
+      height: 72px;
+    }
+
+    .step-photo-label span {
+      font-size: .65rem;
       color: var(--muted);
-      margin-bottom: .75rem;
+      text-align: center;
+      line-height: 1.25;
     }
 
     .dialogue-block {
@@ -538,6 +713,244 @@
       font-style: italic;
     }
 
+    /* Minigame lookalike mocks */
+    .mg-mock { margin-top: .85rem; }
+    .mg-mock-badge {
+      display: block;
+      margin-bottom: .45rem;
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .mg-mock-parchment {
+      position: relative;
+      padding: 1rem 1.1rem .9rem;
+      border: 4px solid #5c3d2e;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #f3e4c8 0%, #e8d4a8 100%);
+      color: #4a2f22;
+    }
+    .mg-mock-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: grid;
+      place-items: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .mg-mock-close.brown { background: #6b442f; }
+    .mg-mock-close.red { background: #d64545; }
+    .mg-mock-prompt {
+      text-align: center;
+      font-size: .88rem;
+      font-weight: 600;
+      margin: .2rem 1.4rem .85rem;
+      line-height: 1.4;
+    }
+    .mg-mock-slots {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .45rem;
+      margin-bottom: .85rem;
+    }
+    .mg-mock-slot {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #d7c29a;
+      border: 1px solid #b89a6a;
+    }
+    .mg-mock-word-slot {
+      width: auto;
+      min-width: 46px;
+      padding: 0 .45rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .7rem;
+      font-weight: 700;
+    }
+    .mg-mock-word-slot.filled {
+      background: #e8d7b0;
+      color: #3d2a1c;
+    }
+    .mg-mock-letter-pool,
+    .mg-mock-word-bank {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .45rem;
+    }
+    .mg-mock-letter-tile {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid #cfc3a8;
+      color: #222;
+      font-size: .95rem;
+      font-weight: 700;
+      text-transform: lowercase;
+    }
+    .mg-mock-word-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 58px;
+      padding: .45rem .7rem;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #cfc3a8;
+      color: #222;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .mg-mock-match-frame {
+      position: relative;
+      padding: 1rem .9rem .85rem;
+      border: 5px solid #9eb6d4;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #2a3348 0%, #1a2233 100%);
+    }
+    .mg-mock-match-body {
+      display: grid;
+      grid-template-columns: auto 24px 1fr;
+      gap: .55rem;
+      align-items: center;
+      min-height: 120px;
+    }
+    .mg-mock-match-left,
+    .mg-mock-match-right {
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+    }
+    .mg-mock-match-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: #fff;
+      color: #111;
+      font-weight: 700;
+    }
+    .mg-mock-match-mid { position: relative; min-height: 110px; }
+    .mg-mock-match-line {
+      position: absolute;
+      top: 14px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #3ecf8e;
+      border-radius: 2px;
+      transform: rotate(12deg);
+      transform-origin: left center;
+      box-shadow: 0 0 6px rgba(62, 207, 142, .7);
+    }
+    .mg-mock-match-card {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .45rem .55rem;
+      border-radius: 8px;
+      background: #fff;
+      color: #111;
+      font-weight: 600;
+      font-size: .8rem;
+    }
+    .mg-mock-match-word {
+      flex: 1;
+      font-family: "JetBrains Mono", monospace;
+      letter-spacing: .04em;
+    }
+    .mg-mock-match-icon-fallback {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      background: #d9e2f0;
+    }
+    .mg-mock-speak-hero {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1;
+      margin: .35rem 0 .35rem;
+      color: #3d2a1c;
+    }
+    .mg-mock-speak-chip {
+      display: flex;
+      width: fit-content;
+      margin: 0 auto .55rem;
+      padding: .2rem .7rem;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #cfc3a8;
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .mg-mock-speak-btn {
+      display: block;
+      margin: 0 auto;
+      min-width: 110px;
+      padding: .55rem 1.2rem;
+      border: none;
+      border-radius: 999px;
+      background: #3b82f6;
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: default;
+    }
+    .mg-mock-draw-canvas {
+      display: grid;
+      place-items: center;
+      min-height: 110px;
+      margin: .35rem 0 .7rem;
+      border: 2px dashed #b89a6a;
+      border-radius: 12px;
+      background: rgba(255,255,255,.35);
+    }
+    .mg-mock-draw-letter {
+      font-size: 4rem;
+      font-weight: 800;
+      color: transparent;
+      -webkit-text-stroke: 2px #6b442f;
+    }
+    .mg-mock-draw-actions {
+      display: flex;
+      justify-content: center;
+      gap: .55rem;
+    }
+    .mg-mock-draw-btn {
+      padding: .45rem .9rem;
+      border-radius: 10px;
+      border: 1px solid #b89a6a;
+      background: #fff;
+      color: #4a2f22;
+      font: inherit;
+      font-weight: 600;
+      cursor: default;
+    }
+    .mg-mock-draw-btn.primary {
+      background: #6b442f;
+      border-color: #6b442f;
+      color: #fff;
+    }
+
     .draft-notice {
       margin-top: 1rem;
       padding: .75rem 1rem;
@@ -571,7 +984,8 @@
     @media (max-width: 600px) {
       main { padding: 1rem; }
       header { padding: 1rem; }
-      .quest-node { width: 130px; }
+      .chain-panel { position: static; max-height: none; }
+      .npc-hero-photo { width: 72px; height: 72px; }
     }
   </style>
 </head>
@@ -615,7 +1029,7 @@
       reach_location: "📍",
     };
 
-    let state = { view: "home", questlineId: null, questId: null };
+    let state = { view: "home", questlineId: null, questId: null, dialogueOpen: true };
 
     function applyDataMeta() {
       UI = DATA.locale?.ui || {};
@@ -644,31 +1058,61 @@
         apikey: anonKey,
         Authorization: `Bearer ${anonKey}`,
         Accept: "application/json",
+        "Content-Type": "application/json",
       };
       const lineUrl = `${url}/rest/v1/questlines?status=eq.published&select=id,key,display_name,theme,default_giver_external_id,level_min,level_max`;
       const revisionUrl = `${url}/rest/v1/questline_revisions?status=eq.published&select=questline_id,version,document,validation_summary&order=version.desc`;
-      const [lineResponse, revisionResponse] = await Promise.all([
+      const extrasUrl = `${url}/rest/v1/rpc/get_published_viewer_extras`;
+      const [lineResponse, revisionResponse, extrasResponse] = await Promise.all([
         fetch(lineUrl, { headers }),
         fetch(revisionUrl, { headers }),
+        fetch(extrasUrl, { method: "POST", headers, body: "{}" }),
       ]);
       if (!lineResponse.ok || !revisionResponse.ok) {
         throw new Error(`Published viewer request failed (${lineResponse.status}/${revisionResponse.status})`);
       }
       const lines = await lineResponse.json();
       const revisions = await revisionResponse.json();
+      let extras = { dialogues: {}, minigames: {} };
+      if (extrasResponse.ok) {
+        try {
+          extras = await extrasResponse.json() || extras;
+        } catch (_) {
+          /* keep empty extras */
+        }
+      }
       const latestByLine = new Map();
       for (const revision of revisions) {
         if (!latestByLine.has(revision.questline_id)) latestByLine.set(revision.questline_id, revision);
+      }
+      const publishedDialogues = { ...(YAML_DATA.dialogues || {}) };
+      const publishedMinigames = { ...(extras.minigames || {}) };
+      if (extras.dialogues && typeof extras.dialogues === "object") {
+        Object.assign(publishedDialogues, extras.dialogues);
+      }
+      for (const revision of latestByLine.values()) {
+        const doc = revision.document || {};
+        if (doc.dialogues && typeof doc.dialogues === "object") {
+          Object.assign(publishedDialogues, doc.dialogues);
+        }
+        if (doc.minigames && typeof doc.minigames === "object") {
+          Object.assign(publishedMinigames, doc.minigames);
+        }
       }
       const publishedQuestlines = lines
         .map((line) => {
           const revision = latestByLine.get(line.id);
           if (!revision?.document) return null;
-          return adaptPublishedDocument(line, revision.document);
+          return adaptPublishedDocument(line, revision.document, publishedMinigames);
         })
         .filter(Boolean);
       if (!publishedQuestlines.length) return null;
-      return { ...YAML_DATA, questlines: publishedQuestlines };
+      return {
+        ...YAML_DATA,
+        dialogues: publishedDialogues,
+        publishedMinigames,
+        questlines: publishedQuestlines,
+      };
     }
 
     function staticQuestFor(lineKey, questKey) {
@@ -676,20 +1120,63 @@
       return line?.quests?.find((candidate) => candidate.id === questKey) || null;
     }
 
-    function adaptPublishedDocument(line, document) {
+    function briefFromMinigameRecord(record) {
+      if (!record || typeof record !== "object") return null;
+      const params = record.params && typeof record.params === "object" ? record.params : {};
+      const tasks = Array.isArray(record.tasks)
+        ? record.tasks.filter((t) => typeof t === "string" && t)
+        : [];
+      let instruction = typeof record.instruction === "string" ? record.instruction : "";
+      if (!instruction && typeof params.prompt === "string" && params.prompt) {
+        instruction = params.prompt;
+      }
+      if (!instruction && Array.isArray(params.englishWordsInOrder) && params.englishWordsInOrder.length) {
+        instruction = params.englishWordsInOrder.join(" ");
+      }
+      if (!instruction && typeof params.targetWord === "string" && params.targetWord) {
+        instruction = params.targetWord;
+      }
+      if (!instruction && typeof params.targetPhrase === "string" && params.targetPhrase) {
+        instruction = params.targetPhrase;
+      }
+      const hasContent = instruction || tasks.length || record.target || record.variant || record.success
+        || (params && Object.keys(params).length > 0);
+      if (!hasContent) return null;
+      return {
+        minigame_id: record.minigame_id || null,
+        instruction: instruction || null,
+        tasks,
+        target: record.target || (Array.isArray(params.englishWordsInOrder) ? params.englishWordsInOrder.join(" ") : null),
+        variant: record.variant || null,
+        success: record.success || null,
+        params,
+      };
+    }
+
+    function adaptPublishedDocument(line, document, publishedMinigames = {}) {
       const lineKey = document.key || line.key;
       const staticLine = YAML_DATA.questlines?.find((candidate) => candidate.id === lineKey);
       const npcId = document.default_giver_external_id || staticLine?.npcId || null;
       const npc = (npcId && YAML_DATA.npcs?.[npcId]) || staticLine?.npc || {};
+      const docMinigames = {
+        ...(publishedMinigames || {}),
+        ...((document.minigames && typeof document.minigames === "object") ? document.minigames : {}),
+      };
       const rawQuests = Array.isArray(document.quests) ? document.quests : [];
       const quests = rawQuests.map((quest) => {
         const staticQuest = staticQuestFor(lineKey, quest.key);
         const steps = (quest.steps || []).map((step) => {
           const flat = { type: step.type, ...(step.payload || {}) };
+          const instanceKey = flat.instance_id || flat.instance_key;
           const staticStep = staticQuest?.steps?.find((candidate) =>
-            (candidate.instance_id || candidate.instance_key) === (flat.instance_id || flat.instance_key)
+            (candidate.instance_id || candidate.instance_key) === instanceKey
           );
-          if (staticStep?.minigame_brief) flat.minigame_brief = staticStep.minigame_brief;
+          if (staticStep?.minigame_brief) {
+            flat.minigame_brief = staticStep.minigame_brief;
+          } else if (instanceKey && docMinigames[instanceKey]) {
+            const brief = briefFromMinigameRecord(docMinigames[instanceKey]);
+            if (brief) flat.minigame_brief = brief;
+          }
           return flat;
         });
         const rewards = Array.isArray(quest.rewards) ? quest.rewards : [];
@@ -699,6 +1186,12 @@
           level: quest.level_required,
           prerequisite: quest.prerequisites?.[0] || null,
           summary: staticQuest?.summary || quest.summary || "",
+          giver_npc: quest.giver_external_id || quest.giver_npc || staticQuest?.giver_npc || npcId,
+          wait_for_npc_turn_in: Boolean(
+            quest.wait_for_npc_turn_in ?? staticQuest?.wait_for_npc_turn_in ?? false
+          ),
+          start_dialogue_id: quest.start_dialogue_id || staticQuest?.start_dialogue_id || null,
+          turn_in_dialogue_id: quest.turn_in_dialogue_id || staticQuest?.turn_in_dialogue_id || null,
           status: quest.status || "published",
           rewards: {
             xp: rewards.filter((reward) => reward.reward_type === "xp").reduce((sum, reward) => sum + (reward.xp_amount || 0), 0),
@@ -711,10 +1204,18 @@
         };
       });
       const levels = quests.map((quest) => Number(quest.level || 0)).filter((level) => Number.isFinite(level));
+      const npcPayload = {
+        id: npcId,
+        name: npc.name || npcId || "",
+        title: npc.title || "",
+        location: npc.location || "",
+        description: npc.description || "",
+      };
+      if (npc.image) npcPayload.image = npc.image;
       return {
         id: lineKey,
         folder: lineKey,
-        displayName: staticLine?.displayName || line.display_name || lineKey,
+        displayName: staticLine?.displayName || document.display_name || line.display_name || lineKey,
         theme: staticLine?.theme || document.theme || line.theme || "",
         levelRange: [
           line.level_min ?? (levels.length ? Math.min(...levels) : 1),
@@ -722,13 +1223,7 @@
         ],
         questCount: quests.length,
         npcId,
-        npc: {
-          id: npcId,
-          name: npc.name || npcId || "",
-          title: npc.title || "",
-          location: npc.location || "",
-          description: npc.description || "",
-        },
+        npc: npcPayload,
         quests,
       };
     }
@@ -746,11 +1241,54 @@
     }
 
     function locationName(id) {
-      return DATA.locations?.[id] || id;
+      return DATA.locations?.[id] || DATA.areas?.[id]?.name || id;
+    }
+
+    function interactableName(id) {
+      return DATA.interactables?.[id]?.name || id;
     }
 
     function enemyName(id) {
       return DATA.enemies?.[id] || id;
+    }
+
+    function entryImage(kind, id) {
+      if (!id) return null;
+      const bucket = DATA[kind];
+      return bucket?.[id]?.image || null;
+    }
+
+    function catalogThumb(imagePath, label, className = "list-thumb") {
+      const title = safeRichText(label || "");
+      const fallback = `<span class="thumb-fallback" title="${title}">${safeRichText(UI.no_image || "—")}</span>`;
+      if (!imagePath) {
+        return `<div class="${className}">${fallback}</div>`;
+      }
+      return `<div class="${className}"><img class="thumb" src="${safeRichText(imagePath)}" alt="${title}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling&&(this.nextElementSibling.hidden=false)" /><span class="thumb-fallback" hidden>${safeRichText(UI.no_image || "—")}</span></div>`;
+    }
+
+    function npcThumb(id, className = "list-thumb") {
+      return catalogThumb(entryImage("npcs", id), npcName(id), className);
+    }
+
+    function itemThumb(id, className = "list-thumb") {
+      return catalogThumb(entryImage("items", id), itemName(id), className);
+    }
+
+    function areaThumb(id, className = "list-thumb") {
+      return catalogThumb(entryImage("areas", id), locationName(id), className);
+    }
+
+    function minigameThumb(id, className = "list-thumb") {
+      return catalogThumb(entryImage("minigames", id), minigameName(id), className);
+    }
+
+    function interactableThumb(id, className = "list-thumb") {
+      return catalogThumb(entryImage("interactables", id), interactableName(id), className);
+    }
+
+    function photoLabel(thumbHtml, label) {
+      return `<div class="step-photo-label">${thumbHtml}<span>${safeRichText(label || "")}</span></div>`;
     }
 
     function getDialogue(id) {
@@ -790,8 +1328,15 @@
     }
 
     function questIntroDialogueId(quest) {
+      if (quest.start_dialogue_id) return quest.start_dialogue_id;
       const talk = (quest.steps || []).find((s) => s.type === "talk_to_npc" && s.dialogue_id);
       return talk?.dialogue_id || null;
+    }
+
+    function questCloseDialogueId(quest) {
+      if (quest.turn_in_dialogue_id) return quest.turn_in_dialogue_id;
+      const returns = (quest.steps || []).filter((s) => s.type === "return_to_npc" && s.dialogue_id);
+      return returns.length ? returns[returns.length - 1].dialogue_id : null;
     }
 
     function stepNpcId(step) {
@@ -802,7 +1347,7 @@
       if (step.type !== "play_minigame") return "";
       const brief = step.minigame_brief;
       if (!brief) {
-        return `<div class="minigame-block"><div class="minigame-missing">${UI.minigame_missing || "תיאור טרם נכתב."} (<code>${step.minigame_id}</code>)</div></div>`;
+        return `<div class="minigame-block"><div class="minigame-missing">${UI.minigame_missing || "תיאור טרם נכתב."} (<code>${step.minigame_id}</code>)</div></div>${renderMinigameMockHtml(step)}`;
       }
       const tasks = (brief.tasks || [])
         .map((t) => `<li class="minigame-task">${safeRichText(t)}</li>`)
@@ -823,7 +1368,127 @@
           ${brief.instruction ? `<div class="minigame-instruction">${safeRichText(brief.instruction)}</div>` : ""}
           ${tasks ? `<ul class="minigame-tasks">${tasks}</ul>` : ""}
           ${meta.length ? `<div class="minigame-meta">${meta.join("")}</div>` : ""}
+          ${renderMinigameMockHtml(step)}
         </div>`;
+    }
+
+    function mgHashSeed(seed) {
+      let h = 2166136261;
+      const s = String(seed || "mock");
+      for (let i = 0; i < s.length; i++) {
+        h ^= s.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      return h >>> 0;
+    }
+
+    function mgStableShuffle(items, seed) {
+      const arr = items.slice();
+      let state = mgHashSeed(seed);
+      for (let i = arr.length - 1; i > 0; i--) {
+        state = (Math.imul(state, 1664525) + 1013904223) >>> 0;
+        const j = state % (i + 1);
+        const tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
+      }
+      return arr;
+    }
+
+    function mgGapify(fullWord, missingIndices) {
+      const chars = String(fullWord).split("");
+      (missingIndices || []).forEach((idx) => {
+        if (idx >= 0 && idx < chars.length) chars[idx] = "_";
+      });
+      return chars.join("");
+    }
+
+    function mgBuildLetterPool(targetWord, extraCount, custom, seed) {
+      const letters = String(targetWord || "").toLowerCase().split("").filter(Boolean);
+      const customs = (custom || []).map((c) => String(c).toLowerCase()).filter((c) => c.length === 1);
+      const pool = letters.concat(customs);
+      const needed = Math.max(0, (extraCount || 0) - customs.length);
+      const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+      const fillers = alphabet.filter((ch) => !letters.includes(ch));
+      pool.push(...mgStableShuffle(fillers.length ? fillers : alphabet, seed + "-fill").slice(0, needed));
+      return mgStableShuffle(pool, seed);
+    }
+
+    function mgParchment(inner) {
+      return `<div class="mg-mock-parchment"><span class="mg-mock-close brown">×</span>${inner}</div>`;
+    }
+
+    function renderMinigameMockHtml(step) {
+      const brief = step.minigame_brief || {};
+      const params = brief.params || {};
+      const id = brief.minigame_id || step.minigame_id || "";
+      const seed = brief.instance_id || step.instance_id || step.minigame_id || "mock";
+      const prompt = params.prompt || brief.instruction || "";
+      let body = "";
+
+      if (id === "letter_ordering") {
+        const targetWord = params.targetWord || brief.target || "word";
+        const pool = mgBuildLetterPool(targetWord, params.extraDistractorCount || 2, params.customDistractors || [], seed);
+        const slots = Array.from({ length: Math.max(1, String(targetWord).length) }, () => `<span class="mg-mock-slot"></span>`).join("");
+        const tiles = pool.map((ch) => `<span class="mg-mock-letter-tile">${safeRichText(ch)}</span>`).join("");
+        body = mgParchment(`
+          <div class="mg-mock-prompt">${safeRichText(prompt || "…")}</div>
+          <div class="mg-mock-slots">${slots}</div>
+          <div class="mg-mock-letter-pool">${tiles}</div>`);
+      } else if (id === "word_ordering") {
+        const words = Array.isArray(params.englishWordsInOrder) ? params.englishWordsInOrder : [];
+        const pre = new Set(Array.isArray(params.preFilledIndices) ? params.preFilledIndices : []);
+        const distractors = Array.isArray(params.distractorWords) ? params.distractorWords : [];
+        const bank = mgStableShuffle(words.filter((_, i) => !pre.has(i)).concat(distractors), seed);
+        const slots = (words.length ? words : ["…"]).map((w, i) => {
+          const filled = pre.has(i);
+          return `<span class="mg-mock-slot mg-mock-word-slot ${filled ? "filled" : ""}">${filled ? safeRichText(String(w).toUpperCase()) : ""}</span>`;
+        }).join("");
+        const chips = bank.map((w) => `<span class="mg-mock-word-chip">${safeRichText(String(w).toUpperCase())}</span>`).join("");
+        body = mgParchment(`
+          <div class="mg-mock-prompt">${safeRichText(prompt || "…")}</div>
+          <div class="mg-mock-slots">${slots}</div>
+          <div class="mg-mock-word-bank">${chips}</div>`);
+      } else if (id === "word_matching") {
+        const letters = Array.isArray(params.letters) ? params.letters : [];
+        const tasks = Array.isArray(params.wordTasks) ? params.wordTasks : [];
+        const left = letters.map((l) => `<span class="mg-mock-match-letter">${safeRichText(l.value || "")}</span>`).join("");
+        const right = tasks.map((task) => {
+          const gap = mgGapify(task.fullWord || "", task.missingIndices || []);
+          return `<div class="mg-mock-match-card"><span class="mg-mock-match-word">${safeRichText(gap)}</span><span class="mg-mock-match-icon-fallback"></span></div>`;
+        }).join("");
+        const line = letters.length && tasks.length ? `<div class="mg-mock-match-line"></div>` : "";
+        body = `<div class="mg-mock-match-frame"><span class="mg-mock-close red">×</span>
+          <div class="mg-mock-match-body">
+            <div class="mg-mock-match-left">${left}</div>
+            <div class="mg-mock-match-mid">${line}</div>
+            <div class="mg-mock-match-right">${right}</div>
+          </div></div>`;
+      } else if (id === "speak_aloud") {
+        const words = Array.isArray(params.targetWords) ? params.targetWords : [];
+        const phrase = params.targetPhrase || words[0] || brief.target || "…";
+        const chip = words[0] && String(words[0]).toLowerCase() !== String(phrase).toLowerCase()
+          ? `<div class="mg-mock-speak-chip">${safeRichText(words[0])}</div>` : "";
+        body = mgParchment(`
+          <div class="mg-mock-speak-hero">${safeRichText(phrase)}</div>
+          ${chip}
+          <div class="mg-mock-prompt">${safeRichText(prompt || "…")}</div>
+          <button type="button" class="mg-mock-speak-btn" disabled>דבר</button>`);
+      } else if (id === "letter_drawing") {
+        const letter = params.letter || "A";
+        body = mgParchment(`
+          <div class="mg-mock-draw-canvas"><span class="mg-mock-draw-letter">${safeRichText(String(letter).toUpperCase())}</span></div>
+          <div class="mg-mock-draw-actions">
+            <button type="button" class="mg-mock-draw-btn" disabled>נקה</button>
+            <button type="button" class="mg-mock-draw-btn primary" disabled>סיום</button>
+          </div>`);
+      } else if (id) {
+        body = mgParchment(`<div class="mg-mock-prompt">${safeRichText(prompt || id)}</div>`);
+      } else {
+        return "";
+      }
+
+      return `<div class="mg-mock"><span class="mg-mock-badge">${UI.minigame_preview_only || "תצוגת מיני-משחק (לא אינטראקטיבי)"}</span>${body}</div>`;
     }
 
     function themeFor(id) {
@@ -913,7 +1578,7 @@
     }
 
     function goHome() {
-      state = { view: "home", questlineId: null, questId: null };
+      state = { view: "home", questlineId: null, questId: null, dialogueOpen: true };
       document.getElementById("view-home").classList.remove("hidden");
       document.getElementById("view-questline").classList.add("hidden");
       renderBreadcrumb();
@@ -921,7 +1586,7 @@
     }
 
     function openQuestline(id, questId = null) {
-      state = { view: "questline", questlineId: id, questId };
+      state = { view: "questline", questlineId: id, questId, dialogueOpen: true };
       document.getElementById("view-home").classList.add("hidden");
       document.getElementById("view-questline").classList.remove("hidden");
       renderBreadcrumb();
@@ -930,6 +1595,7 @@
 
     function selectQuest(questId) {
       state.questId = questId;
+      state.dialogueOpen = true;
       renderBreadcrumb();
       renderQuestline();
     }
@@ -940,9 +1606,12 @@
         .map((ql) => {
           const t = themeFor(ql.id);
           const [minLv, maxLv] = ql.levelRange || [];
+          const photo = ql.npc?.image
+            ? `<img src="${safeRichText(ql.npc.image)}" alt="${safeRichText(ql.npc.name || "")}" loading="lazy" />`
+            : t.icon;
           return `
             <button type="button" class="questline-card" data-id="${ql.id}" style="--card-accent:${t.accent}">
-              <div class="card-icon">${t.icon}</div>
+              <div class="card-icon">${photo}</div>
               <div class="card-title">${ql.displayName}</div>
               <div class="card-npc">${ql.npc.name} · ${ql.npc.title}</div>
               <p class="card-theme">${ql.theme}</p>
@@ -960,6 +1629,40 @@
       });
     }
 
+    function stepPhotosHtml(step) {
+      const photos = [];
+      switch (step.type) {
+        case "play_minigame":
+          if (step.world_object_id) photos.push(photoLabel(interactableThumb(step.world_object_id, "step-photo"), interactableName(step.world_object_id)));
+          if (step.reward_item_id) photos.push(photoLabel(itemThumb(step.reward_item_id, "step-photo"), itemName(step.reward_item_id)));
+          break;
+        case "deliver_item":
+          if (step.npc_id) photos.push(photoLabel(npcThumb(step.npc_id, "step-photo"), npcName(step.npc_id)));
+          break;
+        default:
+          break;
+      }
+      if (!photos.length) return "";
+      return `<div class="step-photos-row">${photos.join("")}</div>`;
+    }
+
+    function primaryStepThumb(step) {
+      switch (step.type) {
+        case "talk_to_npc":
+        case "return_to_npc":
+          return npcThumb(step.npc_id, "step-photo");
+        case "reach_location":
+          return areaThumb(step.location_id, "step-photo");
+        case "play_minigame":
+          return minigameThumb(step.minigame_id, "step-photo");
+        case "collect_item":
+        case "deliver_item":
+          return itemThumb(step.item_id, "step-photo");
+        default:
+          return `<div class="step-photo"><span class="thumb-fallback">${STEP_ICONS[step.type] || "•"}</span></div>`;
+      }
+    }
+
     function renderQuestDetail(ql, quest) {
       if (!quest) {
         return `
@@ -970,8 +1673,10 @@
       }
 
       const t = themeFor(ql.id);
+      const giverId = quest.giver_npc || ql.npcId;
+      const giver = DATA.npcs?.[giverId] || ql.npc || {};
       const items = (quest.rewards?.items || [])
-        .map((i) => `<span class="reward-chip">${itemName(i.id)} ×${i.amount}</span>`)
+        .map((i) => `<span class="reward-chip">${itemThumb(i.id)} ${itemName(i.id)} ×${i.amount}</span>`)
         .join("");
       const xp = quest.rewards?.xp
         ? `<span class="reward-chip xp">${quest.rewards.xp} ${UI.xp || "נק׳ ניסיון"}</span>`
@@ -979,35 +1684,55 @@
 
       const steps = (quest.steps || [])
         .filter((s) => s && s.type)
-        .map(
-          (step, i) => {
-            const dialogueId = step.dialogue_id || null;
-            const dialogueHtml = dialogueId
-              ? renderDialogueHtml(dialogueId, stepNpcId(step))
-              : "";
-            const minigameHtml = step.type === "play_minigame"
-              ? renderMinigameBriefHtml(step)
-              : "";
-            return `
+        .map((step, i) => {
+          const dialogueId = step.dialogue_id || null;
+          const dialogueHtml = dialogueId
+            ? renderDialogueHtml(dialogueId, stepNpcId(step))
+            : "";
+          const minigameHtml = step.type === "play_minigame"
+            ? renderMinigameBriefHtml(step)
+            : "";
+          return `
           <li class="step-item">
-            <div class="step-icon">${STEP_ICONS[step.type] || "•"}</div>
+            <div class="step-media">${primaryStepThumb(step)}</div>
             <div class="step-body">
-              <div class="step-type">${i + 1}. ${STEP_LABELS[step.type] || step.type}</div>
-              <div class="step-desc">${safeRichText(formatStep(step))}</div>
-              ${minigameHtml}
-              ${dialogueHtml}
+              <div class="step-card">
+                <div class="step-type">${i + 1}. ${STEP_LABELS[step.type] || step.type}</div>
+                <div class="step-desc">${safeRichText(formatStep(step))}</div>
+                ${stepPhotosHtml(step)}
+                ${minigameHtml}
+                ${dialogueHtml}
+              </div>
             </div>
           </li>`;
-          }
-        )
+        })
         .join("");
 
       const introId = questIntroDialogueId(quest);
+      const dialogueOpen = state.dialogueOpen !== false;
       const storyBlock = introId
         ? `
-        <div class="story-block">
-          <div class="story-block-title">📖 ${UI.quest_story || "סיפור המשימה"}</div>
-          ${renderDialogueHtml(introId, ql.npcId)}
+        <div class="story-block ${dialogueOpen ? "" : "collapsed"}" id="intro-dialogue">
+          <div class="story-block-title">📖 ${UI.quest_story || "שיחת פתיחה"}</div>
+          ${renderDialogueHtml(introId, giverId)}
+        </div>`
+        : "";
+
+      const needsTurnIn = Boolean(quest.wait_for_npc_turn_in);
+      const closeId = needsTurnIn ? questCloseDialogueId(quest) : null;
+      const closeBlock = needsTurnIn
+        ? `
+        <div class="close-block">
+          <div class="close-block-header">
+            ${npcThumb(giverId, "list-thumb")}
+            <div>
+              <div class="story-block-title">🏁 ${UI.quest_close || "שיחת סיום"}</div>
+              <div class="close-block-badge">${UI.turn_in_badge || "מסירה ל־NPC"}</div>
+            </div>
+          </div>
+          ${closeId
+            ? renderDialogueHtml(closeId, giverId)
+            : `<div class="dialogue-block"><div class="dialogue-missing">${UI.dialogue_missing || "דיאלוג טרם נכתב."}</div></div>`}
         </div>`
         : "";
 
@@ -1022,10 +1747,21 @@
           <h3>${quest.name}</h3>
           <p class="detail-summary">${quest.summary || UI.no_summary || ""}</p>
         </div>
-        ${storyBlock}
+        <div class="npc-hero">
+          <button type="button" class="npc-hero-btn ${dialogueOpen ? "open" : ""}" id="npc-hero-toggle" ${introId ? "" : "disabled"}>
+            <div class="npc-hero-photo">${npcThumb(giverId, "npc-hero-photo-inner")}</div>
+            <div class="npc-hero-meta">
+              <strong>${safeRichText(giver.name || npcName(giverId))}</strong>
+              <span>${safeRichText(giver.title || "")}</span>
+              ${introId ? `<span class="npc-hero-hint">${UI.click_npc_hint || ""}</span>` : ""}
+            </div>
+          </button>
+          ${storyBlock}
+        </div>
         <div class="reward-row">${xp}${items || `<span class="reward-chip">${UI.no_items || "ללא פריטים"}</span>`}</div>
         <div class="steps-title">${UI.quest_steps || "שלבי המשימה"}</div>
         <ol class="steps-list">${steps || `<li class="step-item"><div class="step-body"><div class="step-desc">${UI.no_steps || ""}</div></div></li>`}</ol>
+        ${closeBlock}
         ${draft}`;
     }
 
@@ -1041,13 +1777,16 @@
         .map((q, i) => {
           const sel = q.id === state.questId ? "selected" : "";
           const draft = q.status === "draft" ? "draft" : "";
-          const arrow = i > 0 ? '<span class="chain-arrow">←</span>' : "";
-          return `${arrow}
+          const giverId = q.giver_npc || ql.npcId;
+          return `
             <button type="button" class="quest-node ${sel} ${draft}" data-quest="${q.id}" style="--node-accent:${t.accent}">
-              <div class="node-level">${UI.level_short || "רמה"} ${q.level}</div>
-              <div class="node-name">${q.name}</div>
-              <div class="node-xp">${q.rewards?.xp || 0} ${UI.xp || "נק׳ ניסיון"}</div>
-              <div class="node-status">${UI.draft_badge || "טיוטה"}</div>
+              <span class="quest-node-num">${String(i + 1).padStart(2, "0")}</span>
+              ${npcThumb(giverId)}
+              <div class="quest-node-body">
+                <div class="node-name">${q.name}</div>
+                <div class="node-level">${UI.level_short || "רמה"} ${q.level}</div>
+                ${q.status === "draft" ? `<div class="node-status">${UI.draft_badge || "טיוטה"}</div>` : ""}
+              </div>
             </button>`;
         })
         .join("");
@@ -1073,6 +1812,15 @@
       root.querySelectorAll(".quest-node").forEach((node) => {
         node.addEventListener("click", () => selectQuest(node.dataset.quest));
       });
+      const heroBtn = document.getElementById("npc-hero-toggle");
+      if (heroBtn && !heroBtn.disabled) {
+        heroBtn.addEventListener("click", () => {
+          state.dialogueOpen = !state.dialogueOpen;
+          const block = document.getElementById("intro-dialogue");
+          if (block) block.classList.toggle("collapsed", !state.dialogueOpen);
+          heroBtn.classList.toggle("open", state.dialogueOpen);
+        });
+      }
     }
 
     async function bootViewer() {

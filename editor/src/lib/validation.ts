@@ -6,6 +6,7 @@ import {
   getQuestlineQuests,
   getStepMinigameKey,
   getStepType,
+  isLineScopedQuestKey,
 } from './editorData'
 
 export type TranslateFn = (key: MessageKey, vars?: Record<string, string | number>) => string
@@ -21,7 +22,12 @@ export function validateQuestline(
 
   const issues: ValidationIssue[] = []
   const quests = getQuestlineQuests(data, line.id)
-  const keys = new Set<string>()
+  const keysInLine = new Set<string>()
+  const keysElsewhere = new Map<string, string>()
+  for (const other of data.quests) {
+    if (other.questline_id === line.id) continue
+    if (!keysElsewhere.has(other.key)) keysElsewhere.set(other.key, other.id)
+  }
 
   if (quests.length === 0) {
     issues.push({
@@ -33,7 +39,7 @@ export function validateQuestline(
   }
 
   for (const quest of quests) {
-    if (keys.has(quest.key)) {
+    if (keysInLine.has(quest.key) || keysElsewhere.has(quest.key)) {
       issues.push({
         severity: 'error',
         code: 'duplicate_quest_key',
@@ -41,7 +47,16 @@ export function validateQuestline(
         entityId: quest.id,
       })
     }
-    keys.add(quest.key)
+    keysInLine.add(quest.key)
+
+    if (!isLineScopedQuestKey(quest.key, line.key)) {
+      issues.push({
+        severity: 'warning',
+        code: 'unscoped_quest_key',
+        message: t('validationUnscopedKey', { key: quest.key, line: line.key }),
+        entityId: quest.id,
+      })
+    }
 
     if (!quest.name.trim()) {
       issues.push({
@@ -56,6 +71,22 @@ export function validateQuestline(
         severity: 'warning',
         code: 'missing_giver',
         message: t('validationMissingGiver', { name: quest.name || t('untitledQuest') }),
+        entityId: quest.id,
+      })
+    }
+
+    if (!quest.start_dialogue_id) {
+      issues.push({
+        severity: 'warning',
+        code: 'missing_start_dialogue',
+        message: t('validationMissingStartDialogue', { name: quest.name || t('untitledQuest') }),
+        entityId: quest.id,
+      })
+    } else if (!data.dialogues.some((dialogue) => dialogue.key === quest.start_dialogue_id)) {
+      issues.push({
+        severity: 'warning',
+        code: 'unresolved_start_dialogue',
+        message: t('validationUnresolvedDialogue', { value: quest.start_dialogue_id }),
         entityId: quest.id,
       })
     }

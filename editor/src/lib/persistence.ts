@@ -327,6 +327,13 @@ export async function saveQuestlineDraft(payload: QuestlineSavePayload): Promise
   return saveViaRpc(payload)
 }
 
+/** Deletes questlines by id. Child quests/steps/rewards/revisions cascade in the DB. */
+export async function deleteQuestlines(questlineIds: string[]): Promise<void> {
+  if (!supabase || !questlineIds.length) return
+  const { error } = await supabase.from('questlines').delete().in('id', questlineIds)
+  if (error) throw error
+}
+
 export interface PublishResult {
   version: number
   updatedAt: string

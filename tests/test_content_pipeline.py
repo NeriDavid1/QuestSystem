@@ -88,6 +88,7 @@ class ContentPipelineTests(unittest.TestCase):
         template = (ROOT / "presentation" / "viewer-template.html").read_text(encoding="utf-8")
         generated = (ROOT / "presentation" / "viewer.html").read_text(encoding="utf-8")
         self.assertIn("fetchPublishedSnapshotData", template)
+        self.assertIn("get_published_viewer_extras", template)
         self.assertIn("/*__SUPABASE_CONFIG__*/", template)
         self.assertIn("safeRichText", template)
         self.assertIn("safeRichText(line)", template)

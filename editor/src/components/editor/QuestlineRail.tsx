@@ -45,7 +45,10 @@ export function QuestlineRail() {
                   className="rail-action"
                   aria-label={t('duplicateLineAria')}
                   title={t('duplicateLineAria')}
-                  onClick={() => duplicateQuestline(line.id)}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    duplicateQuestline(line.id)
+                  }}
                 >
                   <Icon name="copy" />
                 </button>
@@ -54,7 +57,8 @@ export function QuestlineRail() {
                   className="rail-action"
                   aria-label={t('deleteLineAria')}
                   title={t('deleteLineAria')}
-                  onClick={() => {
+                  onClick={(event) => {
+                    event.stopPropagation()
                     openConfirm({
                       title: t('deleteLineAria'),
                       message: line.display_name,

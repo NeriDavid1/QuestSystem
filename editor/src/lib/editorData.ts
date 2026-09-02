@@ -21,28 +21,124 @@ export function isLocalId(id: string): boolean {
   return id.startsWith('local-')
 }
 
-export function slugify(value: string): string {
-  const ascii = value
+/** ASCII snake segment; empty when nothing slugifiable remains. */
+export function slugSegment(value: string): string {
+  return value
     .trim()
     .toLowerCase()
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '_')
     .replace(/^_|_$/g, '')
-  return ascii || `line_${Date.now().toString(36)}`
+}
+
+export function slugify(value: string): string {
+  return slugSegment(value) || `line_${Date.now().toString(36)}`
+}
+
+export function uniqueExactKey(existingKeys: Iterable<string>, baseKey: string): string {
+  const keys = new Set(existingKeys)
+  if (!keys.has(baseKey)) return baseKey
+  let suffix = 2
+  while (keys.has(`${baseKey}_${suffix}`)) suffix += 1
+  return `${baseKey}_${suffix}`
 }
 
 export function uniqueKey(existingKeys: Iterable<string>, baseKey: string, fallback = 'new_item'): string {
   const normalized = slugify(baseKey) || fallback
-  const keys = new Set(existingKeys)
-  if (!keys.has(normalized)) return normalized
-  let suffix = 2
-  while (keys.has(`${normalized}_${suffix}`)) suffix += 1
-  return `${normalized}_${suffix}`
+  return uniqueExactKey(existingKeys, normalized)
 }
 
-export function uniqueQuestKey(data: EditorData, baseKey: string): string {
-  return uniqueKey(data.quests.map((quest) => quest.key), baseKey, 'new_quest')
+/**
+ * Content keys that are already snake_case (including line-scoped `__` keys) must not be
+ * re-slugified — slugify collapses `__` to `_` and would destroy ownership prefixes.
+ */
+export function normalizeContentKey(baseKey: string, fallback = 'new_item'): string {
+  const trimmed = baseKey.trim().toLowerCase()
+  if (/^[a-z0-9_]+$/.test(trimmed)) return trimmed
+  return slugify(baseKey) || fallback
+}
+
+export function uniqueQuestKey(data: EditorData, baseKey: string, excludeQuestId?: string): string {
+  const existing = data.quests
+    .filter((quest) => quest.id !== excludeQuestId)
+    .map((quest) => quest.key)
+  return uniqueExactKey(existing, normalizeContentKey(baseKey, 'new_quest'))
+}
+
+/** Line-scoped quest key stem: `{lineKey}__q{NN}_{slug}`. */
+export function suggestQuestBaseKey(lineKey: string, position: number, name: string): string {
+  const line = slugSegment(lineKey) || 'questline'
+  const nn = String(Math.max(0, position) + 1).padStart(2, '0')
+  let slug = slugSegment(name) || 'new_quest'
+  const scopedPrefix = `${line}__`
+  if (slug.startsWith(scopedPrefix)) slug = slug.slice(scopedPrefix.length) || 'new_quest'
+  // Drop accidental qNN_ prefix when regenerating from an existing key-like name.
+  slug = slug.replace(/^q\d+_/, '') || 'new_quest'
+  return `${line}__q${nn}_${slug}`
+}
+
+/** Globally unique quest key for Unity OpenWorld / Guider lookup. */
+export function allocateQuestKey(
+  data: EditorData,
+  lineKey: string,
+  position: number,
+  name: string,
+  excludeQuestId?: string,
+): string {
+  return uniqueQuestKey(data, suggestQuestBaseKey(lineKey, position, name), excludeQuestId)
+}
+
+/** Step key derived from the owning quest key: `{questKey}_s{NN}`. */
+export function suggestStepKey(questKey: string, position: number): string {
+  const quest = normalizeContentKey(questKey, 'quest')
+  const nn = String(Math.max(0, position) + 1).padStart(2, '0')
+  return `${quest}_s${nn}`
+}
+
+export function allocateStepKey(
+  data: EditorData,
+  questId: string,
+  questKey: string,
+  position: number,
+  excludeStepId?: string,
+): string {
+  const existing = data.steps
+    .filter((step) => step.quest_id === questId && step.id !== excludeStepId)
+    .map((step) => step.key)
+  return uniqueExactKey(existing, suggestStepKey(questKey, position))
+}
+
+/** True when the key still looks auto-managed (scoped or placeholder), so drafts may refresh it. */
+export function isAutoManagedQuestKey(key: string, lineKey: string): boolean {
+  const line = slugify(lineKey) || 'questline'
+  if (key.startsWith(`${line}__`)) return true
+  if (/^q\d+_new_quest(_\d+)?$/.test(key)) return true
+  if (/_new_quest(_\d+)?$/.test(key)) return true
+  return false
+}
+
+/**
+ * For draft quests only: if the key is still auto-managed, return a refreshed globally unique key.
+ * Returns null when the key must stay frozen (published/complete or manually customized).
+ */
+export function refreshDraftQuestKey(
+  data: EditorData,
+  quest: Quest,
+  lineKey: string,
+  newName: string,
+): string | null {
+  if (quest.status === 'published' || quest.status === 'complete' || quest.status === 'archived') {
+    return null
+  }
+  if (!isAutoManagedQuestKey(quest.key, lineKey)) return null
+  return allocateQuestKey(data, lineKey, quest.position, newName, quest.id)
+}
+
+/** True when a quest key uses the line-scoped `{lineKey}__…` scheme. */
+export function isLineScopedQuestKey(key: string, lineKey: string): boolean {
+  const line = slugify(lineKey) || 'questline'
+  return key.startsWith(`${line}__`)
 }
 
 export function uniqueQuestlineKey(data: EditorData, baseKey: string): string {
@@ -207,11 +303,67 @@ export function buildSnapshotDocument(data: EditorData, line: Questline): Record
     }
   })
 
+  const dialogueKeys = new Set<string>()
+  const minigameKeys = new Set<string>()
+  for (const quest of quests) {
+    if (typeof quest.start_dialogue_id === 'string' && quest.start_dialogue_id) {
+      dialogueKeys.add(quest.start_dialogue_id)
+    }
+    if (typeof quest.turn_in_dialogue_id === 'string' && quest.turn_in_dialogue_id) {
+      dialogueKeys.add(quest.turn_in_dialogue_id)
+    }
+    for (const step of quest.steps) {
+      const payload = step.payload && typeof step.payload === 'object'
+        ? (step.payload as Record<string, unknown>)
+        : {}
+      if (typeof payload.dialogue_id === 'string' && payload.dialogue_id) {
+        dialogueKeys.add(payload.dialogue_id)
+      }
+      if (typeof payload.instance_id === 'string' && payload.instance_id) {
+        minigameKeys.add(payload.instance_id)
+      }
+      if (typeof payload.instance_key === 'string' && payload.instance_key) {
+        minigameKeys.add(payload.instance_key)
+      }
+    }
+  }
+
+  const dialogues: Record<string, { speaker: string | null; lines: string[] }> = {}
+  for (const key of dialogueKeys) {
+    const dialogue = data.dialogues.find((item) => item.key === key)
+    if (!dialogue) continue
+    const lines = data.dialogueLines
+      .filter((line) => line.dialogue_id === dialogue.id)
+      .sort((a, b) => a.line_order - b.line_order || a.locale.localeCompare(b.locale))
+      .map((line) => line.content)
+    dialogues[key] = {
+      speaker: dialogue.speaker_external_id,
+      lines,
+    }
+  }
+
+  const minigames: Record<string, Record<string, unknown>> = {}
+  for (const key of minigameKeys) {
+    const instance = data.minigames.find((item) => item.key === key)
+    if (!instance) continue
+    minigames[key] = {
+      minigame_id: instance.minigame_id,
+      instruction: instance.instruction,
+      tasks: instance.tasks,
+      target: instance.target,
+      variant: instance.variant,
+      success: instance.success,
+      params: instance.params,
+    }
+  }
+
   return {
     default_giver_external_id: line.default_giver_external_id,
     display_name: line.display_name,
     key: line.key,
     quests,
     theme: line.theme,
+    dialogues,
+    minigames,
   }
 }

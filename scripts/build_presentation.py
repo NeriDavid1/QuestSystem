@@ -55,6 +55,10 @@ def parse_quest_file(path: Path) -> dict:
         "level": quest.get("level_required"),
         "prerequisite": quest.get("prerequisite"),
         "summary": quest.get("summary"),
+        "giver_npc": quest.get("giver_npc"),
+        "wait_for_npc_turn_in": bool(quest.get("wait_for_npc_turn_in", False)),
+        "start_dialogue_id": quest.get("start_dialogue_id"),
+        "turn_in_dialogue_id": quest.get("turn_in_dialogue_id"),
         "status": quest.get("status", "complete" if len(steps) > 1 else "draft"),
         "rewards": {
             "xp": rewards.get("xp", 0),
@@ -99,6 +103,27 @@ def attach_minigame_briefs(quests: list, instances: dict) -> None:
                 step["minigame_brief"] = brief
 
 
+def merge_items() -> dict:
+    """Quest items.yaml overlaid on SoftKitty export (softkitty_items.yaml)."""
+    soft = load_yaml(REGISTRY / "softkitty_items.yaml").get("softkitty_items") or {}
+    quest = load_yaml(REGISTRY / "items.yaml").get("items") or {}
+    merged: dict = {}
+    for key, meta in soft.items():
+        merged[str(key)] = dict(meta) if isinstance(meta, dict) else {"name": str(meta)}
+    for key, meta in quest.items():
+        q = dict(meta) if isinstance(meta, dict) else {"name": str(meta)}
+        if str(key) in merged:
+            # Preserve SoftKitty image/ids unless quest explicitly sets them
+            base = merged[str(key)]
+            for k, v in q.items():
+                if v is not None and v != "":
+                    base[k] = v
+            merged[str(key)] = base
+        else:
+            merged[str(key)] = q
+    return merged
+
+
 def apply_hebrew_content(data: dict, he: dict) -> dict:
     """Merge Hebrew names and summaries into presentation data."""
     if he.get("npcs"):
@@ -137,6 +162,8 @@ def apply_hebrew_content(data: dict, he: dict) -> dict:
             ql["npc"]["title"] = n.get("title", ql["npc"]["title"])
             ql["npc"]["location"] = n.get("location", ql["npc"]["location"])
             ql["npc"]["description"] = n.get("description", ql["npc"]["description"])
+            if n.get("image"):
+                ql["npc"]["image"] = n["image"]
 
         for quest in ql["quests"]:
             q_he = quests_he.get(quest["id"], {})
@@ -152,7 +179,9 @@ def apply_hebrew_content(data: dict, he: dict) -> dict:
 
 def build() -> dict:
     npcs = load_yaml(REGISTRY / "npcs.yaml").get("npcs", {})
-    items = load_yaml(REGISTRY / "items.yaml").get("items", {})
+    items = merge_items()
+    areas = load_yaml(REGISTRY / "areas.yaml").get("areas", {})
+    interactables = load_yaml(REGISTRY / "interactables.yaml").get("interactables", {})
     step_types = load_yaml(REGISTRY / "systems.yaml").get("step_types", {})
     minigames = load_yaml(REGISTRY / "minigames.yaml").get("minigames", {})
     locale = load_yaml(LOCALE_UI)
@@ -184,6 +213,10 @@ def build() -> dict:
                     "level": entry.get("level"),
                     "prerequisite": entry.get("prerequisite"),
                     "summary": "",
+                    "giver_npc": npc_id,
+                    "wait_for_npc_turn_in": False,
+                    "start_dialogue_id": None,
+                    "turn_in_dialogue_id": None,
                     "status": "draft",
                     "steps": [],
                     "rewards": {"xp": 0, "items": []},
@@ -198,10 +231,22 @@ def build() -> dict:
             detail["name"] = entry.get("name", detail.get("name"))
             detail["level"] = entry.get("level", detail.get("level"))
             detail["prerequisite"] = entry.get("prerequisite", detail.get("prerequisite"))
+            if not detail.get("giver_npc"):
+                detail["giver_npc"] = npc_id
             quests.append(detail)
 
         instances = load_minigame_instances()
         attach_minigame_briefs(quests, instances)
+
+        npc_payload = {
+            "id": npc_id,
+            "name": npc.get("name", npc_id),
+            "title": npc.get("title", ""),
+            "location": npc.get("location", ""),
+            "description": npc.get("description", ""),
+        }
+        if npc.get("image"):
+            npc_payload["image"] = npc["image"]
 
         questlines.append(
             {
@@ -212,13 +257,7 @@ def build() -> dict:
                 "levelRange": meta.get("level_range", []),
                 "questCount": meta.get("quest_count", len(quests)),
                 "npcId": npc_id,
-                "npc": {
-                    "id": npc_id,
-                    "name": npc.get("name", npc_id),
-                    "title": npc.get("title", ""),
-                    "location": npc.get("location", ""),
-                    "description": npc.get("description", ""),
-                },
+                "npc": npc_payload,
                 "quests": quests,
             }
         )
@@ -229,6 +268,8 @@ def build() -> dict:
         "locale": locale,
         "npcs": npcs,
         "items": items,
+        "areas": areas,
+        "interactables": interactables,
         "stepTypes": step_types,
         "minigames": minigames,
         "dialogues": load_dialogues(),
