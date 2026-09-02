@@ -101,29 +101,31 @@ instances:
         - 3
   noun_repair_q01_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
-    tasks:
+    instruction: השלימו את המשפט לפי התרגום בעברית
+    tasks: &id001
     - The
     - book
     - is
-    - true
+    - 'on'
     - the
     - table
     target: The book is on the table
     variant: sentence
     success: המשפט נבנה נכון
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: השלימו את המשפט לפי התרגום בעברית
       translation: הספר נמצא על השולחן
-      englishWordsInOrder:
-      - The
-      - book
-      - is
-      - true
-      - the
-      - table
-      preFilledIndices: []
-      distractorWords: []
+      englishWordsInOrder: *id001
+      preFilledIndices:
+      - 0
+      - 2
+      - 3
+      - 4
+      - 5
+      distractorWords:
+      - chair
+      - bag
+      - pen
   noun_repair_q01_objects:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -325,7 +327,7 @@ instances:
         - 3
   noun_repair_q02_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: השלימו את המשפט לפי התרגום בעברית
     tasks:
     - The
     - boy
@@ -337,7 +339,7 @@ instances:
     variant: sentence
     success: המשפט נבנה נכון
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: השלימו את המשפט לפי התרגום בעברית
       translation: לילד יש תיק אדום
       englishWordsInOrder:
       - The
@@ -346,8 +348,16 @@ instances:
       - a
       - red
       - bag
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      distractorWords:
+      - book
+      - box
+      - cat
   noun_repair_q02_animals:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -551,7 +561,7 @@ instances:
         - 3
   noun_repair_q03_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: השלימו את המשפט לפי התרגום בעברית
     tasks:
     - The
     - farmer
@@ -562,7 +572,7 @@ instances:
     variant: sentence
     success: המשפט נבנה נכון
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: השלימו את המשפט לפי התרגום בעברית
       translation: החקלאי מוכר תפוחים טריים
       englishWordsInOrder:
       - The
@@ -570,8 +580,15 @@ instances:
       - sells
       - fresh
       - apples
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices:
+      - 0
+      - 1
+      - 2
+      - 3
+      distractorWords:
+      - books
+      - chairs
+      - oranges
   noun_repair_q03_tools:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -774,7 +791,7 @@ instances:
         - 5
   noun_repair_q04_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: השלימו את המשפט לפי התרגום בעברית
     tasks:
     - The
     - chef
@@ -785,7 +802,7 @@ instances:
     variant: sentence
     success: המשפט נבנה נכון
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: השלימו את המשפט לפי התרגום בעברית
       translation: השף מחזיק כף
       englishWordsInOrder:
       - The
@@ -793,8 +810,15 @@ instances:
       - holds
       - a
       - spoon
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices:
+      - 0
+      - 1
+      - 2
+      - 3
+      distractorWords:
+      - plate
+      - cup
+      - knife
   noun_repair_q04_objects:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -1000,7 +1024,7 @@ instances:
         - 4
   noun_repair_q05_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: השלימו את המשפט לפי התרגום בעברית
     tasks:
     - The
     - queen
@@ -1012,7 +1036,7 @@ instances:
     variant: sentence
     success: המשפט נבנה נכון
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: השלימו את המשפט לפי התרגום בעברית
       translation: המלכה יושבת על כס המלכות
       englishWordsInOrder:
       - The
@@ -1021,8 +1045,16 @@ instances:
       - true
       - the
       - throne
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      distractorWords:
+      - crown
+      - castle
+      - shield
   noun_repair_q05_objects:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -1223,7 +1255,7 @@ instances:
         - 4
   noun_repair_q06_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: השלימו את המשפט לפי התרגום בעברית
     tasks:
     - The
     - dog
@@ -1234,7 +1266,7 @@ instances:
     variant: sentence
     success: המשפט נבנה נכון
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: השלימו את המשפט לפי התרגום בעברית
       translation: הכלב רואה את הטירה
       englishWordsInOrder:
       - The
@@ -1242,8 +1274,15 @@ instances:
       - sees
       - the
       - castle
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices:
+      - 0
+      - 1
+      - 2
+      - 3
+      distractorWords:
+      - market
+      - tower
+      - gate
   noun_repair_q06_animals:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun

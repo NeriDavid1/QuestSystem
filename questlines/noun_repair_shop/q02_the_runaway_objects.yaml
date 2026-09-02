@@ -40,7 +40,7 @@ steps:
   difficulty: 2
   success_required: true
   instance_id: noun_repair_q02_sentence
-  display_text: בנו משפט לפי התרגום בעברית
+  display_text: השלימו את המשפט לפי התרגום בעברית
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Wooden_Cart1_Inside_Gate

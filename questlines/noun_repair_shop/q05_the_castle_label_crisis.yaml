@@ -41,7 +41,7 @@ steps:
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q05_sentence
-  display_text: בנו משפט לפי התרגום בעברית
+  display_text: השלימו את המשפט לפי התרגום בעברית
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: WoodenCart2_Solitude_Tower
