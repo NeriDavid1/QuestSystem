@@ -1,74 +1,75 @@
 quest:
   id: q06_the_great_noun_reopening
-  name: "The Great Noun Reopening"
+  name: The Great Noun Reopening
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q05_the_castle_label_crisis
-  summary: "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר."
+  summary: 'חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו
+    את הספר.'
   wait_for_npc_turn_in: false
 rewards:
   xp: 300
   items:
-    - id: coin
-      amount: 10
+  - id: coin
+    amount: 10
 steps:
-  - type: talk_to_npc
-    npc_id: teacher_maya
-    dialogue_id: noun_repair_q06_start
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 3
-    success_required: true
-    instance_id: noun_repair_q06_people
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 3
-    success_required: true
-    instance_id: noun_repair_q06_book
-    display_text: "כתבו את המילה NOUN"
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 3
-    success_required: true
-    instance_id: noun_repair_q06_places
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 3
-    success_required: true
-    instance_id: noun_repair_q06_sentence
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 3
-    success_required: true
-    instance_id: noun_repair_q06_animals
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 3
-    success_required: true
-    instance_id: noun_repair_q06_objects
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 4
-    success_required: true
-    instance_id: noun_repair_q06_say
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: deliver_item
-    npc_id: teacher_maya
-    item_id: ancient_rune
-    amount: 1
-    dialogue_id: noun_repair_q06_finish
-    display_text: "חזרו ל־Maya עם Ancient Rune לפתיחת הספר"
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: noun_repair_q06_start
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q06_people
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q06_book
+  display_text: כתבו את המילה NOUN — שם עצם
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q06_places
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q06_sentence
+  display_text: בנו משפט לפי התרגום בעברית
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q06_animals
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q06_objects
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 4
+  success_required: true
+  instance_id: noun_repair_q06_say
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: deliver_item
+  npc_id: teacher_maya
+  item_id: ancient_rune
+  amount: 1
+  dialogue_id: noun_repair_q06_finish
+  display_text: חזרו ל־Maya עם Ancient Rune לפתיחת הספר

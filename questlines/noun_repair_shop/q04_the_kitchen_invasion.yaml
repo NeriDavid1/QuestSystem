@@ -1,70 +1,72 @@
 quest:
   id: q04_the_kitchen_invasion
-  name: "The Kitchen Invasion"
+  name: The Kitchen Invasion
   level_required: 1
   giver_npc: Old Woman
   prerequisite: q03_the_market_name_mixup
-  summary: "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים."
+  summary: 'Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.'
   wait_for_npc_turn_in: false
-rewards: { xp: 225, items: [] }
+rewards:
+  xp: 225
+  items: []
 steps:
-  - type: talk_to_npc
-    npc_id: Old Woman
-    dialogue_id: noun_repair_q04_start
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 2
-    success_required: true
-    instance_id: noun_repair_q04_kitchen
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 2
-    success_required: true
-    instance_id: noun_repair_q04_spoon
-    display_text: "כתבו את המילה SPOON"
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 2
-    success_required: true
-    instance_id: noun_repair_q04_people
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 2
-    success_required: true
-    instance_id: noun_repair_q04_sentence
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 2
-    success_required: true
-    instance_id: noun_repair_q04_objects
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 2
-    success_required: true
-    instance_id: noun_repair_q04_places
-    display_text: "השלימו את האות החסרה במילת ה־noun"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 3
-    success_required: true
-    instance_id: noun_repair_q04_say
-    reward_item_id: gem
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: deliver_item
-    npc_id: Old Woman
-    item_id: gem
-    amount: 1
-    dialogue_id: noun_repair_q04_finish
-    display_text: "חזרו ל־Old Woman עם Gem"
+- type: talk_to_npc
+  npc_id: Old Woman
+  dialogue_id: noun_repair_q04_start
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q04_kitchen
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q04_spoon
+  display_text: כתבו את המילה SPOON — כף
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q04_people
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q04_sentence
+  display_text: בנו משפט לפי התרגום בעברית
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q04_objects
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q04_places
+  display_text: השלימו את האות החסרה במילת ה־noun
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q04_say
+  reward_item_id: gem
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: deliver_item
+  npc_id: Old Woman
+  item_id: gem
+  amount: 1
+  dialogue_id: noun_repair_q04_finish
+  display_text: חזרו ל־Old Woman עם Gem

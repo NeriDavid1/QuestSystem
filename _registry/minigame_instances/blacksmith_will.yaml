@@ -1,47 +1,45 @@
-# Per-step minigame briefs — blacksmith_will
-# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
 instances:
   q01_runaway_hammer_s2:
     minigame_id: letter_ordering
-    instruction: "כתבו את המילה CAT"
+    instruction: כתבו את המילה CAT — חתול
     tasks:
-      - סדרו <strong>c, a, t</strong>
-      - צרו <strong>cat</strong> — חתול
+    - סדרו <strong>c, a, t</strong>
+    - צרו <strong>cat</strong> — חתול
     target: cat
     variant: word_spelling
     success: CAT נכתב נכון; Oak Log אחד נוסף לתיק
     params:
-      prompt: כתבו את המילה CAT
+      prompt: כתבו את המילה CAT — חתול
       targetWord: cat
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q02_snoring_anvil_s2:
     minigame_id: letter_ordering
-    instruction: "כתבו את המילה DOG"
+    instruction: כתבו את המילה DOG — כלב
     tasks:
-      - סדרו <strong>d, o, g</strong>
-      - צרו <strong>dog</strong> — כלב
+    - סדרו <strong>d, o, g</strong>
+    - צרו <strong>dog</strong> — כלב
     target: dog
     variant: word_spelling
     success: DOG נכתב נכון; Herbs אחד נוסף לתיק
     params:
-      prompt: כתבו את המילה DOG
+      prompt: כתבו את המילה DOG — כלב
       targetWord: dog
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/BlacksmithWill/BlacksmithWill_WordTranslationDatabase.asset
   q03_first_real_slash_s2:
     minigame_id: letter_ordering
-    instruction: "כתבו את המילה BIG"
+    instruction: כתבו את המילה BIG — גדול
     tasks:
-      - סדרו <strong>b, i, g</strong>
-      - צרו <strong>big</strong> — גדול
+    - סדרו <strong>b, i, g</strong>
+    - צרו <strong>big</strong> — גדול
     target: big
     variant: word_spelling
     success: BIG נכתב נכון — חזרו לוויל לקבל Slash
     params:
-      prompt: כתבו את המילה BIG
+      prompt: כתבו את המילה BIG — גדול
       targetWord: big
       extraDistractorCount: 2
       customDistractors: []

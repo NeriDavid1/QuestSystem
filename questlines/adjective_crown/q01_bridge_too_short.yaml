@@ -11,24 +11,24 @@ rewards:
   xp: 50
   items: []
 steps:
-  - type: talk_to_npc
-    npc_id: teacher_maya
-    dialogue_id: adjective_knight_oak_log_request
-  - type: reach_location
-    location_id: The Oathstone Bridge
-    display_text: Reach The Oathstone Bridge
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: WoodenCart3_The_Oath_stone_Bridge
-    difficulty: 1
-    success_required: true
-    instance_id: q01_bridge_too_short_s2
-    reward_item_id: oak_log
-    reward_amount: 1
-    display_text: "כתבו את המילה LONG"
-  - type: deliver_item
-    npc_id: teacher_maya
-    item_id: oak_log
-    amount: 1
-    dialogue_id: adjective_knight_oak_log_delivered
-    display_text: Deliver 1 oak log to Maya
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: adjective_knight_oak_log_request
+- type: reach_location
+  location_id: The Oathstone Bridge
+  display_text: Reach The Oathstone Bridge
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: WoodenCart3_The_Oath_stone_Bridge
+  difficulty: 1
+  success_required: true
+  instance_id: q01_bridge_too_short_s2
+  reward_item_id: oak_log
+  reward_amount: 1
+  display_text: כתבו את המילה LONG — ארוך
+- type: deliver_item
+  npc_id: teacher_maya
+  item_id: oak_log
+  amount: 1
+  dialogue_id: adjective_knight_oak_log_delivered
+  display_text: Deliver 1 oak log to Maya

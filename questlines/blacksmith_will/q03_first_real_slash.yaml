@@ -9,22 +9,22 @@ quest:
 rewards:
   xp: 100
   items:
-    - id: slash_ability
-      amount: 1
+  - id: slash_ability
+    amount: 1
 steps:
-  - type: talk_to_npc
-    npc_id: Blacksmith
-    dialogue_id: will_first_slash_start
-  - type: reach_location
-    location_id: KingdomGate
-    display_text: Reach KingdomGate
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Wooden_Cart1_Inside_Gate
-    difficulty: 1
-    success_required: true
-    instance_id: q03_first_real_slash_s2
-    display_text: "כתבו את המילה BIG"
-  - type: return_to_npc
-    npc_id: Blacksmith
-    dialogue_id: will_first_slash_done
+- type: talk_to_npc
+  npc_id: Blacksmith
+  dialogue_id: will_first_slash_start
+- type: reach_location
+  location_id: KingdomGate
+  display_text: Reach KingdomGate
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 1
+  success_required: true
+  instance_id: q03_first_real_slash_s2
+  display_text: כתבו את המילה BIG — גדול
+- type: return_to_npc
+  npc_id: Blacksmith
+  dialogue_id: will_first_slash_done

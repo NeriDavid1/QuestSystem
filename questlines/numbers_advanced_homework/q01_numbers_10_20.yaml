@@ -1,68 +1,70 @@
 quest:
   id: q01_numbers_10_20
-  name: "Numbers 10-20: המספרים 10-20"
+  name: 'Numbers 10-20: המספרים 10-20'
   level_required: 1
   giver_npc: Little Boy
   prerequisite: null
-  summary: "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20."
+  summary: 'עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.'
   wait_for_npc_turn_in: false
-rewards: { xp: 100, items: [] }
+rewards:
+  xp: 100
+  items: []
 steps:
-  - type: talk_to_npc
-    npc_id: Little Boy
-    dialogue_id: numbers_advanced_q01_start
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest1_BuildersHomeArea
-    difficulty: 2
-    success_required: true
-    instance_id: numbers_q01_spell_ten
-    display_text: "כתבו את המילה TEN"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: Wooden_Cart1_Inside_Gate
-    difficulty: 2
-    success_required: true
-    instance_id: numbers_q01_sentence_twelve
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 4
-    success_required: true
-    instance_id: numbers_q01_say_fourteen
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 2
-    success_required: true
-    instance_id: numbers_q01_spell_sixteen
-    display_text: "כתבו את המילה SIXTEEN"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: Exam_Table1_Outside_Gate
-    difficulty: 3
-    success_required: true
-    instance_id: numbers_q01_sentence_eighteen
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Lost_Chest5_Silver_Fountain_Court
-    difficulty: 4
-    success_required: true
-    instance_id: numbers_q01_say_twenty
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: WoodenCart2_Solitude_Tower
-    difficulty: 3
-    success_required: true
-    instance_id: numbers_q01_review_10_20
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: deliver_item
-    npc_id: Little Boy
-    item_id: coin
-    amount: 1
-    dialogue_id: numbers_advanced_q01_finish
-    display_text: "חזרו ל־Teacher Maya לקבלת המשימה הבאה"
+- type: talk_to_npc
+  npc_id: Little Boy
+  dialogue_id: numbers_advanced_q01_start
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest1_BuildersHomeArea
+  difficulty: 2
+  success_required: true
+  instance_id: numbers_q01_spell_ten
+  display_text: כתבו את המילה TEN — עשר
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 2
+  success_required: true
+  instance_id: numbers_q01_sentence_twelve
+  display_text: בנו משפט לפי התרגום בעברית
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 4
+  success_required: true
+  instance_id: numbers_q01_say_fourteen
+  display_text: אמרו את המילים הבאות בקול
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 2
+  success_required: true
+  instance_id: numbers_q01_spell_sixteen
+  display_text: כתבו את המילה SIXTEEN — שש עשרה
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 3
+  success_required: true
+  instance_id: numbers_q01_sentence_eighteen
+  display_text: בנו משפט לפי התרגום בעברית
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  difficulty: 4
+  success_required: true
+  instance_id: numbers_q01_say_twenty
+  display_text: אמרו את המילים הבאות בקול
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 3
+  success_required: true
+  instance_id: numbers_q01_review_10_20
+  display_text: בנו משפט לפי התרגום בעברית
+- type: deliver_item
+  npc_id: Little Boy
+  item_id: coin
+  amount: 1
+  dialogue_id: numbers_advanced_q01_finish
+  display_text: חזרו ל־Teacher Maya לקבלת המשימה הבאה

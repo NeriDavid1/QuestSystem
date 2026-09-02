@@ -11,31 +11,31 @@ rewards:
   xp: 650
   items: []
 steps:
-  - type: talk_to_npc
-    npc_id: Cannoneer
-    dialogue_id: nouns_cannoneer_wrong_names
-  - type: reach_location
-    location_id: Forsaken Cove
-    display_text: Reach Forsaken Cove
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest3_Forsaken_Cove
-    difficulty: 6
-    success_required: true
-    instance_id: q06_dragon_identity_s2
-    display_text: "כתבו את המילה DRAGON"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Lost_Chest3_Forsaken_Cove
-    difficulty: 6
-    success_required: true
-    instance_id: q06_dragon_identity_s3
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: deliver_item
-    npc_id: Cannoneer
-    item_id: ancient_rune
-    amount: 1
-    dialogue_id: nouns_cannoneer_names_restored
-    display_text: Deliver 1 ancient rune to Cannoneer
+- type: talk_to_npc
+  npc_id: Cannoneer
+  dialogue_id: nouns_cannoneer_wrong_names
+- type: reach_location
+  location_id: Forsaken Cove
+  display_text: Reach Forsaken Cove
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest3_Forsaken_Cove
+  difficulty: 6
+  success_required: true
+  instance_id: q06_dragon_identity_s2
+  display_text: כתבו את המילה DRAGON — דרקון
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Lost_Chest3_Forsaken_Cove
+  difficulty: 6
+  success_required: true
+  instance_id: q06_dragon_identity_s3
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: deliver_item
+  npc_id: Cannoneer
+  item_id: ancient_rune
+  amount: 1
+  dialogue_id: nouns_cannoneer_names_restored
+  display_text: Deliver 1 ancient rune to Cannoneer

@@ -10,62 +10,62 @@ quest:
 rewards:
   xp: 700
   items:
-    - id: coin
-      amount: 10
+  - id: coin
+    amount: 10
 steps:
-  - type: talk_to_npc
-    npc_id: teacher_maya
-    dialogue_id: nouns_maya_final_trial
-  - type: reach_location
-    location_id: Sanctum of Whispering Light
-    display_text: Reach Sanctum of Whispering Light
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
-    difficulty: 6
-    success_required: true
-    instance_id: q07_royal_noun_trial_queen
-    display_text: "כתבו את המילה QUEEN"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
-    difficulty: 6
-    success_required: true
-    instance_id: q07_royal_noun_trial_castle
-    display_text: "כתבו את המילה CASTLE"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
-    difficulty: 6
-    success_required: true
-    instance_id: q07_royal_noun_trial_throne
-    display_text: "כתבו את המילה THRONE"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
-    difficulty: 6
-    success_required: true
-    instance_id: q07_royal_noun_trial_shield
-    display_text: "כתבו את המילה SHIELD"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
-    difficulty: 6
-    success_required: true
-    instance_id: q07_royal_noun_trial_dragon
-    display_text: "כתבו את המילה DRAGON"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
-    difficulty: 7
-    success_required: true
-    instance_id: q07_royal_noun_trial_s3
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: deliver_item
-    npc_id: teacher_maya
-    item_id: ancient_rune
-    amount: 1
-    dialogue_id: nouns_maya_book_restored
-    display_text: Deliver 1 ancient rune to Maya
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: nouns_maya_final_trial
+- type: reach_location
+  location_id: Sanctum of Whispering Light
+  display_text: Reach Sanctum of Whispering Light
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+  difficulty: 6
+  success_required: true
+  instance_id: q07_royal_noun_trial_queen
+  display_text: כתבו את המילה QUEEN — מלכה
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+  difficulty: 6
+  success_required: true
+  instance_id: q07_royal_noun_trial_castle
+  display_text: כתבו את המילה CASTLE — טירה
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+  difficulty: 6
+  success_required: true
+  instance_id: q07_royal_noun_trial_throne
+  display_text: כתבו את המילה THRONE — כס
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+  difficulty: 6
+  success_required: true
+  instance_id: q07_royal_noun_trial_shield
+  display_text: כתבו את המילה SHIELD — מגן
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+  difficulty: 6
+  success_required: true
+  instance_id: q07_royal_noun_trial_dragon
+  display_text: כתבו את המילה DRAGON — דרקון
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+  difficulty: 7
+  success_required: true
+  instance_id: q07_royal_noun_trial_s3
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: deliver_item
+  npc_id: teacher_maya
+  item_id: ancient_rune
+  amount: 1
+  dialogue_id: nouns_maya_book_restored
+  display_text: Deliver 1 ancient rune to Maya

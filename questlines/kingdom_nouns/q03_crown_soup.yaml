@@ -11,31 +11,31 @@ rewards:
   xp: 500
   items: []
 steps:
-  - type: talk_to_npc
-    npc_id: Professor Crazy
-    dialogue_id: nouns_professor_crown_soup
-  - type: reach_location
-    location_id: Solitude Tower
-    display_text: Reach Solitude Tower
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: WoodenCart2_Solitude_Tower
-    difficulty: 5
-    success_required: true
-    instance_id: q03_crown_soup_s2
-    display_text: "כתבו את המילה CROWN"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: WoodenCart2_Solitude_Tower
-    difficulty: 5
-    success_required: true
-    instance_id: q03_crown_soup_s3
-    reward_item_id: power_stone
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: deliver_item
-    npc_id: Professor Crazy
-    item_id: power_stone
-    amount: 1
-    dialogue_id: nouns_professor_treasury_restored
-    display_text: Deliver 1 power stone to Professor Crazy
+- type: talk_to_npc
+  npc_id: Professor Crazy
+  dialogue_id: nouns_professor_crown_soup
+- type: reach_location
+  location_id: Solitude Tower
+  display_text: Reach Solitude Tower
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 5
+  success_required: true
+  instance_id: q03_crown_soup_s2
+  display_text: כתבו את המילה CROWN — כתר
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 5
+  success_required: true
+  instance_id: q03_crown_soup_s3
+  reward_item_id: power_stone
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: deliver_item
+  npc_id: Professor Crazy
+  item_id: power_stone
+  amount: 1
+  dialogue_id: nouns_professor_treasury_restored
+  display_text: Deliver 1 power stone to Professor Crazy

@@ -11,31 +11,31 @@ rewards:
   xp: 400
   items: []
 steps:
-  - type: talk_to_npc
-    npc_id: teacher_maya
-    dialogue_id: nouns_maya_missing_roles
-  - type: reach_location
-    location_id: SilverFountainCourt
-    display_text: Reach SilverFountainCourt
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest5_Silver_Fountain_Court
-    difficulty: 4
-    success_required: true
-    instance_id: q01_roles_without_names_s2
-    display_text: "כתבו את המילה KING"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Lost_Chest5_Silver_Fountain_Court
-    difficulty: 5
-    success_required: true
-    instance_id: q01_roles_without_names_s3
-    reward_item_id: gem
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: deliver_item
-    npc_id: teacher_maya
-    item_id: gem
-    amount: 1
-    dialogue_id: nouns_maya_roles_restored
-    display_text: Deliver 1 gem to Maya
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: nouns_maya_missing_roles
+- type: reach_location
+  location_id: SilverFountainCourt
+  display_text: Reach SilverFountainCourt
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  difficulty: 4
+  success_required: true
+  instance_id: q01_roles_without_names_s2
+  display_text: כתבו את המילה KING — מלך
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  difficulty: 5
+  success_required: true
+  instance_id: q01_roles_without_names_s3
+  reward_item_id: gem
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: deliver_item
+  npc_id: teacher_maya
+  item_id: gem
+  amount: 1
+  dialogue_id: nouns_maya_roles_restored
+  display_text: Deliver 1 gem to Maya

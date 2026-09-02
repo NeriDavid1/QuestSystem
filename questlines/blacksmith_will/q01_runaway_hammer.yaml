@@ -11,24 +11,24 @@ rewards:
   xp: 50
   items: []
 steps:
-  - type: talk_to_npc
-    npc_id: Blacksmith
-    dialogue_id: will_runaway_hammer_start
-  - type: reach_location
-    location_id: Driftgold Bay
-    display_text: Reach Driftgold Bay
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest2_Driftgold_Bay
-    difficulty: 1
-    success_required: true
-    instance_id: q01_runaway_hammer_s2
-    reward_item_id: oak_log
-    reward_amount: 1
-    display_text: "כתבו את המילה CAT"
-  - type: deliver_item
-    npc_id: Blacksmith
-    item_id: oak_log
-    amount: 1
-    dialogue_id: will_runaway_hammer_done
-    display_text: Deliver 1 oak log to Will
+- type: talk_to_npc
+  npc_id: Blacksmith
+  dialogue_id: will_runaway_hammer_start
+- type: reach_location
+  location_id: Driftgold Bay
+  display_text: Reach Driftgold Bay
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest2_Driftgold_Bay
+  difficulty: 1
+  success_required: true
+  instance_id: q01_runaway_hammer_s2
+  reward_item_id: oak_log
+  reward_amount: 1
+  display_text: כתבו את המילה CAT — חתול
+- type: deliver_item
+  npc_id: Blacksmith
+  item_id: oak_log
+  amount: 1
+  dialogue_id: will_runaway_hammer_done
+  display_text: Deliver 1 oak log to Will

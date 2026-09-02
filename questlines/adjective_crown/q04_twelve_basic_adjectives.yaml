@@ -11,156 +11,156 @@ rewards:
   xp: 225
   items: []
 steps:
-  - type: talk_to_npc
-    npc_id: teacher_maya
-    dialogue_id: adjective_knight_runes_request
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 2
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_short
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "כתבו את המילה SHORT"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 2
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_long
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 2
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_cold
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "כתבו את המילה COLD"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 2
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_hot
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 2
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_big
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "כתבו את המילה BIG"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 2
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_small
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 3
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_fast
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "כתבו את המילה FAST"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 3
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_slow
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 3
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_low
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "כתבו את המילה LOW"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 3
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_high
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 3
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_heavy
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "כתבו את המילה HEAVY"
-  - type: reach_location
-    location_id: The Weeping Stones
-    display_text: Reach The Weeping Stones
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Tomb_Stone_The_Weeping_Stones
-    difficulty: 3
-    success_required: true
-    instance_id: q04_twelve_basic_adjectives_light
-    reward_item_id: ancient_rune
-    reward_amount: 1
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: deliver_item
-    npc_id: teacher_maya
-    item_id: ancient_rune
-    amount: 12
-    dialogue_id: adjective_knight_runes_delivered
-    display_text: Deliver 12 ancient rune to Maya
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: adjective_knight_runes_request
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 2
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_short
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: כתבו את המילה SHORT — קצר
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 2
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_long
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 2
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_cold
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: כתבו את המילה COLD — קר
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 2
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_hot
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 2
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_big
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: כתבו את המילה BIG — גדול
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 2
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_small
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 3
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_fast
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: כתבו את המילה FAST — מהיר
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 3
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_slow
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 3
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_low
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: כתבו את המילה LOW — נמוך
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 3
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_high
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 3
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_heavy
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: כתבו את המילה HEAVY — כבד
+- type: reach_location
+  location_id: The Weeping Stones
+  display_text: Reach The Weeping Stones
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Tomb_Stone_The_Weeping_Stones
+  difficulty: 3
+  success_required: true
+  instance_id: q04_twelve_basic_adjectives_light
+  reward_item_id: ancient_rune
+  reward_amount: 1
+  display_text: אמרו את המילים הבאות בקול
+- type: deliver_item
+  npc_id: teacher_maya
+  item_id: ancient_rune
+  amount: 12
+  dialogue_id: adjective_knight_runes_delivered
+  display_text: Deliver 12 ancient rune to Maya

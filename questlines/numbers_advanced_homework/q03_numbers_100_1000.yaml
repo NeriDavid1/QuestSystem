@@ -1,68 +1,70 @@
 quest:
   id: q03_numbers_100_1000
-  name: "Numbers 100-1000: המספרים 100-1000"
+  name: 'Numbers 100-1000: המספרים 100-1000'
   level_required: 1
   giver_npc: Professor Crazy
   prerequisite: q02_numbers_20_100
-  summary: "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000."
+  summary: עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.
   wait_for_npc_turn_in: false
-rewards: { xp: 200, items: [] }
+rewards:
+  xp: 200
+  items: []
 steps:
-  - type: talk_to_npc
-    npc_id: Professor Crazy
-    dialogue_id: numbers_advanced_q03_start
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: WoodenCart2_Solitude_Tower
-    difficulty: 3
-    success_required: true
-    instance_id: numbers_q03_spell_hundred
-    display_text: "כתבו את המילה HUNDRED"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: Lost_Chest5_Silver_Fountain_Court
-    difficulty: 5
-    success_required: true
-    instance_id: numbers_q03_sentence_two_hundred_fifty
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
-    difficulty: 5
-    success_required: true
-    instance_id: numbers_q03_say_three_hundred
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: play_minigame
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest6_The_Last_Roar
-    difficulty: 4
-    success_required: true
-    instance_id: numbers_q03_spell_thousand
-    display_text: "כתבו את המילה THOUSAND"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: Wooden_Cart1_Inside_Gate
-    difficulty: 6
-    success_required: true
-    instance_id: numbers_q03_sentence_seven_hundred_twenty
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: play_minigame
-    minigame_id: speak_aloud
-    world_object_id: Exam_Table_Fairy_Rose_Park
-    difficulty: 6
-    success_required: true
-    instance_id: numbers_q03_say_nine_hundred_ninety_nine
-    display_text: "אמרו את המילים הבאות בקול"
-  - type: play_minigame
-    minigame_id: word_ordering
-    world_object_id: WoodenCart2_Solitude_Tower
-    difficulty: 7
-    success_required: true
-    instance_id: numbers_q03_review_100_1000
-    display_text: "בנו משפט לפי התרגום בעברית"
-  - type: deliver_item
-    npc_id: Professor Crazy
-    item_id: coin
-    amount: 1
-    dialogue_id: numbers_advanced_q03_finish
-    display_text: "חזרו ל־Professor Crazy לסיום שיעורי הבית"
+- type: talk_to_npc
+  npc_id: Professor Crazy
+  dialogue_id: numbers_advanced_q03_start
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 3
+  success_required: true
+  instance_id: numbers_q03_spell_hundred
+  display_text: כתבו את המילה HUNDRED — מאה
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  difficulty: 5
+  success_required: true
+  instance_id: numbers_q03_sentence_two_hundred_fifty
+  display_text: בנו משפט לפי התרגום בעברית
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 5
+  success_required: true
+  instance_id: numbers_q03_say_three_hundred
+  display_text: אמרו את המילים הבאות בקול
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest6_The_Last_Roar
+  difficulty: 4
+  success_required: true
+  instance_id: numbers_q03_spell_thousand
+  display_text: כתבו את המילה THOUSAND — אלף
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 6
+  success_required: true
+  instance_id: numbers_q03_sentence_seven_hundred_twenty
+  display_text: בנו משפט לפי התרגום בעברית
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 6
+  success_required: true
+  instance_id: numbers_q03_say_nine_hundred_ninety_nine
+  display_text: אמרו את המילים הבאות בקול
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 7
+  success_required: true
+  instance_id: numbers_q03_review_100_1000
+  display_text: בנו משפט לפי התרגום בעברית
+- type: deliver_item
+  npc_id: Professor Crazy
+  item_id: coin
+  amount: 1
+  dialogue_id: numbers_advanced_q03_finish
+  display_text: חזרו ל־Professor Crazy לסיום שיעורי הבית

@@ -44,7 +44,7 @@ instances:
         - 4
   noun_repair_q01_book:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה BOOK
+    instruction: כתבו את המילה BOOK — ספר
     tasks:
     - B
     - O
@@ -55,7 +55,7 @@ instances:
     success: BOOK נכתב נכון
     params:
       targetWord: book
-      prompt: כתבו את המילה BOOK
+      prompt: כתבו את המילה BOOK — ספר
   noun_repair_q01_places:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -266,7 +266,7 @@ instances:
         - 0
   noun_repair_q02_pencil:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה PENCIL
+    instruction: כתבו את המילה PENCIL — עיפרון
     tasks:
     - P
     - E
@@ -279,7 +279,7 @@ instances:
     success: PENCIL נכתב נכון
     params:
       targetWord: pencil
-      prompt: כתבו את המילה PENCIL
+      prompt: כתבו את המילה PENCIL — עיפרון
   noun_repair_q02_toys:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -492,7 +492,7 @@ instances:
         - 4
   noun_repair_q03_market:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה MARKET
+    instruction: כתבו את המילה MARKET — שוק
     tasks:
     - M
     - A
@@ -505,7 +505,7 @@ instances:
     success: MARKET נכתב נכון
     params:
       targetWord: market
-      prompt: כתבו את המילה MARKET
+      prompt: כתבו את המילה MARKET — שוק
   noun_repair_q03_food:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -716,7 +716,7 @@ instances:
         - 4
   noun_repair_q04_spoon:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה SPOON
+    instruction: כתבו את המילה SPOON — כף
     tasks:
     - S
     - P
@@ -728,7 +728,7 @@ instances:
     success: SPOON נכתב נכון
     params:
       targetWord: spoon
-      prompt: כתבו את המילה SPOON
+      prompt: כתבו את המילה SPOON — כף
   noun_repair_q04_people:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -939,7 +939,7 @@ instances:
         - 4
   noun_repair_q05_treasure:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה TREASURE
+    instruction: כתבו את המילה TREASURE — אוצר
     tasks:
     - T
     - R
@@ -954,7 +954,7 @@ instances:
     success: TREASURE נכתב נכון
     params:
       targetWord: treasure
-      prompt: כתבו את המילה TREASURE
+      prompt: כתבו את המילה TREASURE — אוצר
   noun_repair_q05_roles:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun
@@ -1166,7 +1166,7 @@ instances:
         - 4
   noun_repair_q06_book:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה NOUN
+    instruction: כתבו את המילה NOUN — שם עצם
     tasks:
     - N
     - O
@@ -1177,7 +1177,7 @@ instances:
     success: NOUN נכתב נכון
     params:
       targetWord: noun
-      prompt: כתבו את המילה NOUN
+      prompt: כתבו את המילה NOUN — שם עצם
   noun_repair_q06_places:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילת ה־noun

@@ -2102,10 +2102,10 @@
               "instance_id": "q01_bridge_too_short_s2",
               "reward_item_id": "oak_log",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה LONG",
+              "display_text": "כתבו את המילה LONG — ארוך",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה LONG",
+                "instruction": "כתבו את המילה LONG — ארוך",
                 "tasks": [
                   "סדרו <strong>l, o, n, g</strong>",
                   "צרו <strong>long</strong> — ארוך"
@@ -2114,7 +2114,7 @@
                 "variant": "word_spelling",
                 "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה LONG",
+                  "prompt": "כתבו את המילה LONG — ארוך",
                   "targetWord": "long",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2236,10 +2236,10 @@
               "instance_id": "q03_big_and_small_words_s1",
               "reward_item_id": "corn",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה BIG",
+              "display_text": "כתבו את המילה BIG — גדול",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה BIG",
+                "instruction": "כתבו את המילה BIG — גדול",
                 "tasks": [
                   "סדרו <strong>b, i, g</strong>",
                   "צרו <strong>big</strong> — גדול"
@@ -2248,7 +2248,7 @@
                 "variant": "word_spelling",
                 "success": "BIG נכתב נכון; Corn אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה BIG",
+                  "prompt": "כתבו את המילה BIG — גדול",
                   "targetWord": "big",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2339,10 +2339,10 @@
               "instance_id": "q04_twelve_basic_adjectives_short",
               "reward_item_id": "ancient_rune",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה SHORT",
+              "display_text": "כתבו את המילה SHORT — קצר",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה SHORT",
+                "instruction": "כתבו את המילה SHORT — קצר",
                 "tasks": [
                   "סדרו <strong>s, h, o, r, t</strong>"
                 ],
@@ -2350,7 +2350,7 @@
                 "variant": "word_spelling",
                 "success": "Ancient Rune אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה SHORT",
+                  "prompt": "כתבו את המילה SHORT — קצר",
                   "targetWord": "short",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2409,10 +2409,10 @@
               "instance_id": "q04_twelve_basic_adjectives_cold",
               "reward_item_id": "ancient_rune",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה COLD",
+              "display_text": "כתבו את המילה COLD — קר",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה COLD",
+                "instruction": "כתבו את המילה COLD — קר",
                 "tasks": [
                   "סדרו <strong>c, o, l, d</strong>"
                 ],
@@ -2420,7 +2420,7 @@
                 "variant": "word_spelling",
                 "success": "Ancient Rune אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה COLD",
+                  "prompt": "כתבו את המילה COLD — קר",
                   "targetWord": "cold",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2479,10 +2479,10 @@
               "instance_id": "q04_twelve_basic_adjectives_big",
               "reward_item_id": "ancient_rune",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה BIG",
+              "display_text": "כתבו את המילה BIG — גדול",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה BIG",
+                "instruction": "כתבו את המילה BIG — גדול",
                 "tasks": [
                   "סדרו <strong>b, i, g</strong>"
                 ],
@@ -2490,7 +2490,7 @@
                 "variant": "word_spelling",
                 "success": "Ancient Rune אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה BIG",
+                  "prompt": "כתבו את המילה BIG — גדול",
                   "targetWord": "big",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2549,10 +2549,10 @@
               "instance_id": "q04_twelve_basic_adjectives_fast",
               "reward_item_id": "ancient_rune",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה FAST",
+              "display_text": "כתבו את המילה FAST — מהיר",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה FAST",
+                "instruction": "כתבו את המילה FAST — מהיר",
                 "tasks": [
                   "סדרו <strong>f, a, s, t</strong>"
                 ],
@@ -2560,7 +2560,7 @@
                 "variant": "word_spelling",
                 "success": "Ancient Rune אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה FAST",
+                  "prompt": "כתבו את המילה FAST — מהיר",
                   "targetWord": "fast",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2619,10 +2619,10 @@
               "instance_id": "q04_twelve_basic_adjectives_low",
               "reward_item_id": "ancient_rune",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה LOW",
+              "display_text": "כתבו את המילה LOW — נמוך",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה LOW",
+                "instruction": "כתבו את המילה LOW — נמוך",
                 "tasks": [
                   "סדרו <strong>l, o, w</strong>"
                 ],
@@ -2630,7 +2630,7 @@
                 "variant": "word_spelling",
                 "success": "Ancient Rune אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה LOW",
+                  "prompt": "כתבו את המילה LOW — נמוך",
                   "targetWord": "low",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2689,10 +2689,10 @@
               "instance_id": "q04_twelve_basic_adjectives_heavy",
               "reward_item_id": "ancient_rune",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה HEAVY",
+              "display_text": "כתבו את המילה HEAVY — כבד",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה HEAVY",
+                "instruction": "כתבו את המילה HEAVY — כבד",
                 "tasks": [
                   "סדרו <strong>h, e, a, v, y</strong>"
                 ],
@@ -2700,7 +2700,7 @@
                 "variant": "word_spelling",
                 "success": "Ancient Rune אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה HEAVY",
+                  "prompt": "כתבו את המילה HEAVY — כבד",
                   "targetWord": "heavy",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2790,10 +2790,10 @@
               "instance_id": "q05_from_low_to_high_s2",
               "reward_item_id": "power_stone",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה LOW",
+              "display_text": "כתבו את המילה LOW — נמוך",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה LOW",
+                "instruction": "כתבו את המילה LOW — נמוך",
                 "tasks": [
                   "סדרו <strong>l, o, w</strong>"
                 ],
@@ -2801,7 +2801,7 @@
                 "variant": "word_spelling",
                 "success": "Power Stone אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה LOW",
+                  "prompt": "כתבו את המילה LOW — נמוך",
                   "targetWord": "low",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -2857,10 +2857,10 @@
               "instance_id": "q05_from_low_to_high_s5",
               "reward_item_id": "power_stone",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה HIGH",
+              "display_text": "כתבו את המילה HIGH — גבוה",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה HIGH",
+                "instruction": "כתבו את המילה HIGH — גבוה",
                 "tasks": [
                   "סדרו <strong>h, i, g, h</strong>"
                 ],
@@ -2868,7 +2868,7 @@
                 "variant": "word_spelling",
                 "success": "Power Stone אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה HIGH",
+                  "prompt": "כתבו את המילה HIGH — גבוה",
                   "targetWord": "high",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3258,10 +3258,10 @@
               "instance_id": "q01_runaway_hammer_s2",
               "reward_item_id": "oak_log",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה CAT",
+              "display_text": "כתבו את המילה CAT — חתול",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה CAT",
+                "instruction": "כתבו את המילה CAT — חתול",
                 "tasks": [
                   "סדרו <strong>c, a, t</strong>",
                   "צרו <strong>cat</strong> — חתול"
@@ -3270,7 +3270,7 @@
                 "variant": "word_spelling",
                 "success": "CAT נכתב נכון; Oak Log אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה CAT",
+                  "prompt": "כתבו את המילה CAT — חתול",
                   "targetWord": "cat",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3323,10 +3323,10 @@
               "instance_id": "q02_snoring_anvil_s2",
               "reward_item_id": "herbs",
               "reward_amount": 1,
-              "display_text": "כתבו את המילה DOG",
+              "display_text": "כתבו את המילה DOG — כלב",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה DOG",
+                "instruction": "כתבו את המילה DOG — כלב",
                 "tasks": [
                   "סדרו <strong>d, o, g</strong>",
                   "צרו <strong>dog</strong> — כלב"
@@ -3335,7 +3335,7 @@
                 "variant": "word_spelling",
                 "success": "DOG נכתב נכון; Herbs אחד נוסף לתיק",
                 "params": {
-                  "prompt": "כתבו את המילה DOG",
+                  "prompt": "כתבו את המילה DOG — כלב",
                   "targetWord": "dog",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3391,10 +3391,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "q03_first_real_slash_s2",
-              "display_text": "כתבו את המילה BIG",
+              "display_text": "כתבו את המילה BIG — גדול",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה BIG",
+                "instruction": "כתבו את המילה BIG — גדול",
                 "tasks": [
                   "סדרו <strong>b, i, g</strong>",
                   "צרו <strong>big</strong> — גדול"
@@ -3403,7 +3403,7 @@
                 "variant": "word_spelling",
                 "success": "BIG נכתב נכון — חזרו לוויל לקבל Slash",
                 "params": {
-                  "prompt": "כתבו את המילה BIG",
+                  "prompt": "כתבו את המילה BIG — גדול",
                   "targetWord": "big",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3473,10 +3473,10 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "q01_roles_without_names_s2",
-              "display_text": "כתבו את המילה KING",
+              "display_text": "כתבו את המילה KING — מלך",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה KING",
+                "instruction": "כתבו את המילה KING — מלך",
                 "tasks": [
                   "גררו את האותיות <strong>k, i, n, g</strong> למשבצות",
                   "התעלמו מאותיות המסיחות",
@@ -3486,7 +3486,7 @@
                 "variant": "word_spelling",
                 "success": "המילה KING (מלך) חוזרת לדף אנשי המלוכה",
                 "params": {
-                  "prompt": "כתבו את המילה KING",
+                  "prompt": "כתבו את המילה KING — מלך",
                   "targetWord": "king",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3573,10 +3573,10 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "q02_castle_on_the_map_s2",
-              "display_text": "כתבו את המילה CASTLE",
+              "display_text": "כתבו את המילה CASTLE — טירה",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה CASTLE",
+                "instruction": "כתבו את המילה CASTLE — טירה",
                 "tasks": [
                   "גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות",
                   "התעלמו מאותיות המסיחות",
@@ -3586,7 +3586,7 @@
                 "variant": "word_spelling",
                 "success": "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה",
                 "params": {
-                  "prompt": "כתבו את המילה CASTLE",
+                  "prompt": "כתבו את המילה CASTLE — טירה",
                   "targetWord": "castle",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3673,10 +3673,10 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "q03_crown_soup_s2",
-              "display_text": "כתבו את המילה CROWN",
+              "display_text": "כתבו את המילה CROWN — כתר",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה CROWN",
+                "instruction": "כתבו את המילה CROWN — כתר",
                 "tasks": [
                   "גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר",
                   "בדקו שהמילה מתחילה ב־C ומסתיימת ב־N",
@@ -3686,7 +3686,7 @@
                 "variant": "word_spelling",
                 "success": "הכתר מקבל בחזרה את הכרטיס CROWN",
                 "params": {
-                  "prompt": "כתבו את המילה CROWN",
+                  "prompt": "כתבו את המילה CROWN — כתר",
                   "targetWord": "crown",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3773,10 +3773,10 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "q04_soup_shield_s2",
-              "display_text": "כתבו את המילה SHIELD",
+              "display_text": "כתבו את המילה SHIELD — מגן",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה SHIELD",
+                "instruction": "כתבו את המילה SHIELD — מגן",
                 "tasks": [
                   "גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות",
                   "שימו לב לצירוף <strong>sh</strong> בתחילת המילה",
@@ -3786,7 +3786,7 @@
                 "variant": "word_spelling",
                 "success": "המגן (shield) חוזר להיות מגן במקום מגש מרק",
                 "params": {
-                  "prompt": "כתבו את המילה SHIELD",
+                  "prompt": "כתבו את המילה SHIELD — מגן",
                   "targetWord": "shield",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3873,10 +3873,10 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "q05_wizard_for_sale_s2",
-              "display_text": "כתבו את המילה WIZARD",
+              "display_text": "כתבו את המילה WIZARD — קוסם",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה WIZARD",
+                "instruction": "כתבו את המילה WIZARD — קוסם",
                 "tasks": [
                   "גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות",
                   "התעלמו מאותיות המסיחות",
@@ -3886,7 +3886,7 @@
                 "variant": "word_spelling",
                 "success": "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון",
                 "params": {
-                  "prompt": "כתבו את המילה WIZARD",
+                  "prompt": "כתבו את המילה WIZARD — קוסם",
                   "targetWord": "wizard",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -3973,10 +3973,10 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "q06_dragon_identity_s2",
-              "display_text": "כתבו את המילה DRAGON",
+              "display_text": "כתבו את המילה DRAGON — דרקון",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה DRAGON",
+                "instruction": "כתבו את המילה DRAGON — דרקון",
                 "tasks": [
                   "גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות",
                   "התעלמו מאותיות המסיחות",
@@ -3986,7 +3986,7 @@
                 "variant": "word_spelling",
                 "success": "כרטיס DRAGON (דרקון) חוזר ליצור הנכון",
                 "params": {
-                  "prompt": "כתבו את המילה DRAGON",
+                  "prompt": "כתבו את המילה DRAGON — דרקון",
                   "targetWord": "dragon",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -4078,10 +4078,10 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "q07_royal_noun_trial_queen",
-              "display_text": "כתבו את המילה QUEEN",
+              "display_text": "כתבו את המילה QUEEN — מלכה",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה QUEEN",
+                "instruction": "כתבו את המילה QUEEN — מלכה",
                 "tasks": [
                   "סדרו את המילה מלכה באנגלית"
                 ],
@@ -4089,7 +4089,7 @@
                 "variant": "word_spelling",
                 "success": "QUEEN נכתב נכון",
                 "params": {
-                  "prompt": "כתבו את המילה QUEEN",
+                  "prompt": "כתבו את המילה QUEEN — מלכה",
                   "targetWord": "queen",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -4104,10 +4104,10 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "q07_royal_noun_trial_castle",
-              "display_text": "כתבו את המילה CASTLE",
+              "display_text": "כתבו את המילה CASTLE — טירה",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה CASTLE",
+                "instruction": "כתבו את המילה CASTLE — טירה",
                 "tasks": [
                   "סדרו את המילה טירה באנגלית"
                 ],
@@ -4115,7 +4115,7 @@
                 "variant": "word_spelling",
                 "success": "CASTLE נכתב נכון",
                 "params": {
-                  "prompt": "כתבו את המילה CASTLE",
+                  "prompt": "כתבו את המילה CASTLE — טירה",
                   "targetWord": "castle",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -4130,10 +4130,10 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "q07_royal_noun_trial_throne",
-              "display_text": "כתבו את המילה THRONE",
+              "display_text": "כתבו את המילה THRONE — כס",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה THRONE",
+                "instruction": "כתבו את המילה THRONE — כס",
                 "tasks": [
                   "סדרו את המילה כיסא־מלכות באנגלית"
                 ],
@@ -4141,7 +4141,7 @@
                 "variant": "word_spelling",
                 "success": "THRONE נכתב נכון",
                 "params": {
-                  "prompt": "כתבו את המילה THRONE",
+                  "prompt": "כתבו את המילה THRONE — כס",
                   "targetWord": "throne",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -4156,10 +4156,10 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "q07_royal_noun_trial_shield",
-              "display_text": "כתבו את המילה SHIELD",
+              "display_text": "כתבו את המילה SHIELD — מגן",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה SHIELD",
+                "instruction": "כתבו את המילה SHIELD — מגן",
                 "tasks": [
                   "סדרו את המילה מגן באנגלית"
                 ],
@@ -4167,7 +4167,7 @@
                 "variant": "word_spelling",
                 "success": "SHIELD נכתב נכון",
                 "params": {
-                  "prompt": "כתבו את המילה SHIELD",
+                  "prompt": "כתבו את המילה SHIELD — מגן",
                   "targetWord": "shield",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -4182,10 +4182,10 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "q07_royal_noun_trial_dragon",
-              "display_text": "כתבו את המילה DRAGON",
+              "display_text": "כתבו את המילה DRAGON — דרקון",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה DRAGON",
+                "instruction": "כתבו את המילה DRAGON — דרקון",
                 "tasks": [
                   "סדרו את המילה דרקון באנגלית"
                 ],
@@ -4193,7 +4193,7 @@
                 "variant": "word_spelling",
                 "success": "DRAGON נכתב נכון",
                 "params": {
-                  "prompt": "כתבו את המילה DRAGON",
+                  "prompt": "כתבו את המילה DRAGON — דרקון",
                   "targetWord": "dragon",
                   "extraDistractorCount": 2,
                   "customDistractors": [],
@@ -4377,10 +4377,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q01_book",
-              "display_text": "כתבו את המילה BOOK",
+              "display_text": "כתבו את המילה BOOK — ספר",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה BOOK",
+                "instruction": "כתבו את המילה BOOK — ספר",
                 "tasks": [
                   "B",
                   "O",
@@ -4392,7 +4392,7 @@
                 "success": "BOOK נכתב נכון",
                 "params": {
                   "targetWord": "book",
-                  "prompt": "כתבו את המילה BOOK"
+                  "prompt": "כתבו את המילה BOOK — ספר"
                 }
               }
             },
@@ -4806,10 +4806,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q02_pencil",
-              "display_text": "כתבו את המילה PENCIL",
+              "display_text": "כתבו את המילה PENCIL — עיפרון",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה PENCIL",
+                "instruction": "כתבו את המילה PENCIL — עיפרון",
                 "tasks": [
                   "P",
                   "E",
@@ -4823,7 +4823,7 @@
                 "success": "PENCIL נכתב נכון",
                 "params": {
                   "targetWord": "pencil",
-                  "prompt": "כתבו את המילה PENCIL"
+                  "prompt": "כתבו את המילה PENCIL — עיפרון"
                 }
               }
             },
@@ -5239,10 +5239,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q03_market",
-              "display_text": "כתבו את המילה MARKET",
+              "display_text": "כתבו את המילה MARKET — שוק",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה MARKET",
+                "instruction": "כתבו את המילה MARKET — שוק",
                 "tasks": [
                   "M",
                   "A",
@@ -5256,7 +5256,7 @@
                 "success": "MARKET נכתב נכון",
                 "params": {
                   "targetWord": "market",
-                  "prompt": "כתבו את המילה MARKET"
+                  "prompt": "כתבו את המילה MARKET — שוק"
                 }
               }
             },
@@ -5670,10 +5670,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q04_spoon",
-              "display_text": "כתבו את המילה SPOON",
+              "display_text": "כתבו את המילה SPOON — כף",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה SPOON",
+                "instruction": "כתבו את המילה SPOON — כף",
                 "tasks": [
                   "S",
                   "P",
@@ -5686,7 +5686,7 @@
                 "success": "SPOON נכתב נכון",
                 "params": {
                   "targetWord": "spoon",
-                  "prompt": "כתבו את המילה SPOON"
+                  "prompt": "כתבו את המילה SPOON — כף"
                 }
               }
             },
@@ -6100,10 +6100,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q05_treasure",
-              "display_text": "כתבו את המילה TREASURE",
+              "display_text": "כתבו את המילה TREASURE — אוצר",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה TREASURE",
+                "instruction": "כתבו את המילה TREASURE — אוצר",
                 "tasks": [
                   "T",
                   "R",
@@ -6119,7 +6119,7 @@
                 "success": "TREASURE נכתב נכון",
                 "params": {
                   "targetWord": "treasure",
-                  "prompt": "כתבו את המילה TREASURE"
+                  "prompt": "כתבו את המילה TREASURE — אוצר"
                 }
               }
             },
@@ -6539,10 +6539,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q06_book",
-              "display_text": "כתבו את המילה NOUN",
+              "display_text": "כתבו את המילה NOUN — שם עצם",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה NOUN",
+                "instruction": "כתבו את המילה NOUN — שם עצם",
                 "tasks": [
                   "N",
                   "O",
@@ -6554,7 +6554,7 @@
                 "success": "NOUN נכתב נכון",
                 "params": {
                   "targetWord": "noun",
-                  "prompt": "כתבו את המילה NOUN"
+                  "prompt": "כתבו את המילה NOUN — שם עצם"
                 }
               }
             },
@@ -6912,10 +6912,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "numbers_q01_spell_ten",
-              "display_text": "כתבו את המילה TEN",
+              "display_text": "כתבו את המילה TEN — עשר",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה TEN",
+                "instruction": "כתבו את המילה TEN — עשר",
                 "tasks": [
                   "t",
                   "e",
@@ -6925,7 +6925,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! TEN הוא 10.",
                 "params": {
-                  "prompt": "כתבו את המילה TEN",
+                  "prompt": "כתבו את המילה TEN — עשר",
                   "targetWord": "ten",
                   "extraDistractorCount": 1,
                   "customDistractors": []
@@ -7003,10 +7003,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "numbers_q01_spell_sixteen",
-              "display_text": "כתבו את המילה SIXTEEN",
+              "display_text": "כתבו את המילה SIXTEEN — שש עשרה",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה SIXTEEN",
+                "instruction": "כתבו את המילה SIXTEEN — שש עשרה",
                 "tasks": [
                   "s",
                   "i",
@@ -7020,7 +7020,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! SIXTEEN הוא 16.",
                 "params": {
-                  "prompt": "כתבו את המילה SIXTEEN",
+                  "prompt": "כתבו את המילה SIXTEEN — שש עשרה",
                   "targetWord": "sixteen",
                   "extraDistractorCount": 2,
                   "customDistractors": []
@@ -7163,10 +7163,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "numbers_q02_spell_twenty",
-              "display_text": "כתבו את המילה TWENTY",
+              "display_text": "כתבו את המילה TWENTY — עשרים",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה TWENTY",
+                "instruction": "כתבו את המילה TWENTY — עשרים",
                 "tasks": [
                   "t",
                   "w",
@@ -7179,7 +7179,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! TWENTY הוא 20.",
                 "params": {
-                  "prompt": "כתבו את המילה TWENTY",
+                  "prompt": "כתבו את המילה TWENTY — עשרים",
                   "targetWord": "twenty",
                   "extraDistractorCount": 2,
                   "customDistractors": []
@@ -7257,10 +7257,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "numbers_q02_spell_fifty",
-              "display_text": "כתבו את המילה FIFTY",
+              "display_text": "כתבו את המילה FIFTY — חמישים",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה FIFTY",
+                "instruction": "כתבו את המילה FIFTY — חמישים",
                 "tasks": [
                   "f",
                   "i",
@@ -7272,7 +7272,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! FIFTY הוא 50.",
                 "params": {
-                  "prompt": "כתבו את המילה FIFTY",
+                  "prompt": "כתבו את המילה FIFTY — חמישים",
                   "targetWord": "fifty",
                   "extraDistractorCount": 2,
                   "customDistractors": []
@@ -7415,10 +7415,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "numbers_q03_spell_hundred",
-              "display_text": "כתבו את המילה HUNDRED",
+              "display_text": "כתבו את המילה HUNDRED — מאה",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה HUNDRED",
+                "instruction": "כתבו את המילה HUNDRED — מאה",
                 "tasks": [
                   "h",
                   "u",
@@ -7432,7 +7432,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! HUNDRED הוא מאה.",
                 "params": {
-                  "prompt": "כתבו את המילה HUNDRED",
+                  "prompt": "כתבו את המילה HUNDRED — מאה",
                   "targetWord": "hundred",
                   "extraDistractorCount": 2,
                   "customDistractors": []
@@ -7515,10 +7515,10 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "numbers_q03_spell_thousand",
-              "display_text": "כתבו את המילה THOUSAND",
+              "display_text": "כתבו את המילה THOUSAND — אלף",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה THOUSAND",
+                "instruction": "כתבו את המילה THOUSAND — אלף",
                 "tasks": [
                   "t",
                   "h",
@@ -7533,7 +7533,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! THOUSAND הוא אלף.",
                 "params": {
-                  "prompt": "כתבו את המילה THOUSAND",
+                  "prompt": "כתבו את המילה THOUSAND — אלף",
                   "targetWord": "thousand",
                   "extraDistractorCount": 2,
                   "customDistractors": []
