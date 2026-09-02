@@ -4244,9 +4244,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_AT",
-        "D_G",
-        "FIS_",
-        "_IR_"
+        "_OG",
+        "_ISH",
+        "_IRD"
       ],
       "target": "cat, dog, fish, bird",
       "variant": "missing_letter_matching",
@@ -4285,7 +4285,7 @@
             "image": "",
             "fullWord": "dog",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4293,7 +4293,7 @@
             "image": "",
             "fullWord": "fish",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -4301,8 +4301,7 @@
             "image": "",
             "fullWord": "bird",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -4337,8 +4336,8 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ABLE",
-        "C_AIR",
-        "BO_",
+        "_HAIR",
+        "_OX",
         "_AG"
       ],
       "target": "table, chair, box, bag",
@@ -4378,7 +4377,7 @@
             "image": "",
             "fullWord": "chair",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4386,7 +4385,7 @@
             "image": "",
             "fullWord": "box",
             "missingIndices": [
-              2
+              0
             ]
           },
           {
@@ -4408,9 +4407,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OY",
-        "G_RL",
-        "KIN_",
-        "_UEE_"
+        "_IRL",
+        "_ING",
+        "_UEEN"
       ],
       "target": "boy, girl, king, queen",
       "variant": "missing_letter_matching",
@@ -4449,7 +4448,7 @@
             "image": "",
             "fullWord": "girl",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4457,7 +4456,7 @@
             "image": "",
             "fullWord": "king",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -4465,8 +4464,7 @@
             "image": "",
             "fullWord": "queen",
             "missingIndices": [
-              0,
-              4
+              0
             ]
           }
         ]
@@ -4480,9 +4478,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ASTLE",
-        "G_TE",
-        "TOWE_",
-        "_AR_"
+        "_ATE",
+        "_OWER",
+        "_ARK"
       ],
       "target": "castle, gate, tower, park",
       "variant": "missing_letter_matching",
@@ -4521,7 +4519,7 @@
             "image": "",
             "fullWord": "gate",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4529,7 +4527,7 @@
             "image": "",
             "fullWord": "tower",
             "missingIndices": [
-              4
+              0
             ]
           },
           {
@@ -4537,8 +4535,7 @@
             "image": "",
             "fullWord": "park",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -4616,9 +4613,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_AT",
-        "D_G",
-        "FIS_",
-        "_IR_"
+        "_OG",
+        "_ISH",
+        "_IRD"
       ],
       "target": "cat, dog, fish, bird",
       "variant": "missing_letter_matching",
@@ -4657,7 +4654,7 @@
             "image": "",
             "fullWord": "dog",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4665,7 +4662,7 @@
             "image": "",
             "fullWord": "fish",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -4673,8 +4670,7 @@
             "image": "",
             "fullWord": "bird",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -4688,8 +4684,8 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_AG",
-        "B_X",
-        "BOO_",
+        "_OX",
+        "_OOK",
         "_EN"
       ],
       "target": "bag, box, book, pen",
@@ -4729,7 +4725,7 @@
             "image": "",
             "fullWord": "box",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4737,7 +4733,7 @@
             "image": "",
             "fullWord": "book",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -4782,9 +4778,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ARK",
-        "G_TE",
-        "TOWE_",
-        "_ASTL_"
+        "_ATE",
+        "_OWER",
+        "_ASTLE"
       ],
       "target": "park, gate, tower, castle",
       "variant": "missing_letter_matching",
@@ -4823,7 +4819,7 @@
             "image": "",
             "fullWord": "gate",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4831,7 +4827,7 @@
             "image": "",
             "fullWord": "tower",
             "missingIndices": [
-              4
+              0
             ]
           },
           {
@@ -4839,8 +4835,7 @@
             "image": "",
             "fullWord": "castle",
             "missingIndices": [
-              0,
-              5
+              0
             ]
           }
         ]
@@ -4918,9 +4913,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ALL",
-        "T_Y",
-        "CA_",
-        "_OL_"
+        "_OY",
+        "_AR",
+        "_OLL"
       ],
       "target": "ball, toy, car, doll",
       "variant": "missing_letter_matching",
@@ -4959,7 +4954,7 @@
             "image": "",
             "fullWord": "toy",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -4967,7 +4962,7 @@
             "image": "",
             "fullWord": "car",
             "missingIndices": [
-              2
+              0
             ]
           },
           {
@@ -4975,8 +4970,7 @@
             "image": "",
             "fullWord": "doll",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -4990,9 +4984,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OG",
-        "C_T",
-        "FIS_",
-        "_IR_"
+        "_AT",
+        "_ISH",
+        "_IRD"
       ],
       "target": "dog, cat, fish, bird",
       "variant": "missing_letter_matching",
@@ -5031,7 +5025,7 @@
             "image": "",
             "fullWord": "cat",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5039,7 +5033,7 @@
             "image": "",
             "fullWord": "fish",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -5047,8 +5041,7 @@
             "image": "",
             "fullWord": "bird",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -5062,9 +5055,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_READ",
-        "R_CE",
-        "SOU_",
-        "_AK_"
+        "_ICE",
+        "_OUP",
+        "_AKE"
       ],
       "target": "bread, rice, soup, cake",
       "variant": "missing_letter_matching",
@@ -5103,7 +5096,7 @@
             "image": "",
             "fullWord": "rice",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5111,7 +5104,7 @@
             "image": "",
             "fullWord": "soup",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -5119,8 +5112,7 @@
             "image": "",
             "fullWord": "cake",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -5134,9 +5126,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_PPLE",
-        "P_AR",
-        "LEMO_",
-        "_ANG_"
+        "_EAR",
+        "_EMON",
+        "_ANGO"
       ],
       "target": "apple, pear, lemon, mango",
       "variant": "missing_letter_matching",
@@ -5175,7 +5167,7 @@
             "image": "",
             "fullWord": "pear",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5183,7 +5175,7 @@
             "image": "",
             "fullWord": "lemon",
             "missingIndices": [
-              4
+              0
             ]
           },
           {
@@ -5191,8 +5183,7 @@
             "image": "",
             "fullWord": "mango",
             "missingIndices": [
-              0,
-              4
+              0
             ]
           }
         ]
@@ -5290,9 +5281,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OX",
-        "P_N",
-        "CU_",
-        "_AS_"
+        "_AN",
+        "_UP",
+        "_ASK"
       ],
       "target": "box, pan, cup, mask",
       "variant": "missing_letter_matching",
@@ -5331,7 +5322,7 @@
             "image": "",
             "fullWord": "pan",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5339,7 +5330,7 @@
             "image": "",
             "fullWord": "cup",
             "missingIndices": [
-              2
+              0
             ]
           },
           {
@@ -5347,8 +5338,7 @@
             "image": "",
             "fullWord": "mask",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -5362,9 +5352,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_POON",
-        "P_ATE",
-        "CU_",
-        "_NIF_"
+        "_LATE",
+        "_UP",
+        "_NIFE"
       ],
       "target": "spoon, plate, cup, knife",
       "variant": "missing_letter_matching",
@@ -5403,7 +5393,7 @@
             "image": "",
             "fullWord": "plate",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5411,7 +5401,7 @@
             "image": "",
             "fullWord": "cup",
             "missingIndices": [
-              2
+              0
             ]
           },
           {
@@ -5419,8 +5409,7 @@
             "image": "",
             "fullWord": "knife",
             "missingIndices": [
-              0,
-              4
+              0
             ]
           }
         ]
@@ -5434,9 +5423,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ABLE",
-        "P_N",
-        "CU_",
-        "_OW_"
+        "_EN",
+        "_UP",
+        "_OWL"
       ],
       "target": "table, pen, cup, bowl",
       "variant": "missing_letter_matching",
@@ -5475,7 +5464,7 @@
             "image": "",
             "fullWord": "pen",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5483,7 +5472,7 @@
             "image": "",
             "fullWord": "cup",
             "missingIndices": [
-              2
+              0
             ]
           },
           {
@@ -5491,8 +5480,7 @@
             "image": "",
             "fullWord": "bowl",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -5506,9 +5494,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_HEF",
-        "B_KER",
-        "GUAR_",
-        "_IZAR_"
+        "_AKER",
+        "_UARD",
+        "_IZARD"
       ],
       "target": "chef, baker, guard, wizard",
       "variant": "missing_letter_matching",
@@ -5547,7 +5535,7 @@
             "image": "",
             "fullWord": "baker",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5555,7 +5543,7 @@
             "image": "",
             "fullWord": "guard",
             "missingIndices": [
-              4
+              0
             ]
           },
           {
@@ -5563,8 +5551,7 @@
             "image": "",
             "fullWord": "wizard",
             "missingIndices": [
-              0,
-              5
+              0
             ]
           }
         ]
@@ -5578,9 +5565,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ATE",
-        "P_RK",
-        "TOWE_",
-        "_ASTL_"
+        "_ARK",
+        "_OWER",
+        "_ASTLE"
       ],
       "target": "gate, park, tower, castle",
       "variant": "missing_letter_matching",
@@ -5619,7 +5606,7 @@
             "image": "",
             "fullWord": "park",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5627,7 +5614,7 @@
             "image": "",
             "fullWord": "tower",
             "missingIndices": [
-              4
+              0
             ]
           },
           {
@@ -5635,8 +5622,7 @@
             "image": "",
             "fullWord": "castle",
             "missingIndices": [
-              0,
-              5
+              0
             ]
           }
         ]
@@ -5733,8 +5719,8 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_RAGON",
-        "R_BBIT",
-        "DO_",
+        "_ABBIT",
+        "_OG",
         "_AT"
       ],
       "target": "dragon, rabbit, dog, cat",
@@ -5774,7 +5760,7 @@
             "image": "",
             "fullWord": "rabbit",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5782,7 +5768,7 @@
             "image": "",
             "fullWord": "dog",
             "missingIndices": [
-              2
+              0
             ]
           },
           {
@@ -5804,9 +5790,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ASTLE",
-        "T_WER",
-        "THRON_",
-        "_ROW_"
+        "_OWER",
+        "_HRONE",
+        "_ROWN"
       ],
       "target": "castle, tower, throne, crown",
       "variant": "missing_letter_matching",
@@ -5845,7 +5831,7 @@
             "image": "",
             "fullWord": "tower",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5853,7 +5839,7 @@
             "image": "",
             "fullWord": "throne",
             "missingIndices": [
-              5
+              0
             ]
           },
           {
@@ -5861,8 +5847,7 @@
             "image": "",
             "fullWord": "crown",
             "missingIndices": [
-              0,
-              4
+              0
             ]
           }
         ]
@@ -5876,9 +5861,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_WORD",
-        "S_IELD",
-        "SCROL_",
-        "_OO_"
+        "_HIELD",
+        "_CROLL",
+        "_OOK"
       ],
       "target": "sword, shield, scroll, book",
       "variant": "missing_letter_matching",
@@ -5917,7 +5902,7 @@
             "image": "",
             "fullWord": "shield",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5925,7 +5910,7 @@
             "image": "",
             "fullWord": "scroll",
             "missingIndices": [
-              5
+              0
             ]
           },
           {
@@ -5933,8 +5918,7 @@
             "image": "",
             "fullWord": "book",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -5948,9 +5932,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ING",
-        "Q_EEN",
-        "KNIGH_",
-        "_UAR_"
+        "_UEEN",
+        "_NIGHT",
+        "_UARD"
       ],
       "target": "king, queen, knight, guard",
       "variant": "missing_letter_matching",
@@ -5989,7 +5973,7 @@
             "image": "",
             "fullWord": "queen",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -5997,7 +5981,7 @@
             "image": "",
             "fullWord": "knight",
             "missingIndices": [
-              5
+              0
             ]
           },
           {
@@ -6005,8 +5989,7 @@
             "image": "",
             "fullWord": "guard",
             "missingIndices": [
-              0,
-              4
+              0
             ]
           }
         ]
@@ -6109,9 +6092,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OG",
-        "C_T",
-        "FIS_",
-        "_IR_"
+        "_AT",
+        "_ISH",
+        "_IRD"
       ],
       "target": "dog, cat, fish, bird",
       "variant": "missing_letter_matching",
@@ -6150,7 +6133,7 @@
             "image": "",
             "fullWord": "cat",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -6158,7 +6141,7 @@
             "image": "",
             "fullWord": "fish",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -6166,8 +6149,7 @@
             "image": "",
             "fullWord": "bird",
             "missingIndices": [
-              0,
-              3
+              0
             ]
           }
         ]
@@ -6202,8 +6184,8 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OOK",
-        "T_BLE",
-        "PE_",
+        "_ABLE",
+        "_EN",
         "_AG"
       ],
       "target": "book, table, pen, bag",
@@ -6243,7 +6225,7 @@
             "image": "",
             "fullWord": "table",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -6251,7 +6233,7 @@
             "image": "",
             "fullWord": "pen",
             "missingIndices": [
-              2
+              0
             ]
           },
           {
@@ -6273,9 +6255,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OY",
-        "G_RL",
-        "KIN_",
-        "_UEE_"
+        "_IRL",
+        "_ING",
+        "_UEEN"
       ],
       "target": "boy, girl, king, queen",
       "variant": "missing_letter_matching",
@@ -6314,7 +6296,7 @@
             "image": "",
             "fullWord": "girl",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -6322,7 +6304,7 @@
             "image": "",
             "fullWord": "king",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -6330,8 +6312,7 @@
             "image": "",
             "fullWord": "queen",
             "missingIndices": [
-              0,
-              4
+              0
             ]
           }
         ]
@@ -6345,9 +6326,9 @@
       "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ASTLE",
-        "G_TE",
-        "PAR_",
-        "_OWE_"
+        "_ATE",
+        "_ARK",
+        "_OWER"
       ],
       "target": "castle, gate, park, tower",
       "variant": "missing_letter_matching",
@@ -6386,7 +6367,7 @@
             "image": "",
             "fullWord": "gate",
             "missingIndices": [
-              1
+              0
             ]
           },
           {
@@ -6394,7 +6375,7 @@
             "image": "",
             "fullWord": "park",
             "missingIndices": [
-              3
+              0
             ]
           },
           {
@@ -6402,8 +6383,7 @@
             "image": "",
             "fullWord": "tower",
             "missingIndices": [
-              0,
-              4
+              0
             ]
           }
         ]
@@ -7845,10 +7825,10 @@
       "locale": "he",
       "instruction": "השלימו את האות החסרה במילה",
       "tasks": [
-        "_hort",
-        "_ong",
-        "_old",
-        "_ot"
+        "_HORT",
+        "_ONG",
+        "_OLD",
+        "_OT"
       ],
       "target": "short, long, cold, hot",
       "variant": "missing_letter_matching",
@@ -7916,10 +7896,10 @@
       "locale": "he",
       "instruction": "השלימו את האות החסרה במילה",
       "tasks": [
-        "_ig",
-        "_mall",
-        "_ast",
-        "_low"
+        "_IG",
+        "_MALL",
+        "_AST",
+        "_LOW"
       ],
       "target": "big, small, fast, slow",
       "variant": "missing_letter_matching",
@@ -7987,10 +7967,10 @@
       "locale": "he",
       "instruction": "השלימו את האות החסרה במילה",
       "tasks": [
-        "_ow",
-        "_igh",
-        "_eavy",
-        "_ight"
+        "_OW",
+        "_IGH",
+        "_EAVY",
+        "_IGHT"
       ],
       "target": "low, high, heavy, light",
       "variant": "missing_letter_matching",
@@ -18067,5 +18047,5 @@
       ]
     }
   ],
-  "source_digest": "a0a41fe1ede0c18ce8f620cd8bb33037331ccb9d174a05a8404efa2c19b0f920"
+  "source_digest": "f78123874c1d0dfe9b28b50b3a925a633db7b0aabba5a7a524a2637606ff9c26"
 }

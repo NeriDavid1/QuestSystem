@@ -321,10 +321,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילה
     tasks:
-    - _hort
-    - _ong
-    - _old
-    - _ot
+    - _HORT
+    - _ONG
+    - _OLD
+    - _OT
     target: short, long, cold, hot
     variant: missing_letter_matching
     success: ארבע המילים הראשונות הושלמו
@@ -363,10 +363,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילה
     tasks:
-    - _ig
-    - _mall
-    - _ast
-    - _low
+    - _IG
+    - _MALL
+    - _AST
+    - _LOW
     target: big, small, fast, slow
     variant: missing_letter_matching
     success: ארבע המילים הבאות הושלמו
@@ -405,10 +405,10 @@ instances:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה במילה
     tasks:
-    - _ow
-    - _igh
-    - _eavy
-    - _ight
+    - _OW
+    - _IGH
+    - _EAVY
+    - _IGHT
     target: low, high, heavy, light
     variant: missing_letter_matching
     success: כל שתים־עשרה המילים הושלמו; Gem אחד נוסף לתיק
