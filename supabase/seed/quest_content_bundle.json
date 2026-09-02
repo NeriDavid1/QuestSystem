@@ -2432,6 +2432,7 @@
         ],
         "content_fields": [
           "prompt",
+          "translation",
           "englishWordsInOrder",
           "preFilledIndices",
           "distractorWords",
@@ -4240,7 +4241,7 @@
     {
       "key": "noun_repair_q01_animals",
       "locale": "he",
-      "instruction": "תקנו את שמות החיות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_AT",
         "_OG",
@@ -4269,6 +4270,40 @@
             "id": "bird",
             "value": "b"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "cat",
+            "image": "",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "fish",
+            "image": "",
+            "fullWord": "fish",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "bird",
+            "image": "",
+            "fullWord": "bird",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4277,7 +4312,7 @@
     {
       "key": "noun_repair_q01_book",
       "locale": "he",
-      "instruction": "סדרו את האותיות של BOOK",
+      "instruction": "זוכרים איך כותבים את שם העצם?",
       "tasks": [
         "B",
         "O",
@@ -4297,7 +4332,7 @@
     {
       "key": "noun_repair_q01_objects",
       "locale": "he",
-      "instruction": "התאימו אות ראשונה לחפצים",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ABLE",
         "_HAIR",
@@ -4326,6 +4361,40 @@
             "id": "bag",
             "value": "b"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "table",
+            "image": "",
+            "fullWord": "table",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "chair",
+            "image": "",
+            "fullWord": "chair",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "box",
+            "image": "",
+            "fullWord": "box",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "bag",
+            "image": "",
+            "fullWord": "bag",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4334,7 +4403,7 @@
     {
       "key": "noun_repair_q01_people",
       "locale": "he",
-      "instruction": "התאימו את האות הראשונה למילת noun",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OY",
         "_IRL",
@@ -4363,6 +4432,40 @@
             "id": "queen",
             "value": "q"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "boy",
+            "image": "",
+            "fullWord": "boy",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "girl",
+            "image": "",
+            "fullWord": "girl",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "king",
+            "image": "",
+            "fullWord": "king",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "queen",
+            "image": "",
+            "fullWord": "queen",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4371,7 +4474,7 @@
     {
       "key": "noun_repair_q01_places",
       "locale": "he",
-      "instruction": "התאימו אות ראשונה למקומות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ASTLE",
         "_ATE",
@@ -4400,6 +4503,40 @@
             "id": "park",
             "value": "p"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "castle",
+            "image": "",
+            "fullWord": "castle",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "gate",
+            "image": "",
+            "fullWord": "gate",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "tower",
+            "image": "",
+            "fullWord": "tower",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "park",
+            "image": "",
+            "fullWord": "park",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4408,23 +4545,19 @@
     {
       "key": "noun_repair_q01_say",
       "locale": "he",
-      "instruction": "אמרו את שמות ה־nouns בקול",
+      "instruction": "תגידו את שם העצם בקול",
       "tasks": [
-        "book",
-        "table",
-        "girl"
+        "book"
       ],
-      "target": "book, table, girl",
+      "target": "book",
       "variant": "pronunciation",
-      "success": "שלושה nouns נקראו ברור",
+      "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
         "targetWords": [
-          "book",
-          "table",
-          "girl"
+          "book"
         ],
-        "targetPhrase": "book table girl",
+        "targetPhrase": "book",
         "allowFuzzyMatch": true
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4433,7 +4566,7 @@
     {
       "key": "noun_repair_q01_sentence",
       "locale": "he",
-      "instruction": "בנו משפט קצר עם nouns",
+      "instruction": "בנו משפט לפי התרגום בעברית",
       "tasks": [
         "The",
         "book",
@@ -4447,7 +4580,8 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "סדרו את המשפט",
+        "prompt": "בנו משפט לפי התרגום בעברית",
+        "translation": "הספר נמצא על השולחן",
         "englishWordsInOrder": [
           "The",
           "book",
@@ -4465,7 +4599,7 @@
     {
       "key": "noun_repair_q02_animals",
       "locale": "he",
-      "instruction": "השלימו nouns של חיות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_AT",
         "_OG",
@@ -4494,6 +4628,40 @@
             "id": "bird",
             "value": "b"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "cat",
+            "image": "",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "fish",
+            "image": "",
+            "fullWord": "fish",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "bird",
+            "image": "",
+            "fullWord": "bird",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4502,7 +4670,7 @@
     {
       "key": "noun_repair_q02_bag",
       "locale": "he",
-      "instruction": "השלימו nouns של חפצים",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_AG",
         "_OX",
@@ -4531,6 +4699,40 @@
             "id": "pen",
             "value": "p"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "bag",
+            "image": "",
+            "fullWord": "bag",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "box",
+            "image": "",
+            "fullWord": "box",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "book",
+            "image": "",
+            "fullWord": "book",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "pen",
+            "image": "",
+            "fullWord": "pen",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4539,7 +4741,7 @@
     {
       "key": "noun_repair_q02_pencil",
       "locale": "he",
-      "instruction": "סדרו את האותיות של PENCIL",
+      "instruction": "זוכרים איך כותבים את שם העצם?",
       "tasks": [
         "P",
         "E",
@@ -4561,7 +4763,7 @@
     {
       "key": "noun_repair_q02_places",
       "locale": "he",
-      "instruction": "השלימו nouns של מקומות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ARK",
         "_ATE",
@@ -4590,6 +4792,40 @@
             "id": "castle",
             "value": "c"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "park",
+            "image": "",
+            "fullWord": "park",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "gate",
+            "image": "",
+            "fullWord": "gate",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "tower",
+            "image": "",
+            "fullWord": "tower",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "castle",
+            "image": "",
+            "fullWord": "castle",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4598,23 +4834,19 @@
     {
       "key": "noun_repair_q02_say",
       "locale": "he",
-      "instruction": "אמרו: bag, pencil, dog",
+      "instruction": "תגידו את שם העצם בקול",
       "tasks": [
-        "bag",
-        "pencil",
         "dog"
       ],
-      "target": "bag, pencil, dog",
+      "target": "dog",
       "variant": "pronunciation",
-      "success": "שלושה nouns נקראו ברור",
+      "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
         "targetWords": [
-          "bag",
-          "pencil",
           "dog"
         ],
-        "targetPhrase": "bag pencil dog",
+        "targetPhrase": "dog",
         "allowFuzzyMatch": true
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4623,7 +4855,7 @@
     {
       "key": "noun_repair_q02_sentence",
       "locale": "he",
-      "instruction": "בנו משפט עם boy ו־bag",
+      "instruction": "בנו משפט לפי התרגום בעברית",
       "tasks": [
         "The",
         "boy",
@@ -4637,7 +4869,8 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "סדרו את המשפט",
+        "prompt": "בנו משפט לפי התרגום בעברית",
+        "translation": "לילד יש תיק אדום",
         "englishWordsInOrder": [
           "The",
           "boy",
@@ -4655,7 +4888,7 @@
     {
       "key": "noun_repair_q02_toys",
       "locale": "he",
-      "instruction": "השלימו nouns של צעצועים",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ALL",
         "_OY",
@@ -4684,6 +4917,40 @@
             "id": "doll",
             "value": "d"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "ball",
+            "image": "",
+            "fullWord": "ball",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "toy",
+            "image": "",
+            "fullWord": "toy",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "car",
+            "image": "",
+            "fullWord": "car",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "doll",
+            "image": "",
+            "fullWord": "doll",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4692,7 +4959,7 @@
     {
       "key": "noun_repair_q03_animals",
       "locale": "he",
-      "instruction": "השלימו nouns של חיות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OG",
         "_AT",
@@ -4721,6 +4988,40 @@
             "id": "bird",
             "value": "b"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cat",
+            "image": "",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "fish",
+            "image": "",
+            "fullWord": "fish",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "bird",
+            "image": "",
+            "fullWord": "bird",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4729,7 +5030,7 @@
     {
       "key": "noun_repair_q03_food",
       "locale": "he",
-      "instruction": "השלימו nouns של אוכל",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_READ",
         "_ICE",
@@ -4758,6 +5059,40 @@
             "id": "cake",
             "value": "c"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "bread",
+            "image": "",
+            "fullWord": "bread",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "rice",
+            "image": "",
+            "fullWord": "rice",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "soup",
+            "image": "",
+            "fullWord": "soup",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cake",
+            "image": "",
+            "fullWord": "cake",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4766,7 +5101,7 @@
     {
       "key": "noun_repair_q03_fruit",
       "locale": "he",
-      "instruction": "השלימו nouns של פירות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_PPLE",
         "_EAR",
@@ -4795,6 +5130,40 @@
             "id": "mango",
             "value": "m"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "apple",
+            "image": "",
+            "fullWord": "apple",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "pear",
+            "image": "",
+            "fullWord": "pear",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "lemon",
+            "image": "",
+            "fullWord": "lemon",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "mango",
+            "image": "",
+            "fullWord": "mango",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4803,7 +5172,7 @@
     {
       "key": "noun_repair_q03_market",
       "locale": "he",
-      "instruction": "סדרו את האותיות של MARKET",
+      "instruction": "זוכרים איך כותבים את שם העצם?",
       "tasks": [
         "M",
         "A",
@@ -4825,23 +5194,19 @@
     {
       "key": "noun_repair_q03_say",
       "locale": "he",
-      "instruction": "אמרו: apple, bread, market",
+      "instruction": "תגידו את שם העצם בקול",
       "tasks": [
-        "apple",
-        "bread",
-        "market"
+        "apple"
       ],
-      "target": "apple, bread, market",
+      "target": "apple",
       "variant": "pronunciation",
-      "success": "שלושה nouns נקראו ברור",
+      "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
         "targetWords": [
-          "apple",
-          "bread",
-          "market"
+          "apple"
         ],
-        "targetPhrase": "apple bread market",
+        "targetPhrase": "apple",
         "allowFuzzyMatch": true
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4850,7 +5215,7 @@
     {
       "key": "noun_repair_q03_sentence",
       "locale": "he",
-      "instruction": "בנו משפט עם farmer ו־apples",
+      "instruction": "בנו משפט לפי התרגום בעברית",
       "tasks": [
         "The",
         "farmer",
@@ -4863,7 +5228,8 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "סדרו את המשפט",
+        "prompt": "בנו משפט לפי התרגום בעברית",
+        "translation": "החקלאי מוכר תפוחים טריים",
         "englishWordsInOrder": [
           "The",
           "farmer",
@@ -4880,7 +5246,7 @@
     {
       "key": "noun_repair_q03_tools",
       "locale": "he",
-      "instruction": "השלימו nouns של כלי עבודה",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OX",
         "_AN",
@@ -4909,6 +5275,40 @@
             "id": "mask",
             "value": "m"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "box",
+            "image": "",
+            "fullWord": "box",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "pan",
+            "image": "",
+            "fullWord": "pan",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cup",
+            "image": "",
+            "fullWord": "cup",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "mask",
+            "image": "",
+            "fullWord": "mask",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4917,7 +5317,7 @@
     {
       "key": "noun_repair_q04_kitchen",
       "locale": "he",
-      "instruction": "השלימו nouns של כלי מטבח",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_POON",
         "_LATE",
@@ -4946,6 +5346,40 @@
             "id": "knife",
             "value": "k"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "spoon",
+            "image": "",
+            "fullWord": "spoon",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "plate",
+            "image": "",
+            "fullWord": "plate",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cup",
+            "image": "",
+            "fullWord": "cup",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "knife",
+            "image": "",
+            "fullWord": "knife",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4954,7 +5388,7 @@
     {
       "key": "noun_repair_q04_objects",
       "locale": "he",
-      "instruction": "השלימו nouns של חפצים",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ABLE",
         "_EN",
@@ -4983,6 +5417,40 @@
             "id": "bowl",
             "value": "b"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "table",
+            "image": "",
+            "fullWord": "table",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "pen",
+            "image": "",
+            "fullWord": "pen",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cup",
+            "image": "",
+            "fullWord": "cup",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "bowl",
+            "image": "",
+            "fullWord": "bowl",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -4991,7 +5459,7 @@
     {
       "key": "noun_repair_q04_people",
       "locale": "he",
-      "instruction": "השלימו nouns של אנשים",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_HEF",
         "_AKER",
@@ -5020,6 +5488,40 @@
             "id": "wizard",
             "value": "w"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "chef",
+            "image": "",
+            "fullWord": "chef",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "baker",
+            "image": "",
+            "fullWord": "baker",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "guard",
+            "image": "",
+            "fullWord": "guard",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "wizard",
+            "image": "",
+            "fullWord": "wizard",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5028,7 +5530,7 @@
     {
       "key": "noun_repair_q04_places",
       "locale": "he",
-      "instruction": "השלימו nouns של מקומות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ATE",
         "_ARK",
@@ -5057,6 +5559,40 @@
             "id": "castle",
             "value": "c"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "gate",
+            "image": "",
+            "fullWord": "gate",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "park",
+            "image": "",
+            "fullWord": "park",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "tower",
+            "image": "",
+            "fullWord": "tower",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "castle",
+            "image": "",
+            "fullWord": "castle",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5065,23 +5601,19 @@
     {
       "key": "noun_repair_q04_say",
       "locale": "he",
-      "instruction": "אמרו: spoon, chef, plate",
+      "instruction": "תגידו את שם העצם בקול",
       "tasks": [
-        "spoon",
-        "chef",
-        "plate"
+        "spoon"
       ],
-      "target": "spoon, chef, plate",
+      "target": "spoon",
       "variant": "pronunciation",
-      "success": "שלושה nouns נקראו ברור",
+      "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
         "targetWords": [
-          "spoon",
-          "chef",
-          "plate"
+          "spoon"
         ],
-        "targetPhrase": "spoon chef plate",
+        "targetPhrase": "spoon",
         "allowFuzzyMatch": true
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5090,7 +5622,7 @@
     {
       "key": "noun_repair_q04_sentence",
       "locale": "he",
-      "instruction": "בנו משפט עם chef ו־spoon",
+      "instruction": "בנו משפט לפי התרגום בעברית",
       "tasks": [
         "The",
         "chef",
@@ -5103,7 +5635,8 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "סדרו את המשפט",
+        "prompt": "בנו משפט לפי התרגום בעברית",
+        "translation": "השף מחזיק כף",
         "englishWordsInOrder": [
           "The",
           "chef",
@@ -5120,7 +5653,7 @@
     {
       "key": "noun_repair_q04_spoon",
       "locale": "he",
-      "instruction": "סדרו את האותיות של SPOON",
+      "instruction": "זוכרים איך כותבים את שם העצם?",
       "tasks": [
         "S",
         "P",
@@ -5141,7 +5674,7 @@
     {
       "key": "noun_repair_q05_animals",
       "locale": "he",
-      "instruction": "השלימו nouns של חיות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_RAGON",
         "_ABBIT",
@@ -5170,6 +5703,40 @@
             "id": "cat",
             "value": "c"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "dragon",
+            "image": "",
+            "fullWord": "dragon",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "rabbit",
+            "image": "",
+            "fullWord": "rabbit",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cat",
+            "image": "",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5178,7 +5745,7 @@
     {
       "key": "noun_repair_q05_castle",
       "locale": "he",
-      "instruction": "השלימו nouns של הארמון",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ASTLE",
         "_OWER",
@@ -5207,6 +5774,40 @@
             "id": "crown",
             "value": "c"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "castle",
+            "image": "",
+            "fullWord": "castle",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "tower",
+            "image": "",
+            "fullWord": "tower",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "throne",
+            "image": "",
+            "fullWord": "throne",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "crown",
+            "image": "",
+            "fullWord": "crown",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5215,14 +5816,14 @@
     {
       "key": "noun_repair_q05_objects",
       "locale": "he",
-      "instruction": "השלימו nouns של כלי המלך",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_WORD",
         "_HIELD",
-        "_WORD",
-        "_CROLL"
+        "_CROLL",
+        "_OOK"
       ],
-      "target": "sword, shield, sword, scroll",
+      "target": "sword, shield, scroll, book",
       "variant": "missing_letter_matching",
       "success": "שמות החפצים המלכותיים הושלמו",
       "minigame_id": "word_matching",
@@ -5239,6 +5840,44 @@
           {
             "id": "scroll",
             "value": "s"
+          },
+          {
+            "id": "book",
+            "value": "b"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "sword",
+            "image": "",
+            "fullWord": "sword",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "shield",
+            "image": "",
+            "fullWord": "shield",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "scroll",
+            "image": "",
+            "fullWord": "scroll",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "book",
+            "image": "",
+            "fullWord": "book",
+            "missingIndices": [
+              0
+            ]
           }
         ]
       },
@@ -5248,7 +5887,7 @@
     {
       "key": "noun_repair_q05_roles",
       "locale": "he",
-      "instruction": "השלימו nouns של תפקידי הארמון",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ING",
         "_UEEN",
@@ -5277,6 +5916,40 @@
             "id": "guard",
             "value": "g"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "king",
+            "image": "",
+            "fullWord": "king",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "queen",
+            "image": "",
+            "fullWord": "queen",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "knight",
+            "image": "",
+            "fullWord": "knight",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "guard",
+            "image": "",
+            "fullWord": "guard",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5285,23 +5958,19 @@
     {
       "key": "noun_repair_q05_say",
       "locale": "he",
-      "instruction": "אמרו: castle, queen, throne",
+      "instruction": "תגידו את שם העצם בקול",
       "tasks": [
-        "castle",
-        "queen",
-        "throne"
+        "queen"
       ],
-      "target": "castle, queen, throne",
+      "target": "queen",
       "variant": "pronunciation",
-      "success": "שלושה nouns נקראו ברור",
+      "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
         "targetWords": [
-          "castle",
-          "queen",
-          "throne"
+          "queen"
         ],
-        "targetPhrase": "castle queen throne",
+        "targetPhrase": "queen",
         "allowFuzzyMatch": true
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5310,7 +5979,7 @@
     {
       "key": "noun_repair_q05_sentence",
       "locale": "he",
-      "instruction": "בנו משפט עם queen ו־throne",
+      "instruction": "בנו משפט לפי התרגום בעברית",
       "tasks": [
         "The",
         "queen",
@@ -5324,7 +5993,8 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "סדרו את המשפט",
+        "prompt": "בנו משפט לפי התרגום בעברית",
+        "translation": "המלכה יושבת על כס המלכות",
         "englishWordsInOrder": [
           "The",
           "queen",
@@ -5342,7 +6012,7 @@
     {
       "key": "noun_repair_q05_treasure",
       "locale": "he",
-      "instruction": "סדרו את האותיות של TREASURE",
+      "instruction": "זוכרים איך כותבים את שם העצם?",
       "tasks": [
         "T",
         "R",
@@ -5366,7 +6036,7 @@
     {
       "key": "noun_repair_q06_animals",
       "locale": "he",
-      "instruction": "השלימו nouns של חיות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OG",
         "_AT",
@@ -5395,6 +6065,40 @@
             "id": "bird",
             "value": "b"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "dog",
+            "image": "",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "cat",
+            "image": "",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "fish",
+            "image": "",
+            "fullWord": "fish",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "bird",
+            "image": "",
+            "fullWord": "bird",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5403,7 +6107,7 @@
     {
       "key": "noun_repair_q06_book",
       "locale": "he",
-      "instruction": "סדרו את האותיות של NOUN",
+      "instruction": "זוכרים איך כותבים את שם העצם?",
       "tasks": [
         "N",
         "O",
@@ -5423,7 +6127,7 @@
     {
       "key": "noun_repair_q06_objects",
       "locale": "he",
-      "instruction": "השלימו nouns של חפצים",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OOK",
         "_ABLE",
@@ -5452,6 +6156,40 @@
             "id": "bag",
             "value": "b"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "book",
+            "image": "",
+            "fullWord": "book",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "table",
+            "image": "",
+            "fullWord": "table",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "pen",
+            "image": "",
+            "fullWord": "pen",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "bag",
+            "image": "",
+            "fullWord": "bag",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5460,7 +6198,7 @@
     {
       "key": "noun_repair_q06_people",
       "locale": "he",
-      "instruction": "השלימו nouns של אנשים",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_OY",
         "_IRL",
@@ -5489,6 +6227,40 @@
             "id": "queen",
             "value": "q"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "boy",
+            "image": "",
+            "fullWord": "boy",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "girl",
+            "image": "",
+            "fullWord": "girl",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "king",
+            "image": "",
+            "fullWord": "king",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "queen",
+            "image": "",
+            "fullWord": "queen",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5497,7 +6269,7 @@
     {
       "key": "noun_repair_q06_places",
       "locale": "he",
-      "instruction": "השלימו nouns של מקומות",
+      "instruction": "השלימו את האות החסרה במילת ה־noun",
       "tasks": [
         "_ASTLE",
         "_ATE",
@@ -5526,6 +6298,40 @@
             "id": "tower",
             "value": "t"
           }
+        ],
+        "wordTasks": [
+          {
+            "id": "castle",
+            "image": "",
+            "fullWord": "castle",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "gate",
+            "image": "",
+            "fullWord": "gate",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "park",
+            "image": "",
+            "fullWord": "park",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "tower",
+            "image": "",
+            "fullWord": "tower",
+            "missingIndices": [
+              0
+            ]
+          }
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5534,23 +6340,19 @@
     {
       "key": "noun_repair_q06_say",
       "locale": "he",
-      "instruction": "אמרו: noun, book, dragon",
+      "instruction": "תגידו את שם העצם בקול",
       "tasks": [
-        "noun",
-        "book",
-        "dragon"
+        "noun"
       ],
-      "target": "noun, book, dragon",
+      "target": "noun",
       "variant": "pronunciation",
-      "success": "שלושה nouns נקראו ברור",
+      "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
         "targetWords": [
-          "noun",
-          "book",
-          "dragon"
+          "noun"
         ],
-        "targetPhrase": "noun book dragon",
+        "targetPhrase": "noun",
         "allowFuzzyMatch": true
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
@@ -5559,7 +6361,7 @@
     {
       "key": "noun_repair_q06_sentence",
       "locale": "he",
-      "instruction": "בנו משפט עם dog ו־castle",
+      "instruction": "בנו משפט לפי התרגום בעברית",
       "tasks": [
         "The",
         "dog",
@@ -5572,7 +6374,8 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "סדרו את המשפט",
+        "prompt": "בנו משפט לפי התרגום בעברית",
+        "translation": "הכלב רואה את הטירה",
         "englishWordsInOrder": [
           "The",
           "dog",
@@ -10339,7 +11142,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_30e88c04_1",
+              "key": "q01_the_broken_noun_book_play_minigame_70e0c4ce_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -10348,7 +11151,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_people",
-                "display_text": "התאימו את האות החסרה: _OY / _IRL / _ING / _UEEN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_people"
               },
               "source_metadata": {
@@ -10358,7 +11161,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_d117778b_2",
+              "key": "q01_the_broken_noun_book_play_minigame_d3a47e84_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10367,7 +11170,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_book",
-                "display_text": "סדרו את האותיות של BOOK",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q01_book"
               },
               "source_metadata": {
@@ -10377,7 +11180,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_57b89fab_3",
+              "key": "q01_the_broken_noun_book_play_minigame_bd7a4757_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -10386,7 +11189,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_places",
-                "display_text": "התאימו את האות החסרה: _ASTLE / _ATE / _OWER / _ARK",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_places"
               },
               "source_metadata": {
@@ -10396,7 +11199,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_f4820365_4",
+              "key": "q01_the_broken_noun_book_play_minigame_aeaf9478_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -10405,7 +11208,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_sentence",
-                "display_text": "בנו משפט: The book is on the table",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q01_sentence"
               },
               "source_metadata": {
@@ -10415,7 +11218,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_1a9fbb7f_5",
+              "key": "q01_the_broken_noun_book_play_minigame_c1840361_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -10424,7 +11227,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_objects",
-                "display_text": "התאימו את האות החסרה: _ABLE / _AIR / _OX / _AG",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_objects"
               },
               "source_metadata": {
@@ -10434,7 +11237,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_6bf01599_6",
+              "key": "q01_the_broken_noun_book_play_minigame_837e51ee_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -10443,7 +11246,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_animals",
-                "display_text": "תקנו את שמות החיות: _AT / _OG / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_animals"
               },
               "source_metadata": {
@@ -10453,7 +11256,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+              "key": "q01_the_broken_noun_book_play_minigame_7893bc2b_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -10464,7 +11267,7 @@
                 "instance_id": "noun_repair_q01_say",
                 "reward_item_id": "gem",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: book, table, girl",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q01_say"
               },
               "source_metadata": {
@@ -10474,7 +11277,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+                  "step_key": "q01_the_broken_noun_book_play_minigame_7893bc2b_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -10559,7 +11362,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_8dda917d_1",
+              "key": "q02_the_runaway_objects_play_minigame_d4a46f38_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -10568,7 +11371,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_bag",
-                "display_text": "השלימו: _AG / _OX / _OOK / _EN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_bag"
               },
               "source_metadata": {
@@ -10578,7 +11381,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_025e3208_2",
+              "key": "q02_the_runaway_objects_play_minigame_00ce80ca_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10587,7 +11390,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_pencil",
-                "display_text": "סדרו את האותיות של PENCIL",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q02_pencil"
               },
               "source_metadata": {
@@ -10597,7 +11400,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_4b767186_3",
+              "key": "q02_the_runaway_objects_play_minigame_a10ad8b4_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -10606,7 +11409,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_toys",
-                "display_text": "השלימו: _ALL / _OY / _AR / _OLL",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_toys"
               },
               "source_metadata": {
@@ -10616,7 +11419,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_cbfbad1e_4",
+              "key": "q02_the_runaway_objects_play_minigame_5f135383_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -10625,7 +11428,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_sentence",
-                "display_text": "בנו משפט: The boy has a red bag",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q02_sentence"
               },
               "source_metadata": {
@@ -10635,7 +11438,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_d32d4028_5",
+              "key": "q02_the_runaway_objects_play_minigame_e14d1c78_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -10644,7 +11447,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_animals",
-                "display_text": "השלימו: _AT / _OG / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_animals"
               },
               "source_metadata": {
@@ -10654,7 +11457,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_26525ac2_6",
+              "key": "q02_the_runaway_objects_play_minigame_a4004e14_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -10663,7 +11466,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_places",
-                "display_text": "השלימו nouns של מקומות: _ARK / _ATE / _OWER / _ASTLE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_places"
               },
               "source_metadata": {
@@ -10673,7 +11476,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+              "key": "q02_the_runaway_objects_play_minigame_7ebad091_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -10684,7 +11487,7 @@
                 "instance_id": "noun_repair_q02_say",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: bag, pencil, dog",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q02_say"
               },
               "source_metadata": {
@@ -10694,7 +11497,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+                  "step_key": "q02_the_runaway_objects_play_minigame_7ebad091_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -10779,7 +11582,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_d6ba531c_1",
+              "key": "q03_the_market_name_mixup_play_minigame_abfa3bed_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -10788,7 +11591,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_fruit",
-                "display_text": "השלימו: _PPLE / _EAR / _EMON / _ANGO",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_fruit"
               },
               "source_metadata": {
@@ -10798,7 +11601,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_3bf5eac8_2",
+              "key": "q03_the_market_name_mixup_play_minigame_2ba7a48c_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10807,7 +11610,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_market",
-                "display_text": "סדרו את האותיות של MARKET",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q03_market"
               },
               "source_metadata": {
@@ -10817,7 +11620,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_7eba3428_3",
+              "key": "q03_the_market_name_mixup_play_minigame_43a9a41d_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -10826,7 +11629,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_food",
-                "display_text": "השלימו: _READ / _ICE / _OUP / _AKE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_food"
               },
               "source_metadata": {
@@ -10836,7 +11639,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_e0be6e12_4",
+              "key": "q03_the_market_name_mixup_play_minigame_badb890a_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -10845,7 +11648,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_sentence",
-                "display_text": "בנו משפט: The farmer sells fresh apples",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q03_sentence"
               },
               "source_metadata": {
@@ -10855,7 +11658,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_ce5fa844_5",
+              "key": "q03_the_market_name_mixup_play_minigame_fc85800c_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -10864,7 +11667,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_tools",
-                "display_text": "השלימו: _OX / _AN / _UP / _ASK",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_tools"
               },
               "source_metadata": {
@@ -10874,7 +11677,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_5e764694_6",
+              "key": "q03_the_market_name_mixup_play_minigame_2797fe26_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -10883,7 +11686,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_animals",
-                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_animals"
               },
               "source_metadata": {
@@ -10893,7 +11696,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+              "key": "q03_the_market_name_mixup_play_minigame_25934722_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -10904,7 +11707,7 @@
                 "instance_id": "noun_repair_q03_say",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: apple, bread, market",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q03_say"
               },
               "source_metadata": {
@@ -10914,7 +11717,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+                  "step_key": "q03_the_market_name_mixup_play_minigame_25934722_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -10999,7 +11802,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_91ac20ca_1",
+              "key": "q04_the_kitchen_invasion_play_minigame_e9551d67_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -11008,7 +11811,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_kitchen",
-                "display_text": "השלימו: _Poon / _LATE / _UP / _NIFE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_kitchen"
               },
               "source_metadata": {
@@ -11018,7 +11821,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_76734139_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_c81f4e95_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11027,7 +11830,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_spoon",
-                "display_text": "סדרו את האותיות של SPOON",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q04_spoon"
               },
               "source_metadata": {
@@ -11037,7 +11840,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_25642658_3",
+              "key": "q04_the_kitchen_invasion_play_minigame_b4c8df9d_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -11046,7 +11849,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_people",
-                "display_text": "השלימו: _HEF / _AKER / _ARD / _IZARD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_people"
               },
               "source_metadata": {
@@ -11056,7 +11859,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_0ad4b458_4",
+              "key": "q04_the_kitchen_invasion_play_minigame_718dedc1_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -11065,7 +11868,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_sentence",
-                "display_text": "בנו משפט: The chef holds a spoon",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q04_sentence"
               },
               "source_metadata": {
@@ -11075,7 +11878,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_0e3c44db_5",
+              "key": "q04_the_kitchen_invasion_play_minigame_0da2c2cd_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -11084,7 +11887,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_objects",
-                "display_text": "השלימו: _ABLE / _EN / _UP / _OWL",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_objects"
               },
               "source_metadata": {
@@ -11094,7 +11897,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_f8c2046a_6",
+              "key": "q04_the_kitchen_invasion_play_minigame_b5576386_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -11103,7 +11906,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_places",
-                "display_text": "השלימו nouns של מקומות: _ATE / _ARK / _OWER / _ASTLE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_places"
               },
               "source_metadata": {
@@ -11113,7 +11916,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+              "key": "q04_the_kitchen_invasion_play_minigame_e3f98390_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -11124,7 +11927,7 @@
                 "instance_id": "noun_repair_q04_say",
                 "reward_item_id": "gem",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: spoon, chef, plate",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q04_say"
               },
               "source_metadata": {
@@ -11134,7 +11937,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+                  "step_key": "q04_the_kitchen_invasion_play_minigame_e3f98390_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -11219,7 +12022,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_798bac19_1",
+              "key": "q05_the_castle_label_crisis_play_minigame_82087938_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -11228,7 +12031,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_castle",
-                "display_text": "השלימו: _ASTLE / _OWER / _HRONE / _ROWN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_castle"
               },
               "source_metadata": {
@@ -11238,7 +12041,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_d9c3f00d_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_c4b9ecf3_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11247,7 +12050,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_treasure",
-                "display_text": "סדרו את האותיות של TREASURE",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q05_treasure"
               },
               "source_metadata": {
@@ -11257,7 +12060,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_05ebd6b9_3",
+              "key": "q05_the_castle_label_crisis_play_minigame_f3966149_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -11266,7 +12069,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_roles",
-                "display_text": "השלימו: _ING / _UEEN / _NIGHT / _UARD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_roles"
               },
               "source_metadata": {
@@ -11276,7 +12079,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_c20501c2_4",
+              "key": "q05_the_castle_label_crisis_play_minigame_f262a0cd_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -11285,7 +12088,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_sentence",
-                "display_text": "בנו משפט: The queen sits on the throne",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q05_sentence"
               },
               "source_metadata": {
@@ -11295,7 +12098,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_8a59d557_5",
+              "key": "q05_the_castle_label_crisis_play_minigame_205f4a37_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -11304,7 +12107,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_objects",
-                "display_text": "השלימו: _WORD / _HIELD / _WORD / _CROLL",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_objects"
               },
               "source_metadata": {
@@ -11314,7 +12117,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_b869c6eb_6",
+              "key": "q05_the_castle_label_crisis_play_minigame_9dfc22b3_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -11323,7 +12126,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_animals",
-                "display_text": "השלימו nouns של חיות: _RAGON / _RABBIT / _OG / _AT",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_animals"
               },
               "source_metadata": {
@@ -11333,7 +12136,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+              "key": "q05_the_castle_label_crisis_play_minigame_7c7c4b6d_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -11344,7 +12147,7 @@
                 "instance_id": "noun_repair_q05_say",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: castle, queen, throne",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q05_say"
               },
               "source_metadata": {
@@ -11354,7 +12157,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+                  "step_key": "q05_the_castle_label_crisis_play_minigame_7c7c4b6d_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -11439,7 +12242,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_bc4e8945_1",
+              "key": "q06_the_great_noun_reopening_play_minigame_7f8cde48_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -11448,7 +12251,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_people",
-                "display_text": "השלימו nouns של אנשים: _OY / _IRL / _ING / _UEEN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_people"
               },
               "source_metadata": {
@@ -11458,7 +12261,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_2d5966b7_2",
+              "key": "q06_the_great_noun_reopening_play_minigame_6786fc69_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11467,7 +12270,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_book",
-                "display_text": "סדרו את האותיות של NOUN",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q06_book"
               },
               "source_metadata": {
@@ -11477,7 +12280,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_0c9f5ae0_3",
+              "key": "q06_the_great_noun_reopening_play_minigame_124fa8f6_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -11486,7 +12289,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_places",
-                "display_text": "השלימו nouns של מקומות: _ASTLE / _ATE / _ARK / _OWER",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_places"
               },
               "source_metadata": {
@@ -11496,7 +12299,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_055c63e8_4",
+              "key": "q06_the_great_noun_reopening_play_minigame_554acd9e_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -11505,7 +12308,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_sentence",
-                "display_text": "בנו משפט: The dog sees the castle",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q06_sentence"
               },
               "source_metadata": {
@@ -11515,7 +12318,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_9c09eed0_5",
+              "key": "q06_the_great_noun_reopening_play_minigame_7b610fd6_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -11524,7 +12327,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_animals",
-                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_animals"
               },
               "source_metadata": {
@@ -11534,7 +12337,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_0fbf9b07_6",
+              "key": "q06_the_great_noun_reopening_play_minigame_ee0117a2_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -11543,7 +12346,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_objects",
-                "display_text": "השלימו nouns של חפצים: _OOK / _ABLE / _EN / _AG",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_objects"
               },
               "source_metadata": {
@@ -11553,7 +12356,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+              "key": "q06_the_great_noun_reopening_play_minigame_2ce39e61_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -11564,7 +12367,7 @@
                 "instance_id": "noun_repair_q06_say",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: noun, book, dragon",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q06_say"
               },
               "source_metadata": {
@@ -11574,7 +12377,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+                  "step_key": "q06_the_great_noun_reopening_play_minigame_2ce39e61_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -15243,7 +16046,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_30e88c04_1",
+              "key": "q01_the_broken_noun_book_play_minigame_70e0c4ce_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -15252,7 +16055,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_people",
-                "display_text": "התאימו את האות החסרה: _OY / _IRL / _ING / _UEEN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_people"
               },
               "source_metadata": {
@@ -15262,7 +16065,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_d117778b_2",
+              "key": "q01_the_broken_noun_book_play_minigame_d3a47e84_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15271,7 +16074,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_book",
-                "display_text": "סדרו את האותיות של BOOK",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q01_book"
               },
               "source_metadata": {
@@ -15281,7 +16084,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_57b89fab_3",
+              "key": "q01_the_broken_noun_book_play_minigame_bd7a4757_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -15290,7 +16093,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_places",
-                "display_text": "התאימו את האות החסרה: _ASTLE / _ATE / _OWER / _ARK",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_places"
               },
               "source_metadata": {
@@ -15300,7 +16103,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_f4820365_4",
+              "key": "q01_the_broken_noun_book_play_minigame_aeaf9478_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -15309,7 +16112,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_sentence",
-                "display_text": "בנו משפט: The book is on the table",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q01_sentence"
               },
               "source_metadata": {
@@ -15319,7 +16122,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_1a9fbb7f_5",
+              "key": "q01_the_broken_noun_book_play_minigame_c1840361_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -15328,7 +16131,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_objects",
-                "display_text": "התאימו את האות החסרה: _ABLE / _AIR / _OX / _AG",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_objects"
               },
               "source_metadata": {
@@ -15338,7 +16141,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_6bf01599_6",
+              "key": "q01_the_broken_noun_book_play_minigame_837e51ee_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -15347,7 +16150,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_animals",
-                "display_text": "תקנו את שמות החיות: _AT / _OG / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q01_animals"
               },
               "source_metadata": {
@@ -15357,7 +16160,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+              "key": "q01_the_broken_noun_book_play_minigame_7893bc2b_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -15368,7 +16171,7 @@
                 "instance_id": "noun_repair_q01_say",
                 "reward_item_id": "gem",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: book, table, girl",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q01_say"
               },
               "source_metadata": {
@@ -15378,7 +16181,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+                  "step_key": "q01_the_broken_noun_book_play_minigame_7893bc2b_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -15463,7 +16266,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_8dda917d_1",
+              "key": "q02_the_runaway_objects_play_minigame_d4a46f38_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -15472,7 +16275,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_bag",
-                "display_text": "השלימו: _AG / _OX / _OOK / _EN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_bag"
               },
               "source_metadata": {
@@ -15482,7 +16285,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_025e3208_2",
+              "key": "q02_the_runaway_objects_play_minigame_00ce80ca_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15491,7 +16294,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_pencil",
-                "display_text": "סדרו את האותיות של PENCIL",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q02_pencil"
               },
               "source_metadata": {
@@ -15501,7 +16304,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_4b767186_3",
+              "key": "q02_the_runaway_objects_play_minigame_a10ad8b4_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -15510,7 +16313,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_toys",
-                "display_text": "השלימו: _ALL / _OY / _AR / _OLL",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_toys"
               },
               "source_metadata": {
@@ -15520,7 +16323,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_cbfbad1e_4",
+              "key": "q02_the_runaway_objects_play_minigame_5f135383_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -15529,7 +16332,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_sentence",
-                "display_text": "בנו משפט: The boy has a red bag",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q02_sentence"
               },
               "source_metadata": {
@@ -15539,7 +16342,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_d32d4028_5",
+              "key": "q02_the_runaway_objects_play_minigame_e14d1c78_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -15548,7 +16351,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_animals",
-                "display_text": "השלימו: _AT / _OG / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_animals"
               },
               "source_metadata": {
@@ -15558,7 +16361,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_26525ac2_6",
+              "key": "q02_the_runaway_objects_play_minigame_a4004e14_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -15567,7 +16370,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_places",
-                "display_text": "השלימו nouns של מקומות: _ARK / _ATE / _OWER / _ASTLE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q02_places"
               },
               "source_metadata": {
@@ -15577,7 +16380,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+              "key": "q02_the_runaway_objects_play_minigame_7ebad091_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -15588,7 +16391,7 @@
                 "instance_id": "noun_repair_q02_say",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: bag, pencil, dog",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q02_say"
               },
               "source_metadata": {
@@ -15598,7 +16401,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+                  "step_key": "q02_the_runaway_objects_play_minigame_7ebad091_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -15683,7 +16486,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_d6ba531c_1",
+              "key": "q03_the_market_name_mixup_play_minigame_abfa3bed_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -15692,7 +16495,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_fruit",
-                "display_text": "השלימו: _PPLE / _EAR / _EMON / _ANGO",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_fruit"
               },
               "source_metadata": {
@@ -15702,7 +16505,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_3bf5eac8_2",
+              "key": "q03_the_market_name_mixup_play_minigame_2ba7a48c_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15711,7 +16514,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_market",
-                "display_text": "סדרו את האותיות של MARKET",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q03_market"
               },
               "source_metadata": {
@@ -15721,7 +16524,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_7eba3428_3",
+              "key": "q03_the_market_name_mixup_play_minigame_43a9a41d_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -15730,7 +16533,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_food",
-                "display_text": "השלימו: _READ / _ICE / _OUP / _AKE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_food"
               },
               "source_metadata": {
@@ -15740,7 +16543,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_e0be6e12_4",
+              "key": "q03_the_market_name_mixup_play_minigame_badb890a_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -15749,7 +16552,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_sentence",
-                "display_text": "בנו משפט: The farmer sells fresh apples",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q03_sentence"
               },
               "source_metadata": {
@@ -15759,7 +16562,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_ce5fa844_5",
+              "key": "q03_the_market_name_mixup_play_minigame_fc85800c_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -15768,7 +16571,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_tools",
-                "display_text": "השלימו: _OX / _AN / _UP / _ASK",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_tools"
               },
               "source_metadata": {
@@ -15778,7 +16581,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_5e764694_6",
+              "key": "q03_the_market_name_mixup_play_minigame_2797fe26_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -15787,7 +16590,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_animals",
-                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q03_animals"
               },
               "source_metadata": {
@@ -15797,7 +16600,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+              "key": "q03_the_market_name_mixup_play_minigame_25934722_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -15808,7 +16611,7 @@
                 "instance_id": "noun_repair_q03_say",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: apple, bread, market",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q03_say"
               },
               "source_metadata": {
@@ -15818,7 +16621,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+                  "step_key": "q03_the_market_name_mixup_play_minigame_25934722_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -15903,7 +16706,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_91ac20ca_1",
+              "key": "q04_the_kitchen_invasion_play_minigame_e9551d67_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -15912,7 +16715,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_kitchen",
-                "display_text": "השלימו: _Poon / _LATE / _UP / _NIFE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_kitchen"
               },
               "source_metadata": {
@@ -15922,7 +16725,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_76734139_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_c81f4e95_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15931,7 +16734,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_spoon",
-                "display_text": "סדרו את האותיות של SPOON",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q04_spoon"
               },
               "source_metadata": {
@@ -15941,7 +16744,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_25642658_3",
+              "key": "q04_the_kitchen_invasion_play_minigame_b4c8df9d_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -15950,7 +16753,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_people",
-                "display_text": "השלימו: _HEF / _AKER / _ARD / _IZARD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_people"
               },
               "source_metadata": {
@@ -15960,7 +16763,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_0ad4b458_4",
+              "key": "q04_the_kitchen_invasion_play_minigame_718dedc1_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -15969,7 +16772,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_sentence",
-                "display_text": "בנו משפט: The chef holds a spoon",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q04_sentence"
               },
               "source_metadata": {
@@ -15979,7 +16782,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_0e3c44db_5",
+              "key": "q04_the_kitchen_invasion_play_minigame_0da2c2cd_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -15988,7 +16791,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_objects",
-                "display_text": "השלימו: _ABLE / _EN / _UP / _OWL",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_objects"
               },
               "source_metadata": {
@@ -15998,7 +16801,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_f8c2046a_6",
+              "key": "q04_the_kitchen_invasion_play_minigame_b5576386_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -16007,7 +16810,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_places",
-                "display_text": "השלימו nouns של מקומות: _ATE / _ARK / _OWER / _ASTLE",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q04_places"
               },
               "source_metadata": {
@@ -16017,7 +16820,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+              "key": "q04_the_kitchen_invasion_play_minigame_e3f98390_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -16028,7 +16831,7 @@
                 "instance_id": "noun_repair_q04_say",
                 "reward_item_id": "gem",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: spoon, chef, plate",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q04_say"
               },
               "source_metadata": {
@@ -16038,7 +16841,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+                  "step_key": "q04_the_kitchen_invasion_play_minigame_e3f98390_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -16123,7 +16926,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_798bac19_1",
+              "key": "q05_the_castle_label_crisis_play_minigame_82087938_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -16132,7 +16935,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_castle",
-                "display_text": "השלימו: _ASTLE / _OWER / _HRONE / _ROWN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_castle"
               },
               "source_metadata": {
@@ -16142,7 +16945,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_d9c3f00d_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_c4b9ecf3_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16151,7 +16954,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_treasure",
-                "display_text": "סדרו את האותיות של TREASURE",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q05_treasure"
               },
               "source_metadata": {
@@ -16161,7 +16964,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_05ebd6b9_3",
+              "key": "q05_the_castle_label_crisis_play_minigame_f3966149_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -16170,7 +16973,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_roles",
-                "display_text": "השלימו: _ING / _UEEN / _NIGHT / _UARD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_roles"
               },
               "source_metadata": {
@@ -16180,7 +16983,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_c20501c2_4",
+              "key": "q05_the_castle_label_crisis_play_minigame_f262a0cd_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -16189,7 +16992,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_sentence",
-                "display_text": "בנו משפט: The queen sits on the throne",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q05_sentence"
               },
               "source_metadata": {
@@ -16199,7 +17002,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_8a59d557_5",
+              "key": "q05_the_castle_label_crisis_play_minigame_205f4a37_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -16208,7 +17011,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_objects",
-                "display_text": "השלימו: _WORD / _HIELD / _WORD / _CROLL",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_objects"
               },
               "source_metadata": {
@@ -16218,7 +17021,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_b869c6eb_6",
+              "key": "q05_the_castle_label_crisis_play_minigame_9dfc22b3_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -16227,7 +17030,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_animals",
-                "display_text": "השלימו nouns של חיות: _RAGON / _RABBIT / _OG / _AT",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q05_animals"
               },
               "source_metadata": {
@@ -16237,7 +17040,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+              "key": "q05_the_castle_label_crisis_play_minigame_7c7c4b6d_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -16248,7 +17051,7 @@
                 "instance_id": "noun_repair_q05_say",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: castle, queen, throne",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q05_say"
               },
               "source_metadata": {
@@ -16258,7 +17061,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+                  "step_key": "q05_the_castle_label_crisis_play_minigame_7c7c4b6d_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -16343,7 +17146,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_bc4e8945_1",
+              "key": "q06_the_great_noun_reopening_play_minigame_7f8cde48_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -16352,7 +17155,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_people",
-                "display_text": "השלימו nouns של אנשים: _OY / _IRL / _ING / _UEEN",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_people"
               },
               "source_metadata": {
@@ -16362,7 +17165,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_2d5966b7_2",
+              "key": "q06_the_great_noun_reopening_play_minigame_6786fc69_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16371,7 +17174,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_book",
-                "display_text": "סדרו את האותיות של NOUN",
+                "display_text": "זוכרים איך כותבים את שם העצם?",
                 "instance_key": "noun_repair_q06_book"
               },
               "source_metadata": {
@@ -16381,7 +17184,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_0c9f5ae0_3",
+              "key": "q06_the_great_noun_reopening_play_minigame_124fa8f6_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -16390,7 +17193,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_places",
-                "display_text": "השלימו nouns של מקומות: _ASTLE / _ATE / _ARK / _OWER",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_places"
               },
               "source_metadata": {
@@ -16400,7 +17203,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_055c63e8_4",
+              "key": "q06_the_great_noun_reopening_play_minigame_554acd9e_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -16409,7 +17212,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_sentence",
-                "display_text": "בנו משפט: The dog sees the castle",
+                "display_text": "בנו משפט לפי התרגום בעברית",
                 "instance_key": "noun_repair_q06_sentence"
               },
               "source_metadata": {
@@ -16419,7 +17222,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_9c09eed0_5",
+              "key": "q06_the_great_noun_reopening_play_minigame_7b610fd6_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -16428,7 +17231,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_animals",
-                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_animals"
               },
               "source_metadata": {
@@ -16438,7 +17241,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_0fbf9b07_6",
+              "key": "q06_the_great_noun_reopening_play_minigame_ee0117a2_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -16447,7 +17250,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_objects",
-                "display_text": "השלימו nouns של חפצים: _OOK / _ABLE / _EN / _AG",
+                "display_text": "השלימו את האות החסרה במילת ה־noun",
                 "instance_key": "noun_repair_q06_objects"
               },
               "source_metadata": {
@@ -16457,7 +17260,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+              "key": "q06_the_great_noun_reopening_play_minigame_2ce39e61_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -16468,7 +17271,7 @@
                 "instance_id": "noun_repair_q06_say",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "אמרו בקול: noun, book, dragon",
+                "display_text": "תגידו את שם העצם בקול",
                 "instance_key": "noun_repair_q06_say"
               },
               "source_metadata": {
@@ -16478,7 +17281,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+                  "step_key": "q06_the_great_noun_reopening_play_minigame_2ce39e61_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -17170,5 +17973,5 @@
       ]
     }
   ],
-  "source_digest": "e8515f9c8be9b1d8a10d0502ce8ea57e3403bd3b8e8f8aa6cfe3914ba42a6fdf"
+  "source_digest": "e9fe11339f82f7adde8f0e7828138a053feaa1d2103b311074c4c3255327523b"
 }

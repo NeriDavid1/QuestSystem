@@ -35,6 +35,7 @@ minigames:
     difficulty_range: [2, 10]
     content_fields:
       - prompt
+      - translation
       - englishWordsInOrder
       - preFilledIndices
       - distractorWords

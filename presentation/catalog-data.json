@@ -1605,6 +1605,7 @@
       ],
       "content_fields": [
         "prompt",
+        "translation",
         "englishWordsInOrder",
         "preFilledIndices",
         "distractorWords",

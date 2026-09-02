@@ -273,7 +273,7 @@ const minigameCatalogMetadata: Record<string, Record<string, unknown>> = {
     category: 'grammar',
     english_focus: 'Sentence structure, adjective placement',
     difficulty_range: [2, 10],
-    content_fields: ['prompt', 'englishWordsInOrder', 'preFilledIndices', 'distractorWords', 'wordRevealDatabase'],
+    content_fields: ['prompt', 'translation', 'englishWordsInOrder', 'preFilledIndices', 'distractorWords', 'wordRevealDatabase'],
     variants: ['sentence_building'],
     typical_stations: ['chest', 'cart', 'exam_table'],
   },

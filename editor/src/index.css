@@ -3158,6 +3158,14 @@ select:focus {
   line-height: 1.4;
 }
 
+.mg-mock-translation {
+  text-align: center;
+  font-size: 13px;
+  margin: -6px 18px 14px;
+  line-height: 1.4;
+  color: #5c4938;
+}
+
 .mg-mock-slots {
   display: flex;
   flex-wrap: wrap;

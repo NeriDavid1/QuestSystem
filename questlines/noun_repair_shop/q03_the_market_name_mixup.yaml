@@ -17,42 +17,42 @@ steps:
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q03_fruit
-    display_text: "השלימו: _PPLE / _EAR / _EMON / _ANGO"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest5_Silver_Fountain_Court
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q03_market
-    display_text: "סדרו את האותיות של MARKET"
+    display_text: "זוכרים איך כותבים את שם העצם?"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest5_Silver_Fountain_Court
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q03_food
-    display_text: "השלימו: _READ / _ICE / _OUP / _AKE"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest5_Silver_Fountain_Court
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q03_sentence
-    display_text: "בנו משפט: The farmer sells fresh apples"
+    display_text: "בנו משפט לפי התרגום בעברית"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest5_Silver_Fountain_Court
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q03_tools
-    display_text: "השלימו: _OX / _AN / _UP / _ASK"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest5_Silver_Fountain_Court
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q03_animals
-    display_text: "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest5_Silver_Fountain_Court
@@ -61,7 +61,7 @@ steps:
     instance_id: noun_repair_q03_say
     reward_item_id: ancient_rune
     reward_amount: 1
-    display_text: "אמרו בקול: apple, bread, market"
+    display_text: "תגידו את שם העצם בקול"
   - type: deliver_item
     npc_id: Farmer
     item_id: ancient_rune

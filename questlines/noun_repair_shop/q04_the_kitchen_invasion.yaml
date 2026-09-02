@@ -17,42 +17,42 @@ steps:
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q04_kitchen
-    display_text: "השלימו: _Poon / _LATE / _UP / _NIFE"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q04_spoon
-    display_text: "סדרו את האותיות של SPOON"
+    display_text: "זוכרים איך כותבים את שם העצם?"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q04_people
-    display_text: "השלימו: _HEF / _AKER / _ARD / _IZARD"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q04_sentence
-    display_text: "בנו משפט: The chef holds a spoon"
+    display_text: "בנו משפט לפי התרגום בעברית"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q04_objects
-    display_text: "השלימו: _ABLE / _EN / _UP / _OWL"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q04_places
-    display_text: "השלימו nouns של מקומות: _ATE / _ARK / _OWER / _ASTLE"
+    display_text: "השלימו את האות החסרה במילת ה־noun"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
@@ -61,7 +61,7 @@ steps:
     instance_id: noun_repair_q04_say
     reward_item_id: gem
     reward_amount: 1
-    display_text: "אמרו בקול: spoon, chef, plate"
+    display_text: "תגידו את שם העצם בקול"
   - type: deliver_item
     npc_id: Old Woman
     item_id: gem

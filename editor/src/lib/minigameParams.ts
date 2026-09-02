@@ -44,6 +44,7 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
   customDistractors: { name: 'customDistractors', labelKey: 'minigameParamCustomDistractors', type: 'charArray', default: [] },
 
   // WordOrderingDataSO
+  translation: { name: 'translation', labelKey: 'minigameParamTranslation', hintKey: 'minigameParamTranslationHint', type: 'textarea', default: '' },
   englishWordsInOrder: { name: 'englishWordsInOrder', labelKey: 'minigameParamEnglishWordsInOrder', type: 'stringArray', default: [] },
   preFilledIndices: { name: 'preFilledIndices', labelKey: 'minigameParamPreFilledIndices', hintKey: 'minigameParamPreFilledIndicesHint', type: 'integerArray', default: [] },
   distractorWords: { name: 'distractorWords', labelKey: 'minigameParamDistractorWords', type: 'stringArray', default: [] },
