@@ -24,7 +24,7 @@ steps:
     difficulty: 1
     success_required: true
     instance_id: noun_repair_q01_book
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה BOOK"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest5_Silver_Fountain_Court

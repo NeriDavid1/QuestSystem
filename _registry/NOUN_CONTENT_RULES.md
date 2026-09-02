@@ -11,8 +11,8 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 ## Letter Ordering and Word Ordering
 
-- Do not write the target word or the completed sentence in player-facing instructions.
-- Use a Hebrew prompt that asks whether the learner remembers or knows the answer, for example `זוכרים איך כותבים את המילה?`.
+- Letter Ordering must tell the learner which word to write. Use a Hebrew command followed by the English target, for example `כתבו את המילה BOOK`.
+- Word Ordering must not write the completed sentence in the player-facing instruction. Give a Hebrew prompt such as `בנו משפט לפי התרגום בעברית` and show the Hebrew translation.
 - Word Ordering tasks must include a Hebrew translation in `params.translation`, while the English word array remains runtime data.
 
 ## Speak Aloud

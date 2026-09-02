@@ -4313,7 +4313,7 @@
     {
       "key": "noun_repair_q01_book",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה BOOK",
       "tasks": [
         "B",
         "O",
@@ -4745,7 +4745,7 @@
     {
       "key": "noun_repair_q02_pencil",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה PENCIL",
       "tasks": [
         "P",
         "E",
@@ -5181,7 +5181,7 @@
     {
       "key": "noun_repair_q03_market",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה MARKET",
       "tasks": [
         "M",
         "A",
@@ -5667,7 +5667,7 @@
     {
       "key": "noun_repair_q04_spoon",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה SPOON",
       "tasks": [
         "S",
         "P",
@@ -6029,7 +6029,7 @@
     {
       "key": "noun_repair_q05_treasure",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה TREASURE",
       "tasks": [
         "T",
         "R",
@@ -6125,7 +6125,7 @@
     {
       "key": "noun_repair_q06_book",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה NOUN",
       "tasks": [
         "N",
         "O",
@@ -6549,7 +6549,7 @@
     {
       "key": "numbers_q01_spell_sixteen",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה SIXTEEN",
       "tasks": [
         "s",
         "i",
@@ -6564,7 +6564,7 @@
       "success": "נכון! SIXTEEN הוא 16.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה SIXTEEN",
         "targetWord": "sixteen",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6575,7 +6575,7 @@
     {
       "key": "numbers_q01_spell_ten",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה TEN",
       "tasks": [
         "t",
         "e",
@@ -6586,7 +6586,7 @@
       "success": "נכון! TEN הוא 10.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה TEN",
         "targetWord": "ten",
         "extraDistractorCount": 1,
         "customDistractors": []
@@ -6734,7 +6734,7 @@
     {
       "key": "numbers_q02_spell_fifty",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה FIFTY",
       "tasks": [
         "f",
         "i",
@@ -6747,7 +6747,7 @@
       "success": "נכון! FIFTY הוא 50.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה FIFTY",
         "targetWord": "fifty",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6758,7 +6758,7 @@
     {
       "key": "numbers_q02_spell_twenty",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה TWENTY",
       "tasks": [
         "t",
         "w",
@@ -6772,7 +6772,7 @@
       "success": "נכון! TWENTY הוא 20.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה TWENTY",
         "targetWord": "twenty",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6933,7 +6933,7 @@
     {
       "key": "numbers_q03_spell_hundred",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה HUNDRED",
       "tasks": [
         "h",
         "u",
@@ -6948,7 +6948,7 @@
       "success": "נכון! HUNDRED הוא מאה.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה HUNDRED",
         "targetWord": "hundred",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6959,7 +6959,7 @@
     {
       "key": "numbers_q03_spell_thousand",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה THOUSAND",
       "tasks": [
         "t",
         "h",
@@ -6975,7 +6975,7 @@
       "success": "נכון! THOUSAND הוא אלף.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה THOUSAND",
         "targetWord": "thousand",
         "extraDistractorCount": 2,
         "customDistractors": []
@@ -6986,7 +6986,7 @@
     {
       "key": "q01_bridge_too_short_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה LONG",
       "tasks": [
         "סדרו <strong>l, o, n, g</strong>",
         "צרו <strong>long</strong> — ארוך"
@@ -6996,7 +6996,7 @@
       "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה LONG",
         "targetWord": "long",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7008,7 +7008,7 @@
     {
       "key": "q01_roles_without_names_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה KING",
       "tasks": [
         "גררו את האותיות <strong>k, i, n, g</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -7019,7 +7019,7 @@
       "success": "המילה KING (מלך) חוזרת לדף אנשי המלוכה",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה KING",
         "targetWord": "king",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7060,7 +7060,7 @@
     {
       "key": "q01_runaway_hammer_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה CAT",
       "tasks": [
         "סדרו <strong>c, a, t</strong>",
         "צרו <strong>cat</strong> — חתול"
@@ -7070,7 +7070,7 @@
       "success": "CAT נכתב נכון; Oak Log אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה CAT",
         "targetWord": "cat",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7082,7 +7082,7 @@
     {
       "key": "q02_castle_on_the_map_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה CASTLE",
       "tasks": [
         "גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -7093,7 +7093,7 @@
       "success": "הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה CASTLE",
         "targetWord": "castle",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7134,7 +7134,7 @@
     {
       "key": "q02_snoring_anvil_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה DOG",
       "tasks": [
         "סדרו <strong>d, o, g</strong>",
         "צרו <strong>dog</strong> — כלב"
@@ -7144,7 +7144,7 @@
       "success": "DOG נכתב נכון; Herbs אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה DOG",
         "targetWord": "dog",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7182,7 +7182,7 @@
     {
       "key": "q03_big_and_small_words_s1",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה BIG",
       "tasks": [
         "סדרו <strong>b, i, g</strong>",
         "צרו <strong>big</strong> — גדול"
@@ -7192,7 +7192,7 @@
       "success": "BIG נכתב נכון; Corn אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה BIG",
         "targetWord": "big",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7230,7 +7230,7 @@
     {
       "key": "q03_crown_soup_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה CROWN",
       "tasks": [
         "גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר",
         "בדקו שהמילה מתחילה ב־C ומסתיימת ב־N",
@@ -7241,7 +7241,7 @@
       "success": "הכתר מקבל בחזרה את הכרטיס CROWN",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה CROWN",
         "targetWord": "crown",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7282,7 +7282,7 @@
     {
       "key": "q03_first_real_slash_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה BIG",
       "tasks": [
         "סדרו <strong>b, i, g</strong>",
         "צרו <strong>big</strong> — גדול"
@@ -7292,7 +7292,7 @@
       "success": "BIG נכתב נכון — חזרו לוויל לקבל Slash",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה BIG",
         "targetWord": "big",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7304,7 +7304,7 @@
     {
       "key": "q04_soup_shield_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה SHIELD",
       "tasks": [
         "גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות",
         "שימו לב לצירוף <strong>sh</strong> בתחילת המילה",
@@ -7315,7 +7315,7 @@
       "success": "המגן (shield) חוזר להיות מגן במקום מגש מרק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה SHIELD",
         "targetWord": "shield",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7356,7 +7356,7 @@
     {
       "key": "q04_twelve_basic_adjectives_big",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה BIG",
       "tasks": [
         "סדרו <strong>b, i, g</strong>"
       ],
@@ -7365,7 +7365,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה BIG",
         "targetWord": "big",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7377,7 +7377,7 @@
     {
       "key": "q04_twelve_basic_adjectives_cold",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה COLD",
       "tasks": [
         "סדרו <strong>c, o, l, d</strong>"
       ],
@@ -7386,7 +7386,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה COLD",
         "targetWord": "cold",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7398,7 +7398,7 @@
     {
       "key": "q04_twelve_basic_adjectives_fast",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה FAST",
       "tasks": [
         "סדרו <strong>f, a, s, t</strong>"
       ],
@@ -7407,7 +7407,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה FAST",
         "targetWord": "fast",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7419,7 +7419,7 @@
     {
       "key": "q04_twelve_basic_adjectives_heavy",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה HEAVY",
       "tasks": [
         "סדרו <strong>h, e, a, v, y</strong>"
       ],
@@ -7428,7 +7428,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה HEAVY",
         "targetWord": "heavy",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7540,7 +7540,7 @@
     {
       "key": "q04_twelve_basic_adjectives_low",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה LOW",
       "tasks": [
         "סדרו <strong>l, o, w</strong>"
       ],
@@ -7549,7 +7549,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה LOW",
         "targetWord": "low",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7561,7 +7561,7 @@
     {
       "key": "q04_twelve_basic_adjectives_short",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה SHORT",
       "tasks": [
         "סדרו <strong>s, h, o, r, t</strong>"
       ],
@@ -7570,7 +7570,7 @@
       "success": "Ancient Rune אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה SHORT",
         "targetWord": "short",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7632,7 +7632,7 @@
     {
       "key": "q05_from_low_to_high_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה LOW",
       "tasks": [
         "סדרו <strong>l, o, w</strong>"
       ],
@@ -7641,7 +7641,7 @@
       "success": "Power Stone אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה LOW",
         "targetWord": "low",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7680,7 +7680,7 @@
     {
       "key": "q05_from_low_to_high_s5",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה HIGH",
       "tasks": [
         "סדרו <strong>h, i, g, h</strong>"
       ],
@@ -7689,7 +7689,7 @@
       "success": "Power Stone אחד נוסף לתיק",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה HIGH",
         "targetWord": "high",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7728,7 +7728,7 @@
     {
       "key": "q05_wizard_for_sale_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה WIZARD",
       "tasks": [
         "גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -7739,7 +7739,7 @@
       "success": "הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה WIZARD",
         "targetWord": "wizard",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -7993,7 +7993,7 @@
     {
       "key": "q06_dragon_identity_s2",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה DRAGON",
       "tasks": [
         "גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות",
         "התעלמו מאותיות המסיחות",
@@ -8004,7 +8004,7 @@
       "success": "כרטיס DRAGON (דרקון) חוזר ליצור הנכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה DRAGON",
         "targetWord": "dragon",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8045,7 +8045,7 @@
     {
       "key": "q07_royal_noun_trial_castle",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה CASTLE",
       "tasks": [
         "סדרו את המילה טירה באנגלית"
       ],
@@ -8054,7 +8054,7 @@
       "success": "CASTLE נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה CASTLE",
         "targetWord": "castle",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8066,7 +8066,7 @@
     {
       "key": "q07_royal_noun_trial_dragon",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה DRAGON",
       "tasks": [
         "סדרו את המילה דרקון באנגלית"
       ],
@@ -8075,7 +8075,7 @@
       "success": "DRAGON נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה DRAGON",
         "targetWord": "dragon",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8087,7 +8087,7 @@
     {
       "key": "q07_royal_noun_trial_queen",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה QUEEN",
       "tasks": [
         "סדרו את המילה מלכה באנגלית"
       ],
@@ -8096,7 +8096,7 @@
       "success": "QUEEN נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה QUEEN",
         "targetWord": "queen",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8140,7 +8140,7 @@
     {
       "key": "q07_royal_noun_trial_shield",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה SHIELD",
       "tasks": [
         "סדרו את המילה מגן באנגלית"
       ],
@@ -8149,7 +8149,7 @@
       "success": "SHIELD נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה SHIELD",
         "targetWord": "shield",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8161,7 +8161,7 @@
     {
       "key": "q07_royal_noun_trial_throne",
       "locale": "he",
-      "instruction": "זוכרים איך כותבים את המילה?",
+      "instruction": "כתבו את המילה THRONE",
       "tasks": [
         "סדרו את המילה כיסא־מלכות באנגלית"
       ],
@@ -8170,7 +8170,7 @@
       "success": "THRONE נכתב נכון",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "זוכרים איך כותבים את המילה?",
+        "prompt": "כתבו את המילה THRONE",
         "targetWord": "throne",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -8237,7 +8237,7 @@
               "rewards": []
             },
             {
-              "key": "q01_bridge_too_short_play_minigame_a550fdad_1",
+              "key": "q01_bridge_too_short_play_minigame_219e8074_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -8248,7 +8248,7 @@
                 "instance_id": "q01_bridge_too_short_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה LONG",
                 "instance_key": "q01_bridge_too_short_s2"
               },
               "source_metadata": {
@@ -8258,7 +8258,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_bridge_too_short_play_minigame_a550fdad_1",
+                  "step_key": "q01_bridge_too_short_play_minigame_219e8074_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -8477,7 +8477,7 @@
               "rewards": []
             },
             {
-              "key": "q03_big_and_small_words_play_minigame_a9c4ce89_1",
+              "key": "q03_big_and_small_words_play_minigame_a31182c3_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -8488,7 +8488,7 @@
                 "instance_id": "q03_big_and_small_words_s1",
                 "reward_item_id": "corn",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BIG",
                 "instance_key": "q03_big_and_small_words_s1"
               },
               "source_metadata": {
@@ -8498,7 +8498,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q03_big_and_small_words_play_minigame_a9c4ce89_1",
+                  "step_key": "q03_big_and_small_words_play_minigame_a31182c3_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "corn",
@@ -8645,7 +8645,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_96281c1a_1",
+              "key": "q04_twelve_basic_adjectives_play_minigame_30673ba8_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -8656,7 +8656,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_short",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SHORT",
                 "instance_key": "q04_twelve_basic_adjectives_short"
               },
               "source_metadata": {
@@ -8666,7 +8666,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_96281c1a_1",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_30673ba8_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -8741,7 +8741,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_514a9fb5_3",
+              "key": "q04_twelve_basic_adjectives_play_minigame_ea3c09d5_3",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -8752,7 +8752,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_cold",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה COLD",
                 "instance_key": "q04_twelve_basic_adjectives_cold"
               },
               "source_metadata": {
@@ -8762,7 +8762,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_514a9fb5_3",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_ea3c09d5_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -8837,7 +8837,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_376ea950_5",
+              "key": "q04_twelve_basic_adjectives_play_minigame_be90cac6_5",
               "position": 10,
               "type": "play_minigame",
               "payload": {
@@ -8848,7 +8848,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_big",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BIG",
                 "instance_key": "q04_twelve_basic_adjectives_big"
               },
               "source_metadata": {
@@ -8858,7 +8858,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_376ea950_5",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_be90cac6_5",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -8933,7 +8933,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_6ade902f_7",
+              "key": "q04_twelve_basic_adjectives_play_minigame_edfae330_7",
               "position": 14,
               "type": "play_minigame",
               "payload": {
@@ -8944,7 +8944,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_fast",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה FAST",
                 "instance_key": "q04_twelve_basic_adjectives_fast"
               },
               "source_metadata": {
@@ -8954,7 +8954,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_6ade902f_7",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_edfae330_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -9029,7 +9029,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_d2b491cd_9",
+              "key": "q04_twelve_basic_adjectives_play_minigame_08b30929_9",
               "position": 18,
               "type": "play_minigame",
               "payload": {
@@ -9040,7 +9040,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_low",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה LOW",
                 "instance_key": "q04_twelve_basic_adjectives_low"
               },
               "source_metadata": {
@@ -9050,7 +9050,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_d2b491cd_9",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_08b30929_9",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -9125,7 +9125,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_a2fb2415_11",
+              "key": "q04_twelve_basic_adjectives_play_minigame_4a9b87df_11",
               "position": 22,
               "type": "play_minigame",
               "payload": {
@@ -9136,7 +9136,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_heavy",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה HEAVY",
                 "instance_key": "q04_twelve_basic_adjectives_heavy"
               },
               "source_metadata": {
@@ -9146,7 +9146,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_a2fb2415_11",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_4a9b87df_11",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -9293,7 +9293,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_6eb5a6c9_1",
+              "key": "q05_from_low_to_high_play_minigame_b3e3f336_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9304,7 +9304,7 @@
                 "instance_id": "q05_from_low_to_high_s2",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה LOW",
                 "instance_key": "q05_from_low_to_high_s2"
               },
               "source_metadata": {
@@ -9314,7 +9314,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_6eb5a6c9_1",
+                  "step_key": "q05_from_low_to_high_play_minigame_b3e3f336_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -9375,7 +9375,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_9fde5c3f_3",
+              "key": "q05_from_low_to_high_play_minigame_73641b30_3",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -9386,7 +9386,7 @@
                 "instance_id": "q05_from_low_to_high_s5",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה HIGH",
                 "instance_key": "q05_from_low_to_high_s5"
               },
               "source_metadata": {
@@ -9396,7 +9396,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_9fde5c3f_3",
+                  "step_key": "q05_from_low_to_high_play_minigame_73641b30_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -9742,7 +9742,7 @@
               "rewards": []
             },
             {
-              "key": "q01_runaway_hammer_play_minigame_3f3608f0_1",
+              "key": "q01_runaway_hammer_play_minigame_af87889e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9753,7 +9753,7 @@
                 "instance_id": "q01_runaway_hammer_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CAT",
                 "instance_key": "q01_runaway_hammer_s2"
               },
               "source_metadata": {
@@ -9763,7 +9763,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_runaway_hammer_play_minigame_3f3608f0_1",
+                  "step_key": "q01_runaway_hammer_play_minigame_af87889e_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -9862,7 +9862,7 @@
               "rewards": []
             },
             {
-              "key": "q02_snoring_anvil_play_minigame_1e5d492c_1",
+              "key": "q02_snoring_anvil_play_minigame_2102872a_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9873,7 +9873,7 @@
                 "instance_id": "q02_snoring_anvil_s2",
                 "reward_item_id": "herbs",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה DOG",
                 "instance_key": "q02_snoring_anvil_s2"
               },
               "source_metadata": {
@@ -9883,7 +9883,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q02_snoring_anvil_play_minigame_1e5d492c_1",
+                  "step_key": "q02_snoring_anvil_play_minigame_2102872a_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "herbs",
@@ -9982,7 +9982,7 @@
               "rewards": []
             },
             {
-              "key": "q03_first_real_slash_play_minigame_28152785_1",
+              "key": "q03_first_real_slash_play_minigame_cd3dc5ea_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -9991,7 +9991,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "q03_first_real_slash_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BIG",
                 "instance_key": "q03_first_real_slash_s2"
               },
               "source_metadata": {
@@ -10111,7 +10111,7 @@
               "rewards": []
             },
             {
-              "key": "q01_roles_without_names_play_minigame_c53b7340_1",
+              "key": "q01_roles_without_names_play_minigame_b034751f_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10120,7 +10120,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q01_roles_without_names_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה KING",
                 "instance_key": "q01_roles_without_names_s2"
               },
               "source_metadata": {
@@ -10250,7 +10250,7 @@
               "rewards": []
             },
             {
-              "key": "q02_castle_on_the_map_play_minigame_d96ac7fa_1",
+              "key": "q02_castle_on_the_map_play_minigame_8881b7da_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10259,7 +10259,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q02_castle_on_the_map_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CASTLE",
                 "instance_key": "q02_castle_on_the_map_s2"
               },
               "source_metadata": {
@@ -10389,7 +10389,7 @@
               "rewards": []
             },
             {
-              "key": "q03_crown_soup_play_minigame_4f53c1d3_1",
+              "key": "q03_crown_soup_play_minigame_a651328a_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10398,7 +10398,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q03_crown_soup_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CROWN",
                 "instance_key": "q03_crown_soup_s2"
               },
               "source_metadata": {
@@ -10528,7 +10528,7 @@
               "rewards": []
             },
             {
-              "key": "q04_soup_shield_play_minigame_eb4f693d_1",
+              "key": "q04_soup_shield_play_minigame_aeebf871_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10537,7 +10537,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q04_soup_shield_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SHIELD",
                 "instance_key": "q04_soup_shield_s2"
               },
               "source_metadata": {
@@ -10667,7 +10667,7 @@
               "rewards": []
             },
             {
-              "key": "q05_wizard_for_sale_play_minigame_995bed7a_1",
+              "key": "q05_wizard_for_sale_play_minigame_db9b1e83_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10676,7 +10676,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q05_wizard_for_sale_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה WIZARD",
                 "instance_key": "q05_wizard_for_sale_s2"
               },
               "source_metadata": {
@@ -10806,7 +10806,7 @@
               "rewards": []
             },
             {
-              "key": "q06_dragon_identity_play_minigame_7a3851ef_1",
+              "key": "q06_dragon_identity_play_minigame_c8b2d11e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10815,7 +10815,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q06_dragon_identity_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה DRAGON",
                 "instance_key": "q06_dragon_identity_s2"
               },
               "source_metadata": {
@@ -10945,7 +10945,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_7a9f572c_1",
+              "key": "q07_royal_noun_trial_play_minigame_5edf3d11_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -10954,7 +10954,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_queen",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה QUEEN",
                 "instance_key": "q07_royal_noun_trial_queen"
               },
               "source_metadata": {
@@ -10964,7 +10964,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_390ea22f_2",
+              "key": "q07_royal_noun_trial_play_minigame_017d2f3e_2",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -10973,7 +10973,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_castle",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CASTLE",
                 "instance_key": "q07_royal_noun_trial_castle"
               },
               "source_metadata": {
@@ -10983,7 +10983,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_9fd55043_3",
+              "key": "q07_royal_noun_trial_play_minigame_b8ca2eb2_3",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -10992,7 +10992,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_throne",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה THRONE",
                 "instance_key": "q07_royal_noun_trial_throne"
               },
               "source_metadata": {
@@ -11002,7 +11002,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_608c7920_4",
+              "key": "q07_royal_noun_trial_play_minigame_b8e3da92_4",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -11011,7 +11011,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_shield",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SHIELD",
                 "instance_key": "q07_royal_noun_trial_shield"
               },
               "source_metadata": {
@@ -11021,7 +11021,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_7b1c4c40_5",
+              "key": "q07_royal_noun_trial_play_minigame_1d5aa01a_5",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -11030,7 +11030,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_dragon",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה DRAGON",
                 "instance_key": "q07_royal_noun_trial_dragon"
               },
               "source_metadata": {
@@ -11192,7 +11192,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_f5be9295_2",
+              "key": "q01_the_broken_noun_book_play_minigame_e76e5cee_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11201,7 +11201,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_book",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BOOK",
                 "instance_key": "noun_repair_q01_book"
               },
               "source_metadata": {
@@ -11412,7 +11412,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_9c5e3d04_2",
+              "key": "q02_the_runaway_objects_play_minigame_4616bdb5_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11421,7 +11421,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_pencil",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה PENCIL",
                 "instance_key": "noun_repair_q02_pencil"
               },
               "source_metadata": {
@@ -11632,7 +11632,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_cfef2256_2",
+              "key": "q03_the_market_name_mixup_play_minigame_b6c4e4ac_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11641,7 +11641,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_market",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה MARKET",
                 "instance_key": "noun_repair_q03_market"
               },
               "source_metadata": {
@@ -11852,7 +11852,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_3e8c2d77_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_d7d79d91_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -11861,7 +11861,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_spoon",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SPOON",
                 "instance_key": "noun_repair_q04_spoon"
               },
               "source_metadata": {
@@ -12072,7 +12072,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_ed5afe93_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_6502fb07_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -12081,7 +12081,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_treasure",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה TREASURE",
                 "instance_key": "noun_repair_q05_treasure"
               },
               "source_metadata": {
@@ -12292,7 +12292,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_09800ba1_2",
+              "key": "q06_the_great_noun_reopening_play_minigame_d79c9f87_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -12301,7 +12301,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_book",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה NOUN",
                 "instance_key": "noun_repair_q06_book"
               },
               "source_metadata": {
@@ -12520,7 +12520,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_3fe1d042_1",
+              "key": "q01_numbers_10_20_play_minigame_ae7a26ef_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -12529,7 +12529,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_ten",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה TEN",
                 "instance_key": "numbers_q01_spell_ten"
               },
               "source_metadata": {
@@ -12577,7 +12577,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_ef16434e_4",
+              "key": "q01_numbers_10_20_play_minigame_8e4cd673_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -12586,7 +12586,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_sixteen",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SIXTEEN",
                 "instance_key": "numbers_q01_spell_sixteen"
               },
               "source_metadata": {
@@ -12725,7 +12725,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_5e9f8026_1",
+              "key": "q02_numbers_20_100_play_minigame_2032e482_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -12734,7 +12734,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_twenty",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה TWENTY",
                 "instance_key": "numbers_q02_spell_twenty"
               },
               "source_metadata": {
@@ -12782,7 +12782,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_450c600c_4",
+              "key": "q02_numbers_20_100_play_minigame_2813fa26_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -12791,7 +12791,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_fifty",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה FIFTY",
                 "instance_key": "numbers_q02_spell_fifty"
               },
               "source_metadata": {
@@ -12930,7 +12930,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_80689242_1",
+              "key": "q03_numbers_100_1000_play_minigame_7affad8e_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -12939,7 +12939,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_hundred",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה HUNDRED",
                 "instance_key": "numbers_q03_spell_hundred"
               },
               "source_metadata": {
@@ -12987,7 +12987,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_7e37fc48_4",
+              "key": "q03_numbers_100_1000_play_minigame_2c36c3e0_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -12996,7 +12996,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_thousand",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה THOUSAND",
                 "instance_key": "numbers_q03_spell_thousand"
               },
               "source_metadata": {
@@ -13171,7 +13171,7 @@
               "rewards": []
             },
             {
-              "key": "q01_bridge_too_short_play_minigame_a550fdad_1",
+              "key": "q01_bridge_too_short_play_minigame_219e8074_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13182,7 +13182,7 @@
                 "instance_id": "q01_bridge_too_short_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה LONG",
                 "instance_key": "q01_bridge_too_short_s2"
               },
               "source_metadata": {
@@ -13192,7 +13192,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_bridge_too_short_play_minigame_a550fdad_1",
+                  "step_key": "q01_bridge_too_short_play_minigame_219e8074_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -13411,7 +13411,7 @@
               "rewards": []
             },
             {
-              "key": "q03_big_and_small_words_play_minigame_a9c4ce89_1",
+              "key": "q03_big_and_small_words_play_minigame_a31182c3_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13422,7 +13422,7 @@
                 "instance_id": "q03_big_and_small_words_s1",
                 "reward_item_id": "corn",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BIG",
                 "instance_key": "q03_big_and_small_words_s1"
               },
               "source_metadata": {
@@ -13432,7 +13432,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q03_big_and_small_words_play_minigame_a9c4ce89_1",
+                  "step_key": "q03_big_and_small_words_play_minigame_a31182c3_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "corn",
@@ -13579,7 +13579,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_96281c1a_1",
+              "key": "q04_twelve_basic_adjectives_play_minigame_30673ba8_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13590,7 +13590,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_short",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SHORT",
                 "instance_key": "q04_twelve_basic_adjectives_short"
               },
               "source_metadata": {
@@ -13600,7 +13600,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_96281c1a_1",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_30673ba8_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13675,7 +13675,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_514a9fb5_3",
+              "key": "q04_twelve_basic_adjectives_play_minigame_ea3c09d5_3",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -13686,7 +13686,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_cold",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה COLD",
                 "instance_key": "q04_twelve_basic_adjectives_cold"
               },
               "source_metadata": {
@@ -13696,7 +13696,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_514a9fb5_3",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_ea3c09d5_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13771,7 +13771,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_376ea950_5",
+              "key": "q04_twelve_basic_adjectives_play_minigame_be90cac6_5",
               "position": 10,
               "type": "play_minigame",
               "payload": {
@@ -13782,7 +13782,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_big",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BIG",
                 "instance_key": "q04_twelve_basic_adjectives_big"
               },
               "source_metadata": {
@@ -13792,7 +13792,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_376ea950_5",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_be90cac6_5",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13867,7 +13867,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_6ade902f_7",
+              "key": "q04_twelve_basic_adjectives_play_minigame_edfae330_7",
               "position": 14,
               "type": "play_minigame",
               "payload": {
@@ -13878,7 +13878,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_fast",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה FAST",
                 "instance_key": "q04_twelve_basic_adjectives_fast"
               },
               "source_metadata": {
@@ -13888,7 +13888,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_6ade902f_7",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_edfae330_7",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -13963,7 +13963,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_d2b491cd_9",
+              "key": "q04_twelve_basic_adjectives_play_minigame_08b30929_9",
               "position": 18,
               "type": "play_minigame",
               "payload": {
@@ -13974,7 +13974,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_low",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה LOW",
                 "instance_key": "q04_twelve_basic_adjectives_low"
               },
               "source_metadata": {
@@ -13984,7 +13984,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_d2b491cd_9",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_08b30929_9",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -14059,7 +14059,7 @@
               "rewards": []
             },
             {
-              "key": "q04_twelve_basic_adjectives_play_minigame_a2fb2415_11",
+              "key": "q04_twelve_basic_adjectives_play_minigame_4a9b87df_11",
               "position": 22,
               "type": "play_minigame",
               "payload": {
@@ -14070,7 +14070,7 @@
                 "instance_id": "q04_twelve_basic_adjectives_heavy",
                 "reward_item_id": "ancient_rune",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה HEAVY",
                 "instance_key": "q04_twelve_basic_adjectives_heavy"
               },
               "source_metadata": {
@@ -14080,7 +14080,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_twelve_basic_adjectives_play_minigame_a2fb2415_11",
+                  "step_key": "q04_twelve_basic_adjectives_play_minigame_4a9b87df_11",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "ancient_rune",
@@ -14227,7 +14227,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_6eb5a6c9_1",
+              "key": "q05_from_low_to_high_play_minigame_b3e3f336_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14238,7 +14238,7 @@
                 "instance_id": "q05_from_low_to_high_s2",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה LOW",
                 "instance_key": "q05_from_low_to_high_s2"
               },
               "source_metadata": {
@@ -14248,7 +14248,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_6eb5a6c9_1",
+                  "step_key": "q05_from_low_to_high_play_minigame_b3e3f336_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -14309,7 +14309,7 @@
               "rewards": []
             },
             {
-              "key": "q05_from_low_to_high_play_minigame_9fde5c3f_3",
+              "key": "q05_from_low_to_high_play_minigame_73641b30_3",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -14320,7 +14320,7 @@
                 "instance_id": "q05_from_low_to_high_s5",
                 "reward_item_id": "power_stone",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה HIGH",
                 "instance_key": "q05_from_low_to_high_s5"
               },
               "source_metadata": {
@@ -14330,7 +14330,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_from_low_to_high_play_minigame_9fde5c3f_3",
+                  "step_key": "q05_from_low_to_high_play_minigame_73641b30_3",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -14666,7 +14666,7 @@
               "rewards": []
             },
             {
-              "key": "q01_runaway_hammer_play_minigame_3f3608f0_1",
+              "key": "q01_runaway_hammer_play_minigame_af87889e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14677,7 +14677,7 @@
                 "instance_id": "q01_runaway_hammer_s2",
                 "reward_item_id": "oak_log",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CAT",
                 "instance_key": "q01_runaway_hammer_s2"
               },
               "source_metadata": {
@@ -14687,7 +14687,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q01_runaway_hammer_play_minigame_3f3608f0_1",
+                  "step_key": "q01_runaway_hammer_play_minigame_af87889e_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "oak_log",
@@ -14786,7 +14786,7 @@
               "rewards": []
             },
             {
-              "key": "q02_snoring_anvil_play_minigame_1e5d492c_1",
+              "key": "q02_snoring_anvil_play_minigame_2102872a_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14797,7 +14797,7 @@
                 "instance_id": "q02_snoring_anvil_s2",
                 "reward_item_id": "herbs",
                 "reward_amount": 1,
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה DOG",
                 "instance_key": "q02_snoring_anvil_s2"
               },
               "source_metadata": {
@@ -14807,7 +14807,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q02_snoring_anvil_play_minigame_1e5d492c_1",
+                  "step_key": "q02_snoring_anvil_play_minigame_2102872a_1",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "herbs",
@@ -14906,7 +14906,7 @@
               "rewards": []
             },
             {
-              "key": "q03_first_real_slash_play_minigame_28152785_1",
+              "key": "q03_first_real_slash_play_minigame_cd3dc5ea_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14915,7 +14915,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "q03_first_real_slash_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BIG",
                 "instance_key": "q03_first_real_slash_s2"
               },
               "source_metadata": {
@@ -15025,7 +15025,7 @@
               "rewards": []
             },
             {
-              "key": "q01_roles_without_names_play_minigame_c53b7340_1",
+              "key": "q01_roles_without_names_play_minigame_b034751f_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15034,7 +15034,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q01_roles_without_names_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה KING",
                 "instance_key": "q01_roles_without_names_s2"
               },
               "source_metadata": {
@@ -15164,7 +15164,7 @@
               "rewards": []
             },
             {
-              "key": "q02_castle_on_the_map_play_minigame_d96ac7fa_1",
+              "key": "q02_castle_on_the_map_play_minigame_8881b7da_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15173,7 +15173,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "q02_castle_on_the_map_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CASTLE",
                 "instance_key": "q02_castle_on_the_map_s2"
               },
               "source_metadata": {
@@ -15303,7 +15303,7 @@
               "rewards": []
             },
             {
-              "key": "q03_crown_soup_play_minigame_4f53c1d3_1",
+              "key": "q03_crown_soup_play_minigame_a651328a_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15312,7 +15312,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q03_crown_soup_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CROWN",
                 "instance_key": "q03_crown_soup_s2"
               },
               "source_metadata": {
@@ -15442,7 +15442,7 @@
               "rewards": []
             },
             {
-              "key": "q04_soup_shield_play_minigame_eb4f693d_1",
+              "key": "q04_soup_shield_play_minigame_aeebf871_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15451,7 +15451,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q04_soup_shield_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SHIELD",
                 "instance_key": "q04_soup_shield_s2"
               },
               "source_metadata": {
@@ -15581,7 +15581,7 @@
               "rewards": []
             },
             {
-              "key": "q05_wizard_for_sale_play_minigame_995bed7a_1",
+              "key": "q05_wizard_for_sale_play_minigame_db9b1e83_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15590,7 +15590,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "q05_wizard_for_sale_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה WIZARD",
                 "instance_key": "q05_wizard_for_sale_s2"
               },
               "source_metadata": {
@@ -15720,7 +15720,7 @@
               "rewards": []
             },
             {
-              "key": "q06_dragon_identity_play_minigame_7a3851ef_1",
+              "key": "q06_dragon_identity_play_minigame_c8b2d11e_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15729,7 +15729,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q06_dragon_identity_s2",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה DRAGON",
                 "instance_key": "q06_dragon_identity_s2"
               },
               "source_metadata": {
@@ -15859,7 +15859,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_7a9f572c_1",
+              "key": "q07_royal_noun_trial_play_minigame_5edf3d11_1",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -15868,7 +15868,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_queen",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה QUEEN",
                 "instance_key": "q07_royal_noun_trial_queen"
               },
               "source_metadata": {
@@ -15878,7 +15878,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_390ea22f_2",
+              "key": "q07_royal_noun_trial_play_minigame_017d2f3e_2",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -15887,7 +15887,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_castle",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה CASTLE",
                 "instance_key": "q07_royal_noun_trial_castle"
               },
               "source_metadata": {
@@ -15897,7 +15897,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_9fd55043_3",
+              "key": "q07_royal_noun_trial_play_minigame_b8ca2eb2_3",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -15906,7 +15906,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_throne",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה THRONE",
                 "instance_key": "q07_royal_noun_trial_throne"
               },
               "source_metadata": {
@@ -15916,7 +15916,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_608c7920_4",
+              "key": "q07_royal_noun_trial_play_minigame_b8e3da92_4",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -15925,7 +15925,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_shield",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SHIELD",
                 "instance_key": "q07_royal_noun_trial_shield"
               },
               "source_metadata": {
@@ -15935,7 +15935,7 @@
               "rewards": []
             },
             {
-              "key": "q07_royal_noun_trial_play_minigame_7b1c4c40_5",
+              "key": "q07_royal_noun_trial_play_minigame_1d5aa01a_5",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -15944,7 +15944,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "q07_royal_noun_trial_dragon",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה DRAGON",
                 "instance_key": "q07_royal_noun_trial_dragon"
               },
               "source_metadata": {
@@ -16096,7 +16096,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_f5be9295_2",
+              "key": "q01_the_broken_noun_book_play_minigame_e76e5cee_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16105,7 +16105,7 @@
                 "difficulty": 1,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_book",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה BOOK",
                 "instance_key": "noun_repair_q01_book"
               },
               "source_metadata": {
@@ -16316,7 +16316,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_9c5e3d04_2",
+              "key": "q02_the_runaway_objects_play_minigame_4616bdb5_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16325,7 +16325,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_pencil",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה PENCIL",
                 "instance_key": "noun_repair_q02_pencil"
               },
               "source_metadata": {
@@ -16536,7 +16536,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_cfef2256_2",
+              "key": "q03_the_market_name_mixup_play_minigame_b6c4e4ac_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16545,7 +16545,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_market",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה MARKET",
                 "instance_key": "noun_repair_q03_market"
               },
               "source_metadata": {
@@ -16756,7 +16756,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_3e8c2d77_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_d7d79d91_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16765,7 +16765,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_spoon",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SPOON",
                 "instance_key": "noun_repair_q04_spoon"
               },
               "source_metadata": {
@@ -16976,7 +16976,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_ed5afe93_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_6502fb07_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -16985,7 +16985,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_treasure",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה TREASURE",
                 "instance_key": "noun_repair_q05_treasure"
               },
               "source_metadata": {
@@ -17196,7 +17196,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_09800ba1_2",
+              "key": "q06_the_great_noun_reopening_play_minigame_d79c9f87_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -17205,7 +17205,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_book",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה NOUN",
                 "instance_key": "noun_repair_q06_book"
               },
               "source_metadata": {
@@ -17414,7 +17414,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_3fe1d042_1",
+              "key": "q01_numbers_10_20_play_minigame_ae7a26ef_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -17423,7 +17423,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_ten",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה TEN",
                 "instance_key": "numbers_q01_spell_ten"
               },
               "source_metadata": {
@@ -17471,7 +17471,7 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_ef16434e_4",
+              "key": "q01_numbers_10_20_play_minigame_8e4cd673_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -17480,7 +17480,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_sixteen",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה SIXTEEN",
                 "instance_key": "numbers_q01_spell_sixteen"
               },
               "source_metadata": {
@@ -17619,7 +17619,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_5e9f8026_1",
+              "key": "q02_numbers_20_100_play_minigame_2032e482_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -17628,7 +17628,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_twenty",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה TWENTY",
                 "instance_key": "numbers_q02_spell_twenty"
               },
               "source_metadata": {
@@ -17676,7 +17676,7 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_450c600c_4",
+              "key": "q02_numbers_20_100_play_minigame_2813fa26_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -17685,7 +17685,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_fifty",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה FIFTY",
                 "instance_key": "numbers_q02_spell_fifty"
               },
               "source_metadata": {
@@ -17824,7 +17824,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_80689242_1",
+              "key": "q03_numbers_100_1000_play_minigame_7affad8e_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -17833,7 +17833,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_hundred",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה HUNDRED",
                 "instance_key": "numbers_q03_spell_hundred"
               },
               "source_metadata": {
@@ -17881,7 +17881,7 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_7e37fc48_4",
+              "key": "q03_numbers_100_1000_play_minigame_2c36c3e0_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -17890,7 +17890,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_thousand",
-                "display_text": "זוכרים איך כותבים את המילה?",
+                "display_text": "כתבו את המילה THOUSAND",
                 "instance_key": "numbers_q03_spell_thousand"
               },
               "source_metadata": {
@@ -18004,5 +18004,5 @@
       ]
     }
   ],
-  "source_digest": "88b6ccb79df60607a93c0e1873866619deaebbaa05bc3dd0c6f3eb2bba4033bc"
+  "source_digest": "dd1492dee6b2196222f054dae9569f6184c7c2eca2ff37093083fa1d00dffb12"
 }

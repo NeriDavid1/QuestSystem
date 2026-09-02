@@ -10,7 +10,7 @@ instances:
     params: { letters: [{id: boy, value: b}, {id: girl, value: g}, {id: king, value: k}, {id: queen, value: q}], wordTasks: [{id: boy, image: '', fullWord: boy, missingIndices: [0]}, {id: girl, image: '', fullWord: girl, missingIndices: [1]}, {id: king, image: '', fullWord: king, missingIndices: [3]}, {id: queen, image: '', fullWord: queen, missingIndices: [0, 4]}] }
   noun_repair_q01_book:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה BOOK"
     tasks: [B, O, O, K]
     target: book
     variant: spelling
@@ -67,7 +67,7 @@ instances:
     params: { letters: [{id: bag, value: b}, {id: box, value: b}, {id: book, value: b}, {id: pen, value: p}], wordTasks: [{id: bag, image: '', fullWord: bag, missingIndices: [0]}, {id: box, image: '', fullWord: box, missingIndices: [1]}, {id: book, image: '', fullWord: book, missingIndices: [3]}, {id: pen, image: '', fullWord: pen, missingIndices: [0]}] }
   noun_repair_q02_pencil:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה PENCIL"
     tasks: [P, E, N, C, I, L]
     target: pencil
     variant: spelling
@@ -124,7 +124,7 @@ instances:
     params: { letters: [{id: apple, value: a}, {id: pear, value: p}, {id: lemon, value: l}, {id: mango, value: m}], wordTasks: [{id: apple, image: '', fullWord: apple, missingIndices: [0]}, {id: pear, image: '', fullWord: pear, missingIndices: [1]}, {id: lemon, image: '', fullWord: lemon, missingIndices: [4]}, {id: mango, image: '', fullWord: mango, missingIndices: [0, 4]}] }
   noun_repair_q03_market:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה MARKET"
     tasks: [M, A, R, K, E, T]
     target: market
     variant: spelling
@@ -181,7 +181,7 @@ instances:
     params: { letters: [{id: spoon, value: s}, {id: plate, value: p}, {id: cup, value: c}, {id: knife, value: k}], wordTasks: [{id: spoon, image: '', fullWord: spoon, missingIndices: [0]}, {id: plate, image: '', fullWord: plate, missingIndices: [1]}, {id: cup, image: '', fullWord: cup, missingIndices: [2]}, {id: knife, image: '', fullWord: knife, missingIndices: [0, 4]}] }
   noun_repair_q04_spoon:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה SPOON"
     tasks: [S, P, O, O, N]
     target: spoon
     variant: spelling
@@ -238,7 +238,7 @@ instances:
     params: { letters: [{id: castle, value: c}, {id: tower, value: t}, {id: throne, value: t}, {id: crown, value: c}], wordTasks: [{id: castle, image: '', fullWord: castle, missingIndices: [0]}, {id: tower, image: '', fullWord: tower, missingIndices: [1]}, {id: throne, image: '', fullWord: throne, missingIndices: [5]}, {id: crown, image: '', fullWord: crown, missingIndices: [0, 4]}] }
   noun_repair_q05_treasure:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה TREASURE"
     tasks: [T, R, E, A, S, U, R, E]
     target: treasure
     variant: spelling
@@ -295,7 +295,7 @@ instances:
     params: { letters: [{id: boy, value: b}, {id: girl, value: g}, {id: king, value: k}, {id: queen, value: q}], wordTasks: [{id: boy, image: '', fullWord: boy, missingIndices: [0]}, {id: girl, image: '', fullWord: girl, missingIndices: [1]}, {id: king, image: '', fullWord: king, missingIndices: [3]}, {id: queen, image: '', fullWord: queen, missingIndices: [0, 4]}] }
   noun_repair_q06_book:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה NOUN"
     tasks: [N, O, U, N]
     target: noun
     variant: spelling

@@ -24,7 +24,7 @@ steps:
     difficulty: 2
     success_required: true
     instance_id: noun_repair_q04_spoon
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה SPOON"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil

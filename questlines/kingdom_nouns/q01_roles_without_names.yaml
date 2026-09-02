@@ -23,7 +23,7 @@ steps:
     difficulty: 4
     success_required: true
     instance_id: q01_roles_without_names_s2
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה KING"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest5_Silver_Fountain_Court

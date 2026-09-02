@@ -28,7 +28,7 @@ steps:
     difficulty: 3
     success_required: true
     instance_id: noun_repair_q06_book
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה NOUN"
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Exam_Table_Fairy_Rose_Park

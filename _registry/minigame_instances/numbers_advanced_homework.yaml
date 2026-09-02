@@ -2,12 +2,12 @@
 instances:
   numbers_q01_spell_ten:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה TEN"
     tasks: [t, e, n]
     target: ten
     variant: word_spelling
     success: "נכון! TEN הוא 10."
-    params: { prompt: "זוכרים איך כותבים את המילה?", targetWord: ten, extraDistractorCount: 1, customDistractors: [] }
+    params: { prompt: "כתבו את המילה TEN", targetWord: ten, extraDistractorCount: 1, customDistractors: [] }
   numbers_q01_sentence_twelve:
     minigame_id: word_ordering
     instruction: "בנו משפט לפי התרגום בעברית"
@@ -26,12 +26,12 @@ instances:
     params: { prompt: "אמרו את המילים הבאות בקול", targetWords: [fourteen], targetPhrase: fourteen, silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
   numbers_q01_spell_sixteen:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה SIXTEEN"
     tasks: [s, i, x, t, e, e, n]
     target: sixteen
     variant: word_spelling
     success: "נכון! SIXTEEN הוא 16."
-    params: { prompt: "זוכרים איך כותבים את המילה?", targetWord: sixteen, extraDistractorCount: 2, customDistractors: [] }
+    params: { prompt: "כתבו את המילה SIXTEEN", targetWord: sixteen, extraDistractorCount: 2, customDistractors: [] }
   numbers_q01_sentence_eighteen:
     minigame_id: word_ordering
     instruction: "בנו משפט לפי התרגום בעברית"
@@ -58,12 +58,12 @@ instances:
     params: { prompt: "בנו משפט לפי התרגום בעברית", translation: "המספר הוא חמש עשרה", englishWordsInOrder: [The, number, is, fifteen], preFilledIndices: [], distractorWords: [] }
   numbers_q02_spell_twenty:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה TWENTY"
     tasks: [t, w, e, n, t, y]
     target: twenty
     variant: word_spelling
     success: "נכון! TWENTY הוא 20."
-    params: { prompt: "זוכרים איך כותבים את המילה?", targetWord: twenty, extraDistractorCount: 2, customDistractors: [] }
+    params: { prompt: "כתבו את המילה TWENTY", targetWord: twenty, extraDistractorCount: 2, customDistractors: [] }
   numbers_q02_sentence_thirty_five:
     minigame_id: word_ordering
     instruction: "בנו משפט לפי התרגום בעברית"
@@ -82,12 +82,12 @@ instances:
     params: { prompt: "אמרו את המילים הבאות בקול", targetWords: [forty], targetPhrase: forty, silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
   numbers_q02_spell_fifty:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה FIFTY"
     tasks: [f, i, f, t, y]
     target: fifty
     variant: word_spelling
     success: "נכון! FIFTY הוא 50."
-    params: { prompt: "זוכרים איך כותבים את המילה?", targetWord: fifty, extraDistractorCount: 2, customDistractors: [] }
+    params: { prompt: "כתבו את המילה FIFTY", targetWord: fifty, extraDistractorCount: 2, customDistractors: [] }
   numbers_q02_sentence_sixty_two:
     minigame_id: word_ordering
     instruction: "בנו משפט לפי התרגום בעברית"
@@ -114,12 +114,12 @@ instances:
     params: { prompt: "בנו משפט לפי התרגום בעברית", translation: "המספר הוא תשעים", englishWordsInOrder: [The, number, is, ninety], preFilledIndices: [], distractorWords: [] }
   numbers_q03_spell_hundred:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה HUNDRED"
     tasks: [h, u, n, d, r, e, d]
     target: hundred
     variant: word_spelling
     success: "נכון! HUNDRED הוא מאה."
-    params: { prompt: "זוכרים איך כותבים את המילה?", targetWord: hundred, extraDistractorCount: 2, customDistractors: [] }
+    params: { prompt: "כתבו את המילה HUNDRED", targetWord: hundred, extraDistractorCount: 2, customDistractors: [] }
   numbers_q03_sentence_two_hundred_fifty:
     minigame_id: word_ordering
     instruction: "בנו משפט לפי התרגום בעברית"
@@ -138,12 +138,12 @@ instances:
     params: { prompt: "אמרו את המילים הבאות בקול", targetWords: ["three hundred"], targetPhrase: "three hundred", silenceTimeoutSeconds: 1, allowFuzzyMatch: true, referenceClip: '' }
   numbers_q03_spell_thousand:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה THOUSAND"
     tasks: [t, h, o, u, s, a, n, d]
     target: thousand
     variant: word_spelling
     success: "נכון! THOUSAND הוא אלף."
-    params: { prompt: "זוכרים איך כותבים את המילה?", targetWord: thousand, extraDistractorCount: 2, customDistractors: [] }
+    params: { prompt: "כתבו את המילה THOUSAND", targetWord: thousand, extraDistractorCount: 2, customDistractors: [] }
   numbers_q03_sentence_seven_hundred_twenty:
     minigame_id: word_ordering
     instruction: "בנו משפט לפי התרגום בעברית"

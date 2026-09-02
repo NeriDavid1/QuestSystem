@@ -25,7 +25,7 @@ steps:
     instance_id: q01_bridge_too_short_s2
     reward_item_id: oak_log
     reward_amount: 1
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה LONG"
   - type: deliver_item
     npc_id: teacher_maya
     item_id: oak_log

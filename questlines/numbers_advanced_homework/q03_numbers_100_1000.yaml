@@ -17,7 +17,7 @@ steps:
     difficulty: 3
     success_required: true
     instance_id: numbers_q03_spell_hundred
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה HUNDRED"
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest5_Silver_Fountain_Court
@@ -38,7 +38,7 @@ steps:
     difficulty: 4
     success_required: true
     instance_id: numbers_q03_spell_thousand
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה THOUSAND"
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Wooden_Cart1_Inside_Gate

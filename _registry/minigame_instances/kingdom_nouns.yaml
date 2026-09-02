@@ -3,7 +3,7 @@
 instances:
   q01_roles_without_names_s2:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה KING"
     tasks:
       - גררו את האותיות <strong>k, i, n, g</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -12,7 +12,7 @@ instances:
     variant: word_spelling
     success: המילה KING (מלך) חוזרת לדף אנשי המלוכה
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה KING
       targetWord: king
       extraDistractorCount: 2
       customDistractors: []
@@ -40,7 +40,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q02_castle_on_the_map_s2:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה CASTLE"
     tasks:
       - גררו את האותיות <strong>c, a, s, t, l, e</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -49,7 +49,7 @@ instances:
     variant: word_spelling
     success: הכרטיס CASTLE (טירה) חוזר למקום הנכון על המפה
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה CASTLE
       targetWord: castle
       extraDistractorCount: 2
       customDistractors: []
@@ -77,7 +77,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q03_crown_soup_s2:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה CROWN"
     tasks:
       - גררו את האותיות <strong>c, r, o, w, n</strong> לפי הסדר
       - בדקו שהמילה מתחילה ב־C ומסתיימת ב־N
@@ -86,7 +86,7 @@ instances:
     variant: word_spelling
     success: הכתר מקבל בחזרה את הכרטיס CROWN
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה CROWN
       targetWord: crown
       extraDistractorCount: 2
       customDistractors: []
@@ -114,7 +114,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q04_soup_shield_s2:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה SHIELD"
     tasks:
       - גררו את האותיות <strong>s, h, i, e, l, d</strong> למשבצות
       - שימו לב לצירוף <strong>sh</strong> בתחילת המילה
@@ -123,7 +123,7 @@ instances:
     variant: word_spelling
     success: המגן (shield) חוזר להיות מגן במקום מגש מרק
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה SHIELD
       targetWord: shield
       extraDistractorCount: 2
       customDistractors: []
@@ -151,7 +151,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q05_wizard_for_sale_s2:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה WIZARD"
     tasks:
       - גררו את האותיות <strong>w, i, z, a, r, d</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -160,7 +160,7 @@ instances:
     variant: word_spelling
     success: הכרטיס WIZARD (קוסם) חוזר לקוסם הנכון
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה WIZARD
       targetWord: wizard
       extraDistractorCount: 2
       customDistractors: []
@@ -188,7 +188,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q06_dragon_identity_s2:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה DRAGON"
     tasks:
       - גררו את האותיות <strong>d, r, a, g, o, n</strong> למשבצות
       - התעלמו מאותיות המסיחות
@@ -197,7 +197,7 @@ instances:
     variant: word_spelling
     success: כרטיס DRAGON (דרקון) חוזר ליצור הנכון
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה DRAGON
       targetWord: dragon
       extraDistractorCount: 2
       customDistractors: []
@@ -225,42 +225,42 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_castle:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה CASTLE"
     tasks:
       - סדרו את המילה טירה באנגלית
     target: castle
     variant: word_spelling
     success: CASTLE נכתב נכון
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה CASTLE
       targetWord: castle
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_dragon:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה DRAGON"
     tasks:
       - סדרו את המילה דרקון באנגלית
     target: dragon
     variant: word_spelling
     success: DRAGON נכתב נכון
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה DRAGON
       targetWord: dragon
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_queen:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה QUEEN"
     tasks:
       - סדרו את המילה מלכה באנגלית
     target: queen
     variant: word_spelling
     success: QUEEN נכתב נכון
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה QUEEN
       targetWord: queen
       extraDistractorCount: 2
       customDistractors: []
@@ -291,28 +291,28 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_shield:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה SHIELD"
     tasks:
       - סדרו את המילה מגן באנגלית
     target: shield
     variant: word_spelling
     success: SHIELD נכתב נכון
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה SHIELD
       targetWord: shield
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   q07_royal_noun_trial_throne:
     minigame_id: letter_ordering
-    instruction: "זוכרים איך כותבים את המילה?"
+    instruction: "כתבו את המילה THRONE"
     tasks:
       - סדרו את המילה כיסא־מלכות באנגלית
     target: throne
     variant: word_spelling
     success: THRONE נכתב נכון
     params:
-      prompt: זוכרים איך כותבים את המילה?
+      prompt: כתבו את המילה THRONE
       targetWord: throne
       extraDistractorCount: 2
       customDistractors: []

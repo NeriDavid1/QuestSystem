@@ -23,7 +23,7 @@ steps:
     difficulty: 5
     success_required: true
     instance_id: q05_wizard_for_sale_s2
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה WIZARD"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Fire_Camp_Tower_Of_Lost_Vigil

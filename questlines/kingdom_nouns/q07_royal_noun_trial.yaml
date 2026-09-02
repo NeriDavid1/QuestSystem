@@ -25,35 +25,35 @@ steps:
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_queen
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה QUEEN"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_castle
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה CASTLE"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_throne
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה THRONE"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_shield
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה SHIELD"
   - type: play_minigame
     minigame_id: letter_ordering
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
     difficulty: 6
     success_required: true
     instance_id: q07_royal_noun_trial_dragon
-    display_text: "זוכרים איך כותבים את המילה?"
+    display_text: "כתבו את המילה DRAGON"
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
