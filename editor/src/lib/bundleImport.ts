@@ -37,12 +37,15 @@ function recordMap<T extends { key: string }>(items: T[]): Map<string, T> {
 }
 
 /** Convert one generated revision document and its shared records into editor rows. */
-export function importBundleIntoLine(bundle: unknown, current: EditorData, line: Questline): BundleImportResult {
+export function importBundleIntoLine(bundle: unknown, current: EditorData, line: Questline, sourceKey?: string): BundleImportResult {
   const source = (bundle ?? {}) as Bundle
   const documents = Array.isArray(source.revision_documents) ? source.revision_documents : []
-  const doc = documents.find((item) => item.display_name === 'Numbers Advanced - שיעורי בית')
+  const doc = (sourceKey ? documents.find((item) => item.key === sourceKey) : undefined)
+    ?? documents.find((item) => item.key === line.key)
+    ?? documents.find((item) => item.display_name === line.display_name)
+    ?? documents.find((item) => item.display_name === 'Numbers Advanced - שיעורי בית')
     ?? documents.find((item) => item.key === 'numbers_advanced_homework')
-  if (!doc) throw new Error('The bundle does not contain Numbers Advanced - שיעורי בית.')
+  if (!doc) throw new Error(`The bundle does not contain a questline for ${sourceKey ?? line.display_name}.`)
 
   const oldQuests = current.quests.filter((quest) => quest.questline_id === line.id)
   const oldQuestIds = oldQuests.map((quest) => quest.id)

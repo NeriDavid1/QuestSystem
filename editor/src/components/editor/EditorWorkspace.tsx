@@ -13,24 +13,25 @@ export function EditorWorkspace() {
   const { data, issues, dirty, saving, publishing, saveDraft, importBundle, notify, selectedLine, setShowPublishConfirm, setView } = useEditorStore()
   const commandConsumed = useRef(false)
 
-  const loadNumbersBundle = async () => {
+  const loadBundle = async (sourceKey: string) => {
     try {
       const response = await fetch(`${import.meta.env.BASE_URL}quest_content_bundle.json`, { cache: 'no-store' })
       if (!response.ok) throw new Error(`Could not load bundle (${response.status})`)
-      importBundle(await response.json())
+      importBundle(await response.json(), sourceKey)
     } catch (error) {
       notify(error instanceof Error ? error.message : 'Could not load bundle', 'error')
     }
   }
 
-  // Internal assistant command: /editor/?load=numbers_advanced
+  // Internal assistant command: /editor/?load=<questline-key>
   // keeps the authoring control out of the learner-facing UI.
   useEffect(() => {
     if (commandConsumed.current || !selectedLine) return
-    if (new URLSearchParams(window.location.search).get('load') !== 'numbers_advanced') return
+    const sourceKey = new URLSearchParams(window.location.search).get('load')
+    if (!sourceKey) return
     commandConsumed.current = true
     window.history.replaceState({}, '', window.location.pathname)
-    void loadNumbersBundle()
+    void loadBundle(sourceKey)
   }, [selectedLine, importBundle, notify])
 
   if (data.questlines.length === 0) {

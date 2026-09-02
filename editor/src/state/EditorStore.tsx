@@ -175,7 +175,7 @@ interface EditorStoreValue {
   revisionsForLine: (questlineId: string) => QuestlineRevision[]
   restoreRevisionAsDraft: (revision: QuestlineRevision) => void
   createQuestFromTemplate: (kind: 'blank' | 'adventure') => void
-  importBundle: (bundle: unknown) => void
+  importBundle: (bundle: unknown, sourceKey?: string) => void
   forceSaveAfterConflict: () => Promise<void>
 }
 
@@ -1671,9 +1671,9 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     notify(t('revisionRestored'))
   }, [data, notify, selectedLine, t])
 
-  const importBundle = useCallback((bundle: unknown) => {
+  const importBundle = useCallback((bundle: unknown, sourceKey?: string) => {
     if (!selectedLine) return
-    const imported = importBundleIntoLine(bundle, data, selectedLine)
+    const imported = importBundleIntoLine(bundle, data, selectedLine, sourceKey)
     imported.dialogues.forEach((dialogue) => touchedDialogueIds.current.add(dialogue.id))
     imported.minigames.forEach((minigame) => touchedMinigameIds.current.add(minigame.id))
     imported.oldQuestIds.forEach((id) => deletedQuestIds.current.push(id))
