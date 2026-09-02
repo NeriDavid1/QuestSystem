@@ -1412,7 +1412,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       if (error instanceof SaveConflictError) {
         setConflictState(true)
       } else {
-        notify(error instanceof Error ? error.message : t('couldNotSave'), 'error')
+        const detail = error instanceof Error && error.message ? error.message : String(error)
+        notify(detail && detail !== '[object Object]' ? detail : t('couldNotSave'), 'error')
       }
     } finally {
       setSaving(false)
