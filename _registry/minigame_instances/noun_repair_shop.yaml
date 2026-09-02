@@ -1,0 +1,343 @@
+# Per-step minigame briefs — noun_repair_shop
+instances:
+  noun_repair_q01_people:
+    minigame_id: word_matching
+    instruction: "התאימו את האות הראשונה למילת noun"
+    tasks: [_OY, _IRL, _ING, _UEEN]
+    target: "boy, girl, king, queen"
+    variant: missing_letter_matching
+    success: "ארבעה nouns של אנשים הושלמו"
+    params: { letters: [{id: boy, value: b}, {id: girl, value: g}, {id: king, value: k}, {id: queen, value: q}] }
+  noun_repair_q01_book:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של BOOK"
+    tasks: [B, O, O, K]
+    target: book
+    variant: spelling
+    success: "BOOK נכתב נכון"
+    params: { targetWord: book }
+  noun_repair_q01_places:
+    minigame_id: word_matching
+    instruction: "התאימו אות ראשונה למקומות"
+    tasks: [_ASTLE, _ATE, _OWER, _ARK]
+    target: "castle, gate, tower, park"
+    variant: missing_letter_matching
+    success: "ארבעה nouns של מקומות הושלמו"
+    params: { letters: [{id: castle, value: c}, {id: gate, value: g}, {id: tower, value: t}, {id: park, value: p}] }
+  noun_repair_q01_sentence:
+    minigame_id: word_ordering
+    instruction: "בנו משפט קצר עם nouns"
+    tasks: [The, book, is, on, the, table]
+    target: "The book is on the table"
+    variant: sentence
+    success: "המשפט נבנה נכון"
+    params: { prompt: "סדרו את המשפט", englishWordsInOrder: [The, book, is, on, the, table], preFilledIndices: [], distractorWords: [] }
+  noun_repair_q01_objects:
+    minigame_id: word_matching
+    instruction: "התאימו אות ראשונה לחפצים"
+    tasks: [_ABLE, _HAIR, _OX, _AG]
+    target: "table, chair, box, bag"
+    variant: missing_letter_matching
+    success: "ארבעה nouns של חפצים הושלמו"
+    params: { letters: [{id: table, value: t}, {id: chair, value: c}, {id: box, value: b}, {id: bag, value: b}] }
+  noun_repair_q01_say:
+    minigame_id: speak_aloud
+    instruction: "אמרו את שמות ה־nouns בקול"
+    tasks: [book, table, girl]
+    target: "book, table, girl"
+    variant: pronunciation
+    success: "שלושה nouns נקראו ברור"
+    params: { targetWords: [book, table, girl], targetPhrase: "book table girl", allowFuzzyMatch: true }
+  noun_repair_q01_animals:
+    minigame_id: word_matching
+    instruction: "תקנו את שמות החיות"
+    tasks: [_AT, _OG, _ISH, _IRD]
+    target: "cat, dog, fish, bird"
+    variant: missing_letter_matching
+    success: "שמות החיות תוקנו"
+    params: { letters: [{id: cat, value: c}, {id: dog, value: d}, {id: fish, value: f}, {id: bird, value: b}] }
+
+  noun_repair_q02_bag:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של חפצים"
+    tasks: [_AG, _OX, _OOK, _EN]
+    target: "bag, box, book, pen"
+    variant: missing_letter_matching
+    success: "שמות החפצים נמצאו"
+    params: { letters: [{id: bag, value: b}, {id: box, value: b}, {id: book, value: b}, {id: pen, value: p}] }
+  noun_repair_q02_pencil:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של PENCIL"
+    tasks: [P, E, N, C, I, L]
+    target: pencil
+    variant: spelling
+    success: "PENCIL נכתב נכון"
+    params: { targetWord: pencil }
+  noun_repair_q02_toys:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של צעצועים"
+    tasks: [_ALL, _OY, _AR, _OLL]
+    target: "ball, toy, car, doll"
+    variant: missing_letter_matching
+    success: "ארבעה nouns של צעצועים הושלמו"
+    params: { letters: [{id: ball, value: b}, {id: toy, value: t}, {id: car, value: c}, {id: doll, value: d}] }
+  noun_repair_q02_sentence:
+    minigame_id: word_ordering
+    instruction: "בנו משפט עם boy ו־bag"
+    tasks: [The, boy, has, a, red, bag]
+    target: "The boy has a red bag"
+    variant: sentence
+    success: "המשפט נבנה נכון"
+    params: { prompt: "סדרו את המשפט", englishWordsInOrder: [The, boy, has, a, red, bag], preFilledIndices: [], distractorWords: [] }
+  noun_repair_q02_animals:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של חיות"
+    tasks: [_AT, _OG, _ISH, _IRD]
+    target: "cat, dog, fish, bird"
+    variant: missing_letter_matching
+    success: "שמות החיות הושלמו"
+    params: { letters: [{id: cat, value: c}, {id: dog, value: d}, {id: fish, value: f}, {id: bird, value: b}] }
+  noun_repair_q02_say:
+    minigame_id: speak_aloud
+    instruction: "אמרו: bag, pencil, dog"
+    tasks: [bag, pencil, dog]
+    target: "bag, pencil, dog"
+    variant: pronunciation
+    success: "שלושה nouns נקראו ברור"
+    params: { targetWords: [bag, pencil, dog], targetPhrase: "bag pencil dog", allowFuzzyMatch: true }
+  noun_repair_q02_places:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של מקומות"
+    tasks: [_ARK, _ATE, _OWER, _ASTLE]
+    target: "park, gate, tower, castle"
+    variant: missing_letter_matching
+    success: "שמות המקומות תוקנו"
+    params: { letters: [{id: park, value: p}, {id: gate, value: g}, {id: tower, value: t}, {id: castle, value: c}] }
+
+  noun_repair_q03_fruit:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של פירות"
+    tasks: [_PPLE, _EAR, _EMON, _ANGO]
+    target: "apple, pear, lemon, mango"
+    variant: missing_letter_matching
+    success: "שמות הפירות הושלמו"
+    params: { letters: [{id: apple, value: a}, {id: pear, value: p}, {id: lemon, value: l}, {id: mango, value: m}] }
+  noun_repair_q03_market:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של MARKET"
+    tasks: [M, A, R, K, E, T]
+    target: market
+    variant: spelling
+    success: "MARKET נכתב נכון"
+    params: { targetWord: market }
+  noun_repair_q03_food:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של אוכל"
+    tasks: [_READ, _ICE, _OUP, _AKE]
+    target: "bread, rice, soup, cake"
+    variant: missing_letter_matching
+    success: "שמות האוכל הושלמו"
+    params: { letters: [{id: bread, value: b}, {id: rice, value: r}, {id: soup, value: s}, {id: cake, value: c}] }
+  noun_repair_q03_sentence:
+    minigame_id: word_ordering
+    instruction: "בנו משפט עם farmer ו־apples"
+    tasks: [The, farmer, sells, fresh, apples]
+    target: "The farmer sells fresh apples"
+    variant: sentence
+    success: "המשפט נבנה נכון"
+    params: { prompt: "סדרו את המשפט", englishWordsInOrder: [The, farmer, sells, fresh, apples], preFilledIndices: [], distractorWords: [] }
+  noun_repair_q03_tools:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של כלי עבודה"
+    tasks: [_OX, _AN, _UP, _ASK]
+    target: "box, pan, cup, mask"
+    variant: missing_letter_matching
+    success: "שמות כלי העבודה הושלמו"
+    params: { letters: [{id: box, value: b}, {id: pan, value: p}, {id: cup, value: c}, {id: mask, value: m}] }
+  noun_repair_q03_say:
+    minigame_id: speak_aloud
+    instruction: "אמרו: apple, bread, market"
+    tasks: [apple, bread, market]
+    target: "apple, bread, market"
+    variant: pronunciation
+    success: "שלושה nouns נקראו ברור"
+    params: { targetWords: [apple, bread, market], targetPhrase: "apple bread market", allowFuzzyMatch: true }
+  noun_repair_q03_animals:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של חיות"
+    tasks: [_OG, _AT, _ISH, _IRD]
+    target: "dog, cat, fish, bird"
+    variant: missing_letter_matching
+    success: "שמות החיות תוקנו"
+    params: { letters: [{id: dog, value: d}, {id: cat, value: c}, {id: fish, value: f}, {id: bird, value: b}] }
+
+  noun_repair_q04_kitchen:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של כלי מטבח"
+    tasks: [_POON, _LATE, _UP, _NIFE]
+    target: "spoon, plate, cup, knife"
+    variant: missing_letter_matching
+    success: "שמות כלי המטבח הושלמו"
+    params: { letters: [{id: spoon, value: s}, {id: plate, value: p}, {id: cup, value: c}, {id: knife, value: k}] }
+  noun_repair_q04_spoon:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של SPOON"
+    tasks: [S, P, O, O, N]
+    target: spoon
+    variant: spelling
+    success: "SPOON נכתב נכון"
+    params: { targetWord: spoon }
+  noun_repair_q04_people:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של אנשים"
+    tasks: [_HEF, _AKER, _UARD, _IZARD]
+    target: "chef, baker, guard, wizard"
+    variant: missing_letter_matching
+    success: "שמות האנשים הושלמו"
+    params: { letters: [{id: chef, value: c}, {id: baker, value: b}, {id: guard, value: g}, {id: wizard, value: w}] }
+  noun_repair_q04_sentence:
+    minigame_id: word_ordering
+    instruction: "בנו משפט עם chef ו־spoon"
+    tasks: [The, chef, holds, a, spoon]
+    target: "The chef holds a spoon"
+    variant: sentence
+    success: "המשפט נבנה נכון"
+    params: { prompt: "סדרו את המשפט", englishWordsInOrder: [The, chef, holds, a, spoon], preFilledIndices: [], distractorWords: [] }
+  noun_repair_q04_objects:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של חפצים"
+    tasks: [_ABLE, _EN, _UP, _OWL]
+    target: "table, pen, cup, bowl"
+    variant: missing_letter_matching
+    success: "שמות החפצים הושלמו"
+    params: { letters: [{id: table, value: t}, {id: pen, value: p}, {id: cup, value: c}, {id: bowl, value: b}] }
+  noun_repair_q04_say:
+    minigame_id: speak_aloud
+    instruction: "אמרו: spoon, chef, plate"
+    tasks: [spoon, chef, plate]
+    target: "spoon, chef, plate"
+    variant: pronunciation
+    success: "שלושה nouns נקראו ברור"
+    params: { targetWords: [spoon, chef, plate], targetPhrase: "spoon chef plate", allowFuzzyMatch: true }
+  noun_repair_q04_places:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של מקומות"
+    tasks: [_ATE, _ARK, _OWER, _ASTLE]
+    target: "gate, park, tower, castle"
+    variant: missing_letter_matching
+    success: "שמות המקומות תוקנו"
+    params: { letters: [{id: gate, value: g}, {id: park, value: p}, {id: tower, value: t}, {id: castle, value: c}] }
+
+  noun_repair_q05_castle:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של הארמון"
+    tasks: [_ASTLE, _OWER, _HRONE, _ROWN]
+    target: "castle, tower, throne, crown"
+    variant: missing_letter_matching
+    success: "שמות הארמון הושלמו"
+    params: { letters: [{id: castle, value: c}, {id: tower, value: t}, {id: throne, value: t}, {id: crown, value: c}] }
+  noun_repair_q05_treasure:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של TREASURE"
+    tasks: [T, R, E, A, S, U, R, E]
+    target: treasure
+    variant: spelling
+    success: "TREASURE נכתב נכון"
+    params: { targetWord: treasure }
+  noun_repair_q05_roles:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של תפקידי הארמון"
+    tasks: [_ING, _UEEN, _NIGHT, _UARD]
+    target: "king, queen, knight, guard"
+    variant: missing_letter_matching
+    success: "שמות התפקידים הושלמו"
+    params: { letters: [{id: king, value: k}, {id: queen, value: q}, {id: knight, value: k}, {id: guard, value: g}] }
+  noun_repair_q05_sentence:
+    minigame_id: word_ordering
+    instruction: "בנו משפט עם queen ו־throne"
+    tasks: [The, queen, sits, on, the, throne]
+    target: "The queen sits on the throne"
+    variant: sentence
+    success: "המשפט נבנה נכון"
+    params: { prompt: "סדרו את המשפט", englishWordsInOrder: [The, queen, sits, on, the, throne], preFilledIndices: [], distractorWords: [] }
+  noun_repair_q05_objects:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של כלי המלך"
+    tasks: [_WORD, _HIELD, _WORD, _CROLL]
+    target: "sword, shield, sword, scroll"
+    variant: missing_letter_matching
+    success: "שמות החפצים המלכותיים הושלמו"
+    params: { letters: [{id: sword, value: s}, {id: shield, value: s}, {id: scroll, value: s}] }
+  noun_repair_q05_say:
+    minigame_id: speak_aloud
+    instruction: "אמרו: castle, queen, throne"
+    tasks: [castle, queen, throne]
+    target: "castle, queen, throne"
+    variant: pronunciation
+    success: "שלושה nouns נקראו ברור"
+    params: { targetWords: [castle, queen, throne], targetPhrase: "castle queen throne", allowFuzzyMatch: true }
+  noun_repair_q05_animals:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של חיות"
+    tasks: [_RAGON, _ABBIT, _OG, _AT]
+    target: "dragon, rabbit, dog, cat"
+    variant: missing_letter_matching
+    success: "שמות החיות תוקנו"
+    params: { letters: [{id: dragon, value: d}, {id: rabbit, value: r}, {id: dog, value: d}, {id: cat, value: c}] }
+
+  noun_repair_q06_people:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של אנשים"
+    tasks: [_OY, _IRL, _ING, _UEEN]
+    target: "boy, girl, king, queen"
+    variant: missing_letter_matching
+    success: "שמות האנשים הושלמו"
+    params: { letters: [{id: boy, value: b}, {id: girl, value: g}, {id: king, value: k}, {id: queen, value: q}] }
+  noun_repair_q06_book:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של NOUN"
+    tasks: [N, O, U, N]
+    target: noun
+    variant: spelling
+    success: "NOUN נכתב נכון"
+    params: { targetWord: noun }
+  noun_repair_q06_places:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של מקומות"
+    tasks: [_ASTLE, _ATE, _ARK, _OWER]
+    target: "castle, gate, park, tower"
+    variant: missing_letter_matching
+    success: "שמות המקומות הושלמו"
+    params: { letters: [{id: castle, value: c}, {id: gate, value: g}, {id: park, value: p}, {id: tower, value: t}] }
+  noun_repair_q06_sentence:
+    minigame_id: word_ordering
+    instruction: "בנו משפט עם dog ו־castle"
+    tasks: [The, dog, sees, the, castle]
+    target: "The dog sees the castle"
+    variant: sentence
+    success: "המשפט נבנה נכון"
+    params: { prompt: "סדרו את המשפט", englishWordsInOrder: [The, dog, sees, the, castle], preFilledIndices: [], distractorWords: [] }
+  noun_repair_q06_animals:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של חיות"
+    tasks: [_OG, _AT, _ISH, _IRD]
+    target: "dog, cat, fish, bird"
+    variant: missing_letter_matching
+    success: "שמות החיות הושלמו"
+    params: { letters: [{id: dog, value: d}, {id: cat, value: c}, {id: fish, value: f}, {id: bird, value: b}] }
+  noun_repair_q06_say:
+    minigame_id: speak_aloud
+    instruction: "אמרו: noun, book, dragon"
+    tasks: [noun, book, dragon]
+    target: "noun, book, dragon"
+    variant: pronunciation
+    success: "שלושה nouns נקראו ברור"
+    params: { targetWords: [noun, book, dragon], targetPhrase: "noun book dragon", allowFuzzyMatch: true }
+  noun_repair_q06_objects:
+    minigame_id: word_matching
+    instruction: "השלימו nouns של חפצים"
+    tasks: [_OOK, _ABLE, _EN, _AG]
+    target: "book, table, pen, bag"
+    variant: missing_letter_matching
+    success: "שמות החפצים תוקנו"
+    params: { letters: [{id: book, value: b}, {id: table, value: t}, {id: pen, value: p}, {id: bag, value: b}] }

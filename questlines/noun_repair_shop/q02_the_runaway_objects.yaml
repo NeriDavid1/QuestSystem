@@ -1,0 +1,70 @@
+quest:
+  id: q02_the_runaway_objects
+  name: "The Runaway Objects"
+  level_required: 1
+  giver_npc: Little Boy
+  prerequisite: q01_the_broken_noun_book
+  summary: "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך."
+  wait_for_npc_turn_in: false
+rewards: { xp: 175, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: Little Boy
+    dialogue_id: noun_repair_q02_start
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q02_bag
+    display_text: "השלימו: _AG / _OX / _OOK / _EN"
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q02_pencil
+    display_text: "סדרו את האותיות של PENCIL"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q02_toys
+    display_text: "השלימו: _ALL / _OY / _AR / _OLL"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q02_sentence
+    display_text: "בנו משפט: The boy has a red bag"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q02_animals
+    display_text: "השלימו: _AT / _OG / _ISH / _IRD"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q02_places
+    display_text: "השלימו nouns של מקומות: _ARK / _ATE / _OWER / _ASTLE"
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q02_say
+    reward_item_id: power_stone
+    reward_amount: 1
+    display_text: "אמרו בקול: bag, pencil, dog"
+  - type: deliver_item
+    npc_id: Little Boy
+    item_id: power_stone
+    amount: 1
+    dialogue_id: noun_repair_q02_finish
+    display_text: "חזרו ל־Little Boy עם Power Stone"

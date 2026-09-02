@@ -3278,6 +3278,318 @@
       ]
     },
     {
+      "key": "noun_repair_q01_finish",
+      "speaker_external_id": "teacher_maya",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "יש! ה־book שוב הוא book, וה־table שוב עומד על ארבע רגליים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את ה־Gem ל־Little Boy. הוא מצא שק של חפצים עם שמות שבורים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "תודה, noun-repair hero! בלי עזרה, הייתי קוראת לעצמי toaster.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q01_start",
+      "speaker_external_id": "teacher_maya",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "אוי לא! ספר ה־nouns שלי התפרק, וכל השמות ברחו מהחפצים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "ה־book קורא לעצמו table, וה־table מתעקש שהוא king. אפילו ה־cat ביקש כתר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "תקנו את המילים, קבלו Gem, וחזרו אליי. אחר כך אשלח אתכם ל־Little Boy.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q02_finish",
+      "speaker_external_id": "Little Boy",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצאתם הכול! ה־dog הפסיק לנבוח על ה־pencil. זה הישג גדול.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את ה־Power Stone ל־Farmer. בשוק שלו apple ו־bread החליפו תוויות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "תודה! עכשיו ה־bag שלי מכיל חפצים, לא שמות של חיות.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q02_start",
+      "speaker_external_id": "Little Boy",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "השק שלי ברח! הוא לקח איתו bag, pencil, toy ואפילו dog.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "אנחנו צריכים לקרוא לכל חפץ בשם הנכון. Nouns הם שמות של אנשים, חפצים וחיות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "מצאו את השמות, קבלו Power Stone, וחזרו אליי. אז נלך ל־Farmer בשוק.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q03_finish",
+      "speaker_external_id": "Farmer",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "השוק ניצל! עכשיו כולם יודעים ש־apple הוא פרי ו־bread הוא אוכל.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את ה־Ancient Rune ל־Old Woman. במטבח שלה ה־spoon כנראה מנהל את הטבח.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "תודה! היום אף אחד לא יקנה hammer ויגלה בבית banana.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q03_start",
+      "speaker_external_id": "Farmer",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "ברוכים הבאים לשוק! ה־apple נמכר בתור shoe וה־bread נמכר בתור dragon.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "סדרו את ה־nouns של פירות, אוכל וכלי עבודה. בבקשה אל תאכלו את השלטים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "אחרי שתצליחו, קבלו Ancient Rune וחזרו אליי. Old Woman מחכה במטבח.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q04_finish",
+      "speaker_external_id": "Old Woman",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "ה־spoon חזר לערבב, ה־chef חזר לבשל, וה־plate הפסיק לתת פקודות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את ה־Gem ל־Professor Crazy. הוא מצא את התוויות של הארמון.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "תודה! הכנתי עוגה. אני מקווה שהמילה cake לא תתחפש ל־castle.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q04_start",
+      "speaker_external_id": "Old Woman",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "ה־spoon השתלט על המטבח! הוא הזמין את ה־chef לשבת בצלחת.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "תקנו את שמות הכלים והאנשים. היזהרו: ה־wizard מנסה לבשל עם קסם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "קבלו Gem, חזרו אליי, ואז לכו ל־Professor Crazy בארמון.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q05_finish",
+      "speaker_external_id": "Professor Crazy",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מושלם! ה־queen יושבת על ה־throne, וה־crown שוב על הראש ולא על האף.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את ה־Power Stone ל־Maya. נשאר רק מבחן noun אחד.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "תודה! המדע מודה לכם. אני מודה לכם. ה־crown עדיין לא מודה לאף אחד.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q05_start",
+      "speaker_external_id": "Professor Crazy",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הניסוי הצליח! כלומר, הוא נכשל בצורה מצחיקה. ה־crown קיבל שפם וה־throne ברח.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "תקנו את שמות המקומות, תפקידי הארמון והחפצים המלכותיים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "אחרי Power Stone אחד, חזרו אליי. אשלח אתכם למבחן הסיום אצל Maya.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q06_finish",
+      "speaker_external_id": "teacher_maya",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "וואו! תיקנתם את כל השמות. אתם יודעים לזהות noun, לאיית אותו ולקרוא אותו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "הספר נפתח, ה־cat קיבל שם, וה־table הפסיק לדרוש כתר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "תודה רבה! Noun Repair Shop פתוח. קחו את הפרס — והיזהרו מה־toaster.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "noun_repair_q06_start",
+      "speaker_external_id": "teacher_maya",
+      "source_path": "_registry\\dialogues\\noun_repair_shop.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "חזרתם! כל חלקי הספר כאן. עכשיו נראה אם אתם באמת מכירים nouns ולא רק מתקנים אותם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "תעברו מבחן קצר על אנשים, חפצים, מקומות וחיות. קראו כל מילה באנגלית בקול.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "אם תצליחו, תחזירו לי את ה־Ancient Rune ונפתח מחדש את Noun Repair Shop.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
       "key": "nouns_blacksmith_equipment_restored",
       "speaker_external_id": "Blacksmith",
       "source_path": "_registry\\dialogues\\kingdom_nouns.yaml",
@@ -3925,6 +4237,1355 @@
     }
   ],
   "minigame_instances": [
+    {
+      "key": "noun_repair_q01_animals",
+      "locale": "he",
+      "instruction": "תקנו את שמות החיות",
+      "tasks": [
+        "_AT",
+        "_OG",
+        "_ISH",
+        "_IRD"
+      ],
+      "target": "cat, dog, fish, bird",
+      "variant": "missing_letter_matching",
+      "success": "שמות החיות תוקנו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "cat",
+            "value": "c"
+          },
+          {
+            "id": "dog",
+            "value": "d"
+          },
+          {
+            "id": "fish",
+            "value": "f"
+          },
+          {
+            "id": "bird",
+            "value": "b"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q01_book",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של BOOK",
+      "tasks": [
+        "B",
+        "O",
+        "O",
+        "K"
+      ],
+      "target": "book",
+      "variant": "spelling",
+      "success": "BOOK נכתב נכון",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "targetWord": "book"
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q01_objects",
+      "locale": "he",
+      "instruction": "התאימו אות ראשונה לחפצים",
+      "tasks": [
+        "_ABLE",
+        "_HAIR",
+        "_OX",
+        "_AG"
+      ],
+      "target": "table, chair, box, bag",
+      "variant": "missing_letter_matching",
+      "success": "ארבעה nouns של חפצים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "table",
+            "value": "t"
+          },
+          {
+            "id": "chair",
+            "value": "c"
+          },
+          {
+            "id": "box",
+            "value": "b"
+          },
+          {
+            "id": "bag",
+            "value": "b"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q01_people",
+      "locale": "he",
+      "instruction": "התאימו את האות הראשונה למילת noun",
+      "tasks": [
+        "_OY",
+        "_IRL",
+        "_ING",
+        "_UEEN"
+      ],
+      "target": "boy, girl, king, queen",
+      "variant": "missing_letter_matching",
+      "success": "ארבעה nouns של אנשים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "boy",
+            "value": "b"
+          },
+          {
+            "id": "girl",
+            "value": "g"
+          },
+          {
+            "id": "king",
+            "value": "k"
+          },
+          {
+            "id": "queen",
+            "value": "q"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q01_places",
+      "locale": "he",
+      "instruction": "התאימו אות ראשונה למקומות",
+      "tasks": [
+        "_ASTLE",
+        "_ATE",
+        "_OWER",
+        "_ARK"
+      ],
+      "target": "castle, gate, tower, park",
+      "variant": "missing_letter_matching",
+      "success": "ארבעה nouns של מקומות הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "castle",
+            "value": "c"
+          },
+          {
+            "id": "gate",
+            "value": "g"
+          },
+          {
+            "id": "tower",
+            "value": "t"
+          },
+          {
+            "id": "park",
+            "value": "p"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q01_say",
+      "locale": "he",
+      "instruction": "אמרו את שמות ה־nouns בקול",
+      "tasks": [
+        "book",
+        "table",
+        "girl"
+      ],
+      "target": "book, table, girl",
+      "variant": "pronunciation",
+      "success": "שלושה nouns נקראו ברור",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "targetWords": [
+          "book",
+          "table",
+          "girl"
+        ],
+        "targetPhrase": "book table girl",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q01_sentence",
+      "locale": "he",
+      "instruction": "בנו משפט קצר עם nouns",
+      "tasks": [
+        "The",
+        "book",
+        "is",
+        true,
+        "the",
+        "table"
+      ],
+      "target": "The book is on the table",
+      "variant": "sentence",
+      "success": "המשפט נבנה נכון",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט",
+        "englishWordsInOrder": [
+          "The",
+          "book",
+          "is",
+          true,
+          "the",
+          "table"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q02_animals",
+      "locale": "he",
+      "instruction": "השלימו nouns של חיות",
+      "tasks": [
+        "_AT",
+        "_OG",
+        "_ISH",
+        "_IRD"
+      ],
+      "target": "cat, dog, fish, bird",
+      "variant": "missing_letter_matching",
+      "success": "שמות החיות הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "cat",
+            "value": "c"
+          },
+          {
+            "id": "dog",
+            "value": "d"
+          },
+          {
+            "id": "fish",
+            "value": "f"
+          },
+          {
+            "id": "bird",
+            "value": "b"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q02_bag",
+      "locale": "he",
+      "instruction": "השלימו nouns של חפצים",
+      "tasks": [
+        "_AG",
+        "_OX",
+        "_OOK",
+        "_EN"
+      ],
+      "target": "bag, box, book, pen",
+      "variant": "missing_letter_matching",
+      "success": "שמות החפצים נמצאו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "bag",
+            "value": "b"
+          },
+          {
+            "id": "box",
+            "value": "b"
+          },
+          {
+            "id": "book",
+            "value": "b"
+          },
+          {
+            "id": "pen",
+            "value": "p"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q02_pencil",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של PENCIL",
+      "tasks": [
+        "P",
+        "E",
+        "N",
+        "C",
+        "I",
+        "L"
+      ],
+      "target": "pencil",
+      "variant": "spelling",
+      "success": "PENCIL נכתב נכון",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "targetWord": "pencil"
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q02_places",
+      "locale": "he",
+      "instruction": "השלימו nouns של מקומות",
+      "tasks": [
+        "_ARK",
+        "_ATE",
+        "_OWER",
+        "_ASTLE"
+      ],
+      "target": "park, gate, tower, castle",
+      "variant": "missing_letter_matching",
+      "success": "שמות המקומות תוקנו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "park",
+            "value": "p"
+          },
+          {
+            "id": "gate",
+            "value": "g"
+          },
+          {
+            "id": "tower",
+            "value": "t"
+          },
+          {
+            "id": "castle",
+            "value": "c"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q02_say",
+      "locale": "he",
+      "instruction": "אמרו: bag, pencil, dog",
+      "tasks": [
+        "bag",
+        "pencil",
+        "dog"
+      ],
+      "target": "bag, pencil, dog",
+      "variant": "pronunciation",
+      "success": "שלושה nouns נקראו ברור",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "targetWords": [
+          "bag",
+          "pencil",
+          "dog"
+        ],
+        "targetPhrase": "bag pencil dog",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q02_sentence",
+      "locale": "he",
+      "instruction": "בנו משפט עם boy ו־bag",
+      "tasks": [
+        "The",
+        "boy",
+        "has",
+        "a",
+        "red",
+        "bag"
+      ],
+      "target": "The boy has a red bag",
+      "variant": "sentence",
+      "success": "המשפט נבנה נכון",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט",
+        "englishWordsInOrder": [
+          "The",
+          "boy",
+          "has",
+          "a",
+          "red",
+          "bag"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q02_toys",
+      "locale": "he",
+      "instruction": "השלימו nouns של צעצועים",
+      "tasks": [
+        "_ALL",
+        "_OY",
+        "_AR",
+        "_OLL"
+      ],
+      "target": "ball, toy, car, doll",
+      "variant": "missing_letter_matching",
+      "success": "ארבעה nouns של צעצועים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "ball",
+            "value": "b"
+          },
+          {
+            "id": "toy",
+            "value": "t"
+          },
+          {
+            "id": "car",
+            "value": "c"
+          },
+          {
+            "id": "doll",
+            "value": "d"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q03_animals",
+      "locale": "he",
+      "instruction": "השלימו nouns של חיות",
+      "tasks": [
+        "_OG",
+        "_AT",
+        "_ISH",
+        "_IRD"
+      ],
+      "target": "dog, cat, fish, bird",
+      "variant": "missing_letter_matching",
+      "success": "שמות החיות תוקנו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "dog",
+            "value": "d"
+          },
+          {
+            "id": "cat",
+            "value": "c"
+          },
+          {
+            "id": "fish",
+            "value": "f"
+          },
+          {
+            "id": "bird",
+            "value": "b"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q03_food",
+      "locale": "he",
+      "instruction": "השלימו nouns של אוכל",
+      "tasks": [
+        "_READ",
+        "_ICE",
+        "_OUP",
+        "_AKE"
+      ],
+      "target": "bread, rice, soup, cake",
+      "variant": "missing_letter_matching",
+      "success": "שמות האוכל הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "bread",
+            "value": "b"
+          },
+          {
+            "id": "rice",
+            "value": "r"
+          },
+          {
+            "id": "soup",
+            "value": "s"
+          },
+          {
+            "id": "cake",
+            "value": "c"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q03_fruit",
+      "locale": "he",
+      "instruction": "השלימו nouns של פירות",
+      "tasks": [
+        "_PPLE",
+        "_EAR",
+        "_EMON",
+        "_ANGO"
+      ],
+      "target": "apple, pear, lemon, mango",
+      "variant": "missing_letter_matching",
+      "success": "שמות הפירות הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "apple",
+            "value": "a"
+          },
+          {
+            "id": "pear",
+            "value": "p"
+          },
+          {
+            "id": "lemon",
+            "value": "l"
+          },
+          {
+            "id": "mango",
+            "value": "m"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q03_market",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של MARKET",
+      "tasks": [
+        "M",
+        "A",
+        "R",
+        "K",
+        "E",
+        "T"
+      ],
+      "target": "market",
+      "variant": "spelling",
+      "success": "MARKET נכתב נכון",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "targetWord": "market"
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q03_say",
+      "locale": "he",
+      "instruction": "אמרו: apple, bread, market",
+      "tasks": [
+        "apple",
+        "bread",
+        "market"
+      ],
+      "target": "apple, bread, market",
+      "variant": "pronunciation",
+      "success": "שלושה nouns נקראו ברור",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "targetWords": [
+          "apple",
+          "bread",
+          "market"
+        ],
+        "targetPhrase": "apple bread market",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q03_sentence",
+      "locale": "he",
+      "instruction": "בנו משפט עם farmer ו־apples",
+      "tasks": [
+        "The",
+        "farmer",
+        "sells",
+        "fresh",
+        "apples"
+      ],
+      "target": "The farmer sells fresh apples",
+      "variant": "sentence",
+      "success": "המשפט נבנה נכון",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט",
+        "englishWordsInOrder": [
+          "The",
+          "farmer",
+          "sells",
+          "fresh",
+          "apples"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q03_tools",
+      "locale": "he",
+      "instruction": "השלימו nouns של כלי עבודה",
+      "tasks": [
+        "_OX",
+        "_AN",
+        "_UP",
+        "_ASK"
+      ],
+      "target": "box, pan, cup, mask",
+      "variant": "missing_letter_matching",
+      "success": "שמות כלי העבודה הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "box",
+            "value": "b"
+          },
+          {
+            "id": "pan",
+            "value": "p"
+          },
+          {
+            "id": "cup",
+            "value": "c"
+          },
+          {
+            "id": "mask",
+            "value": "m"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q04_kitchen",
+      "locale": "he",
+      "instruction": "השלימו nouns של כלי מטבח",
+      "tasks": [
+        "_POON",
+        "_LATE",
+        "_UP",
+        "_NIFE"
+      ],
+      "target": "spoon, plate, cup, knife",
+      "variant": "missing_letter_matching",
+      "success": "שמות כלי המטבח הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "spoon",
+            "value": "s"
+          },
+          {
+            "id": "plate",
+            "value": "p"
+          },
+          {
+            "id": "cup",
+            "value": "c"
+          },
+          {
+            "id": "knife",
+            "value": "k"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q04_objects",
+      "locale": "he",
+      "instruction": "השלימו nouns של חפצים",
+      "tasks": [
+        "_ABLE",
+        "_EN",
+        "_UP",
+        "_OWL"
+      ],
+      "target": "table, pen, cup, bowl",
+      "variant": "missing_letter_matching",
+      "success": "שמות החפצים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "table",
+            "value": "t"
+          },
+          {
+            "id": "pen",
+            "value": "p"
+          },
+          {
+            "id": "cup",
+            "value": "c"
+          },
+          {
+            "id": "bowl",
+            "value": "b"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q04_people",
+      "locale": "he",
+      "instruction": "השלימו nouns של אנשים",
+      "tasks": [
+        "_HEF",
+        "_AKER",
+        "_UARD",
+        "_IZARD"
+      ],
+      "target": "chef, baker, guard, wizard",
+      "variant": "missing_letter_matching",
+      "success": "שמות האנשים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "chef",
+            "value": "c"
+          },
+          {
+            "id": "baker",
+            "value": "b"
+          },
+          {
+            "id": "guard",
+            "value": "g"
+          },
+          {
+            "id": "wizard",
+            "value": "w"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q04_places",
+      "locale": "he",
+      "instruction": "השלימו nouns של מקומות",
+      "tasks": [
+        "_ATE",
+        "_ARK",
+        "_OWER",
+        "_ASTLE"
+      ],
+      "target": "gate, park, tower, castle",
+      "variant": "missing_letter_matching",
+      "success": "שמות המקומות תוקנו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "gate",
+            "value": "g"
+          },
+          {
+            "id": "park",
+            "value": "p"
+          },
+          {
+            "id": "tower",
+            "value": "t"
+          },
+          {
+            "id": "castle",
+            "value": "c"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q04_say",
+      "locale": "he",
+      "instruction": "אמרו: spoon, chef, plate",
+      "tasks": [
+        "spoon",
+        "chef",
+        "plate"
+      ],
+      "target": "spoon, chef, plate",
+      "variant": "pronunciation",
+      "success": "שלושה nouns נקראו ברור",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "targetWords": [
+          "spoon",
+          "chef",
+          "plate"
+        ],
+        "targetPhrase": "spoon chef plate",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q04_sentence",
+      "locale": "he",
+      "instruction": "בנו משפט עם chef ו־spoon",
+      "tasks": [
+        "The",
+        "chef",
+        "holds",
+        "a",
+        "spoon"
+      ],
+      "target": "The chef holds a spoon",
+      "variant": "sentence",
+      "success": "המשפט נבנה נכון",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט",
+        "englishWordsInOrder": [
+          "The",
+          "chef",
+          "holds",
+          "a",
+          "spoon"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q04_spoon",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של SPOON",
+      "tasks": [
+        "S",
+        "P",
+        "O",
+        "O",
+        "N"
+      ],
+      "target": "spoon",
+      "variant": "spelling",
+      "success": "SPOON נכתב נכון",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "targetWord": "spoon"
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q05_animals",
+      "locale": "he",
+      "instruction": "השלימו nouns של חיות",
+      "tasks": [
+        "_RAGON",
+        "_ABBIT",
+        "_OG",
+        "_AT"
+      ],
+      "target": "dragon, rabbit, dog, cat",
+      "variant": "missing_letter_matching",
+      "success": "שמות החיות תוקנו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "dragon",
+            "value": "d"
+          },
+          {
+            "id": "rabbit",
+            "value": "r"
+          },
+          {
+            "id": "dog",
+            "value": "d"
+          },
+          {
+            "id": "cat",
+            "value": "c"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q05_castle",
+      "locale": "he",
+      "instruction": "השלימו nouns של הארמון",
+      "tasks": [
+        "_ASTLE",
+        "_OWER",
+        "_HRONE",
+        "_ROWN"
+      ],
+      "target": "castle, tower, throne, crown",
+      "variant": "missing_letter_matching",
+      "success": "שמות הארמון הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "castle",
+            "value": "c"
+          },
+          {
+            "id": "tower",
+            "value": "t"
+          },
+          {
+            "id": "throne",
+            "value": "t"
+          },
+          {
+            "id": "crown",
+            "value": "c"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q05_objects",
+      "locale": "he",
+      "instruction": "השלימו nouns של כלי המלך",
+      "tasks": [
+        "_WORD",
+        "_HIELD",
+        "_WORD",
+        "_CROLL"
+      ],
+      "target": "sword, shield, sword, scroll",
+      "variant": "missing_letter_matching",
+      "success": "שמות החפצים המלכותיים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "sword",
+            "value": "s"
+          },
+          {
+            "id": "shield",
+            "value": "s"
+          },
+          {
+            "id": "scroll",
+            "value": "s"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q05_roles",
+      "locale": "he",
+      "instruction": "השלימו nouns של תפקידי הארמון",
+      "tasks": [
+        "_ING",
+        "_UEEN",
+        "_NIGHT",
+        "_UARD"
+      ],
+      "target": "king, queen, knight, guard",
+      "variant": "missing_letter_matching",
+      "success": "שמות התפקידים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "king",
+            "value": "k"
+          },
+          {
+            "id": "queen",
+            "value": "q"
+          },
+          {
+            "id": "knight",
+            "value": "k"
+          },
+          {
+            "id": "guard",
+            "value": "g"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q05_say",
+      "locale": "he",
+      "instruction": "אמרו: castle, queen, throne",
+      "tasks": [
+        "castle",
+        "queen",
+        "throne"
+      ],
+      "target": "castle, queen, throne",
+      "variant": "pronunciation",
+      "success": "שלושה nouns נקראו ברור",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "targetWords": [
+          "castle",
+          "queen",
+          "throne"
+        ],
+        "targetPhrase": "castle queen throne",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q05_sentence",
+      "locale": "he",
+      "instruction": "בנו משפט עם queen ו־throne",
+      "tasks": [
+        "The",
+        "queen",
+        "sits",
+        true,
+        "the",
+        "throne"
+      ],
+      "target": "The queen sits on the throne",
+      "variant": "sentence",
+      "success": "המשפט נבנה נכון",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט",
+        "englishWordsInOrder": [
+          "The",
+          "queen",
+          "sits",
+          true,
+          "the",
+          "throne"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q05_treasure",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של TREASURE",
+      "tasks": [
+        "T",
+        "R",
+        "E",
+        "A",
+        "S",
+        "U",
+        "R",
+        "E"
+      ],
+      "target": "treasure",
+      "variant": "spelling",
+      "success": "TREASURE נכתב נכון",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "targetWord": "treasure"
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q06_animals",
+      "locale": "he",
+      "instruction": "השלימו nouns של חיות",
+      "tasks": [
+        "_OG",
+        "_AT",
+        "_ISH",
+        "_IRD"
+      ],
+      "target": "dog, cat, fish, bird",
+      "variant": "missing_letter_matching",
+      "success": "שמות החיות הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "dog",
+            "value": "d"
+          },
+          {
+            "id": "cat",
+            "value": "c"
+          },
+          {
+            "id": "fish",
+            "value": "f"
+          },
+          {
+            "id": "bird",
+            "value": "b"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q06_book",
+      "locale": "he",
+      "instruction": "סדרו את האותיות של NOUN",
+      "tasks": [
+        "N",
+        "O",
+        "U",
+        "N"
+      ],
+      "target": "noun",
+      "variant": "spelling",
+      "success": "NOUN נכתב נכון",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "targetWord": "noun"
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q06_objects",
+      "locale": "he",
+      "instruction": "השלימו nouns של חפצים",
+      "tasks": [
+        "_OOK",
+        "_ABLE",
+        "_EN",
+        "_AG"
+      ],
+      "target": "book, table, pen, bag",
+      "variant": "missing_letter_matching",
+      "success": "שמות החפצים תוקנו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "book",
+            "value": "b"
+          },
+          {
+            "id": "table",
+            "value": "t"
+          },
+          {
+            "id": "pen",
+            "value": "p"
+          },
+          {
+            "id": "bag",
+            "value": "b"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q06_people",
+      "locale": "he",
+      "instruction": "השלימו nouns של אנשים",
+      "tasks": [
+        "_OY",
+        "_IRL",
+        "_ING",
+        "_UEEN"
+      ],
+      "target": "boy, girl, king, queen",
+      "variant": "missing_letter_matching",
+      "success": "שמות האנשים הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "boy",
+            "value": "b"
+          },
+          {
+            "id": "girl",
+            "value": "g"
+          },
+          {
+            "id": "king",
+            "value": "k"
+          },
+          {
+            "id": "queen",
+            "value": "q"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q06_places",
+      "locale": "he",
+      "instruction": "השלימו nouns של מקומות",
+      "tasks": [
+        "_ASTLE",
+        "_ATE",
+        "_ARK",
+        "_OWER"
+      ],
+      "target": "castle, gate, park, tower",
+      "variant": "missing_letter_matching",
+      "success": "שמות המקומות הושלמו",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "castle",
+            "value": "c"
+          },
+          {
+            "id": "gate",
+            "value": "g"
+          },
+          {
+            "id": "park",
+            "value": "p"
+          },
+          {
+            "id": "tower",
+            "value": "t"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q06_say",
+      "locale": "he",
+      "instruction": "אמרו: noun, book, dragon",
+      "tasks": [
+        "noun",
+        "book",
+        "dragon"
+      ],
+      "target": "noun, book, dragon",
+      "variant": "pronunciation",
+      "success": "שלושה nouns נקראו ברור",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "targetWords": [
+          "noun",
+          "book",
+          "dragon"
+        ],
+        "targetPhrase": "noun book dragon",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "noun_repair_q06_sentence",
+      "locale": "he",
+      "instruction": "בנו משפט עם dog ו־castle",
+      "tasks": [
+        "The",
+        "dog",
+        "sees",
+        "the",
+        "castle"
+      ],
+      "target": "The dog sees the castle",
+      "variant": "sentence",
+      "success": "המשפט נבנה נכון",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "סדרו את המשפט",
+        "englishWordsInOrder": [
+          "The",
+          "dog",
+          "sees",
+          "the",
+          "castle"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": []
+      },
+      "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
     {
       "key": "numbers_q01_review_10_20",
       "locale": "he",
@@ -8637,6 +10298,1353 @@
       ]
     },
     {
+      "key": "noun_repair_shop",
+      "display_name": "Noun Repair Shop: The Missing Names",
+      "theme": "A funny repair mission for English nouns: restore the kingdom's broken name tags.",
+      "default_giver_external_id": "teacher_maya",
+      "status": "draft",
+      "level_min": 1,
+      "level_max": 1,
+      "source_path": "questlines\\noun_repair_shop\\_index.yaml",
+      "source_metadata": {
+        "source_status": null,
+        "source_note": null,
+        "catalog_set": null,
+        "quest_count": 6
+      },
+      "quests": [
+        {
+          "key": "q01_the_broken_noun_book",
+          "position": 0,
+          "name": "The Broken Noun Book",
+          "level_required": 1,
+          "giver_external_id": "teacher_maya",
+          "summary": "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "q01_the_broken_noun_book_talk_to_npc_1d727f5e_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "dialogue_id": "noun_repair_q01_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_30e88c04_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_people",
+                "display_text": "התאימו את האות החסרה: _OY / _IRL / _ING / _UEEN",
+                "instance_key": "noun_repair_q01_people"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_d117778b_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_book",
+                "display_text": "סדרו את האותיות של BOOK",
+                "instance_key": "noun_repair_q01_book"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_57b89fab_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_places",
+                "display_text": "התאימו את האות החסרה: _ASTLE / _ATE / _OWER / _ARK",
+                "instance_key": "noun_repair_q01_places"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_f4820365_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_sentence",
+                "display_text": "בנו משפט: The book is on the table",
+                "instance_key": "noun_repair_q01_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_1a9fbb7f_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_objects",
+                "display_text": "התאימו את האות החסרה: _ABLE / _AIR / _OX / _AG",
+                "instance_key": "noun_repair_q01_objects"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_6bf01599_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_animals",
+                "display_text": "תקנו את שמות החיות: _AT / _OG / _ISH / _IRD",
+                "instance_key": "noun_repair_q01_animals"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_say",
+                "reward_item_id": "gem",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: book, table, girl",
+                "instance_key": "noun_repair_q01_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "gem",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q01_the_broken_noun_book_deliver_item_8ad2ff74_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "item_id": "gem",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q01_finish",
+                "display_text": "חזרו ל־Maya עם Gem"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 150,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q01_the_broken_noun_book",
+              "name": "The Broken Noun Book",
+              "level_required": 1,
+              "giver_npc": "teacher_maya",
+              "prerequisite": null,
+              "summary": "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q02_the_runaway_objects",
+          "position": 1,
+          "name": "The Runaway Objects",
+          "level_required": 1,
+          "giver_external_id": "Little Boy",
+          "summary": "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q01_the_broken_noun_book"
+          ],
+          "steps": [
+            {
+              "key": "q02_the_runaway_objects_talk_to_npc_6c037322_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Little Boy",
+                "dialogue_id": "noun_repair_q02_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_8dda917d_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_bag",
+                "display_text": "השלימו: _AG / _OX / _OOK / _EN",
+                "instance_key": "noun_repair_q02_bag"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_025e3208_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_pencil",
+                "display_text": "סדרו את האותיות של PENCIL",
+                "instance_key": "noun_repair_q02_pencil"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_4b767186_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_toys",
+                "display_text": "השלימו: _ALL / _OY / _AR / _OLL",
+                "instance_key": "noun_repair_q02_toys"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_cbfbad1e_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_sentence",
+                "display_text": "בנו משפט: The boy has a red bag",
+                "instance_key": "noun_repair_q02_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_d32d4028_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_animals",
+                "display_text": "השלימו: _AT / _OG / _ISH / _IRD",
+                "instance_key": "noun_repair_q02_animals"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_26525ac2_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_places",
+                "display_text": "השלימו nouns של מקומות: _ARK / _ATE / _OWER / _ASTLE",
+                "instance_key": "noun_repair_q02_places"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_say",
+                "reward_item_id": "power_stone",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: bag, pencil, dog",
+                "instance_key": "noun_repair_q02_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "power_stone",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q02_the_runaway_objects_deliver_item_61038389_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Little Boy",
+                "item_id": "power_stone",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q02_finish",
+                "display_text": "חזרו ל־Little Boy עם Power Stone"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 175,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q02_the_runaway_objects",
+              "name": "The Runaway Objects",
+              "level_required": 1,
+              "giver_npc": "Little Boy",
+              "prerequisite": "q01_the_broken_noun_book",
+              "summary": "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q03_the_market_name_mixup",
+          "position": 2,
+          "name": "The Market Name Mix-Up",
+          "level_required": 1,
+          "giver_external_id": "Farmer",
+          "summary": "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q02_the_runaway_objects"
+          ],
+          "steps": [
+            {
+              "key": "q03_the_market_name_mixup_talk_to_npc_121196da_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "noun_repair_q03_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_d6ba531c_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_fruit",
+                "display_text": "השלימו: _PPLE / _EAR / _EMON / _ANGO",
+                "instance_key": "noun_repair_q03_fruit"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_3bf5eac8_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_market",
+                "display_text": "סדרו את האותיות של MARKET",
+                "instance_key": "noun_repair_q03_market"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_7eba3428_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_food",
+                "display_text": "השלימו: _READ / _ICE / _OUP / _AKE",
+                "instance_key": "noun_repair_q03_food"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_e0be6e12_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_sentence",
+                "display_text": "בנו משפט: The farmer sells fresh apples",
+                "instance_key": "noun_repair_q03_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_ce5fa844_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_tools",
+                "display_text": "השלימו: _OX / _AN / _UP / _ASK",
+                "instance_key": "noun_repair_q03_tools"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_5e764694_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_animals",
+                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "instance_key": "noun_repair_q03_animals"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_say",
+                "reward_item_id": "ancient_rune",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: apple, bread, market",
+                "instance_key": "noun_repair_q03_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "ancient_rune",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q03_the_market_name_mixup_deliver_item_a3cf2916_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Farmer",
+                "item_id": "ancient_rune",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q03_finish",
+                "display_text": "חזרו ל־Farmer עם Ancient Rune"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q03_the_market_name_mixup",
+              "name": "The Market Name Mix-Up",
+              "level_required": 1,
+              "giver_npc": "Farmer",
+              "prerequisite": "q02_the_runaway_objects",
+              "summary": "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q04_the_kitchen_invasion",
+          "position": 3,
+          "name": "The Kitchen Invasion",
+          "level_required": 1,
+          "giver_external_id": "Old Woman",
+          "summary": "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q03_the_market_name_mixup"
+          ],
+          "steps": [
+            {
+              "key": "q04_the_kitchen_invasion_talk_to_npc_7de31163_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Old Woman",
+                "dialogue_id": "noun_repair_q04_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_91ac20ca_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_kitchen",
+                "display_text": "השלימו: _Poon / _LATE / _UP / _NIFE",
+                "instance_key": "noun_repair_q04_kitchen"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_76734139_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_spoon",
+                "display_text": "סדרו את האותיות של SPOON",
+                "instance_key": "noun_repair_q04_spoon"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_25642658_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_people",
+                "display_text": "השלימו: _HEF / _AKER / _ARD / _IZARD",
+                "instance_key": "noun_repair_q04_people"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_0ad4b458_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_sentence",
+                "display_text": "בנו משפט: The chef holds a spoon",
+                "instance_key": "noun_repair_q04_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_0e3c44db_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_objects",
+                "display_text": "השלימו: _ABLE / _EN / _UP / _OWL",
+                "instance_key": "noun_repair_q04_objects"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_f8c2046a_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_places",
+                "display_text": "השלימו nouns של מקומות: _ATE / _ARK / _OWER / _ASTLE",
+                "instance_key": "noun_repair_q04_places"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_say",
+                "reward_item_id": "gem",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: spoon, chef, plate",
+                "instance_key": "noun_repair_q04_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "gem",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q04_the_kitchen_invasion_deliver_item_2ed85f7f_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Old Woman",
+                "item_id": "gem",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q04_finish",
+                "display_text": "חזרו ל־Old Woman עם Gem"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 225,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q04_the_kitchen_invasion",
+              "name": "The Kitchen Invasion",
+              "level_required": 1,
+              "giver_npc": "Old Woman",
+              "prerequisite": "q03_the_market_name_mixup",
+              "summary": "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q05_the_castle_label_crisis",
+          "position": 4,
+          "name": "The Castle Label Crisis",
+          "level_required": 1,
+          "giver_external_id": "Professor Crazy",
+          "summary": "Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר יקבל שפם.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q04_the_kitchen_invasion"
+          ],
+          "steps": [
+            {
+              "key": "q05_the_castle_label_crisis_talk_to_npc_ef54ae51_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "noun_repair_q05_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_798bac19_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_castle",
+                "display_text": "השלימו: _ASTLE / _OWER / _HRONE / _ROWN",
+                "instance_key": "noun_repair_q05_castle"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_d9c3f00d_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_treasure",
+                "display_text": "סדרו את האותיות של TREASURE",
+                "instance_key": "noun_repair_q05_treasure"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_05ebd6b9_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_roles",
+                "display_text": "השלימו: _ING / _UEEN / _NIGHT / _UARD",
+                "instance_key": "noun_repair_q05_roles"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_c20501c2_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_sentence",
+                "display_text": "בנו משפט: The queen sits on the throne",
+                "instance_key": "noun_repair_q05_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_8a59d557_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_objects",
+                "display_text": "השלימו: _WORD / _HIELD / _WORD / _CROLL",
+                "instance_key": "noun_repair_q05_objects"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_b869c6eb_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_animals",
+                "display_text": "השלימו nouns של חיות: _RAGON / _RABBIT / _OG / _AT",
+                "instance_key": "noun_repair_q05_animals"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_say",
+                "reward_item_id": "power_stone",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: castle, queen, throne",
+                "instance_key": "noun_repair_q05_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "power_stone",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q05_the_castle_label_crisis_deliver_item_99a312be_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "item_id": "power_stone",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q05_finish",
+                "display_text": "חזרו ל־Professor Crazy עם Power Stone"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 250,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q05_the_castle_label_crisis",
+              "name": "The Castle Label Crisis",
+              "level_required": 1,
+              "giver_npc": "Professor Crazy",
+              "prerequisite": "q04_the_kitchen_invasion",
+              "summary": "Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר יקבל שפם.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q06_the_great_noun_reopening",
+          "position": 5,
+          "name": "The Great Noun Reopening",
+          "level_required": 1,
+          "giver_external_id": "teacher_maya",
+          "summary": "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q05_the_castle_label_crisis"
+          ],
+          "steps": [
+            {
+              "key": "q06_the_great_noun_reopening_talk_to_npc_6b82de22_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "dialogue_id": "noun_repair_q06_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_bc4e8945_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_people",
+                "display_text": "השלימו nouns של אנשים: _OY / _IRL / _ING / _UEEN",
+                "instance_key": "noun_repair_q06_people"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_2d5966b7_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_book",
+                "display_text": "סדרו את האותיות של NOUN",
+                "instance_key": "noun_repair_q06_book"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_0c9f5ae0_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_places",
+                "display_text": "השלימו nouns של מקומות: _ASTLE / _ATE / _ARK / _OWER",
+                "instance_key": "noun_repair_q06_places"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_055c63e8_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_sentence",
+                "display_text": "בנו משפט: The dog sees the castle",
+                "instance_key": "noun_repair_q06_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_9c09eed0_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_animals",
+                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "instance_key": "noun_repair_q06_animals"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_0fbf9b07_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_objects",
+                "display_text": "השלימו nouns של חפצים: _OOK / _ABLE / _EN / _AG",
+                "instance_key": "noun_repair_q06_objects"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_say",
+                "reward_item_id": "ancient_rune",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: noun, book, dragon",
+                "instance_key": "noun_repair_q06_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "ancient_rune",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q06_the_great_noun_reopening_deliver_item_75d6bad9_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "item_id": "ancient_rune",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q06_finish",
+                "display_text": "חזרו ל־Maya עם Ancient Rune לפתיחת הספר"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 300,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q06_the_great_noun_reopening",
+              "name": "The Great Noun Reopening",
+              "level_required": 1,
+              "giver_npc": "teacher_maya",
+              "prerequisite": "q05_the_castle_label_crisis",
+              "summary": "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "numbers_advanced_homework",
       "display_name": "Numbers Advanced - שיעורי בית",
       "theme": "The Lost Number Map: a guided Numbers Advanced homework journey from 10 to 1000",
@@ -9272,12 +12280,12 @@
   "counts": {
     "catalog_entries": 177,
     "step_type_definitions": 6,
-    "dialogues": 38,
-    "dialogue_lines": 102,
-    "minigame_instances": 65,
-    "questlines": 4,
-    "quests": 19,
-    "steps": 134,
+    "dialogues": 50,
+    "dialogue_lines": 138,
+    "minigame_instances": 107,
+    "questlines": 5,
+    "quests": 25,
+    "steps": 188,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -12204,6 +15212,1343 @@
       ]
     },
     {
+      "key": "noun_repair_shop",
+      "display_name": "Noun Repair Shop: The Missing Names",
+      "theme": "A funny repair mission for English nouns: restore the kingdom's broken name tags.",
+      "default_giver_external_id": "teacher_maya",
+      "quests": [
+        {
+          "key": "q01_the_broken_noun_book",
+          "position": 0,
+          "name": "The Broken Noun Book",
+          "level_required": 1,
+          "giver_external_id": "teacher_maya",
+          "summary": "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "q01_the_broken_noun_book_talk_to_npc_1d727f5e_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "dialogue_id": "noun_repair_q01_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_30e88c04_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_people",
+                "display_text": "התאימו את האות החסרה: _OY / _IRL / _ING / _UEEN",
+                "instance_key": "noun_repair_q01_people"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_d117778b_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_book",
+                "display_text": "סדרו את האותיות של BOOK",
+                "instance_key": "noun_repair_q01_book"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_57b89fab_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_places",
+                "display_text": "התאימו את האות החסרה: _ASTLE / _ATE / _OWER / _ARK",
+                "instance_key": "noun_repair_q01_places"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_f4820365_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_sentence",
+                "display_text": "בנו משפט: The book is on the table",
+                "instance_key": "noun_repair_q01_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_1a9fbb7f_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_objects",
+                "display_text": "התאימו את האות החסרה: _ABLE / _AIR / _OX / _AG",
+                "instance_key": "noun_repair_q01_objects"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_6bf01599_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_animals",
+                "display_text": "תקנו את שמות החיות: _AT / _OG / _ISH / _IRD",
+                "instance_key": "noun_repair_q01_animals"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q01_say",
+                "reward_item_id": "gem",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: book, table, girl",
+                "instance_key": "noun_repair_q01_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q01_the_broken_noun_book_play_minigame_96fef8ce_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "gem",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q01_the_broken_noun_book_deliver_item_8ad2ff74_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "item_id": "gem",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q01_finish",
+                "display_text": "חזרו ל־Maya עם Gem"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 150,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q01_the_broken_noun_book",
+              "name": "The Broken Noun Book",
+              "level_required": 1,
+              "giver_npc": "teacher_maya",
+              "prerequisite": null,
+              "summary": "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q02_the_runaway_objects",
+          "position": 1,
+          "name": "The Runaway Objects",
+          "level_required": 1,
+          "giver_external_id": "Little Boy",
+          "summary": "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q01_the_broken_noun_book"
+          ],
+          "steps": [
+            {
+              "key": "q02_the_runaway_objects_talk_to_npc_6c037322_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Little Boy",
+                "dialogue_id": "noun_repair_q02_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_8dda917d_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_bag",
+                "display_text": "השלימו: _AG / _OX / _OOK / _EN",
+                "instance_key": "noun_repair_q02_bag"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_025e3208_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_pencil",
+                "display_text": "סדרו את האותיות של PENCIL",
+                "instance_key": "noun_repair_q02_pencil"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_4b767186_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_toys",
+                "display_text": "השלימו: _ALL / _OY / _AR / _OLL",
+                "instance_key": "noun_repair_q02_toys"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_cbfbad1e_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_sentence",
+                "display_text": "בנו משפט: The boy has a red bag",
+                "instance_key": "noun_repair_q02_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_d32d4028_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_animals",
+                "display_text": "השלימו: _AT / _OG / _ISH / _IRD",
+                "instance_key": "noun_repair_q02_animals"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_26525ac2_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_places",
+                "display_text": "השלימו nouns של מקומות: _ARK / _ATE / _OWER / _ASTLE",
+                "instance_key": "noun_repair_q02_places"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q02_say",
+                "reward_item_id": "power_stone",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: bag, pencil, dog",
+                "instance_key": "noun_repair_q02_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q02_the_runaway_objects_play_minigame_20e5dd20_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "power_stone",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q02_the_runaway_objects_deliver_item_61038389_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Little Boy",
+                "item_id": "power_stone",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q02_finish",
+                "display_text": "חזרו ל־Little Boy עם Power Stone"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 175,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q02_the_runaway_objects",
+              "name": "The Runaway Objects",
+              "level_required": 1,
+              "giver_npc": "Little Boy",
+              "prerequisite": "q01_the_broken_noun_book",
+              "summary": "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q03_the_market_name_mixup",
+          "position": 2,
+          "name": "The Market Name Mix-Up",
+          "level_required": 1,
+          "giver_external_id": "Farmer",
+          "summary": "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q02_the_runaway_objects"
+          ],
+          "steps": [
+            {
+              "key": "q03_the_market_name_mixup_talk_to_npc_121196da_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "noun_repair_q03_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_d6ba531c_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_fruit",
+                "display_text": "השלימו: _PPLE / _EAR / _EMON / _ANGO",
+                "instance_key": "noun_repair_q03_fruit"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_3bf5eac8_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_market",
+                "display_text": "סדרו את האותיות של MARKET",
+                "instance_key": "noun_repair_q03_market"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_7eba3428_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_food",
+                "display_text": "השלימו: _READ / _ICE / _OUP / _AKE",
+                "instance_key": "noun_repair_q03_food"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_e0be6e12_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_sentence",
+                "display_text": "בנו משפט: The farmer sells fresh apples",
+                "instance_key": "noun_repair_q03_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_ce5fa844_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_tools",
+                "display_text": "השלימו: _OX / _AN / _UP / _ASK",
+                "instance_key": "noun_repair_q03_tools"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_5e764694_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_animals",
+                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "instance_key": "noun_repair_q03_animals"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q03_say",
+                "reward_item_id": "ancient_rune",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: apple, bread, market",
+                "instance_key": "noun_repair_q03_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q03_the_market_name_mixup_play_minigame_a7c7294a_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "ancient_rune",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q03_the_market_name_mixup_deliver_item_a3cf2916_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Farmer",
+                "item_id": "ancient_rune",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q03_finish",
+                "display_text": "חזרו ל־Farmer עם Ancient Rune"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q03_the_market_name_mixup",
+              "name": "The Market Name Mix-Up",
+              "level_required": 1,
+              "giver_npc": "Farmer",
+              "prerequisite": "q02_the_runaway_objects",
+              "summary": "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q04_the_kitchen_invasion",
+          "position": 3,
+          "name": "The Kitchen Invasion",
+          "level_required": 1,
+          "giver_external_id": "Old Woman",
+          "summary": "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q03_the_market_name_mixup"
+          ],
+          "steps": [
+            {
+              "key": "q04_the_kitchen_invasion_talk_to_npc_7de31163_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Old Woman",
+                "dialogue_id": "noun_repair_q04_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_91ac20ca_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_kitchen",
+                "display_text": "השלימו: _Poon / _LATE / _UP / _NIFE",
+                "instance_key": "noun_repair_q04_kitchen"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_76734139_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_spoon",
+                "display_text": "סדרו את האותיות של SPOON",
+                "instance_key": "noun_repair_q04_spoon"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_25642658_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_people",
+                "display_text": "השלימו: _HEF / _AKER / _ARD / _IZARD",
+                "instance_key": "noun_repair_q04_people"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_0ad4b458_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_sentence",
+                "display_text": "בנו משפט: The chef holds a spoon",
+                "instance_key": "noun_repair_q04_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_0e3c44db_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_objects",
+                "display_text": "השלימו: _ABLE / _EN / _UP / _OWL",
+                "instance_key": "noun_repair_q04_objects"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_f8c2046a_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_places",
+                "display_text": "השלימו nouns של מקומות: _ATE / _ARK / _OWER / _ASTLE",
+                "instance_key": "noun_repair_q04_places"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q04_say",
+                "reward_item_id": "gem",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: spoon, chef, plate",
+                "instance_key": "noun_repair_q04_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q04_the_kitchen_invasion_play_minigame_6559e3f5_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "gem",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q04_the_kitchen_invasion_deliver_item_2ed85f7f_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Old Woman",
+                "item_id": "gem",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q04_finish",
+                "display_text": "חזרו ל־Old Woman עם Gem"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 225,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q04_the_kitchen_invasion",
+              "name": "The Kitchen Invasion",
+              "level_required": 1,
+              "giver_npc": "Old Woman",
+              "prerequisite": "q03_the_market_name_mixup",
+              "summary": "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q05_the_castle_label_crisis",
+          "position": 4,
+          "name": "The Castle Label Crisis",
+          "level_required": 1,
+          "giver_external_id": "Professor Crazy",
+          "summary": "Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר יקבל שפם.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q04_the_kitchen_invasion"
+          ],
+          "steps": [
+            {
+              "key": "q05_the_castle_label_crisis_talk_to_npc_ef54ae51_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "noun_repair_q05_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_798bac19_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_castle",
+                "display_text": "השלימו: _ASTLE / _OWER / _HRONE / _ROWN",
+                "instance_key": "noun_repair_q05_castle"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_d9c3f00d_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_treasure",
+                "display_text": "סדרו את האותיות של TREASURE",
+                "instance_key": "noun_repair_q05_treasure"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_05ebd6b9_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_roles",
+                "display_text": "השלימו: _ING / _UEEN / _NIGHT / _UARD",
+                "instance_key": "noun_repair_q05_roles"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_c20501c2_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_sentence",
+                "display_text": "בנו משפט: The queen sits on the throne",
+                "instance_key": "noun_repair_q05_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_8a59d557_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_objects",
+                "display_text": "השלימו: _WORD / _HIELD / _WORD / _CROLL",
+                "instance_key": "noun_repair_q05_objects"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_b869c6eb_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_animals",
+                "display_text": "השלימו nouns של חיות: _RAGON / _RABBIT / _OG / _AT",
+                "instance_key": "noun_repair_q05_animals"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "noun_repair_q05_say",
+                "reward_item_id": "power_stone",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: castle, queen, throne",
+                "instance_key": "noun_repair_q05_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q05_the_castle_label_crisis_play_minigame_a20db468_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "power_stone",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q05_the_castle_label_crisis_deliver_item_99a312be_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "item_id": "power_stone",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q05_finish",
+                "display_text": "חזרו ל־Professor Crazy עם Power Stone"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 250,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q05_the_castle_label_crisis",
+              "name": "The Castle Label Crisis",
+              "level_required": 1,
+              "giver_npc": "Professor Crazy",
+              "prerequisite": "q04_the_kitchen_invasion",
+              "summary": "Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר יקבל שפם.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "q06_the_great_noun_reopening",
+          "position": 5,
+          "name": "The Great Noun Reopening",
+          "level_required": 1,
+          "giver_external_id": "teacher_maya",
+          "summary": "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "q05_the_castle_label_crisis"
+          ],
+          "steps": [
+            {
+              "key": "q06_the_great_noun_reopening_talk_to_npc_6b82de22_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "dialogue_id": "noun_repair_q06_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_bc4e8945_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_people",
+                "display_text": "השלימו nouns של אנשים: _OY / _IRL / _ING / _UEEN",
+                "instance_key": "noun_repair_q06_people"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_2d5966b7_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_book",
+                "display_text": "סדרו את האותיות של NOUN",
+                "instance_key": "noun_repair_q06_book"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_0c9f5ae0_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_places",
+                "display_text": "השלימו nouns של מקומות: _ASTLE / _ATE / _ARK / _OWER",
+                "instance_key": "noun_repair_q06_places"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_055c63e8_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_sentence",
+                "display_text": "בנו משפט: The dog sees the castle",
+                "instance_key": "noun_repair_q06_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_9c09eed0_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_animals",
+                "display_text": "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD",
+                "instance_key": "noun_repair_q06_animals"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_0fbf9b07_6",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_objects",
+                "display_text": "השלימו nouns של חפצים: _OOK / _ABLE / _EN / _AG",
+                "instance_key": "noun_repair_q06_objects"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "noun_repair_q06_say",
+                "reward_item_id": "ancient_rune",
+                "reward_amount": 1,
+                "display_text": "אמרו בקול: noun, book, dragon",
+                "instance_key": "noun_repair_q06_say"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": [
+                {
+                  "scope": "step",
+                  "step_key": "q06_the_great_noun_reopening_play_minigame_03e51a32_7",
+                  "reward_type": "item",
+                  "xp_amount": null,
+                  "item_external_id": "ancient_rune",
+                  "amount": 1,
+                  "source_metadata": {
+                    "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml",
+                    "source_field": "reward_item_id"
+                  }
+                }
+              ]
+            },
+            {
+              "key": "q06_the_great_noun_reopening_deliver_item_75d6bad9_1",
+              "position": 8,
+              "type": "deliver_item",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "item_id": "ancient_rune",
+                "amount": 1,
+                "dialogue_id": "noun_repair_q06_finish",
+                "display_text": "חזרו ל־Maya עם Ancient Rune לפתיחת הספר"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 300,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\noun_repair_shop\\_index.yaml",
+            "source_detail": {
+              "id": "q06_the_great_noun_reopening",
+              "name": "The Great Noun Reopening",
+              "level_required": 1,
+              "giver_npc": "teacher_maya",
+              "prerequisite": "q05_the_castle_label_crisis",
+              "summary": "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "numbers_advanced_homework",
       "display_name": "Numbers Advanced - שיעורי בית",
       "theme": "The Lost Number Map: a guided Numbers Advanced homework journey from 10 to 1000",
@@ -12825,5 +17170,5 @@
       ]
     }
   ],
-  "source_digest": "b6901bb2c405cbd4653fc740b1f5b850e8639098d2010815e5687cfe91dd4f97"
+  "source_digest": "e8515f9c8be9b1d8a10d0502ce8ea57e3403bd3b8e8f8aa6cfe3914ba42a6fdf"
 }

@@ -1,0 +1,40 @@
+questline:
+  id: noun_repair_shop
+  npc_id: teacher_maya
+  display_name: "Noun Repair Shop: The Missing Names"
+  theme: "A funny repair mission for English nouns: restore the kingdom's broken name tags."
+  quest_count: 6
+  level_range:
+    - 1
+    - 1
+quests:
+  - id: q01_the_broken_noun_book
+    name: "The Broken Noun Book"
+    level: 1
+    prerequisite: null
+    rewards: { xp: 150, items: [] }
+  - id: q02_the_runaway_objects
+    name: "The Runaway Objects"
+    level: 1
+    prerequisite: q01_the_broken_noun_book
+    rewards: { xp: 175, items: [] }
+  - id: q03_the_market_name_mixup
+    name: "The Market Name Mix-Up"
+    level: 1
+    prerequisite: q02_the_runaway_objects
+    rewards: { xp: 200, items: [] }
+  - id: q04_the_kitchen_invasion
+    name: "The Kitchen Invasion"
+    level: 1
+    prerequisite: q03_the_market_name_mixup
+    rewards: { xp: 225, items: [] }
+  - id: q05_the_castle_label_crisis
+    name: "The Castle Label Crisis"
+    level: 1
+    prerequisite: q04_the_kitchen_invasion
+    rewards: { xp: 250, items: [] }
+  - id: q06_the_great_noun_reopening
+    name: "The Great Noun Reopening"
+    level: 1
+    prerequisite: q05_the_castle_label_crisis
+    rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }

@@ -1,0 +1,70 @@
+quest:
+  id: q03_the_market_name_mixup
+  name: "The Market Name Mix-Up"
+  level_required: 1
+  giver_npc: Farmer
+  prerequisite: q02_the_runaway_objects
+  summary: "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים."
+  wait_for_npc_turn_in: false
+rewards: { xp: 200, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: Farmer
+    dialogue_id: noun_repair_q03_start
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q03_fruit
+    display_text: "השלימו: _PPLE / _EAR / _EMON / _ANGO"
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q03_market
+    display_text: "סדרו את האותיות של MARKET"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q03_food
+    display_text: "השלימו: _READ / _ICE / _OUP / _AKE"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q03_sentence
+    display_text: "בנו משפט: The farmer sells fresh apples"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q03_tools
+    display_text: "השלימו: _OX / _AN / _UP / _ASK"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q03_animals
+    display_text: "השלימו nouns של חיות: _OG / _AT / _ISH / _IRD"
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 3
+    success_required: true
+    instance_id: noun_repair_q03_say
+    reward_item_id: ancient_rune
+    reward_amount: 1
+    display_text: "אמרו בקול: apple, bread, market"
+  - type: deliver_item
+    npc_id: Farmer
+    item_id: ancient_rune
+    amount: 1
+    dialogue_id: noun_repair_q03_finish
+    display_text: "חזרו ל־Farmer עם Ancient Rune"

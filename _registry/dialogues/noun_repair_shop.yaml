@@ -1,0 +1,74 @@
+# Dialogue scripts — noun_repair_shop
+dialogues:
+  noun_repair_q01_start:
+    speaker: teacher_maya
+    lines:
+      - "אוי לא! ספר ה־nouns שלי התפרק, וכל השמות ברחו מהחפצים."
+      - "ה־book קורא לעצמו table, וה־table מתעקש שהוא king. אפילו ה־cat ביקש כתר."
+      - "תקנו את המילים, קבלו Gem, וחזרו אליי. אחר כך אשלח אתכם ל־Little Boy."
+  noun_repair_q01_finish:
+    speaker: teacher_maya
+    lines:
+      - "יש! ה־book שוב הוא book, וה־table שוב עומד על ארבע רגליים."
+      - "קחו את ה־Gem ל־Little Boy. הוא מצא שק של חפצים עם שמות שבורים."
+      - "תודה, noun-repair hero! בלי עזרה, הייתי קוראת לעצמי toaster."
+  noun_repair_q02_start:
+    speaker: Little Boy
+    lines:
+      - "השק שלי ברח! הוא לקח איתו bag, pencil, toy ואפילו dog."
+      - "אנחנו צריכים לקרוא לכל חפץ בשם הנכון. Nouns הם שמות של אנשים, חפצים וחיות."
+      - "מצאו את השמות, קבלו Power Stone, וחזרו אליי. אז נלך ל־Farmer בשוק."
+  noun_repair_q02_finish:
+    speaker: Little Boy
+    lines:
+      - "מצאתם הכול! ה־dog הפסיק לנבוח על ה־pencil. זה הישג גדול."
+      - "קחו את ה־Power Stone ל־Farmer. בשוק שלו apple ו־bread החליפו תוויות."
+      - "תודה! עכשיו ה־bag שלי מכיל חפצים, לא שמות של חיות."
+  noun_repair_q03_start:
+    speaker: Farmer
+    lines:
+      - "ברוכים הבאים לשוק! ה־apple נמכר בתור shoe וה־bread נמכר בתור dragon."
+      - "סדרו את ה־nouns של פירות, אוכל וכלי עבודה. בבקשה אל תאכלו את השלטים."
+      - "אחרי שתצליחו, קבלו Ancient Rune וחזרו אליי. Old Woman מחכה במטבח."
+  noun_repair_q03_finish:
+    speaker: Farmer
+    lines:
+      - "השוק ניצל! עכשיו כולם יודעים ש־apple הוא פרי ו־bread הוא אוכל."
+      - "קחו את ה־Ancient Rune ל־Old Woman. במטבח שלה ה־spoon כנראה מנהל את הטבח."
+      - "תודה! היום אף אחד לא יקנה hammer ויגלה בבית banana."
+  noun_repair_q04_start:
+    speaker: Old Woman
+    lines:
+      - "ה־spoon השתלט על המטבח! הוא הזמין את ה־chef לשבת בצלחת."
+      - "תקנו את שמות הכלים והאנשים. היזהרו: ה־wizard מנסה לבשל עם קסם."
+      - "קבלו Gem, חזרו אליי, ואז לכו ל־Professor Crazy בארמון."
+  noun_repair_q04_finish:
+    speaker: Old Woman
+    lines:
+      - "ה־spoon חזר לערבב, ה־chef חזר לבשל, וה־plate הפסיק לתת פקודות."
+      - "קחו את ה־Gem ל־Professor Crazy. הוא מצא את התוויות של הארמון."
+      - "תודה! הכנתי עוגה. אני מקווה שהמילה cake לא תתחפש ל־castle."
+  noun_repair_q05_start:
+    speaker: Professor Crazy
+    lines:
+      - "הניסוי הצליח! כלומר, הוא נכשל בצורה מצחיקה. ה־crown קיבל שפם וה־throne ברח."
+      - "תקנו את שמות המקומות, תפקידי הארמון והחפצים המלכותיים."
+      - "אחרי Power Stone אחד, חזרו אליי. אשלח אתכם למבחן הסיום אצל Maya."
+  noun_repair_q05_finish:
+    speaker: Professor Crazy
+    lines:
+      - "מושלם! ה־queen יושבת על ה־throne, וה־crown שוב על הראש ולא על האף."
+      - "קחו את ה־Power Stone ל־Maya. נשאר רק מבחן noun אחד."
+      - "תודה! המדע מודה לכם. אני מודה לכם. ה־crown עדיין לא מודה לאף אחד."
+  noun_repair_q06_start:
+    speaker: teacher_maya
+    lines:
+      - "חזרתם! כל חלקי הספר כאן. עכשיו נראה אם אתם באמת מכירים nouns ולא רק מתקנים אותם."
+      - "תעברו מבחן קצר על אנשים, חפצים, מקומות וחיות. קראו כל מילה באנגלית בקול."
+      - "אם תצליחו, תחזירו לי את ה־Ancient Rune ונפתח מחדש את Noun Repair Shop."
+  noun_repair_q06_finish:
+    speaker: teacher_maya
+    lines:
+      - "וואו! תיקנתם את כל השמות. אתם יודעים לזהות noun, לאיית אותו ולקרוא אותו."
+      - "הספר נפתח, ה־cat קיבל שם, וה־table הפסיק לדרוש כתר."
+      - "תודה רבה! Noun Repair Shop פתוח. קחו את הפרס — והיזהרו מה־toaster."

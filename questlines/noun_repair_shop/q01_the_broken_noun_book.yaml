@@ -1,0 +1,70 @@
+quest:
+  id: q01_the_broken_noun_book
+  name: "The Broken Noun Book"
+  level_required: 1
+  giver_npc: teacher_maya
+  prerequisite: null
+  summary: "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית."
+  wait_for_npc_turn_in: false
+rewards: { xp: 150, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: noun_repair_q01_start
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q01_people
+    display_text: "התאימו את האות החסרה: _OY / _IRL / _ING / _UEEN"
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q01_book
+    display_text: "סדרו את האותיות של BOOK"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q01_places
+    display_text: "התאימו את האות החסרה: _ASTLE / _ATE / _OWER / _ARK"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q01_sentence
+    display_text: "בנו משפט: The book is on the table"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q01_objects
+    display_text: "התאימו את האות החסרה: _ABLE / _AIR / _OX / _AG"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 1
+    success_required: true
+    instance_id: noun_repair_q01_animals
+    display_text: "תקנו את שמות החיות: _AT / _OG / _ISH / _IRD"
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q01_say
+    reward_item_id: gem
+    reward_amount: 1
+    display_text: "אמרו בקול: book, table, girl"
+  - type: deliver_item
+    npc_id: teacher_maya
+    item_id: gem
+    amount: 1
+    dialogue_id: noun_repair_q01_finish
+    display_text: "חזרו ל־Maya עם Gem"

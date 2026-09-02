@@ -1,0 +1,70 @@
+quest:
+  id: q04_the_kitchen_invasion
+  name: "The Kitchen Invasion"
+  level_required: 1
+  giver_npc: Old Woman
+  prerequisite: q03_the_market_name_mixup
+  summary: "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים."
+  wait_for_npc_turn_in: false
+rewards: { xp: 225, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: Old Woman
+    dialogue_id: noun_repair_q04_start
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q04_kitchen
+    display_text: "השלימו: _Poon / _LATE / _UP / _NIFE"
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q04_spoon
+    display_text: "סדרו את האותיות של SPOON"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q04_people
+    display_text: "השלימו: _HEF / _AKER / _ARD / _IZARD"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q04_sentence
+    display_text: "בנו משפט: The chef holds a spoon"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q04_objects
+    display_text: "השלימו: _ABLE / _EN / _UP / _OWL"
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 2
+    success_required: true
+    instance_id: noun_repair_q04_places
+    display_text: "השלימו nouns של מקומות: _ATE / _ARK / _OWER / _ASTLE"
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 3
+    success_required: true
+    instance_id: noun_repair_q04_say
+    reward_item_id: gem
+    reward_amount: 1
+    display_text: "אמרו בקול: spoon, chef, plate"
+  - type: deliver_item
+    npc_id: Old Woman
+    item_id: gem
+    amount: 1
+    dialogue_id: noun_repair_q04_finish
+    display_text: "חזרו ל־Old Woman עם Gem"
