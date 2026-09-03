@@ -1,7 +1,7 @@
 questline:
   id: noun_repair_shop
   npc_id: teacher_maya
-  display_name: "Noun Repair Shop: The Missing Names"
+  display_name: "Noun Repair Shop: The Missing Names - שיעור על Nouns"
   theme: "A funny repair mission for English nouns: restore the kingdom's broken name tags."
   quest_count: 6
   level_range:

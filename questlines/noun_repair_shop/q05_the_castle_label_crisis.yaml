@@ -4,8 +4,7 @@ quest:
   level_required: 1
   giver_npc: Professor Crazy
   prerequisite: q04_the_kitchen_invasion
-  summary: Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר
-    יקבל שפם.
+  summary: תקנו את שמות הארמון לפני שהכתר יקבל שפם.
   wait_for_npc_turn_in: false
 rewards:
   xp: 250
@@ -20,21 +19,7 @@ steps:
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q05_castle
-  display_text: השלימו את האות החסרה במילת ה־noun
-- type: play_minigame
-  minigame_id: letter_ordering
-  world_object_id: WoodenCart2_Solitude_Tower
-  difficulty: 3
-  success_required: true
-  instance_id: noun_repair_q05_treasure
-  display_text: כתבו את המילה אוצר באנגלית.
-- type: play_minigame
-  minigame_id: word_matching
-  world_object_id: WoodenCart2_Solitude_Tower
-  difficulty: 3
-  success_required: true
-  instance_id: noun_repair_q05_roles
-  display_text: השלימו את האות החסרה במילת ה־noun
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: WoodenCart2_Solitude_Tower
@@ -43,28 +28,42 @@ steps:
   instance_id: noun_repair_q05_sentence
   display_text: השלימו את המשפט לפי התרגום בעברית
 - type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q05_treasure
+  display_text: כתבו את המילה שפירושה אוצר באנגלית.
+- type: play_minigame
   minigame_id: word_matching
   world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 3
   success_required: true
+  instance_id: noun_repair_q05_roles
+  display_text: השלימו את האות החסרה בכל שם עצם.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 3
+  success_required: true
   instance_id: noun_repair_q05_objects
-  display_text: השלימו את האות החסרה במילת ה־noun
+  display_text: השלימו את האות החסרה בכל שם עצם.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 3
+  success_required: true
+  instance_id: noun_repair_q05_say
+  reward_item_id: power_stone
+  reward_amount: 1
+  display_text: אמרו את המילה הבאה באנגלית בקול.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q05_animals
-  display_text: השלימו את האות החסרה במילת ה־noun
-- type: play_minigame
-  minigame_id: speak_aloud
-  world_object_id: WoodenCart2_Solitude_Tower
-  difficulty: 4
-  success_required: true
-  instance_id: noun_repair_q05_say
-  reward_item_id: power_stone
-  reward_amount: 1
-  display_text: אמרו את המילים הבאות בקול
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: deliver_item
   npc_id: Professor Crazy
   item_id: power_stone

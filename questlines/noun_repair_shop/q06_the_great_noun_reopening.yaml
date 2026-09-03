@@ -4,8 +4,7 @@ quest:
   level_required: 1
   giver_npc: teacher_maya
   prerequisite: q05_the_castle_label_crisis
-  summary: 'חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו
-    את הספר.'
+  summary: עברו את מבחן שמות העצם ופתחו מחדש את החנות.
   wait_for_npc_turn_in: false
 rewards:
   xp: 300
@@ -22,21 +21,21 @@ steps:
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q06_people
-  display_text: השלימו את האות החסרה במילת ה־noun
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
   minigame_id: letter_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q06_book
-  display_text: כתבו את המילה שם עצם באנגלית.
+  display_text: כתבו את המילה שפירושה שם עצם באנגלית.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q06_places
-  display_text: השלימו את האות החסרה במילת ה־noun
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
@@ -50,14 +49,14 @@ steps:
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q06_animals
-  display_text: השלימו את האות החסרה במילת ה־noun
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q06_objects
-  display_text: השלימו את האות החסרה במילת ה־noun
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Exam_Table_Fairy_Rose_Park
@@ -66,7 +65,7 @@ steps:
   instance_id: noun_repair_q06_say
   reward_item_id: ancient_rune
   reward_amount: 1
-  display_text: אמרו את המילים הבאות בקול
+  display_text: אמרו את המילה הבאה באנגלית בקול.
 - type: deliver_item
   npc_id: teacher_maya
   item_id: ancient_rune

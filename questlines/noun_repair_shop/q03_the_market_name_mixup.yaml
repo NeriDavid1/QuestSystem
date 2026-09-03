@@ -4,8 +4,7 @@ quest:
   level_required: 1
   giver_npc: Farmer
   prerequisite: q02_the_runaway_objects
-  summary: ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול
-    את השלטים.
+  summary: תקנו את שמות הפירות והאוכל בשוק בלי לאכול את השלטים.
   wait_for_npc_turn_in: false
 rewards:
   xp: 200
@@ -15,26 +14,19 @@ steps:
   npc_id: Farmer
   dialogue_id: noun_repair_q03_start
 - type: play_minigame
-  minigame_id: word_matching
-  world_object_id: Lost_Chest5_Silver_Fountain_Court
-  difficulty: 2
-  success_required: true
-  instance_id: noun_repair_q03_fruit
-  display_text: השלימו את האות החסרה במילת ה־noun
-- type: play_minigame
   minigame_id: letter_ordering
   world_object_id: Lost_Chest5_Silver_Fountain_Court
   difficulty: 2
   success_required: true
   instance_id: noun_repair_q03_market
-  display_text: כתבו את המילה שוק באנגלית.
+  display_text: כתבו את המילה שפירושה שוק באנגלית.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Lost_Chest5_Silver_Fountain_Court
   difficulty: 2
   success_required: true
-  instance_id: noun_repair_q03_food
-  display_text: השלימו את האות החסרה במילת ה־noun
+  instance_id: noun_repair_q03_fruit
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Lost_Chest5_Silver_Fountain_Court
@@ -47,15 +39,8 @@ steps:
   world_object_id: Lost_Chest5_Silver_Fountain_Court
   difficulty: 2
   success_required: true
-  instance_id: noun_repair_q03_tools
-  display_text: השלימו את האות החסרה במילת ה־noun
-- type: play_minigame
-  minigame_id: word_matching
-  world_object_id: Lost_Chest5_Silver_Fountain_Court
-  difficulty: 2
-  success_required: true
-  instance_id: noun_repair_q03_animals
-  display_text: השלימו את האות החסרה במילת ה־noun
+  instance_id: noun_repair_q03_food
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Lost_Chest5_Silver_Fountain_Court
@@ -64,7 +49,21 @@ steps:
   instance_id: noun_repair_q03_say
   reward_item_id: ancient_rune
   reward_amount: 1
-  display_text: אמרו את המילים הבאות בקול
+  display_text: אמרו את המילה הבאה באנגלית בקול.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q03_animals
+  display_text: השלימו את האות החסרה בכל שם עצם.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  difficulty: 2
+  success_required: true
+  instance_id: noun_repair_q03_tools
+  display_text: השלימו את האות החסרה בכל שם עצם.
 - type: deliver_item
   npc_id: Farmer
   item_id: ancient_rune

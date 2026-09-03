@@ -1873,9 +1873,9 @@
     "noun_repair_q01_start": {
       "speaker": "teacher_maya",
       "lines": [
-        "אוי לא! ספר ה־nouns שלי התפרק, וכל השמות ברחו מהחפצים.",
-        "ה־book קורא לעצמו table, וה־table מתעקש שהוא king. אפילו ה־cat ביקש כתר.",
-        "תקנו את המילים, קבלו Gem, וחזרו אליי. אחר כך אשלח אתכם ל־Little Boy."
+        "אוי לא! ספר התיקון התפרק, ושמות החפצים נעלמו מהתוויות.",
+        "חפשו את המילים החסרות, השלימו אותיות ובנו משפט קצר.",
+        "אחרי שתסיימו, הביאו לי Gem. אחר כך אשלח אתכם ל־Little Boy."
       ]
     },
     "noun_repair_q01_finish": {
@@ -1889,9 +1889,9 @@
     "noun_repair_q02_start": {
       "speaker": "Little Boy",
       "lines": [
-        "השק שלי ברח! הוא לקח איתו bag, pencil, toy ואפילו dog.",
-        "אנחנו צריכים לקרוא לכל חפץ בשם הנכון. Nouns הם שמות של אנשים, חפצים וחיות.",
-        "מצאו את השמות, קבלו Power Stone, וחזרו אליי. אז נלך ל־Farmer בשוק."
+        "השק שלי ברח והשאיר אחריו תוויות שבורות.",
+        "תקנו שמות של חפצים וחיות, ובנו משפט קצר באנגלית.",
+        "מצאו את השמות, קבלו Power Stone וחזרו אליי. אז נלך ל־Farmer בשוק."
       ]
     },
     "noun_repair_q02_finish": {
@@ -1905,8 +1905,8 @@
     "noun_repair_q03_start": {
       "speaker": "Farmer",
       "lines": [
-        "ברוכים הבאים לשוק! ה־apple נמכר בתור shoe וה־bread נמכר בתור dragon.",
-        "סדרו את ה־nouns של פירות, אוכל וכלי עבודה. בבקשה אל תאכלו את השלטים.",
+        "ברוכים הבאים לשוק! התוויות התבלבלו, והלקוחות כבר לא יודעים מה הם קונים.",
+        "תקנו שמות של פירות, אוכל וכלי עבודה. בבקשה אל תאכלו את השלטים.",
         "אחרי שתצליחו, קבלו Ancient Rune וחזרו אליי. Old Woman מחכה במטבח."
       ]
     },
@@ -1921,8 +1921,8 @@
     "noun_repair_q04_start": {
       "speaker": "Old Woman",
       "lines": [
-        "ה־spoon השתלט על המטבח! הוא הזמין את ה־chef לשבת בצלחת.",
-        "תקנו את שמות הכלים והאנשים. היזהרו: ה־wizard מנסה לבשל עם קסם.",
+        "במטבח התוויות התחלפו, ועכשיו אף אחד לא יודע מי עושה מה.",
+        "תקנו את שמות הכלים והאנשים. היזהרו: קסם מוזר מסתובב במטבח.",
         "קבלו Gem, חזרו אליי, ואז לכו ל־Professor Crazy בארמון."
       ]
     },
@@ -1937,7 +1937,7 @@
     "noun_repair_q05_start": {
       "speaker": "Professor Crazy",
       "lines": [
-        "הניסוי הצליח! כלומר, הוא נכשל בצורה מצחיקה. ה־crown קיבל שפם וה־throne ברח.",
+        "הניסוי הצליח! כלומר, הוא נכשל בצורה מצחיקה, וכל תוויות הארמון התחלפו.",
         "תקנו את שמות המקומות, תפקידי הארמון והחפצים המלכותיים.",
         "אחרי Power Stone אחד, חזרו אליי. אשלח אתכם למבחן הסיום אצל Maya."
       ]
@@ -1953,9 +1953,9 @@
     "noun_repair_q06_start": {
       "speaker": "teacher_maya",
       "lines": [
-        "חזרתם! כל חלקי הספר כאן. עכשיו נראה אם אתם באמת מכירים nouns ולא רק מתקנים אותם.",
+        "חזרתם! כל חלקי הספר כאן. עכשיו נראה אם אתם באמת מכירים שמות עצם ולא רק מתקנים אותם.",
         "תעברו מבחן קצר על אנשים, חפצים, מקומות וחיות. קראו כל מילה באנגלית בקול.",
-        "אם תצליחו, תחזירו לי את ה־Ancient Rune ונפתח מחדש את Noun Repair Shop."
+        "אם תצליחו, תחזירו לי את ה־Ancient Rune ונפתח מחדש את הסדנה."
       ]
     },
     "noun_repair_q06_finish": {
@@ -4375,7 +4375,7 @@
     {
       "id": "noun_repair_shop",
       "folder": "noun_repair_shop",
-      "displayName": "Noun Repair Shop: The Missing Names",
+      "displayName": "Noun Repair Shop: The Missing Names - שיעור על Nouns",
       "theme": "A funny repair mission for English nouns: restore the kingdom's broken name tags.",
       "levelRange": [
         1,
@@ -4397,7 +4397,7 @@
           "name": "The Broken Noun Book",
           "level": 1,
           "prerequisite": null,
-          "summary": "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית.",
+          "summary": "השלימו שמות עצם ועזרו למאיה לתקן את ספר המילים.",
           "giver_npc": "teacher_maya",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -4420,10 +4420,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q01_people",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האותיות החסרות בשמות העצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האותיות החסרות בשמות העצם.",
                 "tasks": [
                   "B_Y",
                   "GI_L",
@@ -4513,10 +4513,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q01_book",
-              "display_text": "כתבו את המילה ספר באנגלית.",
+              "display_text": "כתבו את המילה שפירושה ספר באנגלית.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה ספר באנגלית.",
+                "instruction": "כתבו את המילה שפירושה ספר באנגלית.",
                 "tasks": [
                   "B",
                   "O",
@@ -4528,7 +4528,7 @@
                 "success": "BOOK נכתב נכון",
                 "params": {
                   "targetWord": "book",
-                  "prompt": "כתבו את המילה ספר באנגלית."
+                  "prompt": "כתבו את המילה שפירושה ספר באנגלית."
                 }
               }
             },
@@ -4539,10 +4539,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q01_places",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "CASTL_",
                   "G_TE",
@@ -4675,10 +4675,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q01_objects",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "TABL_",
                   "CHAI_",
@@ -4767,10 +4767,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q01_animals",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "CA_",
                   "DO_",
@@ -4857,10 +4857,10 @@
               "instance_id": "noun_repair_q01_say",
               "reward_item_id": "gem",
               "reward_amount": 1,
-              "display_text": "אמרו את המילים הבאות בקול",
+              "display_text": "אמרו את המילה הבאה באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
+                "instruction": "אמרו את המילה הבאה באנגלית בקול.",
                 "tasks": [
                   "book"
                 ],
@@ -4891,7 +4891,7 @@
           "name": "The Runaway Objects",
           "level": 1,
           "prerequisite": "q01_the_broken_noun_book",
-          "summary": "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך.",
+          "summary": "מצאו את שמות החפצים שעזבו את השק של הילד.",
           "giver_npc": "Little Boy",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -4914,10 +4914,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q02_bag",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "BA_",
                   "BO_",
@@ -5001,29 +5001,49 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "letter_ordering",
+              "minigame_id": "word_ordering",
               "world_object_id": "Wooden_Cart1_Inside_Gate",
               "difficulty": 2,
               "success_required": true,
-              "instance_id": "noun_repair_q02_pencil",
-              "display_text": "כתבו את המילה עיפרון באנגלית.",
+              "instance_id": "noun_repair_q02_sentence",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית",
               "minigame_brief": {
-                "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה עיפרון באנגלית.",
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום בעברית",
                 "tasks": [
-                  "P",
-                  "E",
-                  "N",
-                  "C",
-                  "I",
-                  "L"
+                  "The",
+                  "boy",
+                  "has",
+                  "a",
+                  "red",
+                  "bag"
                 ],
-                "target": "pencil",
-                "variant": "spelling",
-                "success": "PENCIL נכתב נכון",
+                "target": "The boy has a red bag",
+                "variant": "sentence",
+                "success": "המשפט נבנה נכון",
                 "params": {
-                  "targetWord": "pencil",
-                  "prompt": "כתבו את המילה עיפרון באנגלית."
+                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
+                  "translation": "לילד יש תיק אדום",
+                  "englishWordsInOrder": [
+                    "The",
+                    "boy",
+                    "has",
+                    "a",
+                    "red",
+                    "bag"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "distractorWords": [
+                    "book",
+                    "box",
+                    "cat"
+                  ]
                 }
               }
             },
@@ -5034,10 +5054,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q02_toys",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "B_LL",
                   "T_Y",
@@ -5121,49 +5141,29 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "word_ordering",
+              "minigame_id": "letter_ordering",
               "world_object_id": "Wooden_Cart1_Inside_Gate",
               "difficulty": 2,
               "success_required": true,
-              "instance_id": "noun_repair_q02_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "instance_id": "noun_repair_q02_pencil",
+              "display_text": "כתבו את המילה שפירושה עיפרון באנגלית.",
               "minigame_brief": {
-                "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט לפי התרגום בעברית",
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו את המילה שפירושה עיפרון באנגלית.",
                 "tasks": [
-                  "The",
-                  "boy",
-                  "has",
-                  "a",
-                  "red",
-                  "bag"
+                  "P",
+                  "E",
+                  "N",
+                  "C",
+                  "I",
+                  "L"
                 ],
-                "target": "The boy has a red bag",
-                "variant": "sentence",
-                "success": "המשפט נבנה נכון",
+                "target": "pencil",
+                "variant": "spelling",
+                "success": "PENCIL נכתב נכון",
                 "params": {
-                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
-                  "translation": "לילד יש תיק אדום",
-                  "englishWordsInOrder": [
-                    "The",
-                    "boy",
-                    "has",
-                    "a",
-                    "red",
-                    "bag"
-                  ],
-                  "preFilledIndices": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4
-                  ],
-                  "distractorWords": [
-                    "book",
-                    "box",
-                    "cat"
-                  ]
+                  "targetWord": "pencil",
+                  "prompt": "כתבו את המילה שפירושה עיפרון באנגלית."
                 }
               }
             },
@@ -5174,10 +5174,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q02_animals",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "CA_",
                   "DO_",
@@ -5261,15 +5261,43 @@
             },
             {
               "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "noun_repair_q02_say",
+              "reward_item_id": "power_stone",
+              "reward_amount": 1,
+              "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המילה הבאה באנגלית בקול.",
+                "tasks": [
+                  "dog"
+                ],
+                "target": "dog",
+                "variant": "pronunciation",
+                "success": "שם העצם נאמר ברור",
+                "params": {
+                  "targetWords": [
+                    "dog"
+                  ],
+                  "targetPhrase": "dog",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
               "minigame_id": "word_matching",
               "world_object_id": "Wooden_Cart1_Inside_Gate",
               "difficulty": 1,
               "success_required": true,
               "instance_id": "noun_repair_q02_places",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "PA_K",
                   "GAT_",
@@ -5352,34 +5380,6 @@
               }
             },
             {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "world_object_id": "Wooden_Cart1_Inside_Gate",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "noun_repair_q02_say",
-              "reward_item_id": "power_stone",
-              "reward_amount": 1,
-              "display_text": "אמרו את המילים הבאות בקול",
-              "minigame_brief": {
-                "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
-                "tasks": [
-                  "dog"
-                ],
-                "target": "dog",
-                "variant": "pronunciation",
-                "success": "שם העצם נאמר ברור",
-                "params": {
-                  "targetWords": [
-                    "dog"
-                  ],
-                  "targetPhrase": "dog",
-                  "allowFuzzyMatch": true
-                }
-              }
-            },
-            {
               "type": "deliver_item",
               "npc_id": "Little Boy",
               "item_id": "power_stone",
@@ -5394,7 +5394,7 @@
           "name": "The Market Name Mix-Up",
           "level": 1,
           "prerequisite": "q02_the_runaway_objects",
-          "summary": "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים.",
+          "summary": "תקנו את שמות הפירות והאוכל בשוק בלי לאכול את השלטים.",
           "giver_npc": "Farmer",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -5412,15 +5412,43 @@
             },
             {
               "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "noun_repair_q03_market",
+              "display_text": "כתבו את המילה שפירושה שוק באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו את המילה שפירושה שוק באנגלית.",
+                "tasks": [
+                  "M",
+                  "A",
+                  "R",
+                  "K",
+                  "E",
+                  "T"
+                ],
+                "target": "market",
+                "variant": "spelling",
+                "success": "MARKET נכתב נכון",
+                "params": {
+                  "targetWord": "market",
+                  "prompt": "כתבו את המילה שפירושה שוק באנגלית."
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
               "minigame_id": "word_matching",
               "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q03_fruit",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "A_PLE",
                   "P_AR",
@@ -5496,29 +5524,46 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "letter_ordering",
+              "minigame_id": "word_ordering",
               "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
               "difficulty": 2,
               "success_required": true,
-              "instance_id": "noun_repair_q03_market",
-              "display_text": "כתבו את המילה שוק באנגלית.",
+              "instance_id": "noun_repair_q03_sentence",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית",
               "minigame_brief": {
-                "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה שוק באנגלית.",
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום בעברית",
                 "tasks": [
-                  "M",
-                  "A",
-                  "R",
-                  "K",
-                  "E",
-                  "T"
+                  "The",
+                  "farmer",
+                  "sells",
+                  "fresh",
+                  "apples"
                 ],
-                "target": "market",
-                "variant": "spelling",
-                "success": "MARKET נכתב נכון",
+                "target": "The farmer sells fresh apples",
+                "variant": "sentence",
+                "success": "המשפט נבנה נכון",
                 "params": {
-                  "targetWord": "market",
-                  "prompt": "כתבו את המילה שוק באנגלית."
+                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
+                  "translation": "החקלאי מוכר תפוחים טריים",
+                  "englishWordsInOrder": [
+                    "The",
+                    "farmer",
+                    "sells",
+                    "fresh",
+                    "apples"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "books",
+                    "chairs",
+                    "oranges"
+                  ]
                 }
               }
             },
@@ -5529,10 +5574,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q03_food",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "BREA_",
                   "RIC_",
@@ -5616,134 +5661,29 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "word_ordering",
+              "minigame_id": "speak_aloud",
               "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
-              "difficulty": 2,
+              "difficulty": 3,
               "success_required": true,
-              "instance_id": "noun_repair_q03_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "instance_id": "noun_repair_q03_say",
+              "reward_item_id": "ancient_rune",
+              "reward_amount": 1,
+              "display_text": "אמרו את המילה הבאה באנגלית בקול.",
               "minigame_brief": {
-                "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט לפי התרגום בעברית",
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המילה הבאה באנגלית בקול.",
                 "tasks": [
-                  "The",
-                  "farmer",
-                  "sells",
-                  "fresh",
-                  "apples"
+                  "apple"
                 ],
-                "target": "The farmer sells fresh apples",
-                "variant": "sentence",
-                "success": "המשפט נבנה נכון",
+                "target": "apple",
+                "variant": "pronunciation",
+                "success": "שם העצם נאמר ברור",
                 "params": {
-                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
-                  "translation": "החקלאי מוכר תפוחים טריים",
-                  "englishWordsInOrder": [
-                    "The",
-                    "farmer",
-                    "sells",
-                    "fresh",
-                    "apples"
+                  "targetWords": [
+                    "apple"
                   ],
-                  "preFilledIndices": [
-                    0,
-                    1,
-                    2,
-                    3
-                  ],
-                  "distractorWords": [
-                    "books",
-                    "chairs",
-                    "oranges"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "word_matching",
-              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "noun_repair_q03_tools",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
-              "minigame_brief": {
-                "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
-                "tasks": [
-                  "BO_",
-                  "PA_",
-                  "CU_",
-                  "MA_K"
-                ],
-                "target": "box, pan, cup, mask",
-                "variant": "missing_letter_matching",
-                "success": "שמות כלי העבודה הושלמו",
-                "params": {
-                  "letters": [
-                    {
-                      "id": "box",
-                      "value": "b"
-                    },
-                    {
-                      "id": "pan",
-                      "value": "p"
-                    },
-                    {
-                      "id": "cup",
-                      "value": "c"
-                    },
-                    {
-                      "id": "mask",
-                      "value": "m"
-                    },
-                    {
-                      "id": "noun_repair_q03_tools_box_2",
-                      "value": "x"
-                    },
-                    {
-                      "id": "noun_repair_q03_tools_pan_2",
-                      "value": "n"
-                    },
-                    {
-                      "id": "noun_repair_q03_tools_mask_2",
-                      "value": "s"
-                    }
-                  ],
-                  "wordTasks": [
-                    {
-                      "id": "box",
-                      "image": "",
-                      "fullWord": "box",
-                      "missingIndices": [
-                        2
-                      ]
-                    },
-                    {
-                      "id": "pan",
-                      "image": "",
-                      "fullWord": "pan",
-                      "missingIndices": [
-                        2
-                      ]
-                    },
-                    {
-                      "id": "cup",
-                      "image": "",
-                      "fullWord": "cup",
-                      "missingIndices": [
-                        2
-                      ]
-                    },
-                    {
-                      "id": "mask",
-                      "image": "",
-                      "fullWord": "mask",
-                      "missingIndices": [
-                        2
-                      ]
-                    }
-                  ]
+                  "targetPhrase": "apple",
+                  "allowFuzzyMatch": true
                 }
               }
             },
@@ -5754,10 +5694,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q03_animals",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "D_G",
                   "C_T",
@@ -5837,29 +5777,89 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "speak_aloud",
+              "minigame_id": "word_matching",
               "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
-              "difficulty": 3,
+              "difficulty": 2,
               "success_required": true,
-              "instance_id": "noun_repair_q03_say",
-              "reward_item_id": "ancient_rune",
-              "reward_amount": 1,
-              "display_text": "אמרו את המילים הבאות בקול",
+              "instance_id": "noun_repair_q03_tools",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
-                "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
-                  "apple"
+                  "BO_",
+                  "PA_",
+                  "CU_",
+                  "MA_K"
                 ],
-                "target": "apple",
-                "variant": "pronunciation",
-                "success": "שם העצם נאמר ברור",
+                "target": "box, pan, cup, mask",
+                "variant": "missing_letter_matching",
+                "success": "שמות כלי העבודה הושלמו",
                 "params": {
-                  "targetWords": [
-                    "apple"
+                  "letters": [
+                    {
+                      "id": "box",
+                      "value": "b"
+                    },
+                    {
+                      "id": "pan",
+                      "value": "p"
+                    },
+                    {
+                      "id": "cup",
+                      "value": "c"
+                    },
+                    {
+                      "id": "mask",
+                      "value": "m"
+                    },
+                    {
+                      "id": "noun_repair_q03_tools_box_2",
+                      "value": "x"
+                    },
+                    {
+                      "id": "noun_repair_q03_tools_pan_2",
+                      "value": "n"
+                    },
+                    {
+                      "id": "noun_repair_q03_tools_mask_2",
+                      "value": "s"
+                    }
                   ],
-                  "targetPhrase": "apple",
-                  "allowFuzzyMatch": true
+                  "wordTasks": [
+                    {
+                      "id": "box",
+                      "image": "",
+                      "fullWord": "box",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "pan",
+                      "image": "",
+                      "fullWord": "pan",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "cup",
+                      "image": "",
+                      "fullWord": "cup",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "mask",
+                      "image": "",
+                      "fullWord": "mask",
+                      "missingIndices": [
+                        2
+                      ]
+                    }
+                  ]
                 }
               }
             },
@@ -5878,7 +5878,7 @@
           "name": "The Kitchen Invasion",
           "level": 1,
           "prerequisite": "q03_the_market_name_mixup",
-          "summary": "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.",
+          "summary": "הצילו את המטבח ותקנו את שמות הכלים והאנשים.",
           "giver_npc": "Old Woman",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -5901,10 +5901,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q04_kitchen",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "SP_ON",
                   "PLAT_",
@@ -5984,28 +5984,46 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "letter_ordering",
+              "minigame_id": "word_ordering",
               "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
               "difficulty": 2,
               "success_required": true,
-              "instance_id": "noun_repair_q04_spoon",
-              "display_text": "כתבו את המילה כף באנגלית.",
+              "instance_id": "noun_repair_q04_sentence",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית",
               "minigame_brief": {
-                "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה כף באנגלית.",
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום בעברית",
                 "tasks": [
-                  "S",
-                  "P",
-                  "O",
-                  "O",
-                  "N"
+                  "The",
+                  "chef",
+                  "holds",
+                  "a",
+                  "spoon"
                 ],
-                "target": "spoon",
-                "variant": "spelling",
-                "success": "SPOON נכתב נכון",
+                "target": "The chef holds a spoon",
+                "variant": "sentence",
+                "success": "המשפט נבנה נכון",
                 "params": {
-                  "targetWord": "spoon",
-                  "prompt": "כתבו את המילה כף באנגלית."
+                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
+                  "translation": "השף מחזיק כף",
+                  "englishWordsInOrder": [
+                    "The",
+                    "chef",
+                    "holds",
+                    "a",
+                    "spoon"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "plate",
+                    "cup",
+                    "knife"
+                  ]
                 }
               }
             },
@@ -6016,10 +6034,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q04_people",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "CH_F",
                   "BAK_R",
@@ -6099,60 +6117,42 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "word_ordering",
+              "minigame_id": "letter_ordering",
               "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
               "difficulty": 2,
               "success_required": true,
-              "instance_id": "noun_repair_q04_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "instance_id": "noun_repair_q04_spoon",
+              "display_text": "כתבו את המילה שפירושה כף באנגלית.",
               "minigame_brief": {
-                "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט לפי התרגום בעברית",
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו את המילה שפירושה כף באנגלית.",
                 "tasks": [
-                  "The",
-                  "chef",
-                  "holds",
-                  "a",
-                  "spoon"
+                  "S",
+                  "P",
+                  "O",
+                  "O",
+                  "N"
                 ],
-                "target": "The chef holds a spoon",
-                "variant": "sentence",
-                "success": "המשפט נבנה נכון",
+                "target": "spoon",
+                "variant": "spelling",
+                "success": "SPOON נכתב נכון",
                 "params": {
-                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
-                  "translation": "השף מחזיק כף",
-                  "englishWordsInOrder": [
-                    "The",
-                    "chef",
-                    "holds",
-                    "a",
-                    "spoon"
-                  ],
-                  "preFilledIndices": [
-                    0,
-                    1,
-                    2,
-                    3
-                  ],
-                  "distractorWords": [
-                    "plate",
-                    "cup",
-                    "knife"
-                  ]
+                  "targetWord": "spoon",
+                  "prompt": "כתבו את המילה שפירושה כף באנגלית."
                 }
               }
             },
             {
               "type": "play_minigame",
-              "minigame_id": "word_matching",
+              "minigame_id": "speak_aloud",
               "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q04_objects",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "T_BLE",
                   "PE_",
@@ -6240,11 +6240,39 @@
               "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
               "difficulty": 2,
               "success_required": true,
+              "instance_id": "noun_repair_q04_say",
+              "reward_item_id": "gem",
+              "reward_amount": 1,
+              "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המילה הבאה באנגלית בקול.",
+                "tasks": [
+                  "spoon"
+                ],
+                "target": "spoon",
+                "variant": "pronunciation",
+                "success": "שם העצם נאמר ברור",
+                "params": {
+                  "targetWords": [
+                    "spoon"
+                  ],
+                  "targetPhrase": "spoon",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 2,
+              "success_required": true,
               "instance_id": "noun_repair_q04_places",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "GAT_",
                   "PAR_",
@@ -6327,34 +6355,6 @@
               }
             },
             {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "noun_repair_q04_say",
-              "reward_item_id": "gem",
-              "reward_amount": 1,
-              "display_text": "אמרו את המילים הבאות בקול",
-              "minigame_brief": {
-                "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
-                "tasks": [
-                  "spoon"
-                ],
-                "target": "spoon",
-                "variant": "pronunciation",
-                "success": "שם העצם נאמר ברור",
-                "params": {
-                  "targetWords": [
-                    "spoon"
-                  ],
-                  "targetPhrase": "spoon",
-                  "allowFuzzyMatch": true
-                }
-              }
-            },
-            {
               "type": "deliver_item",
               "npc_id": "Old Woman",
               "item_id": "gem",
@@ -6369,7 +6369,7 @@
           "name": "The Castle Label Crisis",
           "level": 1,
           "prerequisite": "q04_the_kitchen_invasion",
-          "summary": "Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר יקבל שפם.",
+          "summary": "תקנו את שמות הארמון לפני שהכתר יקבל שפם.",
           "giver_npc": "Professor Crazy",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -6392,10 +6392,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q05_castle",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "CA_TLE",
                   "T_WER",
@@ -6471,15 +6471,63 @@
             },
             {
               "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "noun_repair_q05_sentence",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום בעברית",
+                "tasks": [
+                  "The",
+                  "queen",
+                  "sits",
+                  "on",
+                  "the",
+                  "throne"
+                ],
+                "target": "The queen sits on the throne",
+                "variant": "sentence",
+                "success": "המשפט נבנה נכון",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
+                  "translation": "המלכה יושבת על כס המלכות",
+                  "englishWordsInOrder": [
+                    "The",
+                    "queen",
+                    "sits",
+                    "on",
+                    "the",
+                    "throne"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                  ],
+                  "distractorWords": [
+                    "crown",
+                    "castle",
+                    "shield"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
               "minigame_id": "letter_ordering",
               "world_object_id": "WoodenCart2_Solitude_Tower",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q05_treasure",
-              "display_text": "כתבו את המילה אוצר באנגלית.",
+              "display_text": "כתבו את המילה שפירושה אוצר באנגלית.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה אוצר באנגלית.",
+                "instruction": "כתבו את המילה שפירושה אוצר באנגלית.",
                 "tasks": [
                   "T",
                   "R",
@@ -6495,7 +6543,7 @@
                 "success": "TREASURE נכתב נכון",
                 "params": {
                   "targetWord": "treasure",
-                  "prompt": "כתבו את המילה אוצר באנגלית."
+                  "prompt": "כתבו את המילה שפירושה אוצר באנגלית."
                 }
               }
             },
@@ -6506,10 +6554,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q05_roles",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "KIN_",
                   "Q_EEN",
@@ -6589,63 +6637,15 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "word_ordering",
-              "world_object_id": "WoodenCart2_Solitude_Tower",
-              "difficulty": 3,
-              "success_required": true,
-              "instance_id": "noun_repair_q05_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
-              "minigame_brief": {
-                "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט לפי התרגום בעברית",
-                "tasks": [
-                  "The",
-                  "queen",
-                  "sits",
-                  true,
-                  "the",
-                  "throne"
-                ],
-                "target": "The queen sits on the throne",
-                "variant": "sentence",
-                "success": "המשפט נבנה נכון",
-                "params": {
-                  "prompt": "השלימו את המשפט לפי התרגום בעברית",
-                  "translation": "המלכה יושבת על כס המלכות",
-                  "englishWordsInOrder": [
-                    "The",
-                    "queen",
-                    "sits",
-                    true,
-                    "the",
-                    "throne"
-                  ],
-                  "preFilledIndices": [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4
-                  ],
-                  "distractorWords": [
-                    "crown",
-                    "castle",
-                    "shield"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "word_matching",
+              "minigame_id": "speak_aloud",
               "world_object_id": "WoodenCart2_Solitude_Tower",
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q05_objects",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "SW_RD",
                   "SHI_LD",
@@ -6729,11 +6729,39 @@
               "world_object_id": "WoodenCart2_Solitude_Tower",
               "difficulty": 3,
               "success_required": true,
+              "instance_id": "noun_repair_q05_say",
+              "reward_item_id": "power_stone",
+              "reward_amount": 1,
+              "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המילה הבאה באנגלית בקול.",
+                "tasks": [
+                  "queen"
+                ],
+                "target": "queen",
+                "variant": "pronunciation",
+                "success": "שם העצם נאמר ברור",
+                "params": {
+                  "targetWords": [
+                    "queen"
+                  ],
+                  "targetPhrase": "queen",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
+              "difficulty": 3,
+              "success_required": true,
               "instance_id": "noun_repair_q05_animals",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "DRA_ON",
                   "RABBI_",
@@ -6808,34 +6836,6 @@
               }
             },
             {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "world_object_id": "WoodenCart2_Solitude_Tower",
-              "difficulty": 4,
-              "success_required": true,
-              "instance_id": "noun_repair_q05_say",
-              "reward_item_id": "power_stone",
-              "reward_amount": 1,
-              "display_text": "אמרו את המילים הבאות בקול",
-              "minigame_brief": {
-                "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
-                "tasks": [
-                  "queen"
-                ],
-                "target": "queen",
-                "variant": "pronunciation",
-                "success": "שם העצם נאמר ברור",
-                "params": {
-                  "targetWords": [
-                    "queen"
-                  ],
-                  "targetPhrase": "queen",
-                  "allowFuzzyMatch": true
-                }
-              }
-            },
-            {
               "type": "deliver_item",
               "npc_id": "Professor Crazy",
               "item_id": "power_stone",
@@ -6850,7 +6850,7 @@
           "name": "The Great Noun Reopening",
           "level": 1,
           "prerequisite": "q05_the_castle_label_crisis",
-          "summary": "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר.",
+          "summary": "עברו את מבחן שמות העצם ופתחו מחדש את החנות.",
           "giver_npc": "teacher_maya",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -6878,10 +6878,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q06_people",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "BO_",
                   "G_RL",
@@ -6966,10 +6966,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q06_book",
-              "display_text": "כתבו את המילה שם עצם באנגלית.",
+              "display_text": "כתבו את המילה שפירושה שם עצם באנגלית.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה שם עצם באנגלית.",
+                "instruction": "כתבו את המילה שפירושה שם עצם באנגלית.",
                 "tasks": [
                   "N",
                   "O",
@@ -6981,7 +6981,7 @@
                 "success": "NOUN נכתב נכון",
                 "params": {
                   "targetWord": "noun",
-                  "prompt": "כתבו את המילה שם עצם באנגלית."
+                  "prompt": "כתבו את המילה שפירושה שם עצם באנגלית."
                 }
               }
             },
@@ -6992,10 +6992,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q06_places",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "CAST_E",
                   "G_TE",
@@ -7129,10 +7129,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q06_animals",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "D_G",
                   "CA_",
@@ -7221,10 +7221,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q06_objects",
-              "display_text": "השלימו את האות החסרה במילת ה־noun",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלימו את האות החסרה במילת ה־noun",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
                 "tasks": [
                   "BO_K",
                   "TAB_E",
@@ -7315,10 +7315,10 @@
               "instance_id": "noun_repair_q06_say",
               "reward_item_id": "ancient_rune",
               "reward_amount": 1,
-              "display_text": "אמרו את המילים הבאות בקול",
+              "display_text": "אמרו את המילה הבאה באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
+                "instruction": "אמרו את המילה הבאה באנגלית בקול.",
                 "tasks": [
                   "noun"
                 ],
