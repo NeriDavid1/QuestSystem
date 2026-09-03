@@ -1,0 +1,252 @@
+# Per-step minigame briefs exported from QuestForge
+instances:
+  missing_verbs_q01_benny_can_t_build_minigame:
+    minigame_id: letter_ordering
+    instruction: ""
+    tasks:
+      - ""
+    target: ""
+    variant: word_spelling
+    success: ""
+    params:
+      prompt: "Build the missing verb:
+בנו את המילה החסרה: build = לבנות.
+___the wall. "
+      targetWord: BUILD
+      customDistractors:
+        []
+      wordRevealDatabase: ""
+      extraDistractorCount: 2
+  missing_verbs_q01_benny_can_t_build_minigame_2:
+    minigame_id: letter_ordering
+    instruction: ""
+    tasks:
+      - ""
+    target: ""
+    variant: word_spelling
+    success: ""
+    params:
+      prompt: "אייתו את הפועל  - DO לעשות.
+Spell the verb DO:___the action. "
+      targetWord: DO
+      customDistractors:
+        []
+      wordRevealDatabase: ""
+      extraDistractorCount: 2
+  missing_verbs_q01_benny_can_t_build_minigame_3:
+    minigame_id: word_ordering
+    instruction: ""
+    tasks:
+      - ""
+    target: ""
+    variant: sentence_building
+    success: ""
+    params:
+      prompt: "סדרו את המילים לפי הסדר כדי ליצור משפט נכון באנגלית."
+      distractorWords:
+        - walk
+        - take
+        - boy
+      preFilledIndices:
+        - 0
+        - 1
+        - 4
+      wordRevealDatabase: ""
+      englishWordsInOrder:
+        - "I "
+        - "need "
+        - "to "
+        - open
+        - it
+  missing_verbs_q01_benny_can_t_build_minigame_4:
+    minigame_id: speak_aloud
+    instruction: ""
+    tasks:
+      - ""
+    target: ""
+    variant: single_word
+    success: ""
+    params:
+      prompt: "Say the verb: HELP.
+ אמרו בקול את הפועל HELP."
+      targetWords:
+        - HELP
+      targetPhrase: HELP
+      referenceClip: ""
+      allowFuzzyMatch: true
+      wordRevealDatabase: ""
+      silenceTimeoutSeconds: 1.4
+  missing_verbs_q02_the_confused_guard_minigame:
+    minigame_id: word_matching
+    instruction: ""
+    tasks:
+      - ""
+    target: ""
+    variant: word_to_image
+    success: ""
+    params:
+      letters:
+        -
+          id: letter_1
+          value: o
+        -
+          id: letter_2
+          value: h
+        -
+          id: letter_3
+          value: f
+        -
+          id: letter_4
+          value: j
+      wordTasks:
+        -
+          id: letter_1
+          image: ""
+          fullWord: open
+          missingIndices:
+            - 0
+        -
+          id: letter_2
+          image: ""
+          fullWord: help
+          missingIndices:
+            - 0
+        -
+          id: letter_3
+          image: ""
+          fullWord: find
+          missingIndices:
+            - 0
+        -
+          id: letter_4
+          image: ""
+          fullWord: jump
+          missingIndices:
+            - 0
+  missing_verbs_q03_don_t_let_him_guess_minigame:
+    minigame_id: speak_aloud
+    instruction: ""
+    tasks:
+      - ""
+    target: ""
+    variant: single_word
+    success: ""
+    params:
+      prompt: "תגידו את הפועל אש!"
+      targetWords:
+        - FIRE
+      targetPhrase: ""
+      referenceClip: ""
+      allowFuzzyMatch: true
+      wordRevealDatabase: ""
+      silenceTimeoutSeconds: 1
+  q01_bridge_too_short_s2:
+    minigame_id: letter_ordering
+    instruction: "סדרו את האותיות של LONG"
+    tasks:
+      - "סדרו <strong>l, o, n, g</strong>"
+      - "צרו <strong>long</strong> — ארוך"
+    target: long
+    variant: word_spelling
+    success: "LONG נכתב נכון; Oak Log אחד נוסף לתיק"
+    params:
+      prompt: "תרשמו את הפועל לִמצוֹא."
+      targetWord: find
+      customDistractors:
+        []
+      wordRevealDatabase: ""
+      extraDistractorCount: 2
+  q02_whispering_stone_s2:
+    minigame_id: speak_aloud
+    instruction: "אמרו HOT בקול"
+    tasks:
+      - "הקשיבו להגייה"
+      - "לחצו על המיקרופון ואמרו <strong>hot</strong>"
+    target: hot
+    variant: single_word
+    success: "HOT נקלט; Herbs אחד נוסף לתיק"
+    params:
+      prompt: "תגידו  את הפועל לקחת באנגלית"
+      targetWords:
+        - take
+      targetPhrase: take
+      referenceClip: ""
+      allowFuzzyMatch: true
+      wordRevealDatabase: "Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset"
+      silenceTimeoutSeconds: 1
+  q05_from_low_to_high_s3:
+    minigame_id: word_ordering
+    instruction: "סדרו את המשפט THE PLACE IS LOW"
+    tasks:
+      - "סדרו <strong>The / place / is / low</strong>"
+    target: "The place is low."
+    variant: sentence_building
+    success: "Power Stone אחד נוסף לתיק"
+    params:
+      prompt: "השלימו את הפועל החסר במשפט - 
+אני רוצה לעזור לך."
+      distractorWords:
+        - take
+        - run
+        - jump
+      preFilledIndices:
+        - 0
+        - 1
+        - 4
+      wordRevealDatabase: "Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset"
+      englishWordsInOrder:
+        - I
+        - want
+        - "to "
+        - help
+        - you
+  q06_adjective_challenge_s1:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה — SHORT / LONG / COLD / HOT"
+    tasks:
+      - _hort
+      - _ong
+      - _old
+      - _ot
+    target: "short, long, cold, hot"
+    variant: missing_letter_matching
+    success: "ארבע המילים הראשונות הושלמו"
+    params:
+      letters:
+        -
+          id: FIRE
+          value: R
+        -
+          id: TAKE
+          value: A
+        -
+          id: LOAD
+          value: L
+        -
+          id: BRING
+          value: N
+      wordTasks:
+        -
+          id: TAKE
+          image: ""
+          fullWord: TAKE
+          missingIndices:
+            - 1
+        -
+          id: FIRE
+          image: ""
+          fullWord: FIRE
+          missingIndices:
+            - 2
+        -
+          id: BRING
+          image: ""
+          fullWord: BRING
+          missingIndices:
+            - 3
+        -
+          id: LOAD
+          image: ""
+          fullWord: LOAD
+          missingIndices:
+            - 0

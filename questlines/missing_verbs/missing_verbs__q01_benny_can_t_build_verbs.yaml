@@ -1,0 +1,47 @@
+quest:
+  id: missing_verbs__q01_benny_can_t_build_verbs
+  name: "Benny Can't Build -  VERBS שיעור בית"
+  level_required: 50
+  giver_npc: "Benny the Builder"
+  prerequisite: null
+  summary: "Help Benny restore the missing action words so the workers can build again."
+  wait_for_npc_turn_in: false
+
+rewards: { xp: 100, items: [{ id: coin, amount: 20 }] }
+
+steps:
+  - type: play_minigame
+    npc_id: "Benny the Builder"
+    difficulty: 1
+    dialogue_id: ""
+    instance_id: missing_verbs_q01_benny_can_t_build_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest1_BuildersHomeArea
+
+  - type: return_to_npc
+    npc_id: "Benny the Builder"
+    dialogue_id: missing_verbs_missing_verbs_q01_benny_can_t_build_s04
+
+  - type: play_minigame
+    npc_id: "Benny the Builder"
+    difficulty: 1
+    dialogue_id: ""
+    instance_id: missing_verbs_q01_benny_can_t_build_minigame_2
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+
+  - type: play_minigame
+    npc_id: "Benny the Builder"
+    difficulty: 2
+    dialogue_id: ""
+    instance_id: missing_verbs_q01_benny_can_t_build_minigame_3
+    minigame_id: word_ordering
+    world_object_id: WoodenCart2_Solitude_Tower
+
+  - type: play_minigame
+    npc_id: "Benny the Builder"
+    difficulty: 4
+    dialogue_id: ""
+    instance_id: missing_verbs_q01_benny_can_t_build_minigame_4
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil

@@ -1,0 +1,48 @@
+quest:
+  id: missing_verbs__q03_don_t_let_him_guess
+  name: "Don't Let Him Guess!"
+  level_required: 1
+  giver_npc: Cannoneer
+  prerequisite: missing_verbs__q02_the_confused_guard
+  summary: "Restore the final action word before the Cannoneer makes a dangerous guess."
+  wait_for_npc_turn_in: false
+
+rewards: { xp: 0, items: [] }
+
+steps:
+  - type: reach_location
+    npc_id: Cannoneer
+    dialogue_id: ""
+    location_id: "Forsaken Cove"
+
+  - type: play_minigame
+    npc_id: Cannoneer
+    difficulty: 1
+    dialogue_id: ""
+    instance_id: q01_bridge_too_short_s2
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest1_BuildersHomeArea
+
+  - type: play_minigame
+    npc_id: Cannoneer
+    difficulty: 2
+    dialogue_id: ""
+    instance_id: q05_from_low_to_high_s3
+    minigame_id: word_ordering
+    world_object_id: WoodenCart2_Solitude_Tower
+
+  - type: play_minigame
+    npc_id: Cannoneer
+    difficulty: 2
+    dialogue_id: ""
+    instance_id: q06_adjective_challenge_s1
+    minigame_id: word_matching
+    world_object_id: Exam_Table1_Outside_Gate
+
+  - type: play_minigame
+    npc_id: Cannoneer
+    difficulty: 4
+    dialogue_id: ""
+    instance_id: missing_verbs_q03_don_t_let_him_guess_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest3_Forsaken_Cove

@@ -1,0 +1,746 @@
+{
+  "default_giver_external_id": "Benny the Builder",
+  "display_name": "The Missing Verbs",
+  "key": "missing_verbs",
+  "quests": [
+    {
+      "giver_external_id": "Benny the Builder",
+      "key": "missing_verbs__q01_benny_can_t_build_verbs",
+      "level_required": 50,
+      "name": "Benny Can't Build -  VERBS שיעור בית",
+      "position": 0,
+      "prerequisites": [],
+      "rewards": [
+        {
+          "amount": null,
+          "item_external_id": null,
+          "reward_type": "xp",
+          "scope": "quest",
+          "source_metadata": {
+            "local_draft": true
+          },
+          "step_key": null,
+          "xp_amount": 100
+        },
+        {
+          "amount": 20,
+          "item_external_id": "coin",
+          "reward_type": "item",
+          "scope": "quest",
+          "source_metadata": {
+            "local_draft": true
+          },
+          "step_key": null,
+          "xp_amount": null
+        }
+      ],
+      "source_metadata": {
+        "local_draft": true
+      },
+      "source_path": null,
+      "status": "draft",
+      "steps": [
+        {
+          "key": "missing_verbs__q01_benny_can_t_build_s03",
+          "payload": {
+            "npc_id": "Benny the Builder",
+            "difficulty": 1,
+            "dialogue_id": "",
+            "instance_id": "missing_verbs_q01_benny_can_t_build_minigame",
+            "minigame_id": "letter_ordering",
+            "instance_key": "missing_verbs_q01_benny_can_t_build_minigame",
+            "world_object_id": "Lost_Chest1_BuildersHomeArea"
+          },
+          "position": 2,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 2
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q01_benny_can_t_build_s04",
+          "payload": {
+            "npc_id": "Benny the Builder",
+            "dialogue_id": "missing_verbs_missing_verbs_q01_benny_can_t_build_s04"
+          },
+          "position": 3,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 3
+          },
+          "type": "return_to_npc"
+        },
+        {
+          "key": "missing_verbs__q01_benny_can_t_build_s05",
+          "payload": {
+            "npc_id": "Benny the Builder",
+            "difficulty": 1,
+            "dialogue_id": "",
+            "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_2",
+            "minigame_id": "letter_ordering",
+            "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_2",
+            "world_object_id": "Lost_Chest5_Silver_Fountain_Court"
+          },
+          "position": 4,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 4
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q01_benny_can_t_build_s06",
+          "payload": {
+            "npc_id": "Benny the Builder",
+            "difficulty": 2,
+            "dialogue_id": "",
+            "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_3",
+            "minigame_id": "word_ordering",
+            "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_3",
+            "world_object_id": "WoodenCart2_Solitude_Tower"
+          },
+          "position": 5,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 5
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q01_benny_can_t_build_s07",
+          "payload": {
+            "npc_id": "Benny the Builder",
+            "difficulty": 4,
+            "dialogue_id": "",
+            "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_4",
+            "minigame_id": "speak_aloud",
+            "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_4",
+            "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil"
+          },
+          "position": 6,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 6
+          },
+          "type": "play_minigame"
+        }
+      ],
+      "summary": "Help Benny restore the missing action words so the workers can build again.",
+      "wait_for_npc_turn_in": false,
+      "start_dialogue_id": "missing_verbs_missing_verbs_q01_benny_can_t_build_s01",
+      "turn_in_dialogue_id": null
+    },
+    {
+      "giver_external_id": "Main Gate Gaurd 1",
+      "key": "missing_verbs__q02_the_confused_guard",
+      "level_required": 1,
+      "name": "The Confused Guard",
+      "position": 1,
+      "prerequisites": [
+        "missing_verbs__q01_benny_can_t_build_verbs"
+      ],
+      "rewards": [],
+      "source_metadata": {
+        "local_draft": true
+      },
+      "source_path": null,
+      "status": "draft",
+      "steps": [
+        {
+          "key": "missing_verbs__q02_the_confused_guard_s02",
+          "payload": {
+            "npc_id": "Main Gate Gaurd 1",
+            "dialogue_id": "",
+            "location_id": "KingdomGate"
+          },
+          "position": 1,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 1
+          },
+          "type": "reach_location"
+        },
+        {
+          "key": "missing_verbs__q02_the_confused_guard_s03",
+          "payload": {
+            "npc_id": "Main Gate Gaurd 1",
+            "difficulty": 2,
+            "dialogue_id": "",
+            "instance_id": "missing_verbs_q02_the_confused_guard_minigame",
+            "minigame_id": "word_matching",
+            "instance_key": "missing_verbs_q02_the_confused_guard_minigame",
+            "world_object_id": "Exam_Table1_Outside_Gate"
+          },
+          "position": 2,
+          "rewards": [
+            {
+              "amount": null,
+              "item_external_id": null,
+              "reward_type": "xp",
+              "scope": "step",
+              "source_metadata": {
+                "local_draft": true
+              },
+              "step_key": "missing_verbs__q02_the_confused_guard_s03",
+              "xp_amount": 50
+            }
+          ],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 2
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q02_the_confused_guard_s05",
+          "payload": {
+            "npc_id": "Main Gate Gaurd 1",
+            "difficulty": 1,
+            "dialogue_id": "",
+            "instance_id": "q01_bridge_too_short_s2",
+            "minigame_id": "letter_ordering",
+            "instance_key": "q01_bridge_too_short_s2",
+            "reward_amount": 20,
+            "reward_item_id": "coin",
+            "world_object_id": "Lost_Chest1_BuildersHomeArea"
+          },
+          "position": 3,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 4
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q02_the_confused_guard_s06",
+          "payload": {
+            "npc_id": "Main Gate Gaurd 1",
+            "difficulty": 2,
+            "dialogue_id": "",
+            "instance_id": "q05_from_low_to_high_s3",
+            "minigame_id": "word_ordering",
+            "instance_key": "q05_from_low_to_high_s3",
+            "reward_item_id": "coin",
+            "world_object_id": "WoodenCart2_Solitude_Tower"
+          },
+          "position": 4,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 5
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q02_the_confused_guard_s07",
+          "payload": {
+            "npc_id": "Main Gate Gaurd 1",
+            "difficulty": 0,
+            "dialogue_id": "",
+            "instance_id": "q02_whispering_stone_s2",
+            "minigame_id": "speak_aloud",
+            "instance_key": "q02_whispering_stone_s2",
+            "reward_item_id": "coin",
+            "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil"
+          },
+          "position": 5,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 6
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q02_the_confused_guard_s04",
+          "payload": {
+            "npc_id": "Main Gate Gaurd 1",
+            "dialogue_id": "missing_verbs_missing_verbs_q02_the_confused_guard_s04"
+          },
+          "position": 6,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 3
+          },
+          "type": "return_to_npc"
+        }
+      ],
+      "summary": "Help the gate guard restore the action words in the royal commands.",
+      "wait_for_npc_turn_in": false,
+      "start_dialogue_id": "missing_verbs_missing_verbs_q02_the_confused_guard_s01",
+      "turn_in_dialogue_id": null
+    },
+    {
+      "giver_external_id": "Cannoneer",
+      "key": "missing_verbs__q03_don_t_let_him_guess",
+      "level_required": 1,
+      "name": "Don't Let Him Guess!",
+      "position": 2,
+      "prerequisites": [
+        "missing_verbs__q02_the_confused_guard"
+      ],
+      "rewards": [],
+      "source_metadata": {
+        "local_draft": true
+      },
+      "source_path": null,
+      "status": "draft",
+      "steps": [
+        {
+          "key": "missing_verbs__q03_don_t_let_him_guess_s02",
+          "payload": {
+            "npc_id": "Cannoneer",
+            "dialogue_id": "",
+            "location_id": "Forsaken Cove"
+          },
+          "position": 0,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 1
+          },
+          "type": "reach_location"
+        },
+        {
+          "key": "missing_verbs__q03_don_t_let_him_guess_s05",
+          "payload": {
+            "npc_id": "Cannoneer",
+            "difficulty": 1,
+            "dialogue_id": "",
+            "instance_id": "q01_bridge_too_short_s2",
+            "minigame_id": "letter_ordering",
+            "instance_key": "q01_bridge_too_short_s2",
+            "world_object_id": "Lost_Chest1_BuildersHomeArea"
+          },
+          "position": 1,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 4
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q03_don_t_let_him_guess_s06",
+          "payload": {
+            "npc_id": "Cannoneer",
+            "difficulty": 2,
+            "dialogue_id": "",
+            "instance_id": "q05_from_low_to_high_s3",
+            "minigame_id": "word_ordering",
+            "instance_key": "q05_from_low_to_high_s3",
+            "world_object_id": "WoodenCart2_Solitude_Tower"
+          },
+          "position": 2,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 5
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q03_don_t_let_him_guess_s07",
+          "payload": {
+            "npc_id": "Cannoneer",
+            "difficulty": 2,
+            "dialogue_id": "",
+            "instance_id": "q06_adjective_challenge_s1",
+            "minigame_id": "word_matching",
+            "instance_key": "q06_adjective_challenge_s1",
+            "world_object_id": "Exam_Table1_Outside_Gate"
+          },
+          "position": 3,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 6
+          },
+          "type": "play_minigame"
+        },
+        {
+          "key": "missing_verbs__q03_don_t_let_him_guess_s03",
+          "payload": {
+            "npc_id": "Cannoneer",
+            "difficulty": 4,
+            "dialogue_id": "",
+            "instance_id": "missing_verbs_q03_don_t_let_him_guess_minigame",
+            "minigame_id": "speak_aloud",
+            "instance_key": "missing_verbs_q03_don_t_let_him_guess_minigame",
+            "world_object_id": "Lost_Chest3_Forsaken_Cove"
+          },
+          "position": 4,
+          "rewards": [],
+          "source_metadata": {
+            "local_draft": true,
+            "source_position": 2
+          },
+          "type": "play_minigame"
+        }
+      ],
+      "summary": "Restore the final action word before the Cannoneer makes a dangerous guess.",
+      "wait_for_npc_turn_in": false,
+      "start_dialogue_id": "missing_verbs_missing_verbs_q03_don_t_let_him_guess_s01",
+      "turn_in_dialogue_id": "missing_verbs_missing_verbs_q03_don_t_let_him_guess_turn_in"
+    }
+  ],
+  "theme": "Verbs — action words: identify, spell, choose, and say common English verbs in simple commands.",
+  "dialogues": {
+    "missing_verbs_missing_verbs_q01_benny_can_t_build_s01": {
+      "speaker": "Benny the Builder",
+      "lines": [
+        "Hey! Over here! I need your help! היי! לכאן! אני צריך את העזרה שלך!",
+        "I have wood, tools and workers, but nobody knows what to DO. \nיש לי עצים, כלים ועובדים, אבל אף אחד לא יודע מה לעשות.",
+        "Look at this order:___the wall.\n תראה את הפקודה:___את החומה.",
+        "פועל = Verb \nהוא an action word - מילת פעולה\nHelp me restore the missing verbs!\nעזרו לי לשחזר את הפעלים החסרים!"
+      ]
+    },
+    "missing_verbs_missing_verbs_q01_benny_can_t_build_s04": {
+      "speaker": "Benny the Builder",
+      "lines": [
+        "You're back! Let's see what you found.\nחזרת! בוא נראה מה מצאת.",
+        "BUILD the wall! Now the workers know what to do. BUILD \nלִבנוֹת את החומה! עכשיו הפועלים יודעים מה לעשות - לִבנוֹת",
+        "Great job! You restored the missing verbs. כל הכבוד! שחזרתם את הפועל החסר.",
+        "These orders came from the castle. Check the Gate Guard next. \nהפקודות הגיעו מהטירה. תבדקו את שומר השער."
+      ]
+    },
+    "missing_verbs_missing_verbs_q02_the_confused_guard_s01": {
+      "speaker": "Main Gate Gaurd 1",
+      "lines": [
+        "Oh! The royal order is missing an action word. \nאוי! בפקודה חסרה מילת פעולה.",
+        "The knight must___the gate. \nהאביר חייב___את השער.",
+        "Choose the action word.\nבחרו את מילת הפעולה.",
+        "Go to the training ground and find the missing verbs.\nלך למגרש האימונים ומצא את הפעלים החסרים."
+      ]
+    },
+    "missing_verbs_missing_verbs_q02_the_confused_guard_s04": {
+      "speaker": "Main Gate Gaurd 1",
+      "lines": [
+        "You're back!\nחזרת!\n OPEN the gate - פתחו את השער\n HELP the king - עזור למלך",
+        "JUMP over the box - קפיצה מעל הקופסה\nFIND the treasure - מצא את האוצר\nעכשיו הפקודות הגיוניות!",
+        "עכשיו תבדקו את Cannoneer לפני שהוא מנחש מה לעשות עם התותח."
+      ]
+    },
+    "missing_verbs_missing_verbs_q03_don_t_let_him_guess_s01": {
+      "speaker": "Cannoneer",
+      "lines": [
+        "אה! מילת הפעולה נעלמה. אולי אני צריך לחבק את התותח? תעזור לי לשחזר את הפועל האמיתי!"
+      ]
+    },
+    "missing_verbs_missing_verbs_q03_don_t_let_him_guess_turn_in": {
+      "speaker": "Cannoneer",
+      "lines": [
+        "FIRE the cannon! You restored the final verb.\n ירית בתותח ושחזרת את הפועל האחרון!",
+        "פועל מתאר פעולה - עכשיו הממלכה יכולה לעבוד שוב!\nוכל אחד מאנשי הממלכה יודע בדיוק איזה פעולה לעשות!    תודה רבה לכם!"
+      ]
+    }
+  },
+  "minigames": {
+    "missing_verbs_q01_benny_can_t_build_minigame": {
+      "minigame_id": "letter_ordering",
+      "instruction": null,
+      "tasks": [],
+      "target": null,
+      "variant": "word_spelling",
+      "success": null,
+      "params": {
+        "prompt": "Build the missing verb:\nבנו את המילה החסרה: build = לבנות.\n___the wall. ",
+        "targetWord": "BUILD",
+        "customDistractors": [],
+        "wordRevealDatabase": "",
+        "extraDistractorCount": 2
+      }
+    },
+    "missing_verbs_q01_benny_can_t_build_minigame_2": {
+      "minigame_id": "letter_ordering",
+      "instruction": null,
+      "tasks": [],
+      "target": null,
+      "variant": "word_spelling",
+      "success": null,
+      "params": {
+        "prompt": "אייתו את הפועל  - DO לעשות.\nSpell the verb DO:___the action. ",
+        "targetWord": "DO",
+        "customDistractors": [],
+        "wordRevealDatabase": "",
+        "extraDistractorCount": 2
+      }
+    },
+    "missing_verbs_q01_benny_can_t_build_minigame_3": {
+      "minigame_id": "word_ordering",
+      "instruction": null,
+      "tasks": [],
+      "target": null,
+      "variant": "sentence_building",
+      "success": null,
+      "params": {
+        "prompt": "סדרו את המילים לפי הסדר כדי ליצור משפט נכון באנגלית.",
+        "distractorWords": [
+          "walk",
+          "take",
+          "boy"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          4
+        ],
+        "wordRevealDatabase": "",
+        "englishWordsInOrder": [
+          "I ",
+          "need ",
+          "to ",
+          "open",
+          "it"
+        ]
+      }
+    },
+    "missing_verbs_q01_benny_can_t_build_minigame_4": {
+      "minigame_id": "speak_aloud",
+      "instruction": null,
+      "tasks": [],
+      "target": null,
+      "variant": "single_word",
+      "success": null,
+      "params": {
+        "prompt": "Say the verb: HELP.\n אמרו בקול את הפועל HELP.",
+        "targetWords": [
+          "HELP"
+        ],
+        "targetPhrase": "HELP",
+        "referenceClip": "",
+        "allowFuzzyMatch": true,
+        "wordRevealDatabase": "",
+        "silenceTimeoutSeconds": 1.4
+      }
+    },
+    "missing_verbs_q02_the_confused_guard_minigame": {
+      "minigame_id": "word_matching",
+      "instruction": null,
+      "tasks": [],
+      "target": null,
+      "variant": "word_to_image",
+      "success": null,
+      "params": {
+        "letters": [
+          {
+            "id": "letter_1",
+            "value": "o"
+          },
+          {
+            "id": "letter_2",
+            "value": "h"
+          },
+          {
+            "id": "letter_3",
+            "value": "f"
+          },
+          {
+            "id": "letter_4",
+            "value": "j"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "letter_1",
+            "image": "",
+            "fullWord": "open",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "letter_2",
+            "image": "",
+            "fullWord": "help",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "letter_3",
+            "image": "",
+            "fullWord": "find",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "letter_4",
+            "image": "",
+            "fullWord": "jump",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "q01_bridge_too_short_s2": {
+      "minigame_id": "letter_ordering",
+      "instruction": "סדרו את האותיות של LONG",
+      "tasks": [
+        "סדרו <strong>l, o, n, g</strong>",
+        "צרו <strong>long</strong> — ארוך"
+      ],
+      "target": "long",
+      "variant": "word_spelling",
+      "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק",
+      "params": {
+        "prompt": "תרשמו את הפועל לִמצוֹא.",
+        "targetWord": "find",
+        "customDistractors": [],
+        "wordRevealDatabase": "",
+        "extraDistractorCount": 2
+      }
+    },
+    "q05_from_low_to_high_s3": {
+      "minigame_id": "word_ordering",
+      "instruction": "סדרו את המשפט THE PLACE IS LOW",
+      "tasks": [
+        "סדרו <strong>The / place / is / low</strong>"
+      ],
+      "target": "The place is low.",
+      "variant": "sentence_building",
+      "success": "Power Stone אחד נוסף לתיק",
+      "params": {
+        "prompt": "השלימו את הפועל החסר במשפט - \nאני רוצה לעזור לך.",
+        "distractorWords": [
+          "take",
+          "run",
+          "jump"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          4
+        ],
+        "wordRevealDatabase": "Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset",
+        "englishWordsInOrder": [
+          "I",
+          "want",
+          "to ",
+          "help",
+          "you"
+        ]
+      }
+    },
+    "q02_whispering_stone_s2": {
+      "minigame_id": "speak_aloud",
+      "instruction": "אמרו HOT בקול",
+      "tasks": [
+        "הקשיבו להגייה",
+        "לחצו על המיקרופון ואמרו <strong>hot</strong>"
+      ],
+      "target": "hot",
+      "variant": "single_word",
+      "success": "HOT נקלט; Herbs אחד נוסף לתיק",
+      "params": {
+        "prompt": "תגידו  את הפועל לקחת באנגלית",
+        "targetWords": [
+          "take"
+        ],
+        "targetPhrase": "take",
+        "referenceClip": "",
+        "allowFuzzyMatch": true,
+        "wordRevealDatabase": "Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset",
+        "silenceTimeoutSeconds": 1
+      }
+    },
+    "q06_adjective_challenge_s1": {
+      "minigame_id": "word_matching",
+      "instruction": "השלימו את האות החסרה — SHORT / LONG / COLD / HOT",
+      "tasks": [
+        "_hort",
+        "_ong",
+        "_old",
+        "_ot"
+      ],
+      "target": "short, long, cold, hot",
+      "variant": "missing_letter_matching",
+      "success": "ארבע המילים הראשונות הושלמו",
+      "params": {
+        "letters": [
+          {
+            "id": "FIRE",
+            "value": "R"
+          },
+          {
+            "id": "TAKE",
+            "value": "A"
+          },
+          {
+            "id": "LOAD",
+            "value": "L"
+          },
+          {
+            "id": "BRING",
+            "value": "N"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "TAKE",
+            "image": "",
+            "fullWord": "TAKE",
+            "missingIndices": [
+              1
+            ]
+          },
+          {
+            "id": "FIRE",
+            "image": "",
+            "fullWord": "FIRE",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "BRING",
+            "image": "",
+            "fullWord": "BRING",
+            "missingIndices": [
+              3
+            ]
+          },
+          {
+            "id": "LOAD",
+            "image": "",
+            "fullWord": "LOAD",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "missing_verbs_q03_don_t_let_him_guess_minigame": {
+      "minigame_id": "speak_aloud",
+      "instruction": null,
+      "tasks": [],
+      "target": null,
+      "variant": "single_word",
+      "success": null,
+      "params": {
+        "prompt": "תגידו את הפועל אש!",
+        "targetWords": [
+          "FIRE"
+        ],
+        "targetPhrase": "",
+        "referenceClip": "",
+        "allowFuzzyMatch": true,
+        "wordRevealDatabase": "",
+        "silenceTimeoutSeconds": 1
+      }
+    }
+  }
+}
