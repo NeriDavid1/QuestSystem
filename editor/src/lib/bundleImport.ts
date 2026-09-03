@@ -76,7 +76,15 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   const stepIds = new Map<string, string>()
   for (const questDoc of questDocs) {
     const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); if (!questId) continue
-    for (const [index, stepDoc] of (Array.isArray(questDoc.steps) ? questDoc.steps : []).entries()) {
+    const sourceSteps = Array.isArray(questDoc.steps) ? questDoc.steps : []
+    const startStep = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
+    // The first NPC conversation is promoted to quest.start_dialogue_id above.
+    // Keep it out of the learning-step list so the editor does not show the
+    // same opening dialogue twice. Later NPC conversations remain real steps.
+    const visibleSteps = sourceSteps.filter((step: Record<string, any>, index: number) => !(
+      index === 0 && step.type === 'talk_to_npc' && step.payload?.dialogue_id === startStep?.payload?.dialogue_id && sourceSteps.length > 1
+    ))
+    for (const [index, stepDoc] of visibleSteps.entries()) {
       const id = makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
       steps.push({ id, quest_id: questId, key: String(stepDoc.key), position: index, step_type: String(stepDoc.type), payload: stepDoc.payload ?? {}, source_metadata: stepDoc.source_metadata ?? {} })
     }
@@ -92,7 +100,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   }
   const prerequisites: QuestPrerequisite[] = questDocs.flatMap((questDoc) => (questDoc.prerequisites ?? []).flatMap((key: string) => { const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); const prerequisiteQuestId = questIds.get(`${line.key}__${String(key)}`); return questId && prerequisiteQuestId ? [{ quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] : [] }))
 
-  const usedDialogueKeys = new Set<string>(); const usedMinigameKeys = new Set<string>()
+  const usedDialogueKeys = new Set<string>(quests.flatMap((quest) => [quest.start_dialogue_id, quest.turn_in_dialogue_id].filter((key): key is string => Boolean(key)))); const usedMinigameKeys = new Set<string>()
   for (const step of steps) { const p = step.payload; if (typeof p.dialogue_id === 'string') usedDialogueKeys.add(p.dialogue_id); if (typeof p.instance_id === 'string') usedMinigameKeys.add(p.instance_id); if (typeof p.instance_key === 'string') usedMinigameKeys.add(p.instance_key) }
   const dialogueByKey = recordMap(current.dialogues); const minigameByKey = recordMap(current.minigames)
   const dialogues: Dialogue[] = []; const dialogueLines: DialogueLine[] = []
