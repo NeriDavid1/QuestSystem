@@ -3886,6 +3886,7 @@ select:focus {
 
 @media (max-width: 1300px) {
   .editor-layout {
+    flex: 0 0 auto;
     grid-template-columns: 194px minmax(0, 1fr);
     grid-template-rows: auto auto;
     align-content: start;
