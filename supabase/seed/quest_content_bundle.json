@@ -4936,7 +4936,7 @@
     {
       "key": "noun_repair_q01_sentence",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: הספר נמצא על השולחן.",
       "tasks": [
         "The",
         "book",
@@ -4950,7 +4950,7 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: הספר נמצא על השולחן.",
         "translation": "הספר נמצא על השולחן",
         "englishWordsInOrder": [
           "The",
@@ -5284,7 +5284,7 @@
     {
       "key": "noun_repair_q02_sentence",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: לילד יש תיק אדום.",
       "tasks": [
         "The",
         "boy",
@@ -5298,7 +5298,7 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: לילד יש תיק אדום.",
         "translation": "לילד יש תיק אדום",
         "englishWordsInOrder": [
           "The",
@@ -5707,7 +5707,7 @@
     {
       "key": "noun_repair_q03_sentence",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: החקלאי מוכר תפוחים טריים.",
       "tasks": [
         "The",
         "farmer",
@@ -5720,7 +5720,7 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: החקלאי מוכר תפוחים טריים.",
         "translation": "החקלאי מוכר תפוחים טריים",
         "englishWordsInOrder": [
           "The",
@@ -6191,7 +6191,7 @@
     {
       "key": "noun_repair_q04_sentence",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: השף מחזיק כף.",
       "tasks": [
         "The",
         "chef",
@@ -6204,7 +6204,7 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: השף מחזיק כף.",
         "translation": "השף מחזיק כף",
         "englishWordsInOrder": [
           "The",
@@ -6598,7 +6598,7 @@
     {
       "key": "noun_repair_q05_sentence",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: המלכה יושבת על כס המלכות.",
       "tasks": [
         "The",
         "queen",
@@ -6612,7 +6612,7 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: המלכה יושבת על כס המלכות.",
         "translation": "המלכה יושבת על כס המלכות",
         "englishWordsInOrder": [
           "The",
@@ -7052,7 +7052,7 @@
     {
       "key": "noun_repair_q06_sentence",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: הכלב רואה את הטירה.",
       "tasks": [
         "The",
         "dog",
@@ -7065,7 +7065,7 @@
       "success": "המשפט נבנה נכון",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: הכלב רואה את הטירה.",
         "translation": "הכלב רואה את הטירה",
         "englishWordsInOrder": [
           "The",
@@ -8545,7 +8545,7 @@
     {
       "key": "q05_from_low_to_high_s3",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המקום נמוך.",
       "tasks": [
         "סדרו <strong>The / place / is / low</strong>"
       ],
@@ -8554,7 +8554,7 @@
       "success": "Power Stone אחד נוסף לתיק",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המקום נמוך.",
         "translation": "המקום נמוך",
         "englishWordsInOrder": [
           "The",
@@ -8593,7 +8593,7 @@
     {
       "key": "q05_from_low_to_high_s6",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: הבניין גבוה.",
       "tasks": [
         "סדרו <strong>The / building / is / high</strong>"
       ],
@@ -8602,7 +8602,7 @@
       "success": "Power Stone נוסף לתיק — כעת יש ארבעה",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: הבניין גבוה.",
         "translation": "הבניין גבוה",
         "englishWordsInOrder": [
           "The",
@@ -9142,7 +9142,7 @@
     {
       "key": "the_kingdoms_worst_day__q01_key_sentence",
       "locale": "he",
-      "instruction": "בנו משפט קצר לפי התרגום בעברית.",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המפתח פותח את השער.",
       "tasks": [
         "The",
         "key",
@@ -9155,7 +9155,7 @@
       "success": "המשפט ברור; המפתח פתח את השער.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט קצר לפי התרגום בעברית.",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המפתח פותח את השער.",
         "translation": "המפתח פותח את השער.",
         "englishWordsInOrder": [
           "The",
@@ -9275,7 +9275,7 @@
     {
       "key": "the_kingdoms_worst_day__q02_action_sentence",
       "locale": "he",
-      "instruction": "בנו את המשפט לפי התרגום בעברית.",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: אני מתקן את הכלי.",
       "tasks": [
         "I",
         "fix",
@@ -9287,7 +9287,7 @@
       "success": "המשפט ברור; Will יודע איזו פעולה לבצע.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו את המשפט לפי התרגום בעברית.",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: אני מתקן את הכלי.",
         "translation": "אני מתקן את הכלי.",
         "englishWordsInOrder": [
           "I",
@@ -9556,7 +9556,7 @@
     {
       "key": "the_kingdoms_worst_day__q03_dark_gate_sentence",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: השער החשוך נסגר.",
       "tasks": [
         "The",
         "dark",
@@ -9568,7 +9568,7 @@
       "success": "המשפט מתאר את השער בצורה מדויקת.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: השער החשוך נסגר.",
         "translation": "השער החשוך נסגר.",
         "englishWordsInOrder": [
           "The",
@@ -9593,7 +9593,7 @@
     {
       "key": "the_kingdoms_worst_day__q03_description_sentence",
       "locale": "he",
-      "instruction": "בנו משפט תיאור לפי התרגום בעברית.",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: העץ גדול.",
       "tasks": [
         "The",
         "tree",
@@ -9605,7 +9605,7 @@
       "success": "התיאור ברור; Painter יודעת איזה עץ לצייר.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט תיאור לפי התרגום בעברית.",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: העץ גדול.",
         "translation": "העץ גדול.",
         "englishWordsInOrder": [
           "The",
@@ -9723,7 +9723,7 @@
     {
       "key": "the_kingdoms_worst_day__q04_mixed_sentence_one",
       "locale": "he",
-      "instruction": "בנו משפט חדש לפי התרגום בעברית.",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: השער הגדול נפתח.",
       "tasks": [
         "The",
         "big",
@@ -9735,7 +9735,7 @@
       "success": "המשפט הראשון של לוח החירום ברור.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט חדש לפי התרגום בעברית.",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: השער הגדול נפתח.",
         "translation": "השער הגדול נפתח.",
         "englishWordsInOrder": [
           "The",
@@ -9760,7 +9760,7 @@
     {
       "key": "the_kingdoms_worst_day__q04_mixed_sentence_two",
       "locale": "he",
-      "instruction": "בנו משפט חדש לפי התרגום בעברית.",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: אני נושא את הספר הקטן.",
       "tasks": [
         "I",
         "carry",
@@ -9773,7 +9773,7 @@
       "success": "המשפט השני של לוח החירום ברור.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט חדש לפי התרגום בעברית.",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: אני נושא את הספר הקטן.",
         "translation": "אני נושא את הספר הקטן.",
         "englishWordsInOrder": [
           "I",
@@ -20621,5 +20621,5 @@
       ]
     }
   ],
-  "source_digest": "d6d5ed70c872ab0fd7d16f4ec2df1ab29ac0e43a3c90bc1e5f689778cc8f9305"
+  "source_digest": "201916b010fca7025bf893240da9ce6b15cb55c00867bfd6a94d53e6fa964470"
 }

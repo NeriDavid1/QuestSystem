@@ -46,10 +46,11 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 ## Preview and runtime display contract
 
-- Every preview must render the authored learner-facing `params.prompt` (or the authored minigame instruction when the prompt field is intentionally absent). The editor and public viewer must not invent, append, or infer explanatory text from answer data.
+- Every preview must render the authored learner-facing `params.prompt` (or the authored minigame instruction when the prompt field is intentionally absent) for Letter Ordering, Word Ordering, Speak Aloud, Word Matching, and every other minigame. The editor and public viewer must not invent, append, or infer explanatory text from answer data.
 - Do not use `translation`, `englishWordsInOrder`, `targetWord`, `targetPhrase`, `tasks`, or similar answer fields as a fallback instruction or as an extra learner-facing line. These fields remain runtime data and validation data.
 - If a translation or explanation is needed in the preview, write it explicitly inside the authored prompt. For Word Ordering, `params.translation` may remain available to the runtime, but it must not appear as a separate preview line unless the author included it in `params.prompt`.
 - Keep the editor preview, public viewer, and runtime aligned: no surface may silently add text that is not present in the authored prompt/instruction. A missing prompt must remain visibly missing or use a neutral placeholder, never reveal the answer.
+- For Letter Ordering and Word Ordering, put the learner's required meaning/action and any needed Hebrew translation in the authored prompt. For Speak Aloud, keep an explicit speaking instruction; if the target words are already displayed by the game, do not repeat them in the prompt.
 
 ## Questline and quest structure
 

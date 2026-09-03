@@ -59,7 +59,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q01_key_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט קצר לפי התרגום בעברית.
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המפתח פותח את השער.'
     tasks:
       - The
       - key
@@ -70,7 +70,7 @@ instances:
     variant: sentence_building
     success: המשפט ברור; המפתח פתח את השער.
     params:
-      prompt: בנו משפט קצר לפי התרגום בעברית.
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המפתח פותח את השער.'
       translation: המפתח פותח את השער.
       englishWordsInOrder: [The, key, opens, the, gate]
       preFilledIndices: [0, 2, 3, 4]
@@ -137,7 +137,7 @@ instances:
             - 4
   the_kingdoms_worst_day__q02_action_sentence:
     minigame_id: word_ordering
-    instruction: בנו את המשפט לפי התרגום בעברית.
+    instruction: 'בנו את המשפט לפי התרגום בעברית: אני מתקן את הכלי.'
     tasks:
       - I
       - fix
@@ -147,7 +147,7 @@ instances:
     variant: sentence_building
     success: המשפט ברור; Will יודע איזו פעולה לבצע.
     params:
-      prompt: בנו את המשפט לפי התרגום בעברית.
+      prompt: 'בנו את המשפט לפי התרגום בעברית: אני מתקן את הכלי.'
       translation: אני מתקן את הכלי.
       englishWordsInOrder:
         - I
@@ -238,7 +238,7 @@ instances:
             - 3
   the_kingdoms_worst_day__q03_description_sentence:
     minigame_id: word_ordering
-    instruction: בנו משפט תיאור לפי התרגום בעברית.
+    instruction: 'בנו את המשפט לפי התרגום בעברית: העץ גדול.'
     tasks:
       - The
       - tree
@@ -248,7 +248,7 @@ instances:
     variant: sentence_building
     success: התיאור ברור; Painter יודעת איזה עץ לצייר.
     params:
-      prompt: בנו משפט תיאור לפי התרגום בעברית.
+      prompt: 'בנו את המשפט לפי התרגום בעברית: העץ גדול.'
       translation: העץ גדול.
       englishWordsInOrder:
         - The
@@ -297,7 +297,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q03_dark_gate_sentence:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית.
+    instruction: 'השלימו את המשפט לפי התרגום בעברית: השער החשוך נסגר.'
     tasks:
       - The
       - dark
@@ -307,7 +307,7 @@ instances:
     variant: sentence_building
     success: המשפט מתאר את השער בצורה מדויקת.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית.
+      prompt: 'השלימו את המשפט לפי התרגום בעברית: השער החשוך נסגר.'
       translation: השער החשוך נסגר.
       englishWordsInOrder: [The, dark, gate, closes]
       preFilledIndices: [0, 2, 3]
@@ -315,7 +315,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q04_mixed_sentence_one:
     minigame_id: word_ordering
-    instruction: בנו משפט חדש לפי התרגום בעברית.
+    instruction: 'בנו את המשפט לפי התרגום בעברית: השער הגדול נפתח.'
     tasks:
       - The
       - big
@@ -325,7 +325,7 @@ instances:
     variant: sentence_building
     success: המשפט הראשון של לוח החירום ברור.
     params:
-      prompt: בנו משפט חדש לפי התרגום בעברית.
+      prompt: 'בנו את המשפט לפי התרגום בעברית: השער הגדול נפתח.'
       translation: השער הגדול נפתח.
       englishWordsInOrder:
         - The
@@ -342,7 +342,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q04_mixed_sentence_two:
     minigame_id: word_ordering
-    instruction: בנו משפט חדש לפי התרגום בעברית.
+    instruction: 'בנו את המשפט לפי התרגום בעברית: אני נושא את הספר הקטן.'
     tasks:
       - I
       - carry
@@ -353,7 +353,7 @@ instances:
     variant: sentence_building
     success: המשפט השני של לוח החירום ברור.
     params:
-      prompt: בנו משפט חדש לפי התרגום בעברית.
+      prompt: 'בנו את המשפט לפי התרגום בעברית: אני נושא את הספר הקטן.'
       translation: אני נושא את הספר הקטן.
       englishWordsInOrder:
         - I

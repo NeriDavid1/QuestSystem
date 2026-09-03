@@ -267,14 +267,14 @@ instances:
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s3:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המקום נמוך.'
     tasks:
     - סדרו <strong>The / place / is / low</strong>
     target: The place is low.
     variant: sentence_building
     success: Power Stone אחד נוסף לתיק
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המקום נמוך.'
       translation: המקום נמוך
       englishWordsInOrder:
       - The
@@ -300,14 +300,14 @@ instances:
       wordRevealDatabase: Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset
   q05_from_low_to_high_s6:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: הבניין גבוה.'
     tasks:
     - סדרו <strong>The / building / is / high</strong>
     target: The building is high.
     variant: sentence_building
     success: Power Stone נוסף לתיק — כעת יש ארבעה
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: הבניין גבוה.'
       translation: הבניין גבוה
       englishWordsInOrder:
       - The
