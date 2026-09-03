@@ -18,6 +18,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Create questline, quest, step, dialogue, and minigame-instance YAML.
 - Use only existing registry IDs.
 - Build a clear NPC → task → minigames → return/transition → final dialogue flow.
+- Do not duplicate an opening NPC dialogue in an immediate `talk_to_npc` step. Add another Talk to NPC step only for a distinct later conversation with new content.
 - Close completed quests at the correct NPC: give the reward immediately and use a congratulatory final dialogue. Send the learner to another NPC only when a real next quest follows.
 - Connect every minigame to the learning objective.
 - Do not add UI buttons or importer workarounds without a separate request.

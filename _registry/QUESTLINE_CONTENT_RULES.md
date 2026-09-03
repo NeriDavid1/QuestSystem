@@ -35,6 +35,7 @@ These rules are mandatory for every questline and minigame instance in this repo
 - A completed quest must end at its actual completion point. If it is the final quest, the turn-in NPC must not send the learner to another NPC to collect a reward or continue the finished quest. Give the reward immediately and close with thanks, praise, or a clear completion message. A direction to another NPC is allowed only for an intermediate quest with a real next quest.
 - Use several varied mini-games per quest when appropriate, keeping every mini-game tied to the lesson objective. Do not repeat identical tasks or mix unrelated vocabulary into a lesson.
 - Dialogue flow must not insert an unnecessary `talk_to_npc` step between the opening dialogue and the first active task; return to an NPC only when the story or handoff requires it.
+- If a quest already has an opening NPC dialogue, do not add an immediate `talk_to_npc` step that repeats the same dialogue. The opening dialogue is the conversation for that encounter; a separate `talk_to_npc` step is allowed only for a distinct, necessary later conversation with different content.
 - Use exact registry IDs for NPCs, world objects, minigame instances, items, and dialogues so the Unity importer can resolve every step.
 
 ## Speak Aloud
