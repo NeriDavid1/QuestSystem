@@ -29,9 +29,16 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 
 ## Required checks
 
-- Do not reveal an answer when the learner is expected to choose, match, or write it.
-- Provide a Hebrew translation for every sentence-building task.
+- Read and apply `_registry/QUESTLINE_CONTENT_RULES.md` before preparing every brief; the rules apply to every subject, not only nouns.
+- Use Hebrew-first learner instructions and only the English needed for the learning objective.
+- Do not reveal an English answer when the learner is expected to choose, match, spell, or order it. Give the Hebrew meaning and the action instead.
+- For Word Matching, plan complete words and valid missing letters; if multiple letters are missing, every missing letter must be available. Vary the gap positions instead of always removing the first letter.
+- For Word Ordering, plan a Hebrew translation, meaningful partial completion when appropriate, and unique runtime choices that include the correct open word exactly once. Do not put the correct open word into `distractorWords`.
+- For Speak Aloud, specify whether the learner says one word, a short list, or a complete sentence. Plan an explicit Hebrew speaking instruction that matches the exact unit being checked.
+- Provide a complete Hebrew translation for every English sentence used in a sentence-building or dialogue task.
 - Make the next NPC, item, or stage clear after each task.
+- Do not repeat an opening NPC dialogue as an immediate `talk_to_npc` step.
+- End the final quest with immediate rewards, thanks, and congratulations; do not send the learner elsewhere after the quest is complete.
 - Do not repeat minigames mechanically or create long identical sequences.
 - Identical minigame types may not appear more than twice in a row.
 
