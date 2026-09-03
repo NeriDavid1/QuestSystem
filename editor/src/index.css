@@ -1004,7 +1004,7 @@ code {
 
 .editor-layout {
   display: grid;
-  grid-template-columns: 218px minmax(0, 1fr) 320px;
+  grid-template-columns: 250px minmax(0, 1fr) 320px;
   min-height: 0;
   flex: 1;
 }
@@ -3889,7 +3889,7 @@ select:focus {
 @media (max-width: 1300px) {
   .editor-layout {
     flex: 0 0 auto;
-    grid-template-columns: 194px minmax(0, 1fr);
+    grid-template-columns: 250px minmax(0, 1fr);
     grid-template-rows: auto auto;
     align-content: start;
   }
