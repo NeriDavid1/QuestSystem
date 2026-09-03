@@ -1,7 +1,7 @@
 questline:
   id: missing_verbs
   npc_id: "Benny the Builder"
-  display_name: "The Missing Verbs"
+  display_name: "The Missing Verbs - שיעורי בית"
   theme: "Verbs — action words: identify, spell, choose, and say common English verbs in simple commands."
   quest_count: 3
   level_range: [1, 50]
