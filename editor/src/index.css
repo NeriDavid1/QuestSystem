@@ -1120,19 +1120,21 @@ code {
 .rail-line strong,
 .rail-line small {
   display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .rail-line strong {
   font-size: 10px;
+  line-height: 1.25;
 }
 
 .rail-line small {
   margin-top: 3px;
   color: #8e9aae;
   font-size: 8px;
+  line-height: 1.25;
 }
 
 .rail-status {
