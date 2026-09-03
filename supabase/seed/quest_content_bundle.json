@@ -14169,7 +14169,7 @@
     },
     {
       "key": "the_kingdoms_worst_day",
-      "display_name": "The Kingdom's Worst Day",
+      "display_name": "The Kingdom’s Worst Day - שיעור תרגול verbs nouns adjectivs",
       "theme": "Practice nouns, verbs, adjectives, sentence building, and speaking with clear Hebrew guidance and essential English.",
       "default_giver_external_id": "teacher_maya",
       "status": "draft",
@@ -19359,7 +19359,7 @@
     },
     {
       "key": "the_kingdoms_worst_day",
-      "display_name": "The Kingdom's Worst Day",
+      "display_name": "The Kingdom’s Worst Day - שיעור תרגול verbs nouns adjectivs",
       "theme": "Practice nouns, verbs, adjectives, sentence building, and speaking with clear Hebrew guidance and essential English.",
       "default_giver_external_id": "teacher_maya",
       "quests": [
@@ -19969,5 +19969,5 @@
       ]
     }
   ],
-  "source_digest": "52dbef93a4f2a25a2cbb9244d5453e18c2aa907c6a3cdcf8e6405deee4d6e732"
+  "source_digest": "e75fad0857d2145ef159e96cb33b14ce089297ee004c93946715364c884034af"
 }
