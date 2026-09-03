@@ -1437,11 +1437,23 @@ code {
   border-bottom: 1px solid var(--line);
 }
 
+.inspector-top > div:first-child,
+.inspector-scroll,
+.section-body,
+.step-editor,
+.step-dialogue-editor,
+.dialogue-line-row,
+.dialogue-line-row label {
+  min-width: 0;
+}
+
 .inspector-top h2 {
   max-width: 220px;
   margin-top: 5px;
   font-size: 18px;
   letter-spacing: -0.05em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .quest-number {
@@ -1546,6 +1558,7 @@ label {
 input,
 textarea,
 select {
+  min-width: 0;
   width: 100%;
   border: 1px solid #dfe5ef;
   border-radius: 7px;
@@ -1566,6 +1579,14 @@ textarea {
   padding: 8px 9px;
   resize: vertical;
   line-height: 1.5;
+  overflow-x: hidden;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+input {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 input:hover,
@@ -1966,6 +1987,10 @@ select:focus {
 
 .dialogue-line-row label {
   min-width: 0;
+}
+
+.dialogue-line-row textarea {
+  max-width: 100%;
 }
 
 .dialogue-line-actions {
