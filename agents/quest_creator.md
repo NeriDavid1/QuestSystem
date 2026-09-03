@@ -31,6 +31,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Verify Word Matching letters, wordTasks, valid indices, and fragment/full-word alignment.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the universal rules.
 - For Word Ordering, ensure the combined runtime choices have unique words, include the exact correct open word once, and keep that correct word out of `distractorWords`.
+- When only one word is open and the other sentence words are pre-filled, write the complete natural Hebrew translation of the full sentence in `params.translation` and make the Hebrew prompt explicitly say to choose the missing word according to that translation. Do not reduce the hint to a translation of the missing word or reveal the English answer.
 - For Speak Aloud, ensure the instruction explicitly asks the learner to speak and matches the exact checked unit: one word, a word list, or a complete sentence.
 - Preserve pedagogical validity from the approved plan: tasks must require the target skill, use plausible distractors, and not be solvable by guessing or superficial cues.
 - Run the local importer/build before handing over the result.

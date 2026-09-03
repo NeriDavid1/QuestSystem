@@ -36,6 +36,7 @@ These rules are mandatory for every questline and minigame instance in this repo
 - When a Word Ordering task leaves a word open, provide `params.distractorWords` with a small choice set (for example, three words) and keep the English word array as runtime data.
 - Every Word Ordering choice list must contain unique words: never show the same option more than once. The combined runtime choices must include the exact correct word needed for the open position exactly once; `distractorWords` must contain only unique, intentional wrong options and must not repeat the correct open word.
 - Word Ordering tasks must include a Hebrew translation in `params.translation`.
+- When a Word Ordering task leaves only one word open while the other words are pre-filled, provide the complete natural Hebrew translation of the full sentence and explicitly tell the learner to infer and choose the missing word from that sentence translation. The translation should support understanding of the whole sentence, not only define the missing word; do not reveal the English answer in the prompt.
 
 ## Language and answer disclosure
 

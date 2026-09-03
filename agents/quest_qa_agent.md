@@ -13,6 +13,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Word Matching: gaps use deterministic pseudo-random distribution rather than always using index 0.
 - Letter Ordering: the Hebrew prompt gives the meaning and requires the English answer without revealing the English word.
 - Word Ordering: Hebrew translation exists; preFilledIndices are valid; partial sentences and distractorWords are used when appropriate.
+- Word Ordering context: when exactly one word is open and the remaining words are pre-filled, verify that `params.translation` is a complete natural Hebrew translation of the entire sentence and that the Hebrew prompt tells the learner to infer the missing word from that full translation. Fail prompts that define only the missing word or reveal the English answer.
 - Word Ordering: combined runtime choices contain no duplicates, include the exact correct open word once, and do not repeat it in `distractorWords`.
 - Speak Aloud: English targets are shown because the learner must pronounce them; the instruction is not an unintended sentence.
 - Speak Aloud: the instruction explicitly asks the learner to speak, uses singular/plural/sentence wording correctly, and matches the exact recognition target; a long displayed sentence must not be checked as only one word.

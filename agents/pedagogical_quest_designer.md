@@ -34,6 +34,7 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Do not reveal an English answer when the learner is expected to choose, match, spell, or order it. Give the Hebrew meaning and the action instead.
 - For Word Matching, plan complete words and valid missing letters; if multiple letters are missing, every missing letter must be available. Vary the gap positions instead of always removing the first letter.
 - For Word Ordering, plan a Hebrew translation, meaningful partial completion when appropriate, and unique runtime choices that include the correct open word exactly once. Do not put the correct open word into `distractorWords`.
+- When only one word is left open in an otherwise pre-filled Word Ordering sentence, plan the complete natural Hebrew translation of the whole sentence and a clear Hebrew instruction to infer the missing word from that translation. This gives context for all words without revealing the English answer.
 - For Speak Aloud, specify whether the learner says one word, a short list, or a complete sentence. Plan an explicit Hebrew speaking instruction that matches the exact unit being checked.
 - Provide a complete Hebrew translation for every English sentence used in a sentence-building or dialogue task.
 - Make the next NPC, item, or stage clear after each task.

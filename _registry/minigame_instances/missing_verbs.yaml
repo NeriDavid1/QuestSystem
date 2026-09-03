@@ -14,13 +14,13 @@ instances:
       customDistractors: []
   missing_verbs_q01_sentence_open:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.
+    instruction: 'השלימו את המשפט לפי התרגום המלא בעברית: "אני צריך לפתוח אותו." בחרו את המילה החסרה לפי המשפט.'
     tasks: [I, need, to, open, it]
     target: "I need to open it."
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.
+      prompt: 'השלימו את המשפט לפי התרגום המלא בעברית: "אני צריך לפתוח אותו." בחרו את המילה החסרה לפי המשפט.'
       translation: אני צריך לפתוח אותו.
       englishWordsInOrder: [I, need, to, open, it]
       preFilledIndices: [0, 1, 2, 4]
@@ -103,13 +103,13 @@ instances:
       referenceClip: ''
   missing_verbs_q02_sentence_jump:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.
+    instruction: 'השלימו את המשפט לפי התרגום המלא בעברית: "השומר יכול לקפוץ גבוה." בחרו את המילה החסרה לפי המשפט.'
     tasks: [The, guard, can, jump, high]
     target: "The guard can jump high."
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.
+      prompt: 'השלימו את המשפט לפי התרגום המלא בעברית: "השומר יכול לקפוץ גבוה." בחרו את המילה החסרה לפי המשפט.'
       translation: השומר יכול לקפוץ גבוה.
       englishWordsInOrder: [The, guard, can, jump, high]
       preFilledIndices: [0, 1, 2, 4]
@@ -128,13 +128,13 @@ instances:
       customDistractors: []
   missing_verbs_q03_sentence_fire:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.
+    instruction: 'השלימו את המשפט לפי התרגום המלא בעברית: "התותח יכול לירות עכשיו." בחרו את המילה החסרה לפי המשפט.'
     tasks: [The, cannon, can, fire, now]
     target: "The cannon can fire now."
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.
+      prompt: 'השלימו את המשפט לפי התרגום המלא בעברית: "התותח יכול לירות עכשיו." בחרו את המילה החסרה לפי המשפט.'
       translation: התותח יכול לירות עכשיו.
       englishWordsInOrder: [The, cannon, can, fire, now]
       preFilledIndices: [0, 1, 2, 4]

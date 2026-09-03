@@ -24,7 +24,7 @@ steps:
     difficulty: 2
     success_required: true
     instance_id: missing_verbs_q01_sentence_open
-    display_text: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.
+    display_text: 'השלימו את המשפט לפי התרגום המלא בעברית: "אני צריך לפתוח אותו." בחרו את המילה החסרה לפי המשפט.'
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest1_BuildersHomeArea

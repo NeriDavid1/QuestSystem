@@ -4768,7 +4768,7 @@
     {
       "key": "missing_verbs_q01_sentence_open",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.",
+      "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: \"אני צריך לפתוח אותו.\" בחרו את המילה החסרה לפי המשפט.",
       "tasks": [
         "I",
         "need",
@@ -4781,7 +4781,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.",
+        "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: \"אני צריך לפתוח אותו.\" בחרו את המילה החסרה לפי המשפט.",
         "translation": "אני צריך לפתוח אותו.",
         "englishWordsInOrder": [
           "I",
@@ -4927,7 +4927,7 @@
     {
       "key": "missing_verbs_q02_sentence_jump",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.",
+      "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: \"השומר יכול לקפוץ גבוה.\" בחרו את המילה החסרה לפי המשפט.",
       "tasks": [
         "The",
         "guard",
@@ -4940,7 +4940,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.",
+        "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: \"השומר יכול לקפוץ גבוה.\" בחרו את המילה החסרה לפי המשפט.",
         "translation": "השומר יכול לקפוץ גבוה.",
         "englishWordsInOrder": [
           "The",
@@ -5085,7 +5085,7 @@
     {
       "key": "missing_verbs_q03_sentence_fire",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.",
+      "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: \"התותח יכול לירות עכשיו.\" בחרו את המילה החסרה לפי המשפט.",
       "tasks": [
         "The",
         "cannon",
@@ -5098,7 +5098,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.",
+        "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: \"התותח יכול לירות עכשיו.\" בחרו את המילה החסרה לפי המשפט.",
         "translation": "התותח יכול לירות עכשיו.",
         "englishWordsInOrder": [
           "The",
@@ -13213,7 +13213,7 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_f96fbdef_2",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_31c7743b_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13222,7 +13222,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "missing_verbs_q01_sentence_open",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.",
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית: \"אני צריך לפתוח אותו.\" בחרו את המילה החסרה לפי המשפט.",
                 "instance_key": "missing_verbs_q01_sentence_open"
               },
               "source_metadata": {
@@ -13396,7 +13396,7 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_1b96b4ab_4",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_155c3273_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -13405,7 +13405,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "missing_verbs_q02_sentence_jump",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.",
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית: \"השומר יכול לקפוץ גבוה.\" בחרו את המילה החסרה לפי המשפט.",
                 "instance_key": "missing_verbs_q02_sentence_jump"
               },
               "source_metadata": {
@@ -13484,7 +13484,7 @@
           ],
           "steps": [
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_a857f196_1",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_a4db6245_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -13493,7 +13493,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "missing_verbs_q03_sentence_fire",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.",
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית: \"התותח יכול לירות עכשיו.\" בחרו את המילה החסרה לפי המשפט.",
                 "instance_key": "missing_verbs_q03_sentence_fire"
               },
               "source_metadata": {
@@ -19058,7 +19058,7 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_f96fbdef_2",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_31c7743b_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -19067,7 +19067,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "missing_verbs_q01_sentence_open",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.",
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית: \"אני צריך לפתוח אותו.\" בחרו את המילה החסרה לפי המשפט.",
                 "instance_key": "missing_verbs_q01_sentence_open"
               },
               "source_metadata": {
@@ -19241,7 +19241,7 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_1b96b4ab_4",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_155c3273_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -19250,7 +19250,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "missing_verbs_q02_sentence_jump",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.",
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית: \"השומר יכול לקפוץ גבוה.\" בחרו את המילה החסרה לפי המשפט.",
                 "instance_key": "missing_verbs_q02_sentence_jump"
               },
               "source_metadata": {
@@ -19329,7 +19329,7 @@
           ],
           "steps": [
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_a857f196_1",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_a4db6245_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -19338,7 +19338,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "missing_verbs_q03_sentence_fire",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.",
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית: \"התותח יכול לירות עכשיו.\" בחרו את המילה החסרה לפי המשפט.",
                 "instance_key": "missing_verbs_q03_sentence_fire"
               },
               "source_metadata": {
@@ -22108,5 +22108,5 @@
       ]
     }
   ],
-  "source_digest": "698855723376532ea1932fe0b8e7a6743a52af449386e52ed0d0966e6cc68073"
+  "source_digest": "be8f6d165e261bd94e818fa776c87e26ef7a749759f6badd2333b89964124a81"
 }
