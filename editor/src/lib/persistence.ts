@@ -94,7 +94,13 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
     if (isFunctionMissingError(error)) {
       return saveViaClient(payload)
     }
-    if (error.message?.includes('CONFLICT')) throw new SaveConflictError()
+    if (error.message?.includes('CONFLICT')) {
+      // A confirmed overwrite must remain usable while a deployed RPC is older
+      // than the repository migration that added p_force. The client fallback
+      // is scoped to this questline and the rows touched by this session.
+      if (payload.force) return saveViaClient(payload)
+      throw new SaveConflictError()
+    }
     throw error
   }
   const result = data as { questline_id?: string; updated_at?: string } | null
