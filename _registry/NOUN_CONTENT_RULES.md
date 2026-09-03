@@ -39,3 +39,17 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 - Each Speak Aloud instance may test one word or a short list of words, but never an unintended sentence.
 - The player-facing instruction should be `אמרו את המילים הבאות בקול` or equivalent Hebrew wording. The instruction must not repeat the words when the game UI already displays them below; the target list remains runtime data.
+
+## Local-to-site import
+
+For every request to upload a local questline to the website, follow this repository procedure:
+
+1. Run `python scripts/import_yaml_to_supabase.py` to validate the YAML source and generate the bundle/seed artifacts.
+2. Run `python scripts/build_all.py` and confirm that the build completes without errors.
+3. Commit and push the source plus generated bundle to `main`.
+4. Wait for the GitHub Pages workflow for the pushed commit to complete successfully.
+5. In a fresh browser tab, open `https://neridavid1.github.io/QuestSystem/editor/?load=<questline-key>&v=<commit-sha>` so the existing editor importer loads the local revision. Use a new cache-buster on every deployment.
+6. Verify the imported title, quest count, and representative step/minigame in the editor. If the command does not fire, select another questline and repeat the navigation once the editor selection is ready.
+7. If an existing empty or duplicate database record prevents replacement, request confirmation before deleting that exact record; never perform an unrequested destructive delete.
+
+This is the standard method for all subjects and questlines. It imports a draft into the editor; a public publish must be separately requested and verified.
