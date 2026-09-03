@@ -27,11 +27,10 @@ export function EditorWorkspace() {
   // keeps the authoring control out of the learner-facing UI.
   useEffect(() => {
     const sourceKey = new URLSearchParams(window.location.search).get('load')
-    // The editor data is loaded asynchronously from Supabase. Do not consume
-    // the command while the target line is still absent, otherwise the bundle
-    // can be applied to the default line or be overwritten by the initial load.
+    // The editor data is loaded asynchronously from Supabase. Wait for a
+    // selected line before consuming the command so an absent target can be
+    // created by importBundle without applying the bundle too early.
     if (commandConsumed.current || !authReady || !selectedLine || !sourceKey) return
-    if (!data.questlines.some((line) => line.key === sourceKey)) return
     commandConsumed.current = true
     window.history.replaceState({}, '', window.location.pathname)
     void loadBundle(sourceKey)
