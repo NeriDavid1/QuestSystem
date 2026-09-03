@@ -10,7 +10,7 @@ import { Icon } from '../common/Icon'
 
 export function EditorWorkspace() {
   const t = useT()
-  const { data, issues, dirty, saving, publishing, saveDraft, importBundle, notify, selectedLine, setShowPublishConfirm, setView } = useEditorStore()
+  const { data, issues, dirty, saving, publishing, saveDraft, importBundle, notify, authReady, selectedLine, setShowPublishConfirm, setView } = useEditorStore()
   const commandConsumed = useRef(false)
 
   const loadBundle = async (sourceKey: string) => {
@@ -26,13 +26,16 @@ export function EditorWorkspace() {
   // Internal assistant command: /editor/?load=<questline-key>
   // keeps the authoring control out of the learner-facing UI.
   useEffect(() => {
-    if (commandConsumed.current || !selectedLine) return
     const sourceKey = new URLSearchParams(window.location.search).get('load')
-    if (!sourceKey) return
+    // The editor data is loaded asynchronously from Supabase. Do not consume
+    // the command while the target line is still absent, otherwise the bundle
+    // can be applied to the default line or be overwritten by the initial load.
+    if (commandConsumed.current || !authReady || !selectedLine || !sourceKey) return
+    if (!data.questlines.some((line) => line.key === sourceKey)) return
     commandConsumed.current = true
     window.history.replaceState({}, '', window.location.pathname)
     void loadBundle(sourceKey)
-  }, [selectedLine, importBundle, notify])
+  }, [authReady, data.questlines, selectedLine, importBundle, notify])
 
   if (data.questlines.length === 0) {
     return (
