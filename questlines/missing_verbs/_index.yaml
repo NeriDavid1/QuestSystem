@@ -2,23 +2,23 @@ questline:
   id: missing_verbs
   npc_id: "Benny the Builder"
   display_name: "The Missing Verbs - שיעורי בית"
-  theme: "Verbs — action words: identify, spell, choose, and say common English verbs in simple commands."
+  theme: "Practice common English action words by spelling, choosing, ordering, and saying them."
   quest_count: 3
-  level_range: [1, 50]
+  level_range: [1, 1]
 
 quests:
   - id: missing_verbs__q01_benny_can_t_build_verbs
-    name: "Benny Can't Build -  VERBS שיעור בית"
-    level: 50
+    name: "Benny Can't Build"
+    level: 1
     prerequisite: null
     rewards: { xp: 100, items: [{ id: coin, amount: 20 }] }
   - id: missing_verbs__q02_the_confused_guard
     name: "The Confused Guard"
     level: 1
     prerequisite: missing_verbs__q01_benny_can_t_build_verbs
-    rewards: { xp: 0, items: [] }
+    rewards: { xp: 100, items: [{ id: coin, amount: 10 }] }
   - id: missing_verbs__q03_don_t_let_him_guess
     name: "Don't Let Him Guess!"
     level: 1
     prerequisite: missing_verbs__q02_the_confused_guard
-    rewards: { xp: 0, items: [] }
+    rewards: { xp: 150, items: [{ id: coin, amount: 15 }] }

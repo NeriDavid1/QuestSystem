@@ -4,45 +4,43 @@ quest:
   level_required: 1
   giver_npc: Cannoneer
   prerequisite: missing_verbs__q02_the_confused_guard
-  summary: "Restore the final action word before the Cannoneer makes a dangerous guess."
+  summary: "עזרו לתותחן לבחור את פועל הפעולה הנכון."
   wait_for_npc_turn_in: false
-
-rewards: { xp: 0, items: [] }
-
+rewards: { xp: 150, items: [{ id: coin, amount: 15 }] }
 steps:
-  - type: reach_location
+  - type: talk_to_npc
     npc_id: Cannoneer
-    dialogue_id: ""
-    location_id: "Forsaken Cove"
-
+    dialogue_id: missing_verbs_q03_start
   - type: play_minigame
-    npc_id: Cannoneer
-    difficulty: 1
-    dialogue_id: ""
-    instance_id: q01_bridge_too_short_s2
-    minigame_id: letter_ordering
-    world_object_id: Lost_Chest1_BuildersHomeArea
-
-  - type: play_minigame
-    npc_id: Cannoneer
-    difficulty: 2
-    dialogue_id: ""
-    instance_id: q05_from_low_to_high_s3
     minigame_id: word_ordering
-    world_object_id: WoodenCart2_Solitude_Tower
-
+    world_object_id: Lost_Chest3_Forsaken_Cove
+    difficulty: 3
+    success_required: true
+    instance_id: missing_verbs_q03_sentence_fire
+    display_text: השלימו את המשפט לפי התרגום בעברית.
   - type: play_minigame
-    npc_id: Cannoneer
-    difficulty: 2
-    dialogue_id: ""
-    instance_id: q06_adjective_challenge_s1
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest3_Forsaken_Cove
+    difficulty: 3
+    success_required: true
+    instance_id: missing_verbs_q03_spell_fire
+    display_text: כתבו באנגלית את המילה שפירושה לירות.
+  - type: play_minigame
     minigame_id: word_matching
-    world_object_id: Exam_Table1_Outside_Gate
-
+    world_object_id: Lost_Chest3_Forsaken_Cove
+    difficulty: 3
+    success_required: true
+    instance_id: missing_verbs_q03_match_actions
+    display_text: השלימו את האות החסרה בכל פועל פעולה.
   - type: play_minigame
-    npc_id: Cannoneer
-    difficulty: 4
-    dialogue_id: ""
-    instance_id: missing_verbs_q03_don_t_let_him_guess_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest3_Forsaken_Cove
+    difficulty: 4
+    success_required: true
+    instance_id: missing_verbs_q03_say_fire
+    display_text: אמרו את המילה הבאה באנגלית בקול.
+  - type: return_to_npc
+    npc_id: Cannoneer
+    dialogue_id: missing_verbs_q03_finish
+    success_required: true
+    display_text: חזרו לתותחן לסיום שיעורי הבית.

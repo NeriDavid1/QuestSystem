@@ -3279,7 +3279,7 @@
       ]
     },
     {
-      "key": "missing_verbs_missing_verbs_q01_benny_can_t_build_s01",
+      "key": "missing_verbs_q01_finish",
       "speaker_external_id": "Benny the Builder",
       "source_path": "_registry\\dialogues\\missing_verbs.yaml",
       "source_metadata": {},
@@ -3287,31 +3287,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "Hey! Over here! I need your help! היי! לכאן! אני צריך את העזרה שלך!",
+          "content": "כל הכבוד! עכשיו הבנאים יודעים איזו פעולה לבצע.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "I have wood, tools and workers, but nobody knows what to DO. יש לי עצים, כלים ועובדים, אבל אף אחד לא יודע מה לעשות.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 2,
-          "content": "Look at this order:___the wall. תראה את הפקודה:___את החומה.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 3,
-          "content": "פועל = Verb הוא an action word - מילת פעולה Help me restore the missing verbs! עזרו לי לשחזר את הפעלים החסרים!",
+          "content": "השומר בשער צריך עזרה עם פקודות המלך. לכו אליו עם הרשימה.",
           "line_format": "plain_text"
         }
       ]
     },
     {
-      "key": "missing_verbs_missing_verbs_q01_benny_can_t_build_s04",
+      "key": "missing_verbs_q01_start",
       "speaker_external_id": "Benny the Builder",
       "source_path": "_registry\\dialogues\\missing_verbs.yaml",
       "source_metadata": {},
@@ -3319,31 +3307,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "You're back! Let's see what you found. חזרת! בוא נראה מה מצאת.",
+          "content": "היי! הבנאים שלי עומדים ליד הקיר ולא יודעים מה לעשות.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "BUILD the wall! Now the workers know what to do. BUILD לִבנוֹת את החומה! עכשיו הפועלים יודעים מה לעשות - לִבנוֹת",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 2,
-          "content": "Great job! You restored the missing verbs. כל הכבוד! שחזרתם את הפועל החסר.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 3,
-          "content": "These orders came from the castle. Check the Gate Guard next. הפקודות הגיעו מהטירה. תבדקו את שומר השער.",
+          "content": "עזרו לי להחזיר את פעלי הפעולה לפקודות. קראו את ההוראות בעברית ובצעו את המשימות באנגלית.",
           "line_format": "plain_text"
         }
       ]
     },
     {
-      "key": "missing_verbs_missing_verbs_q02_the_confused_guard_s01",
+      "key": "missing_verbs_q02_finish",
       "speaker_external_id": "Main Gate Gaurd 1",
       "source_path": "_registry\\dialogues\\missing_verbs.yaml",
       "source_metadata": {},
@@ -3351,31 +3327,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "Oh! The royal order is missing an action word. אוי! בפקודה חסרה מילת פעולה.",
+          "content": "מצוין! עכשיו אני מבין כל פקודה ויודע איזו פעולה לבצע.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "The knight must___the gate. האביר חייב___את השער.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 2,
-          "content": "Choose the action word. בחרו את מילת הפעולה.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 3,
-          "content": "Go to the training ground and find the missing verbs. לך למגרש האימונים ומצא את הפעלים החסרים.",
+          "content": "התותחן מחכה ליד התותח. הוא צריך את העזרה האחרונה שלכם.",
           "line_format": "plain_text"
         }
       ]
     },
     {
-      "key": "missing_verbs_missing_verbs_q02_the_confused_guard_s04",
+      "key": "missing_verbs_q02_start",
       "speaker_external_id": "Main Gate Gaurd 1",
       "source_path": "_registry\\dialogues\\missing_verbs.yaml",
       "source_metadata": {},
@@ -3383,25 +3347,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "You're back! חזרת! OPEN the gate - פתחו את השער HELP the king - עזור למלך",
+          "content": "אוי! פעלי הפעולה נעלמו מפקודות המלך, ואני לא יודע מה לעשות.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "JUMP over the box - קפיצה מעל הקופסה FIND the treasure - מצא את האוצר עכשיו הפקודות הגיוניות!",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 2,
-          "content": "עכשיו תבדקו את Cannoneer לפני שהוא מנחש מה לעשות עם התותח.",
+          "content": "עזרו לי לבחור ולסדר את הפעלים הנכונים. אחר כך הפקודות יהיו ברורות.",
           "line_format": "plain_text"
         }
       ]
     },
     {
-      "key": "missing_verbs_missing_verbs_q03_don_t_let_him_guess_s01",
+      "key": "missing_verbs_q03_finish",
       "speaker_external_id": "Cannoneer",
       "source_path": "_registry\\dialogues\\missing_verbs.yaml",
       "source_metadata": {},
@@ -3409,13 +3367,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אה! מילת הפעולה נעלמה. אולי אני צריך לחבק את התותח? תעזור לי לשחזר את הפועל האמיתי!",
+          "content": "הצלחתם! עכשיו הפקודה ברורה, ואני יודע איזו פעולה לבצע.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "פעלים מתארים פעולות. כל הכבוד — סיימתם את שיעורי הבית! קבלו את הפרס שלכם.",
           "line_format": "plain_text"
         }
       ]
     },
     {
-      "key": "missing_verbs_missing_verbs_q03_don_t_let_him_guess_turn_in",
+      "key": "missing_verbs_q03_start",
       "speaker_external_id": "Cannoneer",
       "source_path": "_registry\\dialogues\\missing_verbs.yaml",
       "source_metadata": {},
@@ -3423,13 +3387,13 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "FIRE the cannon! You restored the final verb. ירית בתותח ושחזרת את הפועל האחרון!",
+          "content": "אוי! הפועל נעלם מהפקודה שלי, ואני כמעט מנחש מה לעשות עם התותח.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "פועל מתאר פעולה - עכשיו הממלכה יכולה לעבוד שוב! וכל אחד מאנשי הממלכה יודע בדיוק איזה פעולה לעשות!    תודה רבה לכם!",
+          "content": "עזרו לי לשחזר את פועל הפעולה, לבחור אותו במשפט ולומר אותו באנגלית.",
           "line_format": "plain_text"
         }
       ]
@@ -4707,166 +4671,67 @@
   ],
   "minigame_instances": [
     {
-      "key": "missing_verbs_q01_benny_can_t_build_minigame",
-      "locale": "en",
-      "instruction": "",
+      "key": "missing_verbs_q01_match_actions",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בכל פועל פעולה.",
       "tasks": [
-        ""
+        "_UILD",
+        "OPE_",
+        "H_LP",
+        "_ALK"
       ],
-      "target": "",
-      "variant": "word_spelling",
-      "success": "",
-      "minigame_id": "letter_ordering",
-      "params": {
-        "prompt": "Build the missing verb: בנו את המילה החסרה: build = לבנות. ___the wall. ",
-        "targetWord": "BUILD",
-        "customDistractors": [],
-        "wordRevealDatabase": "",
-        "extraDistractorCount": 2
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "missing_verbs_q01_benny_can_t_build_minigame_2",
-      "locale": "en",
-      "instruction": "",
-      "tasks": [
-        ""
-      ],
-      "target": "",
-      "variant": "word_spelling",
-      "success": "",
-      "minigame_id": "letter_ordering",
-      "params": {
-        "prompt": "אייתו את הפועל  - DO לעשות. Spell the verb DO:___the action. ",
-        "targetWord": "DO",
-        "customDistractors": [],
-        "wordRevealDatabase": "",
-        "extraDistractorCount": 2
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "missing_verbs_q01_benny_can_t_build_minigame_3",
-      "locale": "en",
-      "instruction": "",
-      "tasks": [
-        ""
-      ],
-      "target": "",
-      "variant": "sentence_building",
-      "success": "",
-      "minigame_id": "word_ordering",
-      "params": {
-        "prompt": "סדרו את המילים לפי הסדר כדי ליצור משפט נכון באנגלית.",
-        "distractorWords": [
-          "walk",
-          "take",
-          "boy"
-        ],
-        "preFilledIndices": [
-          0,
-          1,
-          4
-        ],
-        "wordRevealDatabase": "",
-        "englishWordsInOrder": [
-          "I ",
-          "need ",
-          "to ",
-          "open",
-          "it"
-        ]
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "missing_verbs_q01_benny_can_t_build_minigame_4",
-      "locale": "en",
-      "instruction": "",
-      "tasks": [
-        ""
-      ],
-      "target": "",
-      "variant": "single_word",
-      "success": "",
-      "minigame_id": "speak_aloud",
-      "params": {
-        "prompt": "Say the verb: HELP. אמרו בקול את הפועל HELP.",
-        "targetWords": [
-          "HELP"
-        ],
-        "targetPhrase": "HELP",
-        "referenceClip": "",
-        "allowFuzzyMatch": true,
-        "wordRevealDatabase": "",
-        "silenceTimeoutSeconds": 1.4
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "missing_verbs_q02_the_confused_guard_minigame",
-      "locale": "en",
-      "instruction": "",
-      "tasks": [
-        ""
-      ],
-      "target": "",
-      "variant": "word_to_image",
-      "success": "",
+      "target": "build, open, help, walk",
+      "variant": "missing_letter_matching",
+      "success": "כל הפעלים הושלמו נכון.",
       "minigame_id": "word_matching",
       "params": {
         "letters": [
           {
-            "id": "letter_1",
-            "value": "o"
+            "id": "q01_letter_b",
+            "value": "b"
           },
           {
-            "id": "letter_2",
-            "value": "h"
+            "id": "q01_letter_n",
+            "value": "n"
           },
           {
-            "id": "letter_3",
-            "value": "f"
+            "id": "q01_letter_e",
+            "value": "e"
           },
           {
-            "id": "letter_4",
-            "value": "j"
+            "id": "q01_letter_w",
+            "value": "w"
           }
         ],
         "wordTasks": [
           {
-            "id": "letter_1",
+            "id": "q01_build",
+            "image": "",
+            "fullWord": "build",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "q01_open",
             "image": "",
             "fullWord": "open",
             "missingIndices": [
-              0
+              3
             ]
           },
           {
-            "id": "letter_2",
+            "id": "q01_help",
             "image": "",
             "fullWord": "help",
             "missingIndices": [
-              0
+              1
             ]
           },
           {
-            "id": "letter_3",
+            "id": "q01_walk",
             "image": "",
-            "fullWord": "find",
-            "missingIndices": [
-              0
-            ]
-          },
-          {
-            "id": "letter_4",
-            "image": "",
-            "fullWord": "jump",
+            "fullWord": "walk",
             "missingIndices": [
               0
             ]
@@ -4877,26 +4742,405 @@
       "source_metadata": {}
     },
     {
-      "key": "missing_verbs_q03_don_t_let_him_guess_minigame",
-      "locale": "en",
-      "instruction": "",
+      "key": "missing_verbs_q01_say_help",
+      "locale": "he",
+      "instruction": "אמרו את המילה הבאה באנגלית בקול.",
       "tasks": [
-        ""
+        "help"
       ],
-      "target": "",
+      "target": "help",
       "variant": "single_word",
-      "success": "",
+      "success": "נשמע טוב!",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "תגידו את הפועל אש!",
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
         "targetWords": [
-          "FIRE"
+          "help"
         ],
-        "targetPhrase": "",
-        "referenceClip": "",
+        "targetPhrase": "help",
+        "silenceTimeoutSeconds": 1,
         "allowFuzzyMatch": true,
-        "wordRevealDatabase": "",
-        "silenceTimeoutSeconds": 1
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q01_sentence_open",
+      "locale": "he",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+      "tasks": [
+        "I",
+        "need",
+        "to",
+        "open",
+        "it"
+      ],
+      "target": "I need to open it.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+        "translation": "אני צריך לפתוח אותו.",
+        "englishWordsInOrder": [
+          "I",
+          "need",
+          "to",
+          "open",
+          "it"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "distractorWords": [
+          "close",
+          "carry",
+          "push"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q01_spell_build",
+      "locale": "he",
+      "instruction": "כתבו באנגלית את המילה שפירושה לבנות.",
+      "tasks": [
+        "b",
+        "u",
+        "i",
+        "l",
+        "d"
+      ],
+      "target": "build",
+      "variant": "word_spelling",
+      "success": "נכון! זהו פועל פעולה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "כתבו באנגלית את המילה שפירושה לבנות.",
+        "targetWord": "build",
+        "extraDistractorCount": 2,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q02_match_commands",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בכל פועל פעולה.",
+      "tasks": [
+        "F_ND",
+        "JU_P",
+        "_ARRY",
+        "CLOS_"
+      ],
+      "target": "find, jump, carry, close",
+      "variant": "missing_letter_matching",
+      "success": "הפעלים מתאימים לפקודות.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "q02_letter_i",
+            "value": "i"
+          },
+          {
+            "id": "q02_letter_m",
+            "value": "m"
+          },
+          {
+            "id": "q02_letter_c",
+            "value": "c"
+          },
+          {
+            "id": "q02_letter_e",
+            "value": "e"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "q02_find",
+            "image": "",
+            "fullWord": "find",
+            "missingIndices": [
+              1
+            ]
+          },
+          {
+            "id": "q02_jump",
+            "image": "",
+            "fullWord": "jump",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "q02_carry",
+            "image": "",
+            "fullWord": "carry",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "q02_close",
+            "image": "",
+            "fullWord": "close",
+            "missingIndices": [
+              4
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q02_say_find",
+      "locale": "he",
+      "instruction": "אמרו את המילה הבאה באנגלית בקול.",
+      "tasks": [
+        "find"
+      ],
+      "target": "find",
+      "variant": "single_word",
+      "success": "נשמע טוב!",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
+        "targetWords": [
+          "find"
+        ],
+        "targetPhrase": "find",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q02_sentence_jump",
+      "locale": "he",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+      "tasks": [
+        "The",
+        "guard",
+        "can",
+        "jump",
+        "high"
+      ],
+      "target": "The guard can jump high.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+        "translation": "השומר יכול לקפוץ גבוה.",
+        "englishWordsInOrder": [
+          "The",
+          "guard",
+          "can",
+          "jump",
+          "high"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "distractorWords": [
+          "run",
+          "carry",
+          "low"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q02_spell_open",
+      "locale": "he",
+      "instruction": "כתבו באנגלית את המילה שפירושה לפתוח.",
+      "tasks": [
+        "o",
+        "p",
+        "e",
+        "n"
+      ],
+      "target": "open",
+      "variant": "word_spelling",
+      "success": "נכון! זהו פועל פעולה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "כתבו באנגלית את המילה שפירושה לפתוח.",
+        "targetWord": "open",
+        "extraDistractorCount": 2,
+        "customDistractors": []
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q03_match_actions",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בכל פועל פעולה.",
+      "tasks": [
+        "F_RE",
+        "LO_D",
+        "_IM",
+        "_ULL"
+      ],
+      "target": "fire, load, aim, pull",
+      "variant": "missing_letter_matching",
+      "success": "כל הפעלים הושלמו נכון.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "q03_letter_i",
+            "value": "i"
+          },
+          {
+            "id": "q03_letter_o",
+            "value": "o"
+          },
+          {
+            "id": "q03_letter_a",
+            "value": "a"
+          },
+          {
+            "id": "q03_letter_p",
+            "value": "p"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "q03_fire",
+            "image": "",
+            "fullWord": "fire",
+            "missingIndices": [
+              1
+            ]
+          },
+          {
+            "id": "q03_load",
+            "image": "",
+            "fullWord": "load",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "q03_aim",
+            "image": "",
+            "fullWord": "aim",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "q03_pull",
+            "image": "",
+            "fullWord": "pull",
+            "missingIndices": [
+              0
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q03_say_fire",
+      "locale": "he",
+      "instruction": "אמרו את המילה הבאה באנגלית בקול.",
+      "tasks": [
+        "fire"
+      ],
+      "target": "fire",
+      "variant": "single_word",
+      "success": "נשמע טוב!",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
+        "targetWords": [
+          "fire"
+        ],
+        "targetPhrase": "fire",
+        "silenceTimeoutSeconds": 1,
+        "allowFuzzyMatch": true,
+        "referenceClip": ""
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q03_sentence_fire",
+      "locale": "he",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+      "tasks": [
+        "The",
+        "cannon",
+        "can",
+        "fire",
+        "now"
+      ],
+      "target": "The cannon can fire now.",
+      "variant": "sentence_building",
+      "success": "המשפט נכון.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+        "translation": "התותח יכול לירות עכשיו.",
+        "englishWordsInOrder": [
+          "The",
+          "cannon",
+          "can",
+          "fire",
+          "now"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "distractorWords": [
+          "stop",
+          "jump",
+          "later"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "missing_verbs_q03_spell_fire",
+      "locale": "he",
+      "instruction": "כתבו באנגלית את המילה שפירושה לירות.",
+      "tasks": [
+        "f",
+        "i",
+        "r",
+        "e"
+      ],
+      "target": "fire",
+      "variant": "word_spelling",
+      "success": "נכון! זהו פועל פעולה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "כתבו באנגלית את המילה שפירושה לירות.",
+        "targetWord": "fire",
+        "extraDistractorCount": 2,
+        "customDistractors": []
       },
       "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
       "source_metadata": {}
@@ -8249,28 +8493,6 @@
       "source_metadata": {}
     },
     {
-      "key": "q01_bridge_too_short_s2",
-      "locale": "he",
-      "instruction": "סדרו את האותיות של LONG",
-      "tasks": [
-        "סדרו <strong>l, o, n, g</strong>",
-        "צרו <strong>long</strong> — ארוך"
-      ],
-      "target": "long",
-      "variant": "word_spelling",
-      "success": "LONG נכתב נכון; Oak Log אחד נוסף לתיק",
-      "minigame_id": "letter_ordering",
-      "params": {
-        "prompt": "תרשמו את הפועל לִמצוֹא.",
-        "targetWord": "find",
-        "customDistractors": [],
-        "wordRevealDatabase": "",
-        "extraDistractorCount": 2
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
-      "source_metadata": {}
-    },
-    {
       "key": "q01_roles_without_names_s2",
       "locale": "he",
       "instruction": "כתבו את המילה מלך באנגלית.",
@@ -8442,32 +8664,6 @@
         "wordRevealDatabase": "Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset"
       },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "q02_whispering_stone_s2",
-      "locale": "he",
-      "instruction": "אמרו HOT בקול",
-      "tasks": [
-        "הקשיבו להגייה",
-        "לחצו על המיקרופון ואמרו <strong>hot</strong>"
-      ],
-      "target": "hot",
-      "variant": "single_word",
-      "success": "HOT נקלט; Herbs אחד נוסף לתיק",
-      "minigame_id": "speak_aloud",
-      "params": {
-        "prompt": "תגידו  את הפועל לקחת באנגלית",
-        "targetWords": [
-          "take"
-        ],
-        "targetPhrase": "take",
-        "referenceClip": "",
-        "allowFuzzyMatch": true,
-        "wordRevealDatabase": "Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset",
-        "silenceTimeoutSeconds": 1
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
       "source_metadata": {}
     },
     {
@@ -8969,41 +9165,6 @@
       "source_metadata": {}
     },
     {
-      "key": "q05_from_low_to_high_s3",
-      "locale": "he",
-      "instruction": "סדרו את המשפט THE PLACE IS LOW",
-      "tasks": [
-        "סדרו <strong>The / place / is / low</strong>"
-      ],
-      "target": "The place is low.",
-      "variant": "sentence_building",
-      "success": "Power Stone אחד נוסף לתיק",
-      "minigame_id": "word_ordering",
-      "params": {
-        "prompt": "השלימו את הפועל החסר במשפט - אני רוצה לעזור לך.",
-        "distractorWords": [
-          "take",
-          "run",
-          "jump"
-        ],
-        "preFilledIndices": [
-          0,
-          1,
-          4
-        ],
-        "wordRevealDatabase": "Data/MiniGames/Duolingo/OpenWorld/QuestLines/DB/QuestLine_WordTranslationDatabase.asset",
-        "englishWordsInOrder": [
-          "I",
-          "want",
-          "to ",
-          "help",
-          "you"
-        ]
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
-      "source_metadata": {}
-    },
-    {
       "key": "q05_from_low_to_high_s5",
       "locale": "he",
       "instruction": "כתבו את המילה גבוה באנגלית.",
@@ -9184,77 +9345,6 @@
         ]
       },
       "source_path": "_registry\\minigame_instances\\adjective_crown.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "q06_adjective_challenge_s1",
-      "locale": "he",
-      "instruction": "השלימו את האות החסרה — SHORT / LONG / COLD / HOT",
-      "tasks": [
-        "_hort",
-        "_ong",
-        "_old",
-        "_ot"
-      ],
-      "target": "short, long, cold, hot",
-      "variant": "missing_letter_matching",
-      "success": "ארבע המילים הראשונות הושלמו",
-      "minigame_id": "word_matching",
-      "params": {
-        "letters": [
-          {
-            "id": "FIRE",
-            "value": "R"
-          },
-          {
-            "id": "TAKE",
-            "value": "A"
-          },
-          {
-            "id": "LOAD",
-            "value": "L"
-          },
-          {
-            "id": "BRING",
-            "value": "N"
-          }
-        ],
-        "wordTasks": [
-          {
-            "id": "TAKE",
-            "image": "",
-            "fullWord": "TAKE",
-            "missingIndices": [
-              1
-            ]
-          },
-          {
-            "id": "FIRE",
-            "image": "",
-            "fullWord": "FIRE",
-            "missingIndices": [
-              2
-            ]
-          },
-          {
-            "id": "BRING",
-            "image": "",
-            "fullWord": "BRING",
-            "missingIndices": [
-              3
-            ]
-          },
-          {
-            "id": "LOAD",
-            "image": "",
-            "fullWord": "LOAD",
-            "missingIndices": [
-              0
-            ]
-          }
-        ]
-      },
-      "source_path": "_registry\\minigame_instances\\missing_verbs.yaml",
       "source_metadata": {}
     },
     {
@@ -13078,11 +13168,11 @@
     {
       "key": "missing_verbs",
       "display_name": "The Missing Verbs - שיעורי בית",
-      "theme": "Verbs — action words: identify, spell, choose, and say common English verbs in simple commands.",
+      "theme": "Practice common English action words by spelling, choosing, ordering, and saying them.",
       "default_giver_external_id": "Benny the Builder",
       "status": "draft",
       "level_min": 1,
-      "level_max": 50,
+      "level_max": 1,
       "source_path": "questlines\\missing_verbs\\_index.yaml",
       "source_metadata": {
         "source_status": null,
@@ -13094,41 +13184,27 @@
         {
           "key": "missing_verbs__q01_benny_can_t_build_verbs",
           "position": 0,
-          "name": "Benny Can't Build -  VERBS שיעור בית",
-          "level_required": 50,
+          "name": "Benny Can't Build",
+          "level_required": 1,
           "giver_external_id": "Benny the Builder",
-          "summary": "Help Benny restore the missing action words so the workers can build again.",
+          "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
           "wait_for_npc_turn_in": false,
-          "start_dialogue_id": null,
+          "start_dialogue_id": "missing_verbs_q01_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_cbd934b7_1",
-              "position": 0,
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_532f66c5_1",
+              "position": 1,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame",
                 "minigame_id": "letter_ordering",
                 "world_object_id": "Lost_Chest1_BuildersHomeArea",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_return_to_npc_a2136354_1",
-              "position": 1,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Benny the Builder",
-                "dialogue_id": "missing_verbs_missing_verbs_q01_benny_can_t_build_s04"
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_spell_build",
+                "display_text": "כתבו באנגלית את המילה שפירושה לבנות.",
+                "instance_key": "missing_verbs_q01_spell_build"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -13137,17 +13213,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_124b3f49_2",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_2882554e_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_2",
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_2"
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_sentence_open",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+                "instance_key": "missing_verbs_q01_sentence_open"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -13156,17 +13232,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_1dbf6e4d_3",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_640657ff_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_3",
-                "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_3"
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_match_actions",
+                "display_text": "השלימו את האות החסרה בכל פועל פעולה.",
+                "instance_key": "missing_verbs_q01_match_actions"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -13175,20 +13251,36 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_63ced696_4",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_7ffb8ce4_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
-                "difficulty": 4,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_4",
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_4"
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_say_help",
+                "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+                "instance_key": "missing_verbs_q01_say_help"
               },
               "source_metadata": {
                 "source_position": 4,
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_return_to_npc_17a335bb_1",
+              "position": 5,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Benny the Builder",
+                "dialogue_id": "missing_verbs_q01_finish",
+                "success_required": true,
+                "display_text": "חזרו לבני לסיום המשימה."
+              },
+              "source_metadata": {
+                "source_position": 5,
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
               },
               "rewards": []
@@ -13223,11 +13315,11 @@
             "source_index_path": "questlines\\missing_verbs\\_index.yaml",
             "source_detail": {
               "id": "missing_verbs__q01_benny_can_t_build_verbs",
-              "name": "Benny Can't Build -  VERBS שיעור בית",
-              "level_required": 50,
+              "name": "Benny Can't Build",
+              "level_required": 1,
               "giver_npc": "Benny the Builder",
               "prerequisite": null,
-              "summary": "Help Benny restore the missing action words so the workers can build again.",
+              "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -13238,41 +13330,26 @@
           "name": "The Confused Guard",
           "level_required": 1,
           "giver_external_id": "Main Gate Gaurd 1",
-          "summary": "Help the gate guard restore the action words in the royal commands.",
+          "summary": "עזרו לשומר להבין את פעלי הפעולה בפקודות המלך.",
           "wait_for_npc_turn_in": false,
-          "start_dialogue_id": null,
+          "start_dialogue_id": "missing_verbs_q02_start",
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q01_benny_can_t_build_verbs"
           ],
           "steps": [
             {
-              "key": "missing_verbs_q02_the_confused_guard_reach_location_0a98d506_1",
-              "position": 0,
-              "type": "reach_location",
-              "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "dialogue_id": "",
-                "location_id": "KingdomGate"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_066f6b09_1",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_093ef82b_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q02_the_confused_guard_minigame",
                 "minigame_id": "word_matching",
                 "world_object_id": "Exam_Table1_Outside_Gate",
-                "instance_key": "missing_verbs_q02_the_confused_guard_minigame"
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_match_commands",
+                "display_text": "השלימו את האות החסרה בכל פועל פעולה.",
+                "instance_key": "missing_verbs_q02_match_commands"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -13281,17 +13358,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_72d23f7e_2",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_b2faede8_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "q01_bridge_too_short_s2",
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest1_BuildersHomeArea",
-                "instance_key": "q01_bridge_too_short_s2"
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_spell_open",
+                "display_text": "כתבו באנגלית את המילה שפירושה לפתוח.",
+                "instance_key": "missing_verbs_q02_spell_open"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -13300,17 +13377,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_8f50f0a7_3",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_739e0a70_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "q05_from_low_to_high_s3",
-                "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
-                "instance_key": "q05_from_low_to_high_s3"
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_say_find",
+                "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+                "instance_key": "missing_verbs_q02_say_find"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -13319,17 +13396,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_4511e7f6_4",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_731bd2d3_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 0,
-                "dialogue_id": "",
-                "instance_id": "q02_whispering_stone_s2",
-                "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
-                "instance_key": "q02_whispering_stone_s2"
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_sentence_jump",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+                "instance_key": "missing_verbs_q02_sentence_jump"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -13338,12 +13415,14 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_return_to_npc_8b685633_1",
+              "key": "missing_verbs_q02_the_confused_guard_return_to_npc_fade6f62_1",
               "position": 5,
               "type": "return_to_npc",
               "payload": {
                 "npc_id": "Main Gate Gaurd 1",
-                "dialogue_id": "missing_verbs_missing_verbs_q02_the_confused_guard_s04"
+                "dialogue_id": "missing_verbs_q02_finish",
+                "success_required": true,
+                "display_text": "חזרו לשומר לסיום המשימה."
               },
               "source_metadata": {
                 "source_position": 5,
@@ -13357,9 +13436,20 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 0,
+              "xp_amount": 100,
               "item_external_id": null,
               "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
               "source_metadata": {
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
               }
@@ -13374,7 +13464,7 @@
               "level_required": 1,
               "giver_npc": "Main Gate Gaurd 1",
               "prerequisite": "missing_verbs__q01_benny_can_t_build_verbs",
-              "summary": "Help the gate guard restore the action words in the royal commands.",
+              "summary": "עזרו לשומר להבין את פעלי הפעולה בפקודות המלך.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -13385,41 +13475,26 @@
           "name": "Don't Let Him Guess!",
           "level_required": 1,
           "giver_external_id": "Cannoneer",
-          "summary": "Restore the final action word before the Cannoneer makes a dangerous guess.",
+          "summary": "עזרו לתותחן לבחור את פועל הפעולה הנכון.",
           "wait_for_npc_turn_in": false,
-          "start_dialogue_id": null,
+          "start_dialogue_id": "missing_verbs_q03_start",
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q02_the_confused_guard"
           ],
           "steps": [
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_reach_location_595850ab_1",
-              "position": 0,
-              "type": "reach_location",
-              "payload": {
-                "npc_id": "Cannoneer",
-                "dialogue_id": "",
-                "location_id": "Forsaken Cove"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_f88bd424_1",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_afb5579c_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "q01_bridge_too_short_s2",
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest1_BuildersHomeArea",
-                "instance_key": "q01_bridge_too_short_s2"
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest3_Forsaken_Cove",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_sentence_fire",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+                "instance_key": "missing_verbs_q03_sentence_fire"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -13428,17 +13503,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_5a4eb402_2",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_ca46d259_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "q05_from_low_to_high_s3",
-                "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
-                "instance_key": "q05_from_low_to_high_s3"
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest3_Forsaken_Cove",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_spell_fire",
+                "display_text": "כתבו באנגלית את המילה שפירושה לירות.",
+                "instance_key": "missing_verbs_q03_spell_fire"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -13447,17 +13522,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_2fdc86ec_3",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_eac0090f_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "q06_adjective_challenge_s1",
                 "minigame_id": "word_matching",
-                "world_object_id": "Exam_Table1_Outside_Gate",
-                "instance_key": "q06_adjective_challenge_s1"
+                "world_object_id": "Lost_Chest3_Forsaken_Cove",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_match_actions",
+                "display_text": "השלימו את האות החסרה בכל פועל פעולה.",
+                "instance_key": "missing_verbs_q03_match_actions"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -13466,20 +13541,36 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_5ed06d08_4",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_52533b18_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 4,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q03_don_t_let_him_guess_minigame",
                 "minigame_id": "speak_aloud",
                 "world_object_id": "Lost_Chest3_Forsaken_Cove",
-                "instance_key": "missing_verbs_q03_don_t_let_him_guess_minigame"
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_say_fire",
+                "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+                "instance_key": "missing_verbs_q03_say_fire"
               },
               "source_metadata": {
                 "source_position": 4,
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "missing_verbs_q03_don_t_let_him_guess_return_to_npc_9f52b3e5_1",
+              "position": 5,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Cannoneer",
+                "dialogue_id": "missing_verbs_q03_finish",
+                "success_required": true,
+                "display_text": "חזרו לתותחן לסיום שיעורי הבית."
+              },
+              "source_metadata": {
+                "source_position": 5,
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
               },
               "rewards": []
@@ -13490,9 +13581,20 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 0,
+              "xp_amount": 150,
               "item_external_id": null,
               "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 15,
               "source_metadata": {
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
               }
@@ -13507,7 +13609,7 @@
               "level_required": 1,
               "giver_npc": "Cannoneer",
               "prerequisite": "missing_verbs__q02_the_confused_guard",
-              "summary": "Restore the final action word before the Cannoneer makes a dangerous guess.",
+              "summary": "עזרו לתותחן לבחור את פועל הפעולה הנכון.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -16196,11 +16298,11 @@
     "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 68,
-    "dialogue_lines": 192,
-    "minigame_instances": 140,
+    "dialogue_lines": 186,
+    "minigame_instances": 142,
     "questlines": 7,
     "quests": 33,
-    "steps": 209,
+    "steps": 208,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -18921,47 +19023,33 @@
     {
       "key": "missing_verbs",
       "display_name": "The Missing Verbs - שיעורי בית",
-      "theme": "Verbs — action words: identify, spell, choose, and say common English verbs in simple commands.",
+      "theme": "Practice common English action words by spelling, choosing, ordering, and saying them.",
       "default_giver_external_id": "Benny the Builder",
       "quests": [
         {
           "key": "missing_verbs__q01_benny_can_t_build_verbs",
           "position": 0,
-          "name": "Benny Can't Build -  VERBS שיעור בית",
-          "level_required": 50,
+          "name": "Benny Can't Build",
+          "level_required": 1,
           "giver_external_id": "Benny the Builder",
-          "summary": "Help Benny restore the missing action words so the workers can build again.",
+          "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
           "wait_for_npc_turn_in": false,
-          "start_dialogue_id": null,
+          "start_dialogue_id": "missing_verbs_q01_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_cbd934b7_1",
-              "position": 0,
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_532f66c5_1",
+              "position": 1,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame",
                 "minigame_id": "letter_ordering",
                 "world_object_id": "Lost_Chest1_BuildersHomeArea",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_return_to_npc_a2136354_1",
-              "position": 1,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Benny the Builder",
-                "dialogue_id": "missing_verbs_missing_verbs_q01_benny_can_t_build_s04"
+                "difficulty": 1,
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_spell_build",
+                "display_text": "כתבו באנגלית את המילה שפירושה לבנות.",
+                "instance_key": "missing_verbs_q01_spell_build"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -18970,17 +19058,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_124b3f49_2",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_2882554e_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_2",
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_2"
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_sentence_open",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+                "instance_key": "missing_verbs_q01_sentence_open"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -18989,17 +19077,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_1dbf6e4d_3",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_640657ff_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_3",
-                "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_3"
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_match_actions",
+                "display_text": "השלימו את האות החסרה בכל פועל פעולה.",
+                "instance_key": "missing_verbs_q01_match_actions"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -19008,20 +19096,36 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_63ced696_4",
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_play_minigame_7ffb8ce4_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Benny the Builder",
-                "difficulty": 4,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q01_benny_can_t_build_minigame_4",
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
-                "instance_key": "missing_verbs_q01_benny_can_t_build_minigame_4"
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q01_say_help",
+                "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+                "instance_key": "missing_verbs_q01_say_help"
               },
               "source_metadata": {
                 "source_position": 4,
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "missing_verbs_q01_benny_can_t_build_verbs_return_to_npc_17a335bb_1",
+              "position": 5,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Benny the Builder",
+                "dialogue_id": "missing_verbs_q01_finish",
+                "success_required": true,
+                "display_text": "חזרו לבני לסיום המשימה."
+              },
+              "source_metadata": {
+                "source_position": 5,
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
               },
               "rewards": []
@@ -19056,11 +19160,11 @@
             "source_index_path": "questlines\\missing_verbs\\_index.yaml",
             "source_detail": {
               "id": "missing_verbs__q01_benny_can_t_build_verbs",
-              "name": "Benny Can't Build -  VERBS שיעור בית",
-              "level_required": 50,
+              "name": "Benny Can't Build",
+              "level_required": 1,
               "giver_npc": "Benny the Builder",
               "prerequisite": null,
-              "summary": "Help Benny restore the missing action words so the workers can build again.",
+              "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -19071,41 +19175,26 @@
           "name": "The Confused Guard",
           "level_required": 1,
           "giver_external_id": "Main Gate Gaurd 1",
-          "summary": "Help the gate guard restore the action words in the royal commands.",
+          "summary": "עזרו לשומר להבין את פעלי הפעולה בפקודות המלך.",
           "wait_for_npc_turn_in": false,
-          "start_dialogue_id": null,
+          "start_dialogue_id": "missing_verbs_q02_start",
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q01_benny_can_t_build_verbs"
           ],
           "steps": [
             {
-              "key": "missing_verbs_q02_the_confused_guard_reach_location_0a98d506_1",
-              "position": 0,
-              "type": "reach_location",
-              "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "dialogue_id": "",
-                "location_id": "KingdomGate"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_066f6b09_1",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_093ef82b_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q02_the_confused_guard_minigame",
                 "minigame_id": "word_matching",
                 "world_object_id": "Exam_Table1_Outside_Gate",
-                "instance_key": "missing_verbs_q02_the_confused_guard_minigame"
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_match_commands",
+                "display_text": "השלימו את האות החסרה בכל פועל פעולה.",
+                "instance_key": "missing_verbs_q02_match_commands"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -19114,17 +19203,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_72d23f7e_2",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_b2faede8_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "q01_bridge_too_short_s2",
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest1_BuildersHomeArea",
-                "instance_key": "q01_bridge_too_short_s2"
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 2,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_spell_open",
+                "display_text": "כתבו באנגלית את המילה שפירושה לפתוח.",
+                "instance_key": "missing_verbs_q02_spell_open"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -19133,17 +19222,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_8f50f0a7_3",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_739e0a70_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "q05_from_low_to_high_s3",
-                "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
-                "instance_key": "q05_from_low_to_high_s3"
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_say_find",
+                "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+                "instance_key": "missing_verbs_q02_say_find"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -19152,17 +19241,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_play_minigame_4511e7f6_4",
+              "key": "missing_verbs_q02_the_confused_guard_play_minigame_731bd2d3_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Main Gate Gaurd 1",
-                "difficulty": 0,
-                "dialogue_id": "",
-                "instance_id": "q02_whispering_stone_s2",
-                "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
-                "instance_key": "q02_whispering_stone_s2"
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q02_sentence_jump",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+                "instance_key": "missing_verbs_q02_sentence_jump"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -19171,12 +19260,14 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q02_the_confused_guard_return_to_npc_8b685633_1",
+              "key": "missing_verbs_q02_the_confused_guard_return_to_npc_fade6f62_1",
               "position": 5,
               "type": "return_to_npc",
               "payload": {
                 "npc_id": "Main Gate Gaurd 1",
-                "dialogue_id": "missing_verbs_missing_verbs_q02_the_confused_guard_s04"
+                "dialogue_id": "missing_verbs_q02_finish",
+                "success_required": true,
+                "display_text": "חזרו לשומר לסיום המשימה."
               },
               "source_metadata": {
                 "source_position": 5,
@@ -19190,9 +19281,20 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 0,
+              "xp_amount": 100,
               "item_external_id": null,
               "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
               "source_metadata": {
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
               }
@@ -19207,7 +19309,7 @@
               "level_required": 1,
               "giver_npc": "Main Gate Gaurd 1",
               "prerequisite": "missing_verbs__q01_benny_can_t_build_verbs",
-              "summary": "Help the gate guard restore the action words in the royal commands.",
+              "summary": "עזרו לשומר להבין את פעלי הפעולה בפקודות המלך.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -19218,41 +19320,26 @@
           "name": "Don't Let Him Guess!",
           "level_required": 1,
           "giver_external_id": "Cannoneer",
-          "summary": "Restore the final action word before the Cannoneer makes a dangerous guess.",
+          "summary": "עזרו לתותחן לבחור את פועל הפעולה הנכון.",
           "wait_for_npc_turn_in": false,
-          "start_dialogue_id": null,
+          "start_dialogue_id": "missing_verbs_q03_start",
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q02_the_confused_guard"
           ],
           "steps": [
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_reach_location_595850ab_1",
-              "position": 0,
-              "type": "reach_location",
-              "payload": {
-                "npc_id": "Cannoneer",
-                "dialogue_id": "",
-                "location_id": "Forsaken Cove"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_f88bd424_1",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_afb5579c_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 1,
-                "dialogue_id": "",
-                "instance_id": "q01_bridge_too_short_s2",
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest1_BuildersHomeArea",
-                "instance_key": "q01_bridge_too_short_s2"
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest3_Forsaken_Cove",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_sentence_fire",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+                "instance_key": "missing_verbs_q03_sentence_fire"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -19261,17 +19348,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_5a4eb402_2",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_ca46d259_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "q05_from_low_to_high_s3",
-                "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
-                "instance_key": "q05_from_low_to_high_s3"
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest3_Forsaken_Cove",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_spell_fire",
+                "display_text": "כתבו באנגלית את המילה שפירושה לירות.",
+                "instance_key": "missing_verbs_q03_spell_fire"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -19280,17 +19367,17 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_2fdc86ec_3",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_eac0090f_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 2,
-                "dialogue_id": "",
-                "instance_id": "q06_adjective_challenge_s1",
                 "minigame_id": "word_matching",
-                "world_object_id": "Exam_Table1_Outside_Gate",
-                "instance_key": "q06_adjective_challenge_s1"
+                "world_object_id": "Lost_Chest3_Forsaken_Cove",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_match_actions",
+                "display_text": "השלימו את האות החסרה בכל פועל פעולה.",
+                "instance_key": "missing_verbs_q03_match_actions"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -19299,20 +19386,36 @@
               "rewards": []
             },
             {
-              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_5ed06d08_4",
+              "key": "missing_verbs_q03_don_t_let_him_guess_play_minigame_52533b18_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "npc_id": "Cannoneer",
-                "difficulty": 4,
-                "dialogue_id": "",
-                "instance_id": "missing_verbs_q03_don_t_let_him_guess_minigame",
                 "minigame_id": "speak_aloud",
                 "world_object_id": "Lost_Chest3_Forsaken_Cove",
-                "instance_key": "missing_verbs_q03_don_t_let_him_guess_minigame"
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "missing_verbs_q03_say_fire",
+                "display_text": "אמרו את המילה הבאה באנגלית בקול.",
+                "instance_key": "missing_verbs_q03_say_fire"
               },
               "source_metadata": {
                 "source_position": 4,
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "missing_verbs_q03_don_t_let_him_guess_return_to_npc_9f52b3e5_1",
+              "position": 5,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Cannoneer",
+                "dialogue_id": "missing_verbs_q03_finish",
+                "success_required": true,
+                "display_text": "חזרו לתותחן לסיום שיעורי הבית."
+              },
+              "source_metadata": {
+                "source_position": 5,
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
               },
               "rewards": []
@@ -19323,9 +19426,20 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 0,
+              "xp_amount": 150,
               "item_external_id": null,
               "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 15,
               "source_metadata": {
                 "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
               }
@@ -19340,7 +19454,7 @@
               "level_required": 1,
               "giver_npc": "Cannoneer",
               "prerequisite": "missing_verbs__q02_the_confused_guard",
-              "summary": "Restore the final action word before the Cannoneer makes a dangerous guess.",
+              "summary": "עזרו לתותחן לבחור את פועל הפעולה הנכון.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -21994,5 +22108,5 @@
       ]
     }
   ],
-  "source_digest": "cad36e106a942ccd7b4f8e2ee78eb4e682fdc14e42db34b354960b2f3f46b105"
+  "source_digest": "8816a987f787b4b7eff0714d96b3050a196b463bba657196a790e4da8d5c7a81"
 }

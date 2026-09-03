@@ -1,57 +1,32 @@
-# Dialogue scripts exported from QuestForge
+# Hebrew-first dialogue with short, complete bilingual blocks.
 dialogues:
-  missing_verbs_missing_verbs_q01_benny_can_t_build_s01:
+  missing_verbs_q01_start:
     speaker: "Benny the Builder"
     lines:
-      - "Hey! Over here! I need your help! היי! לכאן! אני צריך את העזרה שלך!"
-      - "I have wood, tools and workers, but nobody knows what to DO. 
-יש לי עצים, כלים ועובדים, אבל אף אחד לא יודע מה לעשות."
-      - "Look at this order:___the wall.
- תראה את הפקודה:___את החומה."
-      - "פועל = Verb 
-הוא an action word - מילת פעולה
-Help me restore the missing verbs!
-עזרו לי לשחזר את הפעלים החסרים!"
-  missing_verbs_missing_verbs_q01_benny_can_t_build_s04:
+      - "היי! הבנאים שלי עומדים ליד הקיר ולא יודעים מה לעשות."
+      - "עזרו לי להחזיר את פעלי הפעולה לפקודות. קראו את ההוראות בעברית ובצעו את המשימות באנגלית."
+  missing_verbs_q01_finish:
     speaker: "Benny the Builder"
     lines:
-      - "You're back! Let's see what you found.
-חזרת! בוא נראה מה מצאת."
-      - "BUILD the wall! Now the workers know what to do. BUILD 
-לִבנוֹת את החומה! עכשיו הפועלים יודעים מה לעשות - לִבנוֹת"
-      - "Great job! You restored the missing verbs. כל הכבוד! שחזרתם את הפועל החסר."
-      - "These orders came from the castle. Check the Gate Guard next. 
-הפקודות הגיעו מהטירה. תבדקו את שומר השער."
-  missing_verbs_missing_verbs_q02_the_confused_guard_s01:
+      - "כל הכבוד! עכשיו הבנאים יודעים איזו פעולה לבצע."
+      - "השומר בשער צריך עזרה עם פקודות המלך. לכו אליו עם הרשימה."
+  missing_verbs_q02_start:
     speaker: "Main Gate Gaurd 1"
     lines:
-      - "Oh! The royal order is missing an action word. 
-אוי! בפקודה חסרה מילת פעולה."
-      - "The knight must___the gate. 
-האביר חייב___את השער."
-      - "Choose the action word.
-בחרו את מילת הפעולה."
-      - "Go to the training ground and find the missing verbs.
-לך למגרש האימונים ומצא את הפעלים החסרים."
-  missing_verbs_missing_verbs_q02_the_confused_guard_s04:
+      - "אוי! פעלי הפעולה נעלמו מפקודות המלך, ואני לא יודע מה לעשות."
+      - "עזרו לי לבחור ולסדר את הפעלים הנכונים. אחר כך הפקודות יהיו ברורות."
+  missing_verbs_q02_finish:
     speaker: "Main Gate Gaurd 1"
     lines:
-      - "You're back!
-חזרת!
- OPEN the gate - פתחו את השער
- HELP the king - עזור למלך"
-      - "JUMP over the box - קפיצה מעל הקופסה
-FIND the treasure - מצא את האוצר
-עכשיו הפקודות הגיוניות!"
-      - "עכשיו תבדקו את Cannoneer לפני שהוא מנחש מה לעשות עם התותח."
-  missing_verbs_missing_verbs_q03_don_t_let_him_guess_s01:
+      - "מצוין! עכשיו אני מבין כל פקודה ויודע איזו פעולה לבצע."
+      - "התותחן מחכה ליד התותח. הוא צריך את העזרה האחרונה שלכם."
+  missing_verbs_q03_start:
     speaker: Cannoneer
     lines:
-      - "אה! מילת הפעולה נעלמה. אולי אני צריך לחבק את התותח? תעזור לי לשחזר את הפועל האמיתי!"
-  missing_verbs_missing_verbs_q03_don_t_let_him_guess_turn_in:
+      - "אוי! הפועל נעלם מהפקודה שלי, ואני כמעט מנחש מה לעשות עם התותח."
+      - "עזרו לי לשחזר את פועל הפעולה, לבחור אותו במשפט ולומר אותו באנגלית."
+  missing_verbs_q03_finish:
     speaker: Cannoneer
     lines:
-      - "FIRE the cannon! You restored the final verb.
- ירית בתותח ושחזרת את הפועל האחרון!"
-      - "פועל מתאר פעולה - עכשיו הממלכה יכולה לעבוד שוב!
-וכל אחד מאנשי הממלכה יודע בדיוק איזה פעולה לעשות!    תודה רבה לכם!"
+      - "הצלחתם! עכשיו הפקודה ברורה, ואני יודע איזו פעולה לבצע."
+      - "פעלים מתארים פעולות. כל הכבוד — סיימתם את שיעורי הבית! קבלו את הפרס שלכם."
