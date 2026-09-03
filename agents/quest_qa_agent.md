@@ -20,6 +20,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Dialogue duplication: an opening NPC dialogue is not repeated in an immediate `talk_to_npc` step; any additional Talk to NPC step must be a distinct, story-required conversation.
 - Dialogue readability: no dialogue block is overloaded; every English sentence has a complete Hebrew translation in the same block, and final-quest reward/congratulation text is a separate clear closing block.
 - Completion flow: a final quest gives its reward immediately and ends with thanks/praise; it must not send the learner to another NPC for a reward or continuation. Any NPC handoff must lead to a real next quest.
+- Reach Location: flag any `reach_location` step that was not explicitly requested by the user. Do not validate assumed monster combat or drop flows before those systems exist.
 - Variety: no long run of one minigame type; distribution is reproducible and aligned with the learning objective.
 - Variety: identical minigame types do not appear more than twice in a row.
 - Build/import: importer, bundle generation, and available tests finish without errors.

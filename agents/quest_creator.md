@@ -21,6 +21,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Do not duplicate an opening NPC dialogue in an immediate `talk_to_npc` step. Add another Talk to NPC step only for a distinct later conversation with new content.
 - Keep each dialogue block short. If English is used, put its complete Hebrew translation in the same block, then move the next idea to a separate block. End the final quest with a short completion message, immediate reward, and congratulations.
 - Close completed quests at the correct NPC: give the reward immediately and use a congratulatory final dialogue. Send the learner to another NPC only when a real next quest follows.
+- Do not add `reach_location` unless the user explicitly requests it. Do not design monster combat or monster-drop objectives until those systems are implemented and approved.
 - Connect every minigame to the learning objective.
 - Do not add UI buttons or importer workarounds without a separate request.
 

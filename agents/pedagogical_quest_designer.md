@@ -39,6 +39,7 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Make the next NPC, item, or stage clear after each task.
 - Do not repeat an opening NPC dialogue as an immediate `talk_to_npc` step.
 - End the final quest with immediate rewards, thanks, and congratulations; do not send the learner elsewhere after the quest is complete.
+- Do not plan `reach_location` unless the user explicitly requests it. Reserve it for the future monster-location, combat, drop, and NPC-return flow once that implementation exists.
 - Do not repeat minigames mechanically or create long identical sequences.
 - Identical minigame types may not appear more than twice in a row.
 
