@@ -20,6 +20,10 @@ Identical minigame types may not appear more than twice in a row. QA checks this
 
 Shared content rules are stored in _registry/QUESTLINE_CONTENT_RULES.md.
 
+## Session and workspace coordination
+
+All three roles run in the same user session and the same active working tree: Pedagogical Quest Designer, Quest Creator, and Quest QA & Variety Agent. They are sequential responsibilities in one collaboration, not separate repository branches. Do not create a branch, worktree, or separate chat for an agent. The Quest Creator is the only role that edits quest source files; the Designer provides the plan and the QA Agent reports findings back to the Creator. Keep the agreed repository branch and working context throughout the cycle.
+
 ## Local Questline Import Procedure
 
 When the user asks to upload a local questline to the website, use the existing local-to-site importer flow. Do not add new editor buttons or replace this flow with manual data entry.

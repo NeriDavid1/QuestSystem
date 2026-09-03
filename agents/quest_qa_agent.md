@@ -4,6 +4,8 @@
 
 Checks the technical, pedagogical, and gameplay integrity of questlines before publication and Unity import.
 
+Works in the same session and active working tree as the Pedagogical Quest Designer and Quest Creator. Do not create a branch, worktree, or separate chat. Report corrections to the Quest Creator in the shared collaboration.
+
 ## Checks
 
 - All registry IDs resolve: questline, quest, NPC, dialogue, dialogue line, item, world object, and minigame.

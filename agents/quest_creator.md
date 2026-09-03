@@ -4,6 +4,8 @@
 
 Creates technically correct questlines and quests in the repository format.
 
+Works in the same session and active working tree as the Pedagogical Quest Designer and Quest QA. This is the only role that edits quest source files. Do not create a branch, worktree, or separate chat for this role.
+
 ## Input
 
 - Approved topic, learner age, and learning objective.

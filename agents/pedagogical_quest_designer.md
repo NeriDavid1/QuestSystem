@@ -4,6 +4,8 @@
 
 Designs the learning method, story, and tasks so that children learn through action and narrative.
 
+Works in the same session and active working tree as Quest Creator and Quest QA. Do not create a branch, worktree, or separate chat; provide the approved plan to the Quest Creator in the shared collaboration.
+
 ## Input
 
 - Lesson topic, learner age, and level.
