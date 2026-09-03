@@ -57,6 +57,42 @@ instances:
       extraDistractorCount: 1
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  the_kingdoms_worst_day__q01_key_sentence:
+    minigame_id: word_ordering
+    instruction: בנו משפט קצר לפי התרגום בעברית.
+    tasks:
+      - The
+      - key
+      - opens
+      - the
+      - gate
+    target: The key opens the gate.
+    variant: sentence_building
+    success: המשפט ברור; המפתח פתח את השער.
+    params:
+      prompt: בנו משפט קצר לפי התרגום בעברית.
+      translation: המפתח פותח את השער.
+      englishWordsInOrder: [The, key, opens, the, gate]
+      preFilledIndices: [0, 2, 3, 4]
+      distractorWords: [book, crown]
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  the_kingdoms_worst_day__q01_gate_message:
+    minigame_id: speak_aloud
+    instruction: אמרו את המשפט באנגלית בקול.
+    tasks:
+      - הקשיבו למשפט
+      - אמרו אותו בקול ברור
+    target: Open the gate.
+    variant: short_phrase
+    success: ההודעה נשמעה; השער יכול להיפתח.
+    params:
+      prompt: אמרו את המשפט באנגלית בקול.
+      targetWords: [Open, the, gate]
+      targetPhrase: Open the gate.
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q02_verbs_gap:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בכל verb.
@@ -125,6 +161,38 @@ instances:
       distractorWords:
         - carry
         - open
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  the_kingdoms_worst_day__q02_carry_spelling:
+    minigame_id: letter_ordering
+    instruction: כתבו את המילה לשאת באנגלית.
+    tasks:
+      - סדרו את האותיות לפי הסדר
+      - בדקו את האיות לפני האישור
+    target: carry
+    variant: word_spelling
+    success: CARRY נכתב נכון; Will יודע איזו פעולה לבצע.
+    params:
+      prompt: כתבו את המילה לשאת באנגלית.
+      targetWord: carry
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  the_kingdoms_worst_day__q02_tool_command:
+    minigame_id: speak_aloud
+    instruction: אמרו את המשפט באנגלית בקול.
+    tasks:
+      - הקשיבו למשפט
+      - אמרו אותו בקול ברור
+    target: I fix the tool.
+    variant: short_phrase
+    success: הפקודה נשמעה; הכלי מוכן לתיקון.
+    params:
+      prompt: אמרו את המשפט באנגלית בקול.
+      targetWords: [I, fix, the, tool]
+      targetPhrase: I fix the tool.
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q03_adjectives_gap:
     minigame_id: word_matching
@@ -210,6 +278,41 @@ instances:
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  the_kingdoms_worst_day__q03_bright_description:
+    minigame_id: speak_aloud
+    instruction: אמרו את המשפט באנגלית בקול.
+    tasks:
+      - הקשיבו למשפט
+      - אמרו אותו בקול ברור
+    target: The tree is bright.
+    variant: short_phrase
+    success: התיאור נשמע ברור; הציור קיבל צבע ואור.
+    params:
+      prompt: אמרו את המשפט באנגלית בקול.
+      targetWords: [The, tree, is, bright]
+      targetPhrase: The tree is bright.
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  the_kingdoms_worst_day__q03_dark_gate_sentence:
+    minigame_id: word_ordering
+    instruction: השלימו את המשפט לפי התרגום בעברית.
+    tasks:
+      - The
+      - dark
+      - gate
+      - closes
+    target: The dark gate closes.
+    variant: sentence_building
+    success: המשפט מתאר את השער בצורה מדויקת.
+    params:
+      prompt: השלימו את המשפט לפי התרגום בעברית.
+      translation: השער החשוך נסגר.
+      englishWordsInOrder: [The, dark, gate, closes]
+      preFilledIndices: [0, 2, 3]
+      distractorWords: [big, bright]
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q04_mixed_sentence_one:
     minigame_id: word_ordering
     instruction: בנו משפט חדש לפי התרגום בעברית.
@@ -287,4 +390,57 @@ instances:
       silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
       referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  the_kingdoms_worst_day__q04_final_nouns:
+    minigame_id: word_matching
+    instruction: השלימו את האותיות החסרות במילים.
+    tasks:
+      - GA_E
+      - BO_K
+      - TR_E
+      - TO_L
+    target: gate, book, tree, tool
+    variant: letter_to_gap
+    success: המילים האחרונות חזרו ללוח המלכותי.
+    params:
+      letters:
+        - id: q04_gate_a
+          value: t
+        - id: q04_book_o
+          value: o
+        - id: q04_tree_e
+          value: e
+        - id: q04_tool_o
+          value: o
+      wordTasks:
+        - id: gate
+          image: ''
+          fullWord: gate
+          missingIndices: [2]
+        - id: book
+          image: ''
+          fullWord: book
+          missingIndices: [1]
+        - id: tree
+          image: ''
+          fullWord: tree
+          missingIndices: [3]
+        - id: tool
+          image: ''
+          fullWord: tool
+          missingIndices: [1]
+  the_kingdoms_worst_day__q04_final_verb:
+    minigame_id: letter_ordering
+    instruction: כתבו את המילה לסגור באנגלית.
+    tasks:
+      - סדרו את האותיות לפי הסדר
+      - בדקו את האיות לפני האישור
+    target: close
+    variant: word_spelling
+    success: CLOSE נכתב נכון; לוח היום נסגר בהצלחה.
+    params:
+      prompt: כתבו את המילה לסגור באנגלית.
+      targetWord: close
+      extraDistractorCount: 2
+      customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

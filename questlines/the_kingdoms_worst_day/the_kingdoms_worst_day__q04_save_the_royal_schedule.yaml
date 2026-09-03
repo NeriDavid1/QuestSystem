@@ -15,9 +15,6 @@ steps:
 - type: talk_to_npc
   npc_id: Professor Crazy
   dialogue_id: the_kingdoms_worst_day_q04_professor_start
-- type: reach_location
-  location_id: Solitude Tower
-  display_text: הגיעו למגדל הבדידות.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: WoodenCart2_Solitude_Tower
@@ -35,9 +32,6 @@ steps:
 - type: return_to_npc
   npc_id: Professor Crazy
   dialogue_id: the_kingdoms_worst_day_q04_professor_done
-- type: reach_location
-  location_id: TowerOfLostVigil
-  display_text: הגיעו למגדל המשמר האבוד.
 - type: talk_to_npc
   npc_id: Mountain Guide
   dialogue_id: the_kingdoms_worst_day_q04_guide_start
@@ -48,6 +42,20 @@ steps:
   success_required: true
   instance_id: the_kingdoms_worst_day__q04_transfer_speech
   display_text: אמרו את המשפט באנגלית בקול.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: WoodenCart2_Solitude_Tower
+  difficulty: 7
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q04_final_nouns
+  display_text: השלימו את האותיות החסרות במילים.
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 6
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q04_final_verb
+  display_text: כתבו את המילה לפי המשמעות בעברית.
 - type: return_to_npc
   npc_id: teacher_maya
   dialogue_id: the_kingdoms_worst_day_q04_maya_done

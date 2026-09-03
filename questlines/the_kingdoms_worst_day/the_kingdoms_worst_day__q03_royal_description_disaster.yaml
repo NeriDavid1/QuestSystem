@@ -13,9 +13,6 @@ steps:
 - type: talk_to_npc
   npc_id: Painter
   dialogue_id: the_kingdoms_worst_day_q03_painter_start
-- type: reach_location
-  location_id: The Sunspire Tree
-  display_text: הגיעו לעץ Sunspire.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Lost_Chest7_The_Sunspire_Tree
@@ -23,9 +20,6 @@ steps:
   success_required: true
   instance_id: the_kingdoms_worst_day__q03_adjectives_gap
   display_text: השלימו את האות החסרה בכל adjective.
-- type: reach_location
-  location_id: FairyRosePark
-  display_text: הגיעו לפארק Fairy Rose.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
@@ -40,6 +34,20 @@ steps:
   success_required: true
   instance_id: the_kingdoms_worst_day__q03_adjective_spelling
   display_text: כתבו את המילה בהיר באנגלית.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 6
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q03_bright_description
+  display_text: אמרו את המשפט באנגלית בקול.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Lost_Chest7_The_Sunspire_Tree
+  difficulty: 7
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q03_dark_gate_sentence
+  display_text: השלימו את המשפט לפי התרגום בעברית.
 - type: return_to_npc
   npc_id: Painter
   dialogue_id: the_kingdoms_worst_day_q03_painter_done

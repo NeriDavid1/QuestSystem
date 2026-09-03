@@ -13,9 +13,6 @@ steps:
 - type: talk_to_npc
   npc_id: City Gaurd Info
   dialogue_id: the_kingdoms_worst_day_q01_fenn_start
-- type: reach_location
-  location_id: KingdomGate
-  display_text: הגיעו לשער הממלכה.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Exam_Table1_Outside_Gate
@@ -30,6 +27,20 @@ steps:
   success_required: true
   instance_id: the_kingdoms_worst_day__q01_key_spelling
   display_text: כתבו את המילה מפתח באנגלית.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 5
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q01_key_sentence
+  display_text: בנו משפט קצר לפי התרגום בעברית.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 5
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q01_gate_message
+  display_text: אמרו את המשפט באנגלית בקול.
 - type: return_to_npc
   npc_id: City Gaurd Info
   dialogue_id: the_kingdoms_worst_day_q01_fenn_done
