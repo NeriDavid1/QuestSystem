@@ -82,8 +82,8 @@ For every request to upload a local questline to the website, follow this reposi
 2. Run `python scripts/build_all.py` and confirm that the build completes without errors.
 3. Commit and push the source plus generated bundle to `main`.
 4. Wait for the GitHub Pages workflow for the pushed commit to complete successfully.
-5. In a fresh browser tab, open `https://neridavid1.github.io/QuestSystem/editor/?load=<questline-key>&v=<commit-sha>` so the existing editor importer loads the local revision. Use a new cache-buster on every deployment.
-6. Verify the imported title, quest count, and representative step/minigame in the editor. If the command does not fire, select another questline and repeat the navigation once the editor selection is ready.
-7. If an existing empty or duplicate database record prevents replacement, identify the exact record and ask for confirmation before deleting it. Once the user explicitly requests or confirms the deletion, delete only that exact conflicting questline and then import the replacement; never perform an unrequested destructive delete.
+5. Delete the exact existing target questline from the website catalog before importing. This is the current agreed replacement workflow: remove the site Questline first, then recreate it from the local bundle. Never delete a different, duplicate, or unrequested questline.
+6. In a fresh browser tab, open `https://neridavid1.github.io/QuestSystem/editor/?load=<questline-key>&v=<commit-sha>` so the importer recreates the target from the local revision. Use a new cache-buster on every deployment.
+7. Wait for the import to save, then verify the recreated title, quest count, and representative step/minigame in the editor. If the command does not fire, select another existing questline and repeat the `?load=` navigation once the editor selection is ready.
 
-This is the standard method for all subjects and questlines. It imports a draft into the editor; a public publish must be separately requested and verified.
+This is the standard method for all subjects and questlines. It imports a draft into the editor; a public publish must be separately requested and verified. Website deletion remains a destructive action: perform it only for the exact target named by the user.

@@ -13702,7 +13702,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_484dfd25_4",
+              "key": "q01_the_broken_noun_book_play_minigame_b76c7892_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -13711,7 +13711,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: הספר נמצא על השולחן.",
                 "instance_key": "noun_repair_q01_sentence"
               },
               "source_metadata": {
@@ -13871,7 +13871,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_3143fe65_2",
+              "key": "q02_the_runaway_objects_play_minigame_7e4ee84a_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -13880,7 +13880,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: לילד יש תיק אדום.",
                 "instance_key": "noun_repair_q02_sentence"
               },
               "source_metadata": {
@@ -14097,7 +14097,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_20f343c1_3",
+              "key": "q03_the_market_name_mixup_play_minigame_db0e8b57_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -14106,7 +14106,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: החקלאי מוכר תפוחים טריים.",
                 "instance_key": "noun_repair_q03_sentence"
               },
               "source_metadata": {
@@ -14285,7 +14285,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_8c5b78c7_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_a1a34b5f_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14294,7 +14294,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: השף מחזיק כף.",
                 "instance_key": "noun_repair_q04_sentence"
               },
               "source_metadata": {
@@ -14492,7 +14492,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_5e6ed210_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_9aa82d32_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14501,7 +14501,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: המלכה יושבת על כס המלכות.",
                 "instance_key": "noun_repair_q05_sentence"
               },
               "source_metadata": {
@@ -14737,7 +14737,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_09cc23aa_4",
+              "key": "q06_the_great_noun_reopening_play_minigame_96694c40_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -14746,7 +14746,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: הכלב רואה את הטירה.",
                 "instance_key": "noun_repair_q06_sentence"
               },
               "source_metadata": {
@@ -19537,7 +19537,7 @@
               "rewards": []
             },
             {
-              "key": "q01_the_broken_noun_book_play_minigame_484dfd25_4",
+              "key": "q01_the_broken_noun_book_play_minigame_b76c7892_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -19546,7 +19546,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q01_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: הספר נמצא על השולחן.",
                 "instance_key": "noun_repair_q01_sentence"
               },
               "source_metadata": {
@@ -19706,7 +19706,7 @@
               "rewards": []
             },
             {
-              "key": "q02_the_runaway_objects_play_minigame_3143fe65_2",
+              "key": "q02_the_runaway_objects_play_minigame_7e4ee84a_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -19715,7 +19715,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q02_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: לילד יש תיק אדום.",
                 "instance_key": "noun_repair_q02_sentence"
               },
               "source_metadata": {
@@ -19932,7 +19932,7 @@
               "rewards": []
             },
             {
-              "key": "q03_the_market_name_mixup_play_minigame_20f343c1_3",
+              "key": "q03_the_market_name_mixup_play_minigame_db0e8b57_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -19941,7 +19941,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q03_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: החקלאי מוכר תפוחים טריים.",
                 "instance_key": "noun_repair_q03_sentence"
               },
               "source_metadata": {
@@ -20120,7 +20120,7 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_8c5b78c7_2",
+              "key": "q04_the_kitchen_invasion_play_minigame_a1a34b5f_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -20129,7 +20129,7 @@
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "noun_repair_q04_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: השף מחזיק כף.",
                 "instance_key": "noun_repair_q04_sentence"
               },
               "source_metadata": {
@@ -20327,7 +20327,7 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_5e6ed210_2",
+              "key": "q05_the_castle_label_crisis_play_minigame_9aa82d32_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -20336,7 +20336,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q05_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: המלכה יושבת על כס המלכות.",
                 "instance_key": "noun_repair_q05_sentence"
               },
               "source_metadata": {
@@ -20572,7 +20572,7 @@
               "rewards": []
             },
             {
-              "key": "q06_the_great_noun_reopening_play_minigame_09cc23aa_4",
+              "key": "q06_the_great_noun_reopening_play_minigame_96694c40_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -20581,7 +20581,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "noun_repair_q06_sentence",
-                "display_text": "השלימו את המשפט לפי התרגום בעברית",
+                "display_text": "השלימו את המשפט לפי התרגום בעברית: הכלב רואה את הטירה.",
                 "instance_key": "noun_repair_q06_sentence"
               },
               "source_metadata": {
@@ -22108,5 +22108,5 @@
       ]
     }
   ],
-  "source_digest": "be8f6d165e261bd94e818fa776c87e26ef7a749759f6badd2333b89964124a81"
+  "source_digest": "1e9a7e78e8679b0522ced994f1ee6c5ce07e5719ef4e46236bed780cede092d4"
 }

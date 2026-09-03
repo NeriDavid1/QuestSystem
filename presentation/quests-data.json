@@ -5347,7 +5347,7 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q01_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית: הספר נמצא על השולחן.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט לפי התרגום בעברית: הספר נמצא על השולחן.",
@@ -5726,7 +5726,7 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q02_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית: לילד יש תיק אדום.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט לפי התרגום בעברית: לילד יש תיק אדום.",
@@ -6249,7 +6249,7 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q03_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית: החקלאי מוכר תפוחים טריים.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט לפי התרגום בעברית: החקלאי מוכר תפוחים טריים.",
@@ -6709,7 +6709,7 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "noun_repair_q04_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית: השף מחזיק כף.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט לפי התרגום בעברית: השף מחזיק כף.",
@@ -7196,7 +7196,7 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q05_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית: המלכה יושבת על כס המלכות.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט לפי התרגום בעברית: המלכה יושבת על כס המלכות.",
@@ -7804,7 +7804,7 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "noun_repair_q06_sentence",
-              "display_text": "השלימו את המשפט לפי התרגום בעברית",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית: הכלב רואה את הטירה.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט לפי התרגום בעברית: הכלב רואה את הטירה.",

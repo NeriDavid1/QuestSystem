@@ -40,7 +40,7 @@ steps:
   difficulty: 2
   success_required: true
   instance_id: noun_repair_q01_sentence
-  display_text: השלימו את המשפט לפי התרגום בעברית
+  display_text: 'השלימו את המשפט לפי התרגום בעברית: הספר נמצא על השולחן.'
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Lost_Chest5_Silver_Fountain_Court

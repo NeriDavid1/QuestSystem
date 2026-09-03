@@ -26,7 +26,7 @@ steps:
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q05_sentence
-  display_text: השלימו את המשפט לפי התרגום בעברית
+  display_text: 'השלימו את המשפט לפי התרגום בעברית: המלכה יושבת על כס המלכות.'
 - type: play_minigame
   minigame_id: letter_ordering
   world_object_id: WoodenCart2_Solitude_Tower

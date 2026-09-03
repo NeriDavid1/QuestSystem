@@ -34,11 +34,11 @@ When the user asks to upload a local questline to the website, use the existing 
    `python scripts/build_all.py`
 3. Commit and push the source and generated bundle to the repository's `main` branch.
 4. Wait until the GitHub Pages workflow for that commit finishes successfully. The website must deploy the new `quest_content_bundle.json` before importing.
-5. Open a fresh editor tab and navigate to:
+5. Delete the exact existing target questline from the website catalog before importing. This is the current agreed replacement workflow: remove the site Questline first, then recreate it from the local bundle. Never delete a different, duplicate, or unrequested questline.
+6. Open a fresh editor tab and navigate to:
    `https://neridavid1.github.io/QuestSystem/editor/?load=<questline-key>&v=<commit-sha>`
    The `v` query value is a cache-buster and should be changed for each deployment.
-6. Wait for the editor to load, then verify the questline title, quest count, and at least one representative quest step/minigame in the editor. A URL alone is not evidence of a successful import.
-7. If the importer does not run because the editor has not finished selecting a line, select another existing questline once and repeat the same `?load=` navigation in the fresh tab with a new cache-buster.
-8. If an old empty or duplicate database record blocks replacement, stop and ask the user to delete that exact record. Never delete a questline silently.
+7. Wait for the editor to load, then verify the recreated questline title, quest count, and at least one representative quest step/minigame in the editor. A URL alone is not evidence of a successful import.
+8. If the importer does not run because the editor has not finished selecting a line, select another existing questline once and repeat the same `?load=` navigation in the fresh tab with a new cache-buster.
 
 This procedure imports the local revision into the website editor as a draft. Do not claim that a public publish snapshot was created unless the publish action is also explicitly requested and verified.
