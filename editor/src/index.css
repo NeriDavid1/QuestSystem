@@ -3897,6 +3897,15 @@ select:focus {
     padding: 27px 23px 20px;
   }
 
+  .questline-rail {
+    max-height: min(620px, calc(100vh - 140px));
+    overflow: hidden;
+  }
+
+  .rail-list {
+    min-height: 0;
+  }
+
   .inspector {
     align-self: start;
     grid-column: 1 / -1;
