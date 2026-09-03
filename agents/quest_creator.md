@@ -24,6 +24,7 @@ Creates technically correct questlines and quests in the repository format.
 - Verify every NPC, dialogue, item, world object, and minigame ID.
 - Verify Word Matching letters, wordTasks, valid indices, and fragment/full-word alignment.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the universal rules.
+- For Word Ordering, ensure every choice list has unique words and includes the exact correct word for the open position.
 - Run the local importer/build before handing over the result.
 
 ## Output
