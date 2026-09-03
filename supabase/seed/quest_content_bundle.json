@@ -13887,12 +13887,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_df1caee9_2",
+              "key": "q01_numbers_10_20_play_minigame_f5011d81_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_sentence_twelve",
@@ -13906,12 +13906,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_0504f410_3",
+              "key": "q01_numbers_10_20_play_minigame_31a77838_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q01_say_fourteen",
@@ -13925,12 +13925,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_a588c0c4_4",
+              "key": "q01_numbers_10_20_play_minigame_87e3afe2_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_sixteen",
@@ -13963,12 +13963,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_1db07970_6",
+              "key": "q01_numbers_10_20_play_minigame_a709a20a_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q01_say_twenty",
@@ -13982,12 +13982,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_7ffd601b_7",
+              "key": "q01_numbers_10_20_play_minigame_1b00030b_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q01_review_10_20",
@@ -14070,12 +14070,12 @@
           ],
           "steps": [
             {
-              "key": "q02_numbers_20_100_play_minigame_2bf61566_1",
+              "key": "q02_numbers_20_100_play_minigame_e2e2f7d0_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_twenty",
@@ -14108,12 +14108,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_22b8a294_3",
+              "key": "q02_numbers_20_100_play_minigame_4d5dfe9e_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_fifty",
@@ -14127,12 +14127,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_05d3522b_4",
+              "key": "q02_numbers_20_100_play_minigame_c7bf571f_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q02_say_forty",
@@ -14146,12 +14146,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_27bfb821_5",
+              "key": "q02_numbers_20_100_play_minigame_a32839c2_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q02_sentence_sixty_two",
@@ -14165,12 +14165,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_04ee5696_6",
+              "key": "q02_numbers_20_100_play_minigame_c5da1d19_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q02_say_seventy",
@@ -14184,12 +14184,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_87384e59_7",
+              "key": "q02_numbers_20_100_play_minigame_9464c29b_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Exam_Table1_Outside_Gate",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q02_review_20_100",
@@ -14291,12 +14291,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_2fe43385_2",
+              "key": "q03_numbers_100_1000_play_minigame_90adaca9_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q03_sentence_two_hundred_fifty",
@@ -14310,12 +14310,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_d6c2efbf_3",
+              "key": "q03_numbers_100_1000_play_minigame_edc3697c_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_thousand",
@@ -14329,12 +14329,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_9848a100_4",
+              "key": "q03_numbers_100_1000_play_minigame_3fb8428c_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q03_say_three_hundred",
@@ -14348,12 +14348,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_03a5120a_5",
+              "key": "q03_numbers_100_1000_play_minigame_f2a94358_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q03_sentence_seven_hundred_twenty",
@@ -14367,12 +14367,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_7436cf27_6",
+              "key": "q03_numbers_100_1000_play_minigame_53015e9f_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q03_say_nine_hundred_ninety_nine",
@@ -14386,12 +14386,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_be0e6b3a_7",
+              "key": "q03_numbers_100_1000_play_minigame_f44e1e29_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "numbers_q03_review_100_1000",
@@ -14493,12 +14493,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_fc3f4ded_2",
+              "key": "q04_numbers_mixed_review_play_minigame_ef168d90_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q04_spell_sixty_two",
@@ -14512,12 +14512,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_edfa749f_3",
+              "key": "q04_numbers_mixed_review_play_minigame_6f22556f_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q04_say_three_hundred",
@@ -14531,12 +14531,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_63a0fd64_4",
+              "key": "q04_numbers_mixed_review_play_minigame_debe379f_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "numbers_q04_sentence_seven_hundred_twenty",
@@ -14550,12 +14550,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_b562d7f6_5",
+              "key": "q04_numbers_mixed_review_play_minigame_aa5e7d4c_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "numbers_q04_say_nine_hundred_ninety_nine",
@@ -19271,12 +19271,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_df1caee9_2",
+              "key": "q01_numbers_10_20_play_minigame_f5011d81_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_sentence_twelve",
@@ -19290,12 +19290,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_0504f410_3",
+              "key": "q01_numbers_10_20_play_minigame_31a77838_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q01_say_fourteen",
@@ -19309,12 +19309,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_a588c0c4_4",
+              "key": "q01_numbers_10_20_play_minigame_87e3afe2_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q01_spell_sixteen",
@@ -19347,12 +19347,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_1db07970_6",
+              "key": "q01_numbers_10_20_play_minigame_a709a20a_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q01_say_twenty",
@@ -19366,12 +19366,12 @@
               "rewards": []
             },
             {
-              "key": "q01_numbers_10_20_play_minigame_7ffd601b_7",
+              "key": "q01_numbers_10_20_play_minigame_1b00030b_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q01_review_10_20",
@@ -19454,12 +19454,12 @@
           ],
           "steps": [
             {
-              "key": "q02_numbers_20_100_play_minigame_2bf61566_1",
+              "key": "q02_numbers_20_100_play_minigame_e2e2f7d0_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 2,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_twenty",
@@ -19492,12 +19492,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_22b8a294_3",
+              "key": "q02_numbers_20_100_play_minigame_4d5dfe9e_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q02_spell_fifty",
@@ -19511,12 +19511,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_05d3522b_4",
+              "key": "q02_numbers_20_100_play_minigame_c7bf571f_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "world_object_id": "Exam_Table1_Outside_Gate",
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "numbers_q02_say_forty",
@@ -19530,12 +19530,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_27bfb821_5",
+              "key": "q02_numbers_20_100_play_minigame_a32839c2_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q02_sentence_sixty_two",
@@ -19549,12 +19549,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_04ee5696_6",
+              "key": "q02_numbers_20_100_play_minigame_c5da1d19_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q02_say_seventy",
@@ -19568,12 +19568,12 @@
               "rewards": []
             },
             {
-              "key": "q02_numbers_20_100_play_minigame_87384e59_7",
+              "key": "q02_numbers_20_100_play_minigame_9464c29b_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Exam_Table1_Outside_Gate",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q02_review_20_100",
@@ -19675,12 +19675,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_2fe43385_2",
+              "key": "q03_numbers_100_1000_play_minigame_90adaca9_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q03_sentence_two_hundred_fifty",
@@ -19694,12 +19694,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_d6c2efbf_3",
+              "key": "q03_numbers_100_1000_play_minigame_edc3697c_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "numbers_q03_spell_thousand",
@@ -19713,12 +19713,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_9848a100_4",
+              "key": "q03_numbers_100_1000_play_minigame_3fb8428c_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "numbers_q03_say_three_hundred",
@@ -19732,12 +19732,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_03a5120a_5",
+              "key": "q03_numbers_100_1000_play_minigame_f2a94358_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q03_sentence_seven_hundred_twenty",
@@ -19751,12 +19751,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_7436cf27_6",
+              "key": "q03_numbers_100_1000_play_minigame_53015e9f_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q03_say_nine_hundred_ninety_nine",
@@ -19770,12 +19770,12 @@
               "rewards": []
             },
             {
-              "key": "q03_numbers_100_1000_play_minigame_be0e6b3a_7",
+              "key": "q03_numbers_100_1000_play_minigame_f44e1e29_7",
               "position": 7,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "world_object_id": "Lost_Chest6_The_Last_Roar",
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "numbers_q03_review_100_1000",
@@ -19877,12 +19877,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_fc3f4ded_2",
+              "key": "q04_numbers_mixed_review_play_minigame_ef168d90_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest6_The_Last_Roar",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q04_spell_sixty_two",
@@ -19896,12 +19896,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_edfa749f_3",
+              "key": "q04_numbers_mixed_review_play_minigame_6f22556f_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "numbers_q04_say_three_hundred",
@@ -19915,12 +19915,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_63a0fd64_4",
+              "key": "q04_numbers_mixed_review_play_minigame_debe379f_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
-                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "numbers_q04_sentence_seven_hundred_twenty",
@@ -19934,12 +19934,12 @@
               "rewards": []
             },
             {
-              "key": "q04_numbers_mixed_review_play_minigame_b562d7f6_5",
+              "key": "q04_numbers_mixed_review_play_minigame_aa5e7d4c_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
-                "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "numbers_q04_say_nine_hundred_ninety_nine",
@@ -20621,5 +20621,5 @@
       ]
     }
   ],
-  "source_digest": "5d4c58da8b4e4c92930e72215f793b4f8314c93209040a17f824348edbf5ef68"
+  "source_digest": "d6d5ed70c872ab0fd7d16f4ec2df1ab29ac0e43a3c90bc1e5f689778cc8f9305"
 }

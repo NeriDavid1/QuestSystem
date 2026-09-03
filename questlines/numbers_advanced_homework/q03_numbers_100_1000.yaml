@@ -22,42 +22,42 @@ steps:
   display_text: כתבו באנגלית את המילה שפירושה מאה.
 - type: play_minigame
   minigame_id: word_ordering
-  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 5
   success_required: true
   instance_id: numbers_q03_sentence_two_hundred_fifty
   display_text: בנו משפט לפי התרגום בעברית
 - type: play_minigame
   minigame_id: letter_ordering
-  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 5
   success_required: true
   instance_id: numbers_q03_spell_thousand
   display_text: כתבו באנגלית את המילה שפירושה אלף.
 - type: play_minigame
   minigame_id: speak_aloud
-  world_object_id: Lost_Chest6_The_Last_Roar
+  world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 4
   success_required: true
   instance_id: numbers_q03_say_three_hundred
   display_text: אמרו את המספר הבא באנגלית בקול.
 - type: play_minigame
   minigame_id: word_ordering
-  world_object_id: Wooden_Cart1_Inside_Gate
+  world_object_id: Lost_Chest6_The_Last_Roar
   difficulty: 6
   success_required: true
   instance_id: numbers_q03_sentence_seven_hundred_twenty
   display_text: בנו משפט לפי התרגום בעברית
 - type: play_minigame
   minigame_id: speak_aloud
-  world_object_id: Exam_Table_Fairy_Rose_Park
+  world_object_id: Lost_Chest6_The_Last_Roar
   difficulty: 6
   success_required: true
   instance_id: numbers_q03_say_nine_hundred_ninety_nine
   display_text: אמרו את המספר הבא באנגלית בקול.
 - type: play_minigame
   minigame_id: word_ordering
-  world_object_id: WoodenCart2_Solitude_Tower
+  world_object_id: Lost_Chest6_The_Last_Roar
   difficulty: 7
   success_required: true
   instance_id: numbers_q03_review_100_1000

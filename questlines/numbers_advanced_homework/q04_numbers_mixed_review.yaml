@@ -22,28 +22,28 @@ steps:
   display_text: השלימו את המשפט לפי התרגום בעברית.
 - type: play_minigame
   minigame_id: letter_ordering
-  world_object_id: Lost_Chest6_The_Last_Roar
+  world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 6
   success_required: true
   instance_id: numbers_q04_spell_sixty_two
   display_text: כתבו באנגלית את המילה שפירושה שישים ושתיים.
 - type: play_minigame
   minigame_id: speak_aloud
-  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 6
   success_required: true
   instance_id: numbers_q04_say_three_hundred
   display_text: אמרו את המספר הבא באנגלית בקול.
 - type: play_minigame
   minigame_id: word_ordering
-  world_object_id: Wooden_Cart1_Inside_Gate
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
   difficulty: 7
   success_required: true
   instance_id: numbers_q04_sentence_seven_hundred_twenty
   display_text: השלימו את המשפט לפי התרגום בעברית.
 - type: play_minigame
   minigame_id: speak_aloud
-  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
   difficulty: 7
   success_required: true
   instance_id: numbers_q04_say_nine_hundred_ninety_nine
