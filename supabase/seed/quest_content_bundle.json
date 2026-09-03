@@ -7092,7 +7092,7 @@
     {
       "key": "numbers_q01_review_10_20",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא חמש עשרה.",
       "tasks": [
         "The",
         "number",
@@ -7104,7 +7104,7 @@
       "success": "סיימתם את תרגול 10–20.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא חמש עשרה.",
         "translation": "המספר הוא חמש עשרה",
         "englishWordsInOrder": [
           "The",
@@ -7176,7 +7176,7 @@
     {
       "key": "numbers_q01_sentence_eighteen",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא שמונה עשרה.",
       "tasks": [
         "The",
         "number",
@@ -7188,7 +7188,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא שמונה עשרה.",
         "translation": "המספר הוא שמונה עשרה",
         "englishWordsInOrder": [
           "The",
@@ -7212,7 +7212,7 @@
     {
       "key": "numbers_q01_sentence_twelve",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא שתים עשרה.",
       "tasks": [
         "The",
         "number",
@@ -7224,7 +7224,7 @@
       "success": "נכון! המשפט מתאים למספר 12.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא שתים עשרה.",
         "translation": "המספר הוא שתים עשרה",
         "englishWordsInOrder": [
           "The",
@@ -7296,7 +7296,7 @@
     {
       "key": "numbers_q02_review_20_100",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא תשעים.",
       "tasks": [
         "The",
         "number",
@@ -7308,7 +7308,7 @@
       "success": "סיימתם את תרגול 20–100.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא תשעים.",
         "translation": "המספר הוא תשעים",
         "englishWordsInOrder": [
           "The",
@@ -7380,7 +7380,7 @@
     {
       "key": "numbers_q02_sentence_sixty_two",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא שישים ושתיים.",
       "tasks": [
         "The",
         "number",
@@ -7392,7 +7392,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא שישים ושתיים.",
         "translation": "המספר הוא שישים ושתיים",
         "englishWordsInOrder": [
           "The",
@@ -7416,7 +7416,7 @@
     {
       "key": "numbers_q02_sentence_thirty_five",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא שלושים וחמש.",
       "tasks": [
         "The",
         "number",
@@ -7428,7 +7428,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא שלושים וחמש.",
         "translation": "המספר הוא שלושים וחמש",
         "englishWordsInOrder": [
           "The",
@@ -7501,7 +7501,7 @@
     {
       "key": "numbers_q03_review_100_1000",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא אלף.",
       "tasks": [
         "The",
         "number",
@@ -7514,7 +7514,7 @@
       "success": "סיימתם את כל שיעורי הבית.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא אלף.",
         "translation": "המספר הוא אלף",
         "englishWordsInOrder": [
           "The",
@@ -7591,7 +7591,7 @@
     {
       "key": "numbers_q03_sentence_seven_hundred_twenty",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.",
       "tasks": [
         "The",
         "number",
@@ -7605,7 +7605,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.",
         "translation": "המספר הוא שבע מאות ועשרים",
         "englishWordsInOrder": [
           "The",
@@ -7632,7 +7632,7 @@
     {
       "key": "numbers_q03_sentence_two_hundred_fifty",
       "locale": "he",
-      "instruction": "בנו משפט לפי התרגום בעברית",
+      "instruction": "בנו את המשפט לפי התרגום בעברית: המספר הוא מאתיים וחמישים.",
       "tasks": [
         "The",
         "number",
@@ -7646,7 +7646,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו משפט לפי התרגום בעברית",
+        "prompt": "בנו את המשפט לפי התרגום בעברית: המספר הוא מאתיים וחמישים.",
         "translation": "המספר הוא מאתיים וחמישים",
         "englishWordsInOrder": [
           "The",
@@ -7774,7 +7774,7 @@
     {
       "key": "numbers_q04_sentence_fourteen",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: המספר הוא ארבע עשרה.",
       "tasks": [
         "The",
         "number",
@@ -7786,7 +7786,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: המספר הוא ארבע עשרה.",
         "translation": "המספר הוא ארבע עשרה",
         "englishWordsInOrder": [
           "The",
@@ -7810,7 +7810,7 @@
     {
       "key": "numbers_q04_sentence_seven_hundred_twenty",
       "locale": "he",
-      "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+      "instruction": "השלימו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.",
       "tasks": [
         "The",
         "number",
@@ -7824,7 +7824,7 @@
       "success": "המשפט נכון.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+        "prompt": "השלימו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.",
         "translation": "המספר הוא שבע מאות ועשרים",
         "englishWordsInOrder": [
           "The",
@@ -20621,5 +20621,5 @@
       ]
     }
   ],
-  "source_digest": "e62aba400f4ea83740d66115a3b3ee57ff917da27a5652fed6b28962a6da1834"
+  "source_digest": "5d4c58da8b4e4c92930e72215f793b4f8314c93209040a17f824348edbf5ef68"
 }

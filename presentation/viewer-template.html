@@ -1130,15 +1130,6 @@
       if (!instruction && typeof params.prompt === "string" && params.prompt) {
         instruction = params.prompt;
       }
-      if (!instruction && Array.isArray(params.englishWordsInOrder) && params.englishWordsInOrder.length) {
-        instruction = params.englishWordsInOrder.join(" ");
-      }
-      if (!instruction && typeof params.targetWord === "string" && params.targetWord) {
-        instruction = params.targetWord;
-      }
-      if (!instruction && typeof params.targetPhrase === "string" && params.targetPhrase) {
-        instruction = params.targetPhrase;
-      }
       const hasContent = instruction || tasks.length || record.target || record.variant || record.success
         || (params && Object.keys(params).length > 0);
       if (!hasContent) return null;

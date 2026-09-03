@@ -16,7 +16,7 @@ instances:
       customDistractors: []
   numbers_q01_sentence_twelve:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שתים עשרה.'
     tasks:
     - The
     - number
@@ -26,7 +26,7 @@ instances:
     variant: sentence_building
     success: נכון! המשפט מתאים למספר 12.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שתים עשרה.'
       translation: המספר הוא שתים עשרה
       englishWordsInOrder:
       - The
@@ -72,7 +72,7 @@ instances:
       customDistractors: []
   numbers_q01_sentence_eighteen:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שמונה עשרה.'
     tasks:
     - The
     - number
@@ -82,7 +82,7 @@ instances:
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שמונה עשרה.'
       translation: המספר הוא שמונה עשרה
       englishWordsInOrder:
       - The
@@ -109,7 +109,7 @@ instances:
       referenceClip: ''
   numbers_q01_review_10_20:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא חמש עשרה.'
     tasks:
     - The
     - number
@@ -119,7 +119,7 @@ instances:
     variant: sentence_building
     success: סיימתם את תרגול 10–20.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא חמש עשרה.'
       translation: המספר הוא חמש עשרה
       englishWordsInOrder:
       - The
@@ -148,7 +148,7 @@ instances:
       customDistractors: []
   numbers_q02_sentence_thirty_five:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שלושים וחמש.'
     tasks:
     - The
     - number
@@ -158,7 +158,7 @@ instances:
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שלושים וחמש.'
       translation: המספר הוא שלושים וחמש
       englishWordsInOrder:
       - The
@@ -202,7 +202,7 @@ instances:
       customDistractors: []
   numbers_q02_sentence_sixty_two:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שישים ושתיים.'
     tasks:
     - The
     - number
@@ -212,7 +212,7 @@ instances:
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שישים ושתיים.'
       translation: המספר הוא שישים ושתיים
       englishWordsInOrder:
       - The
@@ -239,7 +239,7 @@ instances:
       referenceClip: ''
   numbers_q02_review_20_100:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא תשעים.'
     tasks:
     - The
     - number
@@ -249,7 +249,7 @@ instances:
     variant: sentence_building
     success: סיימתם את תרגול 20–100.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא תשעים.'
       translation: המספר הוא תשעים
       englishWordsInOrder:
       - The
@@ -279,7 +279,7 @@ instances:
       customDistractors: []
   numbers_q03_sentence_two_hundred_fifty:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא מאתיים וחמישים.'
     tasks:
     - The
     - number
@@ -291,7 +291,7 @@ instances:
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא מאתיים וחמישים.'
       translation: המספר הוא מאתיים וחמישים
       englishWordsInOrder:
       - The
@@ -341,7 +341,7 @@ instances:
       customDistractors: []
   numbers_q03_sentence_seven_hundred_twenty:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.'
     tasks:
     - The
     - number
@@ -353,7 +353,7 @@ instances:
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.'
       translation: המספר הוא שבע מאות ועשרים
       englishWordsInOrder:
       - The
@@ -384,7 +384,7 @@ instances:
       referenceClip: ''
   numbers_q03_review_100_1000:
     minigame_id: word_ordering
-    instruction: בנו משפט לפי התרגום בעברית
+    instruction: 'בנו את המשפט לפי התרגום בעברית: המספר הוא אלף.'
     tasks:
     - The
     - number
@@ -395,7 +395,7 @@ instances:
     variant: sentence_building
     success: סיימתם את כל שיעורי הבית.
     params:
-      prompt: בנו משפט לפי התרגום בעברית
+      prompt: 'בנו את המשפט לפי התרגום בעברית: המספר הוא אלף.'
       translation: המספר הוא אלף
       englishWordsInOrder:
       - The
@@ -407,7 +407,7 @@ instances:
       distractorWords: [five, ten]
   numbers_q04_sentence_fourteen:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית.
+    instruction: 'השלימו את המשפט לפי התרגום בעברית: המספר הוא ארבע עשרה.'
     tasks:
     - The
     - number
@@ -417,7 +417,7 @@ instances:
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית.
+      prompt: 'השלימו את המשפט לפי התרגום בעברית: המספר הוא ארבע עשרה.'
       translation: המספר הוא ארבע עשרה
       englishWordsInOrder:
       - The
@@ -464,7 +464,7 @@ instances:
       referenceClip: ''
   numbers_q04_sentence_seven_hundred_twenty:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית.
+    instruction: 'השלימו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.'
     tasks:
     - The
     - number
@@ -476,7 +476,7 @@ instances:
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית.
+      prompt: 'השלימו את המשפט לפי התרגום בעברית: המספר הוא שבע מאות ועשרים.'
       translation: המספר הוא שבע מאות ועשרים
       englishWordsInOrder:
       - The

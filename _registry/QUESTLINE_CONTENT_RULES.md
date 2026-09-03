@@ -44,6 +44,13 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Speak Aloud is the intentional exception: English target words may be shown because the learner must say them in English. If the game UI already displays the targets, do not duplicate them in the instruction.
 - When assembling a sentence, always provide the Hebrew translation. The learner may complete only the missing target word(s); do not force a full rewrite when partial completion better serves the objective.
 
+## Preview and runtime display contract
+
+- Every preview must render the authored learner-facing `params.prompt` (or the authored minigame instruction when the prompt field is intentionally absent). The editor and public viewer must not invent, append, or infer explanatory text from answer data.
+- Do not use `translation`, `englishWordsInOrder`, `targetWord`, `targetPhrase`, `tasks`, or similar answer fields as a fallback instruction or as an extra learner-facing line. These fields remain runtime data and validation data.
+- If a translation or explanation is needed in the preview, write it explicitly inside the authored prompt. For Word Ordering, `params.translation` may remain available to the runtime, but it must not appear as a separate preview line unless the author included it in `params.prompt`.
+- Keep the editor preview, public viewer, and runtime aligned: no surface may silently add text that is not present in the authored prompt/instruction. A missing prompt must remain visibly missing or use a neutral placeholder, never reveal the answer.
+
 ## Questline and quest structure
 
 - A questline should contain a clear progression of connected quests, with a coherent story, NPC task, active mini-games, optional return to an NPC, and a final turn-in dialogue that thanks the learner and points to the next NPC or quest.

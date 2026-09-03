@@ -101,7 +101,6 @@ function LetterOrderingMock({ params, prompt, seed }: { params: MockParams; prom
 
 function WordOrderingMock({ params, prompt, seed }: { params: MockParams; prompt: string; seed: string }) {
   const words = asStringArray(params.englishWordsInOrder)
-  const translation = asString(params.translation)
   const preFilled = new Set(asNumberArray(params.preFilledIndices))
   const distractors = asStringArray(params.distractorWords)
   const bank = stableShuffle(
@@ -112,7 +111,6 @@ function WordOrderingMock({ params, prompt, seed }: { params: MockParams; prompt
   return (
     <ParchmentShell>
       <div className="mg-mock-prompt" dir="auto">{prompt || '…'}</div>
-      {translation && <div className="mg-mock-translation" dir="rtl">{translation}</div>}
       <div className="mg-mock-slots mg-mock-word-slots">
         {Array.from({ length: slotCount }, (_, i) => {
           const filled = preFilled.has(i) && words[i]
