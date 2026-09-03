@@ -2,7 +2,7 @@
 instances:
   the_kingdoms_worst_day__q01_nouns_gap:
     minigame_id: word_matching
-    instruction: השלימו את האות החסרה בכל noun.
+    instruction: השלימו את האות החסרה בכל מילת חפץ.
     tasks:
       - _ATE
       - KE_
@@ -44,7 +44,7 @@ instances:
             - 3
   the_kingdoms_worst_day__q01_key_spelling:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה מפתח באנגלית.
+    instruction: כתבו את המילה שפירושה מפתח באנגלית.
     tasks:
       - סדרו את האותיות לפי הסדר
       - בדקו את האיות לפני האישור
@@ -52,7 +52,7 @@ instances:
     variant: word_spelling
     success: KEY נכתב נכון; Fenn מצא את המפתח.
     params:
-      prompt: כתבו את המילה מפתח באנגלית.
+      prompt: כתבו את המילה שפירושה מפתח באנגלית.
       targetWord: key
       extraDistractorCount: 1
       customDistractors: []
@@ -78,7 +78,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q01_gate_message:
     minigame_id: speak_aloud
-    instruction: אמרו את המשפט באנגלית בקול.
+    instruction: אמרו את המשפט הבא באנגלית בקול.
     tasks:
       - הקשיבו למשפט
       - אמרו אותו בקול ברור
@@ -86,7 +86,7 @@ instances:
     variant: short_phrase
     success: ההודעה נשמעה; השער יכול להיפתח.
     params:
-      prompt: אמרו את המשפט באנגלית בקול.
+      prompt: אמרו את המשפט הבא באנגלית בקול.
       targetWords: [Open, the, gate]
       targetPhrase: Open the gate.
       silenceTimeoutSeconds: 2.5
@@ -95,7 +95,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q02_verbs_gap:
     minigame_id: word_matching
-    instruction: השלימו את האות החסרה בכל verb.
+    instruction: השלימו את האות החסרה בכל מילת פעולה.
     tasks:
       - _IX
       - OP_N
@@ -164,7 +164,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q02_carry_spelling:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה לשאת באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה לשאת.
     tasks:
       - סדרו את האותיות לפי הסדר
       - בדקו את האיות לפני האישור
@@ -172,14 +172,14 @@ instances:
     variant: word_spelling
     success: CARRY נכתב נכון; Will יודע איזו פעולה לבצע.
     params:
-      prompt: כתבו את המילה לשאת באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה לשאת.
       targetWord: carry
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q02_tool_command:
     minigame_id: speak_aloud
-    instruction: אמרו את המשפט באנגלית בקול.
+    instruction: אמרו את המשפט הבא באנגלית בקול.
     tasks:
       - הקשיבו למשפט
       - אמרו אותו בקול ברור
@@ -187,7 +187,7 @@ instances:
     variant: short_phrase
     success: הפקודה נשמעה; הכלי מוכן לתיקון.
     params:
-      prompt: אמרו את המשפט באנגלית בקול.
+      prompt: אמרו את המשפט הבא באנגלית בקול.
       targetWords: [I, fix, the, tool]
       targetPhrase: I fix the tool.
       silenceTimeoutSeconds: 2.5
@@ -196,7 +196,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q03_adjectives_gap:
     minigame_id: word_matching
-    instruction: השלימו את האות החסרה בכל adjective.
+    instruction: השלימו את האות החסרה בכל מילת תיאור.
     tasks:
       - _IG
       - SM_LL
@@ -265,7 +265,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q03_adjective_spelling:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה בהיר באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה בהיר.
     tasks:
       - סדרו את האותיות לפי הסדר
       - בדקו את האיות לפני האישור
@@ -273,14 +273,14 @@ instances:
     variant: word_spelling
     success: BRIGHT נכתב נכון; Painter יכולה להבדיל בין אור לצל.
     params:
-      prompt: כתבו את המילה בהיר באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה בהיר.
       targetWord: bright
       extraDistractorCount: 2
       customDistractors: []
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q03_bright_description:
     minigame_id: speak_aloud
-    instruction: אמרו את המשפט באנגלית בקול.
+    instruction: אמרו את המשפט הבא באנגלית בקול.
     tasks:
       - הקשיבו למשפט
       - אמרו אותו בקול ברור
@@ -288,7 +288,7 @@ instances:
     variant: short_phrase
     success: התיאור נשמע ברור; הציור קיבל צבע ואור.
     params:
-      prompt: אמרו את המשפט באנגלית בקול.
+      prompt: אמרו את המשפט הבא באנגלית בקול.
       targetWords: [The, tree, is, bright]
       targetPhrase: The tree is bright.
       silenceTimeoutSeconds: 2.5
@@ -372,7 +372,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q04_transfer_speech:
     minigame_id: speak_aloud
-    instruction: אמרו את המשפט באנגלית בקול.
+    instruction: אמרו את המשפט הבא באנגלית בקול.
     tasks:
       - הקשיבו למשפט
       - אמרו אותו שוב בקול ברור
@@ -380,7 +380,7 @@ instances:
     variant: short_phrase
     success: המשפט נשמע ברור; ההודעה הגיעה אל המלך.
     params:
-      prompt: אמרו את המשפט באנגלית בקול.
+      prompt: אמרו את המשפט הבא באנגלית בקול.
       targetWords:
         - The
         - big
@@ -393,7 +393,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q04_final_nouns:
     minigame_id: word_matching
-    instruction: השלימו את האותיות החסרות במילים.
+    instruction: השלימו את האותיות החסרות בשמות החפצים.
     tasks:
       - GA_E
       - BO_K
@@ -431,7 +431,7 @@ instances:
           missingIndices: [1]
   the_kingdoms_worst_day__q04_final_verb:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה לסגור באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה לסגור.
     tasks:
       - סדרו את האותיות לפי הסדר
       - בדקו את האיות לפני האישור
@@ -439,7 +439,7 @@ instances:
     variant: word_spelling
     success: CLOSE נכתב נכון; לוח היום נסגר בהצלחה.
     params:
-      prompt: כתבו את המילה לסגור באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה לסגור.
       targetWord: close
       extraDistractorCount: 2
       customDistractors: []

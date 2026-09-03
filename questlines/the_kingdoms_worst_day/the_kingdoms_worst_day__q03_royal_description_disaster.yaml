@@ -4,7 +4,7 @@ quest:
   level_required: 7
   giver_npc: Painter
   prerequisite: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
-  summary: Restore adjectives so the Painter can describe the kingdom's objects clearly again.
+  summary: השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.
   wait_for_npc_turn_in: false
 rewards:
   xp: 200
@@ -19,7 +19,7 @@ steps:
   difficulty: 4
   success_required: true
   instance_id: the_kingdoms_worst_day__q03_adjectives_gap
-  display_text: השלימו את האות החסרה בכל adjective.
+  display_text: השלימו את האות החסרה בכל מילת תיאור.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
@@ -33,14 +33,14 @@ steps:
   difficulty: 4
   success_required: true
   instance_id: the_kingdoms_worst_day__q03_adjective_spelling
-  display_text: כתבו את המילה בהיר באנגלית.
+  display_text: כתבו באנגלית את המילה שפירושה בהיר.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 6
   success_required: true
   instance_id: the_kingdoms_worst_day__q03_bright_description
-  display_text: אמרו את המשפט באנגלית בקול.
+  display_text: אמרו את המשפט הבא באנגלית בקול.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Lost_Chest7_The_Sunspire_Tree

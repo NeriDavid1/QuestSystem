@@ -4,7 +4,7 @@ quest:
   level_required: 7
   giver_npc: City Gaurd Info
   prerequisite: null
-  summary: Restore the nouns on Fenn's broken gate list and help him name the missing objects.
+  summary: השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.
   wait_for_npc_turn_in: false
 rewards:
   xp: 100
@@ -19,14 +19,14 @@ steps:
   difficulty: 3
   success_required: true
   instance_id: the_kingdoms_worst_day__q01_nouns_gap
-  display_text: השלימו את האות החסרה בכל noun.
+  display_text: השלימו את האות החסרה בכל מילת חפץ.
 - type: play_minigame
   minigame_id: letter_ordering
   world_object_id: Wooden_Cart1_Inside_Gate
   difficulty: 3
   success_required: true
   instance_id: the_kingdoms_worst_day__q01_key_spelling
-  display_text: כתבו את המילה מפתח באנגלית.
+  display_text: כתבו את המילה שפירושה מפתח באנגלית.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Wooden_Cart1_Inside_Gate
@@ -40,7 +40,7 @@ steps:
   difficulty: 5
   success_required: true
   instance_id: the_kingdoms_worst_day__q01_gate_message
-  display_text: אמרו את המשפט באנגלית בקול.
+  display_text: אמרו את המשפט הבא באנגלית בקול.
 - type: return_to_npc
   npc_id: City Gaurd Info
   dialogue_id: the_kingdoms_worst_day_q01_fenn_done

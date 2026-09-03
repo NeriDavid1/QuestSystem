@@ -4,7 +4,7 @@ quest:
   level_required: 7
   giver_npc: Blacksmith
   prerequisite: the_kingdoms_worst_day__q01_what_is_missing
-  summary: Restore Will's missing verbs so the workshop can understand which action to perform.
+  summary: השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.
   wait_for_npc_turn_in: false
 rewards:
   xp: 150
@@ -19,7 +19,7 @@ steps:
   difficulty: 4
   success_required: true
   instance_id: the_kingdoms_worst_day__q02_verbs_gap
-  display_text: השלימו את האות החסרה בכל verb.
+  display_text: השלימו את האות החסרה בכל מילת פעולה.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Wooden_Cart1_Inside_Gate
@@ -33,14 +33,14 @@ steps:
   difficulty: 5
   success_required: true
   instance_id: the_kingdoms_worst_day__q02_carry_spelling
-  display_text: כתבו את המילה לפי המשמעות בעברית.
+  display_text: כתבו באנגלית את המילה שפירושה לשאת.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Wooden_Cart1_Inside_Gate
   difficulty: 6
   success_required: true
   instance_id: the_kingdoms_worst_day__q02_tool_command
-  display_text: אמרו את המשפט באנגלית בקול.
+  display_text: אמרו את המשפט הבא באנגלית בקול.
 - type: return_to_npc
   npc_id: Blacksmith
   dialogue_id: the_kingdoms_worst_day_q02_will_done

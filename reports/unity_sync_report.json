@@ -2,12 +2,274 @@
   "schema_version": 1,
   "unity_path": "C:\\Users\\123ne\\source\\repos\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Data\\Quests\\Lines",
   "counts": {
-    "compared_quests": 16,
-    "unity_quests": 16,
-    "source_quests": 16,
+    "compared_quests": 0,
+    "unity_quests": 0,
+    "source_quests": 29,
     "errors": 0,
     "warnings": 0,
-    "info": 0
+    "info": 29
   },
-  "issues": []
+  "issues": [
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "adjective_crown/q01_bridge_too_short",
+      "context": {
+        "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "adjective_crown/q02_whispering_stone",
+      "context": {
+        "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "adjective_crown/q03_big_and_small_words",
+      "context": {
+        "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "adjective_crown/q04_twelve_basic_adjectives",
+      "context": {
+        "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "adjective_crown/q05_from_low_to_high",
+      "context": {
+        "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "adjective_crown/q06_adjective_challenge",
+      "context": {
+        "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "blacksmith_will/q01_runaway_hammer",
+      "context": {
+        "source_path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "blacksmith_will/q02_snoring_anvil",
+      "context": {
+        "source_path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "blacksmith_will/q03_first_real_slash",
+      "context": {
+        "source_path": "questlines\\blacksmith_will\\q03_first_real_slash.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "kingdom_nouns/q01_roles_without_names",
+      "context": {
+        "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "kingdom_nouns/q02_castle_on_the_map",
+      "context": {
+        "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "kingdom_nouns/q03_crown_soup",
+      "context": {
+        "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "kingdom_nouns/q04_soup_shield",
+      "context": {
+        "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "kingdom_nouns/q05_wizard_for_sale",
+      "context": {
+        "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "kingdom_nouns/q06_dragon_identity",
+      "context": {
+        "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "kingdom_nouns/q07_royal_noun_trial",
+      "context": {
+        "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q01_what_is_missing",
+      "context": {
+        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+      "context": {
+        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
+      "context": {
+        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+      }
+    }
+  ]
 }

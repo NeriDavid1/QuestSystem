@@ -4,7 +4,7 @@ quest:
   level_required: 8
   giver_npc: Professor Crazy
   prerequisite: the_kingdoms_worst_day__q03_royal_description_disaster
-  summary: Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.
+  summary: חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.
   wait_for_npc_turn_in: false
 rewards:
   xp: 300
@@ -41,21 +41,21 @@ steps:
   difficulty: 7
   success_required: true
   instance_id: the_kingdoms_worst_day__q04_transfer_speech
-  display_text: אמרו את המשפט באנגלית בקול.
+  display_text: אמרו את המשפט הבא באנגלית בקול.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 7
   success_required: true
   instance_id: the_kingdoms_worst_day__q04_final_nouns
-  display_text: השלימו את האותיות החסרות במילים.
+  display_text: השלימו את האותיות החסרות בשמות החפצים.
 - type: play_minigame
   minigame_id: letter_ordering
   world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
   difficulty: 6
   success_required: true
   instance_id: the_kingdoms_worst_day__q04_final_verb
-  display_text: כתבו את המילה לפי המשמעות בעברית.
+  display_text: כתבו באנגלית את המילה שפירושה לסגור.
 - type: return_to_npc
   npc_id: teacher_maya
   dialogue_id: the_kingdoms_worst_day_q04_maya_done

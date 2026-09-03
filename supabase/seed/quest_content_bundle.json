@@ -4133,19 +4133,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אסון בשער! רשימת היום איבדה את שמות האנשים, המקומות והחפצים.",
+          "content": "אסון בשער! שמות החפצים נעלמו מהרשימה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "אני קורא ל־gate \"כף גדולה\", ל־key \"מקל קטן\", ול־crown \"קערה נוצצת\". זה לא עוזר לאף אחד.",
+          "content": "אני משתמש בשמות מצחיקים לחפצים, אבל זה רק מבלבל את כולם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "התאימו nouns לתמונות, ואז כתבו באנגלית את המילה שפירושה מפתח.",
+          "content": "התאימו שמות חפצים לתמונות, ואז כתבו באנגלית את המילה שפירושה מפתח.",
           "line_format": "plain_text"
         }
       ]
@@ -4293,14 +4293,20 @@
           "line_format": "plain_text"
         },
         {
-          "locale": "he",
+          "locale": "en",
           "line_order": 2,
-          "content": "Words make sentences, and sentences make the kingdom work. — מילים יוצרות משפטים, ומשפטים גורמים לממלכה לפעול.",
+          "content": "Words make sentences, and sentences make the kingdom work.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
+          "content": "מילים יוצרות משפטים, ומשפטים עוזרים לממלכה לפעול.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
           "content": "כל הכבוד! קבלו 10 מטבעות על ההצלה.",
           "line_format": "plain_text"
         }
@@ -8844,7 +8850,7 @@
     {
       "key": "the_kingdoms_worst_day__q01_gate_message",
       "locale": "he",
-      "instruction": "אמרו את המשפט באנגלית בקול.",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
         "הקשיבו למשפט",
         "אמרו אותו בקול ברור"
@@ -8854,7 +8860,7 @@
       "success": "ההודעה נשמעה; השער יכול להיפתח.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט באנגלית בקול.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול.",
         "targetWords": [
           "Open",
           "the",
@@ -8912,7 +8918,7 @@
     {
       "key": "the_kingdoms_worst_day__q01_key_spelling",
       "locale": "he",
-      "instruction": "כתבו את המילה מפתח באנגלית.",
+      "instruction": "כתבו את המילה שפירושה מפתח באנגלית.",
       "tasks": [
         "סדרו את האותיות לפי הסדר",
         "בדקו את האיות לפני האישור"
@@ -8922,7 +8928,7 @@
       "success": "KEY נכתב נכון; Fenn מצא את המפתח.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה מפתח באנגלית.",
+        "prompt": "כתבו את המילה שפירושה מפתח באנגלית.",
         "targetWord": "key",
         "extraDistractorCount": 1,
         "customDistractors": [],
@@ -8934,7 +8940,7 @@
     {
       "key": "the_kingdoms_worst_day__q01_nouns_gap",
       "locale": "he",
-      "instruction": "השלימו את האות החסרה בכל noun.",
+      "instruction": "השלימו את האות החסרה בכל מילת חפץ.",
       "tasks": [
         "_ATE",
         "KE_",
@@ -9042,7 +9048,7 @@
     {
       "key": "the_kingdoms_worst_day__q02_carry_spelling",
       "locale": "he",
-      "instruction": "כתבו את המילה לשאת באנגלית.",
+      "instruction": "כתבו באנגלית את המילה שפירושה לשאת.",
       "tasks": [
         "סדרו את האותיות לפי הסדר",
         "בדקו את האיות לפני האישור"
@@ -9052,7 +9058,7 @@
       "success": "CARRY נכתב נכון; Will יודע איזו פעולה לבצע.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה לשאת באנגלית.",
+        "prompt": "כתבו באנגלית את המילה שפירושה לשאת.",
         "targetWord": "carry",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -9064,7 +9070,7 @@
     {
       "key": "the_kingdoms_worst_day__q02_tool_command",
       "locale": "he",
-      "instruction": "אמרו את המשפט באנגלית בקול.",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
         "הקשיבו למשפט",
         "אמרו אותו בקול ברור"
@@ -9074,7 +9080,7 @@
       "success": "הפקודה נשמעה; הכלי מוכן לתיקון.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט באנגלית בקול.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול.",
         "targetWords": [
           "I",
           "fix",
@@ -9093,7 +9099,7 @@
     {
       "key": "the_kingdoms_worst_day__q02_verbs_gap",
       "locale": "he",
-      "instruction": "השלימו את האות החסרה בכל verb.",
+      "instruction": "השלימו את האות החסרה בכל מילת פעולה.",
       "tasks": [
         "_IX",
         "OP_N",
@@ -9164,7 +9170,7 @@
     {
       "key": "the_kingdoms_worst_day__q03_adjective_spelling",
       "locale": "he",
-      "instruction": "כתבו את המילה בהיר באנגלית.",
+      "instruction": "כתבו באנגלית את המילה שפירושה בהיר.",
       "tasks": [
         "סדרו את האותיות לפי הסדר",
         "בדקו את האיות לפני האישור"
@@ -9174,7 +9180,7 @@
       "success": "BRIGHT נכתב נכון; Painter יכולה להבדיל בין אור לצל.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה בהיר באנגלית.",
+        "prompt": "כתבו באנגלית את המילה שפירושה בהיר.",
         "targetWord": "bright",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -9186,7 +9192,7 @@
     {
       "key": "the_kingdoms_worst_day__q03_adjectives_gap",
       "locale": "he",
-      "instruction": "השלימו את האות החסרה בכל adjective.",
+      "instruction": "השלימו את האות החסרה בכל מילת תיאור.",
       "tasks": [
         "_IG",
         "SM_LL",
@@ -9257,7 +9263,7 @@
     {
       "key": "the_kingdoms_worst_day__q03_bright_description",
       "locale": "he",
-      "instruction": "אמרו את המשפט באנגלית בקול.",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
         "הקשיבו למשפט",
         "אמרו אותו בקול ברור"
@@ -9267,7 +9273,7 @@
       "success": "התיאור נשמע ברור; הציור קיבל צבע ואור.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט באנגלית בקול.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול.",
         "targetWords": [
           "The",
           "tree",
@@ -9360,7 +9366,7 @@
     {
       "key": "the_kingdoms_worst_day__q04_final_nouns",
       "locale": "he",
-      "instruction": "השלימו את האותיות החסרות במילים.",
+      "instruction": "השלימו את האותיות החסרות בשמות החפצים.",
       "tasks": [
         "GA_E",
         "BO_K",
@@ -9431,7 +9437,7 @@
     {
       "key": "the_kingdoms_worst_day__q04_final_verb",
       "locale": "he",
-      "instruction": "כתבו את המילה לסגור באנגלית.",
+      "instruction": "כתבו באנגלית את המילה שפירושה לסגור.",
       "tasks": [
         "סדרו את האותיות לפי הסדר",
         "בדקו את האיות לפני האישור"
@@ -9441,7 +9447,7 @@
       "success": "CLOSE נכתב נכון; לוח היום נסגר בהצלחה.",
       "minigame_id": "letter_ordering",
       "params": {
-        "prompt": "כתבו את המילה לסגור באנגלית.",
+        "prompt": "כתבו באנגלית את המילה שפירושה לסגור.",
         "targetWord": "close",
         "extraDistractorCount": 2,
         "customDistractors": [],
@@ -9530,7 +9536,7 @@
     {
       "key": "the_kingdoms_worst_day__q04_transfer_speech",
       "locale": "he",
-      "instruction": "אמרו את המשפט באנגלית בקול.",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
         "הקשיבו למשפט",
         "אמרו אותו שוב בקול ברור"
@@ -9540,7 +9546,7 @@
       "success": "המשפט נשמע ברור; ההודעה הגיעה אל המלך.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט באנגלית בקול.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול.",
         "targetWords": [
           "The",
           "big",
@@ -14164,7 +14170,7 @@
     {
       "key": "the_kingdoms_worst_day",
       "display_name": "The Kingdom's Worst Day",
-      "theme": "Hebrew-first revision of nouns, verbs, adjectives, sentence building, and speaking",
+      "theme": "Practice nouns, verbs, adjectives, sentence building, and speaking with clear Hebrew guidance and essential English.",
       "default_giver_external_id": "teacher_maya",
       "status": "draft",
       "level_min": 7,
@@ -14183,14 +14189,14 @@
           "name": "What Is Missing?",
           "level_required": 7,
           "giver_external_id": "City Gaurd Info",
-          "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+          "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q01_fenn_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
             {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_fde8e3b9_1",
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_74767097_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -14199,7 +14205,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q01_nouns_gap",
-                "display_text": "השלימו את האות החסרה בכל noun.",
+                "display_text": "השלימו את האות החסרה בכל מילת חפץ.",
                 "instance_key": "the_kingdoms_worst_day__q01_nouns_gap"
               },
               "source_metadata": {
@@ -14209,7 +14215,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_5be171f5_2",
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_9d03bb15_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -14218,7 +14224,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q01_key_spelling",
-                "display_text": "כתבו את המילה מפתח באנגלית.",
+                "display_text": "כתבו את המילה שפירושה מפתח באנגלית.",
                 "instance_key": "the_kingdoms_worst_day__q01_key_spelling"
               },
               "source_metadata": {
@@ -14247,7 +14253,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_90d34afd_4",
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_f48b5f61_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -14256,7 +14262,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q01_gate_message",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q01_gate_message"
               },
               "source_metadata": {
@@ -14302,7 +14308,7 @@
               "level_required": 7,
               "giver_npc": "City Gaurd Info",
               "prerequisite": null,
-              "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+              "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -14313,7 +14319,7 @@
           "name": "Nobody Is Doing Their Job",
           "level_required": 7,
           "giver_external_id": "Blacksmith",
-          "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+          "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q02_will_start",
           "status": "complete",
@@ -14322,7 +14328,7 @@
           ],
           "steps": [
             {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_a9882a8c_1",
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_52a08e9b_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -14331,7 +14337,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q02_verbs_gap",
-                "display_text": "השלימו את האות החסרה בכל verb.",
+                "display_text": "השלימו את האות החסרה בכל מילת פעולה.",
                 "instance_key": "the_kingdoms_worst_day__q02_verbs_gap"
               },
               "source_metadata": {
@@ -14360,7 +14366,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_d4324b9e_3",
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_889ba006_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -14369,7 +14375,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q02_carry_spelling",
-                "display_text": "כתבו את המילה לפי המשמעות בעברית.",
+                "display_text": "כתבו באנגלית את המילה שפירושה לשאת.",
                 "instance_key": "the_kingdoms_worst_day__q02_carry_spelling"
               },
               "source_metadata": {
@@ -14379,7 +14385,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_198b0891_4",
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_1e55c5b4_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -14388,7 +14394,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q02_tool_command",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q02_tool_command"
               },
               "source_metadata": {
@@ -14434,7 +14440,7 @@
               "level_required": 7,
               "giver_npc": "Blacksmith",
               "prerequisite": "the_kingdoms_worst_day__q01_what_is_missing",
-              "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+              "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -14445,7 +14451,7 @@
           "name": "The Royal Description Disaster",
           "level_required": 7,
           "giver_external_id": "Painter",
-          "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+          "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
           "status": "complete",
@@ -14454,7 +14460,7 @@
           ],
           "steps": [
             {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_a828a5dd_1",
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_23e98ea2_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -14463,7 +14469,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q03_adjectives_gap",
-                "display_text": "השלימו את האות החסרה בכל adjective.",
+                "display_text": "השלימו את האות החסרה בכל מילת תיאור.",
                 "instance_key": "the_kingdoms_worst_day__q03_adjectives_gap"
               },
               "source_metadata": {
@@ -14492,7 +14498,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_e227d60b_3",
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_d0f71b0f_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -14501,7 +14507,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q03_adjective_spelling",
-                "display_text": "כתבו את המילה בהיר באנגלית.",
+                "display_text": "כתבו באנגלית את המילה שפירושה בהיר.",
                 "instance_key": "the_kingdoms_worst_day__q03_adjective_spelling"
               },
               "source_metadata": {
@@ -14511,7 +14517,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_9d7a036a_4",
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_c452f5b4_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -14520,7 +14526,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q03_bright_description",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q03_bright_description"
               },
               "source_metadata": {
@@ -14585,7 +14591,7 @@
               "level_required": 7,
               "giver_npc": "Painter",
               "prerequisite": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
-              "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+              "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -14596,7 +14602,7 @@
           "name": "Save the Royal Schedule",
           "level_required": 8,
           "giver_external_id": "Professor Crazy",
-          "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+          "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q04_professor_start",
           "status": "complete",
@@ -14671,7 +14677,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_aff8caca_3",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_21486854_3",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -14680,7 +14686,7 @@
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q04_transfer_speech",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q04_transfer_speech"
               },
               "source_metadata": {
@@ -14690,7 +14696,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_0d4d80b3_4",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_cc14a180_4",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -14699,7 +14705,7 @@
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q04_final_nouns",
-                "display_text": "השלימו את האותיות החסרות במילים.",
+                "display_text": "השלימו את האותיות החסרות בשמות החפצים.",
                 "instance_key": "the_kingdoms_worst_day__q04_final_nouns"
               },
               "source_metadata": {
@@ -14709,7 +14715,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_64527aca_5",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_2f006e79_5",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -14718,7 +14724,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q04_final_verb",
-                "display_text": "כתבו את המילה לפי המשמעות בעברית.",
+                "display_text": "כתבו באנגלית את המילה שפירושה לסגור.",
                 "instance_key": "the_kingdoms_worst_day__q04_final_verb"
               },
               "source_metadata": {
@@ -14775,7 +14781,7 @@
               "level_required": 8,
               "giver_npc": "Professor Crazy",
               "prerequisite": "the_kingdoms_worst_day__q03_royal_description_disaster",
-              "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+              "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -14788,7 +14794,7 @@
     "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 60,
-    "dialogue_lines": 167,
+    "dialogue_lines": 168,
     "minigame_instances": 125,
     "questlines": 6,
     "quests": 29,
@@ -19354,7 +19360,7 @@
     {
       "key": "the_kingdoms_worst_day",
       "display_name": "The Kingdom's Worst Day",
-      "theme": "Hebrew-first revision of nouns, verbs, adjectives, sentence building, and speaking",
+      "theme": "Practice nouns, verbs, adjectives, sentence building, and speaking with clear Hebrew guidance and essential English.",
       "default_giver_external_id": "teacher_maya",
       "quests": [
         {
@@ -19363,14 +19369,14 @@
           "name": "What Is Missing?",
           "level_required": 7,
           "giver_external_id": "City Gaurd Info",
-          "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+          "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q01_fenn_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
             {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_fde8e3b9_1",
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_74767097_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -19379,7 +19385,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q01_nouns_gap",
-                "display_text": "השלימו את האות החסרה בכל noun.",
+                "display_text": "השלימו את האות החסרה בכל מילת חפץ.",
                 "instance_key": "the_kingdoms_worst_day__q01_nouns_gap"
               },
               "source_metadata": {
@@ -19389,7 +19395,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_5be171f5_2",
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_9d03bb15_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -19398,7 +19404,7 @@
                 "difficulty": 3,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q01_key_spelling",
-                "display_text": "כתבו את המילה מפתח באנגלית.",
+                "display_text": "כתבו את המילה שפירושה מפתח באנגלית.",
                 "instance_key": "the_kingdoms_worst_day__q01_key_spelling"
               },
               "source_metadata": {
@@ -19427,7 +19433,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_90d34afd_4",
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_f48b5f61_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -19436,7 +19442,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q01_gate_message",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q01_gate_message"
               },
               "source_metadata": {
@@ -19482,7 +19488,7 @@
               "level_required": 7,
               "giver_npc": "City Gaurd Info",
               "prerequisite": null,
-              "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+              "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -19493,7 +19499,7 @@
           "name": "Nobody Is Doing Their Job",
           "level_required": 7,
           "giver_external_id": "Blacksmith",
-          "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+          "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q02_will_start",
           "status": "complete",
@@ -19502,7 +19508,7 @@
           ],
           "steps": [
             {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_a9882a8c_1",
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_52a08e9b_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -19511,7 +19517,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q02_verbs_gap",
-                "display_text": "השלימו את האות החסרה בכל verb.",
+                "display_text": "השלימו את האות החסרה בכל מילת פעולה.",
                 "instance_key": "the_kingdoms_worst_day__q02_verbs_gap"
               },
               "source_metadata": {
@@ -19540,7 +19546,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_d4324b9e_3",
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_889ba006_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -19549,7 +19555,7 @@
                 "difficulty": 5,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q02_carry_spelling",
-                "display_text": "כתבו את המילה לפי המשמעות בעברית.",
+                "display_text": "כתבו באנגלית את המילה שפירושה לשאת.",
                 "instance_key": "the_kingdoms_worst_day__q02_carry_spelling"
               },
               "source_metadata": {
@@ -19559,7 +19565,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_198b0891_4",
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_1e55c5b4_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -19568,7 +19574,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q02_tool_command",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q02_tool_command"
               },
               "source_metadata": {
@@ -19614,7 +19620,7 @@
               "level_required": 7,
               "giver_npc": "Blacksmith",
               "prerequisite": "the_kingdoms_worst_day__q01_what_is_missing",
-              "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+              "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -19625,7 +19631,7 @@
           "name": "The Royal Description Disaster",
           "level_required": 7,
           "giver_external_id": "Painter",
-          "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+          "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
           "status": "complete",
@@ -19634,7 +19640,7 @@
           ],
           "steps": [
             {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_a828a5dd_1",
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_23e98ea2_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -19643,7 +19649,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q03_adjectives_gap",
-                "display_text": "השלימו את האות החסרה בכל adjective.",
+                "display_text": "השלימו את האות החסרה בכל מילת תיאור.",
                 "instance_key": "the_kingdoms_worst_day__q03_adjectives_gap"
               },
               "source_metadata": {
@@ -19672,7 +19678,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_e227d60b_3",
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_d0f71b0f_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -19681,7 +19687,7 @@
                 "difficulty": 4,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q03_adjective_spelling",
-                "display_text": "כתבו את המילה בהיר באנגלית.",
+                "display_text": "כתבו באנגלית את המילה שפירושה בהיר.",
                 "instance_key": "the_kingdoms_worst_day__q03_adjective_spelling"
               },
               "source_metadata": {
@@ -19691,7 +19697,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_9d7a036a_4",
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_c452f5b4_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -19700,7 +19706,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q03_bright_description",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q03_bright_description"
               },
               "source_metadata": {
@@ -19765,7 +19771,7 @@
               "level_required": 7,
               "giver_npc": "Painter",
               "prerequisite": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
-              "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+              "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -19776,7 +19782,7 @@
           "name": "Save the Royal Schedule",
           "level_required": 8,
           "giver_external_id": "Professor Crazy",
-          "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+          "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q04_professor_start",
           "status": "complete",
@@ -19851,7 +19857,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_aff8caca_3",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_21486854_3",
               "position": 5,
               "type": "play_minigame",
               "payload": {
@@ -19860,7 +19866,7 @@
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q04_transfer_speech",
-                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "the_kingdoms_worst_day__q04_transfer_speech"
               },
               "source_metadata": {
@@ -19870,7 +19876,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_0d4d80b3_4",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_cc14a180_4",
               "position": 6,
               "type": "play_minigame",
               "payload": {
@@ -19879,7 +19885,7 @@
                 "difficulty": 7,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q04_final_nouns",
-                "display_text": "השלימו את האותיות החסרות במילים.",
+                "display_text": "השלימו את האותיות החסרות בשמות החפצים.",
                 "instance_key": "the_kingdoms_worst_day__q04_final_nouns"
               },
               "source_metadata": {
@@ -19889,7 +19895,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_64527aca_5",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_2f006e79_5",
               "position": 7,
               "type": "play_minigame",
               "payload": {
@@ -19898,7 +19904,7 @@
                 "difficulty": 6,
                 "success_required": true,
                 "instance_id": "the_kingdoms_worst_day__q04_final_verb",
-                "display_text": "כתבו את המילה לפי המשמעות בעברית.",
+                "display_text": "כתבו באנגלית את המילה שפירושה לסגור.",
                 "instance_key": "the_kingdoms_worst_day__q04_final_verb"
               },
               "source_metadata": {
@@ -19955,7 +19961,7 @@
               "level_required": 8,
               "giver_npc": "Professor Crazy",
               "prerequisite": "the_kingdoms_worst_day__q03_royal_description_disaster",
-              "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+              "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -19963,5 +19969,5 @@
       ]
     }
   ],
-  "source_digest": "ce27669ad89482706aa2b877833a8c4f68e6db5bb53e799a1fc489bcc9f7da1b"
+  "source_digest": "52dbef93a4f2a25a2cbb9244d5453e18c2aa907c6a3cdcf8e6405deee4d6e732"
 }
