@@ -30,7 +30,7 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 ## Required checks
 
 - Read and apply `_registry/QUESTLINE_CONTENT_RULES.md` before preparing every brief; the rules apply to every subject, not only nouns.
-- Use Hebrew-first learner instructions and only the English needed for the learning objective.
+- Use a Hebrew-first language model: learner-facing instructions, explanations, hints, and support are primarily clear Hebrew, while English appears only when it is the target material the learner must recognize, read, write, order, or say. In questline descriptions, explain this concretely instead of using the vague label “Hebrew-first.”
 - Do not reveal an English answer when the learner is expected to choose, match, spell, or order it. Give the Hebrew meaning and the action instead.
 - For Word Matching, plan complete words and valid missing letters; if multiple letters are missing, every missing letter must be available. Vary the gap positions instead of always removing the first letter.
 - For Word Ordering, plan a Hebrew translation, meaningful partial completion when appropriate, and unique runtime choices that include the correct open word exactly once. Do not put the correct open word into `distractorWords`.

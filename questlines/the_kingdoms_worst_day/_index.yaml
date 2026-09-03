@@ -2,7 +2,7 @@ questline:
   id: the_kingdoms_worst_day
   npc_id: teacher_maya
   display_name: The Kingdom's Worst Day
-  theme: Hebrew-first revision of nouns, verbs, adjectives, sentence building, and speaking
+  theme: Practice nouns, verbs, adjectives, sentence building, and speaking with clear Hebrew guidance and essential English.
   quest_count: 4
   level_range:
     - 7
