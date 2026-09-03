@@ -1971,14 +1971,14 @@
       "lines": [
         "אוי לא! מפת המספרים שלי התפרקה, ואני לא מצליח לסדר את החלק הראשון.",
         "החלק הראשון מכיל את המספרים 10 עד 20. תעזרו לי למצוא את המילים החסרות.",
-        "קראו את ההוראות בעברית. באנגלית תראו רק את המילה שצריך ללמוד, כמו TEN."
+        "קראו כל הוראה בעברית ובצעו אותה במשחק."
       ]
     },
     "numbers_advanced_q01_finish": {
       "speaker": "Little Boy",
       "lines": [
         "יש! החלק הראשון של המפה חזר למקום. עכשיו אני יודע לקרוא 10 עד 20.",
-        "קחו את המפה ל־Farmer. בשוק חסרים השלטים של 20 עד 100."
+        "קחו את המפה לאיכר בשוק. הוא צריך עזרה עם טווח המספרים הבא."
       ]
     },
     "numbers_advanced_q02_start": {
@@ -1993,22 +1993,38 @@
       "speaker": "Farmer",
       "lines": [
         "מצוין! השוק מסודר, והשלטים של 20 עד 100 ברורים לכולם.",
-        "קחו את המפה ל־Professor Crazy. הוא שומר על המגדל של המאות."
+        "קחו את המפה לפרופסור קרייזי במגדל. הוא מחכה לחלק הגדול האחרון."
       ]
     },
     "numbers_advanced_q03_start": {
       "speaker": "Professor Crazy",
       "lines": [
         "הגעתם בזמן. במגדל נשאר החלק האחרון של המפה: 100 עד 1000.",
-        "נלמד את HUNDRED ואת THOUSAND, ונחבר אותם למספרים גדולים.",
-        "עבדו שלב־שלב: סדרו אותיות, סדרו משפטים ואמרו מספרים בקול."
+        "תרגלו מספרים גדולים בכתיבה, בסידור ובדיבור באנגלית.",
+        "עבדו לאט ובדקו כל מילה לפני שאתם ממשיכים."
       ]
     },
     "numbers_advanced_q03_finish": {
       "speaker": "Professor Crazy",
       "lines": [
         "הצלחתם! מפת המספרים שלמה, ואתם יכולים לקרוא מספרים מ־10 עד 1000.",
-        "זהו סיום שיעורי הבית Numbers Advanced. כל הכבוד על עבודה מדויקת!"
+        "עכשיו חזרו למורה מאיה. היא תיתן לכם את אתגר הסיום."
+      ]
+    },
+    "numbers_advanced_q04_start": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "כל הכבוד! שלושת חלקי המפה הגיעו אליי. עכשיו נחבר אותם לאתגר אחד.",
+        "תרגלו מספרים מ־10 עד 20, מ־20 עד 100 ומ־100 עד 1000.",
+        "בסוף אמרו את המספר האחרון באנגלית בקול וחזרו אליי."
+      ]
+    },
+    "numbers_advanced_q04_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "כל הכבוד! חיברתם את כל חלקי המפה והשלמתם את שיעורי הבית.",
+        "תרגלתם כתיבה, סידור ודיבור באנגלית ממספרים קטנים ועד 1000.",
+        "קבלו 10 מטבעות. עבודה מעולה!"
       ]
     },
     "the_kingdoms_worst_day_q01_fenn_start": {
@@ -7350,12 +7366,12 @@
       "id": "numbers_advanced_homework",
       "folder": "numbers_advanced_homework",
       "displayName": "Numbers Advanced - שיעורי בית",
-      "theme": "The Lost Number Map: a guided Numbers Advanced homework journey from 10 to 1000",
+      "theme": "Practice reading, spelling, ordering, and saying numbers from 10 to 1000 with clear Hebrew guidance",
       "levelRange": [
         1,
         1
       ],
-      "questCount": 3,
+      "questCount": 4,
       "npcId": "Little Boy",
       "npc": {
         "id": "Little Boy",
@@ -7371,7 +7387,7 @@
           "name": "Numbers 10-20: המספרים 10-20",
           "level": 1,
           "prerequisite": null,
-          "summary": "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.",
+          "summary": "עזרו לליטל בוי לתקן את מפת המספרים מ־10 עד 20.",
           "giver_npc": "Little Boy",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -7379,7 +7395,12 @@
           "status": "complete",
           "rewards": {
             "xp": 100,
-            "items": []
+            "items": [
+              {
+                "id": "coin",
+                "amount": 1
+              }
+            ]
           },
           "steps": [
             {
@@ -7394,10 +7415,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "numbers_q01_spell_ten",
-              "display_text": "כתבו את המילה עשר באנגלית.",
+              "display_text": "כתבו באנגלית את המילה שפירושה עשר.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה עשר באנגלית.",
+                "instruction": "כתבו באנגלית את המילה שפירושה עשר.",
                 "tasks": [
                   "t",
                   "e",
@@ -7407,7 +7428,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! TEN הוא 10.",
                 "params": {
-                  "prompt": "כתבו את המילה עשר באנגלית.",
+                  "prompt": "כתבו באנגלית את המילה שפירושה עשר.",
                   "targetWord": "ten",
                   "extraDistractorCount": 1,
                   "customDistractors": []
@@ -7443,8 +7464,15 @@
                     "is",
                     "twelve"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "eleven",
+                    "nineteen"
+                  ]
                 }
               }
             },
@@ -7455,19 +7483,18 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "numbers_q01_say_fourteen",
-              "display_text": "אמרו את המילים הבאות בקול",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
                 "tasks": [
-                  "fourteen",
-                  14
+                  "fourteen"
                 ],
                 "target": "fourteen",
                 "variant": "single_word",
                 "success": "נשמע טוב! FOURTEEN נקלט.",
                 "params": {
-                  "prompt": "אמרו את המילים הבאות בקול",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
                   "targetWords": [
                     "fourteen"
                   ],
@@ -7485,10 +7512,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "numbers_q01_spell_sixteen",
-              "display_text": "כתבו את המילה שש עשרה באנגלית.",
+              "display_text": "כתבו באנגלית את המילה שפירושה שש עשרה.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה שש עשרה באנגלית.",
+                "instruction": "כתבו באנגלית את המילה שפירושה שש עשרה.",
                 "tasks": [
                   "s",
                   "i",
@@ -7502,7 +7529,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! SIXTEEN הוא 16.",
                 "params": {
-                  "prompt": "כתבו את המילה שש עשרה באנגלית.",
+                  "prompt": "כתבו באנגלית את המילה שפירושה שש עשרה.",
                   "targetWord": "sixteen",
                   "extraDistractorCount": 2,
                   "customDistractors": []
@@ -7538,8 +7565,15 @@
                     "is",
                     "eighteen"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "thirteen",
+                    "nineteen"
+                  ]
                 }
               }
             },
@@ -7550,19 +7584,18 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "numbers_q01_say_twenty",
-              "display_text": "אמרו את המילים הבאות בקול",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
                 "tasks": [
-                  "twenty",
-                  20
+                  "twenty"
                 ],
                 "target": "twenty",
                 "variant": "single_word",
                 "success": "נכון! TWENTY נקלט.",
                 "params": {
-                  "prompt": "אמרו את המילים הבאות בקול",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
                   "targetWords": [
                     "twenty"
                   ],
@@ -7602,18 +7635,24 @@
                     "is",
                     "fifteen"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "eleven",
+                    "seventeen"
+                  ]
                 }
               }
             },
             {
-              "type": "deliver_item",
+              "type": "return_to_npc",
               "npc_id": "Little Boy",
-              "item_id": "coin",
-              "amount": 1,
+              "success_required": true,
               "dialogue_id": "numbers_advanced_q01_finish",
-              "display_text": "חזרו ל־Teacher Maya לקבלת המשימה הבאה"
+              "display_text": "חזרו לליטל בוי לסיום המשימה."
             }
           ]
         },
@@ -7622,7 +7661,7 @@
           "name": "Numbers 20-100: המספרים 20-100",
           "level": 1,
           "prerequisite": "q01_numbers_10_20",
-          "summary": "עזרו ל־Farmer לסדר את שלטי השוק ולבנות את רצף המספרים 20–100.",
+          "summary": "עזרו לאיכר לסדר את המספרים מ־20 עד 100.",
           "giver_npc": "Farmer",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -7630,7 +7669,12 @@
           "status": "complete",
           "rewards": {
             "xp": 150,
-            "items": []
+            "items": [
+              {
+                "id": "coin",
+                "amount": 1
+              }
+            ]
           },
           "steps": [
             {
@@ -7645,10 +7689,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "numbers_q02_spell_twenty",
-              "display_text": "כתבו את המילה עשרים באנגלית.",
+              "display_text": "כתבו באנגלית את המילה שפירושה עשרים.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה עשרים באנגלית.",
+                "instruction": "כתבו באנגלית את המילה שפירושה עשרים.",
                 "tasks": [
                   "t",
                   "w",
@@ -7661,7 +7705,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! TWENTY הוא 20.",
                 "params": {
-                  "prompt": "כתבו את המילה עשרים באנגלית.",
+                  "prompt": "כתבו באנגלית את המילה שפירושה עשרים.",
                   "targetWord": "twenty",
                   "extraDistractorCount": 2,
                   "customDistractors": []
@@ -7697,52 +7741,29 @@
                     "is",
                     "thirty-five"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
-              "difficulty": 4,
-              "success_required": true,
-              "instance_id": "numbers_q02_say_forty",
-              "display_text": "אמרו את המילים הבאות בקול",
-              "minigame_brief": {
-                "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
-                "tasks": [
-                  "forty",
-                  40
-                ],
-                "target": "forty",
-                "variant": "single_word",
-                "success": "נכון! FORTY נקלט.",
-                "params": {
-                  "prompt": "אמרו את המילים הבאות בקול",
-                  "targetWords": [
-                    "forty"
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
                   ],
-                  "targetPhrase": "forty",
-                  "silenceTimeoutSeconds": 1,
-                  "allowFuzzyMatch": true,
-                  "referenceClip": ""
+                  "distractorWords": [
+                    "twenty-five",
+                    "forty-five"
+                  ]
                 }
               }
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
-              "world_object_id": "Lost_Chest6_The_Last_Roar",
-              "difficulty": 3,
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 4,
               "success_required": true,
               "instance_id": "numbers_q02_spell_fifty",
-              "display_text": "כתבו את המילה חמישים באנגלית.",
+              "display_text": "כתבו באנגלית את המילה שפירושה חמישים.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה חמישים באנגלית.",
+                "instruction": "כתבו באנגלית את המילה שפירושה חמישים.",
                 "tasks": [
                   "f",
                   "i",
@@ -7754,10 +7775,39 @@
                 "variant": "word_spelling",
                 "success": "נכון! FIFTY הוא 50.",
                 "params": {
-                  "prompt": "כתבו את המילה חמישים באנגלית.",
+                  "prompt": "כתבו באנגלית את המילה שפירושה חמישים.",
                   "targetWord": "fifty",
                   "extraDistractorCount": 2,
                   "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "numbers_q02_say_forty",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "tasks": [
+                  "forty"
+                ],
+                "target": "forty",
+                "variant": "single_word",
+                "success": "נכון! FORTY נקלט.",
+                "params": {
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "targetWords": [
+                    "forty"
+                  ],
+                  "targetPhrase": "forty",
+                  "silenceTimeoutSeconds": 1,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
                 }
               }
             },
@@ -7790,8 +7840,15 @@
                     "is",
                     "sixty-two"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "fifty-two",
+                    "seventy-two"
+                  ]
                 }
               }
             },
@@ -7802,19 +7859,18 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "numbers_q02_say_seventy",
-              "display_text": "אמרו את המילים הבאות בקול",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
                 "tasks": [
-                  "seventy",
-                  70
+                  "seventy"
                 ],
                 "target": "seventy",
                 "variant": "single_word",
                 "success": "נכון! SEVENTY נקלט.",
                 "params": {
-                  "prompt": "אמרו את המילים הבאות בקול",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
                   "targetWords": [
                     "seventy"
                   ],
@@ -7854,18 +7910,24 @@
                     "is",
                     "ninety"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "eighty",
+                    "ninety-five"
+                  ]
                 }
               }
             },
             {
-              "type": "deliver_item",
+              "type": "return_to_npc",
               "npc_id": "Farmer",
-              "item_id": "coin",
-              "amount": 1,
+              "success_required": true,
               "dialogue_id": "numbers_advanced_q02_finish",
-              "display_text": "חזרו ל־Farmer לקבלת המשימה הבאה"
+              "display_text": "חזרו לאיכר לסיום המשימה."
             }
           ]
         },
@@ -7874,7 +7936,7 @@
           "name": "Numbers 100-1000: המספרים 100-1000",
           "level": 1,
           "prerequisite": "q02_numbers_20_100",
-          "summary": "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.",
+          "summary": "עזרו לפרופסור להשלים את המספרים מ־100 עד 1000.",
           "giver_npc": "Professor Crazy",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -7882,7 +7944,12 @@
           "status": "complete",
           "rewards": {
             "xp": 200,
-            "items": []
+            "items": [
+              {
+                "id": "coin",
+                "amount": 1
+              }
+            ]
           },
           "steps": [
             {
@@ -7897,10 +7964,10 @@
               "difficulty": 3,
               "success_required": true,
               "instance_id": "numbers_q03_spell_hundred",
-              "display_text": "כתבו את המילה מאה באנגלית.",
+              "display_text": "כתבו באנגלית את המילה שפירושה מאה.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה מאה באנגלית.",
+                "instruction": "כתבו באנגלית את המילה שפירושה מאה.",
                 "tasks": [
                   "h",
                   "u",
@@ -7914,7 +7981,7 @@
                 "variant": "word_spelling",
                 "success": "נכון! HUNDRED הוא מאה.",
                 "params": {
-                  "prompt": "כתבו את המילה מאה באנגלית.",
+                  "prompt": "כתבו באנגלית את המילה שפירושה מאה.",
                   "targetWord": "hundred",
                   "extraDistractorCount": 2,
                   "customDistractors": []
@@ -7954,53 +8021,30 @@
                     "hundred",
                     "fifty"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "speak_aloud",
-              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
-              "difficulty": 5,
-              "success_required": true,
-              "instance_id": "numbers_q03_say_three_hundred",
-              "display_text": "אמרו את המילים הבאות בקול",
-              "minigame_brief": {
-                "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
-                "tasks": [
-                  "three",
-                  "hundred",
-                  300
-                ],
-                "target": "three hundred",
-                "variant": "single_word",
-                "success": "נכון! THREE HUNDRED נקלט.",
-                "params": {
-                  "prompt": "אמרו את המילים הבאות בקול",
-                  "targetWords": [
-                    "three hundred"
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3
                   ],
-                  "targetPhrase": "three hundred",
-                  "silenceTimeoutSeconds": 1,
-                  "allowFuzzyMatch": true,
-                  "referenceClip": ""
+                  "distractorWords": [
+                    "three",
+                    "four"
+                  ]
                 }
               }
             },
             {
               "type": "play_minigame",
               "minigame_id": "letter_ordering",
-              "world_object_id": "Lost_Chest6_The_Last_Roar",
-              "difficulty": 4,
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
               "success_required": true,
               "instance_id": "numbers_q03_spell_thousand",
-              "display_text": "כתבו את המילה אלף באנגלית.",
+              "display_text": "כתבו באנגלית את המילה שפירושה אלף.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "כתבו את המילה אלף באנגלית.",
+                "instruction": "כתבו באנגלית את המילה שפירושה אלף.",
                 "tasks": [
                   "t",
                   "h",
@@ -8015,10 +8059,40 @@
                 "variant": "word_spelling",
                 "success": "נכון! THOUSAND הוא אלף.",
                 "params": {
-                  "prompt": "כתבו את המילה אלף באנגלית.",
+                  "prompt": "כתבו באנגלית את המילה שפירושה אלף.",
                   "targetWord": "thousand",
                   "extraDistractorCount": 2,
                   "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "numbers_q03_say_three_hundred",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "tasks": [
+                  "three",
+                  "hundred"
+                ],
+                "target": "three hundred",
+                "variant": "single_word",
+                "success": "נכון! THREE HUNDRED נקלט.",
+                "params": {
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "targetWords": [
+                    "three hundred"
+                  ],
+                  "targetPhrase": "three hundred",
+                  "silenceTimeoutSeconds": 1,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
                 }
               }
             },
@@ -8055,8 +8129,16 @@
                     "hundred",
                     "twenty"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "six",
+                    "eight"
+                  ]
                 }
               }
             },
@@ -8067,21 +8149,20 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "numbers_q03_say_nine_hundred_ninety_nine",
-              "display_text": "אמרו את המילים הבאות בקול",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המילים הבאות בקול",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
                 "tasks": [
                   "nine",
                   "hundred",
-                  "ninety-nine",
-                  999
+                  "ninety-nine"
                 ],
                 "target": "nine hundred ninety-nine",
                 "variant": "single_word",
                 "success": "נכון! 999 נקלט.",
                 "params": {
-                  "prompt": "אמרו את המילים הבאות בקול",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
                   "targetWords": [
                     "nine hundred ninety-nine"
                   ],
@@ -8123,18 +8204,237 @@
                     "one",
                     "thousand"
                   ],
-                  "preFilledIndices": [],
-                  "distractorWords": []
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "five",
+                    "ten"
+                  ]
                 }
               }
             },
             {
-              "type": "deliver_item",
+              "type": "return_to_npc",
               "npc_id": "Professor Crazy",
-              "item_id": "coin",
-              "amount": 1,
+              "success_required": true,
               "dialogue_id": "numbers_advanced_q03_finish",
-              "display_text": "חזרו ל־Professor Crazy לסיום שיעורי הבית"
+              "display_text": "חזרו לפרופסור לסיום המשימה."
+            }
+          ]
+        },
+        {
+          "id": "q04_numbers_mixed_review",
+          "name": "Mixed Number Map Review: חזרה על כל המספרים",
+          "level": 1,
+          "prerequisite": "q03_numbers_100_1000",
+          "summary": "חברו את כל טווחי המספרים והשלימו את המפה.",
+          "giver_npc": "teacher_maya",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 250,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "numbers_advanced_q04_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "numbers_q04_sentence_fourteen",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+                "tasks": [
+                  "The",
+                  "number",
+                  "is",
+                  "fourteen"
+                ],
+                "target": "The number is fourteen.",
+                "variant": "sentence_building",
+                "success": "המשפט נכון.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+                  "translation": "המספר הוא ארבע עשרה",
+                  "englishWordsInOrder": [
+                    "The",
+                    "number",
+                    "is",
+                    "fourteen"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "twelve",
+                    "eighteen"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest6_The_Last_Roar",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "numbers_q04_spell_sixty_two",
+              "display_text": "כתבו באנגלית את המילה שפירושה שישים ושתיים.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שפירושה שישים ושתיים.",
+                "tasks": [
+                  "s",
+                  "i",
+                  "x",
+                  "t",
+                  "y",
+                  "t",
+                  "w",
+                  "o"
+                ],
+                "target": "sixty-two",
+                "variant": "word_spelling",
+                "success": "נכון! כתבתם את המספר באנגלית.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שפירושה שישים ושתיים.",
+                  "targetWord": "sixty-two",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "numbers_q04_say_three_hundred",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "tasks": [
+                  "three hundred"
+                ],
+                "target": "three hundred",
+                "variant": "single_word",
+                "success": "נשמע טוב!",
+                "params": {
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "targetWords": [
+                    "three hundred"
+                  ],
+                  "targetPhrase": "three hundred",
+                  "silenceTimeoutSeconds": 1,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 7,
+              "success_required": true,
+              "instance_id": "numbers_q04_sentence_seven_hundred_twenty",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום בעברית.",
+                "tasks": [
+                  "The",
+                  "number",
+                  "is",
+                  "seven",
+                  "hundred",
+                  "twenty"
+                ],
+                "target": "The number is seven hundred twenty.",
+                "variant": "sentence_building",
+                "success": "המשפט נכון.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום בעברית.",
+                  "translation": "המספר הוא שבע מאות ועשרים",
+                  "englishWordsInOrder": [
+                    "The",
+                    "number",
+                    "is",
+                    "seven",
+                    "hundred",
+                    "twenty"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "three",
+                    "nine"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 7,
+              "success_required": true,
+              "instance_id": "numbers_q04_say_nine_hundred_ninety_nine",
+              "display_text": "אמרו את המספר הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "tasks": [
+                  "nine hundred ninety-nine"
+                ],
+                "target": "nine hundred ninety-nine",
+                "variant": "single_word",
+                "success": "נשמע מצוין!",
+                "params": {
+                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "targetWords": [
+                    "nine hundred ninety-nine"
+                  ],
+                  "targetPhrase": "nine hundred ninety-nine",
+                  "silenceTimeoutSeconds": 1,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "numbers_advanced_q04_finish",
+              "success_required": true,
+              "display_text": "חזרו למורה מאיה לסיום שיעורי הבית."
             }
           ]
         }

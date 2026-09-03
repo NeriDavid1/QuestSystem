@@ -4,11 +4,11 @@ quest:
   level_required: 1
   giver_npc: Professor Crazy
   prerequisite: q02_numbers_20_100
-  summary: עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.
+  summary: עזרו לפרופסור להשלים את המספרים מ־100 עד 1000.
   wait_for_npc_turn_in: false
 rewards:
   xp: 200
-  items: []
+  items: [{ id: coin, amount: 1 }]
 steps:
 - type: talk_to_npc
   npc_id: Professor Crazy
@@ -19,7 +19,7 @@ steps:
   difficulty: 3
   success_required: true
   instance_id: numbers_q03_spell_hundred
-  display_text: כתבו את המילה מאה באנגלית.
+  display_text: כתבו באנגלית את המילה שפירושה מאה.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Lost_Chest5_Silver_Fountain_Court
@@ -28,19 +28,19 @@ steps:
   instance_id: numbers_q03_sentence_two_hundred_fifty
   display_text: בנו משפט לפי התרגום בעברית
 - type: play_minigame
-  minigame_id: speak_aloud
+  minigame_id: letter_ordering
   world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
   difficulty: 5
   success_required: true
-  instance_id: numbers_q03_say_three_hundred
-  display_text: אמרו את המילים הבאות בקול
+  instance_id: numbers_q03_spell_thousand
+  display_text: כתבו באנגלית את המילה שפירושה אלף.
 - type: play_minigame
-  minigame_id: letter_ordering
+  minigame_id: speak_aloud
   world_object_id: Lost_Chest6_The_Last_Roar
   difficulty: 4
   success_required: true
-  instance_id: numbers_q03_spell_thousand
-  display_text: כתבו את המילה אלף באנגלית.
+  instance_id: numbers_q03_say_three_hundred
+  display_text: אמרו את המספר הבא באנגלית בקול.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Wooden_Cart1_Inside_Gate
@@ -54,7 +54,7 @@ steps:
   difficulty: 6
   success_required: true
   instance_id: numbers_q03_say_nine_hundred_ninety_nine
-  display_text: אמרו את המילים הבאות בקול
+  display_text: אמרו את המספר הבא באנגלית בקול.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: WoodenCart2_Solitude_Tower
@@ -62,9 +62,8 @@ steps:
   success_required: true
   instance_id: numbers_q03_review_100_1000
   display_text: בנו משפט לפי התרגום בעברית
-- type: deliver_item
+- type: return_to_npc
   npc_id: Professor Crazy
-  item_id: coin
-  amount: 1
+  success_required: true
   dialogue_id: numbers_advanced_q03_finish
-  display_text: חזרו ל־Professor Crazy לסיום שיעורי הבית
+  display_text: חזרו לפרופסור לסיום המשימה.

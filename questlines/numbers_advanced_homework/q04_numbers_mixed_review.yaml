@@ -1,0 +1,55 @@
+quest:
+  id: q04_numbers_mixed_review
+  name: 'Mixed Number Map Review: חזרה על כל המספרים'
+  level_required: 1
+  giver_npc: teacher_maya
+  prerequisite: q03_numbers_100_1000
+  summary: 'חברו את כל טווחי המספרים והשלימו את המפה.'
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 250
+  items: [{ id: coin, amount: 10 }]
+steps:
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: numbers_advanced_q04_start
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 5
+  success_required: true
+  instance_id: numbers_q04_sentence_fourteen
+  display_text: השלימו את המשפט לפי התרגום בעברית.
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Lost_Chest6_The_Last_Roar
+  difficulty: 6
+  success_required: true
+  instance_id: numbers_q04_spell_sixty_two
+  display_text: כתבו באנגלית את המילה שפירושה שישים ושתיים.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+  difficulty: 6
+  success_required: true
+  instance_id: numbers_q04_say_three_hundred
+  display_text: אמרו את המספר הבא באנגלית בקול.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 7
+  success_required: true
+  instance_id: numbers_q04_sentence_seven_hundred_twenty
+  display_text: השלימו את המשפט לפי התרגום בעברית.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Lost_Chest5_Silver_Fountain_Court
+  difficulty: 7
+  success_required: true
+  instance_id: numbers_q04_say_nine_hundred_ninety_nine
+  display_text: אמרו את המספר הבא באנגלית בקול.
+- type: return_to_npc
+  npc_id: teacher_maya
+  dialogue_id: numbers_advanced_q04_finish
+  success_required: true
+  display_text: חזרו למורה מאיה לסיום שיעורי הבית.

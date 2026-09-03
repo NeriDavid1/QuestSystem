@@ -1,7 +1,7 @@
 instances:
   numbers_q01_spell_ten:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה עשר באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה עשר.
     tasks:
     - t
     - e
@@ -10,7 +10,7 @@ instances:
     variant: word_spelling
     success: נכון! TEN הוא 10.
     params:
-      prompt: כתבו את המילה עשר באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה עשר.
       targetWord: ten
       extraDistractorCount: 1
       customDistractors: []
@@ -33,19 +33,18 @@ instances:
       - number
       - is
       - twelve
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2]
+      distractorWords: [eleven, nineteen]
   numbers_q01_say_fourteen:
     minigame_id: speak_aloud
-    instruction: אמרו את המילים הבאות בקול
+    instruction: אמרו את המספר הבא באנגלית בקול.
     tasks:
     - fourteen
-    - 14
     target: fourteen
     variant: single_word
     success: נשמע טוב! FOURTEEN נקלט.
     params:
-      prompt: אמרו את המילים הבאות בקול
+      prompt: אמרו את המספר הבא באנגלית בקול.
       targetWords:
       - fourteen
       targetPhrase: fourteen
@@ -54,7 +53,7 @@ instances:
       referenceClip: ''
   numbers_q01_spell_sixteen:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה שש עשרה באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה שש עשרה.
     tasks:
     - s
     - i
@@ -67,7 +66,7 @@ instances:
     variant: word_spelling
     success: נכון! SIXTEEN הוא 16.
     params:
-      prompt: כתבו את המילה שש עשרה באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה שש עשרה.
       targetWord: sixteen
       extraDistractorCount: 2
       customDistractors: []
@@ -90,19 +89,18 @@ instances:
       - number
       - is
       - eighteen
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2]
+      distractorWords: [thirteen, nineteen]
   numbers_q01_say_twenty:
     minigame_id: speak_aloud
-    instruction: אמרו את המילים הבאות בקול
+    instruction: אמרו את המספר הבא באנגלית בקול.
     tasks:
     - twenty
-    - 20
     target: twenty
     variant: single_word
     success: נכון! TWENTY נקלט.
     params:
-      prompt: אמרו את המילים הבאות בקול
+      prompt: אמרו את המספר הבא באנגלית בקול.
       targetWords:
       - twenty
       targetPhrase: twenty
@@ -128,11 +126,11 @@ instances:
       - number
       - is
       - fifteen
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2]
+      distractorWords: [eleven, seventeen]
   numbers_q02_spell_twenty:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה עשרים באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה עשרים.
     tasks:
     - t
     - w
@@ -144,7 +142,7 @@ instances:
     variant: word_spelling
     success: נכון! TWENTY הוא 20.
     params:
-      prompt: כתבו את המילה עשרים באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה עשרים.
       targetWord: twenty
       extraDistractorCount: 2
       customDistractors: []
@@ -167,19 +165,18 @@ instances:
       - number
       - is
       - thirty-five
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2]
+      distractorWords: [twenty-five, forty-five]
   numbers_q02_say_forty:
     minigame_id: speak_aloud
-    instruction: אמרו את המילים הבאות בקול
+    instruction: אמרו את המספר הבא באנגלית בקול.
     tasks:
     - forty
-    - 40
     target: forty
     variant: single_word
     success: נכון! FORTY נקלט.
     params:
-      prompt: אמרו את המילים הבאות בקול
+      prompt: אמרו את המספר הבא באנגלית בקול.
       targetWords:
       - forty
       targetPhrase: forty
@@ -188,7 +185,7 @@ instances:
       referenceClip: ''
   numbers_q02_spell_fifty:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה חמישים באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה חמישים.
     tasks:
     - f
     - i
@@ -199,7 +196,7 @@ instances:
     variant: word_spelling
     success: נכון! FIFTY הוא 50.
     params:
-      prompt: כתבו את המילה חמישים באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה חמישים.
       targetWord: fifty
       extraDistractorCount: 2
       customDistractors: []
@@ -222,19 +219,18 @@ instances:
       - number
       - is
       - sixty-two
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2]
+      distractorWords: [fifty-two, seventy-two]
   numbers_q02_say_seventy:
     minigame_id: speak_aloud
-    instruction: אמרו את המילים הבאות בקול
+    instruction: אמרו את המספר הבא באנגלית בקול.
     tasks:
     - seventy
-    - 70
     target: seventy
     variant: single_word
     success: נכון! SEVENTY נקלט.
     params:
-      prompt: אמרו את המילים הבאות בקול
+      prompt: אמרו את המספר הבא באנגלית בקול.
       targetWords:
       - seventy
       targetPhrase: seventy
@@ -260,11 +256,11 @@ instances:
       - number
       - is
       - ninety
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2]
+      distractorWords: [eighty, ninety-five]
   numbers_q03_spell_hundred:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה מאה באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה מאה.
     tasks:
     - h
     - u
@@ -277,7 +273,7 @@ instances:
     variant: word_spelling
     success: נכון! HUNDRED הוא מאה.
     params:
-      prompt: כתבו את המילה מאה באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה מאה.
       targetWord: hundred
       extraDistractorCount: 2
       customDistractors: []
@@ -304,20 +300,19 @@ instances:
       - two
       - hundred
       - fifty
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2, 3]
+      distractorWords: [three, four]
   numbers_q03_say_three_hundred:
     minigame_id: speak_aloud
-    instruction: אמרו את המילים הבאות בקול
+    instruction: אמרו את המספר הבא באנגלית בקול.
     tasks:
     - three
     - hundred
-    - 300
     target: three hundred
     variant: single_word
     success: נכון! THREE HUNDRED נקלט.
     params:
-      prompt: אמרו את המילים הבאות בקול
+      prompt: אמרו את המספר הבא באנגלית בקול.
       targetWords:
       - three hundred
       targetPhrase: three hundred
@@ -326,7 +321,7 @@ instances:
       referenceClip: ''
   numbers_q03_spell_thousand:
     minigame_id: letter_ordering
-    instruction: כתבו את המילה אלף באנגלית.
+    instruction: כתבו באנגלית את המילה שפירושה אלף.
     tasks:
     - t
     - h
@@ -340,7 +335,7 @@ instances:
     variant: word_spelling
     success: נכון! THOUSAND הוא אלף.
     params:
-      prompt: כתבו את המילה אלף באנגלית.
+      prompt: כתבו באנגלית את המילה שפירושה אלף.
       targetWord: thousand
       extraDistractorCount: 2
       customDistractors: []
@@ -367,21 +362,20 @@ instances:
       - seven
       - hundred
       - twenty
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2, 3]
+      distractorWords: [six, eight]
   numbers_q03_say_nine_hundred_ninety_nine:
     minigame_id: speak_aloud
-    instruction: אמרו את המילים הבאות בקול
+    instruction: אמרו את המספר הבא באנגלית בקול.
     tasks:
     - nine
     - hundred
     - ninety-nine
-    - 999
     target: nine hundred ninety-nine
     variant: single_word
     success: נכון! 999 נקלט.
     params:
-      prompt: אמרו את המילים הבאות בקול
+      prompt: אמרו את המספר הבא באנגלית בקול.
       targetWords:
       - nine hundred ninety-nine
       targetPhrase: nine hundred ninety-nine
@@ -409,5 +403,103 @@ instances:
       - is
       - one
       - thousand
-      preFilledIndices: []
-      distractorWords: []
+      preFilledIndices: [0, 1, 2, 3]
+      distractorWords: [five, ten]
+  numbers_q04_sentence_fourteen:
+    minigame_id: word_ordering
+    instruction: השלימו את המשפט לפי התרגום בעברית.
+    tasks:
+    - The
+    - number
+    - is
+    - fourteen
+    target: The number is fourteen.
+    variant: sentence_building
+    success: המשפט נכון.
+    params:
+      prompt: השלימו את המשפט לפי התרגום בעברית.
+      translation: המספר הוא ארבע עשרה
+      englishWordsInOrder:
+      - The
+      - number
+      - is
+      - fourteen
+      preFilledIndices: [0, 1, 2]
+      distractorWords: [twelve, eighteen]
+  numbers_q04_spell_sixty_two:
+    minigame_id: letter_ordering
+    instruction: כתבו באנגלית את המילה שפירושה שישים ושתיים.
+    tasks:
+    - s
+    - i
+    - x
+    - t
+    - y
+    - t
+    - w
+    - o
+    target: sixty-two
+    variant: word_spelling
+    success: נכון! כתבתם את המספר באנגלית.
+    params:
+      prompt: כתבו באנגלית את המילה שפירושה שישים ושתיים.
+      targetWord: sixty-two
+      extraDistractorCount: 2
+      customDistractors: []
+  numbers_q04_say_three_hundred:
+    minigame_id: speak_aloud
+    instruction: אמרו את המספר הבא באנגלית בקול.
+    tasks:
+    - three hundred
+    target: three hundred
+    variant: single_word
+    success: נשמע טוב!
+    params:
+      prompt: אמרו את המספר הבא באנגלית בקול.
+      targetWords:
+      - three hundred
+      targetPhrase: three hundred
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+  numbers_q04_sentence_seven_hundred_twenty:
+    minigame_id: word_ordering
+    instruction: השלימו את המשפט לפי התרגום בעברית.
+    tasks:
+    - The
+    - number
+    - is
+    - seven
+    - hundred
+    - twenty
+    target: The number is seven hundred twenty.
+    variant: sentence_building
+    success: המשפט נכון.
+    params:
+      prompt: השלימו את המשפט לפי התרגום בעברית.
+      translation: המספר הוא שבע מאות ועשרים
+      englishWordsInOrder:
+      - The
+      - number
+      - is
+      - seven
+      - hundred
+      - twenty
+      preFilledIndices: [0, 1, 2, 3]
+      distractorWords: [three, nine]
+  numbers_q04_say_nine_hundred_ninety_nine:
+    minigame_id: speak_aloud
+    instruction: אמרו את המספר הבא באנגלית בקול.
+    tasks:
+    - nine hundred ninety-nine
+    target: nine hundred ninety-nine
+    variant: single_word
+    success: נשמע מצוין!
+    params:
+      prompt: אמרו את המספר הבא באנגלית בקול.
+      targetWords:
+      - nine hundred ninety-nine
+      targetPhrase: nine hundred ninety-nine
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
