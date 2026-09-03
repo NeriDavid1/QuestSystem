@@ -3900,11 +3900,13 @@ select:focus {
   }
 
   .questline-rail {
-    max-height: min(620px, calc(100vh - 140px));
+    height: 100%;
+    max-height: none;
     overflow: hidden;
   }
 
   .rail-list {
+    flex: 1;
     min-height: 0;
   }
 
