@@ -73,10 +73,11 @@ export function QuestGraphPanel() {
       <div className="workspace-heading">
         <div>
           <p className="eyebrow">{t('visualFlow', { key: selectedLine.key })}</p>
-          <input
+          <textarea
             className="questline-title-input content-text"
             aria-label={t('questlineName')}
             dir="auto"
+            rows={2}
             value={selectedLine.display_name}
             onChange={(event) => updateLine({ display_name: event.target.value })}
           />

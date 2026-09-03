@@ -1217,6 +1217,8 @@ code {
 .questline-title-input {
   display: block;
   width: min(100%, 720px);
+  min-height: 0;
+  height: 58px;
   margin: 5px 0 7px;
   padding: 2px 5px;
   border: 1px solid transparent;
@@ -1227,7 +1229,12 @@ code {
   font-size: 23px;
   font-weight: 800;
   letter-spacing: -0.055em;
+  line-height: 1.1;
   outline: none;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  resize: none;
+  white-space: pre-wrap;
 }
 
 .questline-title-input:hover,
