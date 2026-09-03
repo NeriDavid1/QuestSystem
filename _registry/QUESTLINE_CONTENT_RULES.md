@@ -39,7 +39,10 @@ These rules are mandatory for every questline and minigame instance in this repo
 ## Speak Aloud
 
 - Each Speak Aloud instance may test one word or a short list of words, but never an unintended sentence.
-- The player-facing instruction should be `אמרו את המילים הבאות בקול` or equivalent Hebrew wording. The instruction must not repeat the words when the game UI already displays them below; the target list remains runtime data.
+- Every Speak Aloud instance must have an explicit player-facing instruction containing the action to speak aloud, such as `אמרו את המילה הבאה באנגלית בקול`, `אמרו את המילים הבאות באנגלית בקול`, or `אמרו את המשפט הבא באנגלית בקול`.
+- The instruction, displayed target, and speech-recognition target must describe the same unit: one word, a short list of words, or one complete sentence. Never display a long sentence while validating only one word from it.
+- Use the singular wording for one target and plural wording for a list. Use sentence wording only when `targetPhrase` is the actual value being checked.
+- English target words may be shown because the learner must pronounce them. If the game UI already displays the target below, do not duplicate the target words in the instruction; keep the explicit speaking action.
 
 ## Local-to-site import
 

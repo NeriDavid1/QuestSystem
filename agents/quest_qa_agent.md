@@ -13,6 +13,7 @@ Checks the technical, pedagogical, and gameplay integrity of questlines before p
 - Word Ordering: Hebrew translation exists; preFilledIndices are valid; partial sentences and distractorWords are used when appropriate.
 - Word Ordering: every choice list contains no duplicate words and includes the exact correct word required by the open position.
 - Speak Aloud: English targets are shown because the learner must pronounce them; the instruction is not an unintended sentence.
+- Speak Aloud: the instruction explicitly asks the learner to speak, uses singular/plural/sentence wording correctly, and matches the exact recognition target; a long displayed sentence must not be checked as only one word.
 - Dialogue and steps: no unnecessary talk_to_npc appears between the opening dialogue and the first active task; the ending closes the story and gives the next direction.
 - Variety: no long run of one minigame type; distribution is reproducible and aligned with the learning objective.
 - Variety: identical minigame types do not appear more than twice in a row.

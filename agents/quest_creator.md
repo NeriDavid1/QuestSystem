@@ -25,6 +25,7 @@ Creates technically correct questlines and quests in the repository format.
 - Verify Word Matching letters, wordTasks, valid indices, and fragment/full-word alignment.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the universal rules.
 - For Word Ordering, ensure every choice list has unique words and includes the exact correct word for the open position.
+- For Speak Aloud, ensure the instruction explicitly asks the learner to speak and matches the exact checked unit: one word, a word list, or a complete sentence.
 - Run the local importer/build before handing over the result.
 
 ## Output
