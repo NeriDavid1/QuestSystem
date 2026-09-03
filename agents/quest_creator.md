@@ -9,7 +9,7 @@ Creates technically correct questlines and quests in the repository format.
 - Approved topic, learner age, and learning objective.
 - Pedagogical scenario from the Pedagogical Quest Designer.
 - NPC, world object, item, dialogue, and minigame registries.
-- Mandatory rules from _registry/NOUN_CONTENT_RULES.md.
+- Mandatory rules from _registry/QUESTLINE_CONTENT_RULES.md.
 
 ## Responsibilities
 

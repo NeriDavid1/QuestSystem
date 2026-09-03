@@ -1,4 +1,4 @@
-# Quest minigame content rules
+# Questline Content and Minigame Rules
 
 These rules are mandatory for every questline and minigame instance in this repository. They apply to new content and to edits of existing content, not only to noun lessons.
 

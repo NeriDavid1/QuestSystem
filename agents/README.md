@@ -18,7 +18,7 @@ The number of quests and minigames is determined by the user brief or pedagogica
 
 Identical minigame types may not appear more than twice in a row. QA checks this together with learning-goal alignment.
 
-Shared content rules are stored in _registry/NOUN_CONTENT_RULES.md.
+Shared content rules are stored in _registry/QUESTLINE_CONTENT_RULES.md.
 
 ## Local Questline Import Procedure
 
