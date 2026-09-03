@@ -1,0 +1,35 @@
+quest:
+  id: the_kingdoms_worst_day__q01_what_is_missing
+  name: What Is Missing?
+  level_required: 7
+  giver_npc: City Gaurd Info
+  prerequisite: null
+  summary: Restore the nouns on Fenn's broken gate list and help him name the missing objects.
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 100
+  items: []
+steps:
+- type: talk_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_kingdoms_worst_day_q01_fenn_start
+- type: reach_location
+  location_id: KingdomGate
+  display_text: הגיעו לשער הממלכה.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 3
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q01_nouns_gap
+  display_text: השלימו את האות החסרה בכל noun.
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 3
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q01_key_spelling
+  display_text: כתבו את המילה מפתח באנגלית.
+- type: return_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_kingdoms_worst_day_q01_fenn_done

@@ -1,0 +1,60 @@
+# Local dialogue scripts for The Kingdom's Worst Day.
+dialogues:
+  the_kingdoms_worst_day_q01_fenn_start:
+    speaker: City Gaurd Info
+    lines:
+      - 'אסון בשער! רשימת היום איבדה את שמות האנשים, המקומות והחפצים.'
+      - 'אני קורא ל־gate "כף גדולה", ל־key "מקל קטן", ול־crown "קערה נוצצת". זה לא עוזר לאף אחד.'
+      - 'התאימו nouns לתמונות, ואז כתבו באנגלית את המילה שפירושה מפתח.'
+  the_kingdoms_worst_day_q01_fenn_done:
+    speaker: City Gaurd Info
+    lines:
+      - 'מצוין! השמות חזרו: חפצים יכולים להיות gate, key, book או crown.'
+      - 'עכשיו אנחנו יודעים מה נמצא בשער. אבל אף אחד בבית המלאכה לא יודע מה לעשות.'
+      - 'לכו אל Will ב־BuildersHome וחפשו את פעולות העבודה שאבדו.'
+  the_kingdoms_worst_day_q02_will_start:
+    speaker: Blacksmith
+    lines:
+      - 'הכלים שלי שלמים, אבל ה־verbs נעלמו מהפתקים. הפטיש שלי מנסה לתקן את עצמו.'
+      - 'צריך להחזיר לפעולות את האותיות החסרות, ואז לבנות משפט קצר שמסביר מה אני עושה.'
+      - 'אחרי התרגול חזרו אליי. אם המשפט ברור, אפילו הסדן יפסיק לנחור.'
+  the_kingdoms_worst_day_q02_will_done:
+    speaker: Blacksmith
+    lines:
+      - 'עבודה טובה! עכשיו ברור ש־fix ו־open הן פעולות, ולא שמות של אנשים.'
+      - 'הסדן התעורר, אבל Painter אומרת שכל הציורים נראים אותו דבר.'
+      - 'לכו אליה ליד The Sunspire Tree והשיבו לממלכה את מילות התיאור.'
+  the_kingdoms_worst_day_q03_painter_start:
+    speaker: Painter
+    lines:
+      - 'הציורים שלי איבדו את ה־adjectives. כל עץ נראה גדול, קטן, בהיר וחשוך בבת אחת.'
+      - 'השלימו את האות החסרה במילות התיאור, ואז בנו משפט שמתאר דבר אחד בצורה ברורה.'
+      - 'אם התיאור יהיה נכון, סוף סוף אדע איזה ציור למסור למלך.'
+  the_kingdoms_worst_day_q03_painter_done:
+    speaker: Painter
+    lines:
+      - 'נהדר! adjectives כמו big, small, bright ו־dark שוב מתארים את הדברים הנכונים.'
+      - 'עכשיו נשאר לחבר שם, פעולה ותיאור במשפט אחד. Professor Crazy מחכה במגדל.'
+  the_kingdoms_worst_day_q04_professor_start:
+    speaker: Professor Crazy
+    lines:
+      - 'המכונה שלי הדפיסה את לוח היום, אבל היא ערבבה nouns, verbs ו־adjectives.'
+      - 'בנו שני משפטי חירום חדשים לפי התרגום בעברית. אם המשפטים ברורים, הממלכה תבין אותם.'
+      - 'אחר כך Mountain Guide יבדוק אם אפשר לומר את ההודעה בקול בלי שהמכונה תתפוצץ.'
+  the_kingdoms_worst_day_q04_professor_done:
+    speaker: Professor Crazy
+    lines:
+      - 'המשפטים מסודרים! המכונה מצאה שוב מי עושה מה ואיזה דבר מתואר.'
+      - 'קחו את ההודעה אל Mountain Guide ב־TowerOfLostVigil. הוא יבדוק את ההגייה.'
+  the_kingdoms_worst_day_q04_guide_start:
+    speaker: Mountain Guide
+    lines:
+      - 'בדרך אל המגדל חשוב שההודעה תהיה מובנת גם בלי לראות את המכונה.'
+      - 'הקשיבו למשפט, אמרו אותו באנגלית בקול, ונסו שוב אם המיקרופון לא שמע בבירור.'
+      - 'אחרי שתצליחו, חזרו אל Teacher Maya עם לוח היום המתוקן.'
+  the_kingdoms_worst_day_q04_maya_done:
+    speaker: teacher_maya
+    lines:
+      - 'הצלחתם להציל את היום הגרוע ביותר בממלכה! שמות, פעולות ותיאורים שוב עובדים יחד.'
+      - 'זיהיתם nouns, השתמשתם ב־verbs וב־adjectives, בניתם משפטים ואמרתם הודעה חדשה בקול.'
+      - 'Words make sentences, and sentences make the kingdom work. קבלו 10 מטבעות על ההצלה.'

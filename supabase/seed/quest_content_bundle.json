@@ -4099,6 +4099,254 @@
       ]
     },
     {
+      "key": "the_kingdoms_worst_day_q01_fenn_done",
+      "speaker_external_id": "City Gaurd Info",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצוין! השמות חזרו: חפצים יכולים להיות gate, key, book או crown.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "עכשיו אנחנו יודעים מה נמצא בשער. אבל אף אחד בבית המלאכה לא יודע מה לעשות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "לכו אל Will ב־BuildersHome וחפשו את פעולות העבודה שאבדו.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q01_fenn_start",
+      "speaker_external_id": "City Gaurd Info",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "אסון בשער! רשימת היום איבדה את שמות האנשים, המקומות והחפצים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "אני קורא ל־gate \"כף גדולה\", ל־key \"מקל קטן\", ול־crown \"קערה נוצצת\". זה לא עוזר לאף אחד.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "התאימו nouns לתמונות, ואז כתבו באנגלית את המילה שפירושה מפתח.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q02_will_done",
+      "speaker_external_id": "Blacksmith",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "עבודה טובה! עכשיו ברור ש־fix ו־open הן פעולות, ולא שמות של אנשים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "הסדן התעורר, אבל Painter אומרת שכל הציורים נראים אותו דבר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "לכו אליה ליד The Sunspire Tree והשיבו לממלכה את מילות התיאור.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q02_will_start",
+      "speaker_external_id": "Blacksmith",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הכלים שלי שלמים, אבל ה־verbs נעלמו מהפתקים. הפטיש שלי מנסה לתקן את עצמו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "צריך להחזיר לפעולות את האותיות החסרות, ואז לבנות משפט קצר שמסביר מה אני עושה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "אחרי התרגול חזרו אליי. אם המשפט ברור, אפילו הסדן יפסיק לנחור.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q03_painter_done",
+      "speaker_external_id": "Painter",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "נהדר! adjectives כמו big, small, bright ו־dark שוב מתארים את הדברים הנכונים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "עכשיו נשאר לחבר שם, פעולה ותיאור במשפט אחד. Professor Crazy מחכה במגדל.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q03_painter_start",
+      "speaker_external_id": "Painter",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הציורים שלי איבדו את ה־adjectives. כל עץ נראה גדול, קטן, בהיר וחשוך בבת אחת.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "השלימו את האות החסרה במילות התיאור, ואז בנו משפט שמתאר דבר אחד בצורה ברורה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "אם התיאור יהיה נכון, סוף סוף אדע איזה ציור למסור למלך.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q04_guide_start",
+      "speaker_external_id": "Mountain Guide",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "בדרך אל המגדל חשוב שההודעה תהיה מובנת גם בלי לראות את המכונה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "הקשיבו למשפט, אמרו אותו באנגלית בקול, ונסו שוב אם המיקרופון לא שמע בבירור.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "אחרי שתצליחו, חזרו אל Teacher Maya עם לוח היום המתוקן.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q04_maya_done",
+      "speaker_external_id": "teacher_maya",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הצלחתם להציל את היום הגרוע ביותר בממלכה! שמות, פעולות ותיאורים שוב עובדים יחד.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "זיהיתם nouns, השתמשתם ב־verbs וב־adjectives, בניתם משפטים ואמרתם הודעה חדשה בקול.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "Words make sentences, and sentences make the kingdom work. קבלו 10 מטבעות על ההצלה.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q04_professor_done",
+      "speaker_external_id": "Professor Crazy",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "המשפטים מסודרים! המכונה מצאה שוב מי עושה מה ואיזה דבר מתואר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "קחו את ההודעה אל Mountain Guide ב־TowerOfLostVigil. הוא יבדוק את ההגייה.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_kingdoms_worst_day_q04_professor_start",
+      "speaker_external_id": "Professor Crazy",
+      "source_path": "_registry\\dialogues\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "המכונה שלי הדפיסה את לוח היום, אבל היא ערבבה nouns, verbs ו־adjectives.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "בנו שני משפטי חירום חדשים לפי התרגום בעברית. אם המשפטים ברורים, הממלכה תבין אותם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "אחר כך Mountain Guide יבדוק אם אפשר לומר את ההודעה בקול בלי שהמכונה תתפוצץ.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
       "key": "will_first_slash_done",
       "speaker_external_id": "Blacksmith",
       "source_path": "_registry\\dialogues\\blacksmith_will.yaml",
@@ -8585,6 +8833,447 @@
         "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
       },
       "source_path": "_registry\\minigame_instances\\kingdom_nouns.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q01_key_spelling",
+      "locale": "he",
+      "instruction": "כתבו את המילה מפתח באנגלית.",
+      "tasks": [
+        "סדרו את האותיות לפי הסדר",
+        "בדקו את האיות לפני האישור"
+      ],
+      "target": "key",
+      "variant": "word_spelling",
+      "success": "KEY נכתב נכון; Fenn מצא את המפתח.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "כתבו את המילה מפתח באנגלית.",
+        "targetWord": "key",
+        "extraDistractorCount": 1,
+        "customDistractors": [],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q01_nouns_gap",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בכל noun.",
+      "tasks": [
+        "_ATE",
+        "KE_",
+        "B_OK",
+        "CRO_N"
+      ],
+      "target": "gate, key, book, crown",
+      "variant": "letter_to_gap",
+      "success": "ארבעה nouns חזרו לרשימת השער.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "gate_gap_g",
+            "value": "g"
+          },
+          {
+            "id": "key_gap_y",
+            "value": "y"
+          },
+          {
+            "id": "book_gap_o",
+            "value": "o"
+          },
+          {
+            "id": "crown_gap_w",
+            "value": "w"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "gate",
+            "image": "",
+            "fullWord": "gate",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "key",
+            "image": "",
+            "fullWord": "key",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "book",
+            "image": "",
+            "fullWord": "book",
+            "missingIndices": [
+              1
+            ]
+          },
+          {
+            "id": "crown",
+            "image": "",
+            "fullWord": "crown",
+            "missingIndices": [
+              3
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q02_action_sentence",
+      "locale": "he",
+      "instruction": "בנו את המשפט לפי התרגום בעברית.",
+      "tasks": [
+        "I",
+        "fix",
+        "the",
+        "tool"
+      ],
+      "target": "I fix the tool.",
+      "variant": "sentence_building",
+      "success": "המשפט ברור; Will יודע איזו פעולה לבצע.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו את המשפט לפי התרגום בעברית.",
+        "translation": "אני מתקן את הכלי.",
+        "englishWordsInOrder": [
+          "I",
+          "fix",
+          "the",
+          "tool"
+        ],
+        "preFilledIndices": [
+          0,
+          2,
+          3
+        ],
+        "distractorWords": [
+          "carry",
+          "open",
+          "fix"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q02_verbs_gap",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בכל verb.",
+      "tasks": [
+        "_IX",
+        "OP_N",
+        "C_RRY",
+        "CLOS_"
+      ],
+      "target": "fix, open, carry, close",
+      "variant": "letter_to_gap",
+      "success": "ארבע פעולות העבודה חזרו לפתקים.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "fix_gap_f",
+            "value": "f"
+          },
+          {
+            "id": "open_gap_e",
+            "value": "e"
+          },
+          {
+            "id": "carry_gap_a",
+            "value": "a"
+          },
+          {
+            "id": "close_gap_e",
+            "value": "e"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "fix",
+            "image": "",
+            "fullWord": "fix",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "open",
+            "image": "",
+            "fullWord": "open",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "carry",
+            "image": "",
+            "fullWord": "carry",
+            "missingIndices": [
+              1
+            ]
+          },
+          {
+            "id": "close",
+            "image": "",
+            "fullWord": "close",
+            "missingIndices": [
+              4
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q03_adjective_spelling",
+      "locale": "he",
+      "instruction": "כתבו את המילה בהיר באנגלית.",
+      "tasks": [
+        "סדרו את האותיות לפי הסדר",
+        "בדקו את האיות לפני האישור"
+      ],
+      "target": "bright",
+      "variant": "word_spelling",
+      "success": "BRIGHT נכתב נכון; Painter יכולה להבדיל בין אור לצל.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "כתבו את המילה בהיר באנגלית.",
+        "targetWord": "bright",
+        "extraDistractorCount": 2,
+        "customDistractors": [],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q03_adjectives_gap",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בכל adjective.",
+      "tasks": [
+        "_IG",
+        "SM_LL",
+        "BRI_HT",
+        "DAR_"
+      ],
+      "target": "big, small, bright, dark",
+      "variant": "letter_to_gap",
+      "success": "ארבע מילות התיאור חזרו לציורים.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "big_gap_b",
+            "value": "b"
+          },
+          {
+            "id": "small_gap_a",
+            "value": "a"
+          },
+          {
+            "id": "bright_gap_g",
+            "value": "g"
+          },
+          {
+            "id": "dark_gap_k",
+            "value": "k"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "big",
+            "image": "",
+            "fullWord": "big",
+            "missingIndices": [
+              0
+            ]
+          },
+          {
+            "id": "small",
+            "image": "",
+            "fullWord": "small",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "bright",
+            "image": "",
+            "fullWord": "bright",
+            "missingIndices": [
+              3
+            ]
+          },
+          {
+            "id": "dark",
+            "image": "",
+            "fullWord": "dark",
+            "missingIndices": [
+              3
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q03_description_sentence",
+      "locale": "he",
+      "instruction": "בנו משפט תיאור לפי התרגום בעברית.",
+      "tasks": [
+        "The",
+        "tree",
+        "is",
+        "big"
+      ],
+      "target": "The tree is big.",
+      "variant": "sentence_building",
+      "success": "התיאור ברור; Painter יודעת איזה עץ לצייר.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו משפט תיאור לפי התרגום בעברית.",
+        "translation": "העץ גדול.",
+        "englishWordsInOrder": [
+          "The",
+          "tree",
+          "is",
+          "big"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          2
+        ],
+        "distractorWords": [
+          "small",
+          "dark",
+          "big"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q04_mixed_sentence_one",
+      "locale": "he",
+      "instruction": "בנו משפט חדש לפי התרגום בעברית.",
+      "tasks": [
+        "The",
+        "big",
+        "gate",
+        "opens"
+      ],
+      "target": "The big gate opens.",
+      "variant": "sentence_building",
+      "success": "המשפט הראשון של לוח החירום ברור.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו משפט חדש לפי התרגום בעברית.",
+        "translation": "השער הגדול נפתח.",
+        "englishWordsInOrder": [
+          "The",
+          "big",
+          "gate",
+          "opens"
+        ],
+        "preFilledIndices": [
+          0,
+          2,
+          3
+        ],
+        "distractorWords": [
+          "small",
+          "dark",
+          "big"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q04_mixed_sentence_two",
+      "locale": "he",
+      "instruction": "בנו משפט חדש לפי התרגום בעברית.",
+      "tasks": [
+        "I",
+        "carry",
+        "the",
+        "small",
+        "book"
+      ],
+      "target": "I carry the small book.",
+      "variant": "sentence_building",
+      "success": "המשפט השני של לוח החירום ברור.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו משפט חדש לפי התרגום בעברית.",
+        "translation": "אני נושא את הספר הקטן.",
+        "englishWordsInOrder": [
+          "I",
+          "carry",
+          "the",
+          "small",
+          "book"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "distractorWords": [
+          "big",
+          "dark",
+          "small"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_kingdoms_worst_day__q04_transfer_speech",
+      "locale": "he",
+      "instruction": "אמרו את המשפט באנגלית בקול.",
+      "tasks": [
+        "הקשיבו למשפט",
+        "אמרו אותו שוב בקול ברור"
+      ],
+      "target": "The big gate opens.",
+      "variant": "short_phrase",
+      "success": "המשפט נשמע ברור; ההודעה הגיעה אל המלך.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המשפט באנגלית בקול.",
+        "targetWords": [
+          "The",
+          "big",
+          "gate",
+          "opens"
+        ],
+        "targetPhrase": "The big gate opens.",
+        "silenceTimeoutSeconds": 2.5,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
       "source_metadata": {}
     }
   ],
@@ -13516,18 +14205,637 @@
           }
         }
       ]
+    },
+    {
+      "key": "the_kingdoms_worst_day",
+      "display_name": "The Kingdom's Worst Day",
+      "theme": "Hebrew-first revision of nouns, verbs, adjectives, sentence building, and speaking",
+      "default_giver_external_id": "teacher_maya",
+      "status": "draft",
+      "level_min": 7,
+      "level_max": 8,
+      "source_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+      "source_metadata": {
+        "source_status": null,
+        "source_note": null,
+        "catalog_set": null,
+        "quest_count": 4
+      },
+      "quests": [
+        {
+          "key": "the_kingdoms_worst_day__q01_what_is_missing",
+          "position": 0,
+          "name": "What Is Missing?",
+          "level_required": 7,
+          "giver_external_id": "City Gaurd Info",
+          "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_talk_to_npc_0e6a1dae_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_kingdoms_worst_day_q01_fenn_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_reach_location_d9b0f1f8_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "KingdomGate",
+                "display_text": "הגיעו לשער הממלכה."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_fde8e3b9_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q01_nouns_gap",
+                "display_text": "השלימו את האות החסרה בכל noun.",
+                "instance_key": "the_kingdoms_worst_day__q01_nouns_gap"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_5be171f5_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q01_key_spelling",
+                "display_text": "כתבו את המילה מפתח באנגלית.",
+                "instance_key": "the_kingdoms_worst_day__q01_key_spelling"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_return_to_npc_a888ab11_1",
+              "position": 4,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_kingdoms_worst_day_q01_fenn_done"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 100,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q01_what_is_missing",
+              "name": "What Is Missing?",
+              "level_required": 7,
+              "giver_npc": "City Gaurd Info",
+              "prerequisite": null,
+              "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+          "position": 1,
+          "name": "Nobody Is Doing Their Job",
+          "level_required": 7,
+          "giver_external_id": "Blacksmith",
+          "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "the_kingdoms_worst_day__q01_what_is_missing"
+          ],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_talk_to_npc_8d435bf7_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "the_kingdoms_worst_day_q02_will_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_reach_location_6d1aaf7c_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "BuildersHome",
+                "display_text": "הגיעו לבית הבונים."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_a9882a8c_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q02_verbs_gap",
+                "display_text": "השלימו את האות החסרה בכל verb.",
+                "instance_key": "the_kingdoms_worst_day__q02_verbs_gap"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_reach_location_83355d41_2",
+              "position": 3,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "KingdomGate",
+                "display_text": "חזרו לשער כדי לבדוק את הוראת הפעולה."
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_6cb38c56_2",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q02_action_sentence",
+                "display_text": "בנו את המשפט לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q02_action_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_return_to_npc_ef10763b_1",
+              "position": 5,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "the_kingdoms_worst_day_q02_will_done"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 150,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+              "name": "Nobody Is Doing Their Job",
+              "level_required": 7,
+              "giver_npc": "Blacksmith",
+              "prerequisite": "the_kingdoms_worst_day__q01_what_is_missing",
+              "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_kingdoms_worst_day__q03_royal_description_disaster",
+          "position": 2,
+          "name": "The Royal Description Disaster",
+          "level_required": 7,
+          "giver_external_id": "Painter",
+          "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
+          ],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_talk_to_npc_25d228f6_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Painter",
+                "dialogue_id": "the_kingdoms_worst_day_q03_painter_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_reach_location_f20d57de_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "The Sunspire Tree",
+                "display_text": "הגיעו לעץ Sunspire."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_a828a5dd_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q03_adjectives_gap",
+                "display_text": "השלימו את האות החסרה בכל adjective.",
+                "instance_key": "the_kingdoms_worst_day__q03_adjectives_gap"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_reach_location_edd4c757_2",
+              "position": 3,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "FairyRosePark",
+                "display_text": "הגיעו לפארק Fairy Rose."
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_d5526080_2",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q03_description_sentence",
+                "display_text": "בנו משפט תיאור לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q03_description_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_e227d60b_3",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q03_adjective_spelling",
+                "display_text": "כתבו את המילה בהיר באנגלית.",
+                "instance_key": "the_kingdoms_worst_day__q03_adjective_spelling"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_return_to_npc_bb1c79c6_1",
+              "position": 6,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Painter",
+                "dialogue_id": "the_kingdoms_worst_day_q03_painter_done"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q03_royal_description_disaster",
+              "name": "The Royal Description Disaster",
+              "level_required": 7,
+              "giver_npc": "Painter",
+              "prerequisite": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+              "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
+          "position": 3,
+          "name": "Save the Royal Schedule",
+          "level_required": 8,
+          "giver_external_id": "Professor Crazy",
+          "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "the_kingdoms_worst_day__q03_royal_description_disaster"
+          ],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_8ff5c50a_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "the_kingdoms_worst_day_q04_professor_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_reach_location_c6503a6b_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "Solitude Tower",
+                "display_text": "הגיעו למגדל הבדידות."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_f28f1725_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q04_mixed_sentence_one",
+                "display_text": "בנו משפט חדש לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q04_mixed_sentence_one"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_f6b78e69_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q04_mixed_sentence_two",
+                "display_text": "בנו משפט חדש לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q04_mixed_sentence_two"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_return_to_npc_f272c242_1",
+              "position": 4,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "the_kingdoms_worst_day_q04_professor_done"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_reach_location_ae07610a_2",
+              "position": 5,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "TowerOfLostVigil",
+                "display_text": "הגיעו למגדל המשמר האבוד."
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_d352aff2_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Mountain Guide",
+                "dialogue_id": "the_kingdoms_worst_day_q04_guide_start"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_aff8caca_3",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q04_transfer_speech",
+                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "instance_key": "the_kingdoms_worst_day__q04_transfer_speech"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_return_to_npc_42b42787_2",
+              "position": 8,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "dialogue_id": "the_kingdoms_worst_day_q04_maya_done"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 300,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
+              "name": "Save the Royal Schedule",
+              "level_required": 8,
+              "giver_npc": "Professor Crazy",
+              "prerequisite": "the_kingdoms_worst_day__q03_royal_description_disaster",
+              "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
     }
   ],
   "conflicts": [],
   "counts": {
     "catalog_entries": 177,
     "step_type_definitions": 6,
-    "dialogues": 50,
-    "dialogue_lines": 138,
-    "minigame_instances": 107,
-    "questlines": 5,
-    "quests": 25,
-    "steps": 188,
+    "dialogues": 60,
+    "dialogue_lines": 166,
+    "minigame_instances": 117,
+    "questlines": 6,
+    "quests": 29,
+    "steps": 215,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -18410,7 +19718,616 @@
           }
         }
       ]
+    },
+    {
+      "key": "the_kingdoms_worst_day",
+      "display_name": "The Kingdom's Worst Day",
+      "theme": "Hebrew-first revision of nouns, verbs, adjectives, sentence building, and speaking",
+      "default_giver_external_id": "teacher_maya",
+      "quests": [
+        {
+          "key": "the_kingdoms_worst_day__q01_what_is_missing",
+          "position": 0,
+          "name": "What Is Missing?",
+          "level_required": 7,
+          "giver_external_id": "City Gaurd Info",
+          "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_talk_to_npc_0e6a1dae_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_kingdoms_worst_day_q01_fenn_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_reach_location_d9b0f1f8_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "KingdomGate",
+                "display_text": "הגיעו לשער הממלכה."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_fde8e3b9_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q01_nouns_gap",
+                "display_text": "השלימו את האות החסרה בכל noun.",
+                "instance_key": "the_kingdoms_worst_day__q01_nouns_gap"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_play_minigame_5be171f5_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q01_key_spelling",
+                "display_text": "כתבו את המילה מפתח באנגלית.",
+                "instance_key": "the_kingdoms_worst_day__q01_key_spelling"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q01_what_is_missing_return_to_npc_a888ab11_1",
+              "position": 4,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_kingdoms_worst_day_q01_fenn_done"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 100,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q01_what_is_missing",
+              "name": "What Is Missing?",
+              "level_required": 7,
+              "giver_npc": "City Gaurd Info",
+              "prerequisite": null,
+              "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+          "position": 1,
+          "name": "Nobody Is Doing Their Job",
+          "level_required": 7,
+          "giver_external_id": "Blacksmith",
+          "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "the_kingdoms_worst_day__q01_what_is_missing"
+          ],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_talk_to_npc_8d435bf7_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "the_kingdoms_worst_day_q02_will_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_reach_location_6d1aaf7c_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "BuildersHome",
+                "display_text": "הגיעו לבית הבונים."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_a9882a8c_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q02_verbs_gap",
+                "display_text": "השלימו את האות החסרה בכל verb.",
+                "instance_key": "the_kingdoms_worst_day__q02_verbs_gap"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_reach_location_83355d41_2",
+              "position": 3,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "KingdomGate",
+                "display_text": "חזרו לשער כדי לבדוק את הוראת הפעולה."
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_play_minigame_6cb38c56_2",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q02_action_sentence",
+                "display_text": "בנו את המשפט לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q02_action_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_return_to_npc_ef10763b_1",
+              "position": 5,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "the_kingdoms_worst_day_q02_will_done"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 150,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+              "name": "Nobody Is Doing Their Job",
+              "level_required": 7,
+              "giver_npc": "Blacksmith",
+              "prerequisite": "the_kingdoms_worst_day__q01_what_is_missing",
+              "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_kingdoms_worst_day__q03_royal_description_disaster",
+          "position": 2,
+          "name": "The Royal Description Disaster",
+          "level_required": 7,
+          "giver_external_id": "Painter",
+          "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
+          ],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_talk_to_npc_25d228f6_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Painter",
+                "dialogue_id": "the_kingdoms_worst_day_q03_painter_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_reach_location_f20d57de_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "The Sunspire Tree",
+                "display_text": "הגיעו לעץ Sunspire."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_a828a5dd_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q03_adjectives_gap",
+                "display_text": "השלימו את האות החסרה בכל adjective.",
+                "instance_key": "the_kingdoms_worst_day__q03_adjectives_gap"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_reach_location_edd4c757_2",
+              "position": 3,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "FairyRosePark",
+                "display_text": "הגיעו לפארק Fairy Rose."
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_d5526080_2",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q03_description_sentence",
+                "display_text": "בנו משפט תיאור לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q03_description_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_play_minigame_e227d60b_3",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table_Fairy_Rose_Park",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q03_adjective_spelling",
+                "display_text": "כתבו את המילה בהיר באנגלית.",
+                "instance_key": "the_kingdoms_worst_day__q03_adjective_spelling"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_return_to_npc_bb1c79c6_1",
+              "position": 6,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Painter",
+                "dialogue_id": "the_kingdoms_worst_day_q03_painter_done"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q03_royal_description_disaster",
+              "name": "The Royal Description Disaster",
+              "level_required": 7,
+              "giver_npc": "Painter",
+              "prerequisite": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+              "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
+          "position": 3,
+          "name": "Save the Royal Schedule",
+          "level_required": 8,
+          "giver_external_id": "Professor Crazy",
+          "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+          "wait_for_npc_turn_in": false,
+          "status": "complete",
+          "prerequisites": [
+            "the_kingdoms_worst_day__q03_royal_description_disaster"
+          ],
+          "steps": [
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_8ff5c50a_1",
+              "position": 0,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "the_kingdoms_worst_day_q04_professor_start"
+              },
+              "source_metadata": {
+                "source_position": 0,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_reach_location_c6503a6b_1",
+              "position": 1,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "Solitude Tower",
+                "display_text": "הגיעו למגדל הבדידות."
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_f28f1725_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q04_mixed_sentence_one",
+                "display_text": "בנו משפט חדש לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q04_mixed_sentence_one"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_f6b78e69_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "WoodenCart2_Solitude_Tower",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q04_mixed_sentence_two",
+                "display_text": "בנו משפט חדש לפי התרגום בעברית.",
+                "instance_key": "the_kingdoms_worst_day__q04_mixed_sentence_two"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_return_to_npc_f272c242_1",
+              "position": 4,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "Professor Crazy",
+                "dialogue_id": "the_kingdoms_worst_day_q04_professor_done"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_reach_location_ae07610a_2",
+              "position": 5,
+              "type": "reach_location",
+              "payload": {
+                "location_id": "TowerOfLostVigil",
+                "display_text": "הגיעו למגדל המשמר האבוד."
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_d352aff2_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Mountain Guide",
+                "dialogue_id": "the_kingdoms_worst_day_q04_guide_start"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_play_minigame_aff8caca_3",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "difficulty": 7,
+                "success_required": true,
+                "instance_id": "the_kingdoms_worst_day__q04_transfer_speech",
+                "display_text": "אמרו את המשפט באנגלית בקול.",
+                "instance_key": "the_kingdoms_worst_day__q04_transfer_speech"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_return_to_npc_42b42787_2",
+              "position": 8,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "teacher_maya",
+                "dialogue_id": "the_kingdoms_worst_day_q04_maya_done"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 300,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
+            "source_detail": {
+              "id": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
+              "name": "Save the Royal Schedule",
+              "level_required": 8,
+              "giver_npc": "Professor Crazy",
+              "prerequisite": "the_kingdoms_worst_day__q03_royal_description_disaster",
+              "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
     }
   ],
-  "source_digest": "f1ff62ce635ae614d848065968c13880a0c9ca43b43d3aef42c2498a1d202e9f"
+  "source_digest": "e5ca5e24df7f0a18815152f9353496b657c83ef90543d6c23fe12ba8a7d663e7"
 }

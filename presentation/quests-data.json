@@ -2010,6 +2010,84 @@
         "הצלחתם! מפת המספרים שלמה, ואתם יכולים לקרוא מספרים מ־10 עד 1000.",
         "זהו סיום שיעורי הבית Numbers Advanced. כל הכבוד על עבודה מדויקת!"
       ]
+    },
+    "the_kingdoms_worst_day_q01_fenn_start": {
+      "speaker": "City Gaurd Info",
+      "lines": [
+        "אסון בשער! רשימת היום איבדה את שמות האנשים, המקומות והחפצים.",
+        "אני קורא ל־gate \"כף גדולה\", ל־key \"מקל קטן\", ול־crown \"קערה נוצצת\". זה לא עוזר לאף אחד.",
+        "התאימו nouns לתמונות, ואז כתבו באנגלית את המילה שפירושה מפתח."
+      ]
+    },
+    "the_kingdoms_worst_day_q01_fenn_done": {
+      "speaker": "City Gaurd Info",
+      "lines": [
+        "מצוין! השמות חזרו: חפצים יכולים להיות gate, key, book או crown.",
+        "עכשיו אנחנו יודעים מה נמצא בשער. אבל אף אחד בבית המלאכה לא יודע מה לעשות.",
+        "לכו אל Will ב־BuildersHome וחפשו את פעולות העבודה שאבדו."
+      ]
+    },
+    "the_kingdoms_worst_day_q02_will_start": {
+      "speaker": "Blacksmith",
+      "lines": [
+        "הכלים שלי שלמים, אבל ה־verbs נעלמו מהפתקים. הפטיש שלי מנסה לתקן את עצמו.",
+        "צריך להחזיר לפעולות את האותיות החסרות, ואז לבנות משפט קצר שמסביר מה אני עושה.",
+        "אחרי התרגול חזרו אליי. אם המשפט ברור, אפילו הסדן יפסיק לנחור."
+      ]
+    },
+    "the_kingdoms_worst_day_q02_will_done": {
+      "speaker": "Blacksmith",
+      "lines": [
+        "עבודה טובה! עכשיו ברור ש־fix ו־open הן פעולות, ולא שמות של אנשים.",
+        "הסדן התעורר, אבל Painter אומרת שכל הציורים נראים אותו דבר.",
+        "לכו אליה ליד The Sunspire Tree והשיבו לממלכה את מילות התיאור."
+      ]
+    },
+    "the_kingdoms_worst_day_q03_painter_start": {
+      "speaker": "Painter",
+      "lines": [
+        "הציורים שלי איבדו את ה־adjectives. כל עץ נראה גדול, קטן, בהיר וחשוך בבת אחת.",
+        "השלימו את האות החסרה במילות התיאור, ואז בנו משפט שמתאר דבר אחד בצורה ברורה.",
+        "אם התיאור יהיה נכון, סוף סוף אדע איזה ציור למסור למלך."
+      ]
+    },
+    "the_kingdoms_worst_day_q03_painter_done": {
+      "speaker": "Painter",
+      "lines": [
+        "נהדר! adjectives כמו big, small, bright ו־dark שוב מתארים את הדברים הנכונים.",
+        "עכשיו נשאר לחבר שם, פעולה ותיאור במשפט אחד. Professor Crazy מחכה במגדל."
+      ]
+    },
+    "the_kingdoms_worst_day_q04_professor_start": {
+      "speaker": "Professor Crazy",
+      "lines": [
+        "המכונה שלי הדפיסה את לוח היום, אבל היא ערבבה nouns, verbs ו־adjectives.",
+        "בנו שני משפטי חירום חדשים לפי התרגום בעברית. אם המשפטים ברורים, הממלכה תבין אותם.",
+        "אחר כך Mountain Guide יבדוק אם אפשר לומר את ההודעה בקול בלי שהמכונה תתפוצץ."
+      ]
+    },
+    "the_kingdoms_worst_day_q04_professor_done": {
+      "speaker": "Professor Crazy",
+      "lines": [
+        "המשפטים מסודרים! המכונה מצאה שוב מי עושה מה ואיזה דבר מתואר.",
+        "קחו את ההודעה אל Mountain Guide ב־TowerOfLostVigil. הוא יבדוק את ההגייה."
+      ]
+    },
+    "the_kingdoms_worst_day_q04_guide_start": {
+      "speaker": "Mountain Guide",
+      "lines": [
+        "בדרך אל המגדל חשוב שההודעה תהיה מובנת גם בלי לראות את המכונה.",
+        "הקשיבו למשפט, אמרו אותו באנגלית בקול, ונסו שוב אם המיקרופון לא שמע בבירור.",
+        "אחרי שתצליחו, חזרו אל Teacher Maya עם לוח היום המתוקן."
+      ]
+    },
+    "the_kingdoms_worst_day_q04_maya_done": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "הצלחתם להציל את היום הגרוע ביותר בממלכה! שמות, פעולות ותיאורים שוב עובדים יחד.",
+        "זיהיתם nouns, השתמשתם ב־verbs וב־adjectives, בניתם משפטים ואמרתם הודעה חדשה בקול.",
+        "Words make sentences, and sentences make the kingdom work. קבלו 10 מטבעות על ההצלה."
+      ]
     }
   },
   "locations": {
@@ -8055,6 +8133,681 @@
               "amount": 1,
               "dialogue_id": "numbers_advanced_q03_finish",
               "display_text": "חזרו ל־Professor Crazy לסיום שיעורי הבית"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the_kingdoms_worst_day",
+      "folder": "the_kingdoms_worst_day",
+      "displayName": "The Kingdom's Worst Day",
+      "theme": "Hebrew-first revision of nouns, verbs, adjectives, sentence building, and speaking",
+      "levelRange": [
+        7,
+        8
+      ],
+      "questCount": 4,
+      "npcId": "teacher_maya",
+      "npc": {
+        "id": "teacher_maya",
+        "name": "המורה מאיה",
+        "title": "מורת אנגלית",
+        "location": "כיכר האלף-בית",
+        "description": "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים.",
+        "image": "images/npcs/teacher_maya.png"
+      },
+      "quests": [
+        {
+          "id": "the_kingdoms_worst_day__q01_what_is_missing",
+          "name": "What Is Missing?",
+          "level": 7,
+          "prerequisite": null,
+          "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
+          "giver_npc": "City Gaurd Info",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "City Gaurd Info",
+              "dialogue_id": "the_kingdoms_worst_day_q01_fenn_start"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "KingdomGate",
+              "display_text": "הגיעו לשער הממלכה."
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q01_nouns_gap",
+              "display_text": "השלימו את האות החסרה בכל noun.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל noun.",
+                "tasks": [
+                  "_ATE",
+                  "KE_",
+                  "B_OK",
+                  "CRO_N"
+                ],
+                "target": "gate, key, book, crown",
+                "variant": "letter_to_gap",
+                "success": "ארבעה nouns חזרו לרשימת השער.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "gate_gap_g",
+                      "value": "g"
+                    },
+                    {
+                      "id": "key_gap_y",
+                      "value": "y"
+                    },
+                    {
+                      "id": "book_gap_o",
+                      "value": "o"
+                    },
+                    {
+                      "id": "crown_gap_w",
+                      "value": "w"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "gate",
+                      "image": "",
+                      "fullWord": "gate",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "key",
+                      "image": "",
+                      "fullWord": "key",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "book",
+                      "image": "",
+                      "fullWord": "book",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "crown",
+                      "image": "",
+                      "fullWord": "crown",
+                      "missingIndices": [
+                        3
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q01_key_spelling",
+              "display_text": "כתבו את המילה מפתח באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו את המילה מפתח באנגלית.",
+                "tasks": [
+                  "סדרו את האותיות לפי הסדר",
+                  "בדקו את האיות לפני האישור"
+                ],
+                "target": "key",
+                "variant": "word_spelling",
+                "success": "KEY נכתב נכון; Fenn מצא את המפתח.",
+                "params": {
+                  "prompt": "כתבו את המילה מפתח באנגלית.",
+                  "targetWord": "key",
+                  "extraDistractorCount": 1,
+                  "customDistractors": [],
+                  "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "City Gaurd Info",
+              "dialogue_id": "the_kingdoms_worst_day_q01_fenn_done"
+            }
+          ]
+        },
+        {
+          "id": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+          "name": "Nobody Is Doing Their Job",
+          "level": 7,
+          "prerequisite": "the_kingdoms_worst_day__q01_what_is_missing",
+          "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
+          "giver_npc": "Blacksmith",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Blacksmith",
+              "dialogue_id": "the_kingdoms_worst_day_q02_will_start"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "BuildersHome",
+              "display_text": "הגיעו לבית הבונים."
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest1_BuildersHomeArea",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q02_verbs_gap",
+              "display_text": "השלימו את האות החסרה בכל verb.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל verb.",
+                "tasks": [
+                  "_IX",
+                  "OP_N",
+                  "C_RRY",
+                  "CLOS_"
+                ],
+                "target": "fix, open, carry, close",
+                "variant": "letter_to_gap",
+                "success": "ארבע פעולות העבודה חזרו לפתקים.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "fix_gap_f",
+                      "value": "f"
+                    },
+                    {
+                      "id": "open_gap_e",
+                      "value": "e"
+                    },
+                    {
+                      "id": "carry_gap_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "close_gap_e",
+                      "value": "e"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "fix",
+                      "image": "",
+                      "fullWord": "fix",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "open",
+                      "image": "",
+                      "fullWord": "open",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "carry",
+                      "image": "",
+                      "fullWord": "carry",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "close",
+                      "image": "",
+                      "fullWord": "close",
+                      "missingIndices": [
+                        4
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "reach_location",
+              "location_id": "KingdomGate",
+              "display_text": "חזרו לשער כדי לבדוק את הוראת הפעולה."
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q02_action_sentence",
+              "display_text": "בנו את המשפט לפי התרגום בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט לפי התרגום בעברית.",
+                "tasks": [
+                  "I",
+                  "fix",
+                  "the",
+                  "tool"
+                ],
+                "target": "I fix the tool.",
+                "variant": "sentence_building",
+                "success": "המשפט ברור; Will יודע איזו פעולה לבצע.",
+                "params": {
+                  "prompt": "בנו את המשפט לפי התרגום בעברית.",
+                  "translation": "אני מתקן את הכלי.",
+                  "englishWordsInOrder": [
+                    "I",
+                    "fix",
+                    "the",
+                    "tool"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "carry",
+                    "open",
+                    "fix"
+                  ],
+                  "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Blacksmith",
+              "dialogue_id": "the_kingdoms_worst_day_q02_will_done"
+            }
+          ]
+        },
+        {
+          "id": "the_kingdoms_worst_day__q03_royal_description_disaster",
+          "name": "The Royal Description Disaster",
+          "level": 7,
+          "prerequisite": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+          "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
+          "giver_npc": "Painter",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 200,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Painter",
+              "dialogue_id": "the_kingdoms_worst_day_q03_painter_start"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "The Sunspire Tree",
+              "display_text": "הגיעו לעץ Sunspire."
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q03_adjectives_gap",
+              "display_text": "השלימו את האות החסרה בכל adjective.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל adjective.",
+                "tasks": [
+                  "_IG",
+                  "SM_LL",
+                  "BRI_HT",
+                  "DAR_"
+                ],
+                "target": "big, small, bright, dark",
+                "variant": "letter_to_gap",
+                "success": "ארבע מילות התיאור חזרו לציורים.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "big_gap_b",
+                      "value": "b"
+                    },
+                    {
+                      "id": "small_gap_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "bright_gap_g",
+                      "value": "g"
+                    },
+                    {
+                      "id": "dark_gap_k",
+                      "value": "k"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "big",
+                      "image": "",
+                      "fullWord": "big",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "small",
+                      "image": "",
+                      "fullWord": "small",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "bright",
+                      "image": "",
+                      "fullWord": "bright",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "dark",
+                      "image": "",
+                      "fullWord": "dark",
+                      "missingIndices": [
+                        3
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "reach_location",
+              "location_id": "FairyRosePark",
+              "display_text": "הגיעו לפארק Fairy Rose."
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q03_description_sentence",
+              "display_text": "בנו משפט תיאור לפי התרגום בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו משפט תיאור לפי התרגום בעברית.",
+                "tasks": [
+                  "The",
+                  "tree",
+                  "is",
+                  "big"
+                ],
+                "target": "The tree is big.",
+                "variant": "sentence_building",
+                "success": "התיאור ברור; Painter יודעת איזה עץ לצייר.",
+                "params": {
+                  "prompt": "בנו משפט תיאור לפי התרגום בעברית.",
+                  "translation": "העץ גדול.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "tree",
+                    "is",
+                    "big"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "small",
+                    "dark",
+                    "big"
+                  ],
+                  "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q03_adjective_spelling",
+              "display_text": "כתבו את המילה בהיר באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו את המילה בהיר באנגלית.",
+                "tasks": [
+                  "סדרו את האותיות לפי הסדר",
+                  "בדקו את האיות לפני האישור"
+                ],
+                "target": "bright",
+                "variant": "word_spelling",
+                "success": "BRIGHT נכתב נכון; Painter יכולה להבדיל בין אור לצל.",
+                "params": {
+                  "prompt": "כתבו את המילה בהיר באנגלית.",
+                  "targetWord": "bright",
+                  "extraDistractorCount": 2,
+                  "customDistractors": [],
+                  "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Painter",
+              "dialogue_id": "the_kingdoms_worst_day_q03_painter_done"
+            }
+          ]
+        },
+        {
+          "id": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
+          "name": "Save the Royal Schedule",
+          "level": 8,
+          "prerequisite": "the_kingdoms_worst_day__q03_royal_description_disaster",
+          "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
+          "giver_npc": "Professor Crazy",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 300,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Professor Crazy",
+              "dialogue_id": "the_kingdoms_worst_day_q04_professor_start"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "Solitude Tower",
+              "display_text": "הגיעו למגדל הבדידות."
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
+              "difficulty": 7,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q04_mixed_sentence_one",
+              "display_text": "בנו משפט חדש לפי התרגום בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו משפט חדש לפי התרגום בעברית.",
+                "tasks": [
+                  "The",
+                  "big",
+                  "gate",
+                  "opens"
+                ],
+                "target": "The big gate opens.",
+                "variant": "sentence_building",
+                "success": "המשפט הראשון של לוח החירום ברור.",
+                "params": {
+                  "prompt": "בנו משפט חדש לפי התרגום בעברית.",
+                  "translation": "השער הגדול נפתח.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "big",
+                    "gate",
+                    "opens"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "small",
+                    "dark",
+                    "big"
+                  ],
+                  "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "WoodenCart2_Solitude_Tower",
+              "difficulty": 7,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q04_mixed_sentence_two",
+              "display_text": "בנו משפט חדש לפי התרגום בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו משפט חדש לפי התרגום בעברית.",
+                "tasks": [
+                  "I",
+                  "carry",
+                  "the",
+                  "small",
+                  "book"
+                ],
+                "target": "I carry the small book.",
+                "variant": "sentence_building",
+                "success": "המשפט השני של לוח החירום ברור.",
+                "params": {
+                  "prompt": "בנו משפט חדש לפי התרגום בעברית.",
+                  "translation": "אני נושא את הספר הקטן.",
+                  "englishWordsInOrder": [
+                    "I",
+                    "carry",
+                    "the",
+                    "small",
+                    "book"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1,
+                    2,
+                    4
+                  ],
+                  "distractorWords": [
+                    "big",
+                    "dark",
+                    "small"
+                  ],
+                  "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Professor Crazy",
+              "dialogue_id": "the_kingdoms_worst_day_q04_professor_done"
+            },
+            {
+              "type": "reach_location",
+              "location_id": "TowerOfLostVigil",
+              "display_text": "הגיעו למגדל המשמר האבוד."
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Mountain Guide",
+              "dialogue_id": "the_kingdoms_worst_day_q04_guide_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 7,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day__q04_transfer_speech",
+              "display_text": "אמרו את המשפט באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט באנגלית בקול.",
+                "tasks": [
+                  "הקשיבו למשפט",
+                  "אמרו אותו שוב בקול ברור"
+                ],
+                "target": "The big gate opens.",
+                "variant": "short_phrase",
+                "success": "המשפט נשמע ברור; ההודעה הגיעה אל המלך.",
+                "params": {
+                  "prompt": "אמרו את המשפט באנגלית בקול.",
+                  "targetWords": [
+                    "The",
+                    "big",
+                    "gate",
+                    "opens"
+                  ],
+                  "targetPhrase": "The big gate opens.",
+                  "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": "",
+                  "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "the_kingdoms_worst_day_q04_maya_done"
             }
           ]
         }

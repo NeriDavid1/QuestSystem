@@ -1,0 +1,38 @@
+quest:
+  id: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
+  name: Nobody Is Doing Their Job
+  level_required: 7
+  giver_npc: Blacksmith
+  prerequisite: the_kingdoms_worst_day__q01_what_is_missing
+  summary: Restore Will's missing verbs so the workshop can understand which action to perform.
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 150
+  items: []
+steps:
+- type: talk_to_npc
+  npc_id: Blacksmith
+  dialogue_id: the_kingdoms_worst_day_q02_will_start
+- type: reach_location
+  location_id: BuildersHome
+  display_text: הגיעו לבית הבונים.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Lost_Chest1_BuildersHomeArea
+  difficulty: 4
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q02_verbs_gap
+  display_text: השלימו את האות החסרה בכל verb.
+- type: reach_location
+  location_id: KingdomGate
+  display_text: חזרו לשער כדי לבדוק את הוראת הפעולה.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 5
+  success_required: true
+  instance_id: the_kingdoms_worst_day__q02_action_sentence
+  display_text: בנו את המשפט לפי התרגום בעברית.
+- type: return_to_npc
+  npc_id: Blacksmith
+  dialogue_id: the_kingdoms_worst_day_q02_will_done
