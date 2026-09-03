@@ -9304,23 +9304,10 @@
           "giver_external_id": "teacher_maya",
           "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_oak_log_request",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_bridge_too_short_talk_to_npc_4f8177f4_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_oak_log_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_bridge_too_short_reach_location_f2be75fc_1",
               "position": 1,
@@ -9422,25 +9409,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_water_man_herbs_request",
           "status": "complete",
           "prerequisites": [
             "q01_bridge_too_short"
           ],
           "steps": [
-            {
-              "key": "q02_whispering_stone_talk_to_npc_42cb2927_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_water_man_herbs_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_whispering_stone_reach_location_142a2afe_1",
               "position": 1,
@@ -9542,25 +9516,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_grandmother_corn_request",
           "status": "complete",
           "prerequisites": [
             "q02_whispering_stone"
           ],
           "steps": [
-            {
-              "key": "q03_big_and_small_words_talk_to_npc_3dd882ae_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_grandmother_corn_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_big_and_small_words_reach_location_d4955807_1",
               "position": 1,
@@ -9710,25 +9671,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_runes_request",
           "status": "complete",
           "prerequisites": [
             "q03_big_and_small_words"
           ],
           "steps": [
-            {
-              "key": "q04_twelve_basic_adjectives_talk_to_npc_7a82afca_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_runes_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q04_twelve_basic_adjectives_reach_location_54b79b51_1",
               "position": 1,
@@ -10358,25 +10306,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_power_stones_request",
           "status": "complete",
           "prerequisites": [
             "q04_twelve_basic_adjectives"
           ],
           "steps": [
-            {
-              "key": "q05_from_low_to_high_talk_to_npc_0adf0e56_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_power_stones_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q05_from_low_to_high_reach_location_9205a6e3_1",
               "position": 1,
@@ -10594,25 +10529,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_gem_request",
           "status": "complete",
           "prerequisites": [
             "q05_from_low_to_high"
           ],
           "steps": [
-            {
-              "key": "q06_adjective_challenge_talk_to_npc_241e4295_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_gem_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q06_adjective_challenge_reach_location_dfa58ac3_1",
               "position": 1,
@@ -10809,23 +10731,10 @@
           "giver_external_id": "Blacksmith",
           "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
           "wait_for_npc_turn_in": true,
+          "start_dialogue_id": "will_runaway_hammer_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_runaway_hammer_talk_to_npc_5b4654f7_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "will_runaway_hammer_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_runaway_hammer_reach_location_f03a53c2_1",
               "position": 1,
@@ -10927,25 +10836,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
           "wait_for_npc_turn_in": true,
+          "start_dialogue_id": "will_snoring_anvil_start",
           "status": "complete",
           "prerequisites": [
             "q01_runaway_hammer"
           ],
           "steps": [
-            {
-              "key": "q02_snoring_anvil_talk_to_npc_25361901_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "will_snoring_anvil_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_snoring_anvil_reach_location_02e2ef18_1",
               "position": 1,
@@ -11047,25 +10943,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
           "wait_for_npc_turn_in": true,
+          "start_dialogue_id": "will_first_slash_start",
           "status": "complete",
           "prerequisites": [
             "q02_snoring_anvil"
           ],
           "steps": [
-            {
-              "key": "q03_first_real_slash_talk_to_npc_69d00855_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "will_first_slash_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\blacksmith_will\\q03_first_real_slash.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_first_real_slash_reach_location_f4c357c8_1",
               "position": 1,
@@ -11178,23 +11061,10 @@
           "giver_external_id": "teacher_maya",
           "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_maya_missing_roles",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_roles_without_names_talk_to_npc_19443057_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "nouns_maya_missing_roles"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_roles_without_names_reach_location_1e049777_1",
               "position": 1,
@@ -11315,25 +11185,12 @@
           "giver_external_id": "City Gaurd Info",
           "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_fenn_mixed_places",
           "status": "complete",
           "prerequisites": [
             "q01_roles_without_names"
           ],
           "steps": [
-            {
-              "key": "q02_castle_on_the_map_talk_to_npc_731688ad_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "City Gaurd Info",
-                "dialogue_id": "nouns_fenn_mixed_places"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_castle_on_the_map_reach_location_f4c357c8_1",
               "position": 1,
@@ -11454,25 +11311,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_professor_crown_soup",
           "status": "complete",
           "prerequisites": [
             "q02_castle_on_the_map"
           ],
           "steps": [
-            {
-              "key": "q03_crown_soup_talk_to_npc_ad637b26_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "nouns_professor_crown_soup"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_crown_soup_reach_location_551e1d8b_1",
               "position": 1,
@@ -11593,25 +11437,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_blacksmith_mixed_equipment",
           "status": "complete",
           "prerequisites": [
             "q03_crown_soup"
           ],
           "steps": [
-            {
-              "key": "q04_soup_shield_talk_to_npc_8f2f0bf1_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "nouns_blacksmith_mixed_equipment"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q04_soup_shield_reach_location_f2be75fc_1",
               "position": 1,
@@ -11732,25 +11563,12 @@
           "giver_external_id": "Old Woman",
           "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_old_woman_new_roles",
           "status": "complete",
           "prerequisites": [
             "q04_soup_shield"
           ],
           "steps": [
-            {
-              "key": "q05_wizard_for_sale_talk_to_npc_cbee1276_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Old Woman",
-                "dialogue_id": "nouns_old_woman_new_roles"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q05_wizard_for_sale_reach_location_142a2afe_1",
               "position": 1,
@@ -11871,25 +11689,12 @@
           "giver_external_id": "Cannoneer",
           "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_cannoneer_wrong_names",
           "status": "complete",
           "prerequisites": [
             "q05_wizard_for_sale"
           ],
           "steps": [
-            {
-              "key": "q06_dragon_identity_talk_to_npc_a328ce9f_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Cannoneer",
-                "dialogue_id": "nouns_cannoneer_wrong_names"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q06_dragon_identity_reach_location_1d9b7160_1",
               "position": 1,
@@ -12010,25 +11815,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_maya_final_trial",
           "status": "complete",
           "prerequisites": [
             "q06_dragon_identity"
           ],
           "steps": [
-            {
-              "key": "q07_royal_noun_trial_talk_to_npc_422c3029_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "nouns_maya_final_trial"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q07_royal_noun_trial_reach_location_dfa58ac3_1",
               "position": 1,
@@ -12254,23 +12046,10 @@
           "giver_external_id": "teacher_maya",
           "summary": "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q01_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_the_broken_noun_book_talk_to_npc_1d727f5e_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "noun_repair_q01_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_the_broken_noun_book_play_minigame_70e0c4ce_1",
               "position": 1,
@@ -12472,25 +12251,12 @@
           "giver_external_id": "Little Boy",
           "summary": "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q02_start",
           "status": "complete",
           "prerequisites": [
             "q01_the_broken_noun_book"
           ],
           "steps": [
-            {
-              "key": "q02_the_runaway_objects_talk_to_npc_6c037322_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "noun_repair_q02_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_the_runaway_objects_play_minigame_d4a46f38_1",
               "position": 1,
@@ -12692,25 +12458,12 @@
           "giver_external_id": "Farmer",
           "summary": "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q03_start",
           "status": "complete",
           "prerequisites": [
             "q02_the_runaway_objects"
           ],
           "steps": [
-            {
-              "key": "q03_the_market_name_mixup_talk_to_npc_121196da_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Farmer",
-                "dialogue_id": "noun_repair_q03_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_the_market_name_mixup_play_minigame_abfa3bed_1",
               "position": 1,
@@ -12912,25 +12665,12 @@
           "giver_external_id": "Old Woman",
           "summary": "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q04_start",
           "status": "complete",
           "prerequisites": [
             "q03_the_market_name_mixup"
           ],
           "steps": [
-            {
-              "key": "q04_the_kitchen_invasion_talk_to_npc_7de31163_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Old Woman",
-                "dialogue_id": "noun_repair_q04_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q04_the_kitchen_invasion_play_minigame_e9551d67_1",
               "position": 1,
@@ -13132,25 +12872,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר יקבל שפם.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q05_start",
           "status": "complete",
           "prerequisites": [
             "q04_the_kitchen_invasion"
           ],
           "steps": [
-            {
-              "key": "q05_the_castle_label_crisis_talk_to_npc_ef54ae51_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "noun_repair_q05_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q05_the_castle_label_crisis_play_minigame_82087938_1",
               "position": 1,
@@ -13352,25 +13079,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q06_start",
           "status": "complete",
           "prerequisites": [
             "q05_the_castle_label_crisis"
           ],
           "steps": [
-            {
-              "key": "q06_the_great_noun_reopening_talk_to_npc_6b82de22_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "noun_repair_q06_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q06_the_great_noun_reopening_play_minigame_7f8cde48_1",
               "position": 1,
@@ -13601,23 +13315,10 @@
           "giver_external_id": "Little Boy",
           "summary": "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "numbers_advanced_q01_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_numbers_10_20_talk_to_npc_eb5fa2bf_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "numbers_advanced_q01_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_numbers_10_20_play_minigame_57e3c4e9_1",
               "position": 1,
@@ -13804,25 +13505,12 @@
           "giver_external_id": "Farmer",
           "summary": "עזרו ל־Farmer לסדר את שלטי השוק ולבנות את רצף המספרים 20–100.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "numbers_advanced_q02_start",
           "status": "complete",
           "prerequisites": [
             "q01_numbers_10_20"
           ],
           "steps": [
-            {
-              "key": "q02_numbers_20_100_talk_to_npc_8409dc5a_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Farmer",
-                "dialogue_id": "numbers_advanced_q02_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_numbers_20_100_play_minigame_06e6c476_1",
               "position": 1,
@@ -14009,25 +13697,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "numbers_advanced_q03_start",
           "status": "complete",
           "prerequisites": [
             "q02_numbers_20_100"
           ],
           "steps": [
-            {
-              "key": "q03_numbers_100_1000_talk_to_npc_666b0b9f_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "numbers_advanced_q03_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_numbers_100_1000_play_minigame_f5d3966a_1",
               "position": 1,
@@ -14232,23 +13907,10 @@
           "giver_external_id": "City Gaurd Info",
           "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q01_fenn_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_talk_to_npc_0e6a1dae_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "City Gaurd Info",
-                "dialogue_id": "the_kingdoms_worst_day_q01_fenn_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q01_what_is_missing_reach_location_d9b0f1f8_1",
               "position": 1,
@@ -14351,25 +14013,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q02_will_start",
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q01_what_is_missing"
           ],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_talk_to_npc_8d435bf7_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "the_kingdoms_worst_day_q02_will_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_reach_location_6d1aaf7c_1",
               "position": 1,
@@ -14486,25 +14135,12 @@
           "giver_external_id": "Painter",
           "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
           ],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_talk_to_npc_25d228f6_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Painter",
-                "dialogue_id": "the_kingdoms_worst_day_q03_painter_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q03_royal_description_disaster_reach_location_f20d57de_1",
               "position": 1,
@@ -14640,25 +14276,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q04_professor_start",
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q03_royal_description_disaster"
           ],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_8ff5c50a_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "the_kingdoms_worst_day_q04_professor_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_reach_location_c6503a6b_1",
               "position": 1,
@@ -14740,7 +14363,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_d352aff2_2",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_d352aff2_1",
               "position": 6,
               "type": "talk_to_npc",
               "payload": {
@@ -14837,7 +14460,7 @@
     "minigame_instances": 117,
     "questlines": 6,
     "quests": 29,
-    "steps": 215,
+    "steps": 186,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -14857,23 +14480,10 @@
           "giver_external_id": "teacher_maya",
           "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_oak_log_request",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_bridge_too_short_talk_to_npc_4f8177f4_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_oak_log_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_bridge_too_short_reach_location_f2be75fc_1",
               "position": 1,
@@ -14975,25 +14585,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_water_man_herbs_request",
           "status": "complete",
           "prerequisites": [
             "q01_bridge_too_short"
           ],
           "steps": [
-            {
-              "key": "q02_whispering_stone_talk_to_npc_42cb2927_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_water_man_herbs_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_whispering_stone_reach_location_142a2afe_1",
               "position": 1,
@@ -15095,25 +14692,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_grandmother_corn_request",
           "status": "complete",
           "prerequisites": [
             "q02_whispering_stone"
           ],
           "steps": [
-            {
-              "key": "q03_big_and_small_words_talk_to_npc_3dd882ae_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_grandmother_corn_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_big_and_small_words_reach_location_d4955807_1",
               "position": 1,
@@ -15263,25 +14847,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_runes_request",
           "status": "complete",
           "prerequisites": [
             "q03_big_and_small_words"
           ],
           "steps": [
-            {
-              "key": "q04_twelve_basic_adjectives_talk_to_npc_7a82afca_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_runes_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q04_twelve_basic_adjectives_reach_location_54b79b51_1",
               "position": 1,
@@ -15911,25 +15482,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_power_stones_request",
           "status": "complete",
           "prerequisites": [
             "q04_twelve_basic_adjectives"
           ],
           "steps": [
-            {
-              "key": "q05_from_low_to_high_talk_to_npc_0adf0e56_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_power_stones_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q05_from_low_to_high_reach_location_9205a6e3_1",
               "position": 1,
@@ -16147,25 +15705,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "adjective_knight_gem_request",
           "status": "complete",
           "prerequisites": [
             "q05_from_low_to_high"
           ],
           "steps": [
-            {
-              "key": "q06_adjective_challenge_talk_to_npc_241e4295_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "adjective_knight_gem_request"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q06_adjective_challenge_reach_location_dfa58ac3_1",
               "position": 1,
@@ -16352,23 +15897,10 @@
           "giver_external_id": "Blacksmith",
           "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
           "wait_for_npc_turn_in": true,
+          "start_dialogue_id": "will_runaway_hammer_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_runaway_hammer_talk_to_npc_5b4654f7_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "will_runaway_hammer_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\blacksmith_will\\q01_runaway_hammer.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_runaway_hammer_reach_location_f03a53c2_1",
               "position": 1,
@@ -16470,25 +16002,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
           "wait_for_npc_turn_in": true,
+          "start_dialogue_id": "will_snoring_anvil_start",
           "status": "complete",
           "prerequisites": [
             "q01_runaway_hammer"
           ],
           "steps": [
-            {
-              "key": "q02_snoring_anvil_talk_to_npc_25361901_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "will_snoring_anvil_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\blacksmith_will\\q02_snoring_anvil.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_snoring_anvil_reach_location_02e2ef18_1",
               "position": 1,
@@ -16590,25 +16109,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
           "wait_for_npc_turn_in": true,
+          "start_dialogue_id": "will_first_slash_start",
           "status": "complete",
           "prerequisites": [
             "q02_snoring_anvil"
           ],
           "steps": [
-            {
-              "key": "q03_first_real_slash_talk_to_npc_69d00855_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "will_first_slash_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\blacksmith_will\\q03_first_real_slash.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_first_real_slash_reach_location_f4c357c8_1",
               "position": 1,
@@ -16711,23 +16217,10 @@
           "giver_external_id": "teacher_maya",
           "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_maya_missing_roles",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_roles_without_names_talk_to_npc_19443057_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "nouns_maya_missing_roles"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_roles_without_names_reach_location_1e049777_1",
               "position": 1,
@@ -16848,25 +16341,12 @@
           "giver_external_id": "City Gaurd Info",
           "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_fenn_mixed_places",
           "status": "complete",
           "prerequisites": [
             "q01_roles_without_names"
           ],
           "steps": [
-            {
-              "key": "q02_castle_on_the_map_talk_to_npc_731688ad_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "City Gaurd Info",
-                "dialogue_id": "nouns_fenn_mixed_places"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_castle_on_the_map_reach_location_f4c357c8_1",
               "position": 1,
@@ -16987,25 +16467,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_professor_crown_soup",
           "status": "complete",
           "prerequisites": [
             "q02_castle_on_the_map"
           ],
           "steps": [
-            {
-              "key": "q03_crown_soup_talk_to_npc_ad637b26_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "nouns_professor_crown_soup"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_crown_soup_reach_location_551e1d8b_1",
               "position": 1,
@@ -17126,25 +16593,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_blacksmith_mixed_equipment",
           "status": "complete",
           "prerequisites": [
             "q03_crown_soup"
           ],
           "steps": [
-            {
-              "key": "q04_soup_shield_talk_to_npc_8f2f0bf1_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "nouns_blacksmith_mixed_equipment"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q04_soup_shield_reach_location_f2be75fc_1",
               "position": 1,
@@ -17265,25 +16719,12 @@
           "giver_external_id": "Old Woman",
           "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_old_woman_new_roles",
           "status": "complete",
           "prerequisites": [
             "q04_soup_shield"
           ],
           "steps": [
-            {
-              "key": "q05_wizard_for_sale_talk_to_npc_cbee1276_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Old Woman",
-                "dialogue_id": "nouns_old_woman_new_roles"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q05_wizard_for_sale_reach_location_142a2afe_1",
               "position": 1,
@@ -17404,25 +16845,12 @@
           "giver_external_id": "Cannoneer",
           "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_cannoneer_wrong_names",
           "status": "complete",
           "prerequisites": [
             "q05_wizard_for_sale"
           ],
           "steps": [
-            {
-              "key": "q06_dragon_identity_talk_to_npc_a328ce9f_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Cannoneer",
-                "dialogue_id": "nouns_cannoneer_wrong_names"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q06_dragon_identity_reach_location_1d9b7160_1",
               "position": 1,
@@ -17543,25 +16971,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_maya_final_trial",
           "status": "complete",
           "prerequisites": [
             "q06_dragon_identity"
           ],
           "steps": [
-            {
-              "key": "q07_royal_noun_trial_talk_to_npc_422c3029_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "nouns_maya_final_trial"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q07_royal_noun_trial_reach_location_dfa58ac3_1",
               "position": 1,
@@ -17777,23 +17192,10 @@
           "giver_external_id": "teacher_maya",
           "summary": "עזרו ל־Maya לתקן את ספר ה־nouns: אנשים וחפצים איבדו את השמות באנגלית.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q01_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_the_broken_noun_book_talk_to_npc_1d727f5e_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "noun_repair_q01_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_the_broken_noun_book_play_minigame_70e0c4ce_1",
               "position": 1,
@@ -17995,25 +17397,12 @@
           "giver_external_id": "Little Boy",
           "summary": "Little Boy איבד את תוויות החפצים. אספו nouns ובדקו למי כל חפץ שייך.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q02_start",
           "status": "complete",
           "prerequisites": [
             "q01_the_broken_noun_book"
           ],
           "steps": [
-            {
-              "key": "q02_the_runaway_objects_talk_to_npc_6c037322_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "noun_repair_q02_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_the_runaway_objects_play_minigame_d4a46f38_1",
               "position": 1,
@@ -18215,25 +17604,12 @@
           "giver_external_id": "Farmer",
           "summary": "ב־Farmer's Market כל noun נמצא ליד החפץ הלא נכון. סדרו את השוק בלי לאכול את השלטים.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q03_start",
           "status": "complete",
           "prerequisites": [
             "q02_the_runaway_objects"
           ],
           "steps": [
-            {
-              "key": "q03_the_market_name_mixup_talk_to_npc_121196da_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Farmer",
-                "dialogue_id": "noun_repair_q03_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_the_market_name_mixup_play_minigame_abfa3bed_1",
               "position": 1,
@@ -18435,25 +17811,12 @@
           "giver_external_id": "Old Woman",
           "summary": "Old Woman צריכה להציל את המטבח: spoon, plate ו־chef החליפו תפקידים.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q04_start",
           "status": "complete",
           "prerequisites": [
             "q03_the_market_name_mixup"
           ],
           "steps": [
-            {
-              "key": "q04_the_kitchen_invasion_talk_to_npc_7de31163_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Old Woman",
-                "dialogue_id": "noun_repair_q04_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q04_the_kitchen_invasion_play_minigame_e9551d67_1",
               "position": 1,
@@ -18655,25 +18018,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "Professor Crazy מצא תוויות לא נכונות בארמון. תקנו את ה־nouns לפני שהכתר יקבל שפם.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q05_start",
           "status": "complete",
           "prerequisites": [
             "q04_the_kitchen_invasion"
           ],
           "steps": [
-            {
-              "key": "q05_the_castle_label_crisis_talk_to_npc_ef54ae51_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "noun_repair_q05_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q05_the_castle_label_crisis_play_minigame_82087938_1",
               "position": 1,
@@ -18875,25 +18225,12 @@
           "giver_external_id": "teacher_maya",
           "summary": "חזרו ל־Maya למבחן הגדול: החזירו שמות לאנשים, חפצים, מקומות וחיות ופתחו את הספר.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "noun_repair_q06_start",
           "status": "complete",
           "prerequisites": [
             "q05_the_castle_label_crisis"
           ],
           "steps": [
-            {
-              "key": "q06_the_great_noun_reopening_talk_to_npc_6b82de22_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "teacher_maya",
-                "dialogue_id": "noun_repair_q06_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q06_the_great_noun_reopening_play_minigame_7f8cde48_1",
               "position": 1,
@@ -19114,23 +18451,10 @@
           "giver_external_id": "Little Boy",
           "summary": "עזרו ל־Little Boy לשחזר את החלק הראשון של מפת המספרים: 10–20.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "numbers_advanced_q01_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "q01_numbers_10_20_talk_to_npc_eb5fa2bf_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "numbers_advanced_q01_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q01_numbers_10_20_play_minigame_57e3c4e9_1",
               "position": 1,
@@ -19317,25 +18641,12 @@
           "giver_external_id": "Farmer",
           "summary": "עזרו ל־Farmer לסדר את שלטי השוק ולבנות את רצף המספרים 20–100.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "numbers_advanced_q02_start",
           "status": "complete",
           "prerequisites": [
             "q01_numbers_10_20"
           ],
           "steps": [
-            {
-              "key": "q02_numbers_20_100_talk_to_npc_8409dc5a_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Farmer",
-                "dialogue_id": "numbers_advanced_q02_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q02_numbers_20_100_play_minigame_06e6c476_1",
               "position": 1,
@@ -19522,25 +18833,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "עזרו ל־Professor Crazy להשלים את המפה ולקרוא מאות ומספרים עד 1000.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "numbers_advanced_q03_start",
           "status": "complete",
           "prerequisites": [
             "q02_numbers_20_100"
           ],
           "steps": [
-            {
-              "key": "q03_numbers_100_1000_talk_to_npc_666b0b9f_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "numbers_advanced_q03_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "q03_numbers_100_1000_play_minigame_f5d3966a_1",
               "position": 1,
@@ -19735,23 +19033,10 @@
           "giver_external_id": "City Gaurd Info",
           "summary": "Restore the nouns on Fenn's broken gate list and help him name the missing objects.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q01_fenn_start",
           "status": "complete",
           "prerequisites": [],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q01_what_is_missing_talk_to_npc_0e6a1dae_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "City Gaurd Info",
-                "dialogue_id": "the_kingdoms_worst_day_q01_fenn_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q01_what_is_missing_reach_location_d9b0f1f8_1",
               "position": 1,
@@ -19854,25 +19139,12 @@
           "giver_external_id": "Blacksmith",
           "summary": "Restore Will's missing verbs so the workshop can understand which action to perform.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q02_will_start",
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q01_what_is_missing"
           ],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_talk_to_npc_8d435bf7_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Blacksmith",
-                "dialogue_id": "the_kingdoms_worst_day_q02_will_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q02_nobody_is_doing_their_job_reach_location_6d1aaf7c_1",
               "position": 1,
@@ -19989,25 +19261,12 @@
           "giver_external_id": "Painter",
           "summary": "Restore adjectives so the Painter can describe the kingdom's objects clearly again.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
           ],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q03_royal_description_disaster_talk_to_npc_25d228f6_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Painter",
-                "dialogue_id": "the_kingdoms_worst_day_q03_painter_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q03_royal_description_disaster_reach_location_f20d57de_1",
               "position": 1,
@@ -20143,25 +19402,12 @@
           "giver_external_id": "Professor Crazy",
           "summary": "Combine nouns, verbs, and adjectives in a clear emergency schedule, then say it aloud.",
           "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_kingdoms_worst_day_q04_professor_start",
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q03_royal_description_disaster"
           ],
           "steps": [
-            {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_8ff5c50a_1",
-              "position": 0,
-              "type": "talk_to_npc",
-              "payload": {
-                "npc_id": "Professor Crazy",
-                "dialogue_id": "the_kingdoms_worst_day_q04_professor_start"
-              },
-              "source_metadata": {
-                "source_position": 0,
-                "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
-              },
-              "rewards": []
-            },
             {
               "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_reach_location_c6503a6b_1",
               "position": 1,
@@ -20243,7 +19489,7 @@
               "rewards": []
             },
             {
-              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_d352aff2_2",
+              "key": "the_kingdoms_worst_day_q04_save_the_royal_schedule_talk_to_npc_d352aff2_1",
               "position": 6,
               "type": "talk_to_npc",
               "payload": {
@@ -20331,5 +19577,5 @@
       ]
     }
   ],
-  "source_digest": "10283743e3e2dd0cfc2ca50999266af46bfc4344a6f5f74382c8cd176fa5ad57"
+  "source_digest": "f0277e560c8b7b0dee02565c15c1c4d6f141a6abf946df944f3b51210e9286d1"
 }

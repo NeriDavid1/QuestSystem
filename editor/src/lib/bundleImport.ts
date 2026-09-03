@@ -57,10 +57,10 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
     // the editor and Unity runtime.
     ...(() => {
       const sourceSteps = Array.isArray(item.steps) ? item.steps : []
-      const start = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
-      const finish = [...sourceSteps].reverse().find((step: Record<string, any>) => step.type === 'deliver_item' || step.type === 'talk_to_npc')
-      return {
-        start_dialogue_id: start?.payload?.dialogue_id ?? null,
+    const start = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
+    const finish = [...sourceSteps].reverse().find((step: Record<string, any>) => step.type === 'deliver_item' || step.type === 'talk_to_npc')
+    return {
+        start_dialogue_id: item.start_dialogue_id ?? start?.payload?.dialogue_id ?? null,
         turn_in_dialogue_id: finish?.payload?.dialogue_id ?? null,
       }
     })(),
@@ -82,7 +82,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
     // Keep it out of the learning-step list so the editor does not show the
     // same opening dialogue twice. Later NPC conversations remain real steps.
     const visibleSteps = sourceSteps.filter((step: Record<string, any>, index: number) => !(
-      index === 0 && step.type === 'talk_to_npc' && step.payload?.dialogue_id === startStep?.payload?.dialogue_id && sourceSteps.length > 1
+      index === 0 && step.type === 'talk_to_npc' && step.payload?.dialogue_id === (questDoc.start_dialogue_id ?? startStep?.payload?.dialogue_id) && sourceSteps.length > 1
     ))
     for (const [index, stepDoc] of visibleSteps.entries()) {
       const id = makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)

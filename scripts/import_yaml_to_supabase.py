@@ -525,6 +525,14 @@ def build_bundle() -> dict[str, Any]:
                 "giver_external_id": giver,
                 "summary": detail.get("summary") or "",
                 "wait_for_npc_turn_in": bool(detail.get("wait_for_npc_turn_in", False)),
+                "start_dialogue_id": (
+                    str(steps_raw[0].get("dialogue_id"))
+                    if len(steps_raw) > 1
+                    and isinstance(steps_raw[0], dict)
+                    and steps_raw[0].get("type") == "talk_to_npc"
+                    and steps_raw[0].get("dialogue_id")
+                    else None
+                ),
                 "status": detail.get("status") or ("complete" if len(steps_raw) > 1 else "draft"),
                 "prerequisites": [],
                 "steps": [],
@@ -577,6 +585,16 @@ def build_bundle() -> dict[str, Any]:
                         quest_id=quest_id,
                         position=step_position,
                     )
+                    continue
+                if (
+                    step_position == 0
+                    and len(steps_raw) > 1
+                    and raw_step.get("type") == "talk_to_npc"
+                    and raw_step.get("dialogue_id") == quest["start_dialogue_id"]
+                ):
+                    # The first NPC conversation is the quest opening dialogue,
+                    # not a separate learning step. Keeping it here would make
+                    # the editor show the same dialogue twice.
                     continue
                 step_type = str(raw_step.get("type") or "")
                 if step_type not in step_type_by_id:
