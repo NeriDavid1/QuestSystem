@@ -3887,13 +3887,17 @@ select:focus {
 @media (max-width: 1300px) {
   .editor-layout {
     grid-template-columns: 194px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-content: start;
   }
 
   .workspace-main {
+    align-self: start;
     padding: 27px 23px 20px;
   }
 
   .inspector {
+    align-self: start;
     grid-column: 1 / -1;
     border-top: 1px solid var(--line);
     border-inline-start: 0;
