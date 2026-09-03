@@ -121,6 +121,15 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
   const userId = (await db.auth.getUser()).data.user?.id ?? null
   const line = payload.questline
 
+  // The direct fallback cannot use the RPC's transaction-wide temporary
+  // positions. On an explicitly confirmed overwrite, remove the old quest
+  // graph first so the incoming step positions cannot collide with stale rows.
+  // The questline row and shared dialogue/minigame records are preserved.
+  if (payload.force) {
+    const { error: clearQuestGraphError } = await db.from('quests').delete().eq('questline_id', line.id)
+    if (clearQuestGraphError) throw clearQuestGraphError
+  }
+
   await supabase
     .from('questlines')
     .upsert({
