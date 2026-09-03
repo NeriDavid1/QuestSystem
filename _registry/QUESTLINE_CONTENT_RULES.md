@@ -2,6 +2,13 @@
 
 These rules are mandatory for every questline and minigame instance in this repository. They apply to new content and to edits of existing content, not only to noun lessons.
 
+## Pedagogical validity
+
+- Every learning task must require the learner to apply the intended objective. Success must not be possible through guessing, translation matching alone, eliminating obviously wrong answers, or following superficial visual cues.
+- Distractors must be plausible and pedagogically meaningful. Keep cognitive load appropriate to the learner's level and increase difficulty progressively from recognition to discrimination, application, combination, and transfer.
+- Context should support comprehension without revealing the answer. Feedback should briefly reinforce why an answer is correct or guide the learner toward the relevant rule after an error.
+- Before approving any task, ask: **Can the learner answer correctly without understanding the target skill?** If yes, redesign the task.
+
 ## Word Matching
 
 - Every `word_matching` instance must define `params.letters` as the available letter tiles. Each tile has a stable `id` and its single-letter `value`.

@@ -42,6 +42,10 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Do not plan `reach_location` unless the user explicitly requests it. Reserve it for the future monster-location, combat, drop, and NPC-return flow once that implementation exists.
 - Do not repeat minigames mechanically or create long identical sequences.
 - Identical minigame types may not appear more than twice in a row.
+- Apply the pedagogical validity test to every planned task: success must require the intended skill, not guessing, translation matching alone, elimination of obviously wrong answers, or superficial visual cues.
+- Use plausible, meaningful distractors; keep cognitive load appropriate; and increase difficulty from recognition to discrimination, application, combination, and transfer.
+- Keep context supportive without revealing the answer, and plan brief feedback that explains correctness or points to the relevant rule after an error.
+- Before approving a task, ask: **Can the learner answer correctly without understanding the target skill?** If yes, redesign it.
 
 ## Output
 

@@ -32,6 +32,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the universal rules.
 - For Word Ordering, ensure the combined runtime choices have unique words, include the exact correct open word once, and keep that correct word out of `distractorWords`.
 - For Speak Aloud, ensure the instruction explicitly asks the learner to speak and matches the exact checked unit: one word, a word list, or a complete sentence.
+- Preserve pedagogical validity from the approved plan: tasks must require the target skill, use plausible distractors, and not be solvable by guessing or superficial cues.
 - Run the local importer/build before handing over the result.
 
 ## Output
