@@ -125,7 +125,6 @@ instances:
       distractorWords:
         - carry
         - open
-        - fix
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q03_adjectives_gap:
     minigame_id: word_matching
@@ -195,7 +194,6 @@ instances:
       distractorWords:
         - small
         - dark
-        - big
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q03_adjective_spelling:
     minigame_id: letter_ordering
@@ -238,7 +236,6 @@ instances:
       distractorWords:
         - small
         - dark
-        - big
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q04_mixed_sentence_two:
     minigame_id: word_ordering
@@ -269,7 +266,6 @@ instances:
       distractorWords:
         - big
         - dark
-        - small
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_kingdoms_worst_day__q04_transfer_speech:
     minigame_id: speak_aloud

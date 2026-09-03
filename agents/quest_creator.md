@@ -27,7 +27,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Verify every NPC, dialogue, item, world object, and minigame ID.
 - Verify Word Matching letters, wordTasks, valid indices, and fragment/full-word alignment.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the universal rules.
-- For Word Ordering, ensure every choice list has unique words and includes the exact correct word for the open position.
+- For Word Ordering, ensure the combined runtime choices have unique words, include the exact correct open word once, and keep that correct word out of `distractorWords`.
 - For Speak Aloud, ensure the instruction explicitly asks the learner to speak and matches the exact checked unit: one word, a word list, or a complete sentence.
 - Run the local importer/build before handing over the result.
 

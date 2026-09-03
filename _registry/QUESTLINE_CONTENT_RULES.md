@@ -19,7 +19,7 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Word Ordering must not write the completed sentence or the answer noun in the player-facing instruction. Give a Hebrew prompt such as `השלימו את המשפט לפי התרגום בעברית` and show the Hebrew translation.
 - Word Ordering does not always require rebuilding every word: use `params.preFilledIndices` to lock correct words and leave a meaningful target word, often a noun, for the learner to choose or place.
 - When a Word Ordering task leaves a word open, provide `params.distractorWords` with a small choice set (for example, three words) and keep the English word array as runtime data.
-- Every Word Ordering choice list must contain unique words: never show the same option more than once. The list must include the exact correct word needed for the open position, plus only intentional distractors.
+- Every Word Ordering choice list must contain unique words: never show the same option more than once. The combined runtime choices must include the exact correct word needed for the open position exactly once; `distractorWords` must contain only unique, intentional wrong options and must not repeat the correct open word.
 - Word Ordering tasks must include a Hebrew translation in `params.translation`.
 
 ## Language and answer disclosure

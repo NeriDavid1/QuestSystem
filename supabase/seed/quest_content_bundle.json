@@ -8958,8 +8958,7 @@
         ],
         "distractorWords": [
           "carry",
-          "open",
-          "fix"
+          "open"
         ],
         "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
       },
@@ -9160,8 +9159,7 @@
         ],
         "distractorWords": [
           "small",
-          "dark",
-          "big"
+          "dark"
         ],
         "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
       },
@@ -9198,8 +9196,7 @@
         ],
         "distractorWords": [
           "small",
-          "dark",
-          "big"
+          "dark"
         ],
         "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
       },
@@ -9239,8 +9236,7 @@
         ],
         "distractorWords": [
           "big",
-          "dark",
-          "small"
+          "dark"
         ],
         "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
       },
@@ -20329,5 +20325,5 @@
       ]
     }
   ],
-  "source_digest": "e5ca5e24df7f0a18815152f9353496b657c83ef90543d6c23fe12ba8a7d663e7"
+  "source_digest": "5d41c549fa68f090f2f0a17d79127ca022b0c082a40085f9c6377948ccd809ac"
 }
