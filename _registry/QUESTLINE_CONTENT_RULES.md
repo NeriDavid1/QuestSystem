@@ -36,6 +36,8 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Use several varied mini-games per quest when appropriate, keeping every mini-game tied to the lesson objective. Do not repeat identical tasks or mix unrelated vocabulary into a lesson.
 - Dialogue flow must not insert an unnecessary `talk_to_npc` step between the opening dialogue and the first active task; return to an NPC only when the story or handoff requires it.
 - If a quest already has an opening NPC dialogue, do not add an immediate `talk_to_npc` step that repeats the same dialogue. The opening dialogue is the conversation for that encounter; a separate `talk_to_npc` step is allowed only for a distinct, necessary later conversation with different content.
+- Keep dialogue blocks short and easy to read: use clear, separated sentences rather than one long text block. Whenever an English sentence appears, provide its complete Hebrew translation in the same dialogue block. Put the next idea in a separate dialogue block.
+- A final quest dialogue must be a clear, short closure: summarize the success, give the reward immediately, and congratulate the learner. Do not hide the completion message inside a long mixed-language paragraph.
 - Use exact registry IDs for NPCs, world objects, minigame instances, items, and dialogues so the Unity importer can resolve every step.
 
 ## Speak Aloud
