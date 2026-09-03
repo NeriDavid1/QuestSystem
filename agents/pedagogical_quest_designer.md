@@ -46,6 +46,8 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Use plausible, meaningful distractors; keep cognitive load appropriate; and increase difficulty from recognition to discrimination, application, combination, and transfer.
 - Keep context supportive without revealing the answer, and plan brief feedback that explains correctness or points to the relevant rule after an error.
 - Before approving a task, ask: **Can the learner answer correctly without understanding the target skill?** If yes, redesign it.
+- Apply the language accessibility rule to every translation, instruction, hint, and native-language dialogue: use short, natural, familiar, age-appropriate wording that scaffolds learning instead of adding a second comprehension task.
+- Translate meaning naturally, not word-for-word. Before approving text, ask: **Would a learner of the target age understand this immediately without needing the wording itself explained?** If not, simplify it without changing the meaning.
 
 ## Output
 

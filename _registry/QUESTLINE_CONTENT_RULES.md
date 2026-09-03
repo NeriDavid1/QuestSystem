@@ -9,6 +9,13 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Context should support comprehension without revealing the answer. Feedback should briefly reinforce why an answer is correct or guide the learner toward the relevant rule after an error.
 - Before approving any task, ask: **Can the learner answer correctly without understanding the target skill?** If yes, redesign the task.
 
+## Language accessibility
+
+- All translations, instructions, hints, and native-language dialogue must use clear, natural, age-appropriate everyday language. The native language is scaffolding for learning, never an additional comprehension task.
+- Avoid unnecessarily formal, literary, academic, bureaucratic, or uncommon wording. Prefer short, direct sentences and familiar words.
+- Translate meaning naturally rather than mirroring English structure word-for-word. Translation complexity must not exceed what is needed to understand the task.
+- Before approving text, ask: **Would a learner of the target age understand this immediately without needing the wording itself explained?** If not, simplify it while preserving the meaning.
+
 ## Word Matching
 
 - Every `word_matching` instance must define `params.letters` as the available letter tiles. Each tile has a stable `id` and its single-letter `value`.
