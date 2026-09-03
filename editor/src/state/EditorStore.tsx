@@ -1386,7 +1386,10 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       deletedStepIds: [...deletedStepIds.current],
       deletedDialogueIds: [...deletedDialogueIds.current],
       deletedMinigameIds: [...deletedMinigameIds.current],
-      expectedUpdatedAt: questlineVersions.current[selectedLine.id] ?? null,
+      // An explicit overwrite is the conflict-resolution path. Do not send
+      // the stale optimistic-lock value again; older deployed RPC versions
+      // also bypass their conflict check when this value is null.
+      expectedUpdatedAt: force ? null : (questlineVersions.current[selectedLine.id] ?? null),
       force,
     }
     const saveResult = await saveQuestlineDraft(payload)
@@ -1462,7 +1465,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
 
   // Auto-save
   useEffect(() => {
-    if (!dirty || demoMode || publishing || autoSaveInFlight.current) return
+    if (!dirty || demoMode || publishing || conflictState || autoSaveInFlight.current) return
     // Allow flushing questline deletions even when nothing is selected (last line removed).
     if (!selectedLine && deletedQuestlineIds.current.length === 0) return
     if (autoSaveFailedGeneration.current === dataGeneration.current) return
@@ -1484,7 +1487,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         })
     }, 1400)
     return () => window.clearTimeout(timeout)
-  }, [data, dirty, demoMode, notify, persistDraft, publishing, selectedLine, t])
+  }, [conflictState, data, dirty, demoMode, notify, persistDraft, publishing, selectedLine, t])
 
   const retryJoin = useCallback(async () => {
     if (!supabase || !user) return
