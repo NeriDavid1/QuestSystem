@@ -14,13 +14,13 @@ instances:
       customDistractors: []
   missing_verbs_q01_sentence_open:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית.
+    instruction: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.
     tasks: [I, need, to, open, it]
     target: "I need to open it."
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית.
+      prompt: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לפתוח.
       translation: אני צריך לפתוח אותו.
       englishWordsInOrder: [I, need, to, open, it]
       preFilledIndices: [0, 1, 2, 4]
@@ -103,13 +103,13 @@ instances:
       referenceClip: ''
   missing_verbs_q02_sentence_jump:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית.
+    instruction: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.
     tasks: [The, guard, can, jump, high]
     target: "The guard can jump high."
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית.
+      prompt: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.
       translation: השומר יכול לקפוץ גבוה.
       englishWordsInOrder: [The, guard, can, jump, high]
       preFilledIndices: [0, 1, 2, 4]
@@ -128,13 +128,13 @@ instances:
       customDistractors: []
   missing_verbs_q03_sentence_fire:
     minigame_id: word_ordering
-    instruction: השלימו את המשפט לפי התרגום בעברית.
+    instruction: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.
     tasks: [The, cannon, can, fire, now]
     target: "The cannon can fire now."
     variant: sentence_building
     success: המשפט נכון.
     params:
-      prompt: השלימו את המשפט לפי התרגום בעברית.
+      prompt: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לירות.
       translation: התותח יכול לירות עכשיו.
       englishWordsInOrder: [The, cannon, can, fire, now]
       preFilledIndices: [0, 1, 2, 4]

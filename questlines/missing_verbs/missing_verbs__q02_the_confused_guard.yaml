@@ -38,7 +38,7 @@ steps:
     difficulty: 3
     success_required: true
     instance_id: missing_verbs_q02_sentence_jump
-    display_text: השלימו את המשפט לפי התרגום בעברית.
+    display_text: השלימו את המשפט לפי התרגום בעברית. בחרו את הפועל שפירושו לקפוץ.
   - type: return_to_npc
     npc_id: "Main Gate Gaurd 1"
     dialogue_id: missing_verbs_q02_finish
