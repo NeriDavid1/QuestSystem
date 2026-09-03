@@ -21,6 +21,7 @@ export function QuestGraphPanel() {
     duplicateQuest,
     removeQuest,
     moveQuest,
+    updateLine,
     notify,
     openConfirm,
     setShowTemplates,
@@ -72,7 +73,13 @@ export function QuestGraphPanel() {
       <div className="workspace-heading">
         <div>
           <p className="eyebrow">{t('visualFlow', { key: selectedLine.key })}</p>
-          <h1 className="content-text" dir="auto">{selectedLine.display_name}</h1>
+          <input
+            className="questline-title-input content-text"
+            aria-label={t('questlineName')}
+            dir="auto"
+            value={selectedLine.display_name}
+            onChange={(event) => updateLine({ display_name: event.target.value })}
+          />
           <p className="page-subtitle content-text" dir="auto">{selectedLine.theme ?? t('addThemeHint')}</p>
         </div>
         <div className="heading-actions">

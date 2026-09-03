@@ -1214,6 +1214,28 @@ code {
   font-size: 26px;
 }
 
+.questline-title-input {
+  display: block;
+  width: min(100%, 720px);
+  margin: 5px 0 7px;
+  padding: 2px 5px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  outline: none;
+}
+
+.questline-title-input:hover,
+.questline-title-input:focus {
+  border-color: var(--line);
+  background: #fff;
+}
+
 .heading-actions {
   gap: 9px;
   flex-wrap: wrap;
