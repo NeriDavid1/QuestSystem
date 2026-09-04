@@ -42,14 +42,14 @@ steps:
   instance_id: noun_repair_q04_spoon
   display_text: כתבו את המילה שפירושה כף באנגלית.
 - type: play_minigame
-  minigame_id: speak_aloud
+  minigame_id: word_matching
   world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
   difficulty: 2
   success_required: true
   instance_id: noun_repair_q04_objects
   display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
-  minigame_id: word_matching
+  minigame_id: speak_aloud
   world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
   difficulty: 2
   success_required: true

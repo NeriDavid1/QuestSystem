@@ -42,14 +42,14 @@ steps:
   instance_id: noun_repair_q05_roles
   display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
-  minigame_id: speak_aloud
+  minigame_id: word_matching
   world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 3
   success_required: true
   instance_id: noun_repair_q05_objects
   display_text: השלימו את האות החסרה בכל שם עצם.
 - type: play_minigame
-  minigame_id: word_matching
+  minigame_id: speak_aloud
   world_object_id: WoodenCart2_Solitude_Tower
   difficulty: 3
   success_required: true

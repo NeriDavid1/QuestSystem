@@ -14342,11 +14342,11 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_6142737f_5",
+              "key": "q04_the_kitchen_invasion_play_minigame_495529e4_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_matching",
                 "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 2,
                 "success_required": true,
@@ -14361,11 +14361,11 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_1d90e0c1_6",
+              "key": "q04_the_kitchen_invasion_play_minigame_7e807a1f_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 2,
                 "success_required": true,
@@ -14382,7 +14382,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_the_kitchen_invasion_play_minigame_1d90e0c1_6",
+                  "step_key": "q04_the_kitchen_invasion_play_minigame_7e807a1f_6",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -14549,11 +14549,11 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_724cfec8_5",
+              "key": "q05_the_castle_label_crisis_play_minigame_a9ea9669_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_matching",
                 "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 3,
                 "success_required": true,
@@ -14568,11 +14568,11 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_ca886c3a_6",
+              "key": "q05_the_castle_label_crisis_play_minigame_488992d2_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 3,
                 "success_required": true,
@@ -14589,7 +14589,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_the_castle_label_crisis_play_minigame_ca886c3a_6",
+                  "step_key": "q05_the_castle_label_crisis_play_minigame_488992d2_6",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -20177,11 +20177,11 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_6142737f_5",
+              "key": "q04_the_kitchen_invasion_play_minigame_495529e4_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_matching",
                 "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 2,
                 "success_required": true,
@@ -20196,11 +20196,11 @@
               "rewards": []
             },
             {
-              "key": "q04_the_kitchen_invasion_play_minigame_1d90e0c1_6",
+              "key": "q04_the_kitchen_invasion_play_minigame_7e807a1f_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
                 "difficulty": 2,
                 "success_required": true,
@@ -20217,7 +20217,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q04_the_kitchen_invasion_play_minigame_1d90e0c1_6",
+                  "step_key": "q04_the_kitchen_invasion_play_minigame_7e807a1f_6",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -20384,11 +20384,11 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_724cfec8_5",
+              "key": "q05_the_castle_label_crisis_play_minigame_a9ea9669_5",
               "position": 5,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_matching",
                 "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 3,
                 "success_required": true,
@@ -20403,11 +20403,11 @@
               "rewards": []
             },
             {
-              "key": "q05_the_castle_label_crisis_play_minigame_ca886c3a_6",
+              "key": "q05_the_castle_label_crisis_play_minigame_488992d2_6",
               "position": 6,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "WoodenCart2_Solitude_Tower",
                 "difficulty": 3,
                 "success_required": true,
@@ -20424,7 +20424,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "q05_the_castle_label_crisis_play_minigame_ca886c3a_6",
+                  "step_key": "q05_the_castle_label_crisis_play_minigame_488992d2_6",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "power_stone",
@@ -22108,5 +22108,5 @@
       ]
     }
   ],
-  "source_digest": "1e9a7e78e8679b0522ced994f1ee6c5ce07e5719ef4e46236bed780cede092d4"
+  "source_digest": "802242d16cb3f3855dc6cfb67d3efcf38b430ff7a25beb8ccba28f441b91c693"
 }
