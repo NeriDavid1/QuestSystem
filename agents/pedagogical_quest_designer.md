@@ -35,6 +35,13 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Apply the shared content, language, answer-disclosure, minigame, progression, and dialogue rules in `_registry/QUESTLINE_CONTENT_RULES.md`; do not restate them in the brief.
 - In the brief, make the sub-skill order explicit: introduce the rule, practise it alone, then add the next rule, and reserve mixed review for the final stage.
 - For every planned task, state the target skill, learner action, and success criterion so QA can check pedagogical validity without guessing the intent.
+- Use Hebrew for explanations and English only as the learning material.
+- Plan short dialogue blocks, with a complete Hebrew translation beside every English sentence.
+- For each task, make the next NPC, item, or stage clear and preserve the story motivation.
+- For Word Matching, plan complete words, valid missing letters, varied gap positions, a compact meaningful letter pool, and independent shuffling of letters and word tasks. IDs and screen positions must never encode the answer.
+- For Word Ordering, plan a Hebrew translation, meaningful partial completion, and unique runtime choices with the correct open word exactly once.
+- For Speak Aloud, specify the exact unit (one word, short list, or sentence), the approved difficulty level, and a visible Hebrew action/meaning prompt that matches the recognition target.
+- Apply the pedagogical validity test to every task: success must require the target skill, not guessing, translation matching alone, obvious elimination, or superficial visual cues.
 
 ## Output
 

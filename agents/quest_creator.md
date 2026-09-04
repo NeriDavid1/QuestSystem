@@ -35,6 +35,11 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Apply `_registry/QUESTLINE_CONTENT_RULES.md` as the single source for shared content, language, minigame, answer-disclosure, progression, and dialogue rules.
 - Verify every NPC, dialogue, item, world object, and minigame ID against the registries.
 - Implement the approved sub-skill order; do not introduce mixed review before each component has been practised.
+- Verify Word Matching `letters`, `wordTasks`, missing indices, fragments, compact pools, unique tile IDs, and independent deterministic shuffling.
+- Verify Letter Ordering, Word Ordering, and Speak Aloud against the approved brief; do not reveal answers in learner-facing instructions.
+- For Word Ordering, ensure valid `preFilledIndices`, complete Hebrew translation when one word is open, and unique runtime choices with the correct word exactly once.
+- For Speak Aloud, ensure the prompt asks the learner to speak, gives the Hebrew meaning of the exact target, uses the approved Level 1/2/3 format, and is passed to the runtime screen.
+- Preserve the brief's pedagogical validity: plausible distractors, appropriate cognitive load, and no guessing-only tasks.
 - Before handoff, run the local importer and build, then report the exact commands and results.
 - Run the local importer/build before handing over the result.
 

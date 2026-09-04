@@ -14,11 +14,13 @@ The project uses three specialized roles:
 4. If QA finds a mismatch, QA returns the work to **Quest Creator** with exact corrections.
 5. After the correction, QA runs the checks again. The loop continues until the quest passes.
 
+If the user brief, pedagogical plan, or an agent rule conflicts with `_registry/QUESTLINE_CONTENT_RULES.md`, do not silently choose a side: record the exact conflict and ask the user to decide before implementation.
+
 The number of quests and minigames is determined by the user brief or pedagogical plan; no fixed minimum is applied automatically.
 
 Identical minigame types may not appear more than twice in a row. QA checks this together with learning-goal alignment.
 
-Shared content rules are stored only in `_registry/QUESTLINE_CONTENT_RULES.md`; agent files must reference that file instead of copying its rules.
+Shared content rules are authoritative in `_registry/QUESTLINE_CONTENT_RULES.md`; agent files may repeat operational checklists for their role, but may not override or contradict that file.
 
 ## Session and workspace coordination
 

@@ -9,7 +9,15 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 ## Checks
 
 - Apply `_registry/QUESTLINE_CONTENT_RULES.md` as the single source for shared content, language, minigame, answer-disclosure, progression, and dialogue rules.
+- If the user brief or approved plan conflicts with a shared rule, report both exact statements and pause approval for that point; never resolve the conflict silently.
 - All registry IDs resolve: questline, quest, NPC, dialogue, dialogue line, item, world object, and minigame.
+- Word Matching: every `missingIndices` value is valid, fragments match `fullWord`, every missing letter exists in the pool, gaps are distributed deterministically, pools are compact, shuffling is independent, and every tile ID is unique.
+- Letter Ordering: the Hebrew prompt gives the meaning and required action without revealing the English answer.
+- Word Ordering: Hebrew translation and valid partial completion exist; combined runtime choices are unique and contain the exact correct open word once.
+- Word Ordering context: when one word is open, the translation is a complete natural Hebrew sentence and the prompt tells the learner to infer the missing word from that sentence.
+- Speak Aloud: instruction, displayed target, recognition target, singular/plural wording, difficulty level, and Hebrew meaning all match; the game screen shows the authored prompt before speaking.
+- Prompt data completeness: every schema that supports `prompt` has a non-empty authored `params.prompt`; answer fields are never used as an implicit fallback.
+- Pedagogical validity: reject guessing-only tasks; check plausible distractors, cognitive load, progression, and corrective feedback.
 - Verify each quest follows the approved sub-skill order and that a short topic explanation appears before its first practice.
 - Verify each task against the brief's stated target skill and success criterion; reject tasks whose intent is not explicit.
 - Dialogue and steps: no unnecessary talk_to_npc appears between the opening dialogue and the first active task; the ending closes the story and gives the next direction.
