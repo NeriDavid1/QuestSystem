@@ -4,7 +4,7 @@ quest:
   level_required: 9
   giver_npc: City Gaurd Info
   prerequisite: the_royal_impostor__q04_the_ownership_code
-  summary: השלימו את המבחן המלכותי וחשפו מי אינו מכיר את בעלי החפצים.
+  summary: השלימו את המבחן המלכותי וחשפו מי אינו יודע למי שייכים הדברים.
   wait_for_npc_turn_in: false
 rewards:
   xp: 400
@@ -21,7 +21,7 @@ steps:
   difficulty: 8
   success_required: true
   instance_id: the_royal_impostor__q05_my_your_test
-  display_text: השלימו שני בעלי חפצים במשפט שהמלך אומר לכם.
+  display_text: השלימו שתי מילים במשפט שהמלך אומר לכם.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Wooden_Cart1_Inside_Gate
@@ -35,14 +35,14 @@ steps:
   difficulty: 8
   success_required: true
   instance_id: the_royal_impostor__q05_his_her_test
-  display_text: השלימו שני בעלי חפצים בדוח העדים.
+  display_text: השלימו שתי מילים במשפט על ויל ועל הציירת.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Exam_Table1_Outside_Gate
   difficulty: 9
   success_required: true
   instance_id: the_royal_impostor__q05_his_her_speech
-  display_text: אמרו את דוח העדים באנגלית בקול.
+  display_text: אמרו את משפט העדים באנגלית בקול.
 - type: play_minigame
   minigame_id: word_ordering
   world_object_id: Exam_Table1_Outside_Gate

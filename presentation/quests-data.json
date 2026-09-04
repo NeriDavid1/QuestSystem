@@ -2155,7 +2155,9 @@
         "יש צרה מלכותית: שני אנשים טוענים שהם היועץ האמיתי.",
         "שניהם אומרים: I am the Royal Advisor!",
         "שניהם אומרים: אני היועץ המלכותי!",
-        "היועץ האמיתי מכיר את אנשי הממלכה ואת החפצים שלהם. אספו עדויות מוויל ומהציירת."
+        "לפני שמתחילים: my פירושו שלי, כשאני מדבר על דבר ששייך לי.",
+        "כשמדברים על בן אדם אחר, משתמשים ב-his או ב-her: שלו או שלה.",
+        "היועץ האמיתי מכיר את אנשי הממלכה ואת הדברים שלהם. אספו מידע מוויל ומהציירת."
       ]
     },
     "the_royal_impostor_q01_will_witness": {
@@ -2164,7 +2166,7 @@
         "אני ויל הנפח, והפטיש הזה שייך לי.",
         "This is my hammer.",
         "זה הפטיש שלי.",
-        "עכשיו ספרו עליי כאילו אתם מדברים על ויל עם אדם אחר.",
+        "עכשיו ספרו לאדם אחר על ויל.",
         "מה אומרים? זה הפטיש שלו."
       ]
     },
@@ -2174,14 +2176,14 @@
         "אני הציירת, והמברשת הזאת שייכת לי.",
         "This is my brush.",
         "זאת המברשת שלי.",
-        "עכשיו ספרו עליי כאילו אתם מדברים על הציירת עם אדם אחר.",
+        "עכשיו ספרו לאדם אחר על הציירת.",
         "מה אומרים? זאת המברשת שלה."
       ]
     },
     "the_royal_impostor_q01_fenn_clue": {
       "speaker": "City Gaurd Info",
       "lines": [
-        "יפה! שיניתם את המילה לפי מי שמדבר ולפי בעל החפץ.",
+        "יפה! בחרתם את המילה לפי מי שמדבר ולפי האדם שהדבר שלו.",
         "Clue number one: the impostor confuses his and her.",
         "רמז מספר אחת: המתחזה מתבלבל בין שלו לשלה.",
         "עכשיו דברו עם השומרים. מישהו נגע בארוחת הצהריים שלהם."
@@ -2195,7 +2197,8 @@
         "מישהו אכל את ארוחת הצהריים שלנו!",
         "These are our sandwiches.",
         "אלה הכריכים שלנו.",
-        "כשאתם מדווחים עלינו, נקודת המבט משתנה."
+        "כשאתם מספרים עלינו לאדם אחר, המילה משתנה.",
+        "my פירושו שלי, כשאני מדבר על דבר שלי. your פירושו שלך או שלכם, כשאני מדבר אליכם על דבר שלכם."
       ]
     },
     "the_royal_impostor_q02_garrick_witness": {
@@ -2206,47 +2209,49 @@
         "זה הרמז שלכם.",
         "החשוד החזיק בכריכים ואמר: These are my sandwiches.",
         "החשוד החזיק בכריכים ואמר: אלה הכריכים שלי.",
-        "המשפט היה תקין, אבל הטענה הייתה שקרית."
+        "המשפט היה נכון, אבל החשוד שיקר."
       ]
     },
     "the_royal_impostor_q02_fenn_clue": {
       "speaker": "City Gaurd Info",
       "lines": [
-        "מצוין. השומרים אמרו our, ואתם דיווחתם עליהם בעזרת their.",
+        "מצוין. השומרים אמרו our, ואתם סיפרתם עליהם בעזרת their.",
         "מצוין. השומרים אמרו \"שלנו\", ואתם דיווחתם עליהם בעזרת \"שלהם\".",
         "Clue number two: the impostor claims other people’s things are his.",
-        "רמז מספר שתיים: המתחזה טוען שחפצים של אחרים שייכים לו.",
-        "אבל החשוד קרע את דף העדות. צריך לשחזר את מילות השייכות שנפגעו."
+        "רמז מספר שתיים: המתחזה אומר שדברים של אחרים הם שלו.",
+        "אבל החשוד קרע את דף הסיפור. צריך להשלים את המילים שנפגעו."
       ]
     },
     "the_royal_impostor_q03_fenn_start": {
-      "speaker": "City Gaurd Info",
+      "speaker": "Painter",
       "lines": [
-        "החשוד קרע את העדות, ובכל מילת שייכות חסרה אות.",
-        "שחזרו תחילה את המילים הקצרות, ואחר כך את המילים שמשנות נקודת מבט.",
-        "לבסוף השתמשו במילים המתוקנות בשני משפטי עדות."
+        "החשוד קרע את הסיפור, ובכל מילה חסרה אות.",
+        "תחילה השלימו my, his ו-her: שלי, שלו ושלה.",
+        "אחר כך השלימו our, their ו-your: שלנו, שלהם ושלכם.",
+        "בסוף השתמשו במילים בשני משפטים קצרים."
       ]
     },
     "the_royal_impostor_q03_fenn_done": {
-      "speaker": "City Gaurd Info",
+      "speaker": "Painter",
       "lines": [
-        "כל מילות השייכות חזרו לעדות, ושני הדוחות שוב ברורים.",
+        "כל המילים חזרו לסיפור, ושני המשפטים ברורים.",
         "הרמז הבא נעול בקוד. כדי לפתוח אותו צריך לכתוב את שש המילים באנגלית."
       ]
     },
     "the_royal_impostor_q04_fenn_start": {
-      "speaker": "City Gaurd Info",
+      "speaker": "Blacksmith",
       "lines": [
-        "הקוד בודק אם אתם יודעים לכתוב כל מילה לפי הדובר ולפי בעל החפץ.",
-        "כתבו שתי מילים, השלימו משפט בדיקה, והמשיכו לזוג הבא.",
+        "עכשיו נחזור על כל שש המילים: my, your, his, her, our, their.",
+        "נבחר את המילה לפי מי שמדבר ולפי האדם שהדבר שלו.",
+        "נכתוב את המילים, נשלים משפטים, ואז נגיד משפט אחד בקול.",
         "אחרי שתפתחו את כל הקוד, המלך ישלח את המבחן האחרון."
       ]
     },
     "the_royal_impostor_q04_fenn_done": {
-      "speaker": "City Gaurd Info",
+      "speaker": "Blacksmith",
       "lines": [
-        "הקוד נפתח. כתבתם את כל שש מילות השייכות והשתמשתם בהן בהקשר.",
-        "המלך שלח את המבחן האחרון. עכשיו נבדוק יחד את כל העדויות."
+        "הקוד נפתח. כתבתם את כל שש המילים והשתמשתם בהן במשפטים.",
+        "המלך שלח את המבחן האחרון. עכשיו נבדוק יחד את כל הסיפורים."
       ]
     },
     "the_royal_impostor_q05_fenn_start": {
@@ -2262,7 +2267,7 @@
     "the_royal_impostor_q05_fenn_done": {
       "speaker": "City Gaurd Info",
       "lines": [
-        "הצלחתם! כל העדויות מתאימות, והמתחזה לא ידע למי שייכים החפצים.",
+        "הצלחתם! כל הסיפורים מתאימים, והמתחזה לא ידע למי שייכים הדברים.",
         "בסוף הוא הודה שהוא שחקן מהתיאטרון המלכותי שרצה לקבל ארוחה חינם בארמון.",
         "השומרים צעקו: “Our lunch?!” — “ארוחת הצהריים שלנו?!”",
         "חשפתם את המתחזה המלכותי וסיימתם את כל החקירה.",
@@ -10249,7 +10254,7 @@
           "name": "Two Advisors",
           "level": 8,
           "prerequisite": null,
-          "summary": "אספו עדויות מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
+          "summary": "אספו מידע מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
           "giver_npc": "City Gaurd Info",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -10277,10 +10282,10 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "the_royal_impostor__q01_his_hammer",
-              "display_text": "השלימו את המשפט לפי הבעלות המתוארת בעברית.",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את מילת השייכות לפי הבעלים.",
+                "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את המילה המתאימה.",
                 "tasks": [
                   "This",
                   "is",
@@ -10289,9 +10294,9 @@
                 ],
                 "target": "This is his hammer.",
                 "variant": "sentence_building",
-                "success": "זיהיתם שהפטיש שייך לוויל וקיבלתם חלק מהעדות.",
+                "success": "הבנתם שהפטיש שייך לוויל וקיבלתם חלק מהסיפור.",
                 "params": {
-                  "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את מילת השייכות לפי הבעלים.",
+                  "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את המילה המתאימה.",
                   "translation": "זה הפטיש שלו.",
                   "englishWordsInOrder": [
                     "This",
@@ -10324,10 +10329,10 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "the_royal_impostor__q01_her_brush",
-              "display_text": "השלימו את המשפט לפי הבעלות המתוארת בעברית.",
+              "display_text": "השלימו את המשפט לפי התרגום בעברית.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את מילת השייכות לפי הבעלים.",
+                "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את המילה המתאימה.",
                 "tasks": [
                   "This",
                   "is",
@@ -10336,9 +10341,9 @@
                 ],
                 "target": "This is her brush.",
                 "variant": "sentence_building",
-                "success": "זיהיתם שהמברשת שייכת לציירת וקיבלתם את העדות השנייה.",
+                "success": "הבנתם שהמברשת שייכת לציירת וקיבלתם את החלק השני בסיפור.",
                 "params": {
-                  "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את מילת השייכות לפי הבעלים.",
+                  "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את המילה המתאימה.",
                   "translation": "זאת המברשת שלה.",
                   "englishWordsInOrder": [
                     "This",
@@ -10366,7 +10371,7 @@
               "difficulty": 9,
               "success_required": true,
               "instance_id": "the_royal_impostor__q01_witness_report",
-              "display_text": "אמרו את דוח העדים באנגלית בקול.",
+              "display_text": "אמרו את משפט העדים באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
                 "instruction": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.",
@@ -10376,7 +10381,7 @@
                 ],
                 "target": "His hammer is beside her brush.",
                 "variant": "short_phrase",
-                "success": "אמרתם את דוח העדים בבירור וקיבלתם את רמז מספר אחת.",
+                "success": "אמרתם את סיפור העדים בבירור וקיבלתם את רמז מספר אחת.",
                 "params": {
                   "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.",
                   "targetWords": [
@@ -10407,7 +10412,7 @@
           "name": "The Witnesses",
           "level": 8,
           "prerequisite": "the_royal_impostor__q01_two_advisors",
-          "summary": "החליפו נקודת מבט בין שני השומרים ובדקו למי שייכת ארוחת הצהריים.",
+          "summary": "שנו את המילים כשמדברים על שני השומרים ועל ארוחת הצהריים.",
           "giver_npc": "Main Gate Gaurd 1",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -10430,7 +10435,7 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "the_royal_impostor__q02_our_sandwiches",
-              "display_text": "השלימו את דברי השומרים לפי נקודת המבט שלהם.",
+              "display_text": "השלימו את המשפט של השומרים.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלנו. השומרים מדברים על האוכל שלהם.",
@@ -10442,7 +10447,7 @@
                 ],
                 "target": "These are our sandwiches.",
                 "variant": "sentence_building",
-                "success": "בחרתם את נקודת המבט של השומרים.",
+                "success": "בחרתם את המילה שהשומרים צריכים.",
                 "params": {
                   "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלנו. השומרים מדברים על האוכל שלהם.",
                   "translation": "אלה הכריכים שלנו.",
@@ -10472,10 +10477,10 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "the_royal_impostor__q02_their_sandwiches",
-              "display_text": "דווחו על השומרים מנקודת המבט של החוקר.",
+              "display_text": "ספרו על השומרים במשפט באנגלית.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו אתם מדברים על השומרים.",
+                "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו ספרו על השומרים.",
                 "tasks": [
                   "Those",
                   "are",
@@ -10484,7 +10489,7 @@
                 ],
                 "target": "Those are their sandwiches.",
                 "variant": "sentence_building",
-                "success": "שיניתם נכון מנקודת המבט של השומרים לנקודת המבט של החוקר.",
+                "success": "בחרתם את המילה הנכונה כשאתם מספרים על השומרים.",
                 "params": {
                   "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו אתם מדברים על השומרים.",
                   "translation": "אלה הכריכים שלהם.",
@@ -10514,7 +10519,7 @@
               "difficulty": 9,
               "success_required": true,
               "instance_id": "the_royal_impostor__q02_lunch_report",
-              "display_text": "אמרו את דוח ארוחת הצהריים באנגלית בקול.",
+              "display_text": "אמרו את משפט ארוחת הצהריים באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
                 "instruction": "שני השומרים מדברים על שולחן ששייך לשני החשודים. אמרו באנגלית בקול: הכריכים שלנו נמצאים על השולחן שלהם.",
@@ -10524,7 +10529,7 @@
                 ],
                 "target": "Our sandwiches are on their table.",
                 "variant": "short_phrase",
-                "success": "מסרתם את שינוי נקודת המבט בקול ברור.",
+                "success": "אמרתם בקול ברור שהמילה משתנה לפי מי שמדבר.",
                 "params": {
                   "prompt": "שני השומרים מדברים על שולחן ששייך לשני החשודים. אמרו באנגלית בקול: הכריכים שלנו נמצאים על השולחן שלהם.",
                   "targetWords": [
@@ -10609,7 +10614,7 @@
                 ],
                 "target": "These are my sandwiches.",
                 "variant": "sentence_building",
-                "success": "בניתם טענה נכונה מבחינה דקדוקית, גם אם החשוד אינו אומר אמת.",
+                "success": "בניתם משפט נכון, גם אם החשוד אינו אומר אמת.",
                 "params": {
                   "prompt": "השלימו את טענת המתחזה באנגלית לפי התרגום המלא: אלה הכריכים שלי. זכרו מי מדבר.",
                   "translation": "אלה הכריכים שלי.",
@@ -10649,7 +10654,7 @@
                 ],
                 "target": "My lunch is not your lunch.",
                 "variant": "short_phrase",
-                "success": "הבהרתם בקול שהמילה משתנה לפי בעל הארוחה.",
+                "success": "אמרתם בקול ברור שהמילה משתנה לפי מי שמדבר.",
                 "params": {
                   "prompt": "טומלין מדבר ישירות אל החשוד. אמרו באנגלית בקול: ארוחת הצהריים שלי אינה ארוחת הצהריים שלך.",
                   "targetWords": [
@@ -10680,8 +10685,8 @@
           "name": "The Torn Testimony",
           "level": 9,
           "prerequisite": "the_royal_impostor__q02_the_witnesses",
-          "summary": "שחזרו את מילות השייכות שנקרעו מהעדויות והשתמשו בהן בדוח החקירה.",
-          "giver_npc": "City Gaurd Info",
+          "summary": "השלימו את המילים שנקרעו מהסיפור והשתמשו בהן בשני משפטים.",
+          "giver_npc": "Painter",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
           "turn_in_dialogue_id": null,
@@ -10693,7 +10698,7 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "City Gaurd Info",
+              "npc_id": "Painter",
               "dialogue_id": "the_royal_impostor_q03_fenn_start"
             },
             {
@@ -10703,7 +10708,7 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "the_royal_impostor__q03_singular_owner_gaps",
-              "display_text": "השלימו את האות החסרה במילים שמראות למי שייך החפץ.",
+              "display_text": "השלימו את האות החסרה במילים שמספרות למי שייך הדבר.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
                 "instruction": "השלימו את האות החסרה בכל מילה באנגלית שמראה למי החפץ שייך.",
@@ -10774,7 +10779,7 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "the_royal_impostor__q03_group_perspective_gaps",
-              "display_text": "השלימו את האות החסרה במילות השייכות לפי נקודת המבט.",
+              "display_text": "השלימו את האות החסרה במילים לפי מי שמדבר.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
                 "instruction": "השלימו את האות החסרה במילים באנגלית לפי מי שמדבר ולמי שייכים החפצים.",
@@ -10845,10 +10850,10 @@
               "difficulty": 7,
               "success_required": true,
               "instance_id": "the_royal_impostor__q03_his_her_evidence",
-              "display_text": "השלימו את דוח החפצים של ויל והציירת.",
+              "display_text": "השלימו את המשפט על ויל ועל הציירת.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
+                "instruction": "השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
                 "tasks": [
                   "His",
                   "hammer",
@@ -10859,9 +10864,9 @@
                 ],
                 "target": "His hammer is beside her brush.",
                 "variant": "sentence_building",
-                "success": "התאמתם נכון את ויל ואת הציירת לחפצים שלהם.",
+                "success": "התאמתם נכון את ויל ואת הציירת לדברים שלהם.",
                 "params": {
-                  "prompt": "השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
+                  "prompt": "השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
                   "translation": "הפטיש שלו נמצא ליד המברשת שלה.",
                   "englishWordsInOrder": [
                     "His",
@@ -10892,7 +10897,7 @@
               "difficulty": 7,
               "success_required": true,
               "instance_id": "the_royal_impostor__q03_our_their_evidence",
-              "display_text": "השלימו את דוח השומרים ואת ארוחת הצהריים.",
+              "display_text": "השלימו את המשפט על השומרים ועל ארוחת הצהריים.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "פן מדווח למלך. השלימו את המשפט לפי התרגום: השומרים שלנו מצאו את ארוחת הצהריים שלהם.",
@@ -10905,7 +10910,7 @@
                 ],
                 "target": "Our guards found their lunch.",
                 "variant": "sentence_building",
-                "success": "שיניתם נכון בין הקבוצה של הדובר לבין החפץ של השומרים.",
+                "success": "בחרתם נכון את המילה של הדובר ואת המילה של השומרים.",
                 "params": {
                   "prompt": "פן מדווח למלך. השלימו את המשפט לפי התרגום: השומרים שלנו מצאו את ארוחת הצהריים שלהם.",
                   "translation": "השומרים שלנו מצאו את ארוחת הצהריים שלהם.",
@@ -10931,7 +10936,7 @@
             },
             {
               "type": "return_to_npc",
-              "npc_id": "City Gaurd Info",
+              "npc_id": "Painter",
               "dialogue_id": "the_royal_impostor_q03_fenn_done"
             }
           ]
@@ -10941,8 +10946,8 @@
           "name": "The Ownership Code",
           "level": 9,
           "prerequisite": "the_royal_impostor__q03_the_torn_testimony",
-          "summary": "כתבו את שש מילות השייכות באנגלית ופתחו את הקוד למבחן המלכותי.",
-          "giver_npc": "City Gaurd Info",
+          "summary": "כתבו את שש המילים באנגלית ופתחו את הקוד למבחן המלכותי.",
+          "giver_npc": "Blacksmith",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
           "turn_in_dialogue_id": null,
@@ -10954,7 +10959,7 @@
           "steps": [
             {
               "type": "talk_to_npc",
-              "npc_id": "City Gaurd Info",
+              "npc_id": "Blacksmith",
               "dialogue_id": "the_royal_impostor_q04_fenn_start"
             },
             {
@@ -10964,10 +10969,10 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "the_royal_impostor__q04_spell_my",
-              "display_text": "כתבו באנגלית את מילת השייכות לפי דברי המלך.",
+              "display_text": "כתבו באנגלית את המילה לפי דברי המלך.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "המלך מדבר על הכתר ששייך לו. כתבו באנגלית את המילה שפירושה \"שלי\".",
+                "instruction": "המלך מדבר על הכתר שלו. כתבו באנגלית את המילה שפירושה \"שלי\".",
                 "tasks": [
                   "סדרו את האותיות",
                   "בדקו את האיות"
@@ -10991,10 +10996,10 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "the_royal_impostor__q04_spell_your",
-              "display_text": "כתבו באנגלית את מילת השייכות לפי דברי המלך אליכם.",
+              "display_text": "כתבו באנגלית את המילה לפי דברי המלך אליכם.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "המלך מדבר אליכם על המפה ששייכת לכם. כתבו באנגלית את המילה שפירושה \"שלכם\".",
+                "instruction": "המלך מדבר אליכם על המפה שלכם. כתבו באנגלית את המילה שפירושה \"שלכם\".",
                 "tasks": [
                   "סדרו את האותיות",
                   "בדקו את האיות"
@@ -11065,7 +11070,7 @@
               "difficulty": 5,
               "success_required": true,
               "instance_id": "the_royal_impostor__q04_spell_our",
-              "display_text": "כתבו באנגלית את מילת השייכות לפי דברי השומרים.",
+              "display_text": "כתבו באנגלית את המילה לפי דברי השומרים.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
                 "instruction": "השומרים מדברים יחד על הכריכים שלהם. כתבו באנגלית את המילה שפירושה \"שלנו\".",
@@ -11092,17 +11097,17 @@
               "difficulty": 6,
               "success_required": true,
               "instance_id": "the_royal_impostor__q04_spell_their",
-              "display_text": "כתבו באנגלית את מילת השייכות בדוח על קבוצה אחרת.",
+              "display_text": "כתבו באנגלית את המילה כשאתם מספרים על קבוצה אחרת.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "אתם מדווחים על המגנים של השומרים. כתבו באנגלית את המילה שפירושה \"שלהם\".",
+                "instruction": "אתם מספרים על המגנים של השומרים. כתבו באנגלית את המילה שפירושה \"שלהם\".",
                 "tasks": [
                   "סדרו את האותיות",
                   "בדקו את האיות"
                 ],
                 "target": "their",
                 "variant": "word_spelling",
-                "success": "כתבתם נכון את המילה שמדברת על חפצים של קבוצה אחרת.",
+                "success": "כתבתם נכון את המילה על דברים של קבוצה אחרת.",
                 "params": {
                   "prompt": "אתם מדווחים על המגנים של השומרים. כתבו באנגלית את המילה שפירושה \"שלהם\".",
                   "targetWord": "their",
@@ -11129,7 +11134,7 @@
                 ],
                 "target": "Our lunch is on their table.",
                 "variant": "short_phrase",
-                "success": "אמרתם את שינוי נקודת המבט בקול ברור.",
+                "success": "אמרתם בקול ברור שהמילה משתנה לפי מי שמדבר.",
                 "params": {
                   "prompt": "שני השומרים מדברים על שולחן ששייך לשני החשודים. אמרו באנגלית בקול: ארוחת הצהריים שלנו נמצאת על השולחן שלהם.",
                   "targetWords": [
@@ -11155,7 +11160,7 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "the_royal_impostor__q04_spell_his",
-              "display_text": "כתבו באנגלית את מילת השייכות לחפץ של ויל.",
+              "display_text": "כתבו באנגלית את המילה שמתאימה לדבר של ויל.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
                 "instruction": "הפטיש שייך לוויל. כתבו באנגלית את המילה שפירושה \"שלו\".",
@@ -11182,7 +11187,7 @@
               "difficulty": 4,
               "success_required": true,
               "instance_id": "the_royal_impostor__q04_spell_her",
-              "display_text": "כתבו באנגלית את מילת השייכות לחפץ של הציירת.",
+              "display_text": "כתבו באנגלית את המילה שמתאימה לדבר של הציירת.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
                 "instruction": "המברשת שייכת לציירת. כתבו באנגלית את המילה שפירושה \"שלה\".",
@@ -11212,7 +11217,7 @@
               "display_text": "השלימו את הקוד של ויל והציירת.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
-                "instruction": "השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
+                "instruction": "השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
                 "tasks": [
                   "His",
                   "hammer",
@@ -11223,9 +11228,9 @@
                 ],
                 "target": "His hammer is beside her brush.",
                 "variant": "sentence_building",
-                "success": "השלמתם את זוג המילים האחרון בקוד הבעלות.",
+                "success": "השלמתם את זוג המילים האחרון בקוד.",
                 "params": {
-                  "prompt": "השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
+                  "prompt": "השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.",
                   "translation": "הפטיש שלו נמצא ליד המברשת שלה.",
                   "englishWordsInOrder": [
                     "His",
@@ -11251,7 +11256,7 @@
             },
             {
               "type": "return_to_npc",
-              "npc_id": "City Gaurd Info",
+              "npc_id": "Blacksmith",
               "dialogue_id": "the_royal_impostor_q04_fenn_done"
             }
           ]
@@ -11261,7 +11266,7 @@
           "name": "The Royal Test",
           "level": 9,
           "prerequisite": "the_royal_impostor__q04_the_ownership_code",
-          "summary": "השלימו את המבחן המלכותי וחשפו מי אינו מכיר את בעלי החפצים.",
+          "summary": "השלימו את המבחן המלכותי וחשפו מי אינו יודע למי שייכים הדברים.",
           "giver_npc": "City Gaurd Info",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
@@ -11289,7 +11294,7 @@
               "difficulty": 8,
               "success_required": true,
               "instance_id": "the_royal_impostor__q05_my_your_test",
-              "display_text": "השלימו שני בעלי חפצים במשפט שהמלך אומר לכם.",
+              "display_text": "השלימו שתי מילים במשפט שהמלך אומר לכם.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "המלך מדבר ישירות אליכם. השלימו את המשפט לפי התרגום: הכתר שלי נמצא ליד המפה שלכם.",
@@ -11376,7 +11381,7 @@
               "difficulty": 8,
               "success_required": true,
               "instance_id": "the_royal_impostor__q05_his_her_test",
-              "display_text": "השלימו שני בעלי חפצים בדוח העדים.",
+              "display_text": "השלימו שתי מילים במשפט על ויל ועל הציירת.",
               "minigame_brief": {
                 "minigame_id": "word_ordering",
                 "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: הפטיש שלו נמצא ליד המברשת שלה. השתמשו במידע על ויל ועל הציירת.",
@@ -11423,7 +11428,7 @@
               "difficulty": 9,
               "success_required": true,
               "instance_id": "the_royal_impostor__q05_his_her_speech",
-              "display_text": "אמרו את דוח העדים באנגלית בקול.",
+              "display_text": "אמרו את משפט העדים באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
                 "instruction": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.",
@@ -11472,7 +11477,7 @@
                 ],
                 "target": "Our guards carry their shields.",
                 "variant": "sentence_building",
-                "success": "השלמתם את שינוי נקודת המבט האחרון וחשפתם את המתחזה.",
+                "success": "השלמתם את המשפט האחרון וחשפתם את המתחזה.",
                 "params": {
                   "prompt": "המלך מדבר אל השומרים. השלימו את המשפט לפי התרגום: השומרים שלנו נושאים את המגנים שלהם.",
                   "translation": "השומרים שלנו נושאים את המגנים שלהם.",

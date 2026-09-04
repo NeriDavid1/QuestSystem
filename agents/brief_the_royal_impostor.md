@@ -13,9 +13,10 @@
 
 ## Existing-world adaptation
 
-- Fenn (`City Gaurd Info`) coordinates the investigation and the final Royal Test.
+- Fenn (`City Gaurd Info`) coordinates the opening investigation and the final Royal Test.
 - Will (`Blacksmith`) and Painter give first-person testimony; the player changes it to third-person evidence.
 - Tomlin (`Main Gate Gaurd 1`) and Garrick (`Main Gate Gaurd 2`) provide the lunch dispute and perspective changes.
+- Painter starts Q3 and Blacksmith starts Q4 so quest givers do not repeat without a story reason.
 - Existing stations: `Lost_Chest1_BuildersHomeArea`, `Lost_Chest7_The_Sunspire_Tree`, `Exam_Table1_Outside_Gate`, and `Wooden_Cart1_Inside_Gate`.
 
 ## Progression
@@ -33,6 +34,7 @@
 - Letter Ordering prompts give a concrete Hebrew owner/speaker context and request the English form without showing it. Every instance has a non-empty `params.prompt`.
 - Word Ordering leaves only the possessive adjectives open and uses unique plausible distractors.
 - Speak Aloud remains Level 3 at difficulty 9 with an explicit Hebrew action and the complete meaning of the exact target phrase.
+- Before each new practice group, give a short, simple Hebrew explanation of what the forms mean and when to use them. Use everyday Hebrew that a child can understand immediately.
 - No more than two instances of the same minigame type appear consecutively.
 
 ## Story closure

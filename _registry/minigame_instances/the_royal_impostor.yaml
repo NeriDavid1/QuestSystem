@@ -2,13 +2,13 @@
 instances:
   the_royal_impostor__q01_his_hammer:
     minigame_id: word_ordering
-    instruction: 'השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את מילת השייכות לפי הבעלים.'
+    instruction: 'השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את המילה המתאימה.'
     tasks: [This, is, his, hammer]
     target: This is his hammer.
     variant: sentence_building
-    success: זיהיתם שהפטיש שייך לוויל וקיבלתם חלק מהעדות.
+    success: הבנתם שהפטיש שייך לוויל וקיבלתם חלק מהסיפור.
     params:
-      prompt: 'השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את מילת השייכות לפי הבעלים.'
+      prompt: 'השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את המילה המתאימה.'
       translation: זה הפטיש שלו.
       englishWordsInOrder: [This, is, his, hammer]
       preFilledIndices: [0, 1, 3]
@@ -16,13 +16,13 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_royal_impostor__q01_her_brush:
     minigame_id: word_ordering
-    instruction: 'השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את מילת השייכות לפי הבעלים.'
+    instruction: 'השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את המילה המתאימה.'
     tasks: [This, is, her, brush]
     target: This is her brush.
     variant: sentence_building
-    success: זיהיתם שהמברשת שייכת לציירת וקיבלתם את העדות השנייה.
+    success: הבנתם שהמברשת שייכת לציירת וקיבלתם את החלק השני בסיפור.
     params:
-      prompt: 'השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את מילת השייכות לפי הבעלים.'
+      prompt: 'השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את המילה המתאימה.'
       translation: זאת המברשת שלה.
       englishWordsInOrder: [This, is, her, brush]
       preFilledIndices: [0, 1, 3]
@@ -36,7 +36,7 @@ instances:
       - אמרו את כל המשפט בקול ברור
     target: His hammer is beside her brush.
     variant: short_phrase
-    success: אמרתם את דוח העדים בבירור וקיבלתם את רמז מספר אחת.
+    success: אמרתם את סיפור העדים בבירור וקיבלתם את רמז מספר אחת.
     params:
       prompt: 'אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.'
       targetWords: [His, hammer, is, beside, her, brush]
@@ -51,7 +51,7 @@ instances:
     tasks: [These, are, our, sandwiches]
     target: These are our sandwiches.
     variant: sentence_building
-    success: בחרתם את נקודת המבט של השומרים.
+    success: בחרתם את המילה שהשומרים צריכים.
     params:
       prompt: 'השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלנו. השומרים מדברים על האוכל שלהם.'
       translation: אלה הכריכים שלנו.
@@ -61,11 +61,11 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_royal_impostor__q02_their_sandwiches:
     minigame_id: word_ordering
-    instruction: 'השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו אתם מדברים על השומרים.'
+    instruction: 'השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו ספרו על השומרים.'
     tasks: [Those, are, their, sandwiches]
     target: Those are their sandwiches.
     variant: sentence_building
-    success: שיניתם נכון מנקודת המבט של השומרים לנקודת המבט של החוקר.
+    success: בחרתם את המילה הנכונה כשאתם מספרים על השומרים.
     params:
       prompt: 'השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו אתם מדברים על השומרים.'
       translation: אלה הכריכים שלהם.
@@ -81,7 +81,7 @@ instances:
       - אמרו את כל המשפט בקול ברור
     target: Our sandwiches are on their table.
     variant: short_phrase
-    success: מסרתם את שינוי נקודת המבט בקול ברור.
+    success: אמרתם בקול ברור שהמילה משתנה לפי מי שמדבר.
     params:
       prompt: 'שני השומרים מדברים על שולחן ששייך לשני החשודים. אמרו באנגלית בקול: הכריכים שלנו נמצאים על השולחן שלהם.'
       targetWords: [Our, sandwiches, are, 'on', their, table]
@@ -110,7 +110,7 @@ instances:
     tasks: [These, are, my, sandwiches]
     target: These are my sandwiches.
     variant: sentence_building
-    success: בניתם טענה נכונה מבחינה דקדוקית, גם אם החשוד אינו אומר אמת.
+    success: בניתם משפט נכון, גם אם החשוד אינו אומר אמת.
     params:
       prompt: 'השלימו את טענת המתחזה באנגלית לפי התרגום המלא: אלה הכריכים שלי. זכרו מי מדבר.'
       translation: אלה הכריכים שלי.
@@ -126,7 +126,7 @@ instances:
       - אמרו את כל המשפט בקול ברור
     target: My lunch is not your lunch.
     variant: short_phrase
-    success: הבהרתם בקול שהמילה משתנה לפי בעל הארוחה.
+    success: אמרתם בקול ברור שהמילה משתנה לפי מי שמדבר.
     params:
       prompt: 'טומלין מדבר ישירות אל החשוד. אמרו באנגלית בקול: ארוחת הצהריים שלי אינה ארוחת הצהריים שלך.'
       targetWords: [My, lunch, is, not, your, lunch]
@@ -194,13 +194,13 @@ instances:
           missingIndices: [1]
   the_royal_impostor__q03_his_her_evidence:
     minigame_id: word_ordering
-    instruction: 'השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
+    instruction: 'השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
     tasks: [His, hammer, is, beside, her, brush]
     target: His hammer is beside her brush.
     variant: sentence_building
-    success: התאמתם נכון את ויל ואת הציירת לחפצים שלהם.
+    success: התאמתם נכון את ויל ואת הציירת לדברים שלהם.
     params:
-      prompt: 'השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
+      prompt: 'השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
       translation: הפטיש שלו נמצא ליד המברשת שלה.
       englishWordsInOrder: [His, hammer, is, beside, her, brush]
       preFilledIndices: [1, 2, 3, 5]
@@ -212,7 +212,7 @@ instances:
     tasks: [Our, guards, found, their, lunch]
     target: Our guards found their lunch.
     variant: sentence_building
-    success: שיניתם נכון בין הקבוצה של הדובר לבין החפץ של השומרים.
+    success: בחרתם נכון את המילה של הדובר ואת המילה של השומרים.
     params:
       prompt: 'פן מדווח למלך. השלימו את המשפט לפי התרגום: השומרים שלנו מצאו את ארוחת הצהריים שלהם.'
       translation: השומרים שלנו מצאו את ארוחת הצהריים שלהם.
@@ -222,7 +222,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_royal_impostor__q04_spell_my:
     minigame_id: letter_ordering
-    instruction: 'המלך מדבר על הכתר ששייך לו. כתבו באנגלית את המילה שפירושה "שלי".'
+    instruction: 'המלך מדבר על הכתר שלו. כתבו באנגלית את המילה שפירושה "שלי".'
     tasks: [סדרו את האותיות, בדקו את האיות]
     target: my
     variant: word_spelling
@@ -235,7 +235,7 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_royal_impostor__q04_spell_your:
     minigame_id: letter_ordering
-    instruction: 'המלך מדבר אליכם על המפה ששייכת לכם. כתבו באנגלית את המילה שפירושה "שלכם".'
+    instruction: 'המלך מדבר אליכם על המפה שלכם. כתבו באנגלית את המילה שפירושה "שלכם".'
     tasks: [סדרו את האותיות, בדקו את האיות]
     target: your
     variant: word_spelling
@@ -275,11 +275,11 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_royal_impostor__q04_spell_their:
     minigame_id: letter_ordering
-    instruction: 'אתם מדווחים על המגנים של השומרים. כתבו באנגלית את המילה שפירושה "שלהם".'
+    instruction: 'אתם מספרים על המגנים של השומרים. כתבו באנגלית את המילה שפירושה "שלהם".'
     tasks: [סדרו את האותיות, בדקו את האיות]
     target: their
     variant: word_spelling
-    success: כתבתם נכון את המילה שמדברת על חפצים של קבוצה אחרת.
+    success: כתבתם נכון את המילה על דברים של קבוצה אחרת.
     params:
       prompt: 'אתם מדווחים על המגנים של השומרים. כתבו באנגלית את המילה שפירושה "שלהם".'
       targetWord: their
@@ -292,7 +292,7 @@ instances:
     tasks: [הקשיבו למשפט, אמרו את כל המשפט בקול ברור]
     target: Our lunch is on their table.
     variant: short_phrase
-    success: אמרתם את שינוי נקודת המבט בקול ברור.
+    success: אמרתם בקול ברור שהמילה משתנה לפי מי שמדבר.
     params:
       prompt: 'שני השומרים מדברים על שולחן ששייך לשני החשודים. אמרו באנגלית בקול: ארוחת הצהריים שלנו נמצאת על השולחן שלהם.'
       targetWords: [Our, lunch, is, 'on', their, table]
@@ -329,13 +329,13 @@ instances:
       wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
   the_royal_impostor__q04_his_her_checkpoint:
     minigame_id: word_ordering
-    instruction: 'השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
+    instruction: 'השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
     tasks: [His, hammer, is, beside, her, brush]
     target: His hammer is beside her brush.
     variant: sentence_building
-    success: השלמתם את זוג המילים האחרון בקוד הבעלות.
+    success: השלמתם את זוג המילים האחרון בקוד.
     params:
-      prompt: 'השלימו את המשפט לפי העדויות של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
+      prompt: 'השלימו את המשפט לפי הסיפור של ויל והציירת: הפטיש שלו נמצא ליד המברשת שלה.'
       translation: הפטיש שלו נמצא ליד המברשת שלה.
       englishWordsInOrder: [His, hammer, is, beside, her, brush]
       preFilledIndices: [1, 2, 3, 5]
@@ -409,7 +409,7 @@ instances:
     tasks: [Our, guards, carry, their, shields]
     target: Our guards carry their shields.
     variant: sentence_building
-    success: השלמתם את שינוי נקודת המבט האחרון וחשפתם את המתחזה.
+    success: השלמתם את המשפט האחרון וחשפתם את המתחזה.
     params:
       prompt: 'המלך מדבר אל השומרים. השלימו את המשפט לפי התרגום: השומרים שלנו נושאים את המגנים שלהם.'
       translation: השומרים שלנו נושאים את המגנים שלהם.

@@ -4,7 +4,7 @@ quest:
   level_required: 8
   giver_npc: City Gaurd Info
   prerequisite: null
-  summary: אספו עדויות מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.
+  summary: אספו מידע מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.
   wait_for_npc_turn_in: false
 rewards:
   xp: 200
@@ -22,7 +22,7 @@ steps:
   difficulty: 5
   success_required: true
   instance_id: the_royal_impostor__q01_his_hammer
-  display_text: השלימו את המשפט לפי הבעלות המתוארת בעברית.
+  display_text: השלימו את המשפט לפי התרגום בעברית.
 - type: talk_to_npc
   npc_id: Painter
   dialogue_id: the_royal_impostor_q01_painter_witness
@@ -32,14 +32,14 @@ steps:
   difficulty: 5
   success_required: true
   instance_id: the_royal_impostor__q01_her_brush
-  display_text: השלימו את המשפט לפי הבעלות המתוארת בעברית.
+  display_text: השלימו את המשפט לפי התרגום בעברית.
 - type: play_minigame
   minigame_id: speak_aloud
   world_object_id: Exam_Table1_Outside_Gate
   difficulty: 9
   success_required: true
   instance_id: the_royal_impostor__q01_witness_report
-  display_text: אמרו את דוח העדים באנגלית בקול.
+  display_text: אמרו את משפט העדים באנגלית בקול.
 - type: return_to_npc
   npc_id: City Gaurd Info
   dialogue_id: the_royal_impostor_q01_fenn_clue

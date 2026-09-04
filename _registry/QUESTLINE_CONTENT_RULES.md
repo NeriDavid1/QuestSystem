@@ -15,6 +15,7 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Avoid unnecessarily formal, literary, academic, bureaucratic, or uncommon wording. Prefer short, direct sentences and familiar words.
 - Translate meaning naturally rather than mirroring English structure word-for-word. Translation complexity must not exceed what is needed to understand the task.
 - Before approving text, ask: **Would a learner of the target age understand this immediately without needing the wording itself explained?** If not, simplify it while preserving the meaning.
+- A grammar explanation before practice may name the target forms and explain when to use them. This is different from a minigame `instruction` or `params.prompt`: those must remain answer-free when the learner is expected to choose, match, order, or spell an answer. Keep the explanation before the practice, and keep each practice prompt focused on the action and meaning without giving away the required answer.
 - “Hebrew-first” means that learner-facing instructions, explanations, hints, and support are primarily in clear Hebrew; English is retained only for the target language material the learner must recognize, read, write, order, or say. Do not use “Hebrew-first” as a vague learner-facing label; describe the concrete support instead.
 
 ## Word Matching
