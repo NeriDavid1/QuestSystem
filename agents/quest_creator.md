@@ -19,6 +19,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Use only existing registry IDs.
 - Build a clear NPC → task → minigames → return/transition → final dialogue flow.
 - Vary quest-giving NPCs when the registry and story provide suitable alternatives. Do not start every quest, or several quests in a row, with the same NPC unless the approved story explicitly requires that continuity; never invent an NPC ID just to create variety.
+- Do not place several identical minigame instances back-to-back without a clear pedagogical or story reason. Vary the activity when possible, while keeping every minigame tied to the approved learning objective.
 - Do not duplicate an opening NPC dialogue in an immediate `talk_to_npc` step. Add another Talk to NPC step only for a distinct later conversation with new content.
 - Keep each dialogue block short. If English is used, put its complete Hebrew translation in the same block, then move the next idea to a separate block. End the final quest with a short completion message, immediate reward, and congratulations.
 - For every minigame, including `speak_aloud`, author a real learner-facing explanation in `params.prompt` (or the supported instruction field when the contract explicitly uses it). The explanation must tell the learner what action to perform and must be visible in the actual game screen, not only in the editor preview. For Speak Aloud, never ship a screen that shows only the English target; include the Hebrew speaking instruction as well.
@@ -36,6 +37,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Apply `_registry/QUESTLINE_CONTENT_RULES.md` as the single source for shared content, language, minigame, answer-disclosure, progression, and dialogue rules.
 - Verify every NPC, dialogue, item, world object, and minigame ID against the registries.
 - Check quest-giver distribution across the line: avoid the same giver for consecutive quests when a suitable registered alternative exists, while preserving story logic and valid NPC handoffs.
+- Check minigame sequences for unnecessary identical consecutive instances; repetition is acceptable only when the approved plan gives a clear learning or story reason.
 - Implement the approved sub-skill order; do not introduce mixed review before each component has been practised.
 - Verify Word Matching `letters`, `wordTasks`, missing indices, fragments, compact pools, unique tile IDs, and independent deterministic shuffling.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the approved brief; do not reveal answers in learner-facing instructions.
