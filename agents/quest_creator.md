@@ -32,17 +32,10 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 
 ## Required checks
 
-- Verify every NPC, dialogue, item, world object, and minigame ID.
-- Verify Word Matching letters, wordTasks, valid indices, and fragment/full-word alignment.
-- For Word Matching, keep the letter pool compact and verify that every missing-letter occurrence is available by `value`. Shuffle letters independently from word tasks; never pair a letter to a word by row or ID. Treat IDs as unique technical identity only, not as answer mappings.
-- Verify Letter Ordering, Word Ordering, and Speak Aloud against the universal rules.
-- For Word Ordering, ensure the combined runtime choices have unique words, include the exact correct open word once, and keep that correct word out of `distractorWords`.
-- When only one word is open and the other sentence words are pre-filled, write the complete natural Hebrew translation of the full sentence in `params.translation` and make the Hebrew prompt explicitly say to choose the missing word according to that translation. Do not reduce the hint to a translation of the missing word or reveal the English answer.
-- For Speak Aloud, ensure the instruction explicitly asks the learner to speak and matches the exact checked unit: one word, a word list, or a complete sentence.
-- For Speak Aloud, write `params.prompt` with the speaking action plus the Hebrew meaning of the exact target. Translate the word at Level 1; translate the complete phrase or sentence at Levels 2–3. A generic instruction without the target meaning is not accepted.
-- Follow the approved Speak Aloud level exactly: Level 1 tests one word; Level 2 tests several words or a short topic-relevant sentence; Level 3 tests more words or a harder sentence. Never upgrade a one-word task to a phrase or sentence without an explicit user-approved brief. Keep Level 2 sentences short.
-- For Speak Aloud, verify that the authored prompt is passed through to the runtime screen above or beside the target and microphone controls. Treat a missing runtime prompt as a content/integration failure even when the Editor Preview displays it correctly.
-- Preserve pedagogical validity from the approved plan: tasks must require the target skill, use plausible distractors, and not be solvable by guessing or superficial cues.
+- Apply `_registry/QUESTLINE_CONTENT_RULES.md` as the single source for shared content, language, minigame, answer-disclosure, progression, and dialogue rules.
+- Verify every NPC, dialogue, item, world object, and minigame ID against the registries.
+- Implement the approved sub-skill order; do not introduce mixed review before each component has been practised.
+- Before handoff, run the local importer and build, then report the exact commands and results.
 - Run the local importer/build before handing over the result.
 
 ## Output

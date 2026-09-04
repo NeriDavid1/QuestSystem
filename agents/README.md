@@ -18,7 +18,7 @@ The number of quests and minigames is determined by the user brief or pedagogica
 
 Identical minigame types may not appear more than twice in a row. QA checks this together with learning-goal alignment.
 
-Shared content rules are stored in _registry/QUESTLINE_CONTENT_RULES.md.
+Shared content rules are stored only in `_registry/QUESTLINE_CONTENT_RULES.md`; agent files must reference that file instead of copying its rules.
 
 ## Session and workspace coordination
 
@@ -26,7 +26,7 @@ All three roles run in the same user session and the same active working tree: P
 
 ## Local Questline Import Procedure
 
-When the user asks to upload a local questline to the website, use the existing local-to-site importer flow. Do not add new editor buttons or replace this flow with manual data entry.
+When the user asks to upload a local questline to the website, use the existing local-to-site importer flow. Do not add new editor buttons or replace this flow with manual data entry. This is the only file that defines the import sequence.
 
 1. Validate and generate the local Supabase seed bundle from the repository root:
    `python scripts/import_yaml_to_supabase.py`
