@@ -198,6 +198,7 @@ instances:
     variant: pronunciation
     success: שם העצם נאמר ברור
     params:
+      prompt: אמרו את המילה הבאה באנגלית בקול.
       targetWords:
       - book
       targetPhrase: book
@@ -458,6 +459,7 @@ instances:
     variant: pronunciation
     success: שם העצם נאמר ברור
     params:
+      prompt: אמרו את המילה הבאה באנגלית בקול.
       targetWords:
       - dog
       targetPhrase: dog
@@ -711,6 +713,7 @@ instances:
     variant: pronunciation
     success: שם העצם נאמר ברור
     params:
+      prompt: אמרו את המילה הבאה באנגלית בקול.
       targetWords:
       - apple
       targetPhrase: apple
@@ -963,6 +966,7 @@ instances:
     variant: pronunciation
     success: שם העצם נאמר ברור
     params:
+      prompt: אמרו את המילה הבאה באנגלית בקול.
       targetWords:
       - spoon
       targetPhrase: spoon
@@ -1219,6 +1223,7 @@ instances:
     variant: pronunciation
     success: שם העצם נאמר ברור
     params:
+      prompt: אמרו את המילה הבאה באנגלית בקול.
       targetWords:
       - queen
       targetPhrase: queen
@@ -1470,6 +1475,7 @@ instances:
     variant: pronunciation
     success: שם העצם נאמר ברור
     params:
+      prompt: אמרו את המילה הבאה באנגלית בקול.
       targetWords:
       - noun
       targetPhrase: noun

@@ -1,0 +1,55 @@
+quest:
+  id: the_royal_impostor__q03_the_royal_test
+  name: The Royal Test
+  level_required: 9
+  giver_npc: City Gaurd Info
+  prerequisite: the_royal_impostor__q02_the_witnesses
+  summary: השלימו את המבחן המלכותי וחשפו מי אינו מכיר את בעלי החפצים.
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 300
+  items:
+    - id: coin
+      amount: 10
+steps:
+- type: talk_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_royal_impostor_q03_fenn_start
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 8
+  success_required: true
+  instance_id: the_royal_impostor__q03_my_your_test
+  display_text: השלימו שני בעלי חפצים במשפט המלכותי.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 9
+  success_required: true
+  instance_id: the_royal_impostor__q03_my_your_speech
+  display_text: אמרו את המשפט המלכותי באנגלית בקול.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 8
+  success_required: true
+  instance_id: the_royal_impostor__q03_his_her_test
+  display_text: השלימו שני בעלי חפצים בדוח העדים.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 9
+  success_required: true
+  instance_id: the_royal_impostor__q03_his_her_speech
+  display_text: אמרו את דוח העדים באנגלית בקול.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 9
+  success_required: true
+  instance_id: the_royal_impostor__q03_our_their_test
+  display_text: השלימו את שינוי נקודת המבט במשפט האחרון.
+- type: return_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_royal_impostor_q03_fenn_done

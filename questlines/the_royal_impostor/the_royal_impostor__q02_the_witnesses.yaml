@@ -1,0 +1,63 @@
+quest:
+  id: the_royal_impostor__q02_the_witnesses
+  name: The Witnesses
+  level_required: 8
+  giver_npc: Main Gate Gaurd 1
+  prerequisite: the_royal_impostor__q01_two_advisors
+  summary: החליפו נקודת מבט בין שני השומרים ובדקו למי שייכת ארוחת הצהריים.
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 250
+  items: []
+steps:
+- type: talk_to_npc
+  npc_id: Main Gate Gaurd 1
+  dialogue_id: the_royal_impostor_q02_tomlin_start
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 6
+  success_required: true
+  instance_id: the_royal_impostor__q02_our_sandwiches
+  display_text: השלימו את דברי השומרים לפי נקודת המבט שלהם.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 6
+  success_required: true
+  instance_id: the_royal_impostor__q02_their_sandwiches
+  display_text: דווחו על השומרים מנקודת המבט של החוקר.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 9
+  success_required: true
+  instance_id: the_royal_impostor__q02_lunch_report
+  display_text: אמרו את דוח ארוחת הצהריים באנגלית בקול.
+- type: talk_to_npc
+  npc_id: Main Gate Gaurd 2
+  dialogue_id: the_royal_impostor_q02_garrick_witness
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 6
+  success_required: true
+  instance_id: the_royal_impostor__q02_your_clue
+  display_text: השלימו את המשפט לפי דבריו של השומר אליכם.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 6
+  success_required: true
+  instance_id: the_royal_impostor__q02_my_sandwiches
+  display_text: השלימו את טענת החשוד בלי להחליט אם היא אמת.
+- type: play_minigame
+  minigame_id: speak_aloud
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 9
+  success_required: true
+  instance_id: the_royal_impostor__q02_lunch_warning
+  display_text: אמרו את האזהרה באנגלית בקול.
+- type: return_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_royal_impostor_q02_fenn_clue

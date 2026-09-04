@@ -22,6 +22,10 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Every `word_matching` instance must define `params.letters` as the available letter tiles. Each tile has a stable `id` and its single-letter `value`.
 - Every `word_matching` instance must also define `params.wordTasks`. Each task has an `id`, the complete `fullWord`, and `missingIndices` containing one or more zero-based indices of the missing letters.
 - Every character at every `missingIndices` position must exist in `params.letters[].value`. If a word has two missing letters, both letters must be available in the letter pool.
+- The letter pool must be compact: include the letters required by the missing positions and only a small, intentional set of distractors. Do not add a large list of unrelated letters or letters that are already visible as a redundant “paired” answer.
+- Matching correctness is based on the letter `value`, not on the tile or task `id`. A tile with any ID may complete any gap when its value is the required missing character; IDs must never be used as positional links between a letter and a word.
+- The order of `params.letters` must be independently shuffled from the order of `params.wordTasks`, using a reproducible pseudo-random seed. Never place a letter opposite its word or rely on matching row positions.
+- Every letter tile must have a unique stable `id`; IDs are technical identity only and do not represent the correct answer. Duplicate IDs are invalid because the UI may hide or collapse tiles with the same ID. Distinct IDs may be used for distinct tiles, including same-value tiles only when the task genuinely requires multiple occurrences.
 - Missing positions must be selected by a deterministic pseudo-random rule derived from the task/instance key, not by always using index 0. Across a questline, distribute valid gaps between the beginning, middle, and end whenever the word allows it.
 - For a task with two or more missing letters, every missing character must be present in the letter pool; validate the complete set, not only the first missing index.
 - Regenerate the visible fragment from `fullWord` and `missingIndices`; never hand-edit a fragment independently of its indices.
@@ -47,7 +51,12 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 ## Preview and runtime display contract
 
+- For every minigame whose schema contains a `prompt` field, `params.prompt` must be present and non-empty in the authored instance. Do not leave it blank, null, or dependent on an answer-data fallback.
 - Every preview must render the authored learner-facing `params.prompt` (or the authored minigame instruction when the prompt field is intentionally absent) for Letter Ordering, Word Ordering, Speak Aloud, Word Matching, and every other minigame. The editor and public viewer must not invent, append, or infer explanatory text from answer data.
+- The actual in-game minigame screen must render the same authored learner-facing explanation before the interaction controls. It is not sufficient for the prompt to appear only in Quest Creator, Editor Preview, or the public quest viewer.
+- For `speak_aloud`, the game screen must show an explicit Hebrew instruction explaining what the learner must say, such as `אמרו את המילה הבאה באנגלית בקול` or `אמרו את המשפט הבא באנגלית בקול`, together with the English target that the learner must pronounce. Showing only the target word/phrase (for example, `book`) is a runtime content defect.
+- For `speak_aloud`, the authored prompt must also provide the Hebrew meaning of the target: for Level 1, translate the target word; for Level 2 or Level 3, translate the complete target phrase or sentence naturally. The prompt must explain the action and meaning without replacing the English target or revealing an answer that the learner is meant to construct.
+- QA must verify this in the running game or an authoritative runtime screen, not only by reading YAML or inspecting the editor preview. If the prompt is missing in the game, mark the result as FAIL and return it for runtime/integration correction.
 - Do not use `translation`, `englishWordsInOrder`, `targetWord`, `targetPhrase`, `tasks`, or similar answer fields as a fallback instruction or as an extra learner-facing line. These fields remain runtime data and validation data.
 - If a translation or explanation is needed in the preview, write it explicitly inside the authored prompt. For Word Ordering, `params.translation` may remain available to the runtime, but it must not appear as a separate preview line unless the author included it in `params.prompt`.
 - Keep the editor preview, public viewer, and runtime aligned: no surface may silently add text that is not present in the authored prompt/instruction. A missing prompt must remain visibly missing or use a neutral placeholder, never reveal the answer.
@@ -68,8 +77,15 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 ## Speak Aloud
 
+- Speak Aloud content format must follow the user's explicit brief. Do not introduce a word list, phrase, or sentence merely because the minigame supports it.
+- Use this three-level progression when the brief approves more than one word:
+  - Level 1 — one English word.
+  - Level 2 — several words or one short sentence, chosen according to the lesson topic. Keep the sentence short and easy to say.
+  - Level 3 — more words or a more difficult sentence, still appropriate to the learner and the topic.
+- If the user describes the questline as difficult, that permits proposing Level 2 or Level 3, but the selected format and target length must still be stated in the approved pedagogical plan. Difficulty alone does not justify an unnecessarily long sentence.
 - Each Speak Aloud instance may test one word or a short list of words, but never an unintended sentence.
 - Every Speak Aloud instance must have an explicit player-facing instruction containing the action to speak aloud, such as `אמרו את המילה הבאה באנגלית בקול`, `אמרו את המילים הבאות באנגלית בקול`, or `אמרו את המשפט הבא באנגלית בקול`.
+- Every Speak Aloud prompt must include both the required speaking action and the Hebrew translation/meaning of the exact recognition unit. A generic prompt such as `אמרו את המילה הבאה באנגלית בקול` without the word's meaning is incomplete.
 - The instruction, displayed target, and speech-recognition target must describe the same unit: one word, a short list of words, or one complete sentence. Never display a long sentence while validating only one word from it.
 - Use the singular wording for one target and plural wording for a list. Use sentence wording only when `targetPhrase` is the actual value being checked.
 - English target words may be shown because the learner must pronounce them. If the game UI already displays the target below, do not duplicate the target words in the instruction; keep the explicit speaking action.

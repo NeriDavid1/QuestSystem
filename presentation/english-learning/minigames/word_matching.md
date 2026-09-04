@@ -71,6 +71,10 @@ Player matches `o` → `d_g` (dog), `a` → `c_t` (cat), etc.
 
 Child sees the **shape of a word with a gap** and picks the letter that completes it. Bridges from single letters to whole-word reading.
 
+### Letter-pool contract
+
+The available letters are matched by their displayed `value`, not by `id` or screen position. Include every required missing-letter occurrence and only a small number of meaningful distractors. Shuffle the letter tiles independently from the word tasks so no letter appears opposite its intended word. Each tile needs a unique technical `id`; the ID prevents UI collisions but does not say which word the tile belongs to.
+
 ---
 
 ## Variant C: Word to translation (optional, later levels)

@@ -26,6 +26,8 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Use Hebrew for explanations and English only as the learning material.
 - Leave some words pre-filled in Word Ordering when partial completion is more useful than a full rewrite.
 - Write natural Speak Aloud tasks for pronouncing English words.
+- For every Speak Aloud stage, plan both parts of the learner-facing screen: the English target to pronounce and a visible Hebrew explanation of the required action. The explanation must survive into the real game screen; it must not exist only in the pedagogical brief or Editor Preview.
+- For every planned minigame that supports a `prompt` field, provide the exact non-empty learner-facing prompt in the brief. A prompt must not be left for the importer, editor, or runtime to infer from answer data.
 
 ## Required checks
 
@@ -33,9 +35,13 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Use a Hebrew-first language model: learner-facing instructions, explanations, hints, and support are primarily clear Hebrew, while English appears only when it is the target material the learner must recognize, read, write, order, or say. In questline descriptions, explain this concretely instead of using the vague label “Hebrew-first.”
 - Do not reveal an English answer when the learner is expected to choose, match, spell, or order it. Give the Hebrew meaning and the action instead.
 - For Word Matching, plan complete words and valid missing letters; if multiple letters are missing, every missing letter must be available. Vary the gap positions instead of always removing the first letter.
+- For Word Matching, plan a small set of required letters plus meaningful distractors, not a large letter dump. The learner must match by letter value; IDs and screen positions must not encode which letter belongs to which word. The final letter order must be randomized independently from the word order.
 - For Word Ordering, plan a Hebrew translation, meaningful partial completion when appropriate, and unique runtime choices that include the correct open word exactly once. Do not put the correct open word into `distractorWords`.
 - When only one word is left open in an otherwise pre-filled Word Ordering sentence, plan the complete natural Hebrew translation of the whole sentence and a clear Hebrew instruction to infer the missing word from that translation. This gives context for all words without revealing the English answer.
 - For Speak Aloud, specify whether the learner says one word, a short list, or a complete sentence. Plan an explicit Hebrew speaking instruction that matches the exact unit being checked.
+- For Speak Aloud, include the meaning in the planned prompt: Level 1 must give the Hebrew translation of the target word; Levels 2–3 must give a complete natural Hebrew translation of the target phrase or sentence. The prompt must say what to speak and what it means.
+- Treat Speak Aloud format as an explicit difficulty decision: Level 1 is one word; Level 2 is several words or a short sentence selected for the topic; Level 3 is more words or a more difficult sentence. If the user calls the questline difficult, propose a higher level only in the approved plan, with a stated target length. Do not make Level 2 sentences long.
+- For Speak Aloud, explicitly reject a design that displays only the English target (for example, `book`) without the explanatory prompt. The target answers “what”; the prompt must explain “what the learner should do”.
 - Provide a complete Hebrew translation for every English sentence used in a sentence-building or dialogue task.
 - Make the next NPC, item, or stage clear after each task.
 - Do not repeat an opening NPC dialogue as an immediate `talk_to_npc` step.

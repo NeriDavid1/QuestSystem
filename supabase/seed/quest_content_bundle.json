@@ -4531,6 +4531,342 @@
       ]
     },
     {
+      "key": "the_royal_impostor_q01_fenn_clue",
+      "speaker_external_id": "City Gaurd Info",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "יפה! בדקתם שני בעלים שונים ולא הסתמכתם רק על שם החפץ.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 1,
+          "content": "Clue number one: the impostor confuses his and her.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "רמז מספר אחת: המתחזה מתבלבל בין שלו לשלה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "עכשיו דברו עם השומרים. מישהו נגע בארוחת הצהריים שלהם.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q01_fenn_start",
+      "speaker_external_id": "City Gaurd Info",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "יש צרה מלכותית: שני אנשים טוענים שהם היועץ האמיתי.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "שניהם אומרים: I am the Royal Advisor!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "שניהם אומרים: אני היועץ המלכותי!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "היועץ האמיתי מכיר את אנשי הממלכה ואת החפצים שלהם. אספו עדויות מוויל ומהציירת.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q01_painter_witness",
+      "speaker_external_id": "Painter",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "אני הציירת, והמברשת הזאת שייכת לי.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 1,
+          "content": "This is her brush.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "זאת המברשת שלה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "החשוד קרא למברשת שלי שלו. יועץ אמיתי היה מכיר אותי.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q01_will_witness",
+      "speaker_external_id": "Blacksmith",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "אני ויל הנפח, והפטיש הזה שייך לי.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 1,
+          "content": "This is his hammer.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "זה הפטיש שלו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "מי שמכיר אותי לא יטעה ויאמר שהפטיש שייך לציירת.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q02_fenn_clue",
+      "speaker_external_id": "City Gaurd Info",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצוין. הבנתם שהשומרים אומרים our, אבל אנחנו אומרים עליהם their.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "מצוין. הבנתם שהשומרים אומרים \"שלנו\", אבל אנחנו אומרים עליהם \"שלהם\".",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 2,
+          "content": "Clue number two: the impostor claims other people’s things are his.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "רמז מספר שתיים: המתחזה טוען שחפצים של אחרים שייכים לו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "המלך שלח מבחן אחרון. אני אקריא אותו כאן בשער.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q02_garrick_witness",
+      "speaker_external_id": "Main Gate Gaurd 2",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצאתי רמז ליד העגלה. אני נותן אותו לכם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 1,
+          "content": "This is your clue.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "זה הרמז שלכם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "החשוד החזיק בכריכים ואמר: These are my sandwiches.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "החשוד החזיק בכריכים ואמר: אלה הכריכים שלי.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 5,
+          "content": "המשפט היה תקין, אבל הטענה הייתה שקרית.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q02_tomlin_start",
+      "speaker_external_id": "Main Gate Gaurd 1",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מישהו לקח את ארוחת הצהריים של שנינו, ואני הייתי ער מספיק כדי לראות את זה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 1,
+          "content": "Someone ate our lunch!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "מישהו אכל את ארוחת הצהריים שלנו!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 3,
+          "content": "These are our sandwiches.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "אלה הכריכים שלנו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 5,
+          "content": "כשאתם מדווחים עלינו, נקודת המבט משתנה.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q03_fenn_done",
+      "speaker_external_id": "City Gaurd Info",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הצלחתם! כל ששת הרמזים התאימו, והמתחזה לא ידע למי שייך דבר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "הוא הודה שהוא שחקן מהתיאטרון המלכותי שרצה ארוחה חינם בארמון.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "השומרים צעקו: Our lunch?!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "השומרים צעקו: הארוחה שלנו?!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 4,
+          "content": "Questline complete. You exposed the Royal Impostor!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 5,
+          "content": "הקו הושלם. חשפתם את המתחזה המלכותי!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 6,
+          "content": "כל הכבוד! קבלו עכשיו 10 מטבעות.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "the_royal_impostor_q03_fenn_start",
+      "speaker_external_id": "City Gaurd Info",
+      "source_path": "_registry\\dialogues\\the_royal_impostor.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "המלך אומר שהיועץ האמיתי יודע למי שייך כל דבר בממלכה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "en",
+          "line_order": 1,
+          "content": "My real advisor knows this kingdom better than anyone.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "היועץ האמיתי שלי מכיר את הממלכה הזאת טוב יותר מכולם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "השלימו את שלושת המשפטים, ואז אמרו שניים מהם בקול כדי למסור את התשובה.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
       "key": "will_first_slash_done",
       "speaker_external_id": "Blacksmith",
       "source_path": "_registry\\dialogues\\blacksmith_will.yaml",
@@ -5519,6 +5855,7 @@
       "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
         "targetWords": [
           "book"
         ],
@@ -5867,6 +6204,7 @@
       "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
         "targetWords": [
           "dog"
         ],
@@ -6290,6 +6628,7 @@
       "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
         "targetWords": [
           "apple"
         ],
@@ -6774,6 +7113,7 @@
       "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
         "targetWords": [
           "spoon"
         ],
@@ -7181,6 +7521,7 @@
       "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
         "targetWords": [
           "queen"
         ],
@@ -7635,6 +7976,7 @@
       "success": "שם העצם נאמר ברור",
       "minigame_id": "speak_aloud",
       "params": {
+        "prompt": "אמרו את המילה הבאה באנגלית בקול.",
         "targetWords": [
           "noun"
         ],
@@ -10419,6 +10761,506 @@
         "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
       },
       "source_path": "_registry\\minigame_instances\\the_kingdoms_worst_day.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q01_her_brush",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את מילת השייכות לפי הבעלים.",
+      "tasks": [
+        "This",
+        "is",
+        "her",
+        "brush"
+      ],
+      "target": "This is her brush.",
+      "variant": "sentence_building",
+      "success": "זיהיתם שהמברשת שייכת לציירת וקיבלתם את העדות השנייה.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: זאת המברשת שלה. בחרו את מילת השייכות לפי הבעלים.",
+        "translation": "זאת המברשת שלה.",
+        "englishWordsInOrder": [
+          "This",
+          "is",
+          "her",
+          "brush"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          3
+        ],
+        "distractorWords": [
+          "his",
+          "our"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q01_his_hammer",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את מילת השייכות לפי הבעלים.",
+      "tasks": [
+        "This",
+        "is",
+        "his",
+        "hammer"
+      ],
+      "target": "This is his hammer.",
+      "variant": "sentence_building",
+      "success": "זיהיתם שהפטיש שייך לוויל וקיבלתם חלק מהעדות.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הפטיש שלו. בחרו את מילת השייכות לפי הבעלים.",
+        "translation": "זה הפטיש שלו.",
+        "englishWordsInOrder": [
+          "This",
+          "is",
+          "his",
+          "hammer"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          3
+        ],
+        "distractorWords": [
+          "her",
+          "their"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q01_witness_report",
+      "locale": "he",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.",
+      "tasks": [
+        "הקשיבו למשפט",
+        "אמרו את כל המשפט בקול ברור"
+      ],
+      "target": "His hammer is beside her brush.",
+      "variant": "short_phrase",
+      "success": "אמרתם את דוח העדים בבירור וקיבלתם את רמז מספר אחת.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.",
+        "targetWords": [
+          "His",
+          "hammer",
+          "is",
+          "beside",
+          "her",
+          "brush"
+        ],
+        "targetPhrase": "His hammer is beside her brush.",
+        "silenceTimeoutSeconds": 2.5,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q02_lunch_report",
+      "locale": "he",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הכריכים שלנו נמצאים על השולחן שלהם.",
+      "tasks": [
+        "הקשיבו למשפט",
+        "אמרו את כל המשפט בקול ברור"
+      ],
+      "target": "Our sandwiches are on their table.",
+      "variant": "short_phrase",
+      "success": "מסרתם את שינוי נקודת המבט בקול ברור.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הכריכים שלנו נמצאים על השולחן שלהם.",
+        "targetWords": [
+          "Our",
+          "sandwiches",
+          "are",
+          "on",
+          "their",
+          "table"
+        ],
+        "targetPhrase": "Our sandwiches are on their table.",
+        "silenceTimeoutSeconds": 2.5,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q02_lunch_warning",
+      "locale": "he",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול. משמעותו: ארוחת הצהריים שלי אינה ארוחת הצהריים שלך.",
+      "tasks": [
+        "הקשיבו למשפט",
+        "אמרו את כל המשפט בקול ברור"
+      ],
+      "target": "My lunch is not your lunch.",
+      "variant": "short_phrase",
+      "success": "הבהרתם בקול שהמילה משתנה לפי בעל הארוחה.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו: ארוחת הצהריים שלי אינה ארוחת הצהריים שלך.",
+        "targetWords": [
+          "My",
+          "lunch",
+          "is",
+          "not",
+          "your",
+          "lunch"
+        ],
+        "targetPhrase": "My lunch is not your lunch.",
+        "silenceTimeoutSeconds": 2.5,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q02_my_sandwiches",
+      "locale": "he",
+      "instruction": "השלימו את טענת המתחזה באנגלית לפי התרגום המלא: אלה הכריכים שלי. זכרו מי מדבר.",
+      "tasks": [
+        "These",
+        "are",
+        "my",
+        "sandwiches"
+      ],
+      "target": "These are my sandwiches.",
+      "variant": "sentence_building",
+      "success": "בניתם טענה נכונה מבחינה דקדוקית, גם אם החשוד אינו אומר אמת.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את טענת המתחזה באנגלית לפי התרגום המלא: אלה הכריכים שלי. זכרו מי מדבר.",
+        "translation": "אלה הכריכים שלי.",
+        "englishWordsInOrder": [
+          "These",
+          "are",
+          "my",
+          "sandwiches"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          3
+        ],
+        "distractorWords": [
+          "our",
+          "your"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q02_our_sandwiches",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלנו. השומרים מדברים על האוכל שלהם.",
+      "tasks": [
+        "These",
+        "are",
+        "our",
+        "sandwiches"
+      ],
+      "target": "These are our sandwiches.",
+      "variant": "sentence_building",
+      "success": "בחרתם את נקודת המבט של השומרים.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלנו. השומרים מדברים על האוכל שלהם.",
+        "translation": "אלה הכריכים שלנו.",
+        "englishWordsInOrder": [
+          "These",
+          "are",
+          "our",
+          "sandwiches"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          3
+        ],
+        "distractorWords": [
+          "my",
+          "their"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q02_their_sandwiches",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו אתם מדברים על השומרים.",
+      "tasks": [
+        "They",
+        "are",
+        "their",
+        "sandwiches"
+      ],
+      "target": "They are their sandwiches.",
+      "variant": "sentence_building",
+      "success": "שיניתם נכון מנקודת המבט של השומרים לנקודת המבט של החוקר.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: אלה הכריכים שלהם. עכשיו אתם מדברים על השומרים.",
+        "translation": "אלה הכריכים שלהם.",
+        "englishWordsInOrder": [
+          "They",
+          "are",
+          "their",
+          "sandwiches"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          3
+        ],
+        "distractorWords": [
+          "our",
+          "his"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q02_your_clue",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הרמז שלכם. השומר מדבר ישירות אליכם.",
+      "tasks": [
+        "This",
+        "is",
+        "your",
+        "clue"
+      ],
+      "target": "This is your clue.",
+      "variant": "sentence_building",
+      "success": "זיהיתם שהשומר מדבר אליכם על הרמז שלכם.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: זה הרמז שלכם. השומר מדבר ישירות אליכם.",
+        "translation": "זה הרמז שלכם.",
+        "englishWordsInOrder": [
+          "This",
+          "is",
+          "your",
+          "clue"
+        ],
+        "preFilledIndices": [
+          0,
+          1,
+          3
+        ],
+        "distractorWords": [
+          "my",
+          "our"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q03_his_her_speech",
+      "locale": "he",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.",
+      "tasks": [
+        "הקשיבו למשפט",
+        "אמרו את כל המשפט בקול ברור"
+      ],
+      "target": "His hammer is beside her brush.",
+      "variant": "short_phrase",
+      "success": "אמרתם בבירור את המשפט השני במבחן המלכותי.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הפטיש שלו נמצא ליד המברשת שלה.",
+        "targetWords": [
+          "His",
+          "hammer",
+          "is",
+          "beside",
+          "her",
+          "brush"
+        ],
+        "targetPhrase": "His hammer is beside her brush.",
+        "silenceTimeoutSeconds": 2.5,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q03_his_her_test",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: הפטיש שלו נמצא ליד המברשת שלה. השתמשו במידע על ויל ועל הציירת.",
+      "tasks": [
+        "His",
+        "hammer",
+        "is",
+        "beside",
+        "her",
+        "brush"
+      ],
+      "target": "His hammer is beside her brush.",
+      "variant": "sentence_building",
+      "success": "התאמתם נכון את ויל ואת הציירת לחפצים שלהם.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: הפטיש שלו נמצא ליד המברשת שלה. השתמשו במידע על ויל ועל הציירת.",
+        "translation": "הפטיש שלו נמצא ליד המברשת שלה.",
+        "englishWordsInOrder": [
+          "His",
+          "hammer",
+          "is",
+          "beside",
+          "her",
+          "brush"
+        ],
+        "preFilledIndices": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "distractorWords": [
+          "my",
+          "our"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q03_my_your_speech",
+      "locale": "he",
+      "instruction": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הכתר שלי נמצא על המפה שלך.",
+      "tasks": [
+        "הקשיבו למשפט",
+        "אמרו את כל המשפט בקול ברור"
+      ],
+      "target": "My crown is on your map.",
+      "variant": "short_phrase",
+      "success": "אמרתם בבירור את המשפט הראשון במבחן המלכותי.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו: הכתר שלי נמצא על המפה שלך.",
+        "targetWords": [
+          "My",
+          "crown",
+          "is",
+          "on",
+          "your",
+          "map"
+        ],
+        "targetPhrase": "My crown is on your map.",
+        "silenceTimeoutSeconds": 2.5,
+        "allowFuzzyMatch": true,
+        "referenceClip": "",
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q03_my_your_test",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: הכתר שלי נמצא על המפה שלך. בחרו לפי מי שמדבר ולמי שייך כל חפץ.",
+      "tasks": [
+        "My",
+        "crown",
+        "is",
+        "on",
+        "your",
+        "map"
+      ],
+      "target": "My crown is on your map.",
+      "variant": "sentence_building",
+      "success": "התאמתם את המלך ואת הנמען לשני החפצים הנכונים.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: הכתר שלי נמצא על המפה שלך. בחרו לפי מי שמדבר ולמי שייך כל חפץ.",
+        "translation": "הכתר שלי נמצא על המפה שלך.",
+        "englishWordsInOrder": [
+          "My",
+          "crown",
+          "is",
+          "on",
+          "your",
+          "map"
+        ],
+        "preFilledIndices": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "distractorWords": [
+          "his",
+          "their"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "the_royal_impostor__q03_our_their_test",
+      "locale": "he",
+      "instruction": "השלימו את המשפט באנגלית לפי התרגום המלא: השומרים שלנו נושאים את המגנים שלהם. שימו לב מי מדבר ועל איזו קבוצה מדברים.",
+      "tasks": [
+        "Our",
+        "guards",
+        "carry",
+        "their",
+        "shields"
+      ],
+      "target": "Our guards carry their shields.",
+      "variant": "sentence_building",
+      "success": "השלמתם את שינוי נקודת המבט האחרון וחשפתם את המתחזה.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו את המשפט באנגלית לפי התרגום המלא: השומרים שלנו נושאים את המגנים שלהם. שימו לב מי מדבר ועל איזו קבוצה מדברים.",
+        "translation": "השומרים שלנו נושאים את המגנים שלהם.",
+        "englishWordsInOrder": [
+          "Our",
+          "guards",
+          "carry",
+          "their",
+          "shields"
+        ],
+        "preFilledIndices": [
+          1,
+          2,
+          4
+        ],
+        "distractorWords": [
+          "your",
+          "her"
+        ],
+        "wordRevealDatabase": "Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset"
+      },
+      "source_path": "_registry\\minigame_instances\\the_royal_impostor.yaml",
       "source_metadata": {}
     }
   ],
@@ -16291,18 +17133,521 @@
           }
         }
       ]
+    },
+    {
+      "key": "the_royal_impostor",
+      "display_name": "The Royal Impostor - המתחזה המלכותי",
+      "theme": "Investigate testimony and ownership by using my, your, his, her, our, and their.",
+      "default_giver_external_id": "City Gaurd Info",
+      "status": "draft",
+      "level_min": 8,
+      "level_max": 9,
+      "source_path": "questlines\\the_royal_impostor\\_index.yaml",
+      "source_metadata": {
+        "source_status": null,
+        "source_note": null,
+        "catalog_set": null,
+        "quest_count": 3
+      },
+      "quests": [
+        {
+          "key": "the_royal_impostor__q01_two_advisors",
+          "position": 0,
+          "name": "Two Advisors",
+          "level_required": 8,
+          "giver_external_id": "City Gaurd Info",
+          "summary": "אספו עדויות מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_royal_impostor_q01_fenn_start",
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "the_royal_impostor_q01_two_advisors_talk_to_npc_42dfca1f_1",
+              "position": 1,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "the_royal_impostor_q01_will_witness"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_play_minigame_3714daf6_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q01_his_hammer",
+                "display_text": "השלימו את המשפט לפי הבעלות המתוארת בעברית.",
+                "instance_key": "the_royal_impostor__q01_his_hammer"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_talk_to_npc_f1c0420f_2",
+              "position": 3,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Painter",
+                "dialogue_id": "the_royal_impostor_q01_painter_witness"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_play_minigame_b4903477_2",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q01_her_brush",
+                "display_text": "השלימו את המשפט לפי הבעלות המתוארת בעברית.",
+                "instance_key": "the_royal_impostor__q01_her_brush"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_play_minigame_50c641a5_3",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q01_witness_report",
+                "display_text": "אמרו את דוח העדים באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q01_witness_report"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_return_to_npc_3f25c823_1",
+              "position": 6,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_royal_impostor_q01_fenn_clue"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_royal_impostor\\_index.yaml",
+            "source_detail": {
+              "id": "the_royal_impostor__q01_two_advisors",
+              "name": "Two Advisors",
+              "level_required": 8,
+              "giver_npc": "City Gaurd Info",
+              "prerequisite": null,
+              "summary": "אספו עדויות מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_royal_impostor__q02_the_witnesses",
+          "position": 1,
+          "name": "The Witnesses",
+          "level_required": 8,
+          "giver_external_id": "Main Gate Gaurd 1",
+          "summary": "החליפו נקודת מבט בין שני השומרים ובדקו למי שייכת ארוחת הצהריים.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_royal_impostor_q02_tomlin_start",
+          "status": "complete",
+          "prerequisites": [
+            "the_royal_impostor__q01_two_advisors"
+          ],
+          "steps": [
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_7a39a322_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_our_sandwiches",
+                "display_text": "השלימו את דברי השומרים לפי נקודת המבט שלהם.",
+                "instance_key": "the_royal_impostor__q02_our_sandwiches"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_1972c827_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_their_sandwiches",
+                "display_text": "דווחו על השומרים מנקודת המבט של החוקר.",
+                "instance_key": "the_royal_impostor__q02_their_sandwiches"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_c2a3a902_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_lunch_report",
+                "display_text": "אמרו את דוח ארוחת הצהריים באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q02_lunch_report"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_talk_to_npc_98c7069c_1",
+              "position": 4,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "dialogue_id": "the_royal_impostor_q02_garrick_witness"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_d1193dd8_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_your_clue",
+                "display_text": "השלימו את המשפט לפי דבריו של השומר אליכם.",
+                "instance_key": "the_royal_impostor__q02_your_clue"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_8c836950_5",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_my_sandwiches",
+                "display_text": "השלימו את טענת החשוד בלי להחליט אם היא אמת.",
+                "instance_key": "the_royal_impostor__q02_my_sandwiches"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_64f7191c_6",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_lunch_warning",
+                "display_text": "אמרו את האזהרה באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q02_lunch_warning"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_return_to_npc_013a460e_1",
+              "position": 8,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_royal_impostor_q02_fenn_clue"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 250,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_royal_impostor\\_index.yaml",
+            "source_detail": {
+              "id": "the_royal_impostor__q02_the_witnesses",
+              "name": "The Witnesses",
+              "level_required": 8,
+              "giver_npc": "Main Gate Gaurd 1",
+              "prerequisite": "the_royal_impostor__q01_two_advisors",
+              "summary": "החליפו נקודת מבט בין שני השומרים ובדקו למי שייכת ארוחת הצהריים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_royal_impostor__q03_the_royal_test",
+          "position": 2,
+          "name": "The Royal Test",
+          "level_required": 9,
+          "giver_external_id": "City Gaurd Info",
+          "summary": "השלימו את המבחן המלכותי וחשפו מי אינו מכיר את בעלי החפצים.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_royal_impostor_q03_fenn_start",
+          "status": "complete",
+          "prerequisites": [
+            "the_royal_impostor__q02_the_witnesses"
+          ],
+          "steps": [
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_d7830298_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 8,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_my_your_test",
+                "display_text": "השלימו שני בעלי חפצים במשפט המלכותי.",
+                "instance_key": "the_royal_impostor__q03_my_your_test"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_d7d15643_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_my_your_speech",
+                "display_text": "אמרו את המשפט המלכותי באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q03_my_your_speech"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_9decf7b4_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 8,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_his_her_test",
+                "display_text": "השלימו שני בעלי חפצים בדוח העדים.",
+                "instance_key": "the_royal_impostor__q03_his_her_test"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_5d0a71e8_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_his_her_speech",
+                "display_text": "אמרו את דוח העדים באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q03_his_her_speech"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_c3c5a49d_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_our_their_test",
+                "display_text": "השלימו את שינוי נקודת המבט במשפט האחרון.",
+                "instance_key": "the_royal_impostor__q03_our_their_test"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_return_to_npc_21649cbb_1",
+              "position": 6,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_royal_impostor_q03_fenn_done"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 300,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_royal_impostor\\_index.yaml",
+            "source_detail": {
+              "id": "the_royal_impostor__q03_the_royal_test",
+              "name": "The Royal Test",
+              "level_required": 9,
+              "giver_npc": "City Gaurd Info",
+              "prerequisite": "the_royal_impostor__q02_the_witnesses",
+              "summary": "השלימו את המבחן המלכותי וחשפו מי אינו מכיר את בעלי החפצים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
     }
   ],
   "conflicts": [],
   "counts": {
     "catalog_entries": 177,
     "step_type_definitions": 6,
-    "dialogues": 68,
-    "dialogue_lines": 186,
-    "minigame_instances": 142,
-    "questlines": 7,
-    "quests": 33,
-    "steps": 208,
+    "dialogues": 77,
+    "dialogue_lines": 230,
+    "minigame_instances": 156,
+    "questlines": 8,
+    "quests": 36,
+    "steps": 228,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -22106,7 +23451,500 @@
           }
         }
       ]
+    },
+    {
+      "key": "the_royal_impostor",
+      "display_name": "The Royal Impostor - המתחזה המלכותי",
+      "theme": "Investigate testimony and ownership by using my, your, his, her, our, and their.",
+      "default_giver_external_id": "City Gaurd Info",
+      "quests": [
+        {
+          "key": "the_royal_impostor__q01_two_advisors",
+          "position": 0,
+          "name": "Two Advisors",
+          "level_required": 8,
+          "giver_external_id": "City Gaurd Info",
+          "summary": "אספו עדויות מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_royal_impostor_q01_fenn_start",
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "the_royal_impostor_q01_two_advisors_talk_to_npc_42dfca1f_1",
+              "position": 1,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "the_royal_impostor_q01_will_witness"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_play_minigame_3714daf6_1",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest1_BuildersHomeArea",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q01_his_hammer",
+                "display_text": "השלימו את המשפט לפי הבעלות המתוארת בעברית.",
+                "instance_key": "the_royal_impostor__q01_his_hammer"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_talk_to_npc_f1c0420f_2",
+              "position": 3,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Painter",
+                "dialogue_id": "the_royal_impostor_q01_painter_witness"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_play_minigame_b4903477_2",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q01_her_brush",
+                "display_text": "השלימו את המשפט לפי הבעלות המתוארת בעברית.",
+                "instance_key": "the_royal_impostor__q01_her_brush"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_play_minigame_50c641a5_3",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q01_witness_report",
+                "display_text": "אמרו את דוח העדים באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q01_witness_report"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q01_two_advisors_return_to_npc_3f25c823_1",
+              "position": 6,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_royal_impostor_q01_fenn_clue"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 200,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_royal_impostor\\_index.yaml",
+            "source_detail": {
+              "id": "the_royal_impostor__q01_two_advisors",
+              "name": "Two Advisors",
+              "level_required": 8,
+              "giver_npc": "City Gaurd Info",
+              "prerequisite": null,
+              "summary": "אספו עדויות מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_royal_impostor__q02_the_witnesses",
+          "position": 1,
+          "name": "The Witnesses",
+          "level_required": 8,
+          "giver_external_id": "Main Gate Gaurd 1",
+          "summary": "החליפו נקודת מבט בין שני השומרים ובדקו למי שייכת ארוחת הצהריים.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_royal_impostor_q02_tomlin_start",
+          "status": "complete",
+          "prerequisites": [
+            "the_royal_impostor__q01_two_advisors"
+          ],
+          "steps": [
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_7a39a322_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_our_sandwiches",
+                "display_text": "השלימו את דברי השומרים לפי נקודת המבט שלהם.",
+                "instance_key": "the_royal_impostor__q02_our_sandwiches"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_1972c827_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_their_sandwiches",
+                "display_text": "דווחו על השומרים מנקודת המבט של החוקר.",
+                "instance_key": "the_royal_impostor__q02_their_sandwiches"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_c2a3a902_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_lunch_report",
+                "display_text": "אמרו את דוח ארוחת הצהריים באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q02_lunch_report"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_talk_to_npc_98c7069c_1",
+              "position": 4,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "dialogue_id": "the_royal_impostor_q02_garrick_witness"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_d1193dd8_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_your_clue",
+                "display_text": "השלימו את המשפט לפי דבריו של השומר אליכם.",
+                "instance_key": "the_royal_impostor__q02_your_clue"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_8c836950_5",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 6,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_my_sandwiches",
+                "display_text": "השלימו את טענת החשוד בלי להחליט אם היא אמת.",
+                "instance_key": "the_royal_impostor__q02_my_sandwiches"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_play_minigame_64f7191c_6",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q02_lunch_warning",
+                "display_text": "אמרו את האזהרה באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q02_lunch_warning"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q02_the_witnesses_return_to_npc_013a460e_1",
+              "position": 8,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_royal_impostor_q02_fenn_clue"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 250,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_royal_impostor\\_index.yaml",
+            "source_detail": {
+              "id": "the_royal_impostor__q02_the_witnesses",
+              "name": "The Witnesses",
+              "level_required": 8,
+              "giver_npc": "Main Gate Gaurd 1",
+              "prerequisite": "the_royal_impostor__q01_two_advisors",
+              "summary": "החליפו נקודת מבט בין שני השומרים ובדקו למי שייכת ארוחת הצהריים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "the_royal_impostor__q03_the_royal_test",
+          "position": 2,
+          "name": "The Royal Test",
+          "level_required": 9,
+          "giver_external_id": "City Gaurd Info",
+          "summary": "השלימו את המבחן המלכותי וחשפו מי אינו מכיר את בעלי החפצים.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "the_royal_impostor_q03_fenn_start",
+          "status": "complete",
+          "prerequisites": [
+            "the_royal_impostor__q02_the_witnesses"
+          ],
+          "steps": [
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_d7830298_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 8,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_my_your_test",
+                "display_text": "השלימו שני בעלי חפצים במשפט המלכותי.",
+                "instance_key": "the_royal_impostor__q03_my_your_test"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_d7d15643_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_my_your_speech",
+                "display_text": "אמרו את המשפט המלכותי באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q03_my_your_speech"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_9decf7b4_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "difficulty": 8,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_his_her_test",
+                "display_text": "השלימו שני בעלי חפצים בדוח העדים.",
+                "instance_key": "the_royal_impostor__q03_his_her_test"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_5d0a71e8_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_his_her_speech",
+                "display_text": "אמרו את דוח העדים באנגלית בקול.",
+                "instance_key": "the_royal_impostor__q03_his_her_speech"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_play_minigame_c3c5a49d_5",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "difficulty": 9,
+                "success_required": true,
+                "instance_id": "the_royal_impostor__q03_our_their_test",
+                "display_text": "השלימו את שינוי נקודת המבט במשפט האחרון.",
+                "instance_key": "the_royal_impostor__q03_our_their_test"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "the_royal_impostor_q03_the_royal_test_return_to_npc_21649cbb_1",
+              "position": 6,
+              "type": "return_to_npc",
+              "payload": {
+                "npc_id": "City Gaurd Info",
+                "dialogue_id": "the_royal_impostor_q03_fenn_done"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 300,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_royal_test.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\the_royal_impostor\\_index.yaml",
+            "source_detail": {
+              "id": "the_royal_impostor__q03_the_royal_test",
+              "name": "The Royal Test",
+              "level_required": 9,
+              "giver_npc": "City Gaurd Info",
+              "prerequisite": "the_royal_impostor__q02_the_witnesses",
+              "summary": "השלימו את המבחן המלכותי וחשפו מי אינו מכיר את בעלי החפצים.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
     }
   ],
-  "source_digest": "802242d16cb3f3855dc6cfb67d3efcf38b430ff7a25beb8ccba28f441b91c693"
+  "source_digest": "763fcfedc5beca6f310258e66a87bc9ce9abb183dbbde95545e81992704f7260"
 }

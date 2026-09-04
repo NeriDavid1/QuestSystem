@@ -1,0 +1,33 @@
+questline:
+  id: the_royal_impostor
+  npc_id: City Gaurd Info
+  display_name: The Royal Impostor - המתחזה המלכותי
+  theme: Investigate testimony and ownership by using my, your, his, her, our, and their.
+  quest_count: 3
+  level_range:
+    - 8
+    - 9
+quests:
+  - id: the_royal_impostor__q01_two_advisors
+    name: Two Advisors
+    level: 8
+    prerequisite: null
+    rewards:
+      xp: 200
+      items: []
+  - id: the_royal_impostor__q02_the_witnesses
+    name: The Witnesses
+    level: 8
+    prerequisite: the_royal_impostor__q01_two_advisors
+    rewards:
+      xp: 250
+      items: []
+  - id: the_royal_impostor__q03_the_royal_test
+    name: The Royal Test
+    level: 9
+    prerequisite: the_royal_impostor__q02_the_witnesses
+    rewards:
+      xp: 300
+      items:
+        - id: coin
+          amount: 10

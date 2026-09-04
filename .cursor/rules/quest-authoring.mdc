@@ -94,3 +94,16 @@ World catalog IDs (`npc_id`, `location_id`, `world_object_id`) are **picked** fr
 - Or both: `python scripts/build_all.py`
 - Boss-facing text overview: `presentation/overview.md`
 - Questline graphs use Mermaid in `_graph.mmd`
+
+## Minigame runtime prompts
+
+- When a minigame schema provides a `prompt` field, the creator must fill `params.prompt` with non-empty learner-facing text. Empty, null, or answer-derived fallback prompts are invalid.
+- Every minigame must carry a learner-facing explanation into the actual game screen, not only into QuestForge, Editor Preview, or the public viewer.
+- For `speak_aloud`, show the Hebrew instruction describing the speaking action together with the English target. A screen that shows only the target word or phrase is invalid and must be returned for runtime/integration correction.
+- For `speak_aloud`, the prompt must include the Hebrew translation of the exact target: a word translation at Level 1, or a complete natural translation of the phrase/sentence at Levels 2–3. The prompt must contain both the action and the meaning, not only “say the next word”.
+- Speak Aloud format must follow the user's approved difficulty: Level 1 = one word; Level 2 = several words or a short sentence appropriate to the topic; Level 3 = more words or a more difficult sentence. Do not add multi-word targets or sentences without an explicit user/approved-plan request, and keep Level 2 sentences short.
+
+## Word Match letter pools
+
+- In `word_matching`, correctness is determined by the letter tile's `value` and the word's missing character, never by matching IDs or row positions. Shuffle the available letter tiles independently from the word tasks.
+- Keep the pool compact: include every required missing-letter occurrence plus only intentional distractors. Every tile must have a unique technical `id`; IDs are not semantic links and duplicate IDs are invalid.
