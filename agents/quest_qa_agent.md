@@ -11,6 +11,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Apply `_registry/QUESTLINE_CONTENT_RULES.md` as the single source for shared content, language, minigame, answer-disclosure, progression, and dialogue rules.
 - If the user brief or approved plan conflicts with a shared rule, report both exact statements and pause approval for that point; never resolve the conflict silently.
 - All registry IDs resolve: questline, quest, NPC, dialogue, dialogue line, item, world object, and minigame.
+- Quest-giver variety: check the giver sequence across the questline. Flag repeated use of the same NPC for every quest or for consecutive quests when suitable registered alternatives exist; accept repetition only when the approved story gives a clear reason or no valid alternative exists.
 - Word Matching: every `missingIndices` value is valid, fragments match `fullWord`, every missing letter exists in the pool, gaps are distributed deterministically, pools are compact, shuffling is independent, and every tile ID is unique.
 - Letter Ordering: the Hebrew prompt gives the meaning and required action without revealing the English answer.
 - Word Ordering: Hebrew translation and valid partial completion exist; combined runtime choices are unique and contain the exact correct open word once.
