@@ -25,6 +25,9 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Close completed quests at the correct NPC: give the reward immediately and use a congratulatory final dialogue. Send the learner to another NPC only when a real next quest follows.
 - Do not add `reach_location` unless the user explicitly requests it. Do not design monster combat or monster-drop objectives until those systems are implemented and approved.
 - Connect every minigame to the learning objective.
+- Write all Hebrew learner-facing text in simple, child-friendly language. Prefer short, concrete sentences and explain unfamiliar words; never use vague or formal wording that hides the intended meaning, and do not substitute Russian for the Hebrew text.
+- Introduce each new grammar topic before practice: add a short, clear explanation of what the forms mean and when to use them. For example, before practising verb to be, explain that he/she/it use “is” and we/you/they use “are”.
+- Sequence the learning across the questline: teach and reinforce one sub-skill at a time, introduce the next only after the previous one is practised, and reserve mixed review of all sub-skills for a later/final quest.
 - Do not add UI buttons or importer workarounds without a separate request.
 
 ## Required checks

@@ -4621,13 +4621,13 @@
         {
           "locale": "he",
           "line_order": 3,
-          "content": "עכשיו דווחו עליי בגוף שלישי לפי המשמעות בעברית.",
+          "content": "עכשיו ספרו עליי כאילו אתם מדברים על הציירת עם אדם אחר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "עכשיו דווחו עליי: זאת המברשת שלה.",
+          "content": "מה אומרים? זאת המברשת שלה.",
           "line_format": "plain_text"
         }
       ]
@@ -4659,13 +4659,13 @@
         {
           "locale": "he",
           "line_order": 3,
-          "content": "עכשיו דווחו עליי בגוף שלישי לפי המשמעות בעברית.",
+          "content": "עכשיו ספרו עליי כאילו אתם מדברים על ויל עם אדם אחר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "עכשיו דווחו עליי: זה הפטיש שלו.",
+          "content": "מה אומרים? זה הפטיש שלו.",
           "line_format": "plain_text"
         }
       ]
@@ -25226,5 +25226,5 @@
       ]
     }
   ],
-  "source_digest": "8f55ace448c68a30f01409da408e7f95c4b82e1ba74da4766eed0163f2c4af60"
+  "source_digest": "3c791f213a303213f2aa2550638283dc56f7885c759d0731876c9a54aae7e95d"
 }
