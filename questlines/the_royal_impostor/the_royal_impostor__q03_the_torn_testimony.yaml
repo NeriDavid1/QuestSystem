@@ -1,0 +1,46 @@
+quest:
+  id: the_royal_impostor__q03_the_torn_testimony
+  name: The Torn Testimony
+  level_required: 9
+  giver_npc: City Gaurd Info
+  prerequisite: the_royal_impostor__q02_the_witnesses
+  summary: שחזרו את מילות השייכות שנקרעו מהעדויות והשתמשו בהן בדוח החקירה.
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 250
+  items: []
+steps:
+- type: talk_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_royal_impostor_q03_fenn_start
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 5
+  success_required: true
+  instance_id: the_royal_impostor__q03_singular_owner_gaps
+  display_text: השלימו את האות החסרה במילים שמראות למי שייך החפץ.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table1_Outside_Gate
+  difficulty: 6
+  success_required: true
+  instance_id: the_royal_impostor__q03_group_perspective_gaps
+  display_text: השלימו את האות החסרה במילות השייכות לפי נקודת המבט.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 7
+  success_required: true
+  instance_id: the_royal_impostor__q03_his_her_evidence
+  display_text: השלימו את דוח החפצים של ויל והציירת.
+- type: play_minigame
+  minigame_id: word_ordering
+  world_object_id: Wooden_Cart1_Inside_Gate
+  difficulty: 7
+  success_required: true
+  instance_id: the_royal_impostor__q03_our_their_evidence
+  display_text: השלימו את דוח השומרים ואת ארוחת הצהריים.
+- type: return_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_royal_impostor_q03_fenn_done

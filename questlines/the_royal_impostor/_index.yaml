@@ -3,7 +3,7 @@ questline:
   npc_id: City Gaurd Info
   display_name: The Royal Impostor - המתחזה המלכותי
   theme: Investigate testimony and ownership by using my, your, his, her, our, and their.
-  quest_count: 3
+  quest_count: 5
   level_range:
     - 8
     - 9
@@ -22,12 +22,26 @@ quests:
     rewards:
       xp: 250
       items: []
-  - id: the_royal_impostor__q03_the_royal_test
-    name: The Royal Test
+  - id: the_royal_impostor__q03_the_torn_testimony
+    name: The Torn Testimony
     level: 9
     prerequisite: the_royal_impostor__q02_the_witnesses
     rewards:
+      xp: 250
+      items: []
+  - id: the_royal_impostor__q04_the_ownership_code
+    name: The Ownership Code
+    level: 9
+    prerequisite: the_royal_impostor__q03_the_torn_testimony
+    rewards:
       xp: 300
+      items: []
+  - id: the_royal_impostor__q05_the_royal_test
+    name: The Royal Test
+    level: 9
+    prerequisite: the_royal_impostor__q04_the_ownership_code
+    rewards:
+      xp: 400
       items:
         - id: coin
           amount: 10
