@@ -4545,13 +4545,13 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "הפטיש שייך לוויל — his hammer.",
+          "content": "הפטיש שייך לוויל - his hammer.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "המברשת שייכת לציירת — her brush.",
+          "content": "המברשת שייכת לציירת - her brush.",
           "line_format": "plain_text"
         },
         {
@@ -4721,7 +4721,7 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "אלה הכריכים של השומרים — their sandwiches.",
+          "content": "אלה הכריכים של השומרים - their sandwiches.",
           "line_format": "plain_text"
         },
         {
@@ -5011,19 +5011,19 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "הפטיש של ויל — his hammer.",
+          "content": "הפטיש של ויל - his hammer.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "המברשת של הציירת — her brush.",
+          "content": "המברשת של הציירת - her brush.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "הכריכים של השומרים — their sandwiches.",
+          "content": "הכריכים של השומרים - their sandwiches.",
           "line_format": "plain_text"
         },
         {
@@ -25424,5 +25424,5 @@
       ]
     }
   ],
-  "source_digest": "7391d19eaee222ab3394ea806c1f7e004cb1ed2d39b95cda54880beb41d5a96e"
+  "source_digest": "806ffd5514bb1551e4dd1319711bead726186669d0915881cd9b53899848ef23"
 }

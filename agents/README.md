@@ -6,6 +6,12 @@ The project uses three specialized roles:
 2. **Quest Creator** — converts the approved brief into YAML and technical project links.
 3. **Quest QA & Variety Agent** — checks content, parameters, builds, imports, and minigame variety.
 
+### Shared dialogue typography check
+
+- Creator must not put quotation marks inside dialogue text.
+- Creator must not use the em dash `—` inside dialogue text; use a short hyphen `-` when a separator is needed.
+- QA must scan all learner-facing dialogue lines for quotation marks and em dashes before approving the questline.
+
 ## Workflow
 
 1. **Pedagogical Quest Designer** receives a topic, requirements, or an existing story and creates or adapts a pedagogical plan.

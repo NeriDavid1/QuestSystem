@@ -18,6 +18,12 @@ These rules are mandatory for every questline and minigame instance in this repo
 - A grammar explanation before practice may name the target forms and explain when to use them. This is different from a minigame `instruction` or `params.prompt`: those must remain answer-free when the learner is expected to choose, match, order, or spell an answer. Keep the explanation before the practice, and keep each practice prompt focused on the action and meaning without giving away the required answer.
 - “Hebrew-first” means that learner-facing instructions, explanations, hints, and support are primarily in clear Hebrew; English is retained only for the target language material the learner must recognize, read, write, order, or say. Do not use “Hebrew-first” as a vague learner-facing label; describe the concrete support instead.
 
+## Dialogue typography
+
+- Dialogue text must not contain quotation marks such as `"`, `“”`, `„“`, or `«»`. The dialogue UI already presents the speaker's text, so extra quotation marks are redundant.
+- Dialogue text must not use the em dash `—`. Use a short hyphen `-` when a separator is needed, with spaces around it.
+- Creator checks these rules while authoring; QA scans every learner-facing dialogue line before approving the questline.
+
 ## Word Matching
 
 - Every `word_matching` instance must define `params.letters` as the available letter tiles. Each tile has a stable `id` and its single-letter `value`.
