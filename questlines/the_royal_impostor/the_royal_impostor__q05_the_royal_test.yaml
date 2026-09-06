@@ -50,6 +50,9 @@ steps:
   success_required: true
   instance_id: the_royal_impostor__q05_our_their_test
   display_text: השלימו את המשפט שהמלך אומר לשומרים.
+- type: talk_to_npc
+  npc_id: City Gaurd Info
+  dialogue_id: the_royal_impostor_q05_fenn_checked
 - type: return_to_npc
   npc_id: City Gaurd Info
   dialogue_id: the_royal_impostor_q05_fenn_done

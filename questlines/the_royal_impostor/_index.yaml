@@ -1,8 +1,8 @@
 questline:
   id: the_royal_impostor
   npc_id: City Gaurd Info
-  display_name: The Royal Impostor - המתחזה המלכותי
-  theme: Investigate testimony and ownership by using my, your, his, her, our, and their.
+  display_name: The Lost & Found Cart
+  theme: כינויי שייכות באנגלית - The Lost & Found Cart
   quest_count: 5
   level_range:
     - 8

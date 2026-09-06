@@ -4,10 +4,10 @@
   "counts": {
     "compared_quests": 0,
     "unity_quests": 0,
-    "source_quests": 29,
+    "source_quests": 38,
     "errors": 0,
     "warnings": 0,
-    "info": 29
+    "info": 38
   },
   "issues": [
     {
@@ -158,6 +158,33 @@
       "severity": "info",
       "code": "quest_not_in_unity",
       "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "missing_verbs/missing_verbs__q01_benny_can_t_build_verbs",
+      "context": {
+        "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "missing_verbs/missing_verbs__q02_the_confused_guard",
+      "context": {
+        "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "missing_verbs/missing_verbs__q03_don_t_let_him_guess",
+      "context": {
+        "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
       "quest": "noun_repair_shop/q01_the_broken_noun_book",
       "context": {
         "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
@@ -239,6 +266,15 @@
       "severity": "info",
       "code": "quest_not_in_unity",
       "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
+      "context": {
+        "source_path": "questlines\\numbers_advanced_homework\\q04_numbers_mixed_review.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
       "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q01_what_is_missing",
       "context": {
         "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
@@ -269,6 +305,51 @@
       "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
       "context": {
         "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_royal_impostor/the_royal_impostor__q01_two_advisors",
+      "context": {
+        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_royal_impostor/the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_royal_impostor/the_royal_impostor__q03_the_torn_testimony",
+      "context": {
+        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_torn_testimony.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_royal_impostor/the_royal_impostor__q04_the_ownership_code",
+      "context": {
+        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q04_the_ownership_code.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "the_royal_impostor/the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q05_the_royal_test.yaml"
       }
     }
   ]
