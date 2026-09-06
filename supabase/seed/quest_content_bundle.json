@@ -4539,31 +4539,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "מצוין! בדקתם את הפטיש ואת המברשת.",
+          "content": "נפלא. שני דברים כבר חזרו לאנשים שחיפשו אותם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "על ויל אמרנו his hammer - הפטיש שלו.",
+          "content": "ויל קיבל את החפץ שלו, והציירת קיבלה את שלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "על הציירת אמרנו her brush - המברשת שלה.",
+          "content": "כשהפטיש שייך לוויל, אנחנו אומרים his hammer - הפטיש שלו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "עכשיו צריך לבדוק את ארוחת הצהריים של השומרים.",
+          "content": "כשהמברשת שייכת לציירת, אנחנו אומרים her brush - המברשת שלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "לכו אל טומלין בשער הראשי.",
+          "content": "בשער הראשי מחכים שני שומרים עם סיפור משלהם.",
           "line_format": "plain_text"
         },
         {
@@ -4583,31 +4583,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אחרי החגיגה נשארו בכיכר כמה דברים.",
+          "content": "אחרי החגיגה הכיכר נראית שקטה, אבל העגלה הזאת מלאה בסיפורים קטנים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "השומרים שמו הכול בעגלה, אבל אנחנו לא יודעים למי כל דבר שייך.",
+          "content": "אנשים השאירו כאן דברים יקרים, ועכשיו כל אחד מחפש את מה שאבד לו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "ויל אומר שהפטיש שלו נמצא בתוך Lost Chest 1 בבית הבנאים.",
+          "content": "ויל הנפח אמר שהדבר שהוא צריך מחכה בתוך אחד מהארגזים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "לכו אל התיבה, מצאו את הפטיש ועזרו לנו לבדוק למי הוא שייך.",
+          "content": "אם תמצאו אותו, קחו אותו אליו. הוא ודאי יזהה אותו מיד.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "אחר כך תמשיכו אל הציירת.",
+          "content": "אחר כך המשיכו אל הציירת. גם היא מחכה לחדשות.",
           "line_format": "plain_text"
         },
         {
@@ -4627,43 +4627,37 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "המברשת שלי נמצאת בתוך Lost Chest 7 ליד עץ צריח השמש.",
+          "content": "איזה מזל שהגעתם! מאז החגיגה אני מחפשת דבר חשוב לי.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "לכו לשם וחפשו את המברשת.",
+          "content": "הוא נמצא בתוך אחד מהארגזים, אבל בין כל הדברים קשה לדעת מה שלי.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "כשתמצאו אותה, השלימו את המשפט כדי להראות שהיא שלי.",
+          "content": "כשתמצאו אותו, הביאו אותו אליי. אני אזהה אותו לפי הידית והצבע.",
           "line_format": "plain_text"
         },
         {
           "locale": "en",
           "line_order": 3,
-          "content": "This is her brush.",
+          "content": "Yes, this is my brush.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "זאת המברשת שלה.",
+          "content": "זאת המברשת שלי. עכשיו אוכל לחזור לצייר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 5,
-          "content": "אחר כך אמרו בקול את משפט העדים ליד שולחן הבחינה.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 6,
-          "content": "בסוף חזרו לשומר וספרו מה מצאתם.",
+          "content": "חזרו אל שומר העיר וספרו לו שהחיפוש התקדם.",
           "line_format": "plain_text"
         }
       ]
@@ -4677,37 +4671,37 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "שלום! הפטיש שלי נמצא בתוך התיבה בבית הבנאים.",
+          "content": "שלום, חברים! טוב שבאתם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "בבקשה לכו לשם וחפשו אותו.",
+          "content": "הדבר שאני הכי צריך נמצא בתוך אחד מהארגזים, אבל לא הצלחתי למצוא אותו לבד.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "כשתמצאו את הפטיש, השלימו את המשפט כדי להראות שהוא שלי.",
+          "content": "אם הוא באמת שלי, אני אדע ברגע שאראה אותו.",
           "line_format": "plain_text"
         },
         {
           "locale": "en",
           "line_order": 3,
-          "content": "This is his hammer.",
+          "content": "Yes, this is my hammer.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "זה הפטיש שלו.",
+          "content": "זה הפטיש שלי. עכשיו הוא שוב איתי.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 5,
-          "content": "אחר כך לכו אל הציירת. גם לה חסר כלי עבודה.",
+          "content": "הציירת מחכה לעזרה שלכם. לכו לשמוע מה קרה לה.",
           "line_format": "plain_text"
         }
       ]
@@ -4721,36 +4715,30 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "עבודה טובה! בדקתם את הכריכים ואת הרמז.",
+          "content": "הצלחתם לעזור לשומרים, והם כבר יודעים למי שייך הדבר שנמצא.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "השומרים אמרו our sandwiches - הכריכים שלנו.",
+          "content": "כשהכריכים שייכים לשומרים, אנחנו אומרים their sandwiches - הכריכים שלהם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "כשדיברנו עליהם מבחוץ, אמרנו their sandwiches - הכריכים שלהם.",
+          "content": "ליד העגלה מצאנו גם דף ישן וקרוע.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "ליד העגלה מצאנו גם רשימה קרועה.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 4,
-          "content": "הציירת יכולה לעזור לתקן אותה.",
+          "content": "הציירת מבינה בצבעים ובסימנים. אולי היא תצליח להחזיר לדף את הסדר.",
           "line_format": "plain_text"
         },
         {
           "locale": "en",
-          "line_order": 5,
+          "line_order": 4,
           "content": "Go to the Painter.",
           "line_format": "plain_text"
         }
@@ -4765,43 +4753,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הרמז שלי נמצא ליד העגלה.",
+          "content": "טומלין כבר סיפר לכם על הצרה שלנו, נכון?",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "קחו אותו ובדקו את המשפט הראשון ליד התיבה.",
+          "content": "גם אני מצאתי משהו קטן ליד העגלה. אולי הוא יעזור לכם בדרך.",
           "line_format": "plain_text"
         },
         {
-          "locale": "he",
+          "locale": "en",
           "line_order": 2,
-          "content": "אני מדבר אליכם ישירות, לכן הרמז הוא your clue.",
+          "content": "This is your clue.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "זה הרמז שלכם.",
+          "content": "זה הרמז שלכם. שמרו עליו היטב ואל תתנו לו ללכת לאיבוד.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "אחר כך בדקו את המשפט של החשוד על הכריכים.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 5,
-          "content": "בסוף אמרו בקול את האזהרה ליד שולחן הבחינה.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 6,
-          "content": "כשסיימתם, חזרו לשומר העיר.",
+          "content": "כשתהיו מוכנים, חזרו אל שומר העיר עם מה שגיליתם.",
           "line_format": "plain_text"
         }
       ]
@@ -4815,37 +4791,37 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אוי לא! הכריכים שלנו נעלמו.",
+          "content": "הנה אתם! בדיוק קיווינו שתגיעו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "הם נמצאים ליד שולחן הבחינה, ואנחנו צריכים לבדוק למי הם שייכים.",
+          "content": "אנחנו מחפשים דבר ששייך לשנינו, והוא נעלם בזמן החגיגה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אנחנו השומרים מדברים על עצמנו, לכן נשתמש ב our.",
+          "content": "אם תמצאו אותו, חזרו וספרו לנו. אולי סוף סוף נוכל לנשום לרווחה.",
           "line_format": "plain_text"
         },
         {
-          "locale": "he",
+          "locale": "en",
           "line_order": 3,
-          "content": "אחר כך ספרו על השומרים מבחוץ, עם their.",
+          "content": "These are our sandwiches.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "בסוף אמרו בקול את משפט ארוחת הצהריים ליד העגלה.",
+          "content": "אלה הכריכים שלנו. מסתבר שהבטן שלנו זוכרת אותם טוב יותר מאיתנו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 5,
-          "content": "אחרי זה לכו אל גאריק. הוא מצא רמז.",
+          "content": "גאריק מצא רמז קטן. דברו איתו לפני שתמשיכו.",
           "line_format": "plain_text"
         }
       ]
@@ -4859,31 +4835,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הצלחתם לתקן את הרשימה!",
+          "content": "מצוין. עכשיו אפשר שוב לקרוא את הרשימה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עכשיו אפשר לקרוא מי קשור לכל חפץ.",
+          "content": "רואים בה בבירור למי צריכים להחזיר את הדברים שנמצאו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "בתחתית הרשימה יש סימן של תיבת האבידות.",
+          "content": "אבל בתחתית נשאר סימן מוזר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "ויל מכיר את הקוד של התיבה ויכול לעזור לנו לפתוח אותה.",
+          "content": "ויל מכיר את הסימן הזה ויכול להבין מה הוא אומר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "קחו אליו את הרשימה.",
+          "content": "קחו אליו את הרשימה ושמעו ממנו מה הלאה.",
           "line_format": "plain_text"
         },
         {
@@ -4903,31 +4879,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הרשימה הזאת קרועה, וכמה אותיות נעלמו מהמילים.",
+          "content": "תראו מה מצאתי! הרשימה הזאת עברה כמעט כמו הכיכר עצמה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "בלי האותיות האלה קשה להבין למי הדברים שייכים.",
+          "content": "כמה מילים כמעט נעלמו, אבל עדיין אפשר להציל את המשמעות שלהן.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "לכו קודם לשולחן הבחינה והשלימו את האותיות החסרות.",
+          "content": "בתוך הרשימה מסתתר רמז על הדברים ועל הבעלים שלהם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "אחר כך לכו לעגלה ובנו שני משפטים על ויל, הציירת והשומרים.",
+          "content": "קודם גשו לשולחן, ואחר כך חזרו אל העגלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "המשפטים יעזרו לנו לקרוא את הרשימה.",
+          "content": "אם הכול יסתדר, הרשימה תוכל לספר לנו את האמת.",
           "line_format": "plain_text"
         }
       ]
@@ -4941,25 +4917,25 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "כל הכבוד! בדקתם את כל שש המילים.",
+          "content": "זה עבד! הארגז שוב פתוח.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עכשיו הקוד ברור, ותיבת האבידות יכולה להיפתח.",
+          "content": "עכשיו אפשר להחזיר את הדברים לאנשים שאיבדו אותם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "הרשימה מוכנה, ונשאר רק לבדוק את הדברים האחרונים.",
+          "content": "הרשימה כבר אצלכם, והבדיקה האחרונה מחכה אצל שומר העיר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "קחו את הרשימה אל שומר העיר.",
+          "content": "קחו אליו הכול. הוא יוודא שאף אחד לא נשאר בלי הדבר שלו.",
           "line_format": "plain_text"
         },
         {
@@ -4979,43 +4955,37 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אני מכיר את הסימן הזה. זה הקוד של תיבת האבידות.",
+          "content": "עכשיו אני מבין. הסימן הזה קשור לארגז האבידות.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "כדי לפתוח את התיבה צריך לבדוק מי מדבר ולמי שייך כל דבר.",
+          "content": "נעלו אותו כדי שהדברים שנמצאו לא יגיעו לידיים הלא נכונות.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "התחילו ליד העגלה עם my ו your.",
+          "content": "הדרך לתשובה מתחילה ליד העגלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "אחר כך פתרו את משפט הבדיקה ליד שולחן הבחינה.",
+          "content": "אחר כך גשו לשולחן וחזרו שוב אל העגלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "חזרו לעגלה עם our ו their, ואמרו בקול את משפט הקוד.",
+          "content": "אל תמהרו. במנעולים כאלה כל פרט קטן חשוב.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 5,
-          "content": "בסוף בדקו ליד העגלה את his ו her, ואז פתרו את הבדיקה האחרונה.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 6,
-          "content": "כך נוכל לפתוח את התיבה בלי לקחת דבר שלא שייך לנו.",
+          "content": "כשהכול יסתדר, המנעול ייפתח.",
           "line_format": "plain_text"
         }
       ]
@@ -5029,25 +4999,25 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "בדקתי את התשובות שלכם. כל דבר מתאים לבעלים הנכון.",
+          "content": "בדקתי את התשובות שלכם. כל דבר שוב נמצא ליד הבעלים שלו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "הפטיש הוא his hammer - הפטיש שלו.",
+          "content": "his hammer - הפטיש שלו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "המברשת היא her brush - המברשת שלה.",
+          "content": "her brush - המברשת שלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "הכריכים הם their sandwiches - הכריכים שלהם.",
+          "content": "their sandwiches - הכריכים שלהם.",
           "line_format": "plain_text"
         },
         {
@@ -5067,48 +5037,54 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הצלחתם! כל הדברים חזרו לבעלים שלהם.",
+          "content": "עשיתם את זה. שום דבר לא נשאר בלי בעלים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "ויל יקבל את הפטיש שלו.",
+          "content": "ויל שוב מחזיק בפטיש שלו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "הציירת תקבל את המברשת שלה.",
+          "content": "הציירת שוב יכולה לצייר במברשת שלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "השומרים מצאו את הכריכים שלהם.",
+          "content": "והשומרים מצאו את הכריכים שלהם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "ועכשיו אנחנו יודעים להשתמש ב my, your, his, her, our ו their.",
+          "content": "בדרך למדנו לומר my, your, his, her, our ו their.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 5,
-          "content": "רגע... השומרים כבר אכלו את הכריכים.",
+          "content": "כך הצלחנו להבין למי שייך כל דבר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 6,
-          "content": "טוב, לפחות מצאנו אותם בזמן! כל הכבוד.",
+          "content": "רגע... השומרים כבר הספיקו לאכול את הכריכים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 7,
+          "content": "לפחות הם מצאו אותם בזמן. עבודה מצוינת!",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 8,
           "content": "קבלו 10 מטבעות.",
           "line_format": "plain_text"
         }
@@ -5123,49 +5099,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "זה השלב האחרון של החיפוש.",
+          "content": "כמעט סיימנו. נשאר רק לעבור בזהירות על החלק האחרון של הדרך.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עכשיו נבדוק את כל הדברים שנמצאו בתוך התיבה.",
+          "content": "התחילו אצל השולחן, אחר כך גשו אל העגלה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "התחילו ליד שולחן הבחינה ובדקו את המשפט של המלך אליכם.",
+          "content": "משם חזרו שוב אל השולחן, ואז אליי.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "אחר כך לכו לעגלה ואמרו בקול את אותו משפט.",
+          "content": "אני אחכה כאן ואעזור לכם להחזיר הכול למקום.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "בנו שם גם את המשפט על הפטיש של ויל ועל המברשת של הציירת.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 5,
-          "content": "אחר כך אמרו את משפט העדים ליד שולחן הבחינה.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 6,
-          "content": "בסוף השלימו את המשפט של המלך על השומרים.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 7,
-          "content": "אחרי כל הבדיקות חזרו אליי עם התשובה.",
+          "content": "אל דאגה. כבר מצאתם את הרמזים החשובים ביותר.",
           "line_format": "plain_text"
         }
       ]
@@ -18784,7 +18742,7 @@
     "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 82,
-    "dialogue_lines": 274,
+    "dialogue_lines": 267,
     "minigame_instances": 169,
     "questlines": 8,
     "quests": 38,
@@ -25460,5 +25418,5 @@
       ]
     }
   ],
-  "source_digest": "7919ce4df976ab226277f16d954aa6c33f9d3a90be09152bab50c145a7800444"
+  "source_digest": "50573f708f28a27225d7c2eeab92f514d06a8134d58bb28d02d714f8207843cc"
 }
