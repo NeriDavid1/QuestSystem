@@ -179,7 +179,7 @@ function StepVisual({ data, step, index }: { data: EditorData; step: QuestStep; 
           <div className="preview-dialogue">
             <small className="eyebrow">{t('dialogue')}</small>
             {dialogueLines.map((line) => (
-              <p className="content-text" dir="auto" key={line.id}>“{line.content || '…'}”</p>
+              <p className="content-text" dir="auto" key={line.id}>{line.content || '…'}</p>
             ))}
           </div>
         )}
@@ -334,7 +334,7 @@ export function Preview() {
                     <div className="preview-dialogue preview-intro-dialogue">
                       <small className="eyebrow">{t('previewStartDialogue')}</small>
                       {introLines.map((line) => (
-                        <p className="content-text" dir="auto" key={line.id}>“{line.content || '…'}”</p>
+                          <p className="content-text" dir="auto" key={line.id}>{line.content || '…'}</p>
                       ))}
                     </div>
                   )}
@@ -360,7 +360,7 @@ export function Preview() {
                     {closeLines.length > 0 ? (
                       <div className="preview-dialogue">
                         {closeLines.map((line) => (
-                          <p className="content-text" dir="auto" key={line.id}>“{line.content || '…'}”</p>
+                        <p className="content-text" dir="auto" key={line.id}>{line.content || '…'}</p>
                         ))}
                       </div>
                     ) : (
