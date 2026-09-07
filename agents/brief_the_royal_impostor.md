@@ -15,7 +15,7 @@
 
 - Fenn (`City Gaurd Info`) coordinates the opening investigation and the final Royal Test.
 - Will (`Blacksmith`) and Painter give first-person testimony; the player changes it to third-person evidence.
-- Tomlin (`Main Gate Gaurd 1`) and Garrick (`Main Gate Gaurd 2`) provide the lunch dispute and perspective changes.
+- Tomlin and Garrick provide the lunch dispute and perspective changes. Keep their technical NPC IDs only in importer-facing fields, never in learner-facing copy.
 - Painter starts Q3 and Blacksmith starts Q4 so quest givers do not repeat without a story reason.
 - Existing stations: `Lost_Chest1_BuildersHomeArea`, `Lost_Chest7_The_Sunspire_Tree`, `Exam_Table1_Outside_Gate`, and `Wooden_Cart1_Inside_Gate`.
 

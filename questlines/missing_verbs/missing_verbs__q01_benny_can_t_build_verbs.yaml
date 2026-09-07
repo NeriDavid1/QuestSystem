@@ -1,7 +1,7 @@
 quest:
   id: missing_verbs__q01_benny_can_t_build_verbs
   name: "Benny Can't Build"
-  level_required: 1
+  level_required: 50
   giver_npc: "Benny the Builder"
   prerequisite: null
   summary: "עזרו לבני להחזיר פעלים לפקודות הבנייה."

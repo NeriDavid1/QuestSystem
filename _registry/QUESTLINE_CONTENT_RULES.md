@@ -32,8 +32,9 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Use dialogue to motivate and guide the learner naturally. Say that a needed item or clue is somewhere relevant when appropriate, but do not turn the conversation into a walkthrough of the next interaction.
 - Avoid forced jokes, impossible behavior, or objects acting like people when that does not support the story. Prefer believable situations that a child can follow.
 - Introduce an unfamiliar grammar or vocabulary idea briefly before its first practice. Explain what the idea means in simple language, then let the mini-game provide the practice.
+- When introducing a grammar term, show the learner the clear Hebrew-to-English connection in the explanation, for example `פועל = verb`, then explain its meaning in simple Hebrew before the first practice.
 - Keep each dialogue block focused on one idea. Remove repeated explanations and unnecessary exposition.
-- When learner-facing dialogue or quest description mentions an NPC, show a clear Hebrew name or role followed by the exact English NPC name from the registry, for example `ויל Blacksmith` or `הציירת Painter`. Do not use only a Hebrew NPC name or role when the English registry name helps the learner find the character.
+- When learner-facing dialogue or quest description mentions an NPC, show only the short, natural character name, optionally in Hebrew followed by the English name, for example `טומלין Tomlin` or `ויל Will`. Never show technical registry IDs, numeric suffixes, internal roles, or strings such as `Main Gate Gaurd 1` to the learner. Keep exact registry IDs only in schema fields such as `speaker`, `npc_id`, and `giver_npc` so the importer can resolve them.
 
 ## Questline level pattern
 

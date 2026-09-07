@@ -3293,7 +3293,7 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "השומר בשער צריך עזרה עם פקודות המלך. לכו אליו עם הרשימה.",
+          "content": "טומלין Tomlin צריך עזרה עם פקודות המלך. לכו אליו.",
           "line_format": "plain_text"
         }
       ]
@@ -3313,7 +3313,7 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עזרו לי להחזיר את פעלי הפעולה לפקודות. קראו את ההוראות בעברית ובצעו את המשימות באנגלית.",
+          "content": "פועל = verb. זו מילה שמתארת פעולה, כמו לבנות או לפתוח. כמה פעלים נעלמו מהפקודות של הבנאים. עזרו לי להמשיך את העבודה.",
           "line_format": "plain_text"
         }
       ]
@@ -3333,7 +3333,7 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "התותחן מחכה ליד התותח. הוא צריך את העזרה האחרונה שלכם.",
+          "content": "התותחן Cannoneer מחכה ליד התותח. הוא צריך את העזרה האחרונה שלכם.",
           "line_format": "plain_text"
         }
       ]
@@ -3353,7 +3353,7 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עזרו לי לבחור ולסדר את הפעלים הנכונים. אחר כך הפקודות יהיו ברורות.",
+          "content": "אני לא רוצה לתת פקודה לא נכונה. עזרו לי להבין את הפקודות.",
           "line_format": "plain_text"
         }
       ]
@@ -3373,7 +3373,7 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "פעלים מתארים פעולות. כל הכבוד — סיימתם את שיעורי הבית! קבלו את הפרס שלכם.",
+          "content": "תודה על העזרה! עזרתם לי מאוד. קבלו את הפרס שלכם.",
           "line_format": "plain_text"
         }
       ]
@@ -3387,13 +3387,13 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אוי! הפועל נעלם מהפקודה שלי, ואני כמעט מנחש מה לעשות עם התותח.",
+          "content": "אוי! הפקודה שלי לא שלמה, ואני צריך לדעת מה לעשות עם התותח.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עזרו לי לשחזר את פועל הפעולה, לבחור אותו במשפט ולומר אותו באנגלית.",
+          "content": "אני לא רוצה לטעות. עזרו לי להבין את הפקודה.",
           "line_format": "plain_text"
         }
       ]
@@ -14832,7 +14832,7 @@
       "default_giver_external_id": "Benny the Builder",
       "status": "draft",
       "level_min": 1,
-      "level_max": 1,
+      "level_max": 50,
       "source_path": "questlines\\missing_verbs\\_index.yaml",
       "source_metadata": {
         "source_status": null,
@@ -14845,7 +14845,7 @@
           "key": "missing_verbs__q01_benny_can_t_build_verbs",
           "position": 0,
           "name": "Benny Can't Build",
-          "level_required": 1,
+          "level_required": 50,
           "giver_external_id": "Benny the Builder",
           "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
           "wait_for_npc_turn_in": false,
@@ -14976,7 +14976,7 @@
             "source_detail": {
               "id": "missing_verbs__q01_benny_can_t_build_verbs",
               "name": "Benny Can't Build",
-              "level_required": 1,
+              "level_required": 50,
               "giver_npc": "Benny the Builder",
               "prerequisite": null,
               "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
@@ -21580,7 +21580,7 @@
           "key": "missing_verbs__q01_benny_can_t_build_verbs",
           "position": 0,
           "name": "Benny Can't Build",
-          "level_required": 1,
+          "level_required": 50,
           "giver_external_id": "Benny the Builder",
           "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
           "wait_for_npc_turn_in": false,
@@ -21711,7 +21711,7 @@
             "source_detail": {
               "id": "missing_verbs__q01_benny_can_t_build_verbs",
               "name": "Benny Can't Build",
-              "level_required": 1,
+              "level_required": 50,
               "giver_npc": "Benny the Builder",
               "prerequisite": null,
               "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
@@ -25538,5 +25538,5 @@
       ]
     }
   ],
-  "source_digest": "0985fd9885939913cd454a743c8509374a7439e9fd9af370b9557b64fac70511"
+  "source_digest": "7715b49618be56c8901dcc0a1f5ebb72891eccab8695a3b8b2bd4a89524ecee3"
 }
