@@ -36,6 +36,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Avoid forced jokes, impossible object behavior, and confusing pretend situations. Keep the story concrete and believable for the learner's age.
 - Explain a new grammar or vocabulary idea briefly before its first practice, using simple language. Do not make the explanation long or repeat it in every quest.
 - Keep all dialogue concise and remove repeated or unnecessary exposition.
+- Whenever an NPC appears in learner-facing dialogue or quest description, write the understandable Hebrew name or role followed by the exact English NPC name from the registry, such as `ויל Blacksmith` or `הציירת Painter`, so the learner can find the character.
 - Set the first quest in every questline to level 50. Set every subsequent quest to level 1. Apply the same values to the questline index and the individual quest level requirement fields supported by the schema.
 - Do not add UI buttons or importer workarounds without a separate request.
 
@@ -47,6 +48,7 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Check minigame sequences for unnecessary identical consecutive instances; repetition is acceptable only when the approved plan gives a clear learning or story reason.
 - Implement the approved sub-skill order; do not introduce mixed review before each component has been practised.
 - Verify the dialogue against the child-friendly story rules: natural motivation, clear broad direction, alignment with the actual mini-game flow, no step-by-step mini-game instructions, no forced or confusing fantasy behavior, and concise blocks.
+- Verify every learner-facing NPC mention uses a clear Hebrew name or role plus the exact English registry name when the character is referenced.
 - Verify the progression levels: the first quest by order is level 50, and every other quest is level 1, in both the index and individual quest level requirement fields.
 - Verify Word Matching `letters`, `wordTasks`, missing indices, fragments, compact pools, unique tile IDs, and independent deterministic shuffling.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the approved brief; do not reveal answers in learner-facing instructions.

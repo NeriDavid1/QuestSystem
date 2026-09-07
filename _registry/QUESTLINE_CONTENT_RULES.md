@@ -33,6 +33,7 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Avoid forced jokes, impossible behavior, or objects acting like people when that does not support the story. Prefer believable situations that a child can follow.
 - Introduce an unfamiliar grammar or vocabulary idea briefly before its first practice. Explain what the idea means in simple language, then let the mini-game provide the practice.
 - Keep each dialogue block focused on one idea. Remove repeated explanations and unnecessary exposition.
+- When learner-facing dialogue or quest description mentions an NPC, show a clear Hebrew name or role followed by the exact English NPC name from the registry, for example `ויל Blacksmith` or `הציירת Painter`. Do not use only a Hebrew NPC name or role when the English registry name helps the learner find the character.
 
 ## Questline level pattern
 

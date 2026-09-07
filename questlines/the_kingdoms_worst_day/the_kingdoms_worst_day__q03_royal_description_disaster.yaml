@@ -1,10 +1,10 @@
 quest:
   id: the_kingdoms_worst_day__q03_royal_description_disaster
   name: The Royal Description Disaster
-  level_required: 7
+  level_required: 1
   giver_npc: Painter
   prerequisite: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
-  summary: השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.
+  summary: השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.
   wait_for_npc_turn_in: false
 rewards:
   xp: 200

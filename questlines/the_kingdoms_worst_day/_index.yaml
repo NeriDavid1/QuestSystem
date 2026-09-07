@@ -5,36 +5,36 @@ questline:
   theme: Practice nouns, verbs, adjectives, sentence building, and speaking with clear Hebrew guidance and essential English.
   quest_count: 4
   level_range:
-    - 7
-    - 8
+    - 1
+    - 50
 quests:
   - id: the_kingdoms_worst_day__q01_what_is_missing
     name: What Is Missing?
-    level: 7
+    level: 50
     prerequisite: null
     rewards:
       xp: 100
       items: []
   - id: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
     name: Nobody Is Doing Their Job
-    level: 7
+    level: 1
     prerequisite: the_kingdoms_worst_day__q01_what_is_missing
     rewards:
       xp: 150
       items: []
   - id: the_kingdoms_worst_day__q03_royal_description_disaster
     name: The Royal Description Disaster
-    level: 7
+    level: 1
     prerequisite: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
     rewards:
       xp: 200
       items: []
   - id: the_kingdoms_worst_day__q04_save_the_royal_schedule
     name: Save the Royal Schedule
-    level: 8
+    level: 1
     prerequisite: the_kingdoms_worst_day__q03_royal_description_disaster
     rewards:
       xp: 300
       items:
         - id: coin
-          amount: 10
+          amount: 50

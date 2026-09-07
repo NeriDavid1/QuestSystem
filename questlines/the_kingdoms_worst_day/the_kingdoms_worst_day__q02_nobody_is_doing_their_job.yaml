@@ -1,7 +1,7 @@
 quest:
   id: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
   name: Nobody Is Doing Their Job
-  level_required: 7
+  level_required: 1
   giver_npc: Blacksmith
   prerequisite: the_kingdoms_worst_day__q01_what_is_missing
   summary: השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.

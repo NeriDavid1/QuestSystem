@@ -1,7 +1,7 @@
 quest:
   id: the_kingdoms_worst_day__q01_what_is_missing
   name: What Is Missing?
-  level_required: 7
+  level_required: 50
   giver_npc: City Gaurd Info
   prerequisite: null
   summary: השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.

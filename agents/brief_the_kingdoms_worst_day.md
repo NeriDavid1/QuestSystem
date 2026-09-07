@@ -15,7 +15,7 @@
 
 ## רעיון הסיפור
 
-זהו היום הגרוע ביותר בממלכה: לא מפלצת תקפה — **השפה עצמה התקלקלה**. שמות החפצים התחלפו, פעולות נעלמו מההוראות, והמילים שמתארות דברים איבדו את המשמעות שלהן. לכן השומרים לא מזהים מה נמצא ליד השער, בוני הממלכה לא יודעים איזו פעולה לבצע, והציירת לא מצליחה לתאר את העץ. התלמיד/ה משחזר/ת את מערכת המילים בשלבים, עד שאפשר למסור הוראת חירום חדשה וברורה.
+זהו היום הגרוע ביותר בממלכה: לא מפלצת תקפה — **השפה עצמה התקלקלה**. שמות החפצים התחלפו, פעולות נעלמו מההוראות, והמילים שמתארות דברים איבדו את המשמעות שלהן. לכן השומרים לא מזהים מה נמצא ליד השער, בוני הממלכה לא יודעים איזו פעולה לבצע, והציירת Painter לא מצליחה לתאר את העץ. התלמיד/ה משחזר/ת את מערכת המילים בשלבים, עד שאפשר למסור הוראת חירום חדשה וברורה.
 
 הסיפור מצחיק אך יש לו logic לימודי: בכל אזור מתקנים שכבה אחרת של המשפט, ואז משתמשים באותה שכבה בהקשר חדש.
 
@@ -87,7 +87,7 @@
 3. `play_minigame` מסוג `word_matching` על `Lost_Chest1_BuildersHomeArea`, variant מוצע `word_to_image`: התאמת ארבעת ה־verbs לאיורי פעולה.
 4. `reach_location` אל `KingdomGate`.
 5. `play_minigame` מסוג `word_ordering` על `Wooden_Cart1_Inside_Gate`, difficulty 5: בניית משפטים קצרים לפי תרגום עברי, למשל “אני פותח את השער” ו־“אני נושא את הספר”. בכל task יש להציג `params.translation`; אפשר להשאיר את מילת הפעולה פתוחה עם `preFilledIndices` ו־`distractorWords`.
-6. `return_to_npc` אל `Blacksmith` — Will מסכם בעברית שהממלכה שוב יודעת איזו פעולה לבצע ומפנה לציירת.
+6. `return_to_npc` אל `Blacksmith` — ויל Blacksmith מסכם בעברית שהממלכה שוב יודעת איזו פעולה לבצע ומפנה לציירת Painter.
 
 **נוסח הוראות UI מוצע:**
 
@@ -104,7 +104,7 @@
 **תחנות:** `Lost_Chest7_The_Sunspire_Tree`, ולאחר מכן `Exam_Table_Fairy_Rose_Park`  
 **אוצר מילים מוצע:** `big`, `small`, `bright`, `dark`.
 
-**פתיחה בעברית:** Painter מגלה שכל הציורים נראים “אותו דבר”, כי התיאורים נעלמו. היא מבקשת מהתלמיד/ה לא רק לזהות adjective אלא להשתמש בו כדי לתאר עץ, אור או חפץ.
+**פתיחה בעברית:** הציירת Painter מגלה שכל הציורים נראים “אותו דבר”, כי התיאורים נעלמו. היא מבקשת מהתלמיד/ה לא רק לזהות adjective אלא להשתמש בו כדי לתאר עץ, אור או חפץ.
 
 **זרימת צעדים:**
 
@@ -114,7 +114,7 @@
 4. `reach_location` אל `FairyRosePark`.
 5. `play_minigame` מסוג `word_ordering` על `Exam_Table_Fairy_Rose_Park`, difficulty 6: בניית שלושה משפטים חדשים לפי תרגום עברי, למשל “The tree is big.”, “The gate is dark.” ו־“The book is small.” התרגום העברי חייב להופיע ב־`params.translation`.
 6. `play_minigame` מסוג `speak_aloud` על `Fire_Camp_Tower_Of_Lost_Vigil` רק אם יש מעבר מתוכנן ל־`TowerOfLostVigil`; אחרת להשאיר את הדיבור ל־Quest 4. אין להפעיל Speak Aloud לפני שהמילים נראו ונקראו.
-7. `return_to_npc` אל `Painter` — היא מתארת בעברית שהציור “חזר לחיים” ומכינה את המעבר לפרופסור.
+7. `return_to_npc` אל `Painter` — הציירת Painter מתארת בעברית שהציור “חזר לחיים” ומכינה את המעבר לפרופסור קרייזי Professor Crazy.
 
 **החלטת scope:** כדי לא ליצור נסיעה מלאכותית, ההמלצה היא לדחות את סעיף הדיבור ל־Quest 4. כך Quest 3 נשאר focused על שימוש ב־adjectives, ו־Quest 4 מקבל את Transfer.
 
@@ -134,7 +134,7 @@
 3. `play_minigame` מסוג `word_ordering` על `WoodenCart2_Solitude_Tower`, difficulty 7: שלושה משפטים חדשים המשלבים noun + verb + adjective, למשל “The big gate opens.”, “I carry the small book.” ו־“The dark gate closes.” לכל משפט יש תרגום עברי; מומלץ להשאיר רק רכיב אחד פתוח בכל task.
 4. `return_to_npc` אל `Professor Crazy` — הוא מאשר שהמכונה עובדת ומעביר את הודעת החירום ל־Mountain Guide.
 5. `reach_location` אל `TowerOfLostVigil`.
-6. `talk_to_npc` אל `Mountain Guide` — המדריך מסביר בעברית שהמסר חייב להיות מובן גם מחוץ למעבדה.
+6. `talk_to_npc` אל `Mountain Guide` — המדריך Mountain Guide מסביר בעברית שהמסר חייב להיות מובן גם מחוץ למעבדה.
 7. `play_minigame` מסוג `speak_aloud` על `Fire_Camp_Tower_Of_Lost_Vigil`, difficulty 7–8, variant `short_phrase`: הלומד אומר משפט mixed חדש אחד, עם `allowFuzzyMatch: true`, כפתור `Hear it` ו־retries בלתי מוגבלים.
 8. `return_to_npc` אל `teacher_maya` — דיאלוג סיום בעברית שמסכם את ארבע הקטגוריות ומכריז שהממלכה ניצלה. אין להוסיף `reach_location` ל־Alphabet Plaza.
 
@@ -183,4 +183,3 @@
 4. ליצור English target content רק אחרי אישור איות, תמונות/אודיו ותרגומים עבריים.
 5. להריץ QA על answer disclosure, תרגום בכל sentence-building task, retries, microphone fallback, ורצף minigames.
 6. רק לאחר אישור הבריף ליצור YAML ולעדכן index/graph. המסמך הזה עצמו אינו מחליף את שלב האישור ואינו מפרסם דבר.
-

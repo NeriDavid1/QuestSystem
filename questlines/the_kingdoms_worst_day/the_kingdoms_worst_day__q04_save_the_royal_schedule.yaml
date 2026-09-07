@@ -1,7 +1,7 @@
 quest:
   id: the_kingdoms_worst_day__q04_save_the_royal_schedule
   name: Save the Royal Schedule
-  level_required: 8
+  level_required: 1
   giver_npc: Professor Crazy
   prerequisite: the_kingdoms_worst_day__q03_royal_description_disaster
   summary: חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.
@@ -10,7 +10,7 @@ rewards:
   xp: 300
   items:
     - id: coin
-      amount: 10
+      amount: 50
 steps:
 - type: talk_to_npc
   npc_id: Professor Crazy

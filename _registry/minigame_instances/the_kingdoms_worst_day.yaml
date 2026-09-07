@@ -246,7 +246,7 @@ instances:
       - big
     target: The tree is big.
     variant: sentence_building
-    success: התיאור ברור; Painter יודעת איזה עץ לצייר.
+    success: התיאור ברור; הציירת Painter יודעת איזה עץ לצייר.
     params:
       prompt: 'בנו את המשפט לפי התרגום בעברית: העץ גדול.'
       translation: העץ גדול.
@@ -271,7 +271,7 @@ instances:
       - בדקו את האיות לפני האישור
     target: bright
     variant: word_spelling
-    success: BRIGHT נכתב נכון; Painter יכולה להבדיל בין אור לצל.
+    success: BRIGHT נכתב נכון; הציירת Painter יכולה להבדיל בין אור לצל.
     params:
       prompt: כתבו באנגלית את המילה שפירושה בהיר.
       targetWord: bright

@@ -4357,19 +4357,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "מצוין! השמות חזרו: חפצים יכולים להיות gate, key, book או crown.",
+          "content": "מצוין. עכשיו ברור אילו דברים הגיעו ליריד.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עכשיו אנחנו יודעים מה נמצא בשער. אבל אף אחד בבית המלאכה לא יודע מה לעשות.",
+          "content": "ויל Blacksmith מכין את הדוכן, אבל ההוראות שלו כבר לא ברורות.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "לכו אל Will ב־BuildersHome וחפשו את פעולות העבודה שאבדו.",
+          "content": "לכו אליו ותשאלו איך אפשר לעזור לו.",
           "line_format": "plain_text"
         }
       ]
@@ -4383,19 +4383,25 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אסון בשער! שמות החפצים נעלמו מהרשימה.",
+          "content": "היום נפתח היריד לילדים ליד שער הממלכה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "אני משתמש בשמות מצחיקים לחפצים, אבל זה רק מבלבל את כולם.",
+          "content": "הגיעו לשם כמה דברים, אבל השמות שלהם נמחקו מהפתקים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "התאימו שמות חפצים לתמונות, ואז כתבו באנגלית את המילה שפירושה מפתח.",
+          "content": "שם עצם הוא מילה שנותנת שם לאדם, לחיה, למקום או לדבר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "עזרו לי לזהות את הדברים, כדי שאוכל להכין את היריד.",
           "line_format": "plain_text"
         }
       ]
@@ -4409,19 +4415,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "עבודה טובה! עכשיו ברור ש־fix ו־open הן פעולות, ולא שמות של אנשים.",
+          "content": "תודה. עכשיו אני יודע איך להמשיך בבנייה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "הסדן התעורר, אבל Painter אומרת שכל הציורים נראים אותו דבר.",
+          "content": "הציירת Painter מכינה את השלטים ליריד, אבל קשה לה לתאר אותם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "לכו אליה ליד The Sunspire Tree והשיבו לממלכה את מילות התיאור.",
+          "content": "לכו אליה ותשאלו איך אפשר לעזור לה.",
           "line_format": "plain_text"
         }
       ]
@@ -4435,19 +4441,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הכלים שלי שלמים, אבל ה־verbs נעלמו מהפתקים. הפטיש שלי מנסה לתקן את עצמו.",
+          "content": "אני בונה את הדוכן, אבל פתקי העבודה התבלבלו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "צריך להחזיר לפעולות את האותיות החסרות, ואז לבנות משפט קצר שמסביר מה אני עושה.",
+          "content": "פועל הוא מילה שמספרת מה מישהו עושה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אחרי התרגול חזרו אליי. אם המשפט ברור, אפילו הסדן יפסיק לנחור.",
+          "content": "עזרו לי להבין את הפעולות, כדי שאספיק לסיים בזמן.",
           "line_format": "plain_text"
         }
       ]
@@ -4461,13 +4467,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "נהדר! adjectives כמו big, small, bright ו־dark שוב מתארים את הדברים הנכונים.",
+          "content": "נהדר. עכשיו השלטים ברורים וקל להבין אותם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "עכשיו נשאר לחבר שם, פעולה ותיאור במשפט אחד. Professor Crazy מחכה במגדל.",
+          "content": "פרופסור קרייזי Professor Crazy מכין את ההודעה שתשמע בתחילת היריד.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "לכו אליו ועזרו לו להכין אותה.",
           "line_format": "plain_text"
         }
       ]
@@ -4481,19 +4493,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הציורים שלי איבדו את ה־adjectives. כל עץ נראה גדול, קטן, בהיר וחשוך בבת אחת.",
+          "content": "אני מכינה שלטים צבעוניים ליריד.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "השלימו את האות החסרה במילות התיאור, ואז בנו משפט שמתאר דבר אחד בצורה ברורה.",
+          "content": "שם תואר הוא מילה שמתארת אדם, חיה, מקום או דבר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אם התיאור יהיה נכון, סוף סוף אדע איזה ציור למסור למלך.",
+          "content": "עזרו לי לבחור תיאורים ברורים, כדי שהילדים ימצאו כל דוכן.",
           "line_format": "plain_text"
         }
       ]
@@ -4507,19 +4519,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "בדרך אל המגדל חשוב שההודעה תהיה מובנת גם בלי לראות את המכונה.",
+          "content": "האורחים כבר מתקרבים, והם מחכים להודעה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "הקשיבו למשפט, אמרו אותו באנגלית בקול, ונסו שוב אם המיקרופון לא שמע בבירור.",
+          "content": "נעביר אותה בקול ברור, כדי שכולם יידעו שהיריד פתוח.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אחרי שתצליחו, חזרו אל Teacher Maya עם לוח היום המתוקן.",
+          "content": "אחר כך חזרו אל המורה מאיה Teacher Maya וספרו לה שהכול מוכן.",
           "line_format": "plain_text"
         }
       ]
@@ -4533,31 +4545,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הצלחתם להציל את היום הגרוע ביותר בממלכה! שמות, פעולות ותיאורים שוב עובדים יחד.",
+          "content": "עשיתם עבודה נהדרת. היריד יכול להתחיל.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "זיהיתם nouns, השתמשתם ב־verbs וב־adjectives, בניתם משפטים ואמרתם הודעה חדשה בקול.",
+          "content": "שמות, פעולות ותיאורים עזרו לכולם להבין את ההודעה.",
           "line_format": "plain_text"
         },
         {
           "locale": "en",
           "line_order": 2,
-          "content": "Words make sentences, and sentences make the kingdom work.",
+          "content": "Words make sentences, and sentences help people understand.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
-          "content": "מילים יוצרות משפטים, ומשפטים עוזרים לממלכה לפעול.",
+          "content": "מילים יוצרות משפטים, ומשפטים עוזרים לאנשים להבין.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "כל הכבוד! קבלו 10 מטבעות על ההצלה.",
+          "content": "כל הכבוד! הנה 50 מטבעות בשבילכם.",
           "line_format": "plain_text"
         }
       ]
@@ -4571,13 +4583,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "המשפטים מסודרים! המכונה מצאה שוב מי עושה מה ואיזה דבר מתואר.",
+          "content": "ההודעה מוכנה. עכשיו כולם יוכלו להבין אותה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "קחו את ההודעה אל Mountain Guide ב־TowerOfLostVigil. הוא יבדוק את ההגייה.",
+          "content": "מדריך ההרים Mountain Guide יעביר אותה בקול לאורחים שבדרך.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "לכו אליו כדי שהיריד יוכל להתחיל.",
           "line_format": "plain_text"
         }
       ]
@@ -4591,19 +4609,19 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "המכונה שלי הדפיסה את לוח היום, אבל היא ערבבה nouns, verbs ו־adjectives.",
+          "content": "אני מכין הודעה לאורחים, אבל המילים התערבבו.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "בנו שני משפטי חירום חדשים לפי התרגום בעברית. אם המשפטים ברורים, הממלכה תבין אותם.",
+          "content": "הודעה ברורה צריכה שמות של דברים, פעולות ותיאורים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אחר כך Mountain Guide יבדוק אם אפשר לומר את ההודעה בקול בלי שהמכונה תתפוצץ.",
+          "content": "עזרו לי לסדר אותה, כדי שכל הילדים יבינו לאן ללכת.",
           "line_format": "plain_text"
         }
       ]
@@ -10714,7 +10732,7 @@
       ],
       "target": "bright",
       "variant": "word_spelling",
-      "success": "BRIGHT נכתב נכון; Painter יכולה להבדיל בין אור לצל.",
+      "success": "BRIGHT נכתב נכון; הציירת Painter יכולה להבדיל בין אור לצל.",
       "minigame_id": "letter_ordering",
       "params": {
         "prompt": "כתבו באנגלית את המילה שפירושה בהיר.",
@@ -10875,7 +10893,7 @@
       ],
       "target": "The tree is big.",
       "variant": "sentence_building",
-      "success": "התיאור ברור; Painter יודעת איזה עץ לצייר.",
+      "success": "התיאור ברור; הציירת Painter יודעת איזה עץ לצייר.",
       "minigame_id": "word_ordering",
       "params": {
         "prompt": "בנו את המשפט לפי התרגום בעברית: העץ גדול.",
@@ -17319,8 +17337,8 @@
       "theme": "Practice nouns, verbs, adjectives, sentence building, and speaking with clear Hebrew guidance and essential English.",
       "default_giver_external_id": "teacher_maya",
       "status": "draft",
-      "level_min": 7,
-      "level_max": 8,
+      "level_min": 1,
+      "level_max": 50,
       "source_path": "questlines\\the_kingdoms_worst_day\\_index.yaml",
       "source_metadata": {
         "source_status": null,
@@ -17333,7 +17351,7 @@
           "key": "the_kingdoms_worst_day__q01_what_is_missing",
           "position": 0,
           "name": "What Is Missing?",
-          "level_required": 7,
+          "level_required": 50,
           "giver_external_id": "City Gaurd Info",
           "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
           "wait_for_npc_turn_in": false,
@@ -17451,7 +17469,7 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q01_what_is_missing",
               "name": "What Is Missing?",
-              "level_required": 7,
+              "level_required": 50,
               "giver_npc": "City Gaurd Info",
               "prerequisite": null,
               "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
@@ -17463,7 +17481,7 @@
           "key": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
           "position": 1,
           "name": "Nobody Is Doing Their Job",
-          "level_required": 7,
+          "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
           "wait_for_npc_turn_in": false,
@@ -17583,7 +17601,7 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
               "name": "Nobody Is Doing Their Job",
-              "level_required": 7,
+              "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "the_kingdoms_worst_day__q01_what_is_missing",
               "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
@@ -17595,9 +17613,9 @@
           "key": "the_kingdoms_worst_day__q03_royal_description_disaster",
           "position": 2,
           "name": "The Royal Description Disaster",
-          "level_required": 7,
+          "level_required": 1,
           "giver_external_id": "Painter",
-          "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
+          "summary": "השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
           "status": "complete",
@@ -17734,10 +17752,10 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q03_royal_description_disaster",
               "name": "The Royal Description Disaster",
-              "level_required": 7,
+              "level_required": 1,
               "giver_npc": "Painter",
               "prerequisite": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
-              "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
+              "summary": "השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -17746,7 +17764,7 @@
           "key": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
           "position": 3,
           "name": "Save the Royal Schedule",
-          "level_required": 8,
+          "level_required": 1,
           "giver_external_id": "Professor Crazy",
           "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
           "wait_for_npc_turn_in": false,
@@ -17912,7 +17930,7 @@
               "reward_type": "item",
               "xp_amount": null,
               "item_external_id": "coin",
-              "amount": 10,
+              "amount": 50,
               "source_metadata": {
                 "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
               }
@@ -17924,7 +17942,7 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
               "name": "Save the Royal Schedule",
-              "level_required": 8,
+              "level_required": 1,
               "giver_npc": "Professor Crazy",
               "prerequisite": "the_kingdoms_worst_day__q03_royal_description_disaster",
               "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
@@ -18830,7 +18848,7 @@
     "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 83,
-    "dialogue_lines": 278,
+    "dialogue_lines": 281,
     "minigame_instances": 169,
     "questlines": 8,
     "quests": 38,
@@ -24038,7 +24056,7 @@
           "key": "the_kingdoms_worst_day__q01_what_is_missing",
           "position": 0,
           "name": "What Is Missing?",
-          "level_required": 7,
+          "level_required": 50,
           "giver_external_id": "City Gaurd Info",
           "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
           "wait_for_npc_turn_in": false,
@@ -24156,7 +24174,7 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q01_what_is_missing",
               "name": "What Is Missing?",
-              "level_required": 7,
+              "level_required": 50,
               "giver_npc": "City Gaurd Info",
               "prerequisite": null,
               "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
@@ -24168,7 +24186,7 @@
           "key": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
           "position": 1,
           "name": "Nobody Is Doing Their Job",
-          "level_required": 7,
+          "level_required": 1,
           "giver_external_id": "Blacksmith",
           "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
           "wait_for_npc_turn_in": false,
@@ -24288,7 +24306,7 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
               "name": "Nobody Is Doing Their Job",
-              "level_required": 7,
+              "level_required": 1,
               "giver_npc": "Blacksmith",
               "prerequisite": "the_kingdoms_worst_day__q01_what_is_missing",
               "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
@@ -24300,9 +24318,9 @@
           "key": "the_kingdoms_worst_day__q03_royal_description_disaster",
           "position": 2,
           "name": "The Royal Description Disaster",
-          "level_required": 7,
+          "level_required": 1,
           "giver_external_id": "Painter",
-          "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
+          "summary": "השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
           "status": "complete",
@@ -24439,10 +24457,10 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q03_royal_description_disaster",
               "name": "The Royal Description Disaster",
-              "level_required": 7,
+              "level_required": 1,
               "giver_npc": "Painter",
               "prerequisite": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
-              "summary": "השלימו מילות תיאור ועזרו לציירת לתאר את החפצים.",
+              "summary": "השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.",
               "wait_for_npc_turn_in": false
             }
           }
@@ -24451,7 +24469,7 @@
           "key": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
           "position": 3,
           "name": "Save the Royal Schedule",
-          "level_required": 8,
+          "level_required": 1,
           "giver_external_id": "Professor Crazy",
           "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
           "wait_for_npc_turn_in": false,
@@ -24617,7 +24635,7 @@
               "reward_type": "item",
               "xp_amount": null,
               "item_external_id": "coin",
-              "amount": 10,
+              "amount": 50,
               "source_metadata": {
                 "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
               }
@@ -24629,7 +24647,7 @@
             "source_detail": {
               "id": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
               "name": "Save the Royal Schedule",
-              "level_required": 8,
+              "level_required": 1,
               "giver_npc": "Professor Crazy",
               "prerequisite": "the_kingdoms_worst_day__q03_royal_description_disaster",
               "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
@@ -25520,5 +25538,5 @@
       ]
     }
   ],
-  "source_digest": "6e7b30c7fd8aeb29b367b80d287422001d7a99b75b9b66e23c9f596586c8527f"
+  "source_digest": "0985fd9885939913cd454a743c8509374a7439e9fd9af370b9557b64fac70511"
 }
