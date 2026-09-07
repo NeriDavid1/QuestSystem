@@ -24,6 +24,23 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Dialogue text must not use the em dash `—`. Use a short hyphen `-` when a separator is needed, with spaces around it.
 - Creator checks these rules while authoring; QA scans every learner-facing dialogue line before approving the questline.
 
+## Child-friendly story dialogue
+
+- Dialogue must be short, natural, and easy for a child to understand. Use familiar everyday words and concrete reasons for the learner to help.
+- Dialogue must match the actual quest flow and the available mini-games. The learner should understand why they are helping and what broad direction to follow, without receiving a detached list of game instructions.
+- Do not make an NPC explain the exact mini-game, answer, button, object name, or step-by-step task that the learner is about to perform. The mini-game screen gives those instructions.
+- Use dialogue to motivate and guide the learner naturally. Say that a needed item or clue is somewhere relevant when appropriate, but do not turn the conversation into a walkthrough of the next interaction.
+- Avoid forced jokes, impossible behavior, or objects acting like people when that does not support the story. Prefer believable situations that a child can follow.
+- Introduce an unfamiliar grammar or vocabulary idea briefly before its first practice. Explain what the idea means in simple language, then let the mini-game provide the practice.
+- Keep each dialogue block focused on one idea. Remove repeated explanations and unnecessary exposition.
+
+## Questline level pattern
+
+- The first quest in every questline, identified by quest order, must be level 50.
+- Every quest after the first must be level 1.
+- Apply this pattern consistently in the questline index and in each quest's level requirement field. The first quest must be `level: 50` / `level_required: 50`; all later quests must be `level: 1` / `level_required: 1`, according to the applicable schema.
+- QA must reject a questline when the first quest or any later quest does not follow this pattern.
+
 ## Word Matching
 
 - Every `word_matching` instance must define `params.letters` as the available letter tiles. Each tile has a stable `id` and its single-letter `value`.

@@ -30,6 +30,13 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Write all Hebrew learner-facing text in simple, child-friendly language. Prefer short, concrete sentences and explain unfamiliar words; never use vague or formal wording that hides the intended meaning, and do not substitute Russian for the Hebrew text.
 - Introduce each new grammar topic before practice: add a short, clear explanation of what the forms mean and when to use them. For example, before practising verb to be, explain that he/she/it use “is” and we/you/they use “are”.
 - Sequence the learning across the questline: teach and reinforce one sub-skill at a time, introduce the next only after the previous one is practised, and reserve mixed review of all sub-skills for a later/final quest.
+- Write dialogue as a short, human conversation for children: use familiar words, a believable reason to help, and one clear idea per dialogue block.
+- Make the dialogue fit the real quest and mini-game flow. Give the learner a natural broad direction, but do not explain the exact mini-game, answer, button, object name, or step-by-step action that the next screen will ask for.
+- Let the mini-game explain its own interaction. Dialogue should provide story context and motivation, not act as a detached walkthrough.
+- Avoid forced jokes, impossible object behavior, and confusing pretend situations. Keep the story concrete and believable for the learner's age.
+- Explain a new grammar or vocabulary idea briefly before its first practice, using simple language. Do not make the explanation long or repeat it in every quest.
+- Keep all dialogue concise and remove repeated or unnecessary exposition.
+- Set the first quest in every questline to level 50. Set every subsequent quest to level 1. Apply the same values to the questline index and the individual quest level requirement fields supported by the schema.
 - Do not add UI buttons or importer workarounds without a separate request.
 
 ## Required checks
@@ -39,6 +46,8 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Check quest-giver distribution across the line: avoid the same giver for consecutive quests when a suitable registered alternative exists, while preserving story logic and valid NPC handoffs.
 - Check minigame sequences for unnecessary identical consecutive instances; repetition is acceptable only when the approved plan gives a clear learning or story reason.
 - Implement the approved sub-skill order; do not introduce mixed review before each component has been practised.
+- Verify the dialogue against the child-friendly story rules: natural motivation, clear broad direction, alignment with the actual mini-game flow, no step-by-step mini-game instructions, no forced or confusing fantasy behavior, and concise blocks.
+- Verify the progression levels: the first quest by order is level 50, and every other quest is level 1, in both the index and individual quest level requirement fields.
 - Verify Word Matching `letters`, `wordTasks`, missing indices, fragments, compact pools, unique tile IDs, and independent deterministic shuffling.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the approved brief; do not reveal answers in learner-facing instructions.
 - For Word Ordering, ensure valid `preFilledIndices`, complete Hebrew translation when one word is open, and unique runtime choices with the correct word exactly once.

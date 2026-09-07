@@ -25,6 +25,10 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Dialogue and steps: no unnecessary talk_to_npc appears between the opening dialogue and the first active task; the ending closes the story and gives the next direction.
 - Dialogue duplication: an opening NPC dialogue is not repeated in an immediate `talk_to_npc` step; any additional Talk to NPC step must be a distinct, story-required conversation.
 - Dialogue readability: no dialogue block is overloaded; every English sentence has a complete Hebrew translation in the same block, and final-quest reward/congratulation text is a separate clear closing block.
+- Child-friendly story dialogue: verify that conversations are short, natural, concrete, and understandable for the target age; each block has one clear idea and a believable reason for the learner to help.
+- Dialogue-to-game alignment: verify that dialogue gives story context and a broad direction that matches the real quest flow, while the mini-game screen remains responsible for the exact interaction, answer, button, object name, and step-by-step task.
+- Dialogue restraint: reject dialogue that acts as a detached walkthrough, repeats the mini-game instructions, uses forced jokes or confusing impossible behavior, or delays the first necessary grammar/vocabulary explanation until after practice.
+- Questline level pattern: identify the first quest by its order in the questline and verify level 50. Verify that every later quest is level 1. Check both the questline index and each individual quest's level requirement field; any mismatch is a FAIL.
 - Completion flow: a final quest gives its reward immediately and ends with thanks/praise; it must not send the learner to another NPC for a reward or continuation. Any NPC handoff must lead to a real next quest.
 - Reach Location: flag any `reach_location` step that was not explicitly requested by the user. Do not validate assumed monster combat or drop flows before those systems exist.
 - Variety: no long run of one minigame type; distribution is reproducible and aligned with the learning objective.
