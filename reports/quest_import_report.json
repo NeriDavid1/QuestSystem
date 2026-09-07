@@ -1,11 +1,11 @@
 {
   "importer_version": "1.0.0",
-  "source_digest": "fc48255bc8615db7081f75563b62abe2faaba895c14a47fdb49e241d073a5e80",
+  "source_digest": "6e7b30c7fd8aeb29b367b80d287422001d7a99b75b9b66e23c9f596586c8527f",
   "counts": {
     "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 83,
-    "dialogue_lines": 289,
+    "dialogue_lines": 278,
     "minigame_instances": 169,
     "questlines": 8,
     "quests": 38,
