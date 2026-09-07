@@ -6,11 +6,11 @@ questline:
   quest_count: 4
   level_range:
     - 1
-    - 1
+    - 50
 quests:
   - id: q01_numbers_10_20
     name: "Numbers 10-20: המספרים 10-20"
-    level: 1
+    level: 50
     prerequisite: null
     rewards: { xp: 100, items: [{ id: coin, amount: 1 }] }
   - id: q02_numbers_20_100

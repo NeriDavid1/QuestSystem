@@ -2026,60 +2026,60 @@
       "lines": [
         "אוי לא! מפת המספרים שלי התפרקה, ואני לא מצליח לסדר את החלק הראשון.",
         "החלק הראשון מכיל את המספרים 10 עד 20. תעזרו לי למצוא את המילים החסרות.",
-        "קראו כל הוראה בעברית ובצעו אותה במשחק."
+        "המספרים התפזרו, ואני צריך את עזרתכם כדי להחזיר אותם למפה."
       ]
     },
     "numbers_advanced_q01_finish": {
       "speaker": "Little Boy",
       "lines": [
         "יש! החלק הראשון של המפה חזר למקום. עכשיו אני יודע לקרוא 10 עד 20.",
-        "קחו את המפה לאיכר בשוק. הוא צריך עזרה עם טווח המספרים הבא."
+        "האיכר Farmer מחכה בשוק עם חלק נוסף של המפה. לכו אליו."
       ]
     },
     "numbers_advanced_q02_start": {
       "speaker": "Farmer",
       "lines": [
-        "ברוכים הבאים לשוק. הרוח פיזרה את שלטי העשרות בין הדוכנים.",
-        "סדרו את המספרים מ־20 עד 100, כדי שכל קונה ימצא את הדוכן הנכון.",
-        "המשימות בעברית, ובכל פעם נתרגל רק מילה או משפט קצר באנגלית."
+        "השלטים בשוק התבלבלו, והקונים לא יודעים איזה מספר שייך לכל מקום.",
+        "המספרים מ־20 עד 100 צריכים לחזור למפה.",
+        "עזרו לי להחזיר סדר לשוק."
       ]
     },
     "numbers_advanced_q02_finish": {
       "speaker": "Farmer",
       "lines": [
         "מצוין! השוק מסודר, והשלטים של 20 עד 100 ברורים לכולם.",
-        "קחו את המפה לפרופסור קרייזי במגדל. הוא מחכה לחלק הגדול האחרון."
+        "פרופסור קרייזי Professor Crazy מחכה במגדל עם החלק האחרון. לכו אליו."
       ]
     },
     "numbers_advanced_q03_start": {
       "speaker": "Professor Crazy",
       "lines": [
-        "הגעתם בזמן. במגדל נשאר החלק האחרון של המפה: 100 עד 1000.",
-        "תרגלו מספרים גדולים בכתיבה, בסידור ובדיבור באנגלית.",
-        "עבדו לאט ובדקו כל מילה לפני שאתם ממשיכים."
+        "החלק הגדול של המפה הגיע אליי.",
+        "אבל המספרים מ־100 עד 1000 עדיין חסרים.",
+        "עזרו לי להשלים את המפה."
       ]
     },
     "numbers_advanced_q03_finish": {
       "speaker": "Professor Crazy",
       "lines": [
         "הצלחתם! מפת המספרים שלמה, ואתם יכולים לקרוא מספרים מ־10 עד 1000.",
-        "עכשיו חזרו למורה מאיה. היא תיתן לכם את אתגר הסיום."
+        "מורה מאיה Teacher Maya מחכה לכם עם האתגר האחרון. לכו אליה."
       ]
     },
     "numbers_advanced_q04_start": {
       "speaker": "teacher_maya",
       "lines": [
         "כל הכבוד! שלושת חלקי המפה הגיעו אליי. עכשיו נחבר אותם לאתגר אחד.",
-        "תרגלו מספרים מ־10 עד 20, מ־20 עד 100 ומ־100 עד 1000.",
-        "בסוף אמרו את המספר האחרון באנגלית בקול וחזרו אליי."
+        "בואו נבדוק שכל חלקי המפה ברורים.",
+        "כשתסיימו, חזרו אליי."
       ]
     },
     "numbers_advanced_q04_finish": {
       "speaker": "teacher_maya",
       "lines": [
-        "כל הכבוד! חיברתם את כל חלקי המפה והשלמתם את שיעורי הבית.",
-        "תרגלתם כתיבה, סידור ודיבור באנגלית ממספרים קטנים ועד 1000.",
-        "קבלו 10 מטבעות. עבודה מעולה!"
+        "תודה על העזרה! עזרתם לי מאוד.",
+        "עכשיו מפת המספרים מוכנה.",
+        "קבלו 10 מטבעות."
       ]
     },
     "the_kingdoms_worst_day_q01_fenn_start": {
@@ -8249,7 +8249,7 @@
       "theme": "Practice reading, spelling, ordering, and saying numbers from 10 to 1000 with clear Hebrew guidance",
       "levelRange": [
         1,
-        1
+        50
       ],
       "questCount": 4,
       "npcId": "Little Boy",
@@ -8265,7 +8265,7 @@
         {
           "id": "q01_numbers_10_20",
           "name": "Numbers 10-20: המספרים 10-20",
-          "level": 1,
+          "level": 50,
           "prerequisite": null,
           "summary": "עזרו לליטל בוי לתקן את מפת המספרים מ־10 עד 20.",
           "giver_npc": "Little Boy",
@@ -8366,7 +8366,7 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: ארבע עשרה.",
                 "tasks": [
                   "fourteen"
                 ],
@@ -8374,7 +8374,7 @@
                 "variant": "single_word",
                 "success": "נשמע טוב! FOURTEEN נקלט.",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: ארבע עשרה.",
                   "targetWords": [
                     "fourteen"
                   ],
@@ -8467,7 +8467,7 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: עשרים.",
                 "tasks": [
                   "twenty"
                 ],
@@ -8475,7 +8475,7 @@
                 "variant": "single_word",
                 "success": "נכון! TWENTY נקלט.",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: עשרים.",
                   "targetWords": [
                     "twenty"
                   ],
@@ -8672,7 +8672,7 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: ארבעים.",
                 "tasks": [
                   "forty"
                 ],
@@ -8680,7 +8680,7 @@
                 "variant": "single_word",
                 "success": "נכון! FORTY נקלט.",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: ארבעים.",
                   "targetWords": [
                     "forty"
                   ],
@@ -8742,7 +8742,7 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: שבעים.",
                 "tasks": [
                   "seventy"
                 ],
@@ -8750,7 +8750,7 @@
                 "variant": "single_word",
                 "success": "נכון! SEVENTY נקלט.",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: שבעים.",
                   "targetWords": [
                     "seventy"
                   ],
@@ -8956,16 +8956,16 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות.",
                 "tasks": [
                   "three",
                   "hundred"
                 ],
                 "target": "three hundred",
-                "variant": "single_word",
+                "variant": "short_phrase",
                 "success": "נכון! THREE HUNDRED נקלט.",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות.",
                   "targetWords": [
                     "three hundred"
                   ],
@@ -9032,17 +9032,17 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע.",
                 "tasks": [
                   "nine",
                   "hundred",
                   "ninety-nine"
                 ],
                 "target": "nine hundred ninety-nine",
-                "variant": "single_word",
+                "variant": "short_phrase",
                 "success": "נכון! 999 נקלט.",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע.",
                   "targetWords": [
                     "nine hundred ninety-nine"
                   ],
@@ -9215,15 +9215,15 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות.",
                 "tasks": [
                   "three hundred"
                 ],
                 "target": "three hundred",
-                "variant": "single_word",
+                "variant": "short_phrase",
                 "success": "נשמע טוב!",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות.",
                   "targetWords": [
                     "three hundred"
                   ],
@@ -9290,15 +9290,15 @@
               "display_text": "אמרו את המספר הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
-                "instruction": "אמרו את המספר הבא באנגלית בקול.",
+                "instruction": "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע.",
                 "tasks": [
                   "nine hundred ninety-nine"
                 ],
                 "target": "nine hundred ninety-nine",
-                "variant": "single_word",
+                "variant": "short_phrase",
                 "success": "נשמע מצוין!",
                 "params": {
-                  "prompt": "אמרו את המספר הבא באנגלית בקול.",
+                  "prompt": "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע.",
                   "targetWords": [
                     "nine hundred ninety-nine"
                   ],

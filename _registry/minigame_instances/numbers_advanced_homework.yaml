@@ -37,14 +37,14 @@ instances:
       distractorWords: [eleven, nineteen]
   numbers_q01_say_fourteen:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: ארבע עשרה."
     tasks:
     - fourteen
     target: fourteen
     variant: single_word
     success: נשמע טוב! FOURTEEN נקלט.
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: ארבע עשרה."
       targetWords:
       - fourteen
       targetPhrase: fourteen
@@ -93,14 +93,14 @@ instances:
       distractorWords: [thirteen, nineteen]
   numbers_q01_say_twenty:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: עשרים."
     tasks:
     - twenty
     target: twenty
     variant: single_word
     success: נכון! TWENTY נקלט.
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: עשרים."
       targetWords:
       - twenty
       targetPhrase: twenty
@@ -169,14 +169,14 @@ instances:
       distractorWords: [twenty-five, forty-five]
   numbers_q02_say_forty:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: ארבעים."
     tasks:
     - forty
     target: forty
     variant: single_word
     success: נכון! FORTY נקלט.
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: ארבעים."
       targetWords:
       - forty
       targetPhrase: forty
@@ -223,14 +223,14 @@ instances:
       distractorWords: [fifty-two, seventy-two]
   numbers_q02_say_seventy:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: שבעים."
     tasks:
     - seventy
     target: seventy
     variant: single_word
     success: נכון! SEVENTY נקלט.
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: שבעים."
       targetWords:
       - seventy
       targetPhrase: seventy
@@ -304,15 +304,15 @@ instances:
       distractorWords: [three, four]
   numbers_q03_say_three_hundred:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות."
     tasks:
     - three
     - hundred
     target: three hundred
-    variant: single_word
+    variant: short_phrase
     success: נכון! THREE HUNDRED נקלט.
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות."
       targetWords:
       - three hundred
       targetPhrase: three hundred
@@ -366,16 +366,16 @@ instances:
       distractorWords: [six, eight]
   numbers_q03_say_nine_hundred_ninety_nine:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע."
     tasks:
     - nine
     - hundred
     - ninety-nine
     target: nine hundred ninety-nine
-    variant: single_word
+    variant: short_phrase
     success: נכון! 999 נקלט.
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע."
       targetWords:
       - nine hundred ninety-nine
       targetPhrase: nine hundred ninety-nine
@@ -448,14 +448,14 @@ instances:
       customDistractors: []
   numbers_q04_say_three_hundred:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות."
     tasks:
     - three hundred
     target: three hundred
-    variant: single_word
+    variant: short_phrase
     success: נשמע טוב!
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: שלוש מאות."
       targetWords:
       - three hundred
       targetPhrase: three hundred
@@ -489,14 +489,14 @@ instances:
       distractorWords: [three, nine]
   numbers_q04_say_nine_hundred_ninety_nine:
     minigame_id: speak_aloud
-    instruction: אמרו את המספר הבא באנגלית בקול.
+    instruction: "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע."
     tasks:
     - nine hundred ninety-nine
     target: nine hundred ninety-nine
-    variant: single_word
+    variant: short_phrase
     success: נשמע מצוין!
     params:
-      prompt: אמרו את המספר הבא באנגלית בקול.
+      prompt: "אמרו את המספר הבא באנגלית בקול. פירושו: תשע מאות תשעים ותשע."
       targetWords:
       - nine hundred ninety-nine
       targetPhrase: nine hundred ninety-nine
