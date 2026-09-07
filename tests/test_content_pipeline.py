@@ -30,7 +30,7 @@ class ContentPipelineTests(unittest.TestCase):
                 "catalog_entries": 177,
                 "step_type_definitions": 6,
                 "dialogues": 83,
-                "dialogue_lines": 265,
+                "dialogue_lines": 289,
                 "minigame_instances": 169,
                 "questlines": 8,
                 "quests": 38,

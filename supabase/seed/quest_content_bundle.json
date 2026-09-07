@@ -3407,19 +3407,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "יש! ה־book שוב הוא book, וה־table שוב עומד על ארבע רגליים.",
+          "content": "חזרתם! עכשיו הדפים כבר נראים הרבה יותר טוב.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "קחו את ה־Gem ל־Little Boy. הוא מצא שק של חפצים עם שמות שבורים.",
+          "content": "הספר שוב יודע להבדיל בין boy, table, park ו cat.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "תודה, noun-repair hero! בלי עזרה, הייתי קוראת לעצמי toaster.",
+          "content": "איזה מזל שעזרתם לי. בלעדיכם הוא היה קורא לכל דבר toaster.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "ליד השער מחכה ילד שמצא עוד שמות מבולבלים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "קחו את ה Gem אליו. אולי הסיפור שלו יעזור לנו לתקן את הספר.",
           "line_format": "plain_text"
         }
       ]
@@ -3433,19 +3445,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "אוי לא! ספר התיקון התפרק, ושמות החפצים נעלמו מהתוויות.",
+          "content": "אוי לא! ספר המילים שלי נפתח באמצע הלילה, ושמות העצם נעלמו מהעמודים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "חפשו את המילים החסרות, השלימו אותיות ובנו משפט קצר.",
+          "content": "עכשיו הספר מלא בתמונות בלי שמות, ואף אחד לא יודע מה הוא רואה.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אחרי שתסיימו, הביאו לי Gem. אחר כך אשלח אתכם ל־Little Boy.",
+          "content": "אני צריכה עזרה להחזיר לספר את השמות של אנשים, מקומות, חפצים וחיות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "הדפים מחכים במקום שבו נשמרו הדברים שאבדו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "אחרי שתסיימו, חזרו אליי עם מה שמצאתם.",
           "line_format": "plain_text"
         }
       ]
@@ -3459,19 +3483,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "מצאתם הכול! ה־dog הפסיק לנבוח על ה־pencil. זה הישג גדול.",
+          "content": "יש! עכשיו התיק שלי מספר את האמת.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "קחו את ה־Power Stone ל־Farmer. בשוק שלו apple ו־bread החליפו תוויות.",
+          "content": "ה dog כבר לא מתחבא מאחורי ה pencil, וה bag שוב נראה כמו תיק.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "תודה! עכשיו ה־bag שלי מכיל חפצים, לא שמות של חיות.",
+          "content": "קחו את ה Power Stone לחקלאי בשוק.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "הוא אמר שגם אצלו השמות התחלפו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "אולי הפעם apple לא ינסה להתחפש ל banana.",
           "line_format": "plain_text"
         }
       ]
@@ -3485,19 +3521,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "השק שלי ברח והשאיר אחריו תוויות שבורות.",
+          "content": "שלום! התיק שלי חזר, אבל השמות שהיו עליו עדיין מבולבלים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "תקנו שמות של חפצים וחיות, ובנו משפט קצר באנגלית.",
+          "content": "לפעמים אני מסתכל על דבר ולא יודע איך קוראים לו באנגלית.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "מצאו את השמות, קבלו Power Stone וחזרו אליי. אז נלך ל־Farmer בשוק.",
+          "content": "אני רוצה שכל דבר יחזור לשם הנכון שלו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "מה שנשאר מהתיק מחכה ליד העגלה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "כשתחזרו, ספרו לי מה הצלחתם להציל.",
           "line_format": "plain_text"
         }
       ]
@@ -3511,19 +3559,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "השוק ניצל! עכשיו כולם יודעים ש־apple הוא פרי ו־bread הוא אוכל.",
+          "content": "מצוין! עכשיו כולם יודעים ש apple הוא פרי ו bread הוא אוכל.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "קחו את ה־Ancient Rune ל־Old Woman. במטבח שלה ה־spoon כנראה מנהל את הטבח.",
+          "content": "הקונים שוב מוצאים את מה שחיפשו, ואף אחד לא חוזר הביתה עם hammer במקום banana.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "תודה! היום אף אחד לא יקנה hammer ויגלה בבית banana.",
+          "content": "קחו את ה Ancient Rune לאישה הזקנה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "במטבח שלה קרה בלבול גדול עוד יותר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "אולי תוכלו להחזיר גם לשם קצת סדר.",
           "line_format": "plain_text"
         }
       ]
@@ -3537,19 +3597,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "ברוכים הבאים לשוק! התוויות התבלבלו, והלקוחות כבר לא יודעים מה הם קונים.",
+          "content": "ברוכים הבאים לשוק. היום הלקוחות מסתכלים על השלטים ולא מבינים מה לקנות.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "תקנו שמות של פירות, אוכל וכלי עבודה. בבקשה אל תאכלו את השלטים.",
+          "content": "פירות, אוכל וכלי עבודה קיבלו שמות לא נכונים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אחרי שתצליחו, קבלו Ancient Rune וחזרו אליי. Old Woman מחכה במטבח.",
+          "content": "אני צריך שהשוק יחזור להיות מקום פשוט וברור.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "הדברים שמחכים לתיקון נמצאים ליד הדוכן.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "אחרי שתעזרו לי, חזרו עם החדשות.",
           "line_format": "plain_text"
         }
       ]
@@ -3563,19 +3635,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "ה־spoon חזר לערבב, ה־chef חזר לבשל, וה־plate הפסיק לתת פקודות.",
+          "content": "איזה יופי! עכשיו ה chef מבשל, ה spoon מערבב וה plate נח בשקט.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "קחו את ה־Gem ל־Professor Crazy. הוא מצא את התוויות של הארמון.",
+          "content": "המטבח שוב מרגיש כמו בית.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "תודה! הכנתי עוגה. אני מקווה שהמילה cake לא תתחפש ל־castle.",
+          "content": "קחו את ה Gem לפרופסור המשוגע.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "הוא אחראי לבלגן הבא, אבל אולי יש לו הסבר טוב.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "רק תיזהרו. המדע שלו אוהב הפתעות.",
           "line_format": "plain_text"
         }
       ]
@@ -3589,19 +3673,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "במטבח התוויות התחלפו, ועכשיו אף אחד לא יודע מי עושה מה.",
+          "content": "אוי, איזה בלגן! במטבח שלי כל השמות קפצו ממקום למקום.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "תקנו את שמות הכלים והאנשים. היזהרו: קסם מוזר מסתובב במטבח.",
+          "content": "ה spoon מתנהג כאילו הוא הטבח, וה plate מחלק פקודות.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "קבלו Gem, חזרו אליי, ואז לכו ל־Professor Crazy בארמון.",
+          "content": "אפילו האנשים במטבח כבר לא בטוחים איך קוראים להם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "אני רק רוצה שהמטבח יחזור להיות שקט ונעים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "כשתסיימו, חזרו אליי. יהיה לי משהו בשבילכם.",
           "line_format": "plain_text"
         }
       ]
@@ -3615,19 +3711,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "מושלם! ה־queen יושבת על ה־throne, וה־crown שוב על הראש ולא על האף.",
+          "content": "נפלא! ה queen שוב יושבת על ה throne, וה crown חזר לראש.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "קחו את ה־Power Stone ל־Maya. נשאר רק מבחן noun אחד.",
+          "content": "אפילו ה guard יודע עכשיו מי הוא.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "תודה! המדע מודה לכם. אני מודה לכם. ה־crown עדיין לא מודה לאף אחד.",
+          "content": "קחו את ה Power Stone למאיה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "היא שמרה את הדף האחרון של הספר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "נראה אם הספר מוכן להיפתח מחדש.",
           "line_format": "plain_text"
         }
       ]
@@ -3641,19 +3749,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "הניסוי הצליח! כלומר, הוא נכשל בצורה מצחיקה, וכל תוויות הארמון התחלפו.",
+          "content": "הניסוי שלי הצליח כמעט לגמרי. רק השמות בארמון עפו לכל הכיוונים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "תקנו את שמות המקומות, תפקידי הארמון והחפצים המלכותיים.",
+          "content": "עכשיו castle, tower, throne ו crown כבר לא יודעים מי הם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אחרי Power Stone אחד, חזרו אליי. אשלח אתכם למבחן הסיום אצל Maya.",
+          "content": "אם נחזיר לכל מקום ולכל תפקיד את השם הנכון, הארמון יחזור לעצמו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "השארתי את הדברים שצריכים עזרה במקום שבו עובדים על הסימנים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "אחרי שתסיימו, חזרו אליי עם ה Power Stone.",
           "line_format": "plain_text"
         }
       ]
@@ -3667,19 +3787,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "וואו! תיקנתם את כל השמות. אתם יודעים לזהות noun, לאיית אותו ולקרוא אותו.",
+          "content": "וואו! הספר נפתח, וכל השמות חזרו למקום שלהם.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "הספר נפתח, ה־cat קיבל שם, וה־table הפסיק לדרוש כתר.",
+          "content": "עכשיו אתם יודעים לזהות noun, לאיית אותו ולקרוא אותו באנגלית.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "תודה רבה! Noun Repair Shop פתוח. קחו את הפרס — והיזהרו מה־toaster.",
+          "content": "ה cat קיבל שם, ה table הפסיק לבקש כתר, והחנות יכולה להיפתח.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "תודה רבה, גיבורי המילים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "קחו את הפרס, ורק תיזהרו מה toaster.",
           "line_format": "plain_text"
         }
       ]
@@ -3693,19 +3825,31 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "חזרתם! כל חלקי הספר כאן. עכשיו נראה אם אתם באמת מכירים שמות עצם ולא רק מתקנים אותם.",
+          "content": "חזרתם בדיוק בזמן. כל חלקי הספר נמצאים כאן.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "תעברו מבחן קצר על אנשים, חפצים, מקומות וחיות. קראו כל מילה באנגלית בקול.",
+          "content": "הספר רוצה להכיר אתכם לפני שייפתח שוב בפני כל הילדים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "אם תצליחו, תחזירו לי את ה־Ancient Rune ונפתח מחדש את הסדנה.",
+          "content": "הוא יעבור איתכם על שמות של אנשים, חפצים, מקומות וחיות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "אחרי שתסיימו, חזרו אליי. ואז נוכל לפתוח מחדש את החנות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "אני מאמינה בכם. אתם כבר צוות תיקון מצוין.",
           "line_format": "plain_text"
         }
       ]
@@ -18752,7 +18896,7 @@
     "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 83,
-    "dialogue_lines": 265,
+    "dialogue_lines": 289,
     "minigame_instances": 169,
     "questlines": 8,
     "quests": 38,
@@ -25442,5 +25586,5 @@
       ]
     }
   ],
-  "source_digest": "3ab4555e806371094ac9f3dab0a07c3f4e3b78cacfc21c354d710e25e414b7f4"
+  "source_digest": "fc48255bc8615db7081f75563b62abe2faaba895c14a47fdb49e241d073a5e80"
 }
