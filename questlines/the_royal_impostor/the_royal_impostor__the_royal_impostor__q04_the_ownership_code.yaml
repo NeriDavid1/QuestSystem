@@ -1,0 +1,87 @@
+quest:
+  id: the_royal_impostor__the_royal_impostor__q04_the_ownership_code
+  name: "The Ownership Code"
+  level_required: 9
+  giver_npc: Blacksmith
+  prerequisite: the_royal_impostor__the_royal_impostor__q03_the_torn_testimony
+  summary: "כתבו את שש המילים באנגלית ופתחו את הקוד למבחן המלכותי."
+  wait_for_npc_turn_in: false
+
+rewards: { xp: 300, items: [] }
+
+steps:
+  - type: play_minigame
+    difficulty: 4
+    instance_id: the_royal_impostor__q04_spell_my
+    minigame_id: letter_ordering
+    display_text: "כתבו באנגלית את המילה לפי דברי המלך."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 5
+    instance_id: the_royal_impostor__q04_spell_your
+    minigame_id: letter_ordering
+    display_text: "כתבו באנגלית את המילה לפי דברי המלך אליכם."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 7
+    instance_id: the_royal_impostor__q04_my_your_checkpoint
+    minigame_id: word_ordering
+    display_text: "השלימו את הקוד של המלך והמפה שלכם."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 5
+    instance_id: the_royal_impostor__q04_spell_our
+    minigame_id: letter_ordering
+    display_text: "כתבו באנגלית את המילה לפי דברי השומרים."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 6
+    instance_id: the_royal_impostor__q04_spell_their
+    minigame_id: letter_ordering
+    display_text: "כתבו באנגלית את המילה כשאתם מספרים על קבוצה אחרת."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 9
+    instance_id: the_royal_impostor__q04_our_their_speech
+    minigame_id: speak_aloud
+    display_text: "אמרו את משפט הקוד על השומרים והחשודים באנגלית."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 4
+    instance_id: the_royal_impostor__q04_spell_his
+    minigame_id: letter_ordering
+    display_text: "כתבו באנגלית את המילה שמתאימה לדבר של ויל."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 4
+    instance_id: the_royal_impostor__q04_spell_her
+    minigame_id: letter_ordering
+    display_text: "כתבו באנגלית את המילה שמתאימה לדבר של הציירת."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 8
+    instance_id: the_royal_impostor__q04_his_her_checkpoint
+    minigame_id: word_ordering
+    display_text: "השלימו את הקוד של ויל והציירת."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: return_to_npc
+    npc_id: Blacksmith
+    dialogue_id: the_royal_impostor_q04_fenn_done

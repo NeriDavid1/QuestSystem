@@ -1,0 +1,59 @@
+quest:
+  id: the_royal_impostor__the_royal_impostor__q05_the_royal_test
+  name: "The Royal Test"
+  level_required: 9
+  giver_npc: "City Gaurd Info"
+  prerequisite: the_royal_impostor__the_royal_impostor__q04_the_ownership_code
+  summary: "השלימו את המבחן המלכותי וחשפו מי אינו יודע למי שייכים הדברים."
+  wait_for_npc_turn_in: false
+
+rewards: { xp: 400, items: [{ id: coin, amount: 10 }] }
+
+steps:
+  - type: play_minigame
+    difficulty: 8
+    instance_id: the_royal_impostor__q05_my_your_test
+    minigame_id: word_ordering
+    display_text: "השלימו שתי מילים במשפט שהמלך אומר לכם."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 9
+    instance_id: the_royal_impostor__q05_my_your_speech
+    minigame_id: speak_aloud
+    display_text: "אמרו באנגלית את המשפט שהמלך אומר לכם."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 8
+    instance_id: the_royal_impostor__q05_his_her_test
+    minigame_id: word_ordering
+    display_text: "השלימו שתי מילים במשפט על ויל ועל הציירת."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 9
+    instance_id: the_royal_impostor__q05_his_her_speech
+    minigame_id: speak_aloud
+    display_text: "אמרו את משפט העדים באנגלית בקול."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 9
+    instance_id: the_royal_impostor__q05_our_their_test
+    minigame_id: word_ordering
+    display_text: "השלימו את המשפט שהמלך אומר לשומרים."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: talk_to_npc
+    npc_id: "City Gaurd Info"
+    dialogue_id: the_royal_impostor_q05_fenn_checked
+
+  - type: return_to_npc
+    npc_id: "City Gaurd Info"
+    dialogue_id: the_royal_impostor_q05_fenn_done

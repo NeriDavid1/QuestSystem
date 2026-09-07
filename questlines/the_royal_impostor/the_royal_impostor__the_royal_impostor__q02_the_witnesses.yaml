@@ -1,0 +1,67 @@
+quest:
+  id: the_royal_impostor__the_royal_impostor__q02_the_witnesses
+  name: "The Witnesses"
+  level_required: 8
+  giver_npc: "Main Gate Gaurd 1"
+  prerequisite: the_royal_impostor__the_royal_impostor__q01_two_advisors
+  summary: "שנו את המילים כשמדברים על שני השומרים ועל ארוחת הצהריים."
+  wait_for_npc_turn_in: false
+
+rewards: { xp: 250, items: [] }
+
+steps:
+  - type: play_minigame
+    difficulty: 6
+    instance_id: the_royal_impostor__q02_our_sandwiches
+    minigame_id: word_ordering
+    display_text: "השלימו את המשפט של השומרים."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 6
+    instance_id: the_royal_impostor__q02_their_sandwiches
+    minigame_id: word_ordering
+    display_text: "ספרו על השומרים במשפט באנגלית."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 9
+    instance_id: the_royal_impostor__q02_lunch_report
+    minigame_id: speak_aloud
+    display_text: "אמרו את משפט ארוחת הצהריים באנגלית בקול."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: talk_to_npc
+    npc_id: "Main Gate Gaurd 2"
+    dialogue_id: the_royal_impostor_q02_garrick_witness
+
+  - type: play_minigame
+    difficulty: 6
+    instance_id: the_royal_impostor__q02_your_clue
+    minigame_id: word_ordering
+    display_text: "השלימו את המשפט לפי דבריו של השומר אליכם."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 6
+    instance_id: the_royal_impostor__q02_my_sandwiches
+    minigame_id: word_ordering
+    display_text: "השלימו את טענת החשוד בלי להחליט אם היא אמת."
+    world_object_id: Wooden_Cart1_Inside_Gate
+    success_required: true
+
+  - type: play_minigame
+    difficulty: 9
+    instance_id: the_royal_impostor__q02_lunch_warning
+    minigame_id: speak_aloud
+    display_text: "אמרו את האזהרה באנגלית בקול."
+    world_object_id: Exam_Table1_Outside_Gate
+    success_required: true
+
+  - type: return_to_npc
+    npc_id: "City Gaurd Info"
+    dialogue_id: the_royal_impostor_q02_fenn_clue

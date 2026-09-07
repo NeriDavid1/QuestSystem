@@ -1,47 +1,34 @@
 questline:
   id: the_royal_impostor
-  npc_id: City Gaurd Info
-  display_name: The Lost & Found Cart
-  theme: כינויי שייכות באנגלית - The Lost & Found Cart
+  npc_id: "City Gaurd Info"
+  display_name: "The Lost & Found Cart"
+  theme: "כינויי שייכות באנגלית - The Lost & Found Cart"
   quest_count: 5
-  level_range:
-    - 8
-    - 9
+  level_range: [8, 50]
+
 quests:
-  - id: the_royal_impostor__q01_two_advisors
-    name: Two Advisors
-    level: 8
+  - id: the_royal_impostor__the_royal_impostor__q01_two_advisors
+    name: "Two Advisors"
+    level: 50
     prerequisite: null
-    rewards:
-      xp: 200
-      items: []
-  - id: the_royal_impostor__q02_the_witnesses
-    name: The Witnesses
+    rewards: { xp: 200, items: [] }
+  - id: the_royal_impostor__the_royal_impostor__q02_the_witnesses
+    name: "The Witnesses"
     level: 8
-    prerequisite: the_royal_impostor__q01_two_advisors
-    rewards:
-      xp: 250
-      items: []
-  - id: the_royal_impostor__q03_the_torn_testimony
-    name: The Torn Testimony
+    prerequisite: the_royal_impostor__the_royal_impostor__q01_two_advisors
+    rewards: { xp: 250, items: [] }
+  - id: the_royal_impostor__the_royal_impostor__q03_the_torn_testimony
+    name: "The Torn Testimony"
     level: 9
-    prerequisite: the_royal_impostor__q02_the_witnesses
-    rewards:
-      xp: 250
-      items: []
-  - id: the_royal_impostor__q04_the_ownership_code
-    name: The Ownership Code
+    prerequisite: the_royal_impostor__the_royal_impostor__q02_the_witnesses
+    rewards: { xp: 250, items: [] }
+  - id: the_royal_impostor__the_royal_impostor__q04_the_ownership_code
+    name: "The Ownership Code"
     level: 9
-    prerequisite: the_royal_impostor__q03_the_torn_testimony
-    rewards:
-      xp: 300
-      items: []
-  - id: the_royal_impostor__q05_the_royal_test
-    name: The Royal Test
+    prerequisite: the_royal_impostor__the_royal_impostor__q03_the_torn_testimony
+    rewards: { xp: 300, items: [] }
+  - id: the_royal_impostor__the_royal_impostor__q05_the_royal_test
+    name: "The Royal Test"
     level: 9
-    prerequisite: the_royal_impostor__q04_the_ownership_code
-    rewards:
-      xp: 400
-      items:
-        - id: coin
-          amount: 10
+    prerequisite: the_royal_impostor__the_royal_impostor__q04_the_ownership_code
+    rewards: { xp: 400, items: [{ id: coin, amount: 10 }] }
