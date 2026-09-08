@@ -1,0 +1,17 @@
+quest:
+  id: nouns_festival__q04_things
+  name: "הדוכן המבולגן"
+  level_required: 1
+  giver_npc: Blacksmith
+  prerequisite: [nouns_festival__q02_festival, nouns_festival__q03_animals]
+  summary: "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל."
+  wait_for_npc_turn_in: false
+rewards: {xp: 50, items: [{id: copper_ring, amount: 1}]}
+steps:
+  - {type: talk_to_npc, npc_id: Blacksmith, dialogue_id: nouns_festival_q04_start}
+  - {type: play_minigame, npc_id: Blacksmith, difficulty: 1, instance_id: nouns_festival_q04_things, minigame_id: word_matching, world_object_id: Lost_Chest2_Driftgold_Bay}
+  - {type: talk_to_npc, npc_id: Blacksmith, dialogue_id: nouns_festival_q04_progress}
+  - {type: play_minigame, npc_id: Blacksmith, difficulty: 1, instance_id: nouns_festival_q04_bell, minigame_id: letter_ordering, world_object_id: Lost_Chest2_Driftgold_Bay}
+  - {type: play_minigame, npc_id: Blacksmith, difficulty: 1, instance_id: nouns_festival_q04_sentence, minigame_id: word_ordering, world_object_id: Lost_Chest2_Driftgold_Bay}
+  - {type: play_minigame, npc_id: Blacksmith, difficulty: 1, instance_id: nouns_festival_q04_speak, minigame_id: speak_aloud, world_object_id: Lost_Chest2_Driftgold_Bay}
+  - {type: talk_to_npc, npc_id: Blacksmith, dialogue_id: nouns_festival_q04_finish}

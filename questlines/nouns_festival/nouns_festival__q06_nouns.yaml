@@ -1,0 +1,19 @@
+quest:
+  id: nouns_festival__q06_nouns
+  name: "השלטים האחרונים"
+  level_required: 1
+  giver_npc: "Village Head"
+  prerequisite: [nouns_festival__q02_festival, nouns_festival__q03_animals, nouns_festival__q04_things, nouns_festival__q05_nouns]
+  summary: "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל."
+  wait_for_npc_turn_in: false
+rewards: {xp: 250, items: [{id: coin, amount: 36}]}
+steps:
+  - {type: talk_to_npc, npc_id: "Village Head", dialogue_id: nouns_festival_q06_start}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q06_rocket, minigame_id: word_ordering, world_object_id: Wooden_Cart1_Inside_Gate}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q06_island, minigame_id: word_ordering, world_object_id: Wooden_Cart1_Inside_Gate}
+  - {type: talk_to_npc, npc_id: "Village Head", dialogue_id: nouns_festival_q06_progress}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q06_space_objects, minigame_id: word_matching, world_object_id: Wooden_Cart1_Inside_Gate}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q06_garden, minigame_id: word_ordering, world_object_id: Wooden_Cart1_Inside_Gate}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q06_river, minigame_id: word_ordering, world_object_id: Wooden_Cart1_Inside_Gate}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q06_speak, minigame_id: speak_aloud, world_object_id: Wooden_Cart1_Inside_Gate}
+  - {type: talk_to_npc, npc_id: "Village Head", dialogue_id: nouns_festival_q06_finish}

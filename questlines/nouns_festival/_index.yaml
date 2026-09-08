@@ -1,0 +1,34 @@
+questline:
+  id: nouns_festival
+  npc_id: teacher_maya
+  display_name: "The Nouns Festival Homework"
+  theme: "עוזרים לתושבים להכין את דוכני הפסטיבל, להחזיר את חיות המופע ולתלות את השלטים."
+  quest_count: 5
+  level_range: [50, 1]
+
+quests:
+  - id: nouns_festival__q02_festival
+    name: "הכנת דוכן הפסטיבל"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 50, items: [] }
+  - id: nouns_festival__q03_animals
+    name: "חיות המופע ברחו"
+    level: 1
+    prerequisite: nouns_festival__q02_festival
+    rewards: { xp: 50, items: [{ id: coin, amount: 10 }] }
+  - id: nouns_festival__q04_things
+    name: "הדוכן המבולגן"
+    level: 1
+    prerequisite: [nouns_festival__q02_festival, nouns_festival__q03_animals]
+    rewards: { xp: 50, items: [{ id: copper_ring, amount: 1 }] }
+  - id: nouns_festival__q05_nouns
+    name: "השלטים בשער"
+    level: 1
+    prerequisite: [nouns_festival__q02_festival, nouns_festival__q03_animals, nouns_festival__q04_things]
+    rewards: { xp: 50, items: [] }
+  - id: nouns_festival__q06_nouns
+    name: "השלטים האחרונים"
+    level: 1
+    prerequisite: [nouns_festival__q02_festival, nouns_festival__q03_animals, nouns_festival__q04_things, nouns_festival__q05_nouns]
+    rewards: { xp: 250, items: [{ id: coin, amount: 36 }] }

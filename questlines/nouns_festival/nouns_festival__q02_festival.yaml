@@ -1,0 +1,16 @@
+quest:
+  id: nouns_festival__q02_festival
+  name: "הכנת דוכן הפסטיבל"
+  level_required: 50
+  giver_npc: "Village Head"
+  prerequisite: null
+  summary: "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות."
+  wait_for_npc_turn_in: false
+rewards: {xp: 50, items: []}
+steps:
+  - {type: talk_to_npc, npc_id: "Village Head", dialogue_id: nouns_festival_q02_start}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q02_candle, minigame_id: letter_ordering, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q02_objects, minigame_id: word_matching, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q02_sentence, minigame_id: word_ordering, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q02_speak, minigame_id: speak_aloud, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: talk_to_npc, npc_id: "Village Head", dialogue_id: nouns_festival_q02_finish}

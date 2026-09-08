@@ -29,12 +29,12 @@ class ContentPipelineTests(unittest.TestCase):
             {
                 "catalog_entries": 177,
                 "step_type_definitions": 6,
-                "dialogues": 83,
-                "dialogue_lines": 278,
-                "minigame_instances": 169,
-                "questlines": 8,
-                "quests": 38,
-                "steps": 245,
+                "dialogues": 97,
+                "dialogue_lines": 312,
+                "minigame_instances": 191,
+                "questlines": 9,
+                "quests": 43,
+                "steps": 276,
                 "errors": 0,
                 "warnings": 0,
                 "info": 0,
@@ -75,8 +75,8 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         )
-        self.assertEqual(prerequisites, 30)
-        self.assertEqual(rewards, 87)
+        self.assertEqual(prerequisites, 40)
+        self.assertEqual(rewards, 95)
 
     def test_report_and_generated_bundle_are_present(self):
         report = json.loads((ROOT / "reports" / "quest_import_report.json").read_text(encoding="utf-8"))
@@ -183,7 +183,7 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         }
-        self.assertEqual(len(quests_by_key), 38)
+        self.assertEqual(len(quests_by_key), 43)
         self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
         self.assertFalse(quests_by_key["q01_bridge_too_short"]["wait_for_npc_turn_in"])  # adjective_crown
         self.assertFalse(quests_by_key["q01_roles_without_names"]["wait_for_npc_turn_in"])  # kingdom_nouns

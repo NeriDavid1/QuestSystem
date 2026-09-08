@@ -2021,6 +2021,107 @@
         "תודה על העזרה. קחו את הפרס."
       ]
     },
+    "nouns_festival_q02_start": {
+      "speaker": "Village Head",
+      "lines": [
+        "ברוכים הבאים לפסטיבל. אני צריך עזרה לפני שהשערים ייפתחו.",
+        "החקלאי ביקש ממני להכין כמה דברים לדוכן שלו, אבל אני לא מספיק לבד.",
+        "עזרו לי לסדר את האזור, ואחר כך אשלח אתכם אליו כדי לעזור עם החיות."
+      ]
+    },
+    "nouns_festival_q03_start": {
+      "speaker": "Farmer",
+      "lines": [
+        "שלום! החיות של המופע ברחו בזמן שהתכוננתי לפסטיבל.",
+        "עזרו לי למצוא את השלטים שלהן ולהחזיר את המופע למסלול."
+      ]
+    },
+    "nouns_festival_q03_progress": {
+      "speaker": "Farmer",
+      "lines": [
+        "מצוין, החיות הראשונות כבר יכולות לחזור למתחם.",
+        "נשאר עוד שלט אחד למצוא לפני שהמופע יתחיל."
+      ]
+    },
+    "nouns_festival_q04_start": {
+      "speaker": "Blacksmith",
+      "lines": [
+        "החקלאי שלח אתכם אליי? טוב שהגעתם, כי הדוכן שלי עדיין מבולגן.",
+        "הכלים והקישוטים התפזרו, והמבקרים יגיעו בקרוב. עזרו לי לסדר אותם."
+      ]
+    },
+    "nouns_festival_q04_progress": {
+      "speaker": "Blacksmith",
+      "lines": [
+        "יפה, רוב הדברים כבר במקום.",
+        "נשאר עוד חפץ אחד, ואז הדוכן יהיה מוכן."
+      ]
+    },
+    "nouns_festival_q05_start": {
+      "speaker": "Main Gate Gaurd 2",
+      "lines": [
+        "הנפח שלח אתכם אל השער? בדיוק בזמן.",
+        "השלטים ליד הכניסה התבלבלו, והאורחים לא יודעים מי נמצא כאן ולאן ללכת.",
+        "עזרו לי לסדר את השלטים לפני שהקהל יגיע."
+      ]
+    },
+    "nouns_festival_q05_progress": {
+      "speaker": "Main Gate Gaurd 2",
+      "lines": [
+        "כל הכבוד, השלטים של האנשים כבר ברורים.",
+        "נשאר עוד שלט אחד ליד השער."
+      ]
+    },
+    "nouns_festival_q06_start": {
+      "speaker": "Village Head",
+      "lines": [
+        "גאריק שלח אתכם אליי. עכשיו נוכל לפתוח את הפסטיבל.",
+        "נשארו כמה שלטים אחרונים, והאורחים צריכים להבין אותם במהירות.",
+        "עזרו לי לסדר את המשפטים שעל השלטים, כדי שאף אחד לא ילך לאיבוד."
+      ]
+    },
+    "nouns_festival_q06_progress": {
+      "speaker": "Village Head",
+      "lines": [
+        "מצוין, השלטים כבר עוזרים לאורחים למצוא את הדרך.",
+        "נשארו רק השלטים האחרונים ליד הכיכר."
+      ]
+    },
+    "nouns_festival_q02_finish": {
+      "speaker": "Village Head",
+      "lines": [
+        "כל הכבוד! סיימתם את ההכנות הראשונות לפסטיבל.",
+        "עכשיו לכו אל החקלאי Farmer בפארק ורד הפרחים. הוא מחכה לכם עם משימת החיות."
+      ]
+    },
+    "nouns_festival_q03_finish": {
+      "speaker": "Farmer",
+      "lines": [
+        "מצוין! החיות מוכנות עכשיו למופע.",
+        "עכשיו לכו אל ויל Will The Smith בבית הבנאים. הוא צריך עזרה עם חפצי הפסטיבל."
+      ]
+    },
+    "nouns_festival_q04_finish": {
+      "speaker": "Blacksmith",
+      "lines": [
+        "נהדר! החפצים מוכנים והדוכן מסודר.",
+        "לכו אל גאריק Garrick the Unmoving בשער הממלכה. הוא מחכה לכם עם המשימה הבאה."
+      ]
+    },
+    "nouns_festival_q05_finish": {
+      "speaker": "Main Gate Gaurd 2",
+      "lines": [
+        "כל הכבוד! השלטים ליד השער ברורים לאורחים.",
+        "עכשיו חזרו אל ראש הכפר Village Head בפארק ורד הפרחים. הוא ייתן לכם את המשימה האחרונה."
+      ]
+    },
+    "nouns_festival_q06_finish": {
+      "speaker": "Village Head",
+      "lines": [
+        "כל הכבוד! השלמתם את כל שלטי הפסטיבל.",
+        "עכשיו האורחים יכולים לקרוא את השלטים ולהגיע לכל דוכן. תודה על העזרה!"
+      ]
+    },
     "numbers_advanced_q01_start": {
       "speaker": "Little Boy",
       "lines": [
@@ -8237,6 +8338,1193 @@
               "amount": 1,
               "dialogue_id": "noun_repair_q06_finish",
               "display_text": "חזרו ל־Maya עם Ancient Rune לפתיחת הספר"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nouns_festival",
+      "folder": "nouns_festival",
+      "displayName": "The Nouns Festival Homework",
+      "theme": "עוזרים לתושבים להכין את דוכני הפסטיבל, להחזיר את חיות המופע ולתלות את השלטים.",
+      "levelRange": [
+        50,
+        1
+      ],
+      "questCount": 5,
+      "npcId": "teacher_maya",
+      "npc": {
+        "id": "teacher_maya",
+        "name": "המורה מאיה",
+        "title": "מורת אנגלית",
+        "location": "כיכר האלף-בית",
+        "description": "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים.",
+        "image": "images/npcs/teacher_maya.png"
+      },
+      "quests": [
+        {
+          "id": "nouns_festival__q02_festival",
+          "name": "הכנת דוכן הפסטיבל",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות.",
+          "giver_npc": "Village Head",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "nouns_festival_q02_start"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q02_candle",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכיבו באנגלית את המילה לשלט של הנר בדוכן.",
+                "tasks": [
+                  "c",
+                  "a",
+                  "n",
+                  "d",
+                  "l",
+                  "e"
+                ],
+                "target": "candle",
+                "variant": "word_spelling",
+                "success": "השלט של הנר מוכן.",
+                "params": {
+                  "prompt": "הרכיבו באנגלית את המילה שפירושה נר, כדי להכין את השלט בדוכן.",
+                  "targetWord": "candle",
+                  "customDistractors": [
+                    "r",
+                    "o"
+                  ],
+                  "extraDistractorCount": 2
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q02_objects",
+              "minigame_id": "word_matching",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בשלטי החפצים.",
+                "tasks": [
+                  "MIR_OR",
+                  "SH_LL"
+                ],
+                "target": "mirror, shell",
+                "variant": "missing_letter_matching",
+                "success": "שני שלטי החפצים מוכנים.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "mirror",
+                      "value": "m"
+                    },
+                    {
+                      "id": "shell",
+                      "value": "s"
+                    },
+                    {
+                      "id": "nouns_festival_q02_mirror_3",
+                      "value": "r"
+                    },
+                    {
+                      "id": "nouns_festival_q02_shell_2",
+                      "value": "e"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "mirror",
+                      "image": "",
+                      "fullWord": "mirror",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "shell",
+                      "image": "",
+                      "fullWord": "shell",
+                      "missingIndices": [
+                        2
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q02_sentence",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "The",
+                  "lantern",
+                  "is",
+                  "beside",
+                  "the",
+                  "window"
+                ],
+                "target": "The lantern is beside the window",
+                "variant": "sentence_building",
+                "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הפנס נמצא ליד החלון.",
+                  "translation": "הפנס נמצא ליד החלון.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "lantern",
+                    "is",
+                    "beside",
+                    "the",
+                    "window"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2,
+                    3,
+                    4
+                  ],
+                  "distractorWords": [
+                    "mirror",
+                    "opens",
+                    "garden",
+                    "bright"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q02_speak",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+                "tasks": [
+                  "The",
+                  "fair",
+                  "starts"
+                ],
+                "target": "The fair starts.",
+                "variant": "short_phrase",
+                "success": "אמרתם את משפט הפסטיבל בקול ברור.",
+                "params": {
+                  "prompt": "אמרו באנגלית בקול: היריד מתחיל.",
+                  "targetWords": [
+                    "The",
+                    "fair",
+                    "starts"
+                  ],
+                  "targetPhrase": "The fair starts.",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "nouns_festival_q02_finish"
+            }
+          ]
+        },
+        {
+          "id": "nouns_festival__q03_animals",
+          "name": "חיות המופע ברחו",
+          "level": 1,
+          "prerequisite": "nouns_festival__q02_festival",
+          "summary": "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן.",
+          "giver_npc": "Farmer",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Farmer",
+              "dialogue_id": "nouns_festival_q03_start"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Farmer",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q03_animals",
+              "minigame_id": "word_matching",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בשלטי חיות המופע.",
+                "tasks": [
+                  "L_ON",
+                  "ZEB_A",
+                  "PAN_A"
+                ],
+                "target": "lion, zebra, panda",
+                "variant": "missing_letter_matching",
+                "success": "שלושת שלטי החיות מוכנים למופע.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "lion",
+                      "value": "l"
+                    },
+                    {
+                      "id": "zebra",
+                      "value": "z"
+                    },
+                    {
+                      "id": "panda",
+                      "value": "p"
+                    },
+                    {
+                      "id": "nouns_festival_q03_lion_1",
+                      "value": "i"
+                    },
+                    {
+                      "id": "nouns_festival_q03_zebra_3",
+                      "value": "r"
+                    },
+                    {
+                      "id": "nouns_festival_q03_panda_3",
+                      "value": "d"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "lion",
+                      "image": "",
+                      "fullWord": "lion",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "zebra",
+                      "image": "",
+                      "fullWord": "zebra",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "panda",
+                      "image": "",
+                      "fullWord": "panda",
+                      "missingIndices": [
+                        3
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Farmer",
+              "dialogue_id": "nouns_festival_q03_progress"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Farmer",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q03_monkey",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכיבו באנגלית את המילה לשלט של חיית המופע.",
+                "tasks": [
+                  "m",
+                  "o",
+                  "n",
+                  "k",
+                  "e",
+                  "y"
+                ],
+                "target": "monkey",
+                "variant": "word_spelling",
+                "success": "השלט האחרון של המופע מוכן.",
+                "params": {
+                  "prompt": "הרכיבו באנגלית את המילה שפירושה קוף, כדי להכין את שלט המופע.",
+                  "targetWord": "monkey",
+                  "customDistractors": [
+                    "a",
+                    "i"
+                  ],
+                  "extraDistractorCount": 2
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Farmer",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q03_sentence",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "The",
+                  "otter",
+                  "swims",
+                  "beside",
+                  "a",
+                  "canoe"
+                ],
+                "target": "The otter swims beside a canoe",
+                "variant": "sentence_building",
+                "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הלוטרה שוחה ליד קאנו.",
+                  "translation": "הלוטרה שוחה ליד קאנו.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "otter",
+                    "swims",
+                    "beside",
+                    "a",
+                    "canoe"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2,
+                    3,
+                    4
+                  ],
+                  "distractorWords": [
+                    "lion",
+                    "runs",
+                    "blue",
+                    "tent"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Farmer",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q03_speak",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+                "tasks": [
+                  "The",
+                  "panda",
+                  "eats"
+                ],
+                "target": "The panda eats.",
+                "variant": "short_phrase",
+                "success": "אמרתם את משפט החיה בקול ברור.",
+                "params": {
+                  "prompt": "אמרו באנגלית בקול: הפנדה אוכלת.",
+                  "targetWords": [
+                    "The",
+                    "panda",
+                    "eats"
+                  ],
+                  "targetPhrase": "The panda eats.",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Farmer",
+              "dialogue_id": "nouns_festival_q03_finish"
+            }
+          ]
+        },
+        {
+          "id": "nouns_festival__q04_things",
+          "name": "הדוכן המבולגן",
+          "level": 1,
+          "prerequisite": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals"
+          ],
+          "summary": "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל.",
+          "giver_npc": "Blacksmith",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": [
+              {
+                "id": "copper_ring",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Blacksmith",
+              "dialogue_id": "nouns_festival_q04_start"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Blacksmith",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q04_things",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בשלטי החפצים והכלים.",
+                "tasks": [
+                  "DR_M",
+                  "TE_T",
+                  "FL_G"
+                ],
+                "target": "drum, tent, flag",
+                "variant": "missing_letter_matching",
+                "success": "שלושת שלטי הדוכן מוכנים.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "drum",
+                      "value": "d"
+                    },
+                    {
+                      "id": "tent",
+                      "value": "t"
+                    },
+                    {
+                      "id": "flag",
+                      "value": "f"
+                    },
+                    {
+                      "id": "nouns_festival_q04_drum_2",
+                      "value": "u"
+                    },
+                    {
+                      "id": "nouns_festival_q04_tent_2",
+                      "value": "n"
+                    },
+                    {
+                      "id": "nouns_festival_q04_flag_2",
+                      "value": "a"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "drum",
+                      "image": "",
+                      "fullWord": "drum",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "tent",
+                      "image": "",
+                      "fullWord": "tent",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "flag",
+                      "image": "",
+                      "fullWord": "flag",
+                      "missingIndices": [
+                        2
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Blacksmith",
+              "dialogue_id": "nouns_festival_q04_progress"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Blacksmith",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q04_bell",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכיבו באנגלית את המילה לשלט של הפעמון.",
+                "tasks": [
+                  "b",
+                  "e",
+                  "l",
+                  "l"
+                ],
+                "target": "bell",
+                "variant": "word_spelling",
+                "success": "שלט הפעמון מוכן.",
+                "params": {
+                  "prompt": "הרכיבו באנגלית את המילה שפירושה פעמון, כדי להכין את שלט הדוכן.",
+                  "targetWord": "bell",
+                  "customDistractors": [
+                    "a",
+                    "r"
+                  ],
+                  "extraDistractorCount": 2
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Blacksmith",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q04_sentence",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "A",
+                  "kite",
+                  "hangs",
+                  "above",
+                  "the",
+                  "stage"
+                ],
+                "target": "A kite hangs above the stage",
+                "variant": "sentence_building",
+                "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: עפיפון תלוי מעל הבמה.",
+                  "translation": "עפיפון תלוי מעל הבמה.",
+                  "englishWordsInOrder": [
+                    "A",
+                    "kite",
+                    "hangs",
+                    "above",
+                    "the",
+                    "stage"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2,
+                    3,
+                    4
+                  ],
+                  "distractorWords": [
+                    "drum",
+                    "walks",
+                    "shell",
+                    "bright"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Blacksmith",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q04_speak",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+                "tasks": [
+                  "The",
+                  "drum",
+                  "sounds"
+                ],
+                "target": "The drum sounds.",
+                "variant": "short_phrase",
+                "success": "אמרתם את משפט החפץ בקול ברור.",
+                "params": {
+                  "prompt": "אמרו באנגלית בקול: התוף משמיע קול.",
+                  "targetWords": [
+                    "The",
+                    "drum",
+                    "sounds"
+                  ],
+                  "targetPhrase": "The drum sounds.",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Blacksmith",
+              "dialogue_id": "nouns_festival_q04_finish"
+            }
+          ]
+        },
+        {
+          "id": "nouns_festival__q05_nouns",
+          "name": "השלטים בשער",
+          "level": 1,
+          "prerequisite": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals",
+            "nouns_festival__q04_things"
+          ],
+          "summary": "עזרו לשומר לסדר את השלטים ליד שער הפסטיבל.",
+          "giver_npc": "Main Gate Gaurd 2",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Main Gate Gaurd 2",
+              "dialogue_id": "nouns_festival_q05_start"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Main Gate Gaurd 2",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q05_people_places",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בשלטי האנשים.",
+                "tasks": [
+                  "PIL_T",
+                  "NUR_E",
+                  "ART_ST"
+                ],
+                "target": "pilot, nurse, artist",
+                "variant": "missing_letter_matching",
+                "success": "שלטי האנשים מוכנים ליד השער.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "pilot",
+                      "value": "p"
+                    },
+                    {
+                      "id": "nurse",
+                      "value": "n"
+                    },
+                    {
+                      "id": "artist",
+                      "value": "a"
+                    },
+                    {
+                      "id": "nouns_festival_q05_pilot_3",
+                      "value": "o"
+                    },
+                    {
+                      "id": "nouns_festival_q05_nurse_3",
+                      "value": "s"
+                    },
+                    {
+                      "id": "nouns_festival_q05_artist_4",
+                      "value": "i"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "pilot",
+                      "image": "",
+                      "fullWord": "pilot",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "nurse",
+                      "image": "",
+                      "fullWord": "nurse",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "artist",
+                      "image": "",
+                      "fullWord": "artist",
+                      "missingIndices": [
+                        4
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Main Gate Gaurd 2",
+              "dialogue_id": "nouns_festival_q05_progress"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Main Gate Gaurd 2",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q05_harbor",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכיבו באנגלית את המילה לשלט של המקום.",
+                "tasks": [
+                  "h",
+                  "a",
+                  "r",
+                  "b",
+                  "o",
+                  "r"
+                ],
+                "target": "harbor",
+                "variant": "word_spelling",
+                "success": "שלט המקום מוכן.",
+                "params": {
+                  "prompt": "הרכיבו באנגלית את המילה שפירושה נמל, כדי להכין את השלט ליד השער.",
+                  "targetWord": "harbor",
+                  "customDistractors": [
+                    "e",
+                    "u"
+                  ],
+                  "extraDistractorCount": 2
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Main Gate Gaurd 2",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q05_sentence",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "The",
+                  "captain",
+                  "visits",
+                  "the",
+                  "station"
+                ],
+                "target": "The captain visits the station",
+                "variant": "sentence_building",
+                "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הקפטן מבקר בתחנה.",
+                  "translation": "הקפטן מבקר בתחנה.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "captain",
+                    "visits",
+                    "the",
+                    "station"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "pilot",
+                    "runs",
+                    "harbor",
+                    "small"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Main Gate Gaurd 2",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q05_speak",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table1_Outside_Gate",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+                "tasks": [
+                  "The",
+                  "pilot",
+                  "waits"
+                ],
+                "target": "The pilot waits.",
+                "variant": "short_phrase",
+                "success": "אמרתם את משפט האדם בקול ברור.",
+                "params": {
+                  "prompt": "אמרו באנגלית בקול: הטייס מחכה.",
+                  "targetWords": [
+                    "The",
+                    "pilot",
+                    "waits"
+                  ],
+                  "targetPhrase": "The pilot waits.",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Main Gate Gaurd 2",
+              "dialogue_id": "nouns_festival_q05_finish"
+            }
+          ]
+        },
+        {
+          "id": "nouns_festival__q06_nouns",
+          "name": "השלטים האחרונים",
+          "level": 1,
+          "prerequisite": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals",
+            "nouns_festival__q04_things",
+            "nouns_festival__q05_nouns"
+          ],
+          "summary": "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל.",
+          "giver_npc": "Village Head",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 250,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 36
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "nouns_festival_q06_start"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q06_rocket",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "The",
+                  "moon",
+                  "is",
+                  "bright"
+                ],
+                "target": "The moon is bright",
+                "variant": "sentence_building",
+                "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הירח בהיר.",
+                  "translation": "הירח בהיר.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "moon",
+                    "is",
+                    "bright"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2
+                  ],
+                  "distractorWords": [
+                    "star",
+                    "boat",
+                    "runs"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q06_island",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "The",
+                  "star",
+                  "is",
+                  "small"
+                ],
+                "target": "The star is small",
+                "variant": "sentence_building",
+                "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הכוכב קטן.",
+                  "translation": "הכוכב קטן.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "star",
+                    "is",
+                    "small"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2
+                  ],
+                  "distractorWords": [
+                    "moon",
+                    "boat",
+                    "jumps"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "nouns_festival_q06_progress"
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q06_space_objects",
+              "minigame_id": "word_matching",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בשלטי היריד.",
+                "tasks": [
+                  "H_USE",
+                  "TRA_N",
+                  "PLA_E"
+                ],
+                "target": "house, train, plane",
+                "variant": "missing_letter_matching",
+                "success": "שלטי היריד מוכנים ליד הכיכר.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "house",
+                      "value": "h"
+                    },
+                    {
+                      "id": "train",
+                      "value": "t"
+                    },
+                    {
+                      "id": "plane",
+                      "value": "p"
+                    },
+                    {
+                      "id": "nouns_festival_q06_house_1",
+                      "value": "o"
+                    },
+                    {
+                      "id": "nouns_festival_q06_train_4",
+                      "value": "i"
+                    },
+                    {
+                      "id": "nouns_festival_q06_plane_4",
+                      "value": "n"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "house",
+                      "image": "",
+                      "fullWord": "house",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "train",
+                      "image": "",
+                      "fullWord": "train",
+                      "missingIndices": [
+                        4
+                      ]
+                    },
+                    {
+                      "id": "plane",
+                      "image": "",
+                      "fullWord": "plane",
+                      "missingIndices": [
+                        4
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q06_garden",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "The",
+                  "boat",
+                  "is",
+                  "red"
+                ],
+                "target": "The boat is red",
+                "variant": "sentence_building",
+                "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הסירה אדומה.",
+                  "translation": "הסירה אדומה.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "boat",
+                    "is",
+                    "red"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2
+                  ],
+                  "distractorWords": [
+                    "moon",
+                    "star",
+                    "walks"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q06_river",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "The",
+                  "cloud",
+                  "is",
+                  "high"
+                ],
+                "target": "The cloud is high",
+                "variant": "sentence_building",
+                "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+                "params": {
+                  "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הענן גבוה.",
+                  "translation": "הענן גבוה.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "cloud",
+                    "is",
+                    "high"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    2
+                  ],
+                  "distractorWords": [
+                    "moon",
+                    "star",
+                    "runs"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "npc_id": "Village Head",
+              "difficulty": 1,
+              "instance_id": "nouns_festival_q06_speak",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו באנגלית בקול את המשפט המלא.",
+                "tasks": [
+                  "The",
+                  "little",
+                  "star",
+                  "is",
+                  "high"
+                ],
+                "target": "The little star is high.",
+                "variant": "sentence",
+                "success": "אמרתם את משפט השלט בקול ברור.",
+                "params": {
+                  "prompt": "אמרו באנגלית בקול: הכוכב הקטן גבוה.",
+                  "targetWords": [
+                    "The",
+                    "little",
+                    "star",
+                    "is",
+                    "high"
+                  ],
+                  "targetPhrase": "The little star is high.",
+                  "allowFuzzyMatch": true
+                }
+              }
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "nouns_festival_q06_finish"
             }
           ]
         }

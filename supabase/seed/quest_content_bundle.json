@@ -3945,6 +3945,304 @@
       ]
     },
     {
+      "key": "nouns_festival_q02_finish",
+      "speaker_external_id": "Village Head",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "כל הכבוד! סיימתם את ההכנות הראשונות לפסטיבל.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "עכשיו לכו אל החקלאי Farmer בפארק ורד הפרחים. הוא מחכה לכם עם משימת החיות.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q02_start",
+      "speaker_external_id": "Village Head",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "ברוכים הבאים לפסטיבל. אני צריך עזרה לפני שהשערים ייפתחו.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "החקלאי ביקש ממני להכין כמה דברים לדוכן שלו, אבל אני לא מספיק לבד.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "עזרו לי לסדר את האזור, ואחר כך אשלח אתכם אליו כדי לעזור עם החיות.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q03_finish",
+      "speaker_external_id": "Farmer",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצוין! החיות מוכנות עכשיו למופע.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "עכשיו לכו אל ויל Will The Smith בבית הבנאים. הוא צריך עזרה עם חפצי הפסטיבל.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q03_progress",
+      "speaker_external_id": "Farmer",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצוין, החיות הראשונות כבר יכולות לחזור למתחם.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "נשאר עוד שלט אחד למצוא לפני שהמופע יתחיל.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q03_start",
+      "speaker_external_id": "Farmer",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "שלום! החיות של המופע ברחו בזמן שהתכוננתי לפסטיבל.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "עזרו לי למצוא את השלטים שלהן ולהחזיר את המופע למסלול.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q04_finish",
+      "speaker_external_id": "Blacksmith",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "נהדר! החפצים מוכנים והדוכן מסודר.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "לכו אל גאריק Garrick the Unmoving בשער הממלכה. הוא מחכה לכם עם המשימה הבאה.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q04_progress",
+      "speaker_external_id": "Blacksmith",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "יפה, רוב הדברים כבר במקום.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "נשאר עוד חפץ אחד, ואז הדוכן יהיה מוכן.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q04_start",
+      "speaker_external_id": "Blacksmith",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "החקלאי שלח אתכם אליי? טוב שהגעתם, כי הדוכן שלי עדיין מבולגן.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "הכלים והקישוטים התפזרו, והמבקרים יגיעו בקרוב. עזרו לי לסדר אותם.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q05_finish",
+      "speaker_external_id": "Main Gate Gaurd 2",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "כל הכבוד! השלטים ליד השער ברורים לאורחים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "עכשיו חזרו אל ראש הכפר Village Head בפארק ורד הפרחים. הוא ייתן לכם את המשימה האחרונה.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q05_progress",
+      "speaker_external_id": "Main Gate Gaurd 2",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "כל הכבוד, השלטים של האנשים כבר ברורים.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "נשאר עוד שלט אחד ליד השער.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q05_start",
+      "speaker_external_id": "Main Gate Gaurd 2",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "הנפח שלח אתכם אל השער? בדיוק בזמן.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "השלטים ליד הכניסה התבלבלו, והאורחים לא יודעים מי נמצא כאן ולאן ללכת.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "עזרו לי לסדר את השלטים לפני שהקהל יגיע.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q06_finish",
+      "speaker_external_id": "Village Head",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "כל הכבוד! השלמתם את כל שלטי הפסטיבל.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "עכשיו האורחים יכולים לקרוא את השלטים ולהגיע לכל דוכן. תודה על העזרה!",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q06_progress",
+      "speaker_external_id": "Village Head",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "מצוין, השלטים כבר עוזרים לאורחים למצוא את הדרך.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "נשארו רק השלטים האחרונים ליד הכיכר.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
+      "key": "nouns_festival_q06_start",
+      "speaker_external_id": "Village Head",
+      "source_path": "_registry\\dialogues\\nouns_festival.yaml",
+      "source_metadata": {},
+      "lines": [
+        {
+          "locale": "he",
+          "line_order": 0,
+          "content": "גאריק שלח אתכם אליי. עכשיו נוכל לפתוח את הפסטיבל.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 1,
+          "content": "נשארו כמה שלטים אחרונים, והאורחים צריכים להבין אותם במהירות.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 2,
+          "content": "עזרו לי לסדר את המשפטים שעל השלטים, כדי שאף אחד לא ילך לאיבוד.",
+          "line_format": "plain_text"
+        }
+      ]
+    },
+    {
       "key": "nouns_maya_book_restored",
       "speaker_external_id": "teacher_maya",
       "source_path": "_registry\\dialogues\\kingdom_nouns.yaml",
@@ -8378,6 +8676,896 @@
         ]
       },
       "source_path": "_registry\\minigame_instances\\noun_repair_shop.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q02_candle",
+      "locale": "he",
+      "instruction": "הרכיבו באנגלית את המילה לשלט של הנר בדוכן.",
+      "tasks": [
+        "c",
+        "a",
+        "n",
+        "d",
+        "l",
+        "e"
+      ],
+      "target": "candle",
+      "variant": "word_spelling",
+      "success": "השלט של הנר מוכן.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הרכיבו באנגלית את המילה שפירושה נר, כדי להכין את השלט בדוכן.",
+        "targetWord": "candle",
+        "customDistractors": [
+          "r",
+          "o"
+        ],
+        "extraDistractorCount": 2
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q02_objects",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בשלטי החפצים.",
+      "tasks": [
+        "MIR_OR",
+        "SH_LL"
+      ],
+      "target": "mirror, shell",
+      "variant": "missing_letter_matching",
+      "success": "שני שלטי החפצים מוכנים.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "mirror",
+            "value": "m"
+          },
+          {
+            "id": "shell",
+            "value": "s"
+          },
+          {
+            "id": "nouns_festival_q02_mirror_3",
+            "value": "r"
+          },
+          {
+            "id": "nouns_festival_q02_shell_2",
+            "value": "e"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "mirror",
+            "image": "",
+            "fullWord": "mirror",
+            "missingIndices": [
+              3
+            ]
+          },
+          {
+            "id": "shell",
+            "image": "",
+            "fullWord": "shell",
+            "missingIndices": [
+              2
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q02_sentence",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "The",
+        "lantern",
+        "is",
+        "beside",
+        "the",
+        "window"
+      ],
+      "target": "The lantern is beside the window",
+      "variant": "sentence_building",
+      "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הפנס נמצא ליד החלון.",
+        "translation": "הפנס נמצא ליד החלון.",
+        "englishWordsInOrder": [
+          "The",
+          "lantern",
+          "is",
+          "beside",
+          "the",
+          "window"
+        ],
+        "preFilledIndices": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "distractorWords": [
+          "mirror",
+          "opens",
+          "garden",
+          "bright"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q02_speak",
+      "locale": "he",
+      "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+      "tasks": [
+        "The",
+        "fair",
+        "starts"
+      ],
+      "target": "The fair starts.",
+      "variant": "short_phrase",
+      "success": "אמרתם את משפט הפסטיבל בקול ברור.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו באנגלית בקול: היריד מתחיל.",
+        "targetWords": [
+          "The",
+          "fair",
+          "starts"
+        ],
+        "targetPhrase": "The fair starts.",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q03_animals",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בשלטי חיות המופע.",
+      "tasks": [
+        "L_ON",
+        "ZEB_A",
+        "PAN_A"
+      ],
+      "target": "lion, zebra, panda",
+      "variant": "missing_letter_matching",
+      "success": "שלושת שלטי החיות מוכנים למופע.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "lion",
+            "value": "l"
+          },
+          {
+            "id": "zebra",
+            "value": "z"
+          },
+          {
+            "id": "panda",
+            "value": "p"
+          },
+          {
+            "id": "nouns_festival_q03_lion_1",
+            "value": "i"
+          },
+          {
+            "id": "nouns_festival_q03_zebra_3",
+            "value": "r"
+          },
+          {
+            "id": "nouns_festival_q03_panda_3",
+            "value": "d"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "lion",
+            "image": "",
+            "fullWord": "lion",
+            "missingIndices": [
+              1
+            ]
+          },
+          {
+            "id": "zebra",
+            "image": "",
+            "fullWord": "zebra",
+            "missingIndices": [
+              3
+            ]
+          },
+          {
+            "id": "panda",
+            "image": "",
+            "fullWord": "panda",
+            "missingIndices": [
+              3
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q03_monkey",
+      "locale": "he",
+      "instruction": "הרכיבו באנגלית את המילה לשלט של חיית המופע.",
+      "tasks": [
+        "m",
+        "o",
+        "n",
+        "k",
+        "e",
+        "y"
+      ],
+      "target": "monkey",
+      "variant": "word_spelling",
+      "success": "השלט האחרון של המופע מוכן.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הרכיבו באנגלית את המילה שפירושה קוף, כדי להכין את שלט המופע.",
+        "targetWord": "monkey",
+        "customDistractors": [
+          "a",
+          "i"
+        ],
+        "extraDistractorCount": 2
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q03_sentence",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "The",
+        "otter",
+        "swims",
+        "beside",
+        "a",
+        "canoe"
+      ],
+      "target": "The otter swims beside a canoe",
+      "variant": "sentence_building",
+      "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הלוטרה שוחה ליד קאנו.",
+        "translation": "הלוטרה שוחה ליד קאנו.",
+        "englishWordsInOrder": [
+          "The",
+          "otter",
+          "swims",
+          "beside",
+          "a",
+          "canoe"
+        ],
+        "preFilledIndices": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "distractorWords": [
+          "lion",
+          "runs",
+          "blue",
+          "tent"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q03_speak",
+      "locale": "he",
+      "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+      "tasks": [
+        "The",
+        "panda",
+        "eats"
+      ],
+      "target": "The panda eats.",
+      "variant": "short_phrase",
+      "success": "אמרתם את משפט החיה בקול ברור.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו באנגלית בקול: הפנדה אוכלת.",
+        "targetWords": [
+          "The",
+          "panda",
+          "eats"
+        ],
+        "targetPhrase": "The panda eats.",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q04_bell",
+      "locale": "he",
+      "instruction": "הרכיבו באנגלית את המילה לשלט של הפעמון.",
+      "tasks": [
+        "b",
+        "e",
+        "l",
+        "l"
+      ],
+      "target": "bell",
+      "variant": "word_spelling",
+      "success": "שלט הפעמון מוכן.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הרכיבו באנגלית את המילה שפירושה פעמון, כדי להכין את שלט הדוכן.",
+        "targetWord": "bell",
+        "customDistractors": [
+          "a",
+          "r"
+        ],
+        "extraDistractorCount": 2
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q04_sentence",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "A",
+        "kite",
+        "hangs",
+        "above",
+        "the",
+        "stage"
+      ],
+      "target": "A kite hangs above the stage",
+      "variant": "sentence_building",
+      "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: עפיפון תלוי מעל הבמה.",
+        "translation": "עפיפון תלוי מעל הבמה.",
+        "englishWordsInOrder": [
+          "A",
+          "kite",
+          "hangs",
+          "above",
+          "the",
+          "stage"
+        ],
+        "preFilledIndices": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "distractorWords": [
+          "drum",
+          "walks",
+          "shell",
+          "bright"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q04_speak",
+      "locale": "he",
+      "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+      "tasks": [
+        "The",
+        "drum",
+        "sounds"
+      ],
+      "target": "The drum sounds.",
+      "variant": "short_phrase",
+      "success": "אמרתם את משפט החפץ בקול ברור.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו באנגלית בקול: התוף משמיע קול.",
+        "targetWords": [
+          "The",
+          "drum",
+          "sounds"
+        ],
+        "targetPhrase": "The drum sounds.",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q04_things",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בשלטי החפצים והכלים.",
+      "tasks": [
+        "DR_M",
+        "TE_T",
+        "FL_G"
+      ],
+      "target": "drum, tent, flag",
+      "variant": "missing_letter_matching",
+      "success": "שלושת שלטי הדוכן מוכנים.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "drum",
+            "value": "d"
+          },
+          {
+            "id": "tent",
+            "value": "t"
+          },
+          {
+            "id": "flag",
+            "value": "f"
+          },
+          {
+            "id": "nouns_festival_q04_drum_2",
+            "value": "u"
+          },
+          {
+            "id": "nouns_festival_q04_tent_2",
+            "value": "n"
+          },
+          {
+            "id": "nouns_festival_q04_flag_2",
+            "value": "a"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "drum",
+            "image": "",
+            "fullWord": "drum",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "tent",
+            "image": "",
+            "fullWord": "tent",
+            "missingIndices": [
+              2
+            ]
+          },
+          {
+            "id": "flag",
+            "image": "",
+            "fullWord": "flag",
+            "missingIndices": [
+              2
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q05_harbor",
+      "locale": "he",
+      "instruction": "הרכיבו באנגלית את המילה לשלט של המקום.",
+      "tasks": [
+        "h",
+        "a",
+        "r",
+        "b",
+        "o",
+        "r"
+      ],
+      "target": "harbor",
+      "variant": "word_spelling",
+      "success": "שלט המקום מוכן.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הרכיבו באנגלית את המילה שפירושה נמל, כדי להכין את השלט ליד השער.",
+        "targetWord": "harbor",
+        "customDistractors": [
+          "e",
+          "u"
+        ],
+        "extraDistractorCount": 2
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q05_people_places",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בשלטי האנשים.",
+      "tasks": [
+        "PIL_T",
+        "NUR_E",
+        "ART_ST"
+      ],
+      "target": "pilot, nurse, artist",
+      "variant": "missing_letter_matching",
+      "success": "שלטי האנשים מוכנים ליד השער.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "pilot",
+            "value": "p"
+          },
+          {
+            "id": "nurse",
+            "value": "n"
+          },
+          {
+            "id": "artist",
+            "value": "a"
+          },
+          {
+            "id": "nouns_festival_q05_pilot_3",
+            "value": "o"
+          },
+          {
+            "id": "nouns_festival_q05_nurse_3",
+            "value": "s"
+          },
+          {
+            "id": "nouns_festival_q05_artist_4",
+            "value": "i"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "pilot",
+            "image": "",
+            "fullWord": "pilot",
+            "missingIndices": [
+              3
+            ]
+          },
+          {
+            "id": "nurse",
+            "image": "",
+            "fullWord": "nurse",
+            "missingIndices": [
+              3
+            ]
+          },
+          {
+            "id": "artist",
+            "image": "",
+            "fullWord": "artist",
+            "missingIndices": [
+              4
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q05_sentence",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "The",
+        "captain",
+        "visits",
+        "the",
+        "station"
+      ],
+      "target": "The captain visits the station",
+      "variant": "sentence_building",
+      "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הקפטן מבקר בתחנה.",
+        "translation": "הקפטן מבקר בתחנה.",
+        "englishWordsInOrder": [
+          "The",
+          "captain",
+          "visits",
+          "the",
+          "station"
+        ],
+        "preFilledIndices": [
+          0,
+          2,
+          3
+        ],
+        "distractorWords": [
+          "pilot",
+          "runs",
+          "harbor",
+          "small"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q05_speak",
+      "locale": "he",
+      "instruction": "אמרו באנגלית בקול את המשפט בן שלוש המילים.",
+      "tasks": [
+        "The",
+        "pilot",
+        "waits"
+      ],
+      "target": "The pilot waits.",
+      "variant": "short_phrase",
+      "success": "אמרתם את משפט האדם בקול ברור.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו באנגלית בקול: הטייס מחכה.",
+        "targetWords": [
+          "The",
+          "pilot",
+          "waits"
+        ],
+        "targetPhrase": "The pilot waits.",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q06_garden",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "The",
+        "boat",
+        "is",
+        "red"
+      ],
+      "target": "The boat is red",
+      "variant": "sentence_building",
+      "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הסירה אדומה.",
+        "translation": "הסירה אדומה.",
+        "englishWordsInOrder": [
+          "The",
+          "boat",
+          "is",
+          "red"
+        ],
+        "preFilledIndices": [
+          0,
+          2
+        ],
+        "distractorWords": [
+          "moon",
+          "star",
+          "walks"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q06_island",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "The",
+        "star",
+        "is",
+        "small"
+      ],
+      "target": "The star is small",
+      "variant": "sentence_building",
+      "success": "השלמתם את המשפט ובחרתם שני שמות עצם מתאימים.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הכוכב קטן.",
+        "translation": "הכוכב קטן.",
+        "englishWordsInOrder": [
+          "The",
+          "star",
+          "is",
+          "small"
+        ],
+        "preFilledIndices": [
+          0,
+          2
+        ],
+        "distractorWords": [
+          "moon",
+          "boat",
+          "jumps"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q06_river",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "The",
+        "cloud",
+        "is",
+        "high"
+      ],
+      "target": "The cloud is high",
+      "variant": "sentence_building",
+      "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הענן גבוה.",
+        "translation": "הענן גבוה.",
+        "englishWordsInOrder": [
+          "The",
+          "cloud",
+          "is",
+          "high"
+        ],
+        "preFilledIndices": [
+          0,
+          2
+        ],
+        "distractorWords": [
+          "moon",
+          "star",
+          "runs"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q06_rocket",
+      "locale": "he",
+      "instruction": "השלימו שתי מילים בשלט לפי התרגום המלא בעברית.",
+      "tasks": [
+        "The",
+        "moon",
+        "is",
+        "bright"
+      ],
+      "target": "The moon is bright",
+      "variant": "sentence_building",
+      "success": "השלמתם את השלט ובחרתם את שתי המילים המתאימות.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "השלימו שתי מילים במשפט לפי התרגום המלא בעברית: הירח בהיר.",
+        "translation": "הירח בהיר.",
+        "englishWordsInOrder": [
+          "The",
+          "moon",
+          "is",
+          "bright"
+        ],
+        "preFilledIndices": [
+          0,
+          2
+        ],
+        "distractorWords": [
+          "star",
+          "boat",
+          "runs"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q06_space_objects",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בשלטי היריד.",
+      "tasks": [
+        "H_USE",
+        "TRA_N",
+        "PLA_E"
+      ],
+      "target": "house, train, plane",
+      "variant": "missing_letter_matching",
+      "success": "שלטי היריד מוכנים ליד הכיכר.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "house",
+            "value": "h"
+          },
+          {
+            "id": "train",
+            "value": "t"
+          },
+          {
+            "id": "plane",
+            "value": "p"
+          },
+          {
+            "id": "nouns_festival_q06_house_1",
+            "value": "o"
+          },
+          {
+            "id": "nouns_festival_q06_train_4",
+            "value": "i"
+          },
+          {
+            "id": "nouns_festival_q06_plane_4",
+            "value": "n"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "house",
+            "image": "",
+            "fullWord": "house",
+            "missingIndices": [
+              1
+            ]
+          },
+          {
+            "id": "train",
+            "image": "",
+            "fullWord": "train",
+            "missingIndices": [
+              4
+            ]
+          },
+          {
+            "id": "plane",
+            "image": "",
+            "fullWord": "plane",
+            "missingIndices": [
+              4
+            ]
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "nouns_festival_q06_speak",
+      "locale": "he",
+      "instruction": "אמרו באנגלית בקול את המשפט המלא.",
+      "tasks": [
+        "The",
+        "little",
+        "star",
+        "is",
+        "high"
+      ],
+      "target": "The little star is high.",
+      "variant": "sentence",
+      "success": "אמרתם את משפט השלט בקול ברור.",
+      "minigame_id": "speak_aloud",
+      "params": {
+        "prompt": "אמרו באנגלית בקול: הכוכב הקטן גבוה.",
+        "targetWords": [
+          "The",
+          "little",
+          "star",
+          "is",
+          "high"
+        ],
+        "targetPhrase": "The little star is high.",
+        "allowFuzzyMatch": true
+      },
+      "source_path": "_registry\\minigame_instances\\nouns_festival.yaml",
       "source_metadata": {}
     },
     {
@@ -16546,6 +17734,805 @@
       ]
     },
     {
+      "key": "nouns_festival",
+      "display_name": "The Nouns Festival Homework",
+      "theme": "עוזרים לתושבים להכין את דוכני הפסטיבל, להחזיר את חיות המופע ולתלות את השלטים.",
+      "default_giver_external_id": "teacher_maya",
+      "status": "draft",
+      "level_min": 50,
+      "level_max": 1,
+      "source_path": "questlines\\nouns_festival\\_index.yaml",
+      "source_metadata": {
+        "source_status": null,
+        "source_note": null,
+        "catalog_set": null,
+        "quest_count": 5
+      },
+      "quests": [
+        {
+          "key": "nouns_festival__q02_festival",
+          "position": 0,
+          "name": "הכנת דוכן הפסטיבל",
+          "level_required": 50,
+          "giver_external_id": "Village Head",
+          "summary": "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q02_start",
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_ad164dd5_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_candle",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_candle"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_04725e57_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_objects",
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_objects"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_7580868c_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_sentence"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_3baa22d9_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_speak"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_talk_to_npc_7ccdc2c5_1",
+              "position": 5,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Village Head",
+                "dialogue_id": "nouns_festival_q02_finish"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q02_festival",
+              "name": "הכנת דוכן הפסטיבל",
+              "level_required": 50,
+              "giver_npc": "Village Head",
+              "prerequisite": null,
+              "summary": "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q03_animals",
+          "position": 1,
+          "name": "חיות המופע ברחו",
+          "level_required": 1,
+          "giver_external_id": "Farmer",
+          "summary": "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q03_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_d6e016af_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_animals",
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_animals"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_talk_to_npc_c6a05dd7_1",
+              "position": 2,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "nouns_festival_q03_progress"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_de80552c_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_monkey",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_monkey"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_c0db39c2_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_b78b453f_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_speak"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_talk_to_npc_e072791f_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "nouns_festival_q03_finish"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q03_animals",
+              "name": "חיות המופע ברחו",
+              "level_required": 1,
+              "giver_npc": "Farmer",
+              "prerequisite": "nouns_festival__q02_festival",
+              "summary": "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q04_things",
+          "position": 2,
+          "name": "הדוכן המבולגן",
+          "level_required": 1,
+          "giver_external_id": "Blacksmith",
+          "summary": "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q04_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q04_things_play_minigame_3e6335be_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_things",
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_things"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_talk_to_npc_8b5871fc_1",
+              "position": 2,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "nouns_festival_q04_progress"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_play_minigame_eb80cd0b_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_bell",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_bell"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_play_minigame_1ee1446e_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_play_minigame_c5cc47d7_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_speak"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_talk_to_npc_72d9599b_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "nouns_festival_q04_finish"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "copper_ring",
+              "amount": 1,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q04_things",
+              "name": "הדוכן המבולגן",
+              "level_required": 1,
+              "giver_npc": "Blacksmith",
+              "prerequisite": [
+                "nouns_festival__q02_festival",
+                "nouns_festival__q03_animals"
+              ],
+              "summary": "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q05_nouns",
+          "position": 3,
+          "name": "השלטים בשער",
+          "level_required": 1,
+          "giver_external_id": "Main Gate Gaurd 2",
+          "summary": "עזרו לשומר לסדר את השלטים ליד שער הפסטיבל.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q05_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals",
+            "nouns_festival__q04_things"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_f8830fed_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_people_places",
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_people_places"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_talk_to_npc_6f8f8ab8_1",
+              "position": 2,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "dialogue_id": "nouns_festival_q05_progress"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_619e718a_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_harbor",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_harbor"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_8ee019aa_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_ac4d3af9_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_speak"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_talk_to_npc_10f020ba_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "dialogue_id": "nouns_festival_q05_finish"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q05_nouns",
+              "name": "השלטים בשער",
+              "level_required": 1,
+              "giver_npc": "Main Gate Gaurd 2",
+              "prerequisite": [
+                "nouns_festival__q02_festival",
+                "nouns_festival__q03_animals",
+                "nouns_festival__q04_things"
+              ],
+              "summary": "עזרו לשומר לסדר את השלטים ליד שער הפסטיבל.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q06_nouns",
+          "position": 4,
+          "name": "השלטים האחרונים",
+          "level_required": 1,
+          "giver_external_id": "Village Head",
+          "summary": "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q06_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals",
+            "nouns_festival__q04_things",
+            "nouns_festival__q05_nouns"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_66edc334_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_rocket",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_rocket"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_7064849d_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_island",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_island"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_talk_to_npc_0060ba94_1",
+              "position": 3,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Village Head",
+                "dialogue_id": "nouns_festival_q06_progress"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_1c379822_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_space_objects",
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_space_objects"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_34d5ff91_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_garden",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_garden"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_c18f5bdd_5",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_river",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_river"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_388c3980_6",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_speak"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_talk_to_npc_7b4bc024_2",
+              "position": 8,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Village Head",
+                "dialogue_id": "nouns_festival_q06_finish"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 250,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 36,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q06_nouns",
+              "name": "השלטים האחרונים",
+              "level_required": 1,
+              "giver_npc": "Village Head",
+              "prerequisite": [
+                "nouns_festival__q02_festival",
+                "nouns_festival__q03_animals",
+                "nouns_festival__q04_things",
+                "nouns_festival__q05_nouns"
+              ],
+              "summary": "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "numbers_advanced_homework",
       "display_name": "Numbers Advanced - שיעורי בית",
       "theme": "Practice reading, spelling, ordering, and saying numbers from 10 to 1000 with clear Hebrew guidance",
@@ -18847,12 +20834,12 @@
   "counts": {
     "catalog_entries": 177,
     "step_type_definitions": 6,
-    "dialogues": 83,
-    "dialogue_lines": 281,
-    "minigame_instances": 169,
-    "questlines": 8,
-    "quests": 38,
-    "steps": 245,
+    "dialogues": 97,
+    "dialogue_lines": 312,
+    "minigame_instances": 191,
+    "questlines": 9,
+    "quests": 43,
+    "steps": 276,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -23271,6 +25258,795 @@
       ]
     },
     {
+      "key": "nouns_festival",
+      "display_name": "The Nouns Festival Homework",
+      "theme": "עוזרים לתושבים להכין את דוכני הפסטיבל, להחזיר את חיות המופע ולתלות את השלטים.",
+      "default_giver_external_id": "teacher_maya",
+      "quests": [
+        {
+          "key": "nouns_festival__q02_festival",
+          "position": 0,
+          "name": "הכנת דוכן הפסטיבל",
+          "level_required": 50,
+          "giver_external_id": "Village Head",
+          "summary": "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q02_start",
+          "status": "complete",
+          "prerequisites": [],
+          "steps": [
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_ad164dd5_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_candle",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_candle"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_04725e57_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_objects",
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_objects"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_7580868c_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_sentence"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_play_minigame_3baa22d9_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q02_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q02_speak"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q02_festival_talk_to_npc_7ccdc2c5_1",
+              "position": 5,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Village Head",
+                "dialogue_id": "nouns_festival_q02_finish"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q02_festival",
+              "name": "הכנת דוכן הפסטיבל",
+              "level_required": 50,
+              "giver_npc": "Village Head",
+              "prerequisite": null,
+              "summary": "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q03_animals",
+          "position": 1,
+          "name": "חיות המופע ברחו",
+          "level_required": 1,
+          "giver_external_id": "Farmer",
+          "summary": "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q03_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_d6e016af_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_animals",
+                "minigame_id": "word_matching",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_animals"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_talk_to_npc_c6a05dd7_1",
+              "position": 2,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "nouns_festival_q03_progress"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_de80552c_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_monkey",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_monkey"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_c0db39c2_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_play_minigame_b78b453f_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Farmer",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q03_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+                "instance_key": "nouns_festival_q03_speak"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q03_animals_talk_to_npc_e072791f_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Farmer",
+                "dialogue_id": "nouns_festival_q03_finish"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 10,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q03_animals",
+              "name": "חיות המופע ברחו",
+              "level_required": 1,
+              "giver_npc": "Farmer",
+              "prerequisite": "nouns_festival__q02_festival",
+              "summary": "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q04_things",
+          "position": 2,
+          "name": "הדוכן המבולגן",
+          "level_required": 1,
+          "giver_external_id": "Blacksmith",
+          "summary": "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q04_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q04_things_play_minigame_3e6335be_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_things",
+                "minigame_id": "word_matching",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_things"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_talk_to_npc_8b5871fc_1",
+              "position": 2,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "nouns_festival_q04_progress"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_play_minigame_eb80cd0b_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_bell",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_bell"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_play_minigame_1ee1446e_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_play_minigame_c5cc47d7_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q04_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "instance_key": "nouns_festival_q04_speak"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q04_things_talk_to_npc_72d9599b_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Blacksmith",
+                "dialogue_id": "nouns_festival_q04_finish"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "copper_ring",
+              "amount": 1,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q04_things",
+              "name": "הדוכן המבולגן",
+              "level_required": 1,
+              "giver_npc": "Blacksmith",
+              "prerequisite": [
+                "nouns_festival__q02_festival",
+                "nouns_festival__q03_animals"
+              ],
+              "summary": "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q05_nouns",
+          "position": 3,
+          "name": "השלטים בשער",
+          "level_required": 1,
+          "giver_external_id": "Main Gate Gaurd 2",
+          "summary": "עזרו לשומר לסדר את השלטים ליד שער הפסטיבל.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q05_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals",
+            "nouns_festival__q04_things"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_f8830fed_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_people_places",
+                "minigame_id": "word_matching",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_people_places"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_talk_to_npc_6f8f8ab8_1",
+              "position": 2,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "dialogue_id": "nouns_festival_q05_progress"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_619e718a_2",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_harbor",
+                "minigame_id": "letter_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_harbor"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_8ee019aa_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_sentence",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_sentence"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_play_minigame_ac4d3af9_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q05_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Exam_Table1_Outside_Gate",
+                "instance_key": "nouns_festival_q05_speak"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q05_nouns_talk_to_npc_10f020ba_2",
+              "position": 6,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Main Gate Gaurd 2",
+                "dialogue_id": "nouns_festival_q05_finish"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 50,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q05_nouns",
+              "name": "השלטים בשער",
+              "level_required": 1,
+              "giver_npc": "Main Gate Gaurd 2",
+              "prerequisite": [
+                "nouns_festival__q02_festival",
+                "nouns_festival__q03_animals",
+                "nouns_festival__q04_things"
+              ],
+              "summary": "עזרו לשומר לסדר את השלטים ליד שער הפסטיבל.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        },
+        {
+          "key": "nouns_festival__q06_nouns",
+          "position": 4,
+          "name": "השלטים האחרונים",
+          "level_required": 1,
+          "giver_external_id": "Village Head",
+          "summary": "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל.",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": "nouns_festival_q06_start",
+          "status": "complete",
+          "prerequisites": [
+            "nouns_festival__q02_festival",
+            "nouns_festival__q03_animals",
+            "nouns_festival__q04_things",
+            "nouns_festival__q05_nouns"
+          ],
+          "steps": [
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_66edc334_1",
+              "position": 1,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_rocket",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_rocket"
+              },
+              "source_metadata": {
+                "source_position": 1,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_7064849d_2",
+              "position": 2,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_island",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_island"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_talk_to_npc_0060ba94_1",
+              "position": 3,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Village Head",
+                "dialogue_id": "nouns_festival_q06_progress"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_1c379822_3",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_space_objects",
+                "minigame_id": "word_matching",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_space_objects"
+              },
+              "source_metadata": {
+                "source_position": 4,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_34d5ff91_4",
+              "position": 5,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_garden",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_garden"
+              },
+              "source_metadata": {
+                "source_position": 5,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_c18f5bdd_5",
+              "position": 6,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_river",
+                "minigame_id": "word_ordering",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_river"
+              },
+              "source_metadata": {
+                "source_position": 6,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_play_minigame_388c3980_6",
+              "position": 7,
+              "type": "play_minigame",
+              "payload": {
+                "npc_id": "Village Head",
+                "difficulty": 1,
+                "instance_id": "nouns_festival_q06_speak",
+                "minigame_id": "speak_aloud",
+                "world_object_id": "Wooden_Cart1_Inside_Gate",
+                "instance_key": "nouns_festival_q06_speak"
+              },
+              "source_metadata": {
+                "source_position": 7,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "nouns_festival_q06_nouns_talk_to_npc_7b4bc024_2",
+              "position": 8,
+              "type": "talk_to_npc",
+              "payload": {
+                "npc_id": "Village Head",
+                "dialogue_id": "nouns_festival_q06_finish"
+              },
+              "source_metadata": {
+                "source_position": 8,
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              },
+              "rewards": []
+            }
+          ],
+          "rewards": [
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "xp",
+              "xp_amount": 250,
+              "item_external_id": null,
+              "amount": null,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              }
+            },
+            {
+              "scope": "quest",
+              "step_key": null,
+              "reward_type": "item",
+              "xp_amount": null,
+              "item_external_id": "coin",
+              "amount": 36,
+              "source_metadata": {
+                "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+              }
+            }
+          ],
+          "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml",
+          "source_metadata": {
+            "source_index_path": "questlines\\nouns_festival\\_index.yaml",
+            "source_detail": {
+              "id": "nouns_festival__q06_nouns",
+              "name": "השלטים האחרונים",
+              "level_required": 1,
+              "giver_npc": "Village Head",
+              "prerequisite": [
+                "nouns_festival__q02_festival",
+                "nouns_festival__q03_animals",
+                "nouns_festival__q04_things",
+                "nouns_festival__q05_nouns"
+              ],
+              "summary": "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל.",
+              "wait_for_npc_turn_in": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "numbers_advanced_homework",
       "display_name": "Numbers Advanced - שיעורי בית",
       "theme": "Practice reading, spelling, ordering, and saying numbers from 10 to 1000 with clear Hebrew guidance",
@@ -25538,5 +28314,5 @@
       ]
     }
   ],
-  "source_digest": "dc34660399cf7721dc91d78a9f3cb6021606639763f161c88b6cb3156d0f915d"
+  "source_digest": "483a3a861957a39650612433b955c0276bda32a874ca925312905445c48c65c9"
 }

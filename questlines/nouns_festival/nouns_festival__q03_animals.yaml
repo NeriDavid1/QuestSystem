@@ -1,0 +1,17 @@
+quest:
+  id: nouns_festival__q03_animals
+  name: "חיות המופע ברחו"
+  level_required: 1
+  giver_npc: Farmer
+  prerequisite: nouns_festival__q02_festival
+  summary: "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן."
+  wait_for_npc_turn_in: false
+rewards: {xp: 50, items: [{id: coin, amount: 10}]}
+steps:
+  - {type: talk_to_npc, npc_id: Farmer, dialogue_id: nouns_festival_q03_start}
+  - {type: play_minigame, npc_id: Farmer, difficulty: 1, instance_id: nouns_festival_q03_animals, minigame_id: word_matching, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: talk_to_npc, npc_id: Farmer, dialogue_id: nouns_festival_q03_progress}
+  - {type: play_minigame, npc_id: Farmer, difficulty: 1, instance_id: nouns_festival_q03_monkey, minigame_id: letter_ordering, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: play_minigame, npc_id: Farmer, difficulty: 1, instance_id: nouns_festival_q03_sentence, minigame_id: word_ordering, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: play_minigame, npc_id: Farmer, difficulty: 1, instance_id: nouns_festival_q03_speak, minigame_id: speak_aloud, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}
+  - {type: talk_to_npc, npc_id: Farmer, dialogue_id: nouns_festival_q03_finish}
