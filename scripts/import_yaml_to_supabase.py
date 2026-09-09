@@ -533,6 +533,11 @@ def build_bundle() -> dict[str, Any]:
                     and steps_raw[0].get("dialogue_id")
                     else None
                 ),
+                "turn_in_dialogue_id": (
+                    str(detail["turn_in_dialogue_id"])
+                    if detail.get("turn_in_dialogue_id")
+                    else None
+                ),
                 "status": detail.get("status") or ("complete" if len(steps_raw) > 1 else "draft"),
                 "prerequisites": [],
                 "steps": [],
@@ -545,6 +550,17 @@ def build_bundle() -> dict[str, Any]:
                     }
                 ),
             }
+            if quest["turn_in_dialogue_id"] and quest["turn_in_dialogue_id"] not in dialogue_ids:
+                conflict(
+                    conflicts,
+                    "missing_dialogue_reference",
+                    "error",
+                    "Quest turn_in_dialogue_id references a dialogue that is not imported.",
+                    quest["source_path"] or str(index_path.relative_to(ROOT)),
+                    questline=questline_key,
+                    quest_id=quest_id,
+                    dialogue_id=quest["turn_in_dialogue_id"],
+                )
             prerequisite = entry.get("prerequisite")
             if prerequisite is None:
                 prerequisite = detail.get("prerequisite")

@@ -5,7 +5,8 @@ quest:
   giver_npc: "Little Girl"
   prerequisite: wh_questions__q03_the_night_the_ship_broke
   summary: "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: wh_questions_q04_finish
 rewards: { xp: 225, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: wh_questions_q04_say_friend_question
     display_text: אמרו את השאלה הבאה באנגלית בקול.
-  - type: return_to_npc
-    npc_id: "Little Girl"
-    dialogue_id: wh_questions_q04_finish
-    success_required: true
-    display_text: חזרו אל הילדה הקטנה עם השאלות שהרכבתם.

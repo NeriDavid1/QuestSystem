@@ -5,7 +5,8 @@ quest:
   giver_npc: Village Head
   prerequisite: personal_pronouns__q04_the_crowd_scene
   summary: "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: personal_pronouns_q05_finish
 rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }
 steps:
   - type: talk_to_npc
@@ -53,8 +54,3 @@ steps:
     success_required: true
     instance_id: personal_pronouns_q05_say_it_is_a_beautiful_day
     display_text: אמרו בקול את המשפט המלא באנגלית.
-  - type: return_to_npc
-    npc_id: Village Head
-    dialogue_id: personal_pronouns_q05_finish
-    success_required: true
-    display_text: חזרו לראש הכפר לסיום ההצגה.

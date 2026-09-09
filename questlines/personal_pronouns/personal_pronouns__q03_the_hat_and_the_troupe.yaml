@@ -5,7 +5,8 @@ quest:
   giver_npc: Village Head
   prerequisite: personal_pronouns__q02_two_actors_one_name
   summary: "לאביזרים של ההצגה אין שמות, וללהקה כולה צריך מילה אחת. למדו It לחפץ או לבעל חיים, ו-We לקבוצה שאני חלק ממנה."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: personal_pronouns_q03_finish
 rewards: { xp: 200, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: personal_pronouns_q03_say_we_are_on_the_stage
     display_text: אמרו בקול את המשפט המלא באנגלית.
-  - type: return_to_npc
-    npc_id: Village Head
-    dialogue_id: personal_pronouns_q03_finish
-    success_required: true
-    display_text: חזרו לראש הכפר עם רשימת האביזרים.

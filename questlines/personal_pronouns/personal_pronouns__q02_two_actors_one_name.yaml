@@ -5,7 +5,8 @@ quest:
   giver_npc: Little Boy
   prerequisite: personal_pronouns__q01_the_notebook_ran_out
   summary: "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: personal_pronouns_q02_finish
 rewards: { xp: 175, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: personal_pronouns_q02_say_he_is_my_best_friend
     display_text: אמרו בקול את המשפט המלא באנגלית.
-  - type: return_to_npc
-    npc_id: Little Boy
-    dialogue_id: personal_pronouns_q02_finish
-    success_required: true
-    display_text: חזרו לילד הקטן עם התמונה השנייה.

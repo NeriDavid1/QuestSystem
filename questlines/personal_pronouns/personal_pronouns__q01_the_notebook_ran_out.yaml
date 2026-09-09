@@ -5,7 +5,8 @@ quest:
   giver_npc: Village Head
   prerequisite: null
   summary: "הילד הקטן כתב כל שם במחזה שוב ושוב והדפים נגמרו. למדו את המילים הקצרות I ו-You שיכולות לבוא במקום שם."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: personal_pronouns_q01_finish
 rewards: { xp: 150, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: personal_pronouns_q01_say_i_am_the_king
     display_text: אמרו בקול את המשפט המלא באנגלית.
-  - type: return_to_npc
-    npc_id: Village Head
-    dialogue_id: personal_pronouns_q01_finish
-    success_required: true
-    display_text: חזרו לראש הכפר עם התמונה הראשונה.

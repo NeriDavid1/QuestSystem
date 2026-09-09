@@ -5,7 +5,8 @@ quest:
   giver_npc: Cannoneer
   prerequisite: wh_questions__q02_the_sailor_who_saw
   summary: "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: wh_questions_q03_finish
 rewards: { xp: 200, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: wh_questions_q03_say_how
     display_text: אמרו את השאלה הבאה באנגלית בקול.
-  - type: return_to_npc
-    npc_id: Cannoneer
-    dialogue_id: wh_questions_q03_finish
-    success_required: true
-    display_text: חזרו לתותחן עם הסיבה שמצאתם.

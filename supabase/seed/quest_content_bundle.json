@@ -15977,6 +15977,7 @@
           "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_oak_log_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -16082,6 +16083,7 @@
           "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_water_man_herbs_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_bridge_too_short"
@@ -16189,6 +16191,7 @@
           "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_grandmother_corn_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_whispering_stone"
@@ -16344,6 +16347,7 @@
           "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_runes_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_big_and_small_words"
@@ -16979,6 +16983,7 @@
           "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_power_stones_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q04_twelve_basic_adjectives"
@@ -17202,6 +17207,7 @@
           "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_gem_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q05_from_low_to_high"
@@ -17404,6 +17410,7 @@
           "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "will_runaway_hammer_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -17509,6 +17516,7 @@
           "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "will_snoring_anvil_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_runaway_hammer"
@@ -17616,6 +17624,7 @@
           "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "will_first_slash_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_snoring_anvil"
@@ -17734,6 +17743,7 @@
           "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_maya_missing_roles",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -17858,6 +17868,7 @@
           "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_fenn_mixed_places",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_roles_without_names"
@@ -17984,6 +17995,7 @@
           "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_professor_crown_soup",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_castle_on_the_map"
@@ -18110,6 +18122,7 @@
           "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_blacksmith_mixed_equipment",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_crown_soup"
@@ -18236,6 +18249,7 @@
           "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_old_woman_new_roles",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q04_soup_shield"
@@ -18362,6 +18376,7 @@
           "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_cannoneer_wrong_names",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q05_wizard_for_sale"
@@ -18488,6 +18503,7 @@
           "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_maya_final_trial",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q06_dragon_identity"
@@ -18719,6 +18735,7 @@
           "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "missing_verbs_q01_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -18862,6 +18879,7 @@
           "summary": "עזרו לשומר להבין את פעלי הפעולה בפקודות המלך.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "missing_verbs_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q01_benny_can_t_build_verbs"
@@ -19007,6 +19025,7 @@
           "summary": "עזרו לתותחן לבחור את פועל הפעולה הנכון.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "missing_verbs_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q02_the_confused_guard"
@@ -19170,6 +19189,7 @@
           "summary": "השלימו שמות עצם ועזרו למאיה לתקן את ספר המילים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q01_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -19375,6 +19395,7 @@
           "summary": "מצאו את שמות החפצים שעזבו את השק של הילד.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_the_broken_noun_book"
@@ -19582,6 +19603,7 @@
           "summary": "תקנו את שמות הפירות והאוכל בשוק בלי לאכול את השלטים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_the_runaway_objects"
@@ -19789,6 +19811,7 @@
           "summary": "הצילו את המטבח ותקנו את שמות הכלים והאנשים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q04_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_the_market_name_mixup"
@@ -19996,6 +20019,7 @@
           "summary": "תקנו את שמות הארמון לפני שהכתר יקבל שפם.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q05_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q04_the_kitchen_invasion"
@@ -20203,6 +20227,7 @@
           "summary": "עברו את מבחן שמות העצם ופתחו מחדש את החנות.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q06_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q05_the_castle_label_crisis"
@@ -20439,6 +20464,7 @@
           "summary": "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -20565,6 +20591,7 @@
           "summary": "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival"
@@ -20718,6 +20745,7 @@
           "summary": "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q04_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival",
@@ -20875,6 +20903,7 @@
           "summary": "עזרו לשומר לסדר את השלטים ליד שער הפסטיבל.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q05_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival",
@@ -21023,6 +21052,7 @@
           "summary": "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q06_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival",
@@ -21238,6 +21268,7 @@
           "summary": "עזרו לליטל בוי לתקן את מפת המספרים מ־10 עד 20.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q01_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -21438,6 +21469,7 @@
           "summary": "עזרו לאיכר לסדר את המספרים מ־20 עד 100.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_numbers_10_20"
@@ -21640,6 +21672,7 @@
           "summary": "עזרו לפרופסור להשלים את המספרים מ־100 עד 1000.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_numbers_20_100"
@@ -21842,6 +21875,7 @@
           "summary": "חברו את כל טווחי המספרים והשלימו את המפה.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q04_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_numbers_100_1000"
@@ -22022,8 +22056,9 @@
           "level_required": 50,
           "giver_external_id": "Village Head",
           "summary": "הילד הקטן כתב כל שם במחזה שוב ושוב והדפים נגמרו. למדו את המילים הקצרות I ו-You שיכולות לבוא במקום שם.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q01_start",
+          "turn_in_dialogue_id": "personal_pronouns_q01_finish",
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -22121,22 +22156,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q01_the_notebook_ran_out.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q01_the_notebook_ran_out_return_to_npc_a7d1f476_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Village Head",
-                "dialogue_id": "personal_pronouns_q01_finish",
-                "success_required": true,
-                "display_text": "חזרו לראש הכפר עם התמונה הראשונה."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q01_the_notebook_ran_out.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -22162,7 +22181,8 @@
               "giver_npc": "Village Head",
               "prerequisite": null,
               "summary": "הילד הקטן כתב כל שם במחזה שוב ושוב והדפים נגמרו. למדו את המילים הקצרות I ו-You שיכולות לבוא במקום שם.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q01_finish"
             }
           }
         },
@@ -22173,8 +22193,9 @@
           "level_required": 1,
           "giver_external_id": "Little Boy",
           "summary": "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q02_start",
+          "turn_in_dialogue_id": "personal_pronouns_q02_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q01_the_notebook_ran_out"
@@ -22274,22 +22295,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q02_two_actors_one_name.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q02_two_actors_one_name_return_to_npc_60e658c8_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "personal_pronouns_q02_finish",
-                "success_required": true,
-                "display_text": "חזרו לילד הקטן עם התמונה השנייה."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q02_two_actors_one_name.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -22315,7 +22320,8 @@
               "giver_npc": "Little Boy",
               "prerequisite": "personal_pronouns__q01_the_notebook_ran_out",
               "summary": "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q02_finish"
             }
           }
         },
@@ -22326,8 +22332,9 @@
           "level_required": 1,
           "giver_external_id": "Village Head",
           "summary": "לאביזרים של ההצגה אין שמות, וללהקה כולה צריך מילה אחת. למדו It לחפץ או לבעל חיים, ו-We לקבוצה שאני חלק ממנה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q03_start",
+          "turn_in_dialogue_id": "personal_pronouns_q03_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q02_two_actors_one_name"
@@ -22427,22 +22434,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q03_the_hat_and_the_troupe.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q03_the_hat_and_the_troupe_return_to_npc_bf4801b9_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Village Head",
-                "dialogue_id": "personal_pronouns_q03_finish",
-                "success_required": true,
-                "display_text": "חזרו לראש הכפר עם רשימת האביזרים."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q03_the_hat_and_the_troupe.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -22468,7 +22459,8 @@
               "giver_npc": "Village Head",
               "prerequisite": "personal_pronouns__q02_two_actors_one_name",
               "summary": "לאביזרים של ההצגה אין שמות, וללהקה כולה צריך מילה אחת. למדו It לחפץ או לבעל חיים, ו-We לקבוצה שאני חלק ממנה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q03_finish"
             }
           }
         },
@@ -22479,8 +22471,9 @@
           "level_required": 1,
           "giver_external_id": "Little Boy",
           "summary": "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואי אפשר לכתוב עשרים שמות. למדו את המילה They ליותר מאדם אחד.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q04_start",
+          "turn_in_dialogue_id": "personal_pronouns_q04_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q03_the_hat_and_the_troupe"
@@ -22580,22 +22573,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q04_the_crowd_scene.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q04_the_crowd_scene_return_to_npc_5767db98_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "personal_pronouns_q04_finish",
-                "success_required": true,
-                "display_text": "חזרו לילד הקטן עם סוף המחזה."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q04_the_crowd_scene.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -22621,7 +22598,8 @@
               "giver_npc": "Little Boy",
               "prerequisite": "personal_pronouns__q03_the_hat_and_the_troupe",
               "summary": "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואי אפשר לכתוב עשרים שמות. למדו את המילה They ליותר מאדם אחד.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q04_finish"
             }
           }
         },
@@ -22632,8 +22610,9 @@
           "level_required": 1,
           "giver_external_id": "Village Head",
           "summary": "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q05_start",
+          "turn_in_dialogue_id": "personal_pronouns_q05_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q04_the_crowd_scene"
@@ -22752,22 +22731,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q05_opening_night.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q05_opening_night_return_to_npc_002378db_1",
-              "position": 7,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Village Head",
-                "dialogue_id": "personal_pronouns_q05_finish",
-                "success_required": true,
-                "display_text": "חזרו לראש הכפר לסיום ההצגה."
-              },
-              "source_metadata": {
-                "source_position": 7,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q05_opening_night.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -22804,7 +22767,8 @@
               "giver_npc": "Village Head",
               "prerequisite": "personal_pronouns__q04_the_crowd_scene",
               "summary": "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q05_finish"
             }
           }
         }
@@ -22835,6 +22799,7 @@
           "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q01_fenn_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -22965,6 +22930,7 @@
           "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q02_will_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q01_what_is_missing"
@@ -23097,6 +23063,7 @@
           "summary": "השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
@@ -23248,6 +23215,7 @@
           "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q04_professor_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q03_royal_description_disaster"
@@ -23456,6 +23424,7 @@
           "summary": "אספו מידע מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -23609,6 +23578,7 @@
           "summary": "שנו את המילים כשמדברים על שני השומרים ועל ארוחת הצהריים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q01_two_advisors"
@@ -23793,6 +23763,7 @@
           "summary": "השלימו את המילים שנקרעו מהסיפור והשתמשו בהן בשני משפטים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q02_the_witnesses"
@@ -23925,6 +23896,7 @@
           "summary": "כתבו את שש המילים באנגלית ופתחו את הקוד למבחן המלכותי.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q03_the_torn_testimony"
@@ -24152,6 +24124,7 @@
           "summary": "השלימו את המבחן המלכותי וחשפו מי אינו יודע למי שייכים הדברים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q04_the_ownership_code"
@@ -24344,8 +24317,9 @@
           "level_required": 50,
           "giver_external_id": "Ghost",
           "summary": "רוח באבני הבכי שכחה את השם שלה. שאלו What ו-Where כדי להחזיר את הזיכרון הראשון.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q01_start",
+          "turn_in_dialogue_id": "wh_questions_q01_finish",
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -24443,22 +24417,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q01_the_forgotten_name.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q01_the_forgotten_name_return_to_npc_dfa52107_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Ghost",
-                "dialogue_id": "wh_questions_q01_finish",
-                "success_required": true,
-                "display_text": "חזרו לבו עם החלק הראשון בזיכרון."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q01_the_forgotten_name.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -24484,7 +24442,8 @@
               "giver_npc": "Ghost",
               "prerequisite": null,
               "summary": "רוח באבני הבכי שכחה את השם שלה. שאלו What ו-Where כדי להחזיר את הזיכרון הראשון.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q01_finish"
             }
           }
         },
@@ -24495,8 +24454,9 @@
           "level_required": 1,
           "giver_external_id": "Fisherman",
           "summary": "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q02_start",
+          "turn_in_dialogue_id": "wh_questions_q02_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q01_the_forgotten_name"
@@ -24596,22 +24556,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q02_the_sailor_who_saw.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q02_the_sailor_who_saw_return_to_npc_ca3644dd_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Fisherman",
-                "dialogue_id": "wh_questions_q02_finish",
-                "success_required": true,
-                "display_text": "חזרו לנמו עם עדות המלח."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q02_the_sailor_who_saw.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -24637,7 +24581,8 @@
               "giver_npc": "Fisherman",
               "prerequisite": "wh_questions__q01_the_forgotten_name",
               "summary": "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q02_finish"
             }
           }
         },
@@ -24648,8 +24593,9 @@
           "level_required": 1,
           "giver_external_id": "Cannoneer",
           "summary": "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q03_start",
+          "turn_in_dialogue_id": "wh_questions_q03_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q02_the_sailor_who_saw"
@@ -24749,22 +24695,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q03_the_night_the_ship_broke.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q03_the_night_the_ship_broke_return_to_npc_f7b3cbac_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Cannoneer",
-                "dialogue_id": "wh_questions_q03_finish",
-                "success_required": true,
-                "display_text": "חזרו לתותחן עם הסיבה שמצאתם."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q03_the_night_the_ship_broke.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -24790,7 +24720,8 @@
               "giver_npc": "Cannoneer",
               "prerequisite": "wh_questions__q02_the_sailor_who_saw",
               "summary": "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q03_finish"
             }
           }
         },
@@ -24801,8 +24732,9 @@
           "level_required": 1,
           "giver_external_id": "Little Girl",
           "summary": "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q04_start",
+          "turn_in_dialogue_id": "wh_questions_q04_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q03_the_night_the_ship_broke"
@@ -24902,22 +24834,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q04_six_questions_for_lily.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q04_six_questions_for_lily_return_to_npc_af6f632c_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Little Girl",
-                "dialogue_id": "wh_questions_q04_finish",
-                "success_required": true,
-                "display_text": "חזרו אל הילדה הקטנה עם השאלות שהרכבתם."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q04_six_questions_for_lily.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -24943,7 +24859,8 @@
               "giver_npc": "Little Girl",
               "prerequisite": "wh_questions__q03_the_night_the_ship_broke",
               "summary": "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q04_finish"
             }
           }
         },
@@ -24954,8 +24871,9 @@
           "level_required": 1,
           "giver_external_id": "Mountain Guide",
           "summary": "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q05_start",
+          "turn_in_dialogue_id": "wh_questions_q05_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q04_six_questions_for_lily"
@@ -25074,22 +24992,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q05_the_light_at_the_tower.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q05_the_light_at_the_tower_return_to_npc_7669a6a6_1",
-              "position": 7,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Mountain Guide",
-                "dialogue_id": "wh_questions_q05_finish",
-                "success_required": true,
-                "display_text": "חזרו למדריך ההרים לסיום הסיפור."
-              },
-              "source_metadata": {
-                "source_position": 7,
-                "source_path": "questlines\\wh_questions\\wh_questions__q05_the_light_at_the_tower.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -25126,7 +25028,8 @@
               "giver_npc": "Mountain Guide",
               "prerequisite": "wh_questions__q04_six_questions_for_lily",
               "summary": "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q05_finish"
             }
           }
         }
@@ -25142,7 +25045,7 @@
     "minigame_instances": 243,
     "questlines": 11,
     "quests": 53,
-    "steps": 338,
+    "steps": 328,
     "errors": 0,
     "warnings": 0,
     "info": 0
@@ -25163,6 +25066,7 @@
           "summary": "Spell LONG at the existing short bridge, receive one Oak Log, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_oak_log_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -25268,6 +25172,7 @@
           "summary": "Say HOT in the forest, receive one Herbs item, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_water_man_herbs_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_bridge_too_short"
@@ -25375,6 +25280,7 @@
           "summary": "Complete BIG and say SMALL, receive two Corn items, and deliver both to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_grandmother_corn_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_whispering_stone"
@@ -25530,6 +25436,7 @@
           "summary": "Complete twelve adjective minigames, receive twelve Ancient Runes, and deliver all twelve to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_runes_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_big_and_small_words"
@@ -26165,6 +26072,7 @@
           "summary": "Complete four LOW/HIGH word activities, receive four Power Stones, and deliver them to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_power_stones_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q04_twelve_basic_adjectives"
@@ -26388,6 +26296,7 @@
           "summary": "Complete three sprite-free matching games covering the twelve learned adjectives (4 words each), receive one Gem on the last game, and deliver it to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "adjective_knight_gem_request",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q05_from_low_to_high"
@@ -26580,6 +26489,7 @@
           "summary": "Will's hammer ran off chasing a cat — spell CAT at Driftgold Bay, bring back one Oak Log.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "will_runaway_hammer_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -26685,6 +26595,7 @@
           "summary": "The anvil only wakes for a dog story — spell DOG at Builders Home, bring back one Herbs.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "will_snoring_anvil_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_runaway_hammer"
@@ -26792,6 +26703,7 @@
           "summary": "Spell BIG at the Kingdom Gate, return to Will, and earn the Slash Ability.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "will_first_slash_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_snoring_anvil"
@@ -26900,6 +26812,7 @@
           "summary": "The noun book loses KING, QUEEN, and KNIGHT — spell KING, speak the three roles, deliver a Gem to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_maya_missing_roles",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -27024,6 +26937,7 @@
           "summary": "CASTLE, TOWER, and GATE swap on the map — spell CASTLE, speak the three places, deliver a Gem to Fenn.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_fenn_mixed_places",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_roles_without_names"
@@ -27150,6 +27064,7 @@
           "summary": "Professor Crazy confuses CROWN, THRONE, and TREASURE — spell CROWN, speak the three, deliver a Power Stone.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_professor_crown_soup",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_castle_on_the_map"
@@ -27276,6 +27191,7 @@
           "summary": "SWORD, SHIELD, and SCROLL are mixed in the forge — spell SHIELD, speak the three, deliver a Power Stone to Will.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_blacksmith_mixed_equipment",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_crown_soup"
@@ -27402,6 +27318,7 @@
           "summary": "WIZARD, COOK, and GUARD trade jobs — spell WIZARD, speak the three, deliver a Power Stone to the Old Woman.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_old_woman_new_roles",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q04_soup_shield"
@@ -27528,6 +27445,7 @@
           "summary": "DRAGON, GRIFFIN, and GOBLIN get the wrong name cards — spell DRAGON, speak the three, deliver an Ancient Rune to the Cannoneer.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_cannoneer_wrong_names",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q05_wizard_for_sale"
@@ -27654,6 +27572,7 @@
           "summary": "Review kingdom nouns — spell five key words, speak one from each group, deliver an Ancient Rune to Maya.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_maya_final_trial",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q06_dragon_identity"
@@ -27875,6 +27794,7 @@
           "summary": "עזרו לבני להחזיר פעלים לפקודות הבנייה.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "missing_verbs_q01_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -28018,6 +27938,7 @@
           "summary": "עזרו לשומר להבין את פעלי הפעולה בפקודות המלך.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "missing_verbs_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q01_benny_can_t_build_verbs"
@@ -28163,6 +28084,7 @@
           "summary": "עזרו לתותחן לבחור את פועל הפעולה הנכון.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "missing_verbs_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "missing_verbs__q02_the_confused_guard"
@@ -28316,6 +28238,7 @@
           "summary": "השלימו שמות עצם ועזרו למאיה לתקן את ספר המילים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q01_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -28521,6 +28444,7 @@
           "summary": "מצאו את שמות החפצים שעזבו את השק של הילד.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_the_broken_noun_book"
@@ -28728,6 +28652,7 @@
           "summary": "תקנו את שמות הפירות והאוכל בשוק בלי לאכול את השלטים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_the_runaway_objects"
@@ -28935,6 +28860,7 @@
           "summary": "הצילו את המטבח ותקנו את שמות הכלים והאנשים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q04_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_the_market_name_mixup"
@@ -29142,6 +29068,7 @@
           "summary": "תקנו את שמות הארמון לפני שהכתר יקבל שפם.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q05_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q04_the_kitchen_invasion"
@@ -29349,6 +29276,7 @@
           "summary": "עברו את מבחן שמות העצם ופתחו מחדש את החנות.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "noun_repair_q06_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q05_the_castle_label_crisis"
@@ -29575,6 +29503,7 @@
           "summary": "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -29701,6 +29630,7 @@
           "summary": "עזרו לחקלאי להחזיר את חיות המופע ולהכין את השלטים שלהן.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival"
@@ -29854,6 +29784,7 @@
           "summary": "עזרו לנפח לסדר את הכלים והקישוטים בדוכן הפסטיבל.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q04_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival",
@@ -30011,6 +29942,7 @@
           "summary": "עזרו לשומר לסדר את השלטים ליד שער הפסטיבל.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q05_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival",
@@ -30159,6 +30091,7 @@
           "summary": "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "nouns_festival_q06_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "nouns_festival__q02_festival",
@@ -30364,6 +30297,7 @@
           "summary": "עזרו לליטל בוי לתקן את מפת המספרים מ־10 עד 20.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q01_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -30564,6 +30498,7 @@
           "summary": "עזרו לאיכר לסדר את המספרים מ־20 עד 100.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q02_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q01_numbers_10_20"
@@ -30766,6 +30701,7 @@
           "summary": "עזרו לפרופסור להשלים את המספרים מ־100 עד 1000.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q03_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q02_numbers_20_100"
@@ -30968,6 +30904,7 @@
           "summary": "חברו את כל טווחי המספרים והשלימו את המפה.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "numbers_advanced_q04_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "q03_numbers_100_1000"
@@ -31138,8 +31075,9 @@
           "level_required": 50,
           "giver_external_id": "Village Head",
           "summary": "הילד הקטן כתב כל שם במחזה שוב ושוב והדפים נגמרו. למדו את המילים הקצרות I ו-You שיכולות לבוא במקום שם.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q01_start",
+          "turn_in_dialogue_id": "personal_pronouns_q01_finish",
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -31237,22 +31175,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q01_the_notebook_ran_out.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q01_the_notebook_ran_out_return_to_npc_a7d1f476_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Village Head",
-                "dialogue_id": "personal_pronouns_q01_finish",
-                "success_required": true,
-                "display_text": "חזרו לראש הכפר עם התמונה הראשונה."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q01_the_notebook_ran_out.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -31278,7 +31200,8 @@
               "giver_npc": "Village Head",
               "prerequisite": null,
               "summary": "הילד הקטן כתב כל שם במחזה שוב ושוב והדפים נגמרו. למדו את המילים הקצרות I ו-You שיכולות לבוא במקום שם.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q01_finish"
             }
           }
         },
@@ -31289,8 +31212,9 @@
           "level_required": 1,
           "giver_external_id": "Little Boy",
           "summary": "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q02_start",
+          "turn_in_dialogue_id": "personal_pronouns_q02_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q01_the_notebook_ran_out"
@@ -31390,22 +31314,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q02_two_actors_one_name.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q02_two_actors_one_name_return_to_npc_60e658c8_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "personal_pronouns_q02_finish",
-                "success_required": true,
-                "display_text": "חזרו לילד הקטן עם התמונה השנייה."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q02_two_actors_one_name.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -31431,7 +31339,8 @@
               "giver_npc": "Little Boy",
               "prerequisite": "personal_pronouns__q01_the_notebook_ran_out",
               "summary": "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q02_finish"
             }
           }
         },
@@ -31442,8 +31351,9 @@
           "level_required": 1,
           "giver_external_id": "Village Head",
           "summary": "לאביזרים של ההצגה אין שמות, וללהקה כולה צריך מילה אחת. למדו It לחפץ או לבעל חיים, ו-We לקבוצה שאני חלק ממנה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q03_start",
+          "turn_in_dialogue_id": "personal_pronouns_q03_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q02_two_actors_one_name"
@@ -31543,22 +31453,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q03_the_hat_and_the_troupe.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q03_the_hat_and_the_troupe_return_to_npc_bf4801b9_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Village Head",
-                "dialogue_id": "personal_pronouns_q03_finish",
-                "success_required": true,
-                "display_text": "חזרו לראש הכפר עם רשימת האביזרים."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q03_the_hat_and_the_troupe.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -31584,7 +31478,8 @@
               "giver_npc": "Village Head",
               "prerequisite": "personal_pronouns__q02_two_actors_one_name",
               "summary": "לאביזרים של ההצגה אין שמות, וללהקה כולה צריך מילה אחת. למדו It לחפץ או לבעל חיים, ו-We לקבוצה שאני חלק ממנה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q03_finish"
             }
           }
         },
@@ -31595,8 +31490,9 @@
           "level_required": 1,
           "giver_external_id": "Little Boy",
           "summary": "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואי אפשר לכתוב עשרים שמות. למדו את המילה They ליותר מאדם אחד.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q04_start",
+          "turn_in_dialogue_id": "personal_pronouns_q04_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q03_the_hat_and_the_troupe"
@@ -31696,22 +31592,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q04_the_crowd_scene.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q04_the_crowd_scene_return_to_npc_5767db98_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Little Boy",
-                "dialogue_id": "personal_pronouns_q04_finish",
-                "success_required": true,
-                "display_text": "חזרו לילד הקטן עם סוף המחזה."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q04_the_crowd_scene.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -31737,7 +31617,8 @@
               "giver_npc": "Little Boy",
               "prerequisite": "personal_pronouns__q03_the_hat_and_the_troupe",
               "summary": "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואי אפשר לכתוב עשרים שמות. למדו את המילה They ליותר מאדם אחד.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q04_finish"
             }
           }
         },
@@ -31748,8 +31629,9 @@
           "level_required": 1,
           "giver_external_id": "Village Head",
           "summary": "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "personal_pronouns_q05_start",
+          "turn_in_dialogue_id": "personal_pronouns_q05_finish",
           "status": "complete",
           "prerequisites": [
             "personal_pronouns__q04_the_crowd_scene"
@@ -31868,22 +31750,6 @@
                 "source_path": "questlines\\personal_pronouns\\personal_pronouns__q05_opening_night.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "personal_pronouns_q05_opening_night_return_to_npc_002378db_1",
-              "position": 7,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Village Head",
-                "dialogue_id": "personal_pronouns_q05_finish",
-                "success_required": true,
-                "display_text": "חזרו לראש הכפר לסיום ההצגה."
-              },
-              "source_metadata": {
-                "source_position": 7,
-                "source_path": "questlines\\personal_pronouns\\personal_pronouns__q05_opening_night.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -31920,7 +31786,8 @@
               "giver_npc": "Village Head",
               "prerequisite": "personal_pronouns__q04_the_crowd_scene",
               "summary": "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "personal_pronouns_q05_finish"
             }
           }
         }
@@ -31941,6 +31808,7 @@
           "summary": "השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q01_fenn_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -32071,6 +31939,7 @@
           "summary": "השלימו פעלים ועזרו לוויל לדעת איזו פעולה לבצע.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q02_will_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q01_what_is_missing"
@@ -32203,6 +32072,7 @@
           "summary": "השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q03_painter_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
@@ -32354,6 +32224,7 @@
           "summary": "חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": "the_kingdoms_worst_day_q04_professor_start",
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_kingdoms_worst_day__q03_royal_description_disaster"
@@ -32552,6 +32423,7 @@
           "summary": "אספו מידע מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -32705,6 +32577,7 @@
           "summary": "שנו את המילים כשמדברים על שני השומרים ועל ארוחת הצהריים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q01_two_advisors"
@@ -32889,6 +32762,7 @@
           "summary": "השלימו את המילים שנקרעו מהסיפור והשתמשו בהן בשני משפטים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q02_the_witnesses"
@@ -33021,6 +32895,7 @@
           "summary": "כתבו את שש המילים באנגלית ופתחו את הקוד למבחן המלכותי.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q03_the_torn_testimony"
@@ -33248,6 +33123,7 @@
           "summary": "השלימו את המבחן המלכותי וחשפו מי אינו יודע למי שייכים הדברים.",
           "wait_for_npc_turn_in": false,
           "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
           "status": "complete",
           "prerequisites": [
             "the_royal_impostor__the_royal_impostor__q04_the_ownership_code"
@@ -33430,8 +33306,9 @@
           "level_required": 50,
           "giver_external_id": "Ghost",
           "summary": "רוח באבני הבכי שכחה את השם שלה. שאלו What ו-Where כדי להחזיר את הזיכרון הראשון.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q01_start",
+          "turn_in_dialogue_id": "wh_questions_q01_finish",
           "status": "complete",
           "prerequisites": [],
           "steps": [
@@ -33529,22 +33406,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q01_the_forgotten_name.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q01_the_forgotten_name_return_to_npc_dfa52107_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Ghost",
-                "dialogue_id": "wh_questions_q01_finish",
-                "success_required": true,
-                "display_text": "חזרו לבו עם החלק הראשון בזיכרון."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q01_the_forgotten_name.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -33570,7 +33431,8 @@
               "giver_npc": "Ghost",
               "prerequisite": null,
               "summary": "רוח באבני הבכי שכחה את השם שלה. שאלו What ו-Where כדי להחזיר את הזיכרון הראשון.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q01_finish"
             }
           }
         },
@@ -33581,8 +33443,9 @@
           "level_required": 1,
           "giver_external_id": "Fisherman",
           "summary": "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q02_start",
+          "turn_in_dialogue_id": "wh_questions_q02_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q01_the_forgotten_name"
@@ -33682,22 +33545,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q02_the_sailor_who_saw.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q02_the_sailor_who_saw_return_to_npc_ca3644dd_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Fisherman",
-                "dialogue_id": "wh_questions_q02_finish",
-                "success_required": true,
-                "display_text": "חזרו לנמו עם עדות המלח."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q02_the_sailor_who_saw.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -33723,7 +33570,8 @@
               "giver_npc": "Fisherman",
               "prerequisite": "wh_questions__q01_the_forgotten_name",
               "summary": "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q02_finish"
             }
           }
         },
@@ -33734,8 +33582,9 @@
           "level_required": 1,
           "giver_external_id": "Cannoneer",
           "summary": "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q03_start",
+          "turn_in_dialogue_id": "wh_questions_q03_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q02_the_sailor_who_saw"
@@ -33835,22 +33684,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q03_the_night_the_ship_broke.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q03_the_night_the_ship_broke_return_to_npc_f7b3cbac_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Cannoneer",
-                "dialogue_id": "wh_questions_q03_finish",
-                "success_required": true,
-                "display_text": "חזרו לתותחן עם הסיבה שמצאתם."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q03_the_night_the_ship_broke.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -33876,7 +33709,8 @@
               "giver_npc": "Cannoneer",
               "prerequisite": "wh_questions__q02_the_sailor_who_saw",
               "summary": "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q03_finish"
             }
           }
         },
@@ -33887,8 +33721,9 @@
           "level_required": 1,
           "giver_external_id": "Little Girl",
           "summary": "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q04_start",
+          "turn_in_dialogue_id": "wh_questions_q04_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q03_the_night_the_ship_broke"
@@ -33988,22 +33823,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q04_six_questions_for_lily.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q04_six_questions_for_lily_return_to_npc_af6f632c_1",
-              "position": 6,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Little Girl",
-                "dialogue_id": "wh_questions_q04_finish",
-                "success_required": true,
-                "display_text": "חזרו אל הילדה הקטנה עם השאלות שהרכבתם."
-              },
-              "source_metadata": {
-                "source_position": 6,
-                "source_path": "questlines\\wh_questions\\wh_questions__q04_six_questions_for_lily.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -34029,7 +33848,8 @@
               "giver_npc": "Little Girl",
               "prerequisite": "wh_questions__q03_the_night_the_ship_broke",
               "summary": "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q04_finish"
             }
           }
         },
@@ -34040,8 +33860,9 @@
           "level_required": 1,
           "giver_external_id": "Mountain Guide",
           "summary": "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה.",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": "wh_questions_q05_start",
+          "turn_in_dialogue_id": "wh_questions_q05_finish",
           "status": "complete",
           "prerequisites": [
             "wh_questions__q04_six_questions_for_lily"
@@ -34160,22 +33981,6 @@
                 "source_path": "questlines\\wh_questions\\wh_questions__q05_the_light_at_the_tower.yaml"
               },
               "rewards": []
-            },
-            {
-              "key": "wh_questions_q05_the_light_at_the_tower_return_to_npc_7669a6a6_1",
-              "position": 7,
-              "type": "return_to_npc",
-              "payload": {
-                "npc_id": "Mountain Guide",
-                "dialogue_id": "wh_questions_q05_finish",
-                "success_required": true,
-                "display_text": "חזרו למדריך ההרים לסיום הסיפור."
-              },
-              "source_metadata": {
-                "source_position": 7,
-                "source_path": "questlines\\wh_questions\\wh_questions__q05_the_light_at_the_tower.yaml"
-              },
-              "rewards": []
             }
           ],
           "rewards": [
@@ -34212,12 +34017,13 @@
               "giver_npc": "Mountain Guide",
               "prerequisite": "wh_questions__q04_six_questions_for_lily",
               "summary": "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה.",
-              "wait_for_npc_turn_in": false
+              "wait_for_npc_turn_in": true,
+              "turn_in_dialogue_id": "wh_questions_q05_finish"
             }
           }
         }
       ]
     }
   ],
-  "source_digest": "086de8731c0072978b18d1e8606734658b64e7fc3a556b5ca0951e78ef440fc4"
+  "source_digest": "d8cd54778af2546823b2b831bb2d4576b87ad0e8f8c5a4612e85dc5c8a497b9d"
 }

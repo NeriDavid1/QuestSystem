@@ -10799,9 +10799,9 @@
           "prerequisite": null,
           "summary": "הילד הקטן כתב כל שם במחזה שוב ושוב והדפים נגמרו. למדו את המילים הקצרות I ו-You שיכולות לבוא במקום שם.",
           "giver_npc": "Village Head",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "personal_pronouns_q01_finish",
           "status": "complete",
           "rewards": {
             "xp": 150,
@@ -11029,13 +11029,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Village Head",
-              "dialogue_id": "personal_pronouns_q01_finish",
-              "success_required": true,
-              "display_text": "חזרו לראש הכפר עם התמונה הראשונה."
             }
           ]
         },
@@ -11046,9 +11039,9 @@
           "prerequisite": "personal_pronouns__q01_the_notebook_ran_out",
           "summary": "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She.",
           "giver_npc": "Little Boy",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "personal_pronouns_q02_finish",
           "status": "complete",
           "rewards": {
             "xp": 175,
@@ -11278,13 +11271,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Little Boy",
-              "dialogue_id": "personal_pronouns_q02_finish",
-              "success_required": true,
-              "display_text": "חזרו לילד הקטן עם התמונה השנייה."
             }
           ]
         },
@@ -11295,9 +11281,9 @@
           "prerequisite": "personal_pronouns__q02_two_actors_one_name",
           "summary": "לאביזרים של ההצגה אין שמות, וללהקה כולה צריך מילה אחת. למדו It לחפץ או לבעל חיים, ו-We לקבוצה שאני חלק ממנה.",
           "giver_npc": "Village Head",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "personal_pronouns_q03_finish",
           "status": "complete",
           "rewards": {
             "xp": 200,
@@ -11536,13 +11522,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Village Head",
-              "dialogue_id": "personal_pronouns_q03_finish",
-              "success_required": true,
-              "display_text": "חזרו לראש הכפר עם רשימת האביזרים."
             }
           ]
         },
@@ -11553,9 +11532,9 @@
           "prerequisite": "personal_pronouns__q03_the_hat_and_the_troupe",
           "summary": "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואי אפשר לכתוב עשרים שמות. למדו את המילה They ליותר מאדם אחד.",
           "giver_npc": "Little Boy",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "personal_pronouns_q04_finish",
           "status": "complete",
           "rewards": {
             "xp": 225,
@@ -11822,13 +11801,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Little Boy",
-              "dialogue_id": "personal_pronouns_q04_finish",
-              "success_required": true,
-              "display_text": "חזרו לילד הקטן עם סוף המחזה."
             }
           ]
         },
@@ -11839,9 +11811,9 @@
           "prerequisite": "personal_pronouns__q04_the_crowd_scene",
           "summary": "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה.",
           "giver_npc": "Village Head",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "personal_pronouns_q05_finish",
           "status": "complete",
           "rewards": {
             "xp": 300,
@@ -12133,13 +12105,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Village Head",
-              "dialogue_id": "personal_pronouns_q05_finish",
-              "success_required": true,
-              "display_text": "חזרו לראש הכפר לסיום ההצגה."
             }
           ]
         }
@@ -14392,9 +14357,9 @@
           "prerequisite": null,
           "summary": "רוח באבני הבכי שכחה את השם שלה. שאלו What ו-Where כדי להחזיר את הזיכרון הראשון.",
           "giver_npc": "Ghost",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "wh_questions_q01_finish",
           "status": "complete",
           "rewards": {
             "xp": 150,
@@ -14622,13 +14587,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Ghost",
-              "dialogue_id": "wh_questions_q01_finish",
-              "success_required": true,
-              "display_text": "חזרו לבו עם החלק הראשון בזיכרון."
             }
           ]
         },
@@ -14639,9 +14597,9 @@
           "prerequisite": "wh_questions__q01_the_forgotten_name",
           "summary": "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי.",
           "giver_npc": "Fisherman",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "wh_questions_q02_finish",
           "status": "complete",
           "rewards": {
             "xp": 175,
@@ -14881,13 +14839,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Fisherman",
-              "dialogue_id": "wh_questions_q02_finish",
-              "success_required": true,
-              "display_text": "חזרו לנמו עם עדות המלח."
             }
           ]
         },
@@ -14898,9 +14849,9 @@
           "prerequisite": "wh_questions__q02_the_sailor_who_saw",
           "summary": "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה.",
           "giver_npc": "Cannoneer",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "wh_questions_q03_finish",
           "status": "complete",
           "rewards": {
             "xp": 200,
@@ -15142,13 +15093,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Cannoneer",
-              "dialogue_id": "wh_questions_q03_finish",
-              "success_required": true,
-              "display_text": "חזרו לתותחן עם הסיבה שמצאתם."
             }
           ]
         },
@@ -15159,9 +15103,9 @@
           "prerequisite": "wh_questions__q03_the_night_the_ship_broke",
           "summary": "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה.",
           "giver_npc": "Little Girl",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "wh_questions_q04_finish",
           "status": "complete",
           "rewards": {
             "xp": 225,
@@ -15427,13 +15371,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Little Girl",
-              "dialogue_id": "wh_questions_q04_finish",
-              "success_required": true,
-              "display_text": "חזרו אל הילדה הקטנה עם השאלות שהרכבתם."
             }
           ]
         },
@@ -15444,9 +15381,9 @@
           "prerequisite": "wh_questions__q04_six_questions_for_lily",
           "summary": "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה.",
           "giver_npc": "Mountain Guide",
-          "wait_for_npc_turn_in": false,
+          "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
-          "turn_in_dialogue_id": null,
+          "turn_in_dialogue_id": "wh_questions_q05_finish",
           "status": "complete",
           "rewards": {
             "xp": 300,
@@ -15731,13 +15668,6 @@
                   "referenceClip": ""
                 }
               }
-            },
-            {
-              "type": "return_to_npc",
-              "npc_id": "Mountain Guide",
-              "dialogue_id": "wh_questions_q05_finish",
-              "success_required": true,
-              "display_text": "חזרו למדריך ההרים לסיום הסיפור."
             }
           ]
         }

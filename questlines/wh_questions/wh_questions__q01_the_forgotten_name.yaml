@@ -5,7 +5,8 @@ quest:
   giver_npc: Ghost
   prerequisite: null
   summary: "רוח באבני הבכי שכחה את השם שלה. שאלו What ו-Where כדי להחזיר את הזיכרון הראשון."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: wh_questions_q01_finish
 rewards: { xp: 150, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: wh_questions_q01_say_what
     display_text: אמרו את השאלה הבאה באנגלית בקול.
-  - type: return_to_npc
-    npc_id: Ghost
-    dialogue_id: wh_questions_q01_finish
-    success_required: true
-    display_text: חזרו לבו עם החלק הראשון בזיכרון.

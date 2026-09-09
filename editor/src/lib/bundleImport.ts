@@ -58,10 +58,11 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
     ...(() => {
       const sourceSteps = Array.isArray(item.steps) ? item.steps : []
     const start = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
-    const finish = [...sourceSteps].reverse().find((step: Record<string, any>) => step.type === 'deliver_item' || step.type === 'talk_to_npc')
+    const finish = [...sourceSteps].reverse().find((step: Record<string, any>) =>
+      step.type === 'deliver_item' || step.type === 'talk_to_npc' || step.type === 'return_to_npc')
     return {
         start_dialogue_id: item.start_dialogue_id ?? start?.payload?.dialogue_id ?? null,
-        turn_in_dialogue_id: finish?.payload?.dialogue_id ?? null,
+        turn_in_dialogue_id: item.turn_in_dialogue_id ?? finish?.payload?.dialogue_id ?? null,
       }
     })(),
     id: makeLocalId('quest'), questline_id: line.id, key: `${line.key}__${String(item.key)}`, position: index,

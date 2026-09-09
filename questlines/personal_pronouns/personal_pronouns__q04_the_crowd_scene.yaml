@@ -5,7 +5,8 @@ quest:
   giver_npc: Little Boy
   prerequisite: personal_pronouns__q03_the_hat_and_the_troupe
   summary: "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואי אפשר לכתוב עשרים שמות. למדו את המילה They ליותר מאדם אחד."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: personal_pronouns_q04_finish
 rewards: { xp: 225, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: personal_pronouns_q04_say_they_are_very_happy
     display_text: אמרו בקול את המשפט המלא באנגלית.
-  - type: return_to_npc
-    npc_id: Little Boy
-    dialogue_id: personal_pronouns_q04_finish
-    success_required: true
-    display_text: חזרו לילד הקטן עם סוף המחזה.

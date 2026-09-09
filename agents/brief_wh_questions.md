@@ -11,7 +11,7 @@
 - Five connected quests teaching information questions: What / Where / When / Who / Why / How.
 - Levels: Q1 = 50; Q2–Q5 = 1.
 - No `reach_location`, `collect_item`, or `deliver_item`.
-- Every quest uses `wait_for_npc_turn_in: false`.
+- Every quest uses `wait_for_npc_turn_in: true` with a quest-level `turn_in_dialogue_id` (דיאלוג סיום). Do not use `return_to_npc` steps.
 - New NPC cast, different from the gate/teacher lines already in the repo.
 
 ## Story: The Ghost Who Forgot His Story

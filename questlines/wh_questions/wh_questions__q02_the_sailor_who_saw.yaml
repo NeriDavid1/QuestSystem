@@ -5,7 +5,8 @@ quest:
   giver_npc: Fisherman
   prerequisite: wh_questions__q01_the_forgotten_name
   summary: "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי."
-  wait_for_npc_turn_in: false
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: wh_questions_q02_finish
 rewards: { xp: 175, items: [] }
 steps:
   - type: talk_to_npc
@@ -46,8 +47,3 @@ steps:
     success_required: true
     instance_id: wh_questions_q02_say_who
     display_text: אמרו את השאלה הבאה באנגלית בקול.
-  - type: return_to_npc
-    npc_id: Fisherman
-    dialogue_id: wh_questions_q02_finish
-    success_required: true
-    display_text: חזרו לנמו עם עדות המלח.
