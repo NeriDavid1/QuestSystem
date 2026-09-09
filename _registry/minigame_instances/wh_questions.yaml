@@ -1,0 +1,411 @@
+# Runtime briefs for the Wh-Questions questline (ghost detective story).
+instances:
+
+  # --- Q1 - The Forgotten Name (Boo, The Weeping Stones) ---
+  wh_questions_q01_match_first_words:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל מילת שאלה."
+    tasks: [_HERE, WH_, W_AT]
+    target: "where, who, what"
+    variant: missing_letter_matching
+    success: "מילות השאלה חזרו לאבן הזיכרון."
+    params:
+      letters:
+        - { id: wh_q01_tile_y, value: y }
+        - { id: wh_q01_tile_h, value: h }
+        - { id: wh_q01_tile_e, value: e }
+        - { id: wh_q01_tile_w, value: w }
+        - { id: wh_q01_tile_o, value: o }
+      wordTasks:
+        - { id: wh_q01_task_where, image: '', fullWord: where, missingIndices: [0] }
+        - { id: wh_q01_task_who, image: '', fullWord: who, missingIndices: [2] }
+        - { id: wh_q01_task_what, image: '', fullWord: what, missingIndices: [1] }
+
+  wh_questions_q01_ask_name:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: מה השם שלך? בחרו את שתי המילים החסרות."
+    tasks: [What, is, your, name]
+    target: "What is your name?"
+    variant: sentence_building
+    success: "הרוח שומעת את השאלה ומתחילה להיזכר בשם."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: מה השם שלך? בחרו את שתי המילים החסרות."
+      translation: "מה השם שלך?"
+      englishWordsInOrder: [What, is, your, name]
+      preFilledIndices: [1, 2]
+      distractorWords: [Where, Who, book, friend]
+
+  wh_questions_q01_spell_where:
+    minigame_id: letter_ordering
+    instruction: "כתבו באנגלית את מילת השאלה שפירושה איפה."
+    tasks: [w, h, e, r, e]
+    target: where
+    variant: word_spelling
+    success: "נכון. במילה הזאת שואלים על מקום."
+    params:
+      prompt: "כתבו באנגלית את מילת השאלה שפירושה איפה."
+      targetWord: where
+      extraDistractorCount: 2
+      customDistractors: []
+
+  wh_questions_q01_ask_ship:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: איפה הספינה? בחרו את שתי המילים החסרות."
+    tasks: [Where, is, the, ship]
+    target: "Where is the ship?"
+    variant: sentence_building
+    success: "הרוח רואה שוב את הספינה על המים."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: איפה הספינה? בחרו את שתי המילים החסרות."
+      translation: "איפה הספינה?"
+      englishWordsInOrder: [Where, is, the, ship]
+      preFilledIndices: [1, 2]
+      distractorWords: [What, When, boat, gate]
+
+  wh_questions_q01_say_what:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [What, is, this]
+    target: "What is this?"
+    variant: short_phrase
+    success: "הרוח שמעה אתכם בבירור."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מה זה?"
+      targetWords: [What, is, this]
+      targetPhrase: "What is this?"
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+
+  # --- Q2 - The Sailor Who Saw (Nemo, Driftgold Bay) ---
+  wh_questions_q02_ask_sailor:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: מי המלח? בחרו את שתי המילים החסרות."
+    tasks: [Who, is, the, sailor]
+    target: "Who is the sailor?"
+    variant: sentence_building
+    success: "נמו נזכר במלח הצעיר על הסיפון."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: מי המלח? בחרו את שתי המילים החסרות."
+      translation: "מי המלח?"
+      englishWordsInOrder: [Who, is, the, sailor]
+      preFilledIndices: [1, 2]
+      distractorWords: [When, What, ghost, guard]
+
+  wh_questions_q02_spell_when:
+    minigame_id: letter_ordering
+    instruction: "כתבו באנגלית את מילת השאלה שפירושה מתי."
+    tasks: [w, h, e, n]
+    target: when
+    variant: word_spelling
+    success: "נכון. במילה הזאת שואלים על זמן."
+    params:
+      prompt: "כתבו באנגלית את מילת השאלה שפירושה מתי."
+      targetWord: when
+      extraDistractorCount: 2
+      customDistractors: []
+
+  wh_questions_q02_match_witness_words:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל מילת שאלה."
+    tasks: [WH_T, WHER_, WHE_, W_O]
+    target: "what, where, when, who"
+    variant: missing_letter_matching
+    success: "כל מילות העדות הושלמו."
+    params:
+      letters:
+        - { id: wh_q02_tile_o, value: o }
+        - { id: wh_q02_tile_n, value: n }
+        - { id: wh_q02_tile_y, value: y }
+        - { id: wh_q02_tile_a, value: a }
+        - { id: wh_q02_tile_e, value: e }
+        - { id: wh_q02_tile_h, value: h }
+      wordTasks:
+        - { id: wh_q02_task_what, image: '', fullWord: what, missingIndices: [2] }
+        - { id: wh_q02_task_where, image: '', fullWord: where, missingIndices: [4] }
+        - { id: wh_q02_task_when, image: '', fullWord: when, missingIndices: [3] }
+        - { id: wh_q02_task_who, image: '', fullWord: who, missingIndices: [1] }
+
+  wh_questions_q02_ask_storm:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: מתי הסערה? בחרו את שתי המילים החסרות."
+    tasks: [When, is, the, storm]
+    target: "When is the storm?"
+    variant: sentence_building
+    success: "עכשיו ידוע שהסערה הגיעה אחרי חצות."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: מתי הסערה? בחרו את שתי המילים החסרות."
+      translation: "מתי הסערה?"
+      englishWordsInOrder: [When, is, the, storm]
+      preFilledIndices: [1, 2]
+      distractorWords: [Where, Who, night, wind]
+
+  wh_questions_q02_say_who:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [Who, is, she]
+    target: "Who is she?"
+    variant: short_phrase
+    success: "נמו הבין בדיוק על מי שאלתם."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מי היא?"
+      targetWords: [Who, is, she]
+      targetPhrase: "Who is she?"
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+
+  # --- Q3 - The Night the Ship Broke (Cannoneer, Forsaken Cove) ---
+  wh_questions_q03_spell_why:
+    minigame_id: letter_ordering
+    instruction: "כתבו באנגלית את מילת השאלה שפירושה למה."
+    tasks: [w, h, y]
+    target: why
+    variant: word_spelling
+    success: "נכון. במילה הזאת שואלים על סיבה."
+    params:
+      prompt: "כתבו באנגלית את מילת השאלה שפירושה למה."
+      targetWord: why
+      extraDistractorCount: 2
+      customDistractors: []
+
+  wh_questions_q03_ask_broken:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: למה הספינה שבורה? בחרו את שתי המילים החסרות."
+    tasks: [Why, is, the, ship, broken]
+    target: "Why is the ship broken?"
+    variant: sentence_building
+    success: "שאלתם על הסיבה, וזה בדיוק מה שחסר בסיפור."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: למה הספינה שבורה? בחרו את שתי המילים החסרות."
+      translation: "למה הספינה שבורה?"
+      englishWordsInOrder: [Why, is, the, ship, broken]
+      preFilledIndices: [1, 2, 3]
+      distractorWords: [How, Who, open, fixed]
+
+  wh_questions_q03_match_reason_words:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל מילת שאלה."
+    tasks: [_OW, WH_N, WH_, WH_]
+    target: "how, when, why, who"
+    variant: missing_letter_matching
+    success: "כל מילות השאלה של החקירה שלמות."
+    params:
+      letters:
+        - { id: wh_q03_tile_a, value: a }
+        - { id: wh_q03_tile_y, value: y }
+        - { id: wh_q03_tile_w, value: w }
+        - { id: wh_q03_tile_h, value: h }
+        - { id: wh_q03_tile_o, value: o }
+        - { id: wh_q03_tile_e, value: e }
+      wordTasks:
+        - { id: wh_q03_task_how, image: '', fullWord: how, missingIndices: [0] }
+        - { id: wh_q03_task_when, image: '', fullWord: when, missingIndices: [2] }
+        - { id: wh_q03_task_why, image: '', fullWord: why, missingIndices: [2] }
+        - { id: wh_q03_task_who, image: '', fullWord: who, missingIndices: [2] }
+
+  wh_questions_q03_ask_wind:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: איך הרוח? בחרו את שתי המילים החסרות."
+    tasks: [How, is, the, wind]
+    target: "How is the wind?"
+    variant: sentence_building
+    success: "עכשיו ברור איך הרוח שברה את התורן."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: איך הרוח? בחרו את שתי המילים החסרות."
+      translation: "איך הרוח?"
+      englishWordsInOrder: [How, is, the, wind]
+      preFilledIndices: [1, 2]
+      distractorWords: [Why, What, rain, storm]
+
+  wh_questions_q03_say_how:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [How, is, it]
+    target: "How is it?"
+    variant: short_phrase
+    success: "התותחן שמע אתכם למרות רעש הגלים."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: איך זה?"
+      targetWords: [How, is, it]
+      targetPhrase: "How is it?"
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+
+  # --- Q4 - Six Questions for the Little Girl (under The Sunspire Tree) ---
+  wh_questions_q04_ask_box:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: מה יש בקופסה? בחרו את שתי המילים החסרות."
+    tasks: [What, is, in, the, box]
+    target: "What is in the box?"
+    variant: sentence_building
+    success: "השאלה הראשונה במחברת של הילדה הקטנה מסודרת."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: מה יש בקופסה? בחרו את שתי המילים החסרות."
+      translation: "מה יש בקופסה?"
+      englishWordsInOrder: [What, is, in, the, box]
+      preFilledIndices: [1, 2, 3]
+      distractorWords: [Where, Why, bag, book]
+
+  wh_questions_q04_ask_flowers:
+    minigame_id: word_ordering
+    instruction: "השלימו את השאלה לפי התרגום המלא בעברית: איפה הפרחים? בחרו את שתי המילים החסרות."
+    tasks: [Where, are, the, flowers]
+    target: "Where are the flowers?"
+    variant: sentence_building
+    success: "גם השאלה השנייה מתחילה נכון."
+    params:
+      prompt: "השלימו את השאלה לפי התרגום המלא בעברית: איפה הפרחים? בחרו את שתי המילים החסרות."
+      translation: "איפה הפרחים?"
+      englishWordsInOrder: [Where, are, the, flowers]
+      preFilledIndices: [1, 2]
+      distractorWords: [When, What, trees, stones]
+
+  wh_questions_q04_match_all_six:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל מילת שאלה."
+    tasks: [_HO, WH_, WHA_, H_W, WH_RE, W_EN]
+    target: "who, why, what, how, where, when"
+    variant: missing_letter_matching
+    success: "כל שש מילות השאלה שלמות במחברת."
+    params:
+      letters:
+        - { id: wh_q04_tile_e, value: e }
+        - { id: wh_q04_tile_t, value: t }
+        - { id: wh_q04_tile_a, value: a }
+        - { id: wh_q04_tile_y, value: y }
+        - { id: wh_q04_tile_h, value: h }
+        - { id: wh_q04_tile_w, value: w }
+        - { id: wh_q04_tile_o, value: o }
+      wordTasks:
+        - { id: wh_q04_task_who, image: '', fullWord: who, missingIndices: [0] }
+        - { id: wh_q04_task_why, image: '', fullWord: why, missingIndices: [2] }
+        - { id: wh_q04_task_what, image: '', fullWord: what, missingIndices: [3] }
+        - { id: wh_q04_task_how, image: '', fullWord: how, missingIndices: [1] }
+        - { id: wh_q04_task_where, image: '', fullWord: where, missingIndices: [2] }
+        - { id: wh_q04_task_when, image: '', fullWord: when, missingIndices: [1] }
+
+  wh_questions_q04_spell_who:
+    minigame_id: letter_ordering
+    instruction: "כתבו באנגלית את מילת השאלה שפירושה מי."
+    tasks: [w, h, o]
+    target: who
+    variant: word_spelling
+    success: "נכון. במילה הזאת שואלים על אדם."
+    params:
+      prompt: "כתבו באנגלית את מילת השאלה שפירושה מי."
+      targetWord: who
+      extraDistractorCount: 2
+      customDistractors: []
+
+  wh_questions_q04_say_friend_question:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [Where, is, my, friend]
+    target: "Where is my friend?"
+    variant: short_phrase
+    success: "הילדה הקטנה שמעה שאלה שלמה וברורה."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: איפה החבר שלי?"
+      targetWords: [Where, is, my, friend]
+      targetPhrase: "Where is my friend?"
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+
+  # --- Q5 - The Light at the Tower (Mountain Guide, TowerOfLostVigil) ---
+  wh_questions_q05_match_mixed:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל מילת שאלה."
+    tasks: [WH_, _HEN, H_W, WH_T, WH_, WHE_E]
+    target: "why, when, how, what, who, where"
+    variant: missing_letter_matching
+    success: "כל מילות השאלה מוכנות לסיפור האחרון."
+    params:
+      letters:
+        - { id: wh_q05_tile_o1, value: o }
+        - { id: wh_q05_tile_a, value: a }
+        - { id: wh_q05_tile_e, value: e }
+        - { id: wh_q05_tile_y, value: y }
+        - { id: wh_q05_tile_r, value: r }
+        - { id: wh_q05_tile_w, value: w }
+        - { id: wh_q05_tile_o2, value: o }
+      wordTasks:
+        - { id: wh_q05_task_why, image: '', fullWord: why, missingIndices: [2] }
+        - { id: wh_q05_task_when, image: '', fullWord: when, missingIndices: [0] }
+        - { id: wh_q05_task_how, image: '', fullWord: how, missingIndices: [1] }
+        - { id: wh_q05_task_what, image: '', fullWord: what, missingIndices: [2] }
+        - { id: wh_q05_task_who, image: '', fullWord: who, missingIndices: [2] }
+        - { id: wh_q05_task_where, image: '', fullWord: where, missingIndices: [3] }
+
+  wh_questions_q05_ask_ghost:
+    minigame_id: word_ordering
+    instruction: "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: מי הרוח?"
+    tasks: [Who, is, the, ghost]
+    target: "Who is the ghost?"
+    variant: sentence_building
+    success: "השאלה הזאת מחזירה לרוח את השם שלה."
+    params:
+      prompt: "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: מי הרוח?"
+      translation: "מי הרוח?"
+      englishWordsInOrder: [Who, is, the, ghost]
+      preFilledIndices: []
+      distractorWords: []
+
+  wh_questions_q05_ask_reason:
+    minigame_id: word_ordering
+    instruction: "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: למה היא כאן?"
+    tasks: [Why, is, she, here]
+    target: "Why is she here?"
+    variant: sentence_building
+    success: "עכשיו ברור למה הרוח נשארה ליד המים."
+    params:
+      prompt: "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: למה היא כאן?"
+      translation: "למה היא כאן?"
+      englishWordsInOrder: [Why, is, she, here]
+      preFilledIndices: []
+      distractorWords: []
+
+  wh_questions_q05_spell_how:
+    minigame_id: letter_ordering
+    instruction: "כתבו באנגלית את מילת השאלה שפירושה איך."
+    tasks: [h, o, w]
+    target: how
+    variant: word_spelling
+    success: "נכון. במילה הזאת שואלים על האופן."
+    params:
+      prompt: "כתבו באנגלית את מילת השאלה שפירושה איך."
+      targetWord: how
+      extraDistractorCount: 2
+      customDistractors: []
+
+  wh_questions_q05_say_name_question:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [What, is, your, name]
+    target: "What is your name?"
+    variant: short_phrase
+    success: "הרוח עונה בשקט: Boo."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מה השם שלך?"
+      targetWords: [What, is, your, name]
+      targetPhrase: "What is your name?"
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+
+  wh_questions_q05_say_how_are_you:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [How, are, you]
+    target: "How are you?"
+    variant: short_phrase
+    success: "הרוח מחייכת ליד המדורה."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מה שלומך?"
+      targetWords: [How, are, you]
+      targetPhrase: "How are you?"
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''

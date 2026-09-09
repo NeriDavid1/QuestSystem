@@ -1,0 +1,34 @@
+questline:
+  id: wh_questions
+  npc_id: Ghost
+  display_name: "Wh-Questions - שאלות מידע"
+  theme: "A ghost detective story: recover a lost memory by asking What, Where, When, Who, Why, and How."
+  quest_count: 5
+  level_range: [1, 50]
+
+quests:
+  - id: wh_questions__q01_the_forgotten_name
+    name: "The Forgotten Name"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 150, items: [] }
+  - id: wh_questions__q02_the_sailor_who_saw
+    name: "The Sailor Who Saw"
+    level: 1
+    prerequisite: wh_questions__q01_the_forgotten_name
+    rewards: { xp: 175, items: [] }
+  - id: wh_questions__q03_the_night_the_ship_broke
+    name: "The Night the Ship Broke"
+    level: 1
+    prerequisite: wh_questions__q02_the_sailor_who_saw
+    rewards: { xp: 200, items: [] }
+  - id: wh_questions__q04_six_questions_for_lily
+    name: "Six Questions for the Little Girl"
+    level: 1
+    prerequisite: wh_questions__q03_the_night_the_ship_broke
+    rewards: { xp: 225, items: [] }
+  - id: wh_questions__q05_the_light_at_the_tower
+    name: "The Light at the Tower"
+    level: 1
+    prerequisite: wh_questions__q04_six_questions_for_lily
+    rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }

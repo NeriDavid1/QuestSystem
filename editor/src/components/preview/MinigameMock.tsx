@@ -85,12 +85,12 @@ function LetterOrderingMock({ params, prompt, seed }: { params: MockParams; prom
   return (
     <ParchmentShell>
       <div className="mg-mock-prompt" dir="auto">{prompt || '…'}</div>
-      <div className="mg-mock-slots">
+      <div className="mg-mock-slots" dir="ltr">
         {Array.from({ length: Math.max(1, targetWord.length) }, (_, i) => (
           <span className="mg-mock-slot" key={i} />
         ))}
       </div>
-      <div className="mg-mock-letter-pool">
+      <div className="mg-mock-letter-pool" dir="ltr">
         {pool.map((ch, i) => (
           <span className="mg-mock-letter-tile" key={`${ch}-${i}`}>{ch}</span>
         ))}
@@ -111,7 +111,7 @@ function WordOrderingMock({ params, prompt, seed }: { params: MockParams; prompt
   return (
     <ParchmentShell>
       <div className="mg-mock-prompt" dir="auto">{prompt || '…'}</div>
-      <div className="mg-mock-slots mg-mock-word-slots">
+      <div className="mg-mock-slots mg-mock-word-slots" dir="ltr">
         {Array.from({ length: slotCount }, (_, i) => {
           const filled = preFilled.has(i) && words[i]
           return (
@@ -121,7 +121,7 @@ function WordOrderingMock({ params, prompt, seed }: { params: MockParams; prompt
           )
         })}
       </div>
-      <div className="mg-mock-word-bank">
+      <div className="mg-mock-word-bank" dir="ltr">
         {bank.map((word, i) => (
           <span className="mg-mock-word-chip" key={`${word}-${i}`}>{word.toUpperCase()}</span>
         ))}

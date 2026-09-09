@@ -1,0 +1,34 @@
+questline:
+  id: personal_pronouns
+  npc_id: Village Head
+  display_name: "Personal Pronouns - כינויי גוף"
+  theme: "The Village Play: the boy wrote every name again and again until the notebook ran out, so the troupe learns the short words that stand in for a name - I, You, He, She, It, We, They."
+  quest_count: 5
+  level_range: [1, 50]
+
+quests:
+  - id: personal_pronouns__q01_the_notebook_ran_out
+    name: "The Notebook Ran Out"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 150, items: [] }
+  - id: personal_pronouns__q02_two_actors_one_name
+    name: "Two Actors, One Name"
+    level: 1
+    prerequisite: personal_pronouns__q01_the_notebook_ran_out
+    rewards: { xp: 175, items: [] }
+  - id: personal_pronouns__q03_the_hat_and_the_troupe
+    name: "The Hat and the Whole Troupe"
+    level: 1
+    prerequisite: personal_pronouns__q02_two_actors_one_name
+    rewards: { xp: 200, items: [] }
+  - id: personal_pronouns__q04_the_crowd_scene
+    name: "The Crowd Scene"
+    level: 1
+    prerequisite: personal_pronouns__q03_the_hat_and_the_troupe
+    rewards: { xp: 225, items: [] }
+  - id: personal_pronouns__q05_opening_night
+    name: "Opening Night"
+    level: 1
+    prerequisite: personal_pronouns__q04_the_crowd_scene
+    rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }

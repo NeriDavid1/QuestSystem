@@ -1,0 +1,60 @@
+quest:
+  id: personal_pronouns__q05_opening_night
+  name: "Opening Night"
+  level_required: 1
+  giver_npc: Village Head
+  prerequisite: personal_pronouns__q04_the_crowd_scene
+  summary: "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה."
+  wait_for_npc_turn_in: false
+rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: personal_pronouns_q05_start
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 4
+    success_required: true
+    instance_id: personal_pronouns_q05_match_mixed
+    display_text: השלימו את האות החסרה בכל כינוי גוף.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 5
+    success_required: true
+    instance_id: personal_pronouns_q05_line_queen
+    display_text: הרכיבו את כל המשפט לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 5
+    success_required: true
+    instance_id: personal_pronouns_q05_line_family
+    display_text: הרכיבו את כל המשפט לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 3
+    success_required: true
+    instance_id: personal_pronouns_q05_spell_we
+    display_text: כתבו באנגלית את המילה שפירושה אנחנו.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 6
+    success_required: true
+    instance_id: personal_pronouns_q05_say_i_am_ready
+    display_text: אמרו בקול את המשפט המלא באנגלית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 6
+    success_required: true
+    instance_id: personal_pronouns_q05_say_it_is_a_beautiful_day
+    display_text: אמרו בקול את המשפט המלא באנגלית.
+  - type: return_to_npc
+    npc_id: Village Head
+    dialogue_id: personal_pronouns_q05_finish
+    success_required: true
+    display_text: חזרו לראש הכפר לסיום ההצגה.

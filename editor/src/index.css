@@ -3228,6 +3228,12 @@ select:focus {
   justify-content: center;
   gap: 8px;
   margin-bottom: 14px;
+  direction: ltr;
+}
+
+.mg-mock-letter-pool,
+.mg-mock-word-bank {
+  direction: ltr;
 }
 
 .mg-mock-slot {

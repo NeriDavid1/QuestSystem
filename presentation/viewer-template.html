@@ -759,6 +759,11 @@
       justify-content: center;
       gap: .45rem;
       margin-bottom: .85rem;
+      direction: ltr;
+    }
+    .mg-mock-letter-pool,
+    .mg-mock-word-bank {
+      direction: ltr;
     }
     .mg-mock-slot {
       width: 32px;
@@ -875,6 +880,8 @@
       flex: 1;
       font-family: "JetBrains Mono", monospace;
       letter-spacing: .04em;
+      direction: ltr;
+      unicode-bidi: isolate;
     }
     .mg-mock-match-icon-fallback {
       width: 20px;
@@ -1424,8 +1431,8 @@
         const tiles = pool.map((ch) => `<span class="mg-mock-letter-tile">${safeRichText(ch)}</span>`).join("");
         body = mgParchment(`
           <div class="mg-mock-prompt">${safeRichText(prompt || "…")}</div>
-          <div class="mg-mock-slots">${slots}</div>
-          <div class="mg-mock-letter-pool">${tiles}</div>`);
+          <div class="mg-mock-slots" dir="ltr">${slots}</div>
+          <div class="mg-mock-letter-pool" dir="ltr">${tiles}</div>`);
       } else if (id === "word_ordering") {
         const words = Array.isArray(params.englishWordsInOrder) ? params.englishWordsInOrder : [];
         const pre = new Set(Array.isArray(params.preFilledIndices) ? params.preFilledIndices : []);
@@ -1438,8 +1445,8 @@
         const chips = bank.map((w) => `<span class="mg-mock-word-chip">${safeRichText(String(w).toUpperCase())}</span>`).join("");
         body = mgParchment(`
           <div class="mg-mock-prompt">${safeRichText(prompt || "…")}</div>
-          <div class="mg-mock-slots">${slots}</div>
-          <div class="mg-mock-word-bank">${chips}</div>`);
+          <div class="mg-mock-slots" dir="ltr">${slots}</div>
+          <div class="mg-mock-word-bank" dir="ltr">${chips}</div>`);
       } else if (id === "word_matching") {
         const letters = Array.isArray(params.letters) ? params.letters : [];
         const tasks = Array.isArray(params.wordTasks) ? params.wordTasks : [];

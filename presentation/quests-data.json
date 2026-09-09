@@ -2183,6 +2183,89 @@
         "קבלו 10 מטבעות."
       ]
     },
+    "personal_pronouns_q01_start": {
+      "speaker": "Village Head",
+      "lines": [
+        "מחר בערב יש הצגה בפארק, וכל הכפר מגיע. יש רק בעיה אחת.",
+        "הילד הקטן כתב את כל המחזה לבד, אבל הוא כתב כל שם שוב ושוב: Dan is here. Dan is happy. Dan is the king.",
+        "הדפים במחברת נגמרו באמצע, וסוף ההצגה עוד לא כתוב.",
+        "יש פתרון. כינוי גוף = pronoun. זו מילה קצרה שבאה במקום שם. במקום Dan is the king אפשר לכתוב He is the king.",
+        "נתחיל בשתי מילים. I = אני, כשמדברים על עצמי. You = אתה או את, כשמדברים אל מישהו.",
+        "בואו נכתוב מחדש את התמונה הראשונה."
+      ]
+    },
+    "personal_pronouns_q01_finish": {
+      "speaker": "Village Head",
+      "lines": [
+        "התמונה הראשונה נכנסת עכשיו בחצי דף. זה עובד.",
+        "לכו אל הילד הקטן, הוא יושב ליד השולחן עם המחברת. תראו לו מה למדנו."
+      ]
+    },
+    "personal_pronouns_q02_start": {
+      "speaker": "Little Boy",
+      "lines": [
+        "כתבתי את ההצגה לבד, ואף שחקן לא מצליח לקרוא אותה.",
+        "בתמונה השנייה יש זמר ורקדנית, ואני כתבתי את השמות שלהם שבע עשרה פעמים.",
+        "ראש הכפר אמר שיש מילה קצרה לבן ומילה קצרה לבת.",
+        "He = הוא, על בן. She = היא, על בת.",
+        "בואו נכתוב את התמונה השנייה יחד."
+      ]
+    },
+    "personal_pronouns_q02_finish": {
+      "speaker": "Little Boy",
+      "lines": [
+        "מדהים. עכשיו כל התמונה השנייה נכנסת בדף אחד, ועוד נשאר לי מקום.",
+        "ראש הכפר מסדר עכשיו את האביזרים של ההצגה. לכו אליו, הוא נתקע עם הרשימה."
+      ]
+    },
+    "personal_pronouns_q03_start": {
+      "speaker": "Village Head",
+      "lines": [
+        "יש לי כאן ארגז אביזרים: כובע, כתר ומטריה. לאף אחד מהם אין שם.",
+        "It = זה. משתמשים במילה הזאת על חפץ או על בעל חיים, אף פעם לא על אדם.",
+        "ויש עוד מילה שאני צריך. We = אנחנו, כשאני מדבר על עצמי ועל כל הלהקה יחד.",
+        "בואו נסדר את הרשימה לפני החזרה האחרונה."
+      ]
+    },
+    "personal_pronouns_q03_finish": {
+      "speaker": "Village Head",
+      "lines": [
+        "הרשימה מוכנה וכל האביזרים בארגז. תודה לכם.",
+        "נשארה התמונה האחרונה, זו עם הקהל הגדול. הילד הקטן נתקע בה מאתמול. לכו אליו."
+      ]
+    },
+    "personal_pronouns_q04_start": {
+      "speaker": "Little Boy",
+      "lines": [
+        "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואני לא יכול לכתוב עשרים שמות.",
+        "כשמדברים על יותר מאדם אחד יש מילה אחת שמספיקה לכולם.",
+        "They = הם או הן. לא משנה אם אלה בנים או בנות, המילה נשארת אותו דבר.",
+        "בואו נסיים את המחזה."
+      ]
+    },
+    "personal_pronouns_q04_finish": {
+      "speaker": "Little Boy",
+      "lines": [
+        "כתבתי את המילה האחרונה, ונשארו לי שני דפים ריקים. סיימנו את המחזה!",
+        "ראש הכפר כבר מדליק את הפנסים על הבמה. הערב מתחילה ההצגה."
+      ]
+    },
+    "personal_pronouns_q05_start": {
+      "speaker": "Village Head",
+      "lines": [
+        "הקהל יושב, הפנסים דולקים, וההצגה מתחילה בעוד רגע.",
+        "בתמונה הזאת כל המילים מעורבבות: I, You, He, She, It, We, They.",
+        "הפעם תרכיבו את המשפטים לבד, בלי עזרה, ואז תגידו את השורות שלכם בקול על הבמה."
+      ]
+    },
+    "personal_pronouns_q05_finish": {
+      "speaker": "Village Head",
+      "lines": [
+        "ההצגה נגמרה והקהל עמד ומחא כפיים. הילד הקטן לא מפסיק לחייך.",
+        "כל המחזה נכנס למחברת אחת, כי ידעתם להחליף כל שם במילה הקצרה הנכונה.",
+        "קבלו עשרה מטבעות עכשיו. סיימתם את הסיפור בהצלחה!"
+      ]
+    },
     "the_kingdoms_worst_day_q01_fenn_start": {
       "speaker": "City Gaurd Info",
       "lines": [
@@ -2418,6 +2501,87 @@
         "משם חזרו שוב אל השולחן, ואז אליי.",
         "אני אחכה כאן ואעזור לכם להחזיר הכול למקום.",
         "אל דאגה. כבר מצאתם את הרמזים החשובים ביותר."
+      ]
+    },
+    "wh_questions_q01_start": {
+      "speaker": "Ghost",
+      "lines": [
+        "שלום. אני רוח קטנה, ואני לא זוכרת מי אני. אני זוכרת רק ים וסערה.",
+        "כדי להיזכר צריך לשאול שאלות מידע. שאלת מידע = Wh-question. היא מתחילה במילת שאלה ומבקשת מידע, ולא תשובה של כן או לא.",
+        "נתחיל בשתיים. What = מה, שואלים על דבר. Where = איפה, שואלים על מקום.",
+        "בואו נמצא את החלק הראשון בזיכרון שלי."
+      ]
+    },
+    "wh_questions_q01_finish": {
+      "speaker": "Ghost",
+      "lines": [
+        "רגע. אני נזכרת בספינה על המים, ובשם שקראו לי בלילה ההוא.",
+        "נמו Nemo דג במפרץ באותו ערב. אולי הוא ראה מי הייתה שם. לכו אליו."
+      ]
+    },
+    "wh_questions_q02_start": {
+      "speaker": "Fisherman",
+      "lines": [
+        "רוח? כן, אני זוכר את הלילה הזה. הרשת שלי נקרעה מהרוח החזקה.",
+        "אבל אני לא זוכר מי עמדה על הסיפון ובאיזו שעה זה קרה.",
+        "Who = מי, שואלים על אדם. When = מתי, שואלים על זמן.",
+        "עזרו לי לשאול נכון, ואני אספר לכם את כל מה שראיתי."
+      ]
+    },
+    "wh_questions_q02_finish": {
+      "speaker": "Fisherman",
+      "lines": [
+        "עכשיו זה ברור. מלחה צעירה עמדה על הסיפון, והסערה הגיעה אחרי חצות.",
+        "התותחן במפרץ הנטוש שמע רעש גדול באותו לילה. הוא יודע למה זה קרה."
+      ]
+    },
+    "wh_questions_q03_start": {
+      "speaker": "Cannoneer",
+      "lines": [
+        "שמעתי רעש נורא מהמים, ומאז אני שואל את עצמי שאלה אחת שוב ושוב.",
+        "Why = למה, שואלים על סיבה. How = איך, שואלים על האופן שבו משהו קורה.",
+        "שתי המילים נשמעות דומות בסיפור, אבל הן מחפשות דברים שונים.",
+        "עזרו לי, ונדע למה הספינה נשברה."
+      ]
+    },
+    "wh_questions_q03_finish": {
+      "speaker": "Cannoneer",
+      "lines": [
+        "עכשיו הסיפור מסתדר. הרוח החזקה שברה את התורן, והספינה לא הצליחה לחזור.",
+        "הילדה הקטנה מחכה מתחת לעץ הכתום הגדול. היא אוספת שאלות בשביל הרוח."
+      ]
+    },
+    "wh_questions_q04_start": {
+      "speaker": "Little Girl",
+      "lines": [
+        "אמא אמרה שאסור לדבר עם רוחות, אבל אני רוצה לעזור לרוח העצובה.",
+        "אני יושבת כאן מתחת לעץ הכתום הגדול וכותבת שאלות במחברת.",
+        "רק שכל השאלות שלי מתחילות בצורה לא נכונה.",
+        "בשאלת מידע מילת השאלה תמיד עומדת בהתחלה, ואחריה שאר המשפט.",
+        "בואו נסדר את השאלות שלי יחד."
+      ]
+    },
+    "wh_questions_q04_finish": {
+      "speaker": "Little Girl",
+      "lines": [
+        "וואו, עכשיו כל שאלה נשמעת נכון. אני אשמור את המחברת בשביל הרוח.",
+        "מדריך ההרים מדליק מדורה במגדל בכל לילה. שם אפשר לספר לרוח את כל הסיפור."
+      ]
+    },
+    "wh_questions_q05_start": {
+      "speaker": "Mountain Guide",
+      "lines": [
+        "המדורה דולקת, והרוח כבר מחכה כאן. חסר רק דבר אחד.",
+        "צריך לשאול את כל שש השאלות בקול, כדי שהסיפור יהיה שלם.",
+        "What, Where, When, Who, Why, How. הפעם הכול מעורבב יחד."
+      ]
+    },
+    "wh_questions_q05_finish": {
+      "speaker": "Mountain Guide",
+      "lines": [
+        "הרוח שמעה את הסיפור המלא, והיא נרגעת מול האש. קוראים לה בו Boo.",
+        "עשיתם עבודת חקירה מצוינת עם כל מילות השאלה.",
+        "קבלו עשרה מטבעות עכשיו. סיימתם את הסיפור בהצלחה!"
       ]
     }
   },
@@ -10609,6 +10773,1379 @@
       ]
     },
     {
+      "id": "personal_pronouns",
+      "folder": "personal_pronouns",
+      "displayName": "Personal Pronouns - כינויי גוף",
+      "theme": "The Village Play: the boy wrote every name again and again until the notebook ran out, so the troupe learns the short words that stand in for a name - I, You, He, She, It, We, They.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 5,
+      "npcId": "Village Head",
+      "npc": {
+        "id": "Village Head",
+        "name": "ראש הכפר",
+        "title": "ראש כפר",
+        "location": "פארק ורד הפיות",
+        "description": "ראש כפר ידידותי שמארגן משימות מקומיות.",
+        "image": "images/npcs/Village Head.png"
+      },
+      "quests": [
+        {
+          "id": "personal_pronouns__q01_the_notebook_ran_out",
+          "name": "The Notebook Ran Out",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "הילד הקטן כתב כל שם במחזה שוב ושוב והדפים נגמרו. למדו את המילים הקצרות I ו-You שיכולות לבוא במקום שם.",
+          "giver_npc": "Village Head",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "personal_pronouns_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q01_match_small_words",
+              "display_text": "השלימו את האות החסרה בכל מילה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילה.",
+                "tasks": [
+                  "AR_",
+                  "Y_U",
+                  "_M"
+                ],
+                "target": "are, you, am",
+                "variant": "missing_letter_matching",
+                "success": "המילים הקטנות חזרו לשורות של המחזה.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "pp_q01_tile_u",
+                      "value": "u"
+                    },
+                    {
+                      "id": "pp_q01_tile_e",
+                      "value": "e"
+                    },
+                    {
+                      "id": "pp_q01_tile_o",
+                      "value": "o"
+                    },
+                    {
+                      "id": "pp_q01_tile_r",
+                      "value": "r"
+                    },
+                    {
+                      "id": "pp_q01_tile_a",
+                      "value": "a"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "pp_q01_task_are",
+                      "image": "",
+                      "fullWord": "are",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "pp_q01_task_you",
+                      "image": "",
+                      "fullWord": "you",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "pp_q01_task_am",
+                      "image": "",
+                      "fullWord": "am",
+                      "missingIndices": [
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q01_line_king",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: אני המלך. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "I",
+                  "am",
+                  "the",
+                  "king"
+                ],
+                "target": "I am the king.",
+                "variant": "sentence_building",
+                "success": "השורה הראשונה במחזה נכנסת בשלוש מילים.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: אני המלך. בחרו את שתי המילים החסרות.",
+                  "translation": "אני המלך.",
+                  "englishWordsInOrder": [
+                    "I",
+                    "am",
+                    "the",
+                    "king"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "You",
+                    "We",
+                    "queen",
+                    "guard"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q01_spell_you",
+              "display_text": "כתבו באנגלית את המילה שפירושה אתה או את.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שפירושה אתה או את.",
+                "tasks": [
+                  "y",
+                  "o",
+                  "u"
+                ],
+                "target": "you",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת פונים לשחקן שעומד מולכם.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שפירושה אתה או את.",
+                  "targetWord": "you",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q01_line_friend",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: אתה החבר שלי. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "You",
+                  "are",
+                  "my",
+                  "friend"
+                ],
+                "target": "You are my friend.",
+                "variant": "sentence_building",
+                "success": "ראש הכפר מחייך. השורה הזאת נכונה.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: אתה החבר שלי. בחרו את שתי המילים החסרות.",
+                  "translation": "אתה החבר שלי.",
+                  "englishWordsInOrder": [
+                    "You",
+                    "are",
+                    "my",
+                    "friend"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "I",
+                    "They",
+                    "brother",
+                    "teacher"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q01_say_i_am_the_king",
+              "display_text": "אמרו בקול את המשפט המלא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו בקול את המשפט המלא באנגלית.",
+                "tasks": [
+                  "I",
+                  "am",
+                  "the",
+                  "king"
+                ],
+                "target": "I am the king.",
+                "variant": "short_phrase",
+                "success": "השורה הראשונה נשמעה בכל הפארק.",
+                "params": {
+                  "prompt": "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: אני המלך.",
+                  "targetWords": [
+                    "I",
+                    "am",
+                    "the",
+                    "king"
+                  ],
+                  "targetPhrase": "I am the king.",
+                  "silenceTimeoutSeconds": 3.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "personal_pronouns_q01_finish",
+              "success_required": true,
+              "display_text": "חזרו לראש הכפר עם התמונה הראשונה."
+            }
+          ]
+        },
+        {
+          "id": "personal_pronouns__q02_two_actors_one_name",
+          "name": "Two Actors, One Name",
+          "level": 1,
+          "prerequisite": "personal_pronouns__q01_the_notebook_ran_out",
+          "summary": "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She.",
+          "giver_npc": "Little Boy",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 175,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Little Boy",
+              "dialogue_id": "personal_pronouns_q02_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q02_line_singer",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: הוא זמר. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "He",
+                  "is",
+                  "a",
+                  "singer"
+                ],
+                "target": "He is a singer.",
+                "variant": "sentence_building",
+                "success": "הילד הקטן מחק שבעה שמות ורשם מילה אחת.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: הוא זמר. בחרו את שתי המילים החסרות.",
+                  "translation": "הוא זמר.",
+                  "englishWordsInOrder": [
+                    "He",
+                    "is",
+                    "a",
+                    "singer"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "She",
+                    "They",
+                    "dancer",
+                    "painter"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q02_spell_she",
+              "display_text": "כתבו באנגלית את המילה שפירושה היא.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שפירושה היא.",
+                "tasks": [
+                  "s",
+                  "h",
+                  "e"
+                ],
+                "target": "she",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת מדברים על בת.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שפירושה היא.",
+                  "targetWord": "she",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q02_match_he_she_you",
+              "display_text": "השלימו את האות החסרה בכל כינוי גוף.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל כינוי גוף.",
+                "tasks": [
+                  "YO_",
+                  "H_",
+                  "_HE"
+                ],
+                "target": "you, he, she",
+                "variant": "missing_letter_matching",
+                "success": "שלוש המילים חזרו לתמונה השנייה.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "pp_q02_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "pp_q02_tile_u",
+                      "value": "u"
+                    },
+                    {
+                      "id": "pp_q02_tile_s",
+                      "value": "s"
+                    },
+                    {
+                      "id": "pp_q02_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "pp_q02_tile_e",
+                      "value": "e"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "pp_q02_task_you",
+                      "image": "",
+                      "fullWord": "you",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "pp_q02_task_he",
+                      "image": "",
+                      "fullWord": "he",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "pp_q02_task_she",
+                      "image": "",
+                      "fullWord": "she",
+                      "missingIndices": [
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q02_line_dancer",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: היא רקדנית. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "She",
+                  "is",
+                  "a",
+                  "dancer"
+                ],
+                "target": "She is a dancer.",
+                "variant": "sentence_building",
+                "success": "עכשיו ברור על איזו דמות מדובר.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: היא רקדנית. בחרו את שתי המילים החסרות.",
+                  "translation": "היא רקדנית.",
+                  "englishWordsInOrder": [
+                    "She",
+                    "is",
+                    "a",
+                    "dancer"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "He",
+                    "It",
+                    "singer",
+                    "actor"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q02_say_he_is_my_best_friend",
+              "display_text": "אמרו בקול את המשפט המלא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו בקול את המשפט המלא באנגלית.",
+                "tasks": [
+                  "He",
+                  "is",
+                  "my",
+                  "best",
+                  "friend"
+                ],
+                "target": "He is my best friend.",
+                "variant": "short_phrase",
+                "success": "השורה נשמעה עד השורה האחרונה בקהל.",
+                "params": {
+                  "prompt": "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: הוא החבר הכי טוב שלי.",
+                  "targetWords": [
+                    "He",
+                    "is",
+                    "my",
+                    "best",
+                    "friend"
+                  ],
+                  "targetPhrase": "He is my best friend.",
+                  "silenceTimeoutSeconds": 3.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Little Boy",
+              "dialogue_id": "personal_pronouns_q02_finish",
+              "success_required": true,
+              "display_text": "חזרו לילד הקטן עם התמונה השנייה."
+            }
+          ]
+        },
+        {
+          "id": "personal_pronouns__q03_the_hat_and_the_troupe",
+          "name": "The Hat and the Whole Troupe",
+          "level": 1,
+          "prerequisite": "personal_pronouns__q02_two_actors_one_name",
+          "summary": "לאביזרים של ההצגה אין שמות, וללהקה כולה צריך מילה אחת. למדו It לחפץ או לבעל חיים, ו-We לקבוצה שאני חלק ממנה.",
+          "giver_npc": "Village Head",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 200,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "personal_pronouns_q03_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q03_spell_it",
+              "display_text": "כתבו באנגלית את המילה שאומרים על חפץ או על בעל חיים.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שאומרים על חפץ או על בעל חיים.",
+                "tasks": [
+                  "i",
+                  "t"
+                ],
+                "target": "it",
+                "variant": "word_spelling",
+                "success": "נכון. את המילה הזאת לא אומרים על אדם.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שאומרים על חפץ או על בעל חיים.",
+                  "targetWord": "it",
+                  "extraDistractorCount": 3,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q03_line_hat",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: זה כובע. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "It",
+                  "is",
+                  "a",
+                  "hat"
+                ],
+                "target": "It is a hat.",
+                "variant": "sentence_building",
+                "success": "האביזר הראשון נרשם ברשימה.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: זה כובע. בחרו את שתי המילים החסרות.",
+                  "translation": "זה כובע.",
+                  "englishWordsInOrder": [
+                    "It",
+                    "is",
+                    "a",
+                    "hat"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "He",
+                    "We",
+                    "crown",
+                    "box"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q03_match_it_we_she_he",
+              "display_text": "השלימו את האות החסרה בכל כינוי גוף.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל כינוי גוף.",
+                "tasks": [
+                  "SH_",
+                  "_T",
+                  "_E",
+                  "W_"
+                ],
+                "target": "she, it, he, we",
+                "variant": "missing_letter_matching",
+                "success": "כל המילים ברשימת האביזרים שלמות.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "pp_q03_tile_o",
+                      "value": "o"
+                    },
+                    {
+                      "id": "pp_q03_tile_e1",
+                      "value": "e"
+                    },
+                    {
+                      "id": "pp_q03_tile_i",
+                      "value": "i"
+                    },
+                    {
+                      "id": "pp_q03_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "pp_q03_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "pp_q03_tile_e2",
+                      "value": "e"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "pp_q03_task_she",
+                      "image": "",
+                      "fullWord": "she",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "pp_q03_task_it",
+                      "image": "",
+                      "fullWord": "it",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "pp_q03_task_he",
+                      "image": "",
+                      "fullWord": "he",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "pp_q03_task_we",
+                      "image": "",
+                      "fullWord": "we",
+                      "missingIndices": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q03_line_actors",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: אנחנו שחקנים. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "We",
+                  "are",
+                  "actors"
+                ],
+                "target": "We are actors.",
+                "variant": "sentence_building",
+                "success": "כל הלהקה נכנסה לשורה אחת.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: אנחנו שחקנים. בחרו את שתי המילים החסרות.",
+                  "translation": "אנחנו שחקנים.",
+                  "englishWordsInOrder": [
+                    "We",
+                    "are",
+                    "actors"
+                  ],
+                  "preFilledIndices": [
+                    1
+                  ],
+                  "distractorWords": [
+                    "They",
+                    "It",
+                    "singers",
+                    "dancers"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q03_say_we_are_on_the_stage",
+              "display_text": "אמרו בקול את המשפט המלא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו בקול את המשפט המלא באנגלית.",
+                "tasks": [
+                  "We",
+                  "are",
+                  "on",
+                  "the",
+                  "stage"
+                ],
+                "target": "We are on the stage.",
+                "variant": "short_phrase",
+                "success": "הלהקה כולה ענתה לכם מהבמה.",
+                "params": {
+                  "prompt": "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: אנחנו על הבמה.",
+                  "targetWords": [
+                    "We",
+                    "are",
+                    "on",
+                    "the",
+                    "stage"
+                  ],
+                  "targetPhrase": "We are on the stage.",
+                  "silenceTimeoutSeconds": 3.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "personal_pronouns_q03_finish",
+              "success_required": true,
+              "display_text": "חזרו לראש הכפר עם רשימת האביזרים."
+            }
+          ]
+        },
+        {
+          "id": "personal_pronouns__q04_the_crowd_scene",
+          "name": "The Crowd Scene",
+          "level": 1,
+          "prerequisite": "personal_pronouns__q03_the_hat_and_the_troupe",
+          "summary": "בתמונה האחרונה עומדים עשרים אנשים על הבמה, ואי אפשר לכתוב עשרים שמות. למדו את המילה They ליותר מאדם אחד.",
+          "giver_npc": "Little Boy",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 225,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Little Boy",
+              "dialogue_id": "personal_pronouns_q04_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q04_line_friends",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: הם החברים שלי. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "They",
+                  "are",
+                  "my",
+                  "friends"
+                ],
+                "target": "They are my friends.",
+                "variant": "sentence_building",
+                "success": "שורה אחת רשמה חמש דמויות.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: הם החברים שלי. בחרו את שתי המילים החסרות.",
+                  "translation": "הם החברים שלי.",
+                  "englishWordsInOrder": [
+                    "They",
+                    "are",
+                    "my",
+                    "friends"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "We",
+                    "She",
+                    "brothers",
+                    "neighbors"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q04_match_all_six",
+              "display_text": "השלימו את האות החסרה בכל כינוי גוף.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל כינוי גוף.",
+                "tasks": [
+                  "I_",
+                  "_OU",
+                  "S_E",
+                  "TH_Y",
+                  "H_",
+                  "_E"
+                ],
+                "target": "it, you, she, they, he, we",
+                "variant": "missing_letter_matching",
+                "success": "כל כינויי הגוף מוכנים לתמונה האחרונה.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "pp_q04_tile_e1",
+                      "value": "e"
+                    },
+                    {
+                      "id": "pp_q04_tile_w",
+                      "value": "w"
+                    },
+                    {
+                      "id": "pp_q04_tile_t",
+                      "value": "t"
+                    },
+                    {
+                      "id": "pp_q04_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "pp_q04_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "pp_q04_tile_y",
+                      "value": "y"
+                    },
+                    {
+                      "id": "pp_q04_tile_e2",
+                      "value": "e"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "pp_q04_task_it",
+                      "image": "",
+                      "fullWord": "it",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "pp_q04_task_you",
+                      "image": "",
+                      "fullWord": "you",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "pp_q04_task_she",
+                      "image": "",
+                      "fullWord": "she",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "pp_q04_task_they",
+                      "image": "",
+                      "fullWord": "they",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "pp_q04_task_he",
+                      "image": "",
+                      "fullWord": "he",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "pp_q04_task_we",
+                      "image": "",
+                      "fullWord": "we",
+                      "missingIndices": [
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q04_spell_they",
+              "display_text": "כתבו באנגלית את המילה שפירושה הם או הן.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שפירושה הם או הן.",
+                "tasks": [
+                  "t",
+                  "h",
+                  "e",
+                  "y"
+                ],
+                "target": "they",
+                "variant": "word_spelling",
+                "success": "נכון. מילה אחת ליותר מאדם אחד.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שפירושה הם או הן.",
+                  "targetWord": "they",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q04_line_garden",
+              "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את המשפט לפי התרגום המלא בעברית: הם בגן. בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "They",
+                  "are",
+                  "in",
+                  "the",
+                  "garden"
+                ],
+                "target": "They are in the garden.",
+                "variant": "sentence_building",
+                "success": "עשרים אנשים נכנסו לשורה אחת במחברת.",
+                "params": {
+                  "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: הם בגן. בחרו את שתי המילים החסרות.",
+                  "translation": "הם בגן.",
+                  "englishWordsInOrder": [
+                    "They",
+                    "are",
+                    "in",
+                    "the",
+                    "garden"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "We",
+                    "It",
+                    "kitchen",
+                    "market"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q04_say_they_are_very_happy",
+              "display_text": "אמרו בקול את המשפט המלא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו בקול את המשפט המלא באנגלית.",
+                "tasks": [
+                  "They",
+                  "are",
+                  "very",
+                  "happy"
+                ],
+                "target": "They are very happy.",
+                "variant": "short_phrase",
+                "success": "הילד הקטן סגר את המחברת בחיוך.",
+                "params": {
+                  "prompt": "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: הם מאוד שמחים.",
+                  "targetWords": [
+                    "They",
+                    "are",
+                    "very",
+                    "happy"
+                  ],
+                  "targetPhrase": "They are very happy.",
+                  "silenceTimeoutSeconds": 3.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Little Boy",
+              "dialogue_id": "personal_pronouns_q04_finish",
+              "success_required": true,
+              "display_text": "חזרו לילד הקטן עם סוף המחזה."
+            }
+          ]
+        },
+        {
+          "id": "personal_pronouns__q05_opening_night",
+          "name": "Opening Night",
+          "level": 1,
+          "prerequisite": "personal_pronouns__q04_the_crowd_scene",
+          "summary": "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה.",
+          "giver_npc": "Village Head",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 300,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "personal_pronouns_q05_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q05_match_mixed",
+              "display_text": "השלימו את האות החסרה בכל כינוי גוף.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל כינוי גוף.",
+                "tasks": [
+                  "_T",
+                  "SH_",
+                  "Y_U",
+                  "_HEY",
+                  "W_",
+                  "_E"
+                ],
+                "target": "it, she, you, they, we, he",
+                "variant": "missing_letter_matching",
+                "success": "כל המילים מוכנות לעלייה לבמה.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "pp_q05_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "pp_q05_tile_e1",
+                      "value": "e"
+                    },
+                    {
+                      "id": "pp_q05_tile_o",
+                      "value": "o"
+                    },
+                    {
+                      "id": "pp_q05_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "pp_q05_tile_i",
+                      "value": "i"
+                    },
+                    {
+                      "id": "pp_q05_tile_t",
+                      "value": "t"
+                    },
+                    {
+                      "id": "pp_q05_tile_e2",
+                      "value": "e"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "pp_q05_task_it",
+                      "image": "",
+                      "fullWord": "it",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "pp_q05_task_she",
+                      "image": "",
+                      "fullWord": "she",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "pp_q05_task_you",
+                      "image": "",
+                      "fullWord": "you",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "pp_q05_task_they",
+                      "image": "",
+                      "fullWord": "they",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "pp_q05_task_we",
+                      "image": "",
+                      "fullWord": "we",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "pp_q05_task_he",
+                      "image": "",
+                      "fullWord": "he",
+                      "missingIndices": [
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q05_line_queen",
+              "display_text": "הרכיבו את כל המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "הרכיבו את כל המשפט לפי התרגום המלא בעברית: היא המלכה.",
+                "tasks": [
+                  "She",
+                  "is",
+                  "the",
+                  "queen"
+                ],
+                "target": "She is the queen.",
+                "variant": "sentence_building",
+                "success": "השורה נאמרה בדיוק בזמן.",
+                "params": {
+                  "prompt": "הרכיבו את כל המשפט לפי התרגום המלא בעברית: היא המלכה.",
+                  "translation": "היא המלכה.",
+                  "englishWordsInOrder": [
+                    "She",
+                    "is",
+                    "the",
+                    "queen"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q05_line_family",
+              "display_text": "הרכיבו את כל המשפט לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "הרכיבו את כל המשפט לפי התרגום המלא בעברית: אנחנו משפחה.",
+                "tasks": [
+                  "We",
+                  "are",
+                  "a",
+                  "family"
+                ],
+                "target": "We are a family.",
+                "variant": "sentence_building",
+                "success": "השורה האחרונה במחזה מוכנה.",
+                "params": {
+                  "prompt": "הרכיבו את כל המשפט לפי התרגום המלא בעברית: אנחנו משפחה.",
+                  "translation": "אנחנו משפחה.",
+                  "englishWordsInOrder": [
+                    "We",
+                    "are",
+                    "a",
+                    "family"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q05_spell_we",
+              "display_text": "כתבו באנגלית את המילה שפירושה אנחנו.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שפירושה אנחנו.",
+                "tasks": [
+                  "w",
+                  "e"
+                ],
+                "target": "we",
+                "variant": "word_spelling",
+                "success": "נכון. המילה הזאת כוללת גם אותי.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שפירושה אנחנו.",
+                  "targetWord": "we",
+                  "extraDistractorCount": 3,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q05_say_i_am_ready",
+              "display_text": "אמרו בקול את המשפט המלא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו בקול את המשפט המלא באנגלית.",
+                "tasks": [
+                  "I",
+                  "am",
+                  "ready",
+                  "for",
+                  "the",
+                  "show"
+                ],
+                "target": "I am ready for the show.",
+                "variant": "short_phrase",
+                "success": "המסך נפתח.",
+                "params": {
+                  "prompt": "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: אני מוכן להצגה.",
+                  "targetWords": [
+                    "I",
+                    "am",
+                    "ready",
+                    "for",
+                    "the",
+                    "show"
+                  ],
+                  "targetPhrase": "I am ready for the show.",
+                  "silenceTimeoutSeconds": 3.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "personal_pronouns_q05_say_it_is_a_beautiful_day",
+              "display_text": "אמרו בקול את המשפט המלא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו בקול את המשפט המלא באנגלית.",
+                "tasks": [
+                  "It",
+                  "is",
+                  "a",
+                  "beautiful",
+                  "day"
+                ],
+                "target": "It is a beautiful day.",
+                "variant": "short_phrase",
+                "success": "הקהל מחא כפיים אחרי השורה האחרונה.",
+                "params": {
+                  "prompt": "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: זה יום יפה.",
+                  "targetWords": [
+                    "It",
+                    "is",
+                    "a",
+                    "beautiful",
+                    "day"
+                  ],
+                  "targetPhrase": "It is a beautiful day.",
+                  "silenceTimeoutSeconds": 3.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "personal_pronouns_q05_finish",
+              "success_required": true,
+              "display_text": "חזרו לראש הכפר לסיום ההצגה."
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "the_kingdoms_worst_day",
       "folder": "the_kingdoms_worst_day",
       "displayName": "The Kingdom’s Worst Day - שיעור תרגול verbs nouns adjectivs",
@@ -12823,6 +14360,1384 @@
               "type": "return_to_npc",
               "npc_id": "City Gaurd Info",
               "dialogue_id": "the_royal_impostor_q05_fenn_done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wh_questions",
+      "folder": "wh_questions",
+      "displayName": "Wh-Questions - שאלות מידע",
+      "theme": "A ghost detective story: recover a lost memory by asking What, Where, When, Who, Why, and How.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 5,
+      "npcId": "Ghost",
+      "npc": {
+        "id": "Ghost",
+        "name": "בו רדקליף",
+        "title": "רוח",
+        "location": "האבנים הבוכות",
+        "description": "רוח ידידותית שאוהבת הפתעות במקומות שקטים.",
+        "image": "images/npcs/Ghost.png"
+      },
+      "quests": [
+        {
+          "id": "wh_questions__q01_the_forgotten_name",
+          "name": "The Forgotten Name",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "רוח באבני הבכי שכחה את השם שלה. שאלו What ו-Where כדי להחזיר את הזיכרון הראשון.",
+          "giver_npc": "Ghost",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Ghost",
+              "dialogue_id": "wh_questions_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "wh_questions_q01_match_first_words",
+              "display_text": "השלימו את האות החסרה בכל מילת שאלה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילת שאלה.",
+                "tasks": [
+                  "_HERE",
+                  "WH_",
+                  "W_AT"
+                ],
+                "target": "where, who, what",
+                "variant": "missing_letter_matching",
+                "success": "מילות השאלה חזרו לאבן הזיכרון.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "wh_q01_tile_y",
+                      "value": "y"
+                    },
+                    {
+                      "id": "wh_q01_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "wh_q01_tile_e",
+                      "value": "e"
+                    },
+                    {
+                      "id": "wh_q01_tile_w",
+                      "value": "w"
+                    },
+                    {
+                      "id": "wh_q01_tile_o",
+                      "value": "o"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "wh_q01_task_where",
+                      "image": "",
+                      "fullWord": "where",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "wh_q01_task_who",
+                      "image": "",
+                      "fullWord": "who",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q01_task_what",
+                      "image": "",
+                      "fullWord": "what",
+                      "missingIndices": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_q01_ask_name",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: מה השם שלך? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "What",
+                  "is",
+                  "your",
+                  "name"
+                ],
+                "target": "What is your name?",
+                "variant": "sentence_building",
+                "success": "הרוח שומעת את השאלה ומתחילה להיזכר בשם.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: מה השם שלך? בחרו את שתי המילים החסרות.",
+                  "translation": "מה השם שלך?",
+                  "englishWordsInOrder": [
+                    "What",
+                    "is",
+                    "your",
+                    "name"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "Where",
+                    "Who",
+                    "book",
+                    "friend"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "wh_questions_q01_spell_where",
+              "display_text": "כתבו באנגלית את מילת השאלה שפירושה איפה.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את מילת השאלה שפירושה איפה.",
+                "tasks": [
+                  "w",
+                  "h",
+                  "e",
+                  "r",
+                  "e"
+                ],
+                "target": "where",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת שואלים על מקום.",
+                "params": {
+                  "prompt": "כתבו באנגלית את מילת השאלה שפירושה איפה.",
+                  "targetWord": "where",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_q01_ask_ship",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: איפה הספינה? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "Where",
+                  "is",
+                  "the",
+                  "ship"
+                ],
+                "target": "Where is the ship?",
+                "variant": "sentence_building",
+                "success": "הרוח רואה שוב את הספינה על המים.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: איפה הספינה? בחרו את שתי המילים החסרות.",
+                  "translation": "איפה הספינה?",
+                  "englishWordsInOrder": [
+                    "Where",
+                    "is",
+                    "the",
+                    "ship"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "What",
+                    "When",
+                    "boat",
+                    "gate"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "wh_questions_q01_say_what",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "What",
+                  "is",
+                  "this"
+                ],
+                "target": "What is this?",
+                "variant": "short_phrase",
+                "success": "הרוח שמעה אתכם בבירור.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מה זה?",
+                  "targetWords": [
+                    "What",
+                    "is",
+                    "this"
+                  ],
+                  "targetPhrase": "What is this?",
+                  "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Ghost",
+              "dialogue_id": "wh_questions_q01_finish",
+              "success_required": true,
+              "display_text": "חזרו לבו עם החלק הראשון בזיכרון."
+            }
+          ]
+        },
+        {
+          "id": "wh_questions__q02_the_sailor_who_saw",
+          "name": "The Sailor Who Saw",
+          "level": 1,
+          "prerequisite": "wh_questions__q01_the_forgotten_name",
+          "summary": "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי.",
+          "giver_npc": "Fisherman",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 175,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Fisherman",
+              "dialogue_id": "wh_questions_q02_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_q02_ask_sailor",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: מי המלח? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "Who",
+                  "is",
+                  "the",
+                  "sailor"
+                ],
+                "target": "Who is the sailor?",
+                "variant": "sentence_building",
+                "success": "נמו נזכר במלח הצעיר על הסיפון.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: מי המלח? בחרו את שתי המילים החסרות.",
+                  "translation": "מי המלח?",
+                  "englishWordsInOrder": [
+                    "Who",
+                    "is",
+                    "the",
+                    "sailor"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "When",
+                    "What",
+                    "ghost",
+                    "guard"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "wh_questions_q02_spell_when",
+              "display_text": "כתבו באנגלית את מילת השאלה שפירושה מתי.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את מילת השאלה שפירושה מתי.",
+                "tasks": [
+                  "w",
+                  "h",
+                  "e",
+                  "n"
+                ],
+                "target": "when",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת שואלים על זמן.",
+                "params": {
+                  "prompt": "כתבו באנגלית את מילת השאלה שפירושה מתי.",
+                  "targetWord": "when",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_q02_match_witness_words",
+              "display_text": "השלימו את האות החסרה בכל מילת שאלה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילת שאלה.",
+                "tasks": [
+                  "WH_T",
+                  "WHER_",
+                  "WHE_",
+                  "W_O"
+                ],
+                "target": "what, where, when, who",
+                "variant": "missing_letter_matching",
+                "success": "כל מילות העדות הושלמו.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "wh_q02_tile_o",
+                      "value": "o"
+                    },
+                    {
+                      "id": "wh_q02_tile_n",
+                      "value": "n"
+                    },
+                    {
+                      "id": "wh_q02_tile_y",
+                      "value": "y"
+                    },
+                    {
+                      "id": "wh_q02_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "wh_q02_tile_e",
+                      "value": "e"
+                    },
+                    {
+                      "id": "wh_q02_tile_h",
+                      "value": "h"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "wh_q02_task_what",
+                      "image": "",
+                      "fullWord": "what",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q02_task_where",
+                      "image": "",
+                      "fullWord": "where",
+                      "missingIndices": [
+                        4
+                      ]
+                    },
+                    {
+                      "id": "wh_q02_task_when",
+                      "image": "",
+                      "fullWord": "when",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "wh_q02_task_who",
+                      "image": "",
+                      "fullWord": "who",
+                      "missingIndices": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_q02_ask_storm",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: מתי הסערה? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "When",
+                  "is",
+                  "the",
+                  "storm"
+                ],
+                "target": "When is the storm?",
+                "variant": "sentence_building",
+                "success": "עכשיו ידוע שהסערה הגיעה אחרי חצות.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: מתי הסערה? בחרו את שתי המילים החסרות.",
+                  "translation": "מתי הסערה?",
+                  "englishWordsInOrder": [
+                    "When",
+                    "is",
+                    "the",
+                    "storm"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "Where",
+                    "Who",
+                    "night",
+                    "wind"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "wh_questions_q02_say_who",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "Who",
+                  "is",
+                  "she"
+                ],
+                "target": "Who is she?",
+                "variant": "short_phrase",
+                "success": "נמו הבין בדיוק על מי שאלתם.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מי היא?",
+                  "targetWords": [
+                    "Who",
+                    "is",
+                    "she"
+                  ],
+                  "targetPhrase": "Who is she?",
+                  "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Fisherman",
+              "dialogue_id": "wh_questions_q02_finish",
+              "success_required": true,
+              "display_text": "חזרו לנמו עם עדות המלח."
+            }
+          ]
+        },
+        {
+          "id": "wh_questions__q03_the_night_the_ship_broke",
+          "name": "The Night the Ship Broke",
+          "level": 1,
+          "prerequisite": "wh_questions__q02_the_sailor_who_saw",
+          "summary": "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה.",
+          "giver_npc": "Cannoneer",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 200,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Cannoneer",
+              "dialogue_id": "wh_questions_q03_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "wh_questions_q03_spell_why",
+              "display_text": "כתבו באנגלית את מילת השאלה שפירושה למה.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את מילת השאלה שפירושה למה.",
+                "tasks": [
+                  "w",
+                  "h",
+                  "y"
+                ],
+                "target": "why",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת שואלים על סיבה.",
+                "params": {
+                  "prompt": "כתבו באנגלית את מילת השאלה שפירושה למה.",
+                  "targetWord": "why",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "wh_questions_q03_ask_broken",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: למה הספינה שבורה? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "Why",
+                  "is",
+                  "the",
+                  "ship",
+                  "broken"
+                ],
+                "target": "Why is the ship broken?",
+                "variant": "sentence_building",
+                "success": "שאלתם על הסיבה, וזה בדיוק מה שחסר בסיפור.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: למה הספינה שבורה? בחרו את שתי המילים החסרות.",
+                  "translation": "למה הספינה שבורה?",
+                  "englishWordsInOrder": [
+                    "Why",
+                    "is",
+                    "the",
+                    "ship",
+                    "broken"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "How",
+                    "Who",
+                    "open",
+                    "fixed"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_q03_match_reason_words",
+              "display_text": "השלימו את האות החסרה בכל מילת שאלה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילת שאלה.",
+                "tasks": [
+                  "_OW",
+                  "WH_N",
+                  "WH_",
+                  "WH_"
+                ],
+                "target": "how, when, why, who",
+                "variant": "missing_letter_matching",
+                "success": "כל מילות השאלה של החקירה שלמות.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "wh_q03_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "wh_q03_tile_y",
+                      "value": "y"
+                    },
+                    {
+                      "id": "wh_q03_tile_w",
+                      "value": "w"
+                    },
+                    {
+                      "id": "wh_q03_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "wh_q03_tile_o",
+                      "value": "o"
+                    },
+                    {
+                      "id": "wh_q03_tile_e",
+                      "value": "e"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "wh_q03_task_how",
+                      "image": "",
+                      "fullWord": "how",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "wh_q03_task_when",
+                      "image": "",
+                      "fullWord": "when",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q03_task_why",
+                      "image": "",
+                      "fullWord": "why",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q03_task_who",
+                      "image": "",
+                      "fullWord": "who",
+                      "missingIndices": [
+                        2
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "wh_questions_q03_ask_wind",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: איך הרוח? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "How",
+                  "is",
+                  "the",
+                  "wind"
+                ],
+                "target": "How is the wind?",
+                "variant": "sentence_building",
+                "success": "עכשיו ברור איך הרוח שברה את התורן.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: איך הרוח? בחרו את שתי המילים החסרות.",
+                  "translation": "איך הרוח?",
+                  "englishWordsInOrder": [
+                    "How",
+                    "is",
+                    "the",
+                    "wind"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "Why",
+                    "What",
+                    "rain",
+                    "storm"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest3_Forsaken_Cove",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "wh_questions_q03_say_how",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "How",
+                  "is",
+                  "it"
+                ],
+                "target": "How is it?",
+                "variant": "short_phrase",
+                "success": "התותחן שמע אתכם למרות רעש הגלים.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: איך זה?",
+                  "targetWords": [
+                    "How",
+                    "is",
+                    "it"
+                  ],
+                  "targetPhrase": "How is it?",
+                  "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Cannoneer",
+              "dialogue_id": "wh_questions_q03_finish",
+              "success_required": true,
+              "display_text": "חזרו לתותחן עם הסיבה שמצאתם."
+            }
+          ]
+        },
+        {
+          "id": "wh_questions__q04_six_questions_for_lily",
+          "name": "Six Questions for the Little Girl",
+          "level": 1,
+          "prerequisite": "wh_questions__q03_the_night_the_ship_broke",
+          "summary": "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה.",
+          "giver_npc": "Little Girl",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 225,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Little Girl",
+              "dialogue_id": "wh_questions_q04_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "wh_questions_q04_ask_box",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: מה יש בקופסה? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "What",
+                  "is",
+                  "in",
+                  "the",
+                  "box"
+                ],
+                "target": "What is in the box?",
+                "variant": "sentence_building",
+                "success": "השאלה הראשונה במחברת של הילדה הקטנה מסודרת.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: מה יש בקופסה? בחרו את שתי המילים החסרות.",
+                  "translation": "מה יש בקופסה?",
+                  "englishWordsInOrder": [
+                    "What",
+                    "is",
+                    "in",
+                    "the",
+                    "box"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2,
+                    3
+                  ],
+                  "distractorWords": [
+                    "Where",
+                    "Why",
+                    "bag",
+                    "book"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "wh_questions_q04_ask_flowers",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את השאלה לפי התרגום המלא בעברית: איפה הפרחים? בחרו את שתי המילים החסרות.",
+                "tasks": [
+                  "Where",
+                  "are",
+                  "the",
+                  "flowers"
+                ],
+                "target": "Where are the flowers?",
+                "variant": "sentence_building",
+                "success": "גם השאלה השנייה מתחילה נכון.",
+                "params": {
+                  "prompt": "השלימו את השאלה לפי התרגום המלא בעברית: איפה הפרחים? בחרו את שתי המילים החסרות.",
+                  "translation": "איפה הפרחים?",
+                  "englishWordsInOrder": [
+                    "Where",
+                    "are",
+                    "the",
+                    "flowers"
+                  ],
+                  "preFilledIndices": [
+                    1,
+                    2
+                  ],
+                  "distractorWords": [
+                    "When",
+                    "What",
+                    "trees",
+                    "stones"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "wh_questions_q04_match_all_six",
+              "display_text": "השלימו את האות החסרה בכל מילת שאלה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילת שאלה.",
+                "tasks": [
+                  "_HO",
+                  "WH_",
+                  "WHA_",
+                  "H_W",
+                  "WH_RE",
+                  "W_EN"
+                ],
+                "target": "who, why, what, how, where, when",
+                "variant": "missing_letter_matching",
+                "success": "כל שש מילות השאלה שלמות במחברת.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "wh_q04_tile_e",
+                      "value": "e"
+                    },
+                    {
+                      "id": "wh_q04_tile_t",
+                      "value": "t"
+                    },
+                    {
+                      "id": "wh_q04_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "wh_q04_tile_y",
+                      "value": "y"
+                    },
+                    {
+                      "id": "wh_q04_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "wh_q04_tile_w",
+                      "value": "w"
+                    },
+                    {
+                      "id": "wh_q04_tile_o",
+                      "value": "o"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "wh_q04_task_who",
+                      "image": "",
+                      "fullWord": "who",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "wh_q04_task_why",
+                      "image": "",
+                      "fullWord": "why",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q04_task_what",
+                      "image": "",
+                      "fullWord": "what",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "wh_q04_task_how",
+                      "image": "",
+                      "fullWord": "how",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "wh_q04_task_where",
+                      "image": "",
+                      "fullWord": "where",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q04_task_when",
+                      "image": "",
+                      "fullWord": "when",
+                      "missingIndices": [
+                        1
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "wh_questions_q04_spell_who",
+              "display_text": "כתבו באנגלית את מילת השאלה שפירושה מי.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את מילת השאלה שפירושה מי.",
+                "tasks": [
+                  "w",
+                  "h",
+                  "o"
+                ],
+                "target": "who",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת שואלים על אדם.",
+                "params": {
+                  "prompt": "כתבו באנגלית את מילת השאלה שפירושה מי.",
+                  "targetWord": "who",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "wh_questions_q04_say_friend_question",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "Where",
+                  "is",
+                  "my",
+                  "friend"
+                ],
+                "target": "Where is my friend?",
+                "variant": "short_phrase",
+                "success": "הילדה הקטנה שמעה שאלה שלמה וברורה.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: איפה החבר שלי?",
+                  "targetWords": [
+                    "Where",
+                    "is",
+                    "my",
+                    "friend"
+                  ],
+                  "targetPhrase": "Where is my friend?",
+                  "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Little Girl",
+              "dialogue_id": "wh_questions_q04_finish",
+              "success_required": true,
+              "display_text": "חזרו אל הילדה הקטנה עם השאלות שהרכבתם."
+            }
+          ]
+        },
+        {
+          "id": "wh_questions__q05_the_light_at_the_tower",
+          "name": "The Light at the Tower",
+          "level": 1,
+          "prerequisite": "wh_questions__q04_six_questions_for_lily",
+          "summary": "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה.",
+          "giver_npc": "Mountain Guide",
+          "wait_for_npc_turn_in": false,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 300,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Mountain Guide",
+              "dialogue_id": "wh_questions_q05_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "wh_questions_q05_match_mixed",
+              "display_text": "השלימו את האות החסרה בכל מילת שאלה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילת שאלה.",
+                "tasks": [
+                  "WH_",
+                  "_HEN",
+                  "H_W",
+                  "WH_T",
+                  "WH_",
+                  "WHE_E"
+                ],
+                "target": "why, when, how, what, who, where",
+                "variant": "missing_letter_matching",
+                "success": "כל מילות השאלה מוכנות לסיפור האחרון.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "wh_q05_tile_o1",
+                      "value": "o"
+                    },
+                    {
+                      "id": "wh_q05_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "wh_q05_tile_e",
+                      "value": "e"
+                    },
+                    {
+                      "id": "wh_q05_tile_y",
+                      "value": "y"
+                    },
+                    {
+                      "id": "wh_q05_tile_r",
+                      "value": "r"
+                    },
+                    {
+                      "id": "wh_q05_tile_w",
+                      "value": "w"
+                    },
+                    {
+                      "id": "wh_q05_tile_o2",
+                      "value": "o"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "wh_q05_task_why",
+                      "image": "",
+                      "fullWord": "why",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q05_task_when",
+                      "image": "",
+                      "fullWord": "when",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "wh_q05_task_how",
+                      "image": "",
+                      "fullWord": "how",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "wh_q05_task_what",
+                      "image": "",
+                      "fullWord": "what",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q05_task_who",
+                      "image": "",
+                      "fullWord": "who",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_q05_task_where",
+                      "image": "",
+                      "fullWord": "where",
+                      "missingIndices": [
+                        3
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "wh_questions_q05_ask_ghost",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: מי הרוח?",
+                "tasks": [
+                  "Who",
+                  "is",
+                  "the",
+                  "ghost"
+                ],
+                "target": "Who is the ghost?",
+                "variant": "sentence_building",
+                "success": "השאלה הזאת מחזירה לרוח את השם שלה.",
+                "params": {
+                  "prompt": "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: מי הרוח?",
+                  "translation": "מי הרוח?",
+                  "englishWordsInOrder": [
+                    "Who",
+                    "is",
+                    "the",
+                    "ghost"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "wh_questions_q05_ask_reason",
+              "display_text": "השלימו את השאלה לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: למה היא כאן?",
+                "tasks": [
+                  "Why",
+                  "is",
+                  "she",
+                  "here"
+                ],
+                "target": "Why is she here?",
+                "variant": "sentence_building",
+                "success": "עכשיו ברור למה הרוח נשארה ליד המים.",
+                "params": {
+                  "prompt": "השלימו את כל מילות השאלה לפי התרגום המלא בעברית: למה היא כאן?",
+                  "translation": "למה היא כאן?",
+                  "englishWordsInOrder": [
+                    "Why",
+                    "is",
+                    "she",
+                    "here"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_q05_spell_how",
+              "display_text": "כתבו באנגלית את מילת השאלה שפירושה איך.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את מילת השאלה שפירושה איך.",
+                "tasks": [
+                  "h",
+                  "o",
+                  "w"
+                ],
+                "target": "how",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת שואלים על האופן.",
+                "params": {
+                  "prompt": "כתבו באנגלית את מילת השאלה שפירושה איך.",
+                  "targetWord": "how",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 7,
+              "success_required": true,
+              "instance_id": "wh_questions_q05_say_name_question",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "What",
+                  "is",
+                  "your",
+                  "name"
+                ],
+                "target": "What is your name?",
+                "variant": "short_phrase",
+                "success": "הרוח עונה בשקט: Boo.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מה השם שלך?",
+                  "targetWords": [
+                    "What",
+                    "is",
+                    "your",
+                    "name"
+                  ],
+                  "targetPhrase": "What is your name?",
+                  "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 7,
+              "success_required": true,
+              "instance_id": "wh_questions_q05_say_how_are_you",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "How",
+                  "are",
+                  "you"
+                ],
+                "target": "How are you?",
+                "variant": "short_phrase",
+                "success": "הרוח מחייכת ליד המדורה.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מה שלומך?",
+                  "targetWords": [
+                    "How",
+                    "are",
+                    "you"
+                  ],
+                  "targetPhrase": "How are you?",
+                  "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "Mountain Guide",
+              "dialogue_id": "wh_questions_q05_finish",
+              "success_required": true,
+              "display_text": "חזרו למדריך ההרים לסיום הסיפור."
             }
           ]
         }

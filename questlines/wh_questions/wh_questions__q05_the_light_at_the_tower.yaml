@@ -1,0 +1,60 @@
+quest:
+  id: wh_questions__q05_the_light_at_the_tower
+  name: "The Light at the Tower"
+  level_required: 1
+  giver_npc: "Mountain Guide"
+  prerequisite: wh_questions__q04_six_questions_for_lily
+  summary: "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה."
+  wait_for_npc_turn_in: false
+rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: "Mountain Guide"
+    dialogue_id: wh_questions_q05_start
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 4
+    success_required: true
+    instance_id: wh_questions_q05_match_mixed
+    display_text: השלימו את האות החסרה בכל מילת שאלה.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 5
+    success_required: true
+    instance_id: wh_questions_q05_ask_ghost
+    display_text: השלימו את השאלה לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 5
+    success_required: true
+    instance_id: wh_questions_q05_ask_reason
+    display_text: השלימו את השאלה לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 3
+    success_required: true
+    instance_id: wh_questions_q05_spell_how
+    display_text: כתבו באנגלית את מילת השאלה שפירושה איך.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 7
+    success_required: true
+    instance_id: wh_questions_q05_say_name_question
+    display_text: אמרו את השאלה הבאה באנגלית בקול.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 7
+    success_required: true
+    instance_id: wh_questions_q05_say_how_are_you
+    display_text: אמרו את השאלה הבאה באנגלית בקול.
+  - type: return_to_npc
+    npc_id: "Mountain Guide"
+    dialogue_id: wh_questions_q05_finish
+    success_required: true
+    display_text: חזרו למדריך ההרים לסיום הסיפור.

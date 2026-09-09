@@ -1,0 +1,53 @@
+quest:
+  id: wh_questions__q04_six_questions_for_lily
+  name: "Six Questions for the Little Girl"
+  level_required: 1
+  giver_npc: "Little Girl"
+  prerequisite: wh_questions__q03_the_night_the_ship_broke
+  summary: "הילדה הקטנה מתחת לעץ הכתום הגדול אוספת שאלות לרוח. הרכיבו שאלות שלמות שמתחילות במילת שאלה."
+  wait_for_npc_turn_in: false
+rewards: { xp: 225, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: "Little Girl"
+    dialogue_id: wh_questions_q04_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 4
+    success_required: true
+    instance_id: wh_questions_q04_ask_box
+    display_text: השלימו את השאלה לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 4
+    success_required: true
+    instance_id: wh_questions_q04_ask_flowers
+    display_text: השלימו את השאלה לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 4
+    success_required: true
+    instance_id: wh_questions_q04_match_all_six
+    display_text: השלימו את האות החסרה בכל מילת שאלה.
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 2
+    success_required: true
+    instance_id: wh_questions_q04_spell_who
+    display_text: כתבו באנגלית את מילת השאלה שפירושה מי.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 6
+    success_required: true
+    instance_id: wh_questions_q04_say_friend_question
+    display_text: אמרו את השאלה הבאה באנגלית בקול.
+  - type: return_to_npc
+    npc_id: "Little Girl"
+    dialogue_id: wh_questions_q04_finish
+    success_required: true
+    display_text: חזרו אל הילדה הקטנה עם השאלות שהרכבתם.
