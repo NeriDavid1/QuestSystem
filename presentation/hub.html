@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מרכז המדריכים — English Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f6fa; --card:#ffffff; --ink:#16233a; --muted:#61708c;
+    --line:#dfe5ef; --accent:#2f6df6; --accent-soft:#e8f0ff;
+    --warn-bg:#fff6e0; --warn-line:#f0d089; --warn-ink:#6a4c05;
+    --radius:14px; --shadow:0 1px 2px rgba(16,32,64,.06),0 6px 20px rgba(16,32,64,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1521; --card:#172032; --ink:#e8edf7; --muted:#9aa8c2;
+      --line:#26324a; --accent:#6f9bff; --accent-soft:#1d2b47;
+      --warn-bg:#2e2508; --warn-line:#5b4a12; --warn-ink:#f3dfa5;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font-family:"Heebo",system-ui,"Segoe UI",Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto;padding:24px 18px 64px}
+  header.top{padding-block:8px 18px}
+  h1{font-size:clamp(24px,4.6vw,34px);margin:0 0 4px;font-weight:700;letter-spacing:-.4px}
+  .sub{color:var(--muted);margin:0 0 18px;font-size:15px}
+
+  .notice{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn-ink);
+          border-radius:var(--radius);padding:11px 14px;font-size:14px;margin-bottom:18px}
+  .notice b{font-weight:700}
+
+  .search{position:relative;margin-bottom:22px}
+  .search input{width:100%;padding:13px 44px 13px 14px;font:inherit;font-size:16px;
+     background:var(--card);color:var(--ink);border:1px solid var(--line);
+     border-radius:var(--radius);box-shadow:var(--shadow);outline:none}
+  .search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .search svg{position:absolute;inset-inline-end:14px;top:50%;transform:translateY(-50%);
+     width:19px;height:19px;color:var(--muted);pointer-events:none}
+
+  .quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-bottom:30px}
+  .tile{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);
+        border-radius:var(--radius);padding:15px 16px;text-decoration:none;color:inherit;
+        box-shadow:var(--shadow);transition:transform .12s ease,border-color .12s ease}
+  .tile:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .tile .emo{font-size:23px;line-height:1}
+  .tile .t{font-weight:700;font-size:15px}
+  .tile .d{color:var(--muted);font-size:12.5px}
+
+  section{margin-bottom:30px}
+  .shead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:11px;flex-wrap:wrap}
+  h2{font-size:18px;margin:0;font-weight:700}
+  .folder{font-size:13px;color:var(--accent);text-decoration:none;white-space:nowrap}
+  .folder:hover{text-decoration:underline}
+
+  ul.items{list-style:none;margin:0;padding:0;display:grid;
+           grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:9px}
+  ul.items a{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);
+     border-radius:11px;padding:11px 13px;text-decoration:none;color:inherit;font-size:14.5px;
+     transition:border-color .12s ease,background .12s ease}
+  ul.items a:hover{border-color:var(--accent);background:var(--accent-soft)}
+  .num{flex:none;min-width:30px;height:30px;display:grid;place-items:center;border-radius:8px;
+       background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:13px;padding:0 6px}
+  .name{min-width:0}
+  .empty{color:var(--muted);font-size:14px;padding:6px 2px}
+  footer{color:var(--muted);font-size:12.5px;text-align:center;padding-top:10px;border-top:1px solid var(--line)}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>מרכז המדריכים</h1>
+    <p class="sub">כל מה שצריך לשיעור — במקום אחד</p>
+  </header>
+
+  <div class="notice">
+    <b>שימו לב:</b> אם נפתחת שגיאת הרשאה — התחברו עם חשבון <b>@englishroom.co.il</b> ולא עם חשבון פרטי.
+  </div>
+
+  <div class="search">
+    <input id="q" type="search" placeholder="חיפוש מערך שיעור, נושא או מסמך…" autocomplete="off" aria-label="חיפוש">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg>
+  </div>
+
+  <div class="quick" id="quick"></div>
+
+  <div id="sections"></div>
+
+  <p class="empty" id="noresults" hidden>לא נמצאו תוצאות.</p>
+
+  <footer>English Room · מרכז המדריכים</footer>
+</div>
+
+<script>
+const DOC = id => `https://docs.google.com/document/d/${id}/edit`;
+const SHEET = id => `https://docs.google.com/spreadsheets/d/${id}/edit`;
+const FILE = id => `https://drive.google.com/file/d/${id}/view`;
+const FOLDER = id => `https://drive.google.com/drive/folders/${id}`;
+
+const QUICK = [
+  {emo:"🗺️", t:"קווסטים", d:"צפיין הקווסטים של המשחק", url:"https://neridavid1.github.io/QuestSystem/viewer.html"},
+  {emo:"⚙️", t:"מדריך התקנה", d:"התקנת המשחק שלב אחר שלב", url:DOC("12p9AOQDrzkAvn9PdSClkSq7uEP0IvlR-fYtyRqSZ5sI")},
+  {emo:"👨‍👩‍👧", t:"הודעות להורים", d:"אתר ההודעות", url:"https://sites.google.com/englishroom.co.il/parentmessages/messages"},
+  {emo:"🗂️", t:"תיקיית הדרכה", d:"כל החומרים ב-Drive", url:FOLDER("1KZ3dKvgXdYYI1XNBouJzfeyJ_vw9RmW0")}
+];
+
+const SECTIONS = [
+  {
+    title:"מערכי שיעור בסיסיים",
+    folder:FOLDER("1Gz_oHYu9eq10J9hBrVnnWmQLqKSE5Dqt"),
+    items:[
+      {n:"1",  name:"היכרות עם המשחק ולימוד אותיות ראשונות ABC", url:DOC("1xGR08foD_sswXTZFWucWE2Ne6A8eP1FttY6wnf0MQS0")},
+      {n:"2",  name:"חזרה על A B C ותרגול אותיות D עד L",        url:DOC("16OBnsJoQKozpl3AYC0FVGpFkDAW5aeWUbs6R8HjZLrQ")},
+      {n:"3",  name:"תרגול אותיות L עד S",                        url:DOC("1fZQ85FOEYhr2WSyh2DIWVPEwHr9Y7JpO5ONFbXGrKto")},
+      {n:"4",  name:"תרגול אותיות T עד Z",                        url:DOC("1BzdIPG46WNJ_ZzTdjB7G3C4_qEPJ1FTGKIErH_DG60o")},
+      {n:"5",  name:"חיות",                                       url:DOC("19BaSFhHdL6BzqBmwsTcc0MSioTuildQaEoEiuJlB8RI")},
+      {n:"6",  name:"צבעים",                                      url:DOC("12ZMtSbM1kvdxqRClfwcMIbVM9u6VTTc1riSKXZcBoE4")},
+      {n:"7",  name:"מאכלים — חלק 1",                             url:DOC("1Go7__CgK8BDZ55CIe4gUiHhX9kTLm8BRR-sIHhewxic")},
+      {n:"8",  name:"מאכלים — חלק 2",                             url:DOC("1P1WHhxjv2RK3sy9mLJoXgLCS6pzSm2Aw_3TRDEGF6YE")},
+      {n:"9",  name:"עונות",                                      url:DOC("1gQOrS3lBL-UZmOLIk-1F-tbQpFdbuvagD6p8iS9l73A")},
+      {n:"10", name:"פעלים",                                      url:DOC("121xrNPwq9vI9ZJpW4IMC1T7ZJGpIr14nhHMJp82NEmE")},
+      {n:"11", name:"מספרים בסיסיים (חלק 1)",                     url:DOC("1h5NGgciJsE-xQ_SFZTWe2KZPc20bSxenAZm_yKqSYQI")},
+      {n:"12", name:"מספרים מתקדמים (חלק 2)",                     url:DOC("150pi919FdnuoTehHSqLmPrn-RkH5EDJh6pSuhfp87LE")}
+    ]
+  },
+  {
+    title:"מערכי שיעור מתקדמים — עולם פתוח",
+    folder:FOLDER("19XcinztKNIE9rH86JQ8zfz6Fsm1IUsf2"),
+    items:[
+      {n:"13", name:"שמות עצם (Nouns)",                    url:DOC("1qjqVqjkKMiZr2Aab-Whx9nXmbuSy4FOKKBrsHIoAzI8")},
+      {n:"14", name:"שמות עצם, פעלים ושמות תואר",          url:DOC("1sE3J0GZ5ArxJq1MH2NYSTTI7kTSLXNAnCgXwtWAKEuk")},
+      {n:"15", name:"כינויי גוף (Personal Pronouns)",      url:DOC("1XBAHkINAhXzsel1z2upTreMrs9qnNUwj8fsj81r_QqY")},
+      {n:"16", name:"הפועל To Be (am / is / are)",         url:DOC("1V2aZlI3lNgjMtsrewFfKve9Lsloo3jMvNdy3s4AtQ2E")},
+      {n:"17", name:"כינויי שייכות",                       url:DOC("1FTqR-rQ5ZlDuc4of38pLpYrlUGuDLRLCBxFZMi64EfM")},
+      {n:"18", name:"שמות תואר מתקדמים",                   url:DOC("1GQUPGNAEDCFTfqsmtzdxwsn3MABVnghADbNSqtx4zeM")},
+      {n:"19", name:"The, These & Those",                  url:DOC("1D8GBjUuiFnEkeBct6Bge2JsNAbhidX_ZHSLgVhS3esk")},
+      {n:"20", name:"This or That",                        url:DOC("1mqj9LE7-MNDLvy8z4hk7hqaDy3xMjjJ9NNKr89LvNz8")},
+      {n:"21", name:"שאלות מידע (Wh-Questions)",           url:DOC("16MoVZWIr87hmaRtB4J16hGeiCoA88DFmGL-kF63mzpo")},
+      {n:"22", name:"פעלי העזר Do / Does",                 url:DOC("1NTYP00-j-y_kwSyAz4HyhPQmNQgFkYTJLD6kyBFob2Y")}
+    ]
+  },
+  {
+    title:"שיעורי בית",
+    folder:FOLDER("19XcinztKNIE9rH86JQ8zfz6Fsm1IUsf2"),
+    items:[
+      {n:"1", name:"מספרים מתקדמים",     url:DOC("1a0J0kwd31kTr877JPWXBXD0nHgcqIYi5FDgC3bPAi8A")},
+      {n:"2", name:"פסטיבל שמות העצם",   url:DOC("1aZAsUczue9FiXK9Y6pdR5_mUcQE3q7-2Wt-7XRSaRgQ")},
+      {n:"3", name:"פעלים חסרים",        url:DOC("1e6Cyuz7_VlHa-VOlGPaEyDBQgEivRFO5YV2ue0xdcBI")},
+      {n:"4", name:"Do & Does",          url:DOC("1FiAgLVGh_pYGn8qo2zDtWbUDblRiS4WuTcFCsTIj_Zw")}
+    ]
+  },
+  {
+    title:"קליטה והדרכות",
+    folder:FOLDER("1b9VBFrz-hdcw9QKkNA-ntya-YYkJ21Yz"),
+    items:[
+      {n:"📄", name:"English Kingdom Onboarding",       url:FILE("13c1NLoWRTI_gIY1L4tqJoCCpvYcvLe1k")},
+      {n:"🎬", name:"הדרכה על הדמו — הקלטה",             url:FILE("1TPe1hkM6sukUMxPrNK3rda2yP3QDNZPf")},
+      {n:"📊", name:"Tutor User Names & Room Numbers",  url:SHEET("1xYDs2DA_1GLIJbUzoFVaMi-PJx8qa9Uxfnpl9kBDjWg")},
+      {n:"📝", name:"מערך שיעור Demo",                   url:DOC("1zVRHSUDoZZJBBI8zHcXWvFv-F7iM6uHHRopLhorWGuI")},
+      {n:"🎥", name:"Main Menu — הסבר מצולם",            url:FILE("1_eAgNlRF7hAL545llWzH-erX1UtkqLAI")},
+      {n:"📖", name:"Main Menu — מסמך",                  url:DOC("1rDttdPvD_jaccFpMsKnRcYHaU1DhJ610Y9-iEaL12Co")}
+    ]
+  },
+  {
+    title:"הודעות להורים",
+    folder:null,
+    items:[
+      {n:"🌐", name:"אתר הודעות להורים", url:"https://sites.google.com/englishroom.co.il/parentmessages/messages"},
+      {n:"📄", name:"מסמך הודעות להורים", url:DOC("1Ea8pWvQkxebt4DsZ_sEtcpL15tvWZX3yFXM1guG-a-E")}
+    ]
+  }
+];
+
+const el = (tag, cls) => { const e = document.createElement(tag); if (cls) e.className = cls; return e; };
+
+const quickBox = document.getElementById("quick");
+for (const q of QUICK) {
+  const a = el("a", "tile");
+  a.href = q.url; a.target = "_blank"; a.rel = "noopener";
+  const emo = el("span", "emo"); emo.textContent = q.emo;
+  const txt = el("span");
+  const t = el("span", "t"); t.textContent = q.t;
+  const d = el("span", "d"); d.textContent = q.d;
+  txt.append(t, el("br"), d);
+  a.append(emo, txt);
+  quickBox.appendChild(a);
+}
+
+const host = document.getElementById("sections");
+for (const s of SECTIONS) {
+  const sec = el("section");
+  const head = el("div", "shead");
+  const h = el("h2"); h.textContent = s.title;
+  head.appendChild(h);
+  if (s.folder) {
+    const f = el("a", "folder");
+    f.href = s.folder; f.target = "_blank"; f.rel = "noopener";
+    f.textContent = "פתיחת התיקייה ב-Drive ↩";
+    head.appendChild(f);
+  }
+  sec.appendChild(head);
+
+  const ul = el("ul", "items");
+  for (const it of s.items) {
+    const li = el("li");
+    const a = el("a");
+    a.href = it.url; a.target = "_blank"; a.rel = "noopener";
+    a.dataset.search = (s.title + " " + it.n + " " + it.name).toLowerCase();
+    const num = el("span", "num"); num.textContent = it.n;
+    const nm = el("span", "name"); nm.textContent = it.name;
+    a.append(num, nm);
+    li.appendChild(a);
+    ul.appendChild(li);
+  }
+  sec.appendChild(ul);
+  host.appendChild(sec);
+}
+
+const input = document.getElementById("q");
+const noresults = document.getElementById("noresults");
+input.addEventListener("input", () => {
+  const term = input.value.trim().toLowerCase();
+  let visible = 0;
+  for (const sec of host.querySelectorAll("section")) {
+    let shown = 0;
+    for (const a of sec.querySelectorAll("ul.items a")) {
+      const hit = !term || a.dataset.search.includes(term);
+      a.parentElement.hidden = !hit;
+      if (hit) shown++;
+    }
+    sec.hidden = shown === 0;
+    visible += shown;
+  }
+  noresults.hidden = visible > 0;
+  quickBox.hidden = !!term;
+});
+</script>
+</body>
+</html>
