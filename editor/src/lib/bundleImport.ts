@@ -36,6 +36,25 @@ function recordMap<T extends { key: string }>(items: T[]): Map<string, T> {
   return new Map(items.map((item) => [item.key, item]))
 }
 
+/**
+ * A finished quest closes with its quest-level completion dialogue and NPC
+ * turn-in, not with a trailing "go back and talk to the NPC" objective.
+ * Return the index of such a trailing step so it can be promoted to
+ * turn_in_dialogue_id with wait_for_npc_turn_in enabled instead of being
+ * imported as a separate step. Returns -1 when there is nothing to promote.
+ */
+function turnInStepIndex(sourceSteps: Array<Record<string, any>>, explicitTurnInDialogueId?: unknown): number {
+  if (sourceSteps.length < 2) return -1
+  const last = sourceSteps[sourceSteps.length - 1]
+  const dialogueId = last?.payload?.dialogue_id
+  if (!dialogueId) return -1
+  if (last.type !== 'talk_to_npc' && last.type !== 'return_to_npc') return -1
+  // An explicit, different turn-in dialogue means the trailing conversation is
+  // a real separate step; leave it alone.
+  if (explicitTurnInDialogueId && String(explicitTurnInDialogueId) !== String(dialogueId)) return -1
+  return sourceSteps.length - 1
+}
+
 /** Convert one generated revision document and its shared records into editor rows. */
 export function importBundleIntoLine(bundle: unknown, current: EditorData, line: Questline, sourceKey?: string): BundleImportResult {
   const source = (bundle ?? {}) as Bundle
@@ -56,19 +75,25 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
     // Promote the first/last NPC dialogue to the quest-level slots expected by
     // the editor and Unity runtime.
     ...(() => {
-      const sourceSteps = Array.isArray(item.steps) ? item.steps : []
-    const start = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
-    const finish = [...sourceSteps].reverse().find((step: Record<string, any>) =>
-      step.type === 'deliver_item' || step.type === 'talk_to_npc' || step.type === 'return_to_npc')
-    return {
+      const sourceSteps: Array<Record<string, any>> = Array.isArray(item.steps) ? item.steps : []
+      const start = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
+      const finish = [...sourceSteps].reverse().find((step: Record<string, any>) =>
+        step.type === 'deliver_item' || step.type === 'talk_to_npc' || step.type === 'return_to_npc')
+      const promotedIndex = turnInStepIndex(sourceSteps, item.turn_in_dialogue_id)
+      return {
         start_dialogue_id: item.start_dialogue_id ?? start?.payload?.dialogue_id ?? null,
-        turn_in_dialogue_id: item.turn_in_dialogue_id ?? finish?.payload?.dialogue_id ?? null,
+        turn_in_dialogue_id: item.turn_in_dialogue_id
+          ?? sourceSteps[promotedIndex]?.payload?.dialogue_id
+          ?? finish?.payload?.dialogue_id
+          ?? null,
+        // A promoted completion dialogue is only reached when the NPC waits for
+        // the player to turn the quest in.
+        wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in) || promotedIndex >= 0,
       }
     })(),
     id: makeLocalId('quest'), questline_id: line.id, key: `${line.key}__${String(item.key)}`, position: index,
     name: String(item.name ?? item.key), level_required: Number(item.level_required ?? 1),
     giver_external_id: item.giver_external_id ?? null, summary: item.summary ?? null,
-    wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in),
     status: 'draft', source_path: item.source_path ?? null,
     source_metadata: item.source_metadata ?? {},
   }))
@@ -82,9 +107,12 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
     // The first NPC conversation is promoted to quest.start_dialogue_id above.
     // Keep it out of the learning-step list so the editor does not show the
     // same opening dialogue twice. Later NPC conversations remain real steps.
+    // The closing NPC conversation becomes the quest completion dialogue with
+    // NPC turn-in enabled, so it is not a learning step either.
+    const promotedIndex = turnInStepIndex(sourceSteps, questDoc.turn_in_dialogue_id)
     const visibleSteps = sourceSteps.filter((step: Record<string, any>, index: number) => !(
       index === 0 && step.type === 'talk_to_npc' && step.payload?.dialogue_id === (questDoc.start_dialogue_id ?? startStep?.payload?.dialogue_id) && sourceSteps.length > 1
-    ))
+    ) && index !== promotedIndex)
     for (const [index, stepDoc] of visibleSteps.entries()) {
       const id = makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
       steps.push({ id, quest_id: questId, key: String(stepDoc.key), position: index, step_type: String(stepDoc.type), payload: stepDoc.payload ?? {}, source_metadata: stepDoc.source_metadata ?? {} })

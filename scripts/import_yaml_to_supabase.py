@@ -504,6 +504,27 @@ def build_bundle() -> dict[str, Any]:
             steps_raw = detail_data.get("steps") or []
             if not isinstance(steps_raw, list):
                 steps_raw = []
+            # A finished quest must close with its quest-level completion
+            # dialogue and NPC turn-in, not with a trailing "go back and talk
+            # to the NPC" step. Detect that trailing step so it can be promoted
+            # to turn_in_dialogue_id + wait_for_npc_turn_in instead of being
+            # imported as a separate objective.
+            turn_in_step_index: int | None = None
+            promoted_turn_in_dialogue_id: str | None = None
+            explicit_turn_in = detail.get("turn_in_dialogue_id")
+            if len(steps_raw) > 1 and isinstance(steps_raw[-1], dict):
+                last_step = steps_raw[-1]
+                # An explicit, different turn-in dialogue means the trailing
+                # conversation is a real separate step; leave it alone.
+                if explicit_turn_in and str(explicit_turn_in) != str(last_step.get("dialogue_id") or ""):
+                    last_step = {}
+                if (
+                    str(last_step.get("type") or "") in {"return_to_npc", "talk_to_npc"}
+                    and last_step.get("dialogue_id")
+                ):
+                    turn_in_step_index = len(steps_raw) - 1
+                    promoted_turn_in_dialogue_id = str(last_step["dialogue_id"])
+
             giver = detail.get("giver_npc") or meta.get("npc_id")
             if not detail.get("giver_npc"):
                 conflict(
@@ -524,7 +545,8 @@ def build_bundle() -> dict[str, Any]:
                 "level_required": int(entry.get("level") if entry.get("level") is not None else detail.get("level_required") or 0),
                 "giver_external_id": giver,
                 "summary": detail.get("summary") or "",
-                "wait_for_npc_turn_in": bool(detail.get("wait_for_npc_turn_in", False)),
+                "wait_for_npc_turn_in": bool(detail.get("wait_for_npc_turn_in", False))
+                or turn_in_step_index is not None,
                 "start_dialogue_id": (
                     str(steps_raw[0].get("dialogue_id"))
                     if len(steps_raw) > 1
@@ -536,7 +558,7 @@ def build_bundle() -> dict[str, Any]:
                 "turn_in_dialogue_id": (
                     str(detail["turn_in_dialogue_id"])
                     if detail.get("turn_in_dialogue_id")
-                    else None
+                    else promoted_turn_in_dialogue_id
                 ),
                 "status": detail.get("status") or ("complete" if len(steps_raw) > 1 else "draft"),
                 "prerequisites": [],
@@ -611,6 +633,24 @@ def build_bundle() -> dict[str, Any]:
                     # The first NPC conversation is the quest opening dialogue,
                     # not a separate learning step. Keeping it here would make
                     # the editor show the same dialogue twice.
+                    continue
+                if step_position == turn_in_step_index:
+                    # The closing NPC conversation is the quest completion
+                    # dialogue. It is imported as turn_in_dialogue_id with
+                    # wait_for_npc_turn_in enabled, so it must not also appear
+                    # as a "talk to the NPC again" objective.
+                    conflict(
+                        conflicts,
+                        "promoted_turn_in_step",
+                        "info",
+                        "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+                        quest["source_path"] or str(index_path.relative_to(ROOT)),
+                        questline=questline_key,
+                        quest_id=quest_id,
+                        position=step_position,
+                        step_type=str(raw_step.get("type") or ""),
+                        dialogue_id=promoted_turn_in_dialogue_id,
+                    )
                     continue
                 step_type = str(raw_step.get("type") or "")
                 if step_type not in step_type_by_id:
