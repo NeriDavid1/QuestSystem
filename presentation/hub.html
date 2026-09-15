@@ -51,10 +51,22 @@
   .tile .t{font-weight:700;font-size:15px}
   .tile .d{color:var(--muted);font-size:12.5px}
 
-  section{margin-bottom:30px}
-  .shead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:11px;flex-wrap:wrap}
-  h2{font-size:18px;margin:0;font-weight:700}
-  .folder{font-size:13px;color:var(--accent);text-decoration:none;white-space:nowrap}
+  h2.cat{font-size:20px;margin:0 0 12px;font-weight:700}
+  h2.cat + details{margin-top:-2px}
+
+  details.group{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+                box-shadow:var(--shadow);margin-bottom:12px;overflow:hidden}
+  details.group > summary{display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;
+                list-style:none;user-select:none}
+  details.group > summary::-webkit-details-marker{display:none}
+  details.group > summary:hover{background:var(--accent-soft)}
+  .chev{flex:none;width:16px;height:16px;color:var(--muted);transition:transform .15s ease}
+  details[open] > summary .chev{transform:rotate(-90deg)}
+  .gtitle{font-weight:700;font-size:16px;flex:1;min-width:0}
+  .count{flex:none;font-size:12.5px;color:var(--muted);background:var(--bg);
+         border:1px solid var(--line);border-radius:999px;padding:1px 9px}
+  .gbody{padding:0 16px 16px}
+  .folder{display:inline-block;font-size:13px;color:var(--accent);text-decoration:none;margin-bottom:10px}
   .folder:hover{text-decoration:underline}
 
   ul.items{list-style:none;margin:0;padding:0;display:grid;
@@ -112,7 +124,9 @@ const QUICK = [
 
 const SECTIONS = [
   {
-    title:"מערכי שיעור בסיסיים",
+    cat:"מערכי שיעור",
+    title:"בסיסיים — שיעורים 1-12",
+    open:true,
     folder:FOLDER("1Gz_oHYu9eq10J9hBrVnnWmQLqKSE5Dqt"),
     items:[
       {n:"1",  name:"היכרות עם המשחק ולימוד אותיות ראשונות ABC", url:DOC("1xGR08foD_sswXTZFWucWE2Ne6A8eP1FttY6wnf0MQS0")},
@@ -130,7 +144,9 @@ const SECTIONS = [
     ]
   },
   {
-    title:"מערכי שיעור מתקדמים — עולם פתוח",
+    cat:"מערכי שיעור",
+    title:"מתקדמים, עולם פתוח — שיעורים 13-22",
+    open:true,
     folder:FOLDER("19XcinztKNIE9rH86JQ8zfz6Fsm1IUsf2"),
     items:[
       {n:"13", name:"שמות עצם (Nouns)",                    url:DOC("1qjqVqjkKMiZr2Aab-Whx9nXmbuSy4FOKKBrsHIoAzI8")},
@@ -146,7 +162,9 @@ const SECTIONS = [
     ]
   },
   {
+    cat:"מערכי שיעור",
     title:"שיעורי בית",
+    open:false,
     folder:FOLDER("19XcinztKNIE9rH86JQ8zfz6Fsm1IUsf2"),
     items:[
       {n:"1", name:"מספרים מתקדמים",     url:DOC("1a0J0kwd31kTr877JPWXBXD0nHgcqIYi5FDgC3bPAi8A")},
@@ -156,7 +174,9 @@ const SECTIONS = [
     ]
   },
   {
-    title:"קליטה והדרכות",
+    cat:"קליטה והדרכות",
+    title:"חומרי קליטה והדרכה",
+    open:false,
     folder:FOLDER("1b9VBFrz-hdcw9QKkNA-ntya-YYkJ21Yz"),
     items:[
       {n:"📄", name:"English Kingdom Onboarding",       url:FILE("13c1NLoWRTI_gIY1L4tqJoCCpvYcvLe1k")},
@@ -165,14 +185,6 @@ const SECTIONS = [
       {n:"📝", name:"מערך שיעור Demo",                   url:DOC("1zVRHSUDoZZJBBI8zHcXWvFv-F7iM6uHHRopLhorWGuI")},
       {n:"🎥", name:"Main Menu — הסבר מצולם",            url:FILE("1_eAgNlRF7hAL545llWzH-erX1UtkqLAI")},
       {n:"📖", name:"Main Menu — מסמך",                  url:DOC("1rDttdPvD_jaccFpMsKnRcYHaU1DhJ610Y9-iEaL12Co")}
-    ]
-  },
-  {
-    title:"הודעות להורים",
-    folder:null,
-    items:[
-      {n:"🌐", name:"אתר הודעות להורים", url:"https://sites.google.com/englishroom.co.il/parentmessages/messages"},
-      {n:"📄", name:"מסמך הודעות להורים", url:DOC("1Ea8pWvQkxebt4DsZ_sEtcpL15tvWZX3yFXM1guG-a-E")}
     ]
   }
 ];
@@ -192,34 +204,52 @@ for (const q of QUICK) {
   quickBox.appendChild(a);
 }
 
+const CHEVRON = '<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg>';
+
 const host = document.getElementById("sections");
+let lastCat = null;
 for (const s of SECTIONS) {
-  const sec = el("section");
-  const head = el("div", "shead");
-  const h = el("h2"); h.textContent = s.title;
-  head.appendChild(h);
+  if (s.cat !== lastCat) {
+    const ch = el("h2", "cat");
+    ch.textContent = s.cat;
+    host.appendChild(ch);
+    lastCat = s.cat;
+  }
+
+  const d = el("details", "group");
+  d.open = !!s.open;
+  d.dataset.defaultOpen = s.open ? "1" : "0";
+
+  const sum = el("summary");
+  sum.innerHTML = CHEVRON;
+  const gt = el("span", "gtitle"); gt.textContent = s.title;
+  const cnt = el("span", "count"); cnt.textContent = s.items.length;
+  sum.append(gt, cnt);
+  d.appendChild(sum);
+
+  const body = el("div", "gbody");
   if (s.folder) {
     const f = el("a", "folder");
     f.href = s.folder; f.target = "_blank"; f.rel = "noopener";
     f.textContent = "פתיחת התיקייה ב-Drive ↩";
-    head.appendChild(f);
+    body.appendChild(f);
   }
-  sec.appendChild(head);
 
   const ul = el("ul", "items");
   for (const it of s.items) {
     const li = el("li");
     const a = el("a");
     a.href = it.url; a.target = "_blank"; a.rel = "noopener";
-    a.dataset.search = (s.title + " " + it.n + " " + it.name).toLowerCase();
+    a.dataset.search = (s.cat + " " + s.title + " " + it.n + " " + it.name).toLowerCase();
     const num = el("span", "num"); num.textContent = it.n;
     const nm = el("span", "name"); nm.textContent = it.name;
     a.append(num, nm);
     li.appendChild(a);
     ul.appendChild(li);
   }
-  sec.appendChild(ul);
-  host.appendChild(sec);
+  body.appendChild(ul);
+  d.appendChild(body);
+  host.appendChild(d);
 }
 
 const input = document.getElementById("q");
@@ -227,15 +257,25 @@ const noresults = document.getElementById("noresults");
 input.addEventListener("input", () => {
   const term = input.value.trim().toLowerCase();
   let visible = 0;
-  for (const sec of host.querySelectorAll("section")) {
+  for (const d of host.querySelectorAll("details.group")) {
     let shown = 0;
-    for (const a of sec.querySelectorAll("ul.items a")) {
+    for (const a of d.querySelectorAll("ul.items a")) {
       const hit = !term || a.dataset.search.includes(term);
       a.parentElement.hidden = !hit;
       if (hit) shown++;
     }
-    sec.hidden = shown === 0;
+    d.hidden = shown === 0;
+    d.querySelector(".count").textContent = shown;
+    // While searching, open every group that still has a match; restore defaults when cleared.
+    d.open = term ? shown > 0 : d.dataset.defaultOpen === "1";
     visible += shown;
+  }
+  for (const h of host.querySelectorAll("h2.cat")) {
+    let any = false;
+    for (let n = h.nextElementSibling; n && n.tagName === "DETAILS"; n = n.nextElementSibling) {
+      if (!n.hidden) { any = true; break; }
+    }
+    h.hidden = !any;
   }
   noresults.hidden = visible > 0;
   quickBox.hidden = !!term;
