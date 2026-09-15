@@ -54,8 +54,8 @@ Works in the same session and active working tree as the Pedagogical Quest Desig
 - Verify the progression levels: the first quest by order is level 50, and every other quest is level 1, in both the index and individual quest level requirement fields.
 - Verify Word Matching `letters`, `wordTasks`, missing indices, fragments, compact pools, unique tile IDs, and independent deterministic shuffling.
 - Verify Letter Ordering, Word Ordering, and Speak Aloud against the approved brief; do not reveal answers in learner-facing instructions.
-- For Word Ordering, ensure valid `preFilledIndices`, complete Hebrew translation when one word is open, and unique runtime choices with the correct word exactly once.
-- For Speak Aloud, ensure the prompt asks the learner to speak, gives the Hebrew meaning of the exact target, uses the approved Level 1/2/3 format, and is passed to the runtime screen.
+- For Word Ordering, a sentence of four words or fewer must be built completely: leave `preFilledIndices` empty and let the learner place every word. Pre-fill only in sentences of five words or more, only for function words that are not the lesson target. Always author the complete natural Hebrew translation and at least three same-word-class distractors, with the correct word appearing exactly once.
+- For Speak Aloud, always display a complete short sentence in `params.targetPhrase`, never a bare word or a list of unconnected words. In a questline's introductory instances put only the single target word in `params.targetWords` so recognition checks that word while the learner says the whole sentence; in the later instances put every word of the sentence in `params.targetWords` so the full phrase is checked. The prompt must ask the learner to say the sentence and give its complete natural Hebrew translation, and it must reach the runtime screen.
 - Preserve the brief's pedagogical validity: plausible distractors, appropriate cognitive load, and no guessing-only tasks.
 - Before handoff, run the local importer and build, then report the exact commands and results.
 - Run the local importer/build before handing over the result.

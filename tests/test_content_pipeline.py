@@ -185,7 +185,9 @@ class ContentPipelineTests(unittest.TestCase):
         }
         self.assertEqual(len(quests_by_key), 43)
         self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
-        self.assertFalse(quests_by_key["q01_bridge_too_short"]["wait_for_npc_turn_in"])  # adjective_crown
+        self.assertTrue(
+            quests_by_key["adjectives_basics__q01_the_painting_with_no_colors"]["wait_for_npc_turn_in"]
+        )  # adjectives_basics
         self.assertFalse(quests_by_key["q01_roles_without_names"]["wait_for_npc_turn_in"])  # kingdom_nouns
 
         for instance in self.bundle["minigame_instances"]:

@@ -62,31 +62,32 @@ These rules are mandatory for every questline and minigame instance in this repo
 - Letter Ordering must never reveal the English answer in the instruction. Give the Hebrew meaning and explicitly require the English answer, for example `כתבו את המילה ספר באנגלית.`
 - All player-facing minigame instructions must avoid revealing the answer. Use Hebrew task guidance; show English answers only as runtime tiles, targets, or other elements that the learner must actively solve or say.
 - Word Ordering must not write the completed sentence or the answer noun in the player-facing instruction. Give a Hebrew prompt such as `השלימו את המשפט לפי התרגום בעברית` and show the Hebrew translation.
-- Word Ordering does not always require rebuilding every word: use `params.preFilledIndices` to lock correct words and leave a meaningful target word, often a noun, for the learner to choose or place.
-- When a Word Ordering task leaves a word open, provide `params.distractorWords` with a small choice set (for example, three words) and keep the English word array as runtime data.
+- Word Ordering must not let the learner succeed by guessing. A sentence of four words or fewer must be built completely: `params.preFilledIndices` must be empty, and the learner places every word, including articles and the verb.
+- `params.preFilledIndices` may be used only for sentences of five words or more, only to lock function words that are not the lesson target, and only while at least two content words stay open.
+- Every Word Ordering task must provide at least three `params.distractorWords`. Distractors must belong to the same word class as the words the learner has to place, so the correct sentence cannot be found by elimination or by word shape.
 - Every Word Ordering choice list must contain unique words: never show the same option more than once. The combined runtime choices must include the exact correct word needed for the open position exactly once; `distractorWords` must contain only unique, intentional wrong options and must not repeat the correct open word.
 - Word Ordering tasks must include a Hebrew translation in `params.translation`.
-- When a Word Ordering task leaves only one word open while the other words are pre-filled, provide the complete natural Hebrew translation of the full sentence and explicitly tell the learner to infer and choose the missing word from that sentence translation. The translation should support understanding of the whole sentence, not only define the missing word; do not reveal the English answer in the prompt.
+- Every Word Ordering prompt must give the complete natural Hebrew translation of the full sentence and tell the learner to build the sentence from that translation. The translation supports understanding of the whole sentence; it must never reveal the English answer word by word.
 
 ## Language and answer disclosure
 
 - Learner-facing instructions and task descriptions should be primarily Hebrew, with only the necessary English learning material.
 - Never give the English answer in an instruction when the learner is expected to spell, choose, match, or order it. Give the Hebrew meaning and the required action instead.
-- Speak Aloud is the intentional exception: English target words may be shown because the learner must say them in English. If the game UI already displays the targets, do not duplicate them in the instruction.
-- When assembling a sentence, always provide the Hebrew translation. The learner may complete only the missing target word(s); do not force a full rewrite when partial completion better serves the objective.
+- Speak Aloud is the intentional exception: the English sentence may be shown because the learner must say it in English. If the game UI already displays it, do not duplicate it in the instruction.
+- When assembling a sentence, always provide the Hebrew translation. Short sentences are assembled in full so that the learner cannot guess; see the Word Ordering rules for when pre-filling is allowed at all.
 
 ## Preview and runtime display contract
 
 - For every minigame whose schema contains a `prompt` field, `params.prompt` must be present and non-empty in the authored instance. Do not leave it blank, null, or dependent on an answer-data fallback.
 - Every preview must render the authored learner-facing `params.prompt` (or the authored minigame instruction when the prompt field is intentionally absent) for Letter Ordering, Word Ordering, Speak Aloud, Word Matching, and every other minigame. The editor and public viewer must not invent, append, or infer explanatory text from answer data.
 - The actual in-game minigame screen must render the same authored learner-facing explanation before the interaction controls. It is not sufficient for the prompt to appear only in Quest Creator, Editor Preview, or the public quest viewer.
-- For `speak_aloud`, the game screen must show an explicit Hebrew instruction explaining what the learner must say, such as `אמרו את המילה הבאה באנגלית בקול` or `אמרו את המשפט הבא באנגלית בקול`, together with the English target that the learner must pronounce. Showing only the target word/phrase (for example, `book`) is a runtime content defect.
-- For `speak_aloud`, the authored prompt must also provide the Hebrew meaning of the target: for Level 1, translate the target word; for Level 2 or Level 3, translate the complete target phrase or sentence naturally. The prompt must explain the action and meaning without replacing the English target or revealing an answer that the learner is meant to construct.
+- For `speak_aloud`, the game screen must show an explicit Hebrew instruction explaining what the learner must say, such as `אמרו את המשפט הבא באנגלית בקול`, together with the English sentence that the learner must pronounce. Showing only the sentence with no Hebrew instruction is a runtime content defect.
+- For `speak_aloud`, the authored prompt must also provide the complete natural Hebrew translation of the displayed sentence, whether recognition checks one word or the whole phrase. The prompt must explain the action and the meaning without replacing the English sentence on screen.
 - QA must verify this in the running game or an authoritative runtime screen, not only by reading YAML or inspecting the editor preview. If the prompt is missing in the game, mark the result as FAIL and return it for runtime/integration correction.
 - Do not use `translation`, `englishWordsInOrder`, `targetWord`, `targetPhrase`, `tasks`, or similar answer fields as a fallback instruction or as an extra learner-facing line. These fields remain runtime data and validation data.
 - If a translation or explanation is needed in the preview, write it explicitly inside the authored prompt. For Word Ordering, `params.translation` may remain available to the runtime, but it must not appear as a separate preview line unless the author included it in `params.prompt`.
 - Keep the editor preview, public viewer, and runtime aligned: no surface may silently add text that is not present in the authored prompt/instruction. A missing prompt must remain visibly missing or use a neutral placeholder, never reveal the answer.
-- For Letter Ordering and Word Ordering, put the learner's required meaning/action and any needed Hebrew translation in the authored prompt. For Speak Aloud, keep an explicit speaking instruction; if the target words are already displayed by the game, do not repeat them in the prompt.
+- For Letter Ordering and Word Ordering, put the learner's required meaning/action and any needed Hebrew translation in the authored prompt. For Speak Aloud, keep an explicit speaking instruction; if the sentence is already displayed by the game, do not repeat it in the prompt.
 
 ## Questline and quest structure
 
@@ -107,18 +108,16 @@ These rules are mandatory for every questline and minigame instance in this repo
 
 ## Speak Aloud
 
-- Speak Aloud content format must follow the user's explicit brief. Do not introduce a word list, phrase, or sentence merely because the minigame supports it.
-- Use this three-level progression when the brief approves more than one word:
-  - Level 1 — one English word.
-  - Level 2 — several words or one short sentence, chosen according to the lesson topic. Keep the sentence short and easy to say.
-  - Level 3 — more words or a more difficult sentence, still appropriate to the learner and the topic.
-- If the user describes the questline as difficult, that permits proposing Level 2 or Level 3, but the selected format and target length must still be stated in the approved pedagogical plan. Difficulty alone does not justify an unnecessarily long sentence.
-- Each Speak Aloud instance may test one word or a short list of words, but never an unintended sentence.
-- Every Speak Aloud instance must have an explicit player-facing instruction containing the action to speak aloud, such as `אמרו את המילה הבאה באנגלית בקול`, `אמרו את המילים הבאות באנגלית בקול`, or `אמרו את המשפט הבא באנגלית בקול`.
-- Every Speak Aloud prompt must include both the required speaking action and the Hebrew translation/meaning of the exact recognition unit. A generic prompt such as `אמרו את המילה הבאה באנגלית בקול` without the word's meaning is incomplete.
-- The instruction, displayed target, and speech-recognition target must describe the same unit: one word, a short list of words, or one complete sentence. Never display a long sentence while validating only one word from it.
-- Use the singular wording for one target and plural wording for a list. Use sentence wording only when `targetPhrase` is the actual value being checked.
-- English target words may be shown because the learner must pronounce them. If the game UI already displays the target below, do not duplicate the target words in the instruction; keep the explicit speaking action.
+- Speak Aloud always practices a real sentence. `params.targetPhrase` must hold a complete, short, natural English sentence that the learner says out loud. Never ship a bare word or a list of unconnected words such as `tall long` as the thing displayed to the learner.
+- What the learner says and what the recognition checks are two separate decisions:
+  - Introductory stage - the learner says the whole displayed sentence, but `params.targetWords` contains only the single target word being taught. Recognition validates that one word, so a beginner is not failed for the rest of the sentence.
+  - Later stage in the same questline - `params.targetWords` contains every word of the displayed sentence, so the complete phrase is validated. Move to this stage once the learner has practiced the words on their own.
+- Use the introductory stage for the first Speak Aloud tasks of a questline and the full-phrase stage for the later ones. A questline must not stay on single-word recognition all the way to its final quest.
+- The sentence must be built from vocabulary the learner already met in the questline, plus simple supporting words. Keep it short enough to say in one breath.
+- Every Speak Aloud instance must have an explicit player-facing prompt containing the speaking action, such as `אמרו את המשפט הבא באנגלית בקול`, together with the complete natural Hebrew translation of the displayed sentence.
+- Use sentence wording in the instruction, because a sentence is always what the learner says. Do not write `אמרו את המילה הבאה` when a sentence is displayed.
+- English target text may be shown because the learner must pronounce it. If the game UI already displays the sentence, do not repeat it inside the prompt; keep the explicit speaking action and the Hebrew meaning.
+- Difficulty must stay inside the registry range for `speak_aloud`, and should rise from the introductory stage to the full-phrase stage.
 
 ## Local-to-site import
 

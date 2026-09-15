@@ -1,18 +1,305 @@
 {
   "importer_version": "1.0.0",
-  "source_digest": "d8cd54778af2546823b2b831bb2d4576b87ad0e8f8c5a4612e85dc5c8a497b9d",
+  "source_digest": "9c17b56e4d6faa5fbf35e69df8a280d4316c7a62e6ce71ab8091d49b10fa7fe6",
   "counts": {
     "catalog_entries": 177,
     "step_type_definitions": 6,
     "dialogues": 117,
-    "dialogue_lines": 376,
-    "minigame_instances": 243,
+    "dialogue_lines": 384,
+    "minigame_instances": 244,
     "questlines": 11,
     "quests": 53,
-    "steps": 328,
+    "steps": 281,
     "errors": 0,
     "warnings": 0,
-    "info": 0
+    "info": 22
   },
-  "conflicts": []
+  "conflicts": [
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\blacksmith_will\\q03_first_real_slash.yaml",
+      "context": {
+        "questline": "blacksmith_will",
+        "quest_id": "q03_first_real_slash",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "will_first_slash_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml",
+      "context": {
+        "questline": "missing_verbs",
+        "quest_id": "missing_verbs__q01_benny_can_t_build_verbs",
+        "position": 5,
+        "step_type": "return_to_npc",
+        "dialogue_id": "missing_verbs_q01_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml",
+      "context": {
+        "questline": "missing_verbs",
+        "quest_id": "missing_verbs__q02_the_confused_guard",
+        "position": 5,
+        "step_type": "return_to_npc",
+        "dialogue_id": "missing_verbs_q02_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml",
+      "context": {
+        "questline": "missing_verbs",
+        "quest_id": "missing_verbs__q03_don_t_let_him_guess",
+        "position": 5,
+        "step_type": "return_to_npc",
+        "dialogue_id": "missing_verbs_q03_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml",
+      "context": {
+        "questline": "nouns_festival",
+        "quest_id": "nouns_festival__q02_festival",
+        "position": 5,
+        "step_type": "talk_to_npc",
+        "dialogue_id": "nouns_festival_q02_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml",
+      "context": {
+        "questline": "nouns_festival",
+        "quest_id": "nouns_festival__q03_animals",
+        "position": 6,
+        "step_type": "talk_to_npc",
+        "dialogue_id": "nouns_festival_q03_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml",
+      "context": {
+        "questline": "nouns_festival",
+        "quest_id": "nouns_festival__q04_things",
+        "position": 6,
+        "step_type": "talk_to_npc",
+        "dialogue_id": "nouns_festival_q04_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml",
+      "context": {
+        "questline": "nouns_festival",
+        "quest_id": "nouns_festival__q05_nouns",
+        "position": 6,
+        "step_type": "talk_to_npc",
+        "dialogue_id": "nouns_festival_q05_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml",
+      "context": {
+        "questline": "nouns_festival",
+        "quest_id": "nouns_festival__q06_nouns",
+        "position": 8,
+        "step_type": "talk_to_npc",
+        "dialogue_id": "nouns_festival_q06_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml",
+      "context": {
+        "questline": "numbers_advanced_homework",
+        "quest_id": "q01_numbers_10_20",
+        "position": 8,
+        "step_type": "return_to_npc",
+        "dialogue_id": "numbers_advanced_q01_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml",
+      "context": {
+        "questline": "numbers_advanced_homework",
+        "quest_id": "q02_numbers_20_100",
+        "position": 8,
+        "step_type": "return_to_npc",
+        "dialogue_id": "numbers_advanced_q02_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml",
+      "context": {
+        "questline": "numbers_advanced_homework",
+        "quest_id": "q03_numbers_100_1000",
+        "position": 8,
+        "step_type": "return_to_npc",
+        "dialogue_id": "numbers_advanced_q03_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\numbers_advanced_homework\\q04_numbers_mixed_review.yaml",
+      "context": {
+        "questline": "numbers_advanced_homework",
+        "quest_id": "q04_numbers_mixed_review",
+        "position": 6,
+        "step_type": "return_to_npc",
+        "dialogue_id": "numbers_advanced_q04_finish"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml",
+      "context": {
+        "questline": "the_kingdoms_worst_day",
+        "quest_id": "the_kingdoms_worst_day__q01_what_is_missing",
+        "position": 5,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_kingdoms_worst_day_q01_fenn_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml",
+      "context": {
+        "questline": "the_kingdoms_worst_day",
+        "quest_id": "the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+        "position": 5,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_kingdoms_worst_day_q02_will_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml",
+      "context": {
+        "questline": "the_kingdoms_worst_day",
+        "quest_id": "the_kingdoms_worst_day__q03_royal_description_disaster",
+        "position": 6,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_kingdoms_worst_day_q03_painter_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml",
+      "context": {
+        "questline": "the_kingdoms_worst_day",
+        "quest_id": "the_kingdoms_worst_day__q04_save_the_royal_schedule",
+        "position": 8,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_kingdoms_worst_day_q04_maya_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_royal_impostor\\the_royal_impostor__the_royal_impostor__q01_two_advisors.yaml",
+      "context": {
+        "questline": "the_royal_impostor",
+        "quest_id": "the_royal_impostor__the_royal_impostor__q01_two_advisors",
+        "position": 6,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_royal_impostor_q01_fenn_clue"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_royal_impostor\\the_royal_impostor__the_royal_impostor__q02_the_witnesses.yaml",
+      "context": {
+        "questline": "the_royal_impostor",
+        "quest_id": "the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+        "position": 7,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_royal_impostor_q02_fenn_clue"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_royal_impostor\\the_royal_impostor__the_royal_impostor__q03_the_torn_testimony.yaml",
+      "context": {
+        "questline": "the_royal_impostor",
+        "quest_id": "the_royal_impostor__the_royal_impostor__q03_the_torn_testimony",
+        "position": 4,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_royal_impostor_q03_fenn_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_royal_impostor\\the_royal_impostor__the_royal_impostor__q04_the_ownership_code.yaml",
+      "context": {
+        "questline": "the_royal_impostor",
+        "quest_id": "the_royal_impostor__the_royal_impostor__q04_the_ownership_code",
+        "position": 9,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_royal_impostor_q04_fenn_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\the_royal_impostor\\the_royal_impostor__the_royal_impostor__q05_the_royal_test.yaml",
+      "context": {
+        "questline": "the_royal_impostor",
+        "quest_id": "the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+        "position": 6,
+        "step_type": "return_to_npc",
+        "dialogue_id": "the_royal_impostor_q05_fenn_done"
+      }
+    }
+  ]
 }

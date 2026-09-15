@@ -24,8 +24,8 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Plan one opening NPC conversation only; do not plan an immediate duplicate `talk_to_npc` step with the same dialogue. Add a later NPC conversation only when it has a distinct story purpose and new content.
 - Define a clear ending for every quest. The final quest must finish with immediate rewards and congratulations, without sending the learner to another NPC after the quest is complete. Intermediate quests may point to the next NPC only when a real next quest follows.
 - Use Hebrew for explanations and English only as the learning material.
-- Leave some words pre-filled in Word Ordering when partial completion is more useful than a full rewrite.
-- Write natural Speak Aloud tasks for pronouncing English words.
+- Plan Word Ordering so the learner cannot guess: sentences of four words or fewer are assembled completely with no pre-filled words, and at least three same-word-class distractors are offered.
+- Plan Speak Aloud around complete short sentences, never a bare word or a list of unconnected words.
 - For every Speak Aloud stage, plan both parts of the learner-facing screen: the English target to pronounce and a visible Hebrew explanation of the required action. The explanation must survive into the real game screen; it must not exist only in the pedagogical brief or Editor Preview.
 - For every planned minigame that supports a `prompt` field, provide the exact non-empty learner-facing prompt in the brief. A prompt must not be left for the importer, editor, or runtime to infer from answer data.
 
@@ -39,8 +39,8 @@ Works in the same session and active working tree as Quest Creator and Quest QA.
 - Plan short dialogue blocks, with a complete Hebrew translation beside every English sentence.
 - For each task, make the next NPC, item, or stage clear and preserve the story motivation.
 - For Word Matching, plan complete words, valid missing letters, varied gap positions, a compact meaningful letter pool, and independent shuffling of letters and word tasks. IDs and screen positions must never encode the answer.
-- For Word Ordering, plan a Hebrew translation, meaningful partial completion, and unique runtime choices with the correct open word exactly once.
-- For Speak Aloud, specify the exact unit (one word, short list, or sentence), the approved difficulty level, and a visible Hebrew action/meaning prompt that matches the recognition target.
+- For Word Ordering, plan the complete Hebrew translation, full assembly of short sentences, and unique runtime choices with each correct word available exactly once.
+- For Speak Aloud, specify the displayed sentence and, separately, the recognition unit: a single target word for the questline's introductory tasks, and the complete phrase for its later tasks. State the difficulty level and the visible Hebrew action/meaning prompt for each.
 - Apply the pedagogical validity test to every task: success must require the target skill, not guessing, translation matching alone, obvious elimination, or superficial visual cues.
 
 ## Output

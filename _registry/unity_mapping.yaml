@@ -17,11 +17,6 @@ source_of_truth:
     quests: QuestCatalog_OpenWorld.asset
 
 questlines:
-  adjective_crown:
-    status: live_in_unity
-    note: "QuestDefinitionSO assets exist; wired on QuestLine_adjective_crown"
-    giver_npc: teacher_maya
-    catalog_set: QuestWorldCatalogSet_OpenWorld
   blacksmith_will:
     status: live_in_unity
     note: "QuestDefinitionSO assets exist; wired on QuestLine_blacksmith_will"

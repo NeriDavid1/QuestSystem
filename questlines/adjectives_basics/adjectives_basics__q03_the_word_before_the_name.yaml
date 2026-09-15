@@ -1,0 +1,42 @@
+quest:
+  id: adjectives_basics__q03_the_word_before_the_name
+  name: "The Word Before the Name"
+  level_required: 1
+  giver_npc: "Little Girl"
+  prerequisite: adjectives_basics__q02_the_big_tree_and_the_small_bird
+  summary: "הילדה בפארק מסדרת שלטים לתערוכה. למדו שבאנגלית מילת התיאור עומדת לפני שם העצם."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: adjectives_basics_q03_finish
+rewards: { xp: 200, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: "Little Girl"
+    dialogue_id: adjectives_basics_q03_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 3
+    success_required: true
+    instance_id: adjectives_basics_q03_red_apple
+    display_text: בנו את התיאור באנגלית לפי התרגום בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 3
+    success_required: true
+    instance_id: adjectives_basics_q03_big_tree
+    display_text: בנו את התיאור באנגלית לפי התרגום בעברית.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 3
+    success_required: true
+    instance_id: adjectives_basics_q03_match_sign_words
+    display_text: השלימו את האות החסרה במילה.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 4
+    success_required: true
+    instance_id: adjectives_basics_q03_small_blue_bird
+    display_text: בנו את התיאור באנגלית לפי התרגום בעברית.

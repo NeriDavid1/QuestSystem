@@ -1,0 +1,42 @@
+quest:
+  id: adjectives_basics__q02_the_big_tree_and_the_small_bird
+  name: "The Big Tree and the Small Bird"
+  level_required: 1
+  giver_npc: Painter
+  prerequisite: adjectives_basics__q01_the_painting_with_no_colors
+  summary: "בציור נשארו עץ וציפור בלי גודל. למדו מילות תיאור של גודל: big, small, tall, long."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: adjectives_basics_q02_finish
+rewards: { xp: 175, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: Painter
+    dialogue_id: adjectives_basics_q02_start
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_basics_q02_spell_big
+    display_text: כתבו באנגלית את המילה שפירושה גדול.
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 2
+    success_required: true
+    instance_id: adjectives_basics_q02_spell_small
+    display_text: כתבו באנגלית את המילה שפירושה קטן.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 3
+    success_required: true
+    instance_id: adjectives_basics_q02_match_size_words
+    display_text: השלימו את האות החסרה במילה.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 5
+    success_required: true
+    instance_id: adjectives_basics_q02_say_tall_sentence
+    display_text: אמרו את המשפט הבא באנגלית בקול.

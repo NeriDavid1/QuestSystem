@@ -1,0 +1,42 @@
+quest:
+  id: adjectives_basics__q01_the_painting_with_no_colors
+  name: "The Painting With No Colors"
+  level_required: 50
+  giver_npc: Painter
+  prerequisite: null
+  summary: "הציור הגדול של הצייר איבד את הצבעים שלו. החזירו את מילות התיאור של הצבעים ותגלו מהי מילת תיאור באנגלית."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: adjectives_basics_q01_finish
+rewards: { xp: 150, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: Painter
+    dialogue_id: adjectives_basics_q01_start
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 2
+    success_required: true
+    instance_id: adjectives_basics_q01_match_colors
+    display_text: השלימו את האות החסרה במילה.
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_basics_q01_spell_red
+    display_text: כתבו באנגלית את המילה שפירושה אדום.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 2
+    success_required: true
+    instance_id: adjectives_basics_q01_match_more_colors
+    display_text: השלימו את האות החסרה במילה.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 4
+    success_required: true
+    instance_id: adjectives_basics_q01_say_blue
+    display_text: אמרו את המשפט הבא באנגלית בקול.

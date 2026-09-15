@@ -1,0 +1,42 @@
+quest:
+  id: adjectives_basics__q05_the_tree_is_tall
+  name: "The Tree Is Tall"
+  level_required: 1
+  giver_npc: "Little Girl"
+  prerequisite: adjectives_basics__q04_happy_faces_and_sad_faces
+  summary: "עכשיו בונים משפטים שלמים על הציור: The tree is tall. למדו להשתמש ב-is וב-are לפני מילת התיאור."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: adjectives_basics_q05_finish
+rewards: { xp: 275, items: [] }
+steps:
+  - type: talk_to_npc
+    npc_id: "Little Girl"
+    dialogue_id: adjectives_basics_q05_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 4
+    success_required: true
+    instance_id: adjectives_basics_q05_tree_is_tall
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 4
+    success_required: true
+    instance_id: adjectives_basics_q05_apple_is_red
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 6
+    success_required: true
+    instance_id: adjectives_basics_q05_say_flowers_sentence
+    display_text: אמרו את המשפט הבא באנגלית בקול.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 5
+    success_required: true
+    instance_id: adjectives_basics_q05_birds_are_small
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
