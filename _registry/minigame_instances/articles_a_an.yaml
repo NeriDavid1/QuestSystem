@@ -2,8 +2,8 @@
 # Every task is an a / an choice. Word Ordering pools always offer the other article (from Q2 on),
 # and Word Matching connects each noun to a or an: the article is a whole-word blank (shown as ___),
 # so the blank length never reveals the answer. Simple, familiar vocabulary only.
-# Speak Aloud checks the whole sentence as one phrase: targetWords holds the full sentence as a
-# single entry, so the game shows it as one chip and passes only when the learner says all of it.
+# Speak Aloud uses phrase mode: targetWords is empty and targetPhrase holds the sentence, so the
+# Unity SpeakAloudDataSO is synced as a phrase instead of a list of single words.
 # Letter pools are shuffled independently of wordTasks; no tile sits opposite its own word.
 instances:
 
@@ -39,13 +39,13 @@ instances:
   articles_a_an_q01_say_net:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: ["I have a net."]
+    tasks: [I, have, a, net]
     target: "I have a net."
     variant: short_phrase
     success: "הרשת הראשונה מחזיקה חזק."
     params:
       prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי רשת."
-      targetWords: ["I have a net."]
+      targetWords: []
       targetPhrase: "I have a net."
       silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
@@ -116,13 +116,13 @@ instances:
   articles_a_an_q02_say_egg:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: ["I have an egg."]
+    tasks: [I, have, an, egg]
     target: "I have an egg."
     variant: short_phrase
     success: "AN חזר אל המפרץ."
     params:
       prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי ביצה."
-      targetWords: ["I have an egg."]
+      targetWords: []
       targetPhrase: "I have an egg."
       silenceTimeoutSeconds: 3.0
       allowFuzzyMatch: true
@@ -165,13 +165,13 @@ instances:
   articles_a_an_q03_say_orange:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: ["I want an orange."]
+    tasks: [I, want, an, orange]
     target: "I want an orange."
     variant: short_phrase
     success: "המוכר בשוק שמע אתכם ומחייך."
     params:
       prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רוצה תפוז."
-      targetWords: ["I want an orange."]
+      targetWords: []
       targetPhrase: "I want an orange."
       silenceTimeoutSeconds: 3.0
       allowFuzzyMatch: true
@@ -242,13 +242,13 @@ instances:
   articles_a_an_q04_say_orange_on_boat:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: ["An orange is on the boat."]
+    tasks: [An, orange, is, "on", the, boat]
     target: "An orange is on the boat."
     variant: short_phrase
     success: "המכתב של מלכת הים שלם."
     params:
       prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש תפוז על הסירה."
-      targetWords: ["An orange is on the boat."]
+      targetWords: []
       targetPhrase: "An orange is on the boat."
       silenceTimeoutSeconds: 3.5
       allowFuzzyMatch: true
@@ -305,13 +305,13 @@ instances:
   articles_a_an_q05_say_old_net:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: ["I have an old net."]
+    tasks: [I, have, an, old, net]
     target: "I have an old net."
     variant: short_phrase
     success: "התאומים שוחים שוב זה ליד זה."
     params:
       prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי רשת ישנה."
-      targetWords: ["I have an old net."]
+      targetWords: []
       targetPhrase: "I have an old net."
       silenceTimeoutSeconds: 3.5
       allowFuzzyMatch: true
@@ -354,13 +354,13 @@ instances:
   articles_a_an_q06_say_apple_and_egg:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: ["I have an apple and an egg."]
+    tasks: [I, have, an, apple, and, an, egg]
     target: "I have an apple and an egg."
     variant: short_phrase
     success: "עוד קשר חזק נוסף לרשת."
     params:
       prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי תפוח וביצה."
-      targetWords: ["I have an apple and an egg."]
+      targetWords: []
       targetPhrase: "I have an apple and an egg."
       silenceTimeoutSeconds: 3.5
       allowFuzzyMatch: true

@@ -142,6 +142,17 @@ describe('seedParamsFromBrief', () => {
     expect(seeded.prompt).toBe('Spell cat')
   })
 
+  it('seeds speak_aloud in phrase mode: targetPhrase set, targetWords left empty', () => {
+    const seeded = seedParamsFromBrief(
+      speakAloud,
+      defaultParamsForEntry(speakAloud),
+      'I have an egg.',
+      'Say it',
+    )
+    expect(seeded.targetPhrase).toBe('I have an egg.')
+    expect(seeded.targetWords).toEqual([])
+  })
+
   it('does not overwrite existing gameplay values', () => {
     const seeded = seedParamsFromBrief(
       letterOrdering,

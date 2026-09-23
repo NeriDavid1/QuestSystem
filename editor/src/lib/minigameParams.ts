@@ -195,12 +195,7 @@ export function seedParamsFromBrief(
         .filter(Boolean)
     }
   }
-  if (fields.has('targetWords')) {
-    const existing = next.targetWords
-    if (!Array.isArray(existing) || existing.length === 0) {
-      next.targetWords = [trimmedTarget]
-    }
-  }
+  // Speak Aloud: seed only the phrase and leave targetWords empty, which is Unity's phrase mode.
   if (fields.has('targetPhrase') && !next.targetPhrase) {
     next.targetPhrase = trimmedTarget
   }
