@@ -15,19 +15,19 @@ steps:
     npc_id: Fisherman
     dialogue_id: articles_a_an_q02_start
   - type: play_minigame
-    minigame_id: word_matching
-    world_object_id: Lost_Chest2_Driftgold_Bay
-    difficulty: 2
-    success_required: true
-    instance_id: articles_a_an_q02_match_vowel_starts
-    display_text: השלימו את האות החסרה במילה.
-  - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest2_Driftgold_Bay
     difficulty: 3
     success_required: true
     instance_id: articles_a_an_q02_an_apple
     display_text: בנו את התיאור באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 2
+    success_required: true
+    instance_id: articles_a_an_q02_match_a_an
+    display_text: חברו כל מילה ל־a או ל־an.
   - type: play_minigame
     minigame_id: word_ordering
     world_object_id: Lost_Chest2_Driftgold_Bay

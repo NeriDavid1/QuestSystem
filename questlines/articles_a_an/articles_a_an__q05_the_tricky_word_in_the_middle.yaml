@@ -31,10 +31,10 @@ steps:
   - type: play_minigame
     minigame_id: word_matching
     world_object_id: Lost_Chest2_Driftgold_Bay
-    difficulty: 4
+    difficulty: 5
     success_required: true
-    instance_id: articles_a_an_q05_match_first_letters
-    display_text: השלימו את האות החסרה במילה.
+    instance_id: articles_a_an_q05_match_adjectives
+    display_text: חברו כל מילה ל־a או ל־an.
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest2_Driftgold_Bay

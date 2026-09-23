@@ -54,12 +54,21 @@ function buildLetterPool(targetWord: string, extraCount: number, custom: string[
   return stableShuffle(pool, seed)
 }
 
+// Mirrors Unity's WordSlotState: in a multi-word entry ("an apple"), a fully masked word
+// shows as one fixed-width blank so its length does not reveal the answer.
 function gapifyWord(fullWord: string, missingIndices: number[]): string {
-  const chars = fullWord.split('')
-  for (const idx of missingIndices) {
-    if (idx >= 0 && idx < chars.length) chars[idx] = '_'
-  }
-  return chars.join('')
+  const missing = new Set(missingIndices)
+  const multiWord = fullWord.includes(' ')
+  let offset = 0
+  return fullWord
+    .split(' ')
+    .map((token) => {
+      const start = offset
+      offset += token.length + 1
+      const chars = token.split('').map((c, i) => (missing.has(start + i) ? '_' : c))
+      return multiWord && token.length > 0 && chars.every((c) => c === '_') ? '___' : chars.join('')
+    })
+    .join(' ')
 }
 
 function ParchmentShell({

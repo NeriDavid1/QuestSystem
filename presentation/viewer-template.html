@@ -1393,12 +1393,19 @@
       return arr;
     }
 
+    // Mirrors Unity's WordSlotState: in a multi-word entry ("an apple"), a fully masked word
+    // shows as one fixed-width blank so its length does not reveal the answer.
     function mgGapify(fullWord, missingIndices) {
-      const chars = String(fullWord).split("");
-      (missingIndices || []).forEach((idx) => {
-        if (idx >= 0 && idx < chars.length) chars[idx] = "_";
-      });
-      return chars.join("");
+      const text = String(fullWord);
+      const missing = new Set(missingIndices || []);
+      const multiWord = text.includes(" ");
+      let offset = 0;
+      return text.split(" ").map((token) => {
+        const start = offset;
+        offset += token.length + 1;
+        const chars = token.split("").map((c, i) => (missing.has(start + i) ? "_" : c));
+        return multiWord && token.length > 0 && chars.every((c) => c === "_") ? "___" : chars.join("");
+      }).join(" ");
     }
 
     function mgBuildLetterPool(targetWord, extraCount, custom, seed) {

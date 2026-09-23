@@ -24,12 +24,12 @@ steps:
     instance_id: articles_a_an_q06_an_orange_hat
     display_text: בנו את התיאור באנגלית לפי התרגום המלא בעברית.
   - type: play_minigame
-    minigame_id: word_ordering
+    minigame_id: word_matching
     world_object_id: Lost_Chest2_Driftgold_Bay
     difficulty: 6
     success_required: true
-    instance_id: articles_a_an_q06_a_red_apple
-    display_text: בנו את התיאור באנגלית לפי התרגום המלא בעברית.
+    instance_id: articles_a_an_q06_match_review
+    display_text: חברו כל מילה ל־a או ל־an.
   - type: play_minigame
     minigame_id: speak_aloud
     world_object_id: Lost_Chest2_Driftgold_Bay
