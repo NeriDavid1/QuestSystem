@@ -7,7 +7,7 @@ quest:
   summary: "השלימו את המילים שנקרעו מהסיפור והשתמשו בהן בשני משפטים."
   wait_for_npc_turn_in: false
 
-rewards: { xp: 250, items: [] }
+rewards: { xp: 1950, items: [] }
 
 steps:
   - type: play_minigame

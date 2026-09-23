@@ -1,0 +1,515 @@
+# Per-step minigame briefs — verbs_to_be
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
+instances:
+  LetterConnectionLevelConfig_q02_new_quest_minigame:
+    minigame_id: word_matching
+    instruction: ''
+    tasks: []
+    target: HE IS, SHE IS, IT IS, He is happy, It is big
+    variant: missing_letter_matching
+    success: המילים הושלמו
+    params:
+      letters:
+        - id: letter_1
+          value: IS
+        - id: letter_2
+          value: IS
+        - id: letter_3
+          value: IS
+        - id: letter_4
+          value: IS
+        - id: letter_5
+          value: IS
+      wordTasks:
+        - id: task_1
+          image: ''
+          fullWord: HE IS
+          missingIndices:
+            - 13194140581888
+        - id: task_2
+          image: ''
+          fullWord: SHE IS
+          missingIndices:
+            - 17592187355136
+        - id: task_3
+          image: ''
+          fullWord: IT IS
+          missingIndices:
+            - 13194140581888
+        - id: task_4
+          image: ''
+          fullWord: He is happy
+          missingIndices:
+            - 13194140581888
+        - id: task_5
+          image: ''
+          fullWord: It is big
+          missingIndices:
+            - 13194140581888
+  LetterConnectionLevelConfig_q05_new_quest_minigame_4:
+    minigame_id: word_matching
+    instruction: ''
+    tasks: []
+    target: You are, I am, It is, He is ready, She is happy, We are ready, We are
+      strong
+    variant: missing_letter_matching
+    success: המילים הושלמו
+    params:
+      letters:
+        - id: letter_1
+          value: are
+        - id: letter_2
+          value: am
+        - id: letter_3
+          value: is
+        - id: letter_4
+          value: is
+        - id: letter_5
+          value: is
+        - id: letter_6
+          value: are
+        - id: letter_7
+          value: are
+      wordTasks:
+        - id: task_1
+          image: ''
+          fullWord: You are
+          missingIndices:
+            - 295147927169586954240
+        - id: task_2
+          image: ''
+          fullWord: I am
+          missingIndices:
+            - 8796093808640
+        - id: task_3
+          image: ''
+          fullWord: It is
+          missingIndices:
+            - 13194140581888
+        - id: task_4
+          image: ''
+          fullWord: He is ready
+          missingIndices:
+            - 13194140581888
+        - id: task_5
+          image: ''
+          fullWord: She is happy
+          missingIndices:
+            - 17592187355136
+        - id: task_6
+          image: ''
+          fullWord: We are ready
+          missingIndices:
+            - 221360946476701974528
+        - id: task_7
+          image: ''
+          fullWord: We are strong
+          missingIndices:
+            - 221360946476701974528
+  q01_i_ready:
+    minigame_id: word_ordering
+    instruction: I ___ ready
+    tasks:
+      - I ___ ready
+    target: I am ready.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: I ___ ready
+      translation: null
+      englishWordsInOrder:
+        - I
+        - am
+        - ready
+      preFilledIndices:
+        - 524288
+      distractorWords:
+        - is
+        - are
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q01_new_quest_minigame_8:
+    minigame_id: word_ordering
+    instruction: I ___ YOUR FRIEND
+    tasks:
+      - I ___ YOUR FRIEND
+    target: I AM YOUR FRIEND.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: I ___ YOUR FRIEND
+      translation: null
+      englishWordsInOrder:
+        - I
+        - AM
+        - YOUR
+        - FRIEND
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - IS
+        - ARE
+        - YOU
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q01_new_quest_minigame_9:
+    minigame_id: word_ordering
+    instruction: I ___ the hero
+    tasks:
+      - I ___ the hero
+    target: I am the hero.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: I ___ the hero
+      translation: null
+      englishWordsInOrder:
+        - I
+        - am
+        - the
+        - hero
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - is
+        - you
+        - are
+        - they
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q02_castle_big:
+    minigame_id: word_ordering
+    instruction: The castle ___ big
+    tasks:
+      - The castle ___ big
+    target: The castle is big.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: The castle ___ big
+      translation: null
+      englishWordsInOrder:
+        - The
+        - castle
+        - is
+        - big
+      preFilledIndices:
+        - 4398047297536
+      distractorWords:
+        - am
+        - are
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q02_cat_small:
+    minigame_id: word_ordering
+    instruction: The cat ___ small
+    tasks:
+      - The cat ___ small
+    target: The cat is small.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: The cat ___ small
+      translation: null
+      englishWordsInOrder:
+        - The
+        - cat
+        - is
+        - small
+      preFilledIndices:
+        - 4398047297536
+      distractorWords:
+        - am
+        - are
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q02_new_quest_minigame_3:
+    minigame_id: word_ordering
+    instruction: She ___ happy
+    tasks:
+      - She ___ happy
+    target: She IS HAPPY.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: She ___ happy
+      translation: null
+      englishWordsInOrder:
+        - She
+        - IS
+        - HAPPY
+      preFilledIndices:
+        - 524288
+      distractorWords:
+        - ARE
+        - AM
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q03_new_quest_minigame:
+    minigame_id: speak_aloud
+    instruction: איזה פועל מגיע אחרי -IT
+    tasks:
+      - איזה פועל מגיע אחרי -IT
+    target: IS
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: איזה פועל מגיע אחרי -IT
+      targetWords:
+        - IS
+      targetPhrase: is
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q03_new_quest_minigame_2:
+    minigame_id: speak_aloud
+    instruction: איזה פועל מגיע אחרי - I
+    tasks:
+      - איזה פועל מגיע אחרי - I
+    target: am
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: איזה פועל מגיע אחרי - I
+      targetWords:
+        - am
+      targetPhrase: am
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q03_new_quest_minigame_3:
+    minigame_id: speak_aloud
+    instruction: איזה פועל מגיע אחרי -SHE
+    tasks:
+      - איזה פועל מגיע אחרי -SHE
+    target: is
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: איזה פועל מגיע אחרי -SHE
+      targetWords:
+        - is
+      targetPhrase: is
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q03_new_quest_minigame_3_copy:
+    minigame_id: speak_aloud
+    instruction: איזה פועל מגיע אחרי -HE
+    tasks:
+      - איזה פועל מגיע אחרי -HE
+    target: is
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: איזה פועל מגיע אחרי -HE
+      targetWords:
+        - is
+      targetPhrase: is
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q04_new_quest_minigame_2:
+    minigame_id: word_ordering
+    instruction: We ___ a team
+    tasks:
+      - We ___ a team
+    target: We are a team.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: We ___ a team
+      translation: null
+      englishWordsInOrder:
+        - We
+        - are
+        - a
+        - team
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - is
+        - am
+        - castle
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q04_new_quest_minigame_2_copy:
+    minigame_id: word_ordering
+    instruction: They ___ friends
+    tasks:
+      - They ___ friends
+    target: They are friends.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: They ___ friends
+      translation: null
+      englishWordsInOrder:
+        - They
+        - are
+        - friends
+      preFilledIndices:
+        - 524288
+      distractorWords:
+        - is
+        - am
+        - dog
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q04_new_quest_minigame_2_copy_copy:
+    minigame_id: word_ordering
+    instruction: The villagers ___ happy
+    tasks:
+      - The villagers ___ happy
+    target: The villagers are happy.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: The villagers ___ happy
+      translation: null
+      englishWordsInOrder:
+        - The
+        - villagers
+        - are
+        - happy
+      preFilledIndices:
+        - 4398047297536
+      distractorWords:
+        - am
+        - is
+        - it
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q04_new_quest_minigame_2_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: The dragons ___ hungry
+    tasks:
+      - The dragons ___ hungry
+    target: The dragons are hungry.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: The dragons ___ hungry
+      translation: null
+      englishWordsInOrder:
+        - The
+        - dragons
+        - are
+        - hungry
+      preFilledIndices:
+        - 4398047297536
+      distractorWords:
+        - they
+        - is
+        - boy
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q04_new_quest_minigame_2_copy_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: You ___ my friend
+    tasks:
+      - You ___ my friend
+    target: You are my friend.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: You ___ my friend
+      translation: null
+      englishWordsInOrder:
+        - You
+        - are
+        - my
+        - friend
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - am
+        - door
+        - is
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q04_they_castle:
+    minigame_id: word_ordering
+    instruction: They ___ in the castle
+    tasks:
+      - They ___ in the castle
+    target: They are in the castle.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: They ___ in the castle
+      translation: null
+      englishWordsInOrder:
+        - They
+        - are
+        - in
+        - the
+        - castle
+      preFilledIndices:
+        - 147573965783816994816
+      distractorWords:
+        - am
+        - is
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q04_we_ready:
+    minigame_id: word_ordering
+    instruction: We ___ ready
+    tasks:
+      - We ___ ready
+    target: We are ready.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: We ___ ready
+      translation: null
+      englishWordsInOrder:
+        - We
+        - are
+        - ready
+      preFilledIndices:
+        - 524288
+      distractorWords:
+        - am
+        - is
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q05_new_quest_minigame_2:
+    minigame_id: speak_aloud
+    instruction: איזה פועל מתאים ל-I
+    tasks:
+      - איזה פועל מתאים ל-I
+    target: AM
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: איזה פועל מתאים ל-I
+      targetWords: []
+      targetPhrase: AM
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q05_new_quest_minigame_3:
+    minigame_id: speak_aloud
+    instruction: 'איזה פועל מתאים ל-HE, SHE , IT '
+    tasks:
+      - 'איזה פועל מתאים ל-HE, SHE , IT '
+    target: IS
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'איזה פועל מתאים ל-HE, SHE , IT '
+      targetWords: []
+      targetPhrase: IS
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  q05_new_quest_minigame_3_copy:
+    minigame_id: speak_aloud
+    instruction: 'איזה פועל מתאים ל- You, We, They '
+    tasks:
+      - 'איזה פועל מתאים ל- You, We, They '
+    target: are
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'איזה פועל מתאים ל- You, We, They '
+      targetWords: []
+      targetPhrase: are
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

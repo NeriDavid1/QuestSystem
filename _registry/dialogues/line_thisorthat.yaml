@@ -1,0 +1,30 @@
+# Dialogue scripts exported from Unity — line_thisorthat
+dialogues:
+  line_thisorthat_line_thisorthat_q01_village_head_start:
+    speaker: Village Head
+    lines:
+      - ברוכים השבים גיבורים! כפי שאתם יודעים, שום דבר לא עוצר את הרעב שלנו לידע!
+  line_thisorthat_line_thisorthat_q01_village_head_s01:
+    speaker: Old Woman
+    lines:
+      - 'ה Village Head שלח אתכם? ידעתי שהוא יבחר בכם בסופו של דבר... '
+  line_thisorthat_line_thisorthat_q01_village_head_s05:
+    speaker: Old Woman
+    lines:
+      - תראו... ראש הכפר לא סתם בוחן אתכם...
+  line_thisorthat_line_thisorthat_q02_old_woman_start:
+    speaker: Old Woman
+    lines:
+      - יוצא מן הכלל! אתם קולטים הכל בשניות.
+  line_thisorthat_line_thisorthat_q02_old_woman_turn_in:
+    speaker: Old Woman
+    lines:
+      - וואו! יכולות שלא ראיתי בכל חיי ארוכי השנים...
+  line_thisorthat_line_thisorthat_q03_knowledge_advisors_start:
+    speaker: Village Head
+    lines:
+      - חזרתם ידידיי! איך הלך....?
+  line_thisorthat_line_thisorthat_q03_knowledge_advisors_turn_in:
+    speaker: Village Head
+    lines:
+      - עשיתם זאת בצורה מושלמת! תמיד האמנתי בכם גיבורים!

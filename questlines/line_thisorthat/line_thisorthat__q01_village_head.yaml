@@ -1,0 +1,85 @@
+quest:
+  id: line_thisorthat__q01_village_head
+  name: 'This ו-That: קרוב או רחוק'
+  level_required: 50
+  giver_npc: Village Head
+  prerequisite: null
+  summary: ''
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 2800
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: line_thisorthat_line_thisorthat_q01_village_head_start
+  - type: talk_to_npc
+    npc_id: Old Woman
+    dialogue_id: line_thisorthat_line_thisorthat_q01_village_head_s01
+    count: 1
+    display_text: Talk to Old Woman
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame_2_copy
+    display_text: "הרכיבו את המילה THIS \nזה / זאת (קרוב)"
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame_4
+    display_text: תגידו בקול רם את המילה THIS!
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame
+    display_text: "השלימו את המשפט \n\"השולחן הזה\" (קרוב)"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame_3
+    display_text: 'הרכיבו את המשפט
+
+      "הפרי המתוק הזה" (קרוב)'
+  - type: talk_to_npc
+    npc_id: Old Woman
+    dialogue_id: line_thisorthat_line_thisorthat_q01_village_head_s05
+    count: 1
+    display_text: Talk to Old Woman
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame_2_copy_copy_2
+    display_text: "הרכיבו את המילה THAT \nזה / זאת (קרוב)"
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame_4_copy
+    display_text: תגידו בקול רם את המילה THAT!
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame_copy
+    display_text: "הרכיבו את המשפט \n\"ההר ההוא\" (רחוק)"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: line_thisorthat_q01_village_head_minigame_3_copy
+    display_text: 'הרכיבו את המשפט
+
+      "המסעדה היקרה ההיא" (רחוקה)'

@@ -2,66 +2,4349 @@
   "schema_version": 1,
   "unity_path": "C:\\Users\\123ne\\source\\repos\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Data\\Quests\\Lines",
   "counts": {
-    "compared_quests": 0,
-    "unity_quests": 0,
-    "source_quests": 38,
-    "errors": 0,
-    "warnings": 0,
-    "info": 38
+    "compared_quests": 65,
+    "unity_quests": 66,
+    "source_quests": 81,
+    "errors": 28,
+    "warnings": 243,
+    "info": 16
   },
   "issues": [
     {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "adjective_crown/q01_bridge_too_short",
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q01_the_painting_with_no_colors",
       "context": {
-        "source_path": "questlines\\adjective_crown\\q01_bridge_too_short.yaml"
+        "step_index": 0,
+        "instance_key": "adjectives_basics_q01_match_colors",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q01_the_painting_with_no_colors",
+      "context": {
+        "step_index": 1,
+        "instance_key": "adjectives_basics_q01_spell_red",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q01_the_painting_with_no_colors",
+      "context": {
+        "step_index": 2,
+        "instance_key": "adjectives_basics_q01_match_more_colors",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q01_the_painting_with_no_colors",
+      "context": {
+        "step_index": 3,
+        "instance_key": "adjectives_basics_q01_say_blue",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "adjectives_basics/adjectives_basics__q02_the_big_tree_and_the_small_bird",
+      "context": {
+        "yaml": [
+          "adjectives_basics__q01_the_painting_with_no_colors"
+        ],
+        "unity": [
+          "adjectives_basics__adjectives_basics__q01_the_painting_with_no_colors"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q02_the_big_tree_and_the_small_bird",
+      "context": {
+        "step_index": 0,
+        "instance_key": "adjectives_basics_q02_spell_big",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q02_the_big_tree_and_the_small_bird",
+      "context": {
+        "step_index": 1,
+        "instance_key": "adjectives_basics_q02_spell_small",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q02_the_big_tree_and_the_small_bird",
+      "context": {
+        "step_index": 2,
+        "instance_key": "adjectives_basics_q02_match_size_words",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q02_the_big_tree_and_the_small_bird",
+      "context": {
+        "step_index": 3,
+        "instance_key": "adjectives_basics_q02_say_tall_sentence",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "adjectives_basics/adjectives_basics__q03_the_word_before_the_name",
+      "context": {
+        "yaml": [
+          "adjectives_basics__q02_the_big_tree_and_the_small_bird"
+        ],
+        "unity": [
+          "adjectives_basics__adjectives_basics__q02_the_big_tree_and_the_small_bird"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q03_the_word_before_the_name",
+      "context": {
+        "step_index": 0,
+        "instance_key": "adjectives_basics_q03_red_apple",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q03_the_word_before_the_name",
+      "context": {
+        "step_index": 1,
+        "instance_key": "adjectives_basics_q03_big_tree",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q03_the_word_before_the_name",
+      "context": {
+        "step_index": 2,
+        "instance_key": "adjectives_basics_q03_match_sign_words",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q03_the_word_before_the_name",
+      "context": {
+        "step_index": 3,
+        "instance_key": "adjectives_basics_q03_small_blue_bird",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "adjectives_basics/adjectives_basics__q04_happy_faces_and_sad_faces",
+      "context": {
+        "yaml": [
+          "adjectives_basics__q03_the_word_before_the_name"
+        ],
+        "unity": [
+          "adjectives_basics__adjectives_basics__q03_the_word_before_the_name"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q04_happy_faces_and_sad_faces",
+      "context": {
+        "step_index": 0,
+        "instance_key": "adjectives_basics_q04_match_feelings",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q04_happy_faces_and_sad_faces",
+      "context": {
+        "step_index": 1,
+        "instance_key": "adjectives_basics_q04_spell_happy",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q04_happy_faces_and_sad_faces",
+      "context": {
+        "step_index": 2,
+        "instance_key": "adjectives_basics_q04_spell_sad",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q04_happy_faces_and_sad_faces",
+      "context": {
+        "step_index": 3,
+        "instance_key": "adjectives_basics_q04_say_tired_sentence",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "adjectives_basics/adjectives_basics__q05_the_tree_is_tall",
+      "context": {
+        "yaml": [
+          "adjectives_basics__q04_happy_faces_and_sad_faces"
+        ],
+        "unity": [
+          "adjectives_basics__adjectives_basics__q04_happy_faces_and_sad_faces"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q05_the_tree_is_tall",
+      "context": {
+        "step_index": 0,
+        "instance_key": "adjectives_basics_q05_tree_is_tall",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q05_the_tree_is_tall",
+      "context": {
+        "step_index": 1,
+        "instance_key": "adjectives_basics_q05_apple_is_red",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q05_the_tree_is_tall",
+      "context": {
+        "step_index": 2,
+        "instance_key": "adjectives_basics_q05_say_flowers_sentence",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q05_the_tree_is_tall",
+      "context": {
+        "step_index": 3,
+        "instance_key": "adjectives_basics_q05_birds_are_small",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "adjectives_basics/adjectives_basics__q06_the_finished_painting",
+      "context": {
+        "yaml": [
+          "adjectives_basics__q05_the_tree_is_tall"
+        ],
+        "unity": [
+          "adjectives_basics__adjectives_basics__q05_the_tree_is_tall"
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "turnin_mismatch",
+      "message": "wait_for_npc_turn_in differs between authoring source and Unity asset.",
+      "quest": "adjectives_basics/adjectives_basics__q06_the_finished_painting",
+      "context": {
+        "yaml": true,
+        "unity": false
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q06_the_finished_painting",
+      "context": {
+        "step_index": 0,
+        "instance_key": "adjectives_basics_q06_match_review",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q06_the_finished_painting",
+      "context": {
+        "step_index": 1,
+        "instance_key": "adjectives_basics_q06_big_yellow_sun",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q06_the_finished_painting",
+      "context": {
+        "step_index": 2,
+        "instance_key": "adjectives_basics_q06_spell_tired",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "adjectives_basics/adjectives_basics__q06_the_finished_painting",
+      "context": {
+        "step_index": 3,
+        "instance_key": "adjectives_basics_q06_say_bird_sentence",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "quest_not_in_source",
+      "message": "QuestDefinition asset exists in Unity but has no matching YAML authoring file.",
+      "quest": "minigame_miner_fruit_slice_playtest/minigame_miner_fruit_slice_playtest",
+      "context": {
+        "path": "minigame_miner_fruit_slice_playtest\\QuestDefinition_MinerAndFruitSlice_Playtest.asset"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q01_benny_can_t_build_verbs",
+      "context": {
+        "step_index": 0,
+        "instance_key": "missing_verbs_q01_spell_build",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q01_benny_can_t_build_verbs",
+      "context": {
+        "step_index": 1,
+        "instance_key": "missing_verbs_q01_sentence_open",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q01_benny_can_t_build_verbs",
+      "context": {
+        "step_index": 2,
+        "instance_key": "missing_verbs_q01_match_actions",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q01_benny_can_t_build_verbs",
+      "context": {
+        "step_index": 3,
+        "instance_key": "missing_verbs_q01_say_help",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "missing_verbs/missing_verbs__q02_the_confused_guard",
+      "context": {
+        "yaml": [
+          "missing_verbs__q01_benny_can_t_build_verbs"
+        ],
+        "unity": [
+          "missing_verbs__missing_verbs__q01_benny_can_t_build_verbs"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q02_the_confused_guard",
+      "context": {
+        "step_index": 0,
+        "instance_key": "missing_verbs_q02_match_commands",
+        "fields": [
+          "letters",
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q02_the_confused_guard",
+      "context": {
+        "step_index": 1,
+        "instance_key": "missing_verbs_q02_spell_open",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q02_the_confused_guard",
+      "context": {
+        "step_index": 2,
+        "instance_key": "missing_verbs_q02_say_find",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q02_the_confused_guard",
+      "context": {
+        "step_index": 3,
+        "instance_key": "missing_verbs_q02_sentence_jump",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "missing_verbs/missing_verbs__q03_don_t_let_him_guess",
+      "context": {
+        "yaml": [
+          "missing_verbs__q02_the_confused_guard"
+        ],
+        "unity": [
+          "missing_verbs__missing_verbs__q02_the_confused_guard"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q03_don_t_let_him_guess",
+      "context": {
+        "step_index": 0,
+        "instance_key": "missing_verbs_q03_sentence_fire",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q03_don_t_let_him_guess",
+      "context": {
+        "step_index": 1,
+        "instance_key": "missing_verbs_q03_spell_fire",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q03_don_t_let_him_guess",
+      "context": {
+        "step_index": 2,
+        "instance_key": "missing_verbs_q03_match_actions",
+        "fields": [
+          "letters",
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "missing_verbs/missing_verbs__q03_don_t_let_him_guess",
+      "context": {
+        "step_index": 3,
+        "instance_key": "missing_verbs_q03_say_fire",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "level_mismatch",
+      "message": "level_required differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "yaml": 1,
+        "unity": 50
+      }
+    },
+    {
+      "severity": "error",
+      "code": "turnin_mismatch",
+      "message": "wait_for_npc_turn_in differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "yaml": false,
+        "unity": true
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "yaml": 8,
+        "unity": 7,
+        "yaml_steps": [
+          "play_minigame:1",
+          "play_minigame:1",
+          "play_minigame:1",
+          "play_minigame:2",
+          "play_minigame:1",
+          "play_minigame:1",
+          "play_minigame:2",
+          "deliver_item"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "step_index": 0,
+        "instance_key": "noun_repair_q01_people",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "step_index": 1,
+        "instance_key": "noun_repair_q01_book",
+        "fields": [
+          "extraDistractorCount",
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "step_index": 2,
+        "instance_key": "noun_repair_q01_places",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "step_index": 3,
+        "instance_key": "noun_repair_q01_sentence",
+        "fields": [
+          "translation",
+          "englishWordsInOrder",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "step_index": 4,
+        "instance_key": "noun_repair_q01_objects",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "step_index": 5,
+        "instance_key": "noun_repair_q01_animals",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q01_the_broken_noun_book",
+      "context": {
+        "step_index": 6,
+        "instance_key": "noun_repair_q01_say",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "yaml": [
+          "q01_the_broken_noun_book"
+        ],
+        "unity": [
+          "noun_repair_shop__q01_the_broken_noun_book"
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "turnin_mismatch",
+      "message": "wait_for_npc_turn_in differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "yaml": false,
+        "unity": true
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "yaml": 8,
+        "unity": 7,
+        "yaml_steps": [
+          "play_minigame:1",
+          "play_minigame:2",
+          "play_minigame:1",
+          "play_minigame:2",
+          "play_minigame:1",
+          "play_minigame:1",
+          "play_minigame:1",
+          "deliver_item"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "step_index": 0,
+        "instance_key": "noun_repair_q02_bag",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "step_index": 1,
+        "instance_key": "noun_repair_q02_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "step_index": 2,
+        "instance_key": "noun_repair_q02_toys",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "step_index": 3,
+        "instance_key": "noun_repair_q02_pencil",
+        "fields": [
+          "extraDistractorCount",
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "step_index": 4,
+        "instance_key": "noun_repair_q02_animals",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "step_index": 5,
+        "instance_key": "noun_repair_q02_say",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q02_the_runaway_objects",
+      "context": {
+        "step_index": 6,
+        "instance_key": "noun_repair_q02_places",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "yaml": [
+          "q02_the_runaway_objects"
+        ],
+        "unity": [
+          "noun_repair_shop__q02_the_runaway_objects"
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "turnin_mismatch",
+      "message": "wait_for_npc_turn_in differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "yaml": false,
+        "unity": true
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "yaml": 8,
+        "unity": 7,
+        "yaml_steps": [
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:3",
+          "play_minigame:2",
+          "play_minigame:2",
+          "deliver_item"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "step_index": 0,
+        "instance_key": "noun_repair_q03_market",
+        "fields": [
+          "extraDistractorCount",
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "step_index": 1,
+        "instance_key": "noun_repair_q03_fruit",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "step_index": 2,
+        "instance_key": "noun_repair_q03_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "step_index": 3,
+        "instance_key": "noun_repair_q03_food",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "step_index": 4,
+        "instance_key": "noun_repair_q03_say",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "step_index": 5,
+        "instance_key": "noun_repair_q03_animals",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q03_the_market_name_mixup",
+      "context": {
+        "step_index": 6,
+        "instance_key": "noun_repair_q03_tools",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "yaml": [
+          "q03_the_market_name_mixup"
+        ],
+        "unity": [
+          "noun_repair_shop__q03_the_market_name_mixup"
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "turnin_mismatch",
+      "message": "wait_for_npc_turn_in differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "yaml": false,
+        "unity": true
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "yaml": 8,
+        "unity": 7,
+        "yaml_steps": [
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:2",
+          "play_minigame:2",
+          "deliver_item"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "step_index": 0,
+        "instance_key": "noun_repair_q04_kitchen",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "step_index": 1,
+        "instance_key": "noun_repair_q04_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "step_index": 2,
+        "instance_key": "noun_repair_q04_people",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "step_index": 3,
+        "instance_key": "noun_repair_q04_spoon",
+        "fields": [
+          "extraDistractorCount",
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "step_index": 4,
+        "instance_key": "noun_repair_q04_objects",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "step_index": 5,
+        "instance_key": "noun_repair_q04_say",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
+      "context": {
+        "step_index": 6,
+        "instance_key": "noun_repair_q04_places",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "yaml": [
+          "q04_the_kitchen_invasion"
+        ],
+        "unity": [
+          "noun_repair_shop__q04_the_kitchen_invasion"
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "turnin_mismatch",
+      "message": "wait_for_npc_turn_in differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "yaml": false,
+        "unity": true
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "yaml": 8,
+        "unity": 7,
+        "yaml_steps": [
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "deliver_item"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "step_index": 0,
+        "instance_key": "noun_repair_q05_castle",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "step_index": 1,
+        "instance_key": "noun_repair_q05_sentence",
+        "fields": [
+          "translation",
+          "englishWordsInOrder",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "step_index": 2,
+        "instance_key": "noun_repair_q05_treasure",
+        "fields": [
+          "extraDistractorCount",
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "step_index": 3,
+        "instance_key": "noun_repair_q05_roles",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "step_index": 4,
+        "instance_key": "noun_repair_q05_objects",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "step_index": 5,
+        "instance_key": "noun_repair_q05_say",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
+      "context": {
+        "step_index": 6,
+        "instance_key": "noun_repair_q05_animals",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "yaml": [
+          "q05_the_castle_label_crisis"
+        ],
+        "unity": [
+          "noun_repair_shop__q05_the_castle_label_crisis"
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "turnin_mismatch",
+      "message": "wait_for_npc_turn_in differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "yaml": false,
+        "unity": true
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "yaml": 8,
+        "unity": 7,
+        "yaml_steps": [
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:3",
+          "play_minigame:4",
+          "deliver_item"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "step_index": 0,
+        "instance_key": "noun_repair_q06_people",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "step_index": 1,
+        "instance_key": "noun_repair_q06_book",
+        "fields": [
+          "extraDistractorCount",
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "step_index": 2,
+        "instance_key": "noun_repair_q06_places",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "step_index": 3,
+        "instance_key": "noun_repair_q06_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "step_index": 4,
+        "instance_key": "noun_repair_q06_animals",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "step_index": 5,
+        "instance_key": "noun_repair_q06_objects",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
+      "context": {
+        "step_index": 6,
+        "instance_key": "noun_repair_q06_say",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q02_festival",
+      "context": {
+        "step_index": 0,
+        "instance_key": "nouns_festival_q02_candle",
+        "fields": [
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q02_festival",
+      "context": {
+        "step_index": 1,
+        "instance_key": "nouns_festival_q02_objects",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q02_festival",
+      "context": {
+        "step_index": 2,
+        "instance_key": "nouns_festival_q02_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q02_festival",
+      "context": {
+        "step_index": 3,
+        "instance_key": "nouns_festival_q02_speak",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "nouns_festival/nouns_festival__q03_animals",
+      "context": {
+        "yaml": [
+          "nouns_festival__q02_festival"
+        ],
+        "unity": [
+          "nouns_festival__nouns_festival__q02_festival"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q03_animals",
+      "context": {
+        "step_index": 0,
+        "instance_key": "nouns_festival_q03_animals",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q03_animals",
+      "context": {
+        "step_index": 2,
+        "instance_key": "nouns_festival_q03_monkey",
+        "fields": [
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q03_animals",
+      "context": {
+        "step_index": 3,
+        "instance_key": "nouns_festival_q03_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q03_animals",
+      "context": {
+        "step_index": 4,
+        "instance_key": "nouns_festival_q03_speak",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "nouns_festival/nouns_festival__q04_things",
+      "context": {
+        "yaml": [
+          "nouns_festival__q02_festival",
+          "nouns_festival__q03_animals"
+        ],
+        "unity": [
+          "nouns_festival__nouns_festival__q03_animals"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q04_things",
+      "context": {
+        "step_index": 0,
+        "instance_key": "nouns_festival_q04_things",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q04_things",
+      "context": {
+        "step_index": 2,
+        "instance_key": "nouns_festival_q04_bell",
+        "fields": [
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q04_things",
+      "context": {
+        "step_index": 3,
+        "instance_key": "nouns_festival_q04_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q04_things",
+      "context": {
+        "step_index": 4,
+        "instance_key": "nouns_festival_q04_speak",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "nouns_festival/nouns_festival__q05_nouns",
+      "context": {
+        "yaml": [
+          "nouns_festival__q02_festival",
+          "nouns_festival__q03_animals",
+          "nouns_festival__q04_things"
+        ],
+        "unity": [
+          "nouns_festival__nouns_festival__q04_things"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q05_nouns",
+      "context": {
+        "step_index": 0,
+        "instance_key": "nouns_festival_q05_people_places",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q05_nouns",
+      "context": {
+        "step_index": 2,
+        "instance_key": "nouns_festival_q05_harbor",
+        "fields": [
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q05_nouns",
+      "context": {
+        "step_index": 3,
+        "instance_key": "nouns_festival_q05_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q05_nouns",
+      "context": {
+        "step_index": 4,
+        "instance_key": "nouns_festival_q05_speak",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "nouns_festival/nouns_festival__q06_nouns",
+      "context": {
+        "yaml": [
+          "nouns_festival__q02_festival",
+          "nouns_festival__q03_animals",
+          "nouns_festival__q04_things",
+          "nouns_festival__q05_nouns"
+        ],
+        "unity": [
+          "nouns_festival__nouns_festival__q05_nouns"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q06_nouns",
+      "context": {
+        "step_index": 0,
+        "instance_key": "nouns_festival_q06_rocket",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q06_nouns",
+      "context": {
+        "step_index": 1,
+        "instance_key": "nouns_festival_q06_island",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q06_nouns",
+      "context": {
+        "step_index": 3,
+        "instance_key": "nouns_festival_q06_space_objects",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q06_nouns",
+      "context": {
+        "step_index": 4,
+        "instance_key": "nouns_festival_q06_garden",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q06_nouns",
+      "context": {
+        "step_index": 5,
+        "instance_key": "nouns_festival_q06_river",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "nouns_festival/nouns_festival__q06_nouns",
+      "context": {
+        "step_index": 6,
+        "instance_key": "nouns_festival_q06_speak",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "referenceClip",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "step_index": 0,
+        "instance_key": "numbers_q01_spell_ten",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "step_index": 1,
+        "instance_key": "numbers_q01_sentence_twelve",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "step_index": 2,
+        "instance_key": "numbers_q01_say_fourteen",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "step_index": 3,
+        "instance_key": "numbers_q01_spell_sixteen",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "step_index": 4,
+        "instance_key": "numbers_q01_sentence_eighteen",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "step_index": 5,
+        "instance_key": "numbers_q01_say_twenty",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q01_numbers_10_20",
+      "context": {
+        "step_index": 6,
+        "instance_key": "numbers_q01_review_10_20",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "yaml": [
+          "q01_numbers_10_20"
+        ],
+        "unity": [
+          "numbers_advanced_homework__q01_numbers_10_20"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "step_index": 0,
+        "instance_key": "numbers_q02_spell_twenty",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "step_index": 1,
+        "instance_key": "numbers_q02_sentence_thirty_five",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "step_index": 2,
+        "instance_key": "numbers_q02_spell_fifty",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "step_index": 3,
+        "instance_key": "numbers_q02_say_forty",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "step_index": 4,
+        "instance_key": "numbers_q02_sentence_sixty_two",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "step_index": 5,
+        "instance_key": "numbers_q02_say_seventy",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q02_numbers_20_100",
+      "context": {
+        "step_index": 6,
+        "instance_key": "numbers_q02_review_20_100",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "yaml": [
+          "q02_numbers_20_100"
+        ],
+        "unity": [
+          "numbers_advanced_homework__q02_numbers_20_100"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "step_index": 0,
+        "instance_key": "numbers_q03_spell_hundred",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "step_index": 1,
+        "instance_key": "numbers_q03_sentence_two_hundred_fifty",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "step_index": 2,
+        "instance_key": "numbers_q03_spell_thousand",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "step_index": 3,
+        "instance_key": "numbers_q03_say_three_hundred",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "step_index": 4,
+        "instance_key": "numbers_q03_sentence_seven_hundred_twenty",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "step_index": 5,
+        "instance_key": "numbers_q03_say_nine_hundred_ninety_nine",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 7 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
+      "context": {
+        "step_index": 6,
+        "instance_key": "numbers_q03_review_100_1000",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
+      "context": {
+        "yaml": [
+          "q03_numbers_100_1000"
+        ],
+        "unity": [
+          "numbers_advanced_homework__q03_numbers_100_1000"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
+      "context": {
+        "step_index": 0,
+        "instance_key": "numbers_q04_sentence_fourteen",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
+      "context": {
+        "step_index": 1,
+        "instance_key": "numbers_q04_spell_sixty_two",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
+      "context": {
+        "step_index": 2,
+        "instance_key": "numbers_q04_say_three_hundred",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
+      "context": {
+        "step_index": 3,
+        "instance_key": "numbers_q04_sentence_seven_hundred_twenty",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
+      "context": {
+        "step_index": 4,
+        "instance_key": "numbers_q04_say_nine_hundred_ninety_nine",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q01_the_notebook_ran_out",
+      "context": {
+        "step_index": 0,
+        "instance_key": "personal_pronouns_q01_match_small_words",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q01_the_notebook_ran_out",
+      "context": {
+        "step_index": 1,
+        "instance_key": "personal_pronouns_q01_line_king",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q01_the_notebook_ran_out",
+      "context": {
+        "step_index": 2,
+        "instance_key": "personal_pronouns_q01_spell_you",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q01_the_notebook_ran_out",
+      "context": {
+        "step_index": 3,
+        "instance_key": "personal_pronouns_q01_line_friend",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q01_the_notebook_ran_out",
+      "context": {
+        "step_index": 4,
+        "instance_key": "personal_pronouns_q01_say_i_am_the_king",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "personal_pronouns/personal_pronouns__q02_two_actors_one_name",
+      "context": {
+        "yaml": [
+          "personal_pronouns__q01_the_notebook_ran_out"
+        ],
+        "unity": [
+          "personal_pronouns__personal_pronouns__q01_the_notebook_ran_out"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q02_two_actors_one_name",
+      "context": {
+        "step_index": 0,
+        "instance_key": "personal_pronouns_q02_line_singer",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q02_two_actors_one_name",
+      "context": {
+        "step_index": 1,
+        "instance_key": "personal_pronouns_q02_spell_she",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q02_two_actors_one_name",
+      "context": {
+        "step_index": 2,
+        "instance_key": "personal_pronouns_q02_match_he_she_you",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q02_two_actors_one_name",
+      "context": {
+        "step_index": 3,
+        "instance_key": "personal_pronouns_q02_line_dancer",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q02_two_actors_one_name",
+      "context": {
+        "step_index": 4,
+        "instance_key": "personal_pronouns_q02_say_he_is_my_best_friend",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "personal_pronouns/personal_pronouns__q03_the_hat_and_the_troupe",
+      "context": {
+        "yaml": [
+          "personal_pronouns__q02_two_actors_one_name"
+        ],
+        "unity": [
+          "personal_pronouns__personal_pronouns__q02_two_actors_one_name"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q03_the_hat_and_the_troupe",
+      "context": {
+        "step_index": 0,
+        "instance_key": "personal_pronouns_q03_spell_it",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q03_the_hat_and_the_troupe",
+      "context": {
+        "step_index": 1,
+        "instance_key": "personal_pronouns_q03_line_hat",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q03_the_hat_and_the_troupe",
+      "context": {
+        "step_index": 2,
+        "instance_key": "personal_pronouns_q03_match_it_we_she_he",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q03_the_hat_and_the_troupe",
+      "context": {
+        "step_index": 3,
+        "instance_key": "personal_pronouns_q03_line_actors",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q03_the_hat_and_the_troupe",
+      "context": {
+        "step_index": 4,
+        "instance_key": "personal_pronouns_q03_say_we_are_on_the_stage",
+        "fields": [
+          "targetWords",
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "personal_pronouns/personal_pronouns__q04_the_crowd_scene",
+      "context": {
+        "yaml": [
+          "personal_pronouns__q03_the_hat_and_the_troupe"
+        ],
+        "unity": [
+          "personal_pronouns__personal_pronouns__q03_the_hat_and_the_troupe"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q04_the_crowd_scene",
+      "context": {
+        "step_index": 0,
+        "instance_key": "personal_pronouns_q04_line_friends",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q04_the_crowd_scene",
+      "context": {
+        "step_index": 1,
+        "instance_key": "personal_pronouns_q04_match_all_six",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q04_the_crowd_scene",
+      "context": {
+        "step_index": 2,
+        "instance_key": "personal_pronouns_q04_spell_they",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q04_the_crowd_scene",
+      "context": {
+        "step_index": 3,
+        "instance_key": "personal_pronouns_q04_line_garden",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q04_the_crowd_scene",
+      "context": {
+        "step_index": 4,
+        "instance_key": "personal_pronouns_q04_say_they_are_very_happy",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "personal_pronouns/personal_pronouns__q05_opening_night",
+      "context": {
+        "yaml": [
+          "personal_pronouns__q04_the_crowd_scene"
+        ],
+        "unity": [
+          "personal_pronouns__personal_pronouns__q04_the_crowd_scene"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q05_opening_night",
+      "context": {
+        "step_index": 0,
+        "instance_key": "personal_pronouns_q05_match_mixed",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q05_opening_night",
+      "context": {
+        "step_index": 1,
+        "instance_key": "personal_pronouns_q05_line_queen",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q05_opening_night",
+      "context": {
+        "step_index": 2,
+        "instance_key": "personal_pronouns_q05_line_family",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q05_opening_night",
+      "context": {
+        "step_index": 3,
+        "instance_key": "personal_pronouns_q05_spell_we",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q05_opening_night",
+      "context": {
+        "step_index": 4,
+        "instance_key": "personal_pronouns_q05_say_i_am_ready",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "personal_pronouns/personal_pronouns__q05_opening_night",
+      "context": {
+        "step_index": 5,
+        "instance_key": "personal_pronouns_q05_say_it_is_a_beautiful_day",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q01_what_is_missing",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_kingdoms_worst_day__q01_nouns_gap",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q01_what_is_missing",
+      "context": {
+        "step_index": 1,
+        "instance_key": "the_kingdoms_worst_day__q01_key_spelling",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q01_what_is_missing",
+      "context": {
+        "step_index": 2,
+        "instance_key": "the_kingdoms_worst_day__q01_key_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q01_what_is_missing",
+      "context": {
+        "step_index": 3,
+        "instance_key": "the_kingdoms_worst_day__q01_gate_message",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+      "context": {
+        "yaml": [
+          "the_kingdoms_worst_day__q01_what_is_missing"
+        ],
+        "unity": [
+          "the_kingdoms_worst_day__the_kingdoms_worst_day__q01_what_is_missing"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_kingdoms_worst_day__q02_verbs_gap",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+      "context": {
+        "step_index": 1,
+        "instance_key": "the_kingdoms_worst_day__q02_action_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+      "context": {
+        "step_index": 2,
+        "instance_key": "the_kingdoms_worst_day__q02_carry_spelling",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
+      "context": {
+        "step_index": 3,
+        "instance_key": "the_kingdoms_worst_day__q02_tool_command",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
+      "context": {
+        "yaml": [
+          "the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
+        ],
+        "unity": [
+          "the_kingdoms_worst_day__the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_kingdoms_worst_day__q03_adjectives_gap",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
+      "context": {
+        "step_index": 1,
+        "instance_key": "the_kingdoms_worst_day__q03_description_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
+      "context": {
+        "step_index": 2,
+        "instance_key": "the_kingdoms_worst_day__q03_adjective_spelling",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
+      "context": {
+        "step_index": 3,
+        "instance_key": "the_kingdoms_worst_day__q03_bright_description",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
+      "context": {
+        "step_index": 4,
+        "instance_key": "the_kingdoms_worst_day__q03_dark_gate_sentence",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "yaml": [
+          "the_kingdoms_worst_day__q03_royal_description_disaster"
+        ],
+        "unity": [
+          "the_kingdoms_worst_day__the_kingdoms_worst_day__q03_royal_description_disaster"
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "yaml": 7,
+        "unity": 5,
+        "yaml_steps": [
+          "play_minigame:7",
+          "play_minigame:7",
+          "return_to_npc",
+          "talk_to_npc",
+          "play_minigame:7",
+          "play_minigame:7",
+          "play_minigame:6"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_kingdoms_worst_day__q04_mixed_sentence_one",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "step_index": 1,
+        "instance_key": "the_kingdoms_worst_day__q04_mixed_sentence_two",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "objective_type_mismatch",
+      "message": "Step 3 maps to Unity objective TalkToNpc but the asset declares CompleteMiniGame.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "step_index": 2,
+        "step_type": "return_to_npc",
+        "yaml": "TalkToNpc",
+        "unity": "CompleteMiniGame"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "objective_type_mismatch",
+      "message": "Step 4 maps to Unity objective TalkToNpc but the asset declares CompleteMiniGame.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "step_index": 3,
+        "step_type": "talk_to_npc",
+        "yaml": "TalkToNpc",
+        "unity": "CompleteMiniGame"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "difficulty_mismatch",
+      "message": "Step 5 minigame difficulty differs between authoring source and Unity asset.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "step_index": 4,
+        "yaml": 7,
+        "unity": "6"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
+      "context": {
+        "step_index": 4,
+        "instance_key": "the_kingdoms_worst_day__q04_transfer_speech",
+        "fields": [
+          "prompt",
+          "targetWord",
+          "extraDistractorCount",
+          "customDistractors",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q01_two_advisors",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_royal_impostor__q01_his_hammer",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q01_two_advisors",
+      "context": {
+        "step_index": 3,
+        "instance_key": "the_royal_impostor__q01_her_brush",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q01_two_advisors",
+      "context": {
+        "step_index": 5,
+        "instance_key": "the_royal_impostor__q01_witness_report",
+        "fields": [
+          "targetWords",
+          "silenceTimeoutSeconds"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "level_mismatch",
+      "message": "level_required differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "yaml": 8,
+        "unity": 1
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "yaml": 7,
+        "unity": 6,
+        "yaml_steps": [
+          "play_minigame:6",
+          "play_minigame:6",
+          "play_minigame:9",
+          "talk_to_npc",
+          "play_minigame:6",
+          "play_minigame:6",
+          "play_minigame:9"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "TalkToNpc",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_royal_impostor__q02_our_sandwiches",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "target_id_mismatch",
+      "message": "Step 2 target differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 1,
+        "step_type": "play_minigame",
+        "yaml": "Exam_Table1_Outside_Gate",
+        "unity": "Wooden_Cart1_Inside_Gate"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "difficulty_mismatch",
+      "message": "Step 2 minigame difficulty differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 1,
+        "yaml": 6,
+        "unity": "9"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 1,
+        "instance_key": "the_royal_impostor__q02_their_sandwiches",
+        "fields": [
+          "prompt",
+          "targetWords",
+          "targetPhrase",
+          "silenceTimeoutSeconds",
+          "allowFuzzyMatch",
+          "referenceClip"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "objective_type_mismatch",
+      "message": "Step 3 maps to Unity objective CompleteMiniGame but the asset declares TalkToNpc.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 2,
+        "step_type": "play_minigame",
+        "yaml": "CompleteMiniGame",
+        "unity": "TalkToNpc"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "objective_type_mismatch",
+      "message": "Step 4 maps to Unity objective TalkToNpc but the asset declares CompleteMiniGame.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 3,
+        "step_type": "talk_to_npc",
+        "yaml": "TalkToNpc",
+        "unity": "CompleteMiniGame"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 4,
+        "instance_key": "the_royal_impostor__q02_your_clue",
+        "fields": [
+          "prompt",
+          "translation",
+          "englishWordsInOrder",
+          "preFilledIndices",
+          "distractorWords"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "target_id_mismatch",
+      "message": "Step 6 target differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 5,
+        "step_type": "play_minigame",
+        "yaml": "Wooden_Cart1_Inside_Gate",
+        "unity": "Exam_Table1_Outside_Gate"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "difficulty_mismatch",
+      "message": "Step 6 minigame difficulty differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 5,
+        "yaml": 6,
+        "unity": "9"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q02_the_witnesses",
+      "context": {
+        "step_index": 5,
+        "instance_key": "the_royal_impostor__q02_my_sandwiches",
+        "fields": [
+          "prompt",
+          "targetWords",
+          "targetPhrase",
+          "silenceTimeoutSeconds",
+          "allowFuzzyMatch",
+          "referenceClip"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "level_mismatch",
+      "message": "level_required differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q03_the_torn_testimony",
+      "context": {
+        "yaml": 9,
+        "unity": 1
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q03_the_torn_testimony",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_royal_impostor__q03_singular_owner_gaps",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q03_the_torn_testimony",
+      "context": {
+        "step_index": 1,
+        "instance_key": "the_royal_impostor__q03_group_perspective_gaps",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q03_the_torn_testimony",
+      "context": {
+        "step_index": 2,
+        "instance_key": "the_royal_impostor__q03_his_her_evidence",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q03_the_torn_testimony",
+      "context": {
+        "step_index": 3,
+        "instance_key": "the_royal_impostor__q03_our_their_evidence",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "level_mismatch",
+      "message": "level_required differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q04_the_ownership_code",
+      "context": {
+        "yaml": 9,
+        "unity": 1
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q04_the_ownership_code",
+      "context": {
+        "step_index": 2,
+        "instance_key": "the_royal_impostor__q04_my_your_checkpoint",
+        "fields": [
+          "translation",
+          "englishWordsInOrder",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q04_the_ownership_code",
+      "context": {
+        "step_index": 5,
+        "instance_key": "the_royal_impostor__q04_our_their_speech",
+        "fields": [
+          "targetWords",
+          "silenceTimeoutSeconds"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 9 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q04_the_ownership_code",
+      "context": {
+        "step_index": 8,
+        "instance_key": "the_royal_impostor__q04_his_her_checkpoint",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "error",
+      "code": "level_mismatch",
+      "message": "level_required differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "yaml": 9,
+        "unity": 1
+      }
+    },
+    {
+      "severity": "error",
+      "code": "step_count_mismatch",
+      "message": "Step count differs between authoring source and Unity asset.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "yaml": 6,
+        "unity": 5,
+        "yaml_steps": [
+          "play_minigame:8",
+          "play_minigame:9",
+          "play_minigame:8",
+          "play_minigame:9",
+          "play_minigame:9",
+          "talk_to_npc"
+        ],
+        "unity_steps": [
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame",
+          "CompleteMiniGame"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "step_index": 0,
+        "instance_key": "the_royal_impostor__q05_my_your_test",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "step_index": 1,
+        "instance_key": "the_royal_impostor__q05_my_your_speech",
+        "fields": [
+          "targetWords",
+          "silenceTimeoutSeconds"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "step_index": 2,
+        "instance_key": "the_royal_impostor__q05_his_her_test",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "step_index": 3,
+        "instance_key": "the_royal_impostor__q05_his_her_speech",
+        "fields": [
+          "targetWords",
+          "silenceTimeoutSeconds"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "the_royal_impostor/the_royal_impostor__the_royal_impostor__q05_the_royal_test",
+      "context": {
+        "step_index": 4,
+        "instance_key": "the_royal_impostor__q05_our_their_test",
+        "fields": [
+          "translation",
+          "preFilledIndices"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "prerequisite_mismatch",
+      "message": "Prerequisites differ between authoring source and Unity asset.",
+      "quest": "verbs_to_be/q03_new_quest",
+      "context": {
+        "yaml": [
+          "line_msochwy"
+        ],
+        "unity": [
+          "q02_new_quest"
+        ]
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q01_the_forgotten_name",
+      "context": {
+        "step_index": 0,
+        "instance_key": "wh_questions_q01_match_first_words",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q01_the_forgotten_name",
+      "context": {
+        "step_index": 1,
+        "instance_key": "wh_questions_q01_ask_name",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q01_the_forgotten_name",
+      "context": {
+        "step_index": 2,
+        "instance_key": "wh_questions_q01_spell_where",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q01_the_forgotten_name",
+      "context": {
+        "step_index": 3,
+        "instance_key": "wh_questions_q01_ask_ship",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q01_the_forgotten_name",
+      "context": {
+        "step_index": 4,
+        "instance_key": "wh_questions_q01_say_what",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q02_the_sailor_who_saw",
+      "context": {
+        "step_index": 0,
+        "instance_key": "wh_questions_q02_ask_sailor",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q02_the_sailor_who_saw",
+      "context": {
+        "step_index": 1,
+        "instance_key": "wh_questions_q02_spell_when",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q02_the_sailor_who_saw",
+      "context": {
+        "step_index": 2,
+        "instance_key": "wh_questions_q02_match_witness_words",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q02_the_sailor_who_saw",
+      "context": {
+        "step_index": 3,
+        "instance_key": "wh_questions_q02_ask_storm",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q02_the_sailor_who_saw",
+      "context": {
+        "step_index": 4,
+        "instance_key": "wh_questions_q02_say_who",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q03_the_night_the_ship_broke",
+      "context": {
+        "step_index": 0,
+        "instance_key": "wh_questions_q03_spell_why",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q03_the_night_the_ship_broke",
+      "context": {
+        "step_index": 1,
+        "instance_key": "wh_questions_q03_ask_broken",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q03_the_night_the_ship_broke",
+      "context": {
+        "step_index": 2,
+        "instance_key": "wh_questions_q03_match_reason_words",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q03_the_night_the_ship_broke",
+      "context": {
+        "step_index": 3,
+        "instance_key": "wh_questions_q03_ask_wind",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q03_the_night_the_ship_broke",
+      "context": {
+        "step_index": 4,
+        "instance_key": "wh_questions_q03_say_how",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q04_six_questions_for_lily",
+      "context": {
+        "step_index": 0,
+        "instance_key": "wh_questions_q04_ask_box",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q04_six_questions_for_lily",
+      "context": {
+        "step_index": 1,
+        "instance_key": "wh_questions_q04_ask_flowers",
+        "fields": [
+          "translation",
+          "preFilledIndices",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q04_six_questions_for_lily",
+      "context": {
+        "step_index": 2,
+        "instance_key": "wh_questions_q04_match_all_six",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q04_six_questions_for_lily",
+      "context": {
+        "step_index": 3,
+        "instance_key": "wh_questions_q04_spell_who",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q04_six_questions_for_lily",
+      "context": {
+        "step_index": 4,
+        "instance_key": "wh_questions_q04_say_friend_question",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 1 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q05_the_light_at_the_tower",
+      "context": {
+        "step_index": 0,
+        "instance_key": "wh_questions_q05_match_mixed",
+        "fields": [
+          "wordTasks"
+        ],
+        "yaml_minigame_id": "word_matching",
+        "unity_minigame_id": "word_matching"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 2 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q05_the_light_at_the_tower",
+      "context": {
+        "step_index": 1,
+        "instance_key": "wh_questions_q05_ask_ghost",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 3 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q05_the_light_at_the_tower",
+      "context": {
+        "step_index": 2,
+        "instance_key": "wh_questions_q05_ask_reason",
+        "fields": [
+          "translation",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "word_ordering",
+        "unity_minigame_id": "word_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 4 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q05_the_light_at_the_tower",
+      "context": {
+        "step_index": 3,
+        "instance_key": "wh_questions_q05_spell_how",
+        "fields": [
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "letter_ordering",
+        "unity_minigame_id": "letter_ordering"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 5 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q05_the_light_at_the_tower",
+      "context": {
+        "step_index": 4,
+        "instance_key": "wh_questions_q05_say_name_question",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
+      }
+    },
+    {
+      "severity": "warning",
+      "code": "minigame_params_mismatch",
+      "message": "Step 6 minigame params differ between YAML and Unity Data SO.",
+      "quest": "wh_questions/wh_questions__q05_the_light_at_the_tower",
+      "context": {
+        "step_index": 5,
+        "instance_key": "wh_questions_q05_say_how_are_you",
+        "fields": [
+          "silenceTimeoutSeconds",
+          "wordRevealDatabase"
+        ],
+        "yaml_minigame_id": "speak_aloud",
+        "unity_minigame_id": "speak_aloud"
       }
     },
     {
       "severity": "info",
       "code": "quest_not_in_unity",
       "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "adjective_crown/q02_whispering_stone",
+      "quest": "articles_a_an/articles_a_an__q01_the_fisherman_with_no_net",
       "context": {
-        "source_path": "questlines\\adjective_crown\\q02_whispering_stone.yaml"
+        "source_path": "questlines\\articles_a_an\\articles_a_an__q01_the_fisherman_with_no_net.yaml"
       }
     },
     {
       "severity": "info",
       "code": "quest_not_in_unity",
       "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "adjective_crown/q03_big_and_small_words",
+      "quest": "articles_a_an/articles_a_an__q02_the_twin_fish",
       "context": {
-        "source_path": "questlines\\adjective_crown\\q03_big_and_small_words.yaml"
+        "source_path": "questlines\\articles_a_an\\articles_a_an__q02_the_twin_fish.yaml"
       }
     },
     {
       "severity": "info",
       "code": "quest_not_in_unity",
       "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "adjective_crown/q04_twelve_basic_adjectives",
+      "quest": "articles_a_an/articles_a_an__q03_the_mixed_up_market",
       "context": {
-        "source_path": "questlines\\adjective_crown\\q04_twelve_basic_adjectives.yaml"
+        "source_path": "questlines\\articles_a_an\\articles_a_an__q03_the_mixed_up_market.yaml"
       }
     },
     {
       "severity": "info",
       "code": "quest_not_in_unity",
       "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "adjective_crown/q05_from_low_to_high",
+      "quest": "articles_a_an/articles_a_an__q04_the_message_in_a_bottle",
       "context": {
-        "source_path": "questlines\\adjective_crown\\q05_from_low_to_high.yaml"
+        "source_path": "questlines\\articles_a_an\\articles_a_an__q04_the_message_in_a_bottle.yaml"
       }
     },
     {
       "severity": "info",
       "code": "quest_not_in_unity",
       "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "adjective_crown/q06_adjective_challenge",
+      "quest": "articles_a_an/articles_a_an__q05_the_tricky_word_in_the_middle",
       "context": {
-        "source_path": "questlines\\adjective_crown\\q06_adjective_challenge.yaml"
+        "source_path": "questlines\\articles_a_an\\articles_a_an__q05_the_tricky_word_in_the_middle.yaml"
+      }
+    },
+    {
+      "severity": "info",
+      "code": "quest_not_in_unity",
+      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
+      "quest": "articles_a_an/articles_a_an__q06_the_net_of_little_words",
+      "context": {
+        "source_path": "questlines\\articles_a_an\\articles_a_an__q06_the_net_of_little_words.yaml"
       }
     },
     {
@@ -152,204 +4435,6 @@
       "quest": "kingdom_nouns/q07_royal_noun_trial",
       "context": {
         "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "missing_verbs/missing_verbs__q01_benny_can_t_build_verbs",
-      "context": {
-        "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "missing_verbs/missing_verbs__q02_the_confused_guard",
-      "context": {
-        "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "missing_verbs/missing_verbs__q03_don_t_let_him_guess",
-      "context": {
-        "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "noun_repair_shop/q01_the_broken_noun_book",
-      "context": {
-        "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "noun_repair_shop/q02_the_runaway_objects",
-      "context": {
-        "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "noun_repair_shop/q03_the_market_name_mixup",
-      "context": {
-        "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "noun_repair_shop/q04_the_kitchen_invasion",
-      "context": {
-        "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "noun_repair_shop/q05_the_castle_label_crisis",
-      "context": {
-        "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "noun_repair_shop/q06_the_great_noun_reopening",
-      "context": {
-        "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "numbers_advanced_homework/q01_numbers_10_20",
-      "context": {
-        "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "numbers_advanced_homework/q02_numbers_20_100",
-      "context": {
-        "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "numbers_advanced_homework/q03_numbers_100_1000",
-      "context": {
-        "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "numbers_advanced_homework/q04_numbers_mixed_review",
-      "context": {
-        "source_path": "questlines\\numbers_advanced_homework\\q04_numbers_mixed_review.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q01_what_is_missing",
-      "context": {
-        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q02_nobody_is_doing_their_job",
-      "context": {
-        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q03_royal_description_disaster",
-      "context": {
-        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_kingdoms_worst_day/the_kingdoms_worst_day__q04_save_the_royal_schedule",
-      "context": {
-        "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_royal_impostor/the_royal_impostor__q01_two_advisors",
-      "context": {
-        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_royal_impostor/the_royal_impostor__q02_the_witnesses",
-      "context": {
-        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_royal_impostor/the_royal_impostor__q03_the_torn_testimony",
-      "context": {
-        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_torn_testimony.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_royal_impostor/the_royal_impostor__q04_the_ownership_code",
-      "context": {
-        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q04_the_ownership_code.yaml"
-      }
-    },
-    {
-      "severity": "info",
-      "code": "quest_not_in_unity",
-      "message": "Quest is authored in YAML/DB but has no QuestDefinitionSO asset in Unity yet.",
-      "quest": "the_royal_impostor/the_royal_impostor__q05_the_royal_test",
-      "context": {
-        "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q05_the_royal_test.yaml"
       }
     }
   ]

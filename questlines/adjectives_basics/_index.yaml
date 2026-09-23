@@ -11,29 +11,29 @@ quests:
     name: "The Painting With No Colors"
     level: 50
     prerequisite: null
-    rewards: { xp: 150, items: [] }
+    rewards: { xp: 525, items: [] }
   - id: adjectives_basics__q02_the_big_tree_and_the_small_bird
     name: "The Big Tree and the Small Bird"
     level: 1
     prerequisite: adjectives_basics__q01_the_painting_with_no_colors
-    rewards: { xp: 175, items: [] }
+    rewards: { xp: 650, items: [] }
   - id: adjectives_basics__q03_the_word_before_the_name
     name: "The Word Before the Name"
     level: 1
     prerequisite: adjectives_basics__q02_the_big_tree_and_the_small_bird
-    rewards: { xp: 200, items: [] }
+    rewards: { xp: 800, items: [] }
   - id: adjectives_basics__q04_happy_faces_and_sad_faces
     name: "Happy Faces and Sad Faces"
     level: 1
     prerequisite: adjectives_basics__q03_the_word_before_the_name
-    rewards: { xp: 225, items: [] }
+    rewards: { xp: 925, items: [] }
   - id: adjectives_basics__q05_the_tree_is_tall
     name: "The Tree Is Tall"
     level: 1
     prerequisite: adjectives_basics__q04_happy_faces_and_sad_faces
-    rewards: { xp: 275, items: [] }
+    rewards: { xp: 1050, items: [] }
   - id: adjectives_basics__q06_the_finished_painting
     name: "The Finished Painting"
     level: 1
     prerequisite: adjectives_basics__q05_the_tree_is_tall
-    rewards: { xp: 350, items: [{ id: coin, amount: 10 }] }
+    rewards: { xp: 1750, items: [{ id: coin, amount: 10 }] }

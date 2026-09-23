@@ -1,0 +1,60 @@
+quest:
+  id: line_msoh2r7m__q01_do
+  name: 'אבני הדיבור: הפועל Do'
+  level_required: 50
+  giver_npc: City Gaurd Info
+  prerequisite: null
+  summary: ''
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 4800
+  items:
+    - id: coin
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: City Gaurd Info
+    dialogue_id: do - does lesson_do - does lesson_q01_new_quest_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q01_new_quest_minigame
+    display_text: "השלם את הפועל עזר הנכון במשפט:\n אני עושה את שיעורי הבית שלי כל\
+      \ יום."
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q01_new_quest_minigame_copy
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      האם אתה אוהב פיצה?'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q01_new_quest_minigame_copy_copy
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      לאן אנחנו הולכים?'
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q01_do_does_do_not_does_not_minigame_2
+    reward_item_id: gem_of_precision
+    reward_amount: 1
+    display_text: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      How_____you know this?'
+  - type: deliver_item
+    npc_id: City Gaurd Info
+    item_id: gem_of_precision
+    amount: 1
+    dialogue_id: do - does lesson_do - does lesson_q01_do_does_do_not_does_not_s07
+    display_text: Deliver 1 Gem of Precision to Fenn the Chatty

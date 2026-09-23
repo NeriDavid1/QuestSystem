@@ -1,0 +1,71 @@
+quest:
+  id: line_msysmv9a__q02_farmer
+  name: תרגול The בחווה
+  level_required: 1
+  giver_npc: Farmer
+  prerequisite: line_msysmv9a__q01_the_these_those
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 2750
+  items:
+    - id: coin
+      amount: 10
+steps:
+  - type: talk_to_npc
+    npc_id: Farmer
+    dialogue_id: line_msysmv9a_line_msysmv9a_q02_the_farmer_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q02_farmer_minigame
+    display_text: צור את המשפט "החזירים המלוכלכים"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q02_farmer_minigame_copy
+    display_text: צור את המשפט "החיטה הגבוהה"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q02_farmer_minigame_copy_copy
+    display_text: צור את המשפט "המים הנקיים"
+  - type: talk_to_npc
+    npc_id: Farmer
+    dialogue_id: line_msysmv9a_line_msysmv9a_q02_farmer_s04
+    count: 1
+    display_text: Talk to Farmer
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q02_farmer_minigame_copy_copy_copy
+    display_text: 'השלימו את המילים במקומות הנכונים, וצרו את המשפט
+
+      "ילד נמצא ליד הכלב"'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q02_farmer_minigame_copy_copy_copy_copy
+    display_text: 'אם אני מדבר על הגרזן של החווה
+
+      אני אגיד:'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q02_farmer_minigame_copy_copy_copy_copy_copy_copy
+    display_text: אם אני חושב לעצמי "תחבוש כובע
+  - type: return_to_npc
+    npc_id: Farmer
+    dialogue_id: line_msysmv9a_line_msysmv9a_q02_farmer_turn_in

@@ -7,10 +7,10 @@ quest:
   summary: עברו את מבחן שמות העצם ופתחו מחדש את החנות.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 300
+  xp: 1500
   items:
-  - id: coin
-    amount: 10
+    - id: coin
+      amount: 50
 steps:
 - type: talk_to_npc
   npc_id: teacher_maya

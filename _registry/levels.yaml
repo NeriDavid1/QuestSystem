@@ -34,8 +34,22 @@ level_curve:
     29: 76000
     30: 85000
 
+# Quest XP is owned by the Unity economy model, not by this file.
+# Source of truth: English Kingdom/docs/wiki/EK-Economy-Balance.md → "Quests"
+# (65 quests, 153,850 XP, synced to QuestSystem + Supabase 2026-09-23).
+# Do NOT use the old 50–150 XP per-quest guideline — it is ~10–30x too low for the
+# live level curve.
 reward_guidelines:
-  early_quest: { xp: "50–150", items: "1 basic" }
-  mid_quest: { xp: "150–400", items: "1–2 useful" }
-  late_quest: { xp: "400–800", items: "1 rare or recipe" }
-  finale_quest: { xp: "800+", items: "unique reward" }
+  source: "EK-Economy-Balance.md#quests"
+  formula: "Target = WeekBase x (1 + 0.25 x (questIndex - 1)); x1.5 on a line's final quest; homework = 0.6 x partner lesson WeekBase"
+  week_base: [450, 525, 600, 750, 1000, 1300, 1700, 2200, 2800, 3700, 4800]
+  coins: "small; 0 on most quests, 10–100 on a line's capstone"
+  items: "optional; 1 useful item or recipe on a capstone"
+
+# Level gate (intentional — do not "fix"):
+# Every questline's first quest has level_required 50 (line_msysmv9a q01: 40).
+# Level 50 is the curve cap, so only guides/teachers can open a questline; learners
+# follow once it is open. Later quests in the line stay at level 1.
+level_gate:
+  first_quest_level_required: 50
+  reason: "Guides-only unlock: teachers open each questline for their class."

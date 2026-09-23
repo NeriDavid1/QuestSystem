@@ -1,0 +1,2798 @@
+{
+ "meta": {
+  "n": 185,
+  "xp": 16340,
+  "digest": "f5e937a2f9680bba739092113d3685f7"
+ },
+ "rows": [
+  {
+   "id": "01a0ada8-a86a-4c73-afe4-2768591a57fa",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "e5769b54-ab39-46f6-b9f4-3645d30c5859",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "0296898c-1fb0-46ba-ae12-04730bbfd51a",
+   "scope": "quest",
+   "quest_id": "ec11e3ea-969f-4c6c-a127-5f83993dc7e1",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_ring",
+   "amount": 20,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": "line_msoh2r7m__q03_do_not"
+  },
+  {
+   "id": "04a9d1ab-5409-43b6-9a6a-cfcc8a82a999",
+   "scope": "quest",
+   "quest_id": "d73fbf4a-176d-4ed2-9e26-ae407a0dba39",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 36,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q06_nouns"
+  },
+  {
+   "id": "05e38fb1-ec20-4d26-a4a1-fba96971f86c",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "f0fb0a30-cb67-4c99-81cf-3addaef07c9a",
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T13:32:38.444291+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "0753d613-ed0e-422c-913c-300a2e596fba",
+   "scope": "quest",
+   "quest_id": "f0de6599-71f3-47ca-b815-409a16870a1c",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q03_numbers_100_1000"
+  },
+  {
+   "id": "0d4e5740-36bd-4778-b87f-c77b6b61e06a",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "d49fca82-cd8c-4206-9984-205ea116e913",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "0da364b5-5715-4ffc-8833-053ac82fa0dc",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "96f01d97-0cdf-4610-b7a1-5a921bd578f4",
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T13:32:38.444291+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "0f534d4b-d00e-435c-bd4b-eabf1eaff228",
+   "scope": "quest",
+   "quest_id": "24c59899-542c-41fd-8758-ac2b5dfb88ed",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "copper_ring",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q04_things"
+  },
+  {
+   "id": "13b93618-6682-4758-b172-c0038ddf6236",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "a3798a5a-c0fd-46c6-bfd1-3c3f3f7ec421",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "13d2b1f8-4962-4b6f-bf39-76262bbfda2c",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "44da812a-59f3-42e2-8005-0721e5175783",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "corn",
+   "amount": 4,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T12:39:57.435118+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "13d7ca38-6869-484e-b6f6-6a372f51ce77",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "76086d87-424b-4daa-818a-880e09141bfd",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "1620da96-380d-4565-a235-14237c62809e",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "b3d15b76-646d-4d43-a8e3-4c6ebcf7b7aa",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "18db52e8-412a-4a5e-8128-9b5c5e950c5d",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "4f7045cb-8769-4910-a0d6-a28d6494e537",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-25T10:36:48.850336+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "19928a28-8f1a-4e46-b7f7-5bed77b9f3d4",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "4c74dd70-f3e3-42b0-850e-146317341e2e",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "1a6f657e-e0ce-415f-a305-b94278010d69",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "f8143ab1-2815-4959-88cb-94b3ba7001e3",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "1bf62ce8-e9d0-4397-a9ab-dca72ba0445a",
+   "scope": "quest",
+   "quest_id": "e80c1ad2-d507-4596-95a0-1cec0fd7880c",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "iron_ore",
+   "amount": 3,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T10:11:18.594622+00:00",
+   "_quest_key": "a__q03_mountain_guide"
+  },
+  {
+   "id": "1d04a76a-e817-4671-a875-04f04364fffa",
+   "scope": "quest",
+   "quest_id": "00a8a35c-bff7-4913-adb3-1dbf3e0dcff6",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q01_numbers_10_20"
+  },
+  {
+   "id": "1e8cd2f6-57aa-4ee6-aea0-4fd89afe76bd",
+   "scope": "quest",
+   "quest_id": "99c36065-ee30-4ddf-b456-257d9711a9bf",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 550,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q04_soup_shield"
+  },
+  {
+   "id": "1ee73a20-a698-48bd-a5cd-9fad3ffd04e6",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ddbc1f8d-527e-49d7-8bce-989cda85d94f",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "25e572ad-bc16-466c-9f72-1f83db67e51e",
+   "scope": "quest",
+   "quest_id": "5499a508-6838-49de-968d-82f1d71af2e4",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 175,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q02_the_big_tree_and_the_small_bird.yaml"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": "adjectives_basics__adjectives_basics__q02_the_big_tree_and_the_small_bird"
+  },
+  {
+   "id": "27d4d4be-ea9d-42e9-8d57-082dd55aa2b8",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "4b3a51d1-455e-4b09-8be8-e33d1b16e221",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "281c4ef4-37f4-4d84-8456-1f27cbc6dc32",
+   "scope": "quest",
+   "quest_id": "0fadad1d-55a8-4724-99c3-c80c8df0d894",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 20,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": "check__q03_the_great_mixing"
+  },
+  {
+   "id": "283b9ec1-bfa1-421a-ac5b-383235a340a0",
+   "scope": "quest",
+   "quest_id": "d1288b68-4cab-4867-861b-b2aa589c060e",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 300,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines/wh_questions/wh_questions__q05_the_light_at_the_tower.yaml"
+   },
+   "created_at": "2026-09-09T10:46:38.368028+00:00",
+   "_quest_key": "wh_questions__q05_the_light_at_the_tower"
+  },
+  {
+   "id": "28e307aa-4d4f-4b71-bfe6-1f06ef67a565",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "79436881-f43e-44eb-b905-0c0fb460cd00",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem_of_speed",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "2b3dfa23-a454-44c3-9234-1e1f5627f6a6",
+   "scope": "quest",
+   "quest_id": "258e90d6-33d9-4e53-8185-b5ed5342eded",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q06_the_finished_painting.yaml"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": "adjectives_basics__adjectives_basics__q06_the_finished_painting"
+  },
+  {
+   "id": "2ce20c3e-2cb0-46d3-8ff3-ddafca7cb0d4",
+   "scope": "quest",
+   "quest_id": "9372afc6-b20d-4ffd-9607-281164d69374",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": "check__q02_the_flower_field"
+  },
+  {
+   "id": "2d9fd110-710a-4627-8fb3-59d62608d5f6",
+   "scope": "quest",
+   "quest_id": "38a5e0ac-b539-4260-aafa-e4429cd889ee",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 20,
+   "source_metadata": {
+    "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
+   },
+   "created_at": "2026-09-15T06:45:14.910444+00:00",
+   "_quest_key": "missing_verbs__missing_verbs__q01_benny_can_t_build_verbs"
+  },
+  {
+   "id": "31a40d30-d0a0-4007-97b8-5090c8abc116",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "876c5184-fb47-48ea-8355-00897c92264d",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "great_axe",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T10:11:18.594622+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "33aaf6c9-9a88-47a0-bb51-2eec7337fec0",
+   "scope": "quest",
+   "quest_id": "9f5529c9-18c5-4168-abf6-73515fbaec2d",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
+   },
+   "created_at": "2026-09-15T06:45:14.910444+00:00",
+   "_quest_key": "missing_verbs__missing_verbs__q03_don_t_let_him_guess"
+  },
+  {
+   "id": "33b8df08-3d3f-4183-85fe-f6c281aadf93",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ecfef283-8946-4862-844c-4972c0b3fa6b",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "power_stone",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "33ec4164-8ab4-4c36-8077-359422e46ea9",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "74dd420c-ac13-4cfd-b449-4380a00179bf",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "34116a6a-fe18-4c7a-a286-93d8c38289b8",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ba4eb06e-23cb-43fd-a9c9-a26c438cedc7",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "enchantment_recipe",
+   "amount": 3,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "34a72f04-6329-4533-915a-b6200874e9cb",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "d625445a-7183-40a7-97e3-11eb2eb2a764",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "3664f070-9f34-48ca-8a60-cb23b6f7d232",
+   "scope": "quest",
+   "quest_id": "2211bdd9-4399-437f-aea7-19fce0e84aed",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q01_what_is_missing.yaml"
+   },
+   "created_at": "2026-09-15T06:59:46.983302+00:00",
+   "_quest_key": "the_kingdoms_worst_day__the_kingdoms_worst_day__q01_what_is_missing"
+  },
+  {
+   "id": "3937dd97-e40f-4a0b-98d4-723e05848dad",
+   "scope": "quest",
+   "quest_id": "f31c0a87-8748-40cd-a177-c0a75c4ec65d",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 225,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\personal_pronouns\\personal_pronouns__q04_the_crowd_scene.yaml"
+   },
+   "created_at": "2026-09-09T10:23:23.575934+00:00",
+   "_quest_key": "personal_pronouns__personal_pronouns__q04_the_crowd_scene"
+  },
+  {
+   "id": "39481a39-dbe0-49f1-861b-e3ff24c59c82",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "e2fa1dfe-fbfd-45b9-a466-b4b417d78741",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "3a2c1823-dd16-41c9-8b66-be090e4c6e8a",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "87188b38-6ea6-4212-88df-5b30b6c13a5d",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "3a99a162-7045-4d11-89ff-ce9a66a935c7",
+   "scope": "quest",
+   "quest_id": "ddef5281-84a2-4ac1-94f6-ba7f47660b73",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines/wh_questions/wh_questions__q01_the_forgotten_name.yaml"
+   },
+   "created_at": "2026-09-09T10:46:38.368028+00:00",
+   "_quest_key": "wh_questions__q01_the_forgotten_name"
+  },
+  {
+   "id": "3abc272c-775b-4b2d-a2d2-68a2d54207cc",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "6c1a3d00-fec1-45d3-bedb-9986d37bc220",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem_of_strengh",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "3cd01085-ff72-40b6-b1ef-76d9ca7e07ab",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "23d60a0b-3ab5-4b6c-be1f-cad7e220f8d2",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "3defba3c-d6be-4e74-b540-77c0e9a5260e",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "8cae88bc-84b0-4a5b-9657-c6c654b47882",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q06_the_finished_painting.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "3e2e0104-df2f-434f-928a-06380521ea88",
+   "scope": "quest",
+   "quest_id": "d90bb213-acf2-4c2c-b0e0-a00c75e08a87",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 450,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q02_castle_on_the_map.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q02_castle_on_the_map"
+  },
+  {
+   "id": "3efa83d9-205b-4840-aeed-b784dc9cd1e7",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "aa557742-deb9-463c-91dc-a5f4428c02c3",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "3f8335a6-7b49-490b-83d9-1b2c6589c40e",
+   "scope": "quest",
+   "quest_id": "eb2b5016-bd47-4bdd-9740-edb09284b49f",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q01_the_broken_noun_book.yaml"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": "noun_repair_shop__q01_the_broken_noun_book"
+  },
+  {
+   "id": "43ef2090-e2ad-4502-94cf-e2b384d6653d",
+   "scope": "quest",
+   "quest_id": "258e90d6-33d9-4e53-8185-b5ed5342eded",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 350,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q06_the_finished_painting.yaml"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": "adjectives_basics__adjectives_basics__q06_the_finished_painting"
+  },
+  {
+   "id": "44378f23-8982-4cdf-b086-85ea09a8bb1d",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "f9e78d40-e8f4-45fc-a85e-1572393df209",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "452b6de9-937f-4f37-8f49-4adcfdfdf746",
+   "scope": "quest",
+   "quest_id": "87f0d68c-d443-47ba-abab-b188ac8b8a44",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 175,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\personal_pronouns\\personal_pronouns__q02_two_actors_one_name.yaml"
+   },
+   "created_at": "2026-09-09T10:23:23.575934+00:00",
+   "_quest_key": "personal_pronouns__personal_pronouns__q02_two_actors_one_name"
+  },
+  {
+   "id": "46ca78e0-0e00-4983-a7d7-f047cb6d0f58",
+   "scope": "quest",
+   "quest_id": "b7fdc713-d988-438c-8e27-402869b056ae",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 250,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": "noun_repair_shop__q05_the_castle_label_crisis"
+  },
+  {
+   "id": "4b15aaf0-414e-4319-92df-cb54f6c98c92",
+   "scope": "quest",
+   "quest_id": "a55d0c59-d9b6-4a35-b05e-6da05eae7bfe",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": "line_msoh2r7m__q04_does_not"
+  },
+  {
+   "id": "4beeddae-c7ab-48d2-845a-7379de6cccd3",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "4f7045cb-8769-4910-a0d6-a28d6494e537",
+   "reward_type": "xp",
+   "xp_amount": 30,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-25T10:36:48.850336+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "4c5b6ecc-ea31-4ec6-b4bd-39612d998eb1",
+   "scope": "quest",
+   "quest_id": "d7ffe1c1-4567-474c-aa44-e2a7b44e3b6a",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q01_two_advisors.yaml"
+   },
+   "created_at": "2026-09-07T08:47:35.474285+00:00",
+   "_quest_key": "the_royal_impostor__the_royal_impostor__q01_two_advisors"
+  },
+  {
+   "id": "4c98cbef-3e5d-4931-a20d-88410633bd85",
+   "scope": "quest",
+   "quest_id": "35c7bb36-e208-458c-9f12-a5243b94ee75",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 250,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q04_numbers_mixed_review.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q04_numbers_mixed_review"
+  },
+  {
+   "id": "4f1926be-06d6-472b-b97c-1dd2ae5e452c",
+   "scope": "quest",
+   "quest_id": "aea92980-0f07-4a5d-b68b-950c7471a55a",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T13:32:38.444291+00:00",
+   "_quest_key": "line_thisorthat__q03_knowledge_advisors"
+  },
+  {
+   "id": "4f661e86-d941-4086-8402-806b8292ca7c",
+   "scope": "quest",
+   "quest_id": "0fadad1d-55a8-4724-99c3-c80c8df0d894",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": "check__q03_the_great_mixing"
+  },
+  {
+   "id": "4fbe9cfc-52b3-411f-9f0d-a7ffcc7a1df3",
+   "scope": "quest",
+   "quest_id": "93a383fa-3c28-434e-bda3-df0c91d23f1f",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
+   },
+   "created_at": "2026-09-15T06:45:14.910444+00:00",
+   "_quest_key": "missing_verbs__missing_verbs__q02_the_confused_guard"
+  },
+  {
+   "id": "4ff1db4c-6de7-4612-b371-80e6f2ea1b66",
+   "scope": "quest",
+   "quest_id": "5be8c1ac-77ae-402c-946f-131484c5560b",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-02T08:28:41.895573+00:00",
+   "_quest_key": "line_msysmv9a__q02_farmer"
+  },
+  {
+   "id": "5112e1d1-2434-4357-8118-d98d8e8dfcae",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "092e43ca-a562-435d-a9e9-ff641f34e22f",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_rune",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "53bb44f2-d89b-4bb2-a634-0c3ef0c94364",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "7eaceb9d-6902-4dc2-a457-a241f2e25e13",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 400,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "5588a812-4382-4f35-b5f7-37ba367d163f",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "4c07f1f2-12e5-4097-b445-fc0621450e36",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "576c314a-67b3-4171-8394-8f377660f215",
+   "scope": "quest",
+   "quest_id": "a845e896-4b4b-4cfd-9c36-c38928c64e02",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 50,
+   "source_metadata": {
+    "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+   },
+   "created_at": "2026-09-15T06:59:46.983302+00:00",
+   "_quest_key": "the_kingdoms_worst_day__the_kingdoms_worst_day__q04_save_the_royal_schedule"
+  },
+  {
+   "id": "59ace2e0-a3ca-426c-af73-f1927a704094",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "b70938d1-3d06-410d-80aa-ca8fadba117f",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "herbs",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "59de6e8a-f916-4c8a-95a3-c3749084070e",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "310c6888-2d44-4737-adef-9c0abf086c1a",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "5b9c870f-fc04-41e2-8729-6a3260541758",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "7bb2eb8a-f64c-471b-8683-3d689bb180af",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "5dc29cce-fc8f-42e7-a87b-1e6563182d1f",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "11b210f8-09e0-43f1-bbe9-9869129362f3",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_rune",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "5edd86d2-f032-4cae-b8a5-efc2704dc362",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "cab04fc8-2a7f-475a-923c-799903411708",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_rune",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "600f4f0b-700a-442d-83ff-4f52899aca15",
+   "scope": "quest",
+   "quest_id": "dcfe3820-afc1-4232-8772-0e00a6ba6874",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 500,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q03_crown_soup.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q03_crown_soup"
+  },
+  {
+   "id": "60b5abd1-4bfe-476b-8667-0c881b597211",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "655320ea-c490-4b4a-846a-535008042f13",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "61387c52-4acd-4355-a6a3-3e828681e90f",
+   "scope": "quest",
+   "quest_id": "c68b53fb-0326-4a71-a523-e40c53b814c6",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_ring",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-11T07:35:23.198541+00:00",
+   "_quest_key": "q01_new_quest"
+  },
+  {
+   "id": "642ae2f7-b500-45f2-acd4-19fb571d1bdb",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "b36b0dce-67c4-4433-b7c1-2bc2262708d3",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "enchantment_recipe",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "646ea044-a504-4207-8bfc-26ccad46a6db",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "7416400a-50ae-4958-9f46-d419c2a056db",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "64ff80b9-4432-4e33-b7dc-a13364a3c0db",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ab65f937-2386-4ca2-b71c-036856d01f74",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "65b513f7-dddb-4cec-89e6-1cbfe54739ce",
+   "scope": "quest",
+   "quest_id": "7af38922-c962-4120-b52e-4389dc6ee3a0",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T13:32:38.444291+00:00",
+   "_quest_key": "line_thisorthat__q02_old_woman"
+  },
+  {
+   "id": "67c0c115-0b1d-4a72-be93-cd1da25b0c2a",
+   "scope": "quest",
+   "quest_id": "ad63c40f-61dc-4a22-8753-a3c59977f4d8",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q03_royal_description_disaster.yaml"
+   },
+   "created_at": "2026-09-15T06:59:46.983302+00:00",
+   "_quest_key": "the_kingdoms_worst_day__the_kingdoms_worst_day__q03_royal_description_disaster"
+  },
+  {
+   "id": "6a142402-f953-4f08-85e5-b02a18c19905",
+   "scope": "quest",
+   "quest_id": "b9848966-4155-48bd-acd4-44934c8949d1",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-02T08:28:41.895573+00:00",
+   "_quest_key": "line_msysmv9a__q01_the_these_those"
+  },
+  {
+   "id": "6acdcdf4-eb39-41b3-af6f-718268d781f2",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ae6c55f6-5af4-4fab-b8b6-b4cdacf4f35b",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "6b0f2c60-f9bc-46b9-add2-f04fc498ba48",
+   "scope": "quest",
+   "quest_id": "a55d0c59-d9b6-4a35-b05e-6da05eae7bfe",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 50,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": "line_msoh2r7m__q04_does_not"
+  },
+  {
+   "id": "6b141b0c-e670-4163-ac60-56f42ae0d88c",
+   "scope": "quest",
+   "quest_id": "ec891c60-51b0-4834-8d76-a3651c777f5a",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:11:06.715021+00:00",
+   "_quest_key": "daily_quests_thursday_numbers__q01_market_day"
+  },
+  {
+   "id": "6b3c8b30-10d8-40ee-87da-ee8fc33b4f53",
+   "scope": "quest",
+   "quest_id": "9b454217-07b2-456b-8a5a-37f6da8bbf51",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\personal_pronouns\\personal_pronouns__q01_the_notebook_ran_out.yaml"
+   },
+   "created_at": "2026-09-09T10:23:23.575934+00:00",
+   "_quest_key": "personal_pronouns__personal_pronouns__q01_the_notebook_ran_out"
+  },
+  {
+   "id": "6c932d91-7ab0-4497-9723-985983e10bf6",
+   "scope": "quest",
+   "quest_id": "3e0a9e8e-bd24-46f0-b02e-26127431bb6d",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 20,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": "line_msoh2r7m__q01_do"
+  },
+  {
+   "id": "6d3d8784-ca14-4fc4-b3dd-3886d899953f",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "3b863572-1338-459d-b877-b5faed3a17b0",
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T10:11:18.594622+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "70613aad-9d73-4358-8092-266024663903",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ccd1f044-c121-480a-8264-d9c40ac9f4df",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "70bff82c-5856-4448-8ec2-43faf952f6a9",
+   "scope": "quest",
+   "quest_id": "cd247f98-55f3-44fd-b740-6e3de4b4ee40",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 225,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": "noun_repair_shop__q04_the_kitchen_invasion"
+  },
+  {
+   "id": "71ec8930-9899-4398-82b9-07f3b4662a65",
+   "scope": "quest",
+   "quest_id": "c5f73470-fac1-4ebb-b87e-a0dec92ea74f",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q02_nobody_is_doing_their_job.yaml"
+   },
+   "created_at": "2026-09-15T06:59:46.983302+00:00",
+   "_quest_key": "the_kingdoms_worst_day__the_kingdoms_worst_day__q02_nobody_is_doing_their_job"
+  },
+  {
+   "id": "7242fbd0-9a47-4df7-83f6-e1a436efecc7",
+   "scope": "quest",
+   "quest_id": "5be8c1ac-77ae-402c-946f-131484c5560b",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-02T08:28:41.895573+00:00",
+   "_quest_key": "line_msysmv9a__q02_farmer"
+  },
+  {
+   "id": "73e325f5-6a90-4cfd-971d-ebd0f442be1e",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "7584d514-59b4-4471-aca1-d39fca9f35ba",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "75266c26-b448-41c1-a749-4eb3a7c376af",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "b36b0dce-67c4-4433-b7c1-2bc2262708d3",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "7a0b3401-ad33-4c19-a0db-f35ad665d050",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "fc413d78-1402-4872-b9fd-76c2cb763baf",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_rune",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "7a86977f-7658-489a-b74d-4fd4f6b4e5c4",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "6e59b703-2874-41cc-ba1c-ce1590810d50",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "7b95300f-9766-4f92-a3f8-aa3be6bf20c1",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "3b4e4a87-15d2-486c-8603-82db43ce75f4",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "herbs",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "7b990f72-dfd5-41d8-9726-fae58f2ed528",
+   "scope": "quest",
+   "quest_id": "d1288b68-4cab-4867-861b-b2aa589c060e",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "source_path": "questlines/wh_questions/wh_questions__q05_the_light_at_the_tower.yaml"
+   },
+   "created_at": "2026-09-09T10:46:38.368028+00:00",
+   "_quest_key": "wh_questions__q05_the_light_at_the_tower"
+  },
+  {
+   "id": "7ca0f53c-5bf5-4ff6-b192-e80bdcdf5015",
+   "scope": "quest",
+   "quest_id": "0fadad1d-55a8-4724-99c3-c80c8df0d894",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_ring",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": "check__q03_the_great_mixing"
+  },
+  {
+   "id": "7dd0fd67-e214-4090-b67f-4c3863cadf49",
+   "scope": "quest",
+   "quest_id": "ec11e3ea-969f-4c6c-a127-5f83993dc7e1",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": "line_msoh2r7m__q03_do_not"
+  },
+  {
+   "id": "7de3bbd4-4285-4404-84c2-0c11c94e5c8d",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "876c5184-fb47-48ea-8355-00897c92264d",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T10:11:18.594622+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "806278b1-0d36-4de4-85a7-db917ddc922d",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "455d7109-4baa-4252-9ce0-cf599e050a94",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "herbs",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "812d0224-ea4c-470a-8a09-1b5a89cd22c5",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ad7bf299-225b-4cb3-81f3-fce951f8fcc4",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem_of_life",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "82c6cff9-64ca-4379-a645-5120e28c99fc",
+   "scope": "quest",
+   "quest_id": "4e6abc59-96db-4d41-bcb1-c190f58d5ed2",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 250,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q03_the_torn_testimony.yaml"
+   },
+   "created_at": "2026-09-07T08:47:35.474285+00:00",
+   "_quest_key": "the_royal_impostor__the_royal_impostor__q03_the_torn_testimony"
+  },
+  {
+   "id": "838a51dd-12c1-4b22-8579-b2f19013fa32",
+   "scope": "quest",
+   "quest_id": "d73fbf4a-176d-4ed2-9e26-ae407a0dba39",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 250,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q06_nouns.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q06_nouns"
+  },
+  {
+   "id": "83e874e3-ace0-4f51-9bfe-156b69c03d8d",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "c16c898b-367a-48f4-991e-7f6c85be4151",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "87bf934b-cc5b-436d-9ffa-616c9b4c25ea",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "178c2973-a3c9-49e2-a695-0c0f617fbe7d",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "power_stone",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "88f0ef6e-972d-43ac-b9c7-8f185f27bddc",
+   "scope": "quest",
+   "quest_id": "c82710b0-644b-4a16-a3bd-7832d2a08914",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 300,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": "noun_repair_shop__q06_the_great_noun_reopening"
+  },
+  {
+   "id": "8bc25439-f54b-48e0-99e5-dca7a923e251",
+   "scope": "quest",
+   "quest_id": "469b3fe2-cd50-4b4b-a234-c9e1341de66a",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 400,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q05_the_royal_test.yaml"
+   },
+   "created_at": "2026-09-07T08:47:35.474285+00:00",
+   "_quest_key": "the_royal_impostor__the_royal_impostor__q05_the_royal_test"
+  },
+  {
+   "id": "8be1d500-73f2-47d9-88fb-30d76d3966a3",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "4d317ef6-ce39-4e30-9d03-d38381f54c9b",
+   "reward_type": "xp",
+   "xp_amount": 10,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "8c966f2c-f0df-46fd-8736-ea075ca07af2",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "455d7109-4baa-4252-9ce0-cf599e050a94",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "91cea583-e9e0-43bb-aeb3-3e594048d029",
+   "scope": "quest",
+   "quest_id": "a845e896-4b4b-4cfd-9c36-c38928c64e02",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_kingdoms_worst_day\\the_kingdoms_worst_day__q04_save_the_royal_schedule.yaml"
+   },
+   "created_at": "2026-09-15T06:59:46.983302+00:00",
+   "_quest_key": "the_kingdoms_worst_day__the_kingdoms_worst_day__q04_save_the_royal_schedule"
+  },
+  {
+   "id": "92d071bc-0f35-46f2-81ef-3acb665e5515",
+   "scope": "quest",
+   "quest_id": "943e799a-9cf2-430f-90f1-040530be1fad",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q02_numbers_20_100"
+  },
+  {
+   "id": "93268b20-499e-42af-a26c-de92a3a6200a",
+   "scope": "quest",
+   "quest_id": "daaaf10e-c57b-4460-8ce5-60eb2bc37dd5",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\personal_pronouns\\personal_pronouns__q03_the_hat_and_the_troupe.yaml"
+   },
+   "created_at": "2026-09-09T10:23:23.575934+00:00",
+   "_quest_key": "personal_pronouns__personal_pronouns__q03_the_hat_and_the_troupe"
+  },
+  {
+   "id": "94bfc2a2-6713-4e76-8dc5-1775b5aec270",
+   "scope": "quest",
+   "quest_id": "1f4846fa-a700-47d3-9938-9e5c174a5d31",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 250,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-02T08:28:41.895573+00:00",
+   "_quest_key": "line_msysmv9a__q04_village_head"
+  },
+  {
+   "id": "952d825e-6eae-41eb-af11-58d97f2fc545",
+   "scope": "quest",
+   "quest_id": "04f47989-1505-451a-85e1-6fac0c3c1b4d",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines/wh_questions/wh_questions__q03_the_night_the_ship_broke.yaml"
+   },
+   "created_at": "2026-09-09T10:46:38.368028+00:00",
+   "_quest_key": "wh_questions__q03_the_night_the_ship_broke"
+  },
+  {
+   "id": "956942c0-55b3-4b4d-bbe3-dabec3e9b66c",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "e6d07241-6470-46a1-a8c0-476e35af4c89",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q04_the_kitchen_invasion.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "9606eceb-6949-4c37-8aae-57dfb3e782e5",
+   "scope": "quest",
+   "quest_id": "aea92980-0f07-4a5d-b68b-950c7471a55a",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "enchantment_recipe",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T13:32:38.444291+00:00",
+   "_quest_key": "line_thisorthat__q03_knowledge_advisors"
+  },
+  {
+   "id": "962079a1-8043-4cd0-a6d8-47f534123223",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "9f81ff5f-1c5e-4e52-ab76-146fe8293624",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "gem_of_precision",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "96591ad7-ea5d-4419-93e0-cfbac78e7bee",
+   "scope": "quest",
+   "quest_id": "c82710b0-644b-4a16-a3bd-7832d2a08914",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 50,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q06_the_great_noun_reopening.yaml"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": "noun_repair_shop__q06_the_great_noun_reopening"
+  },
+  {
+   "id": "96a0411b-3973-488f-b7c0-92eb23ed2605",
+   "scope": "quest",
+   "quest_id": "e80c1ad2-d507-4596-95a0-1cec0fd7880c",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T10:11:18.594622+00:00",
+   "_quest_key": "a__q03_mountain_guide"
+  },
+  {
+   "id": "98eab3d1-1226-40cb-8088-194e570526ed",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "3c4c6908-862f-448a-8ecf-7dece4a0833c",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "9a5dd8ff-598b-4762-be09-f762efbc81b8",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "f974db20-8a25-4a00-ad91-23a2b62290cc",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "9b2655de-817e-4c54-b8b1-677921223922",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "b70938d1-3d06-410d-80aa-ca8fadba117f",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "9dc5b86c-0002-4405-ad5e-75de2aefcbe8",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "7d9a7975-5a9a-47e3-a186-e2d66ad1c4a0",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "9fea5111-5764-460a-a373-1bd40a348838",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "795f43e2-1bdc-40a9-a814-7ecacc58aa2e",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "a1196bbd-acaa-45d3-8e35-5152d04f81a9",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "3b4e4a87-15d2-486c-8603-82db43ce75f4",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "a2f1e2fd-bd83-4fc2-a9a2-a0a84e674ca4",
+   "scope": "quest",
+   "quest_id": "07bf22c5-d315-43c6-b9d4-37bc236a03b5",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 275,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q05_the_tree_is_tall.yaml"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": "adjectives_basics__adjectives_basics__q05_the_tree_is_tall"
+  },
+  {
+   "id": "a308264b-db20-4f90-8af6-683aeb874f10",
+   "scope": "quest",
+   "quest_id": "7af38922-c962-4120-b52e-4389dc6ee3a0",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "ancient_ring",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T13:32:38.444291+00:00",
+   "_quest_key": "line_thisorthat__q02_old_woman"
+  },
+  {
+   "id": "a612ae3f-e5cf-4fdd-8cf8-a6113a905a2a",
+   "scope": "quest",
+   "quest_id": "257c5b55-592d-462d-bd58-f16458846a59",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 300,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\personal_pronouns\\personal_pronouns__q05_opening_night.yaml"
+   },
+   "created_at": "2026-09-09T10:23:23.575934+00:00",
+   "_quest_key": "personal_pronouns__personal_pronouns__q05_opening_night"
+  },
+  {
+   "id": "a63c3fce-07c1-4b2d-b024-b9f6bb69be05",
+   "scope": "quest",
+   "quest_id": "c91d98fb-1c75-4287-8f6b-504abf26d154",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T10:11:18.594622+00:00",
+   "_quest_key": "a__q04_new_quest"
+  },
+  {
+   "id": "a7a29b82-8991-44b0-812f-df6b694c6077",
+   "scope": "quest",
+   "quest_id": "11948314-c33a-4534-95ff-873aab2c5640",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 650,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q06_dragon_identity.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q06_dragon_identity"
+  },
+  {
+   "id": "a85a9753-ca88-475a-a183-682d8aa77826",
+   "scope": "quest",
+   "quest_id": "cc6aeab2-47ed-4aab-b5f5-60e91bec070a",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q03_animals"
+  },
+  {
+   "id": "a885ab1c-ee4d-454e-ae88-88288e6ca63a",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "8a9887fd-c669-4043-b644-48af73d7c7d7",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "a88ad307-04e0-4aae-aa1c-a2482e417539",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "50686b2c-48b8-47e0-8ea0-04ff48d5b49e",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "ac628b41-eb9f-4c2c-b8f6-eefdcb8741da",
+   "scope": "quest",
+   "quest_id": "257c5b55-592d-462d-bd58-f16458846a59",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "source_path": "questlines\\personal_pronouns\\personal_pronouns__q05_opening_night.yaml"
+   },
+   "created_at": "2026-09-09T10:23:23.575934+00:00",
+   "_quest_key": "personal_pronouns__personal_pronouns__q05_opening_night"
+  },
+  {
+   "id": "acea9265-ad37-47e0-9649-26fa46820c1b",
+   "scope": "quest",
+   "quest_id": "c68b53fb-0326-4a71-a523-e40c53b814c6",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-11T07:35:23.198541+00:00",
+   "_quest_key": "q01_new_quest"
+  },
+  {
+   "id": "b1cd4dee-dd1a-4a39-899d-4c39b3057df6",
+   "scope": "quest",
+   "quest_id": "e41bf0e3-6967-47d1-822a-b60b73ca6e20",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 600,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q05_wizard_for_sale.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q05_wizard_for_sale"
+  },
+  {
+   "id": "b551127f-31e6-4f74-b817-f8035f01fc6c",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ab65fcbf-666c-4a76-ba20-5aa68287d9b8",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "b62848d2-22df-4f67-b837-3a9700f320ae",
+   "scope": "quest",
+   "quest_id": "ddbfa2f3-dae6-43ab-a24a-755649f890f4",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 225,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines/wh_questions/wh_questions__q04_six_questions_for_lily.yaml"
+   },
+   "created_at": "2026-09-09T10:46:38.368028+00:00",
+   "_quest_key": "wh_questions__q04_six_questions_for_lily"
+  },
+  {
+   "id": "b659460a-872e-4d31-afe3-430a57efc6e2",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "b3f5508c-70f6-4df7-bed6-efe1a97140ed",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 100,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-25T10:36:48.850336+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "b91e19da-fd5b-4c50-b199-c44818c32337",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "7584d514-59b4-4471-aca1-d39fca9f35ba",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "enchantment_recipe",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "b9edc1d2-eeb5-4899-aead-ac6e6a51102b",
+   "scope": "quest",
+   "quest_id": "9f5529c9-18c5-4168-abf6-73515fbaec2d",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 15,
+   "source_metadata": {
+    "source_path": "questlines\\missing_verbs\\missing_verbs__q03_don_t_let_him_guess.yaml"
+   },
+   "created_at": "2026-09-15T06:45:14.910444+00:00",
+   "_quest_key": "missing_verbs__missing_verbs__q03_don_t_let_him_guess"
+  },
+  {
+   "id": "ba2df1d5-f135-48d1-ac4a-66bafbd425d5",
+   "scope": "quest",
+   "quest_id": "469b3fe2-cd50-4b4b-a234-c9e1341de66a",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 50,
+   "source_metadata": {
+    "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q05_the_royal_test.yaml"
+   },
+   "created_at": "2026-09-07T08:47:35.474285+00:00",
+   "_quest_key": "the_royal_impostor__the_royal_impostor__q05_the_royal_test"
+  },
+  {
+   "id": "ba2f2080-adf4-40d4-9e80-4d5e0ef80a27",
+   "scope": "quest",
+   "quest_id": "78fb6928-dfd3-468f-97fb-3e6b218564d3",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q05_nouns.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q05_nouns"
+  },
+  {
+   "id": "bf05303d-329b-4f45-be0f-a76442a33281",
+   "scope": "quest",
+   "quest_id": "00a8a35c-bff7-4913-adb3-1dbf3e0dcff6",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q01_numbers_10_20.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q01_numbers_10_20"
+  },
+  {
+   "id": "bf852ffc-e017-4c91-9431-6bc87a45556c",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "c16c898b-367a-48f4-991e-7f6c85be4151",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "herbs",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "c640fa4f-498e-45ac-810f-7b6879cb7396",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "c08c9295-4c7e-412c-bb6f-77c837d7e11a",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "power_stone",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q04_soup_shield.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "c9298f0e-ce76-4ab9-ac51-1a05e6f9079d",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "dce1c3e9-5490-4101-91bc-102f1b2aa601",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T12:28:41.029124+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "cb0d7739-5c8a-4f54-894f-edc4b1cb182b",
+   "scope": "quest",
+   "quest_id": "b84e7629-8344-438a-a014-23186077f394",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-11T07:35:23.198541+00:00",
+   "_quest_key": "line_msochwy"
+  },
+  {
+   "id": "cbcc7c16-9db7-4f54-a001-7f4ce2dcdb9e",
+   "scope": "quest",
+   "quest_id": "24c59899-542c-41fd-8758-ac2b5dfb88ed",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q04_things.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q04_things"
+  },
+  {
+   "id": "cbf12067-1f2c-4e08-beb6-d1fa3856271e",
+   "scope": "quest",
+   "quest_id": "35c7bb36-e208-458c-9f12-a5243b94ee75",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 30,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q04_numbers_mixed_review.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q04_numbers_mixed_review"
+  },
+  {
+   "id": "cc1fbcc3-13e2-4300-a7ee-a1c8b529b54e",
+   "scope": "quest",
+   "quest_id": "6198893a-8d28-4bf7-a2c8-1abfbd4e55cf",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q01_the_painting_with_no_colors.yaml"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": "adjectives_basics__adjectives_basics__q01_the_painting_with_no_colors"
+  },
+  {
+   "id": "cd833e42-4f84-46dd-a923-055e6762fc20",
+   "scope": "quest",
+   "quest_id": "8b908093-b56e-4bd1-a52f-bbcd4a2b8971",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": "daily_quests_tuesday_vocabulary_animals__q02_the_soldier_training_ground"
+  },
+  {
+   "id": "cea671c7-c96c-49bc-a86b-f1f193a2a6bd",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "ab65f937-2386-4ca2-b71c-036856d01f74",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "enchantment_recipe",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "cface4c6-0b0d-4ca4-8b48-6ad0ff517b2d",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "96d70005-1a8d-499f-99fa-718641f635ed",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "d02c5424-b708-40fe-9f3e-b484daa95fa7",
+   "scope": "quest",
+   "quest_id": "9c0c5774-fb51-4472-a1d0-aec8535f30e8",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q03_the_word_before_the_name.yaml"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": "adjectives_basics__adjectives_basics__q03_the_word_before_the_name"
+  },
+  {
+   "id": "d1266045-da60-412d-8beb-2ed531b0d870",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "eb1f7649-198b-4c4a-8e15-7a9e3e22fb09",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "d14fffaa-3167-49e4-8fd1-bc49a1ea2379",
+   "scope": "quest",
+   "quest_id": "4526bc82-ad16-4f34-a447-bc675cec5ff0",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 700,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q07_royal_noun_trial"
+  },
+  {
+   "id": "d189f977-5bca-41ae-9523-511345dcab6c",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "29b78469-3fde-44dc-9175-b6f03f82dd56",
+   "reward_type": "xp",
+   "xp_amount": 15,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "d333147b-4a4a-48df-ab7d-818663e1815a",
+   "scope": "quest",
+   "quest_id": "888cd506-3d36-4b99-950e-b074bb38f073",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 200,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q03_the_market_name_mixup.yaml"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": "noun_repair_shop__q03_the_market_name_mixup"
+  },
+  {
+   "id": "d3caefe2-4213-4383-81fc-0be25cb27ca2",
+   "scope": "quest",
+   "quest_id": "d5db7bce-e7b6-49ef-bfee-9f06a5650f93",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 225,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\adjectives_basics\\adjectives_basics__q04_happy_faces_and_sad_faces.yaml"
+   },
+   "created_at": "2026-09-22T06:39:11.38086+00:00",
+   "_quest_key": "adjectives_basics__adjectives_basics__q04_happy_faces_and_sad_faces"
+  },
+  {
+   "id": "d46672b0-0b6b-442c-a58d-8d56f1411423",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "213bc7fd-22d7-4612-91a8-0c1fb1597d6a",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-25T10:36:48.850336+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "d4b030f7-7b9c-4f29-a99b-eef6f38b4c08",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "a539d6b3-0a21-490c-93b0-75951058cc17",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T12:28:41.029124+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "d6172155-3f23-4569-96aa-7e15244b27a7",
+   "scope": "quest",
+   "quest_id": "10167e00-12ef-4066-8387-4b77714b9181",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 300,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q04_the_ownership_code.yaml"
+   },
+   "created_at": "2026-09-07T08:47:35.474285+00:00",
+   "_quest_key": "the_royal_impostor__the_royal_impostor__q04_the_ownership_code"
+  },
+  {
+   "id": "d67d257a-2300-4321-9d4b-ded3d9649991",
+   "scope": "quest",
+   "quest_id": "9372afc6-b20d-4ffd-9607-281164d69374",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 30,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T09:32:40.593819+00:00",
+   "_quest_key": "check__q02_the_flower_field"
+  },
+  {
+   "id": "d8a51378-7a17-4e9b-968c-014fb28975e5",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "74d1aab1-0055-4a98-9741-2b21f98b634a",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "power_stone",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q05_the_castle_label_crisis.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "d94fb1fd-3ed0-4990-a5a3-c91d7d4eaf45",
+   "scope": "quest",
+   "quest_id": "93a383fa-3c28-434e-bda3-df0c91d23f1f",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\missing_verbs\\missing_verbs__q02_the_confused_guard.yaml"
+   },
+   "created_at": "2026-09-15T06:45:14.910444+00:00",
+   "_quest_key": "missing_verbs__missing_verbs__q02_the_confused_guard"
+  },
+  {
+   "id": "d98effa0-628d-4d72-9b94-4bf5ef560351",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "f7df711d-66e3-4aed-91b6-c83305960b3f",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-01T12:28:41.029124+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "da9bdc78-d9b4-4fb4-9a6c-f3c8a163ac4d",
+   "scope": "quest",
+   "quest_id": "f0de6599-71f3-47ca-b815-409a16870a1c",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q03_numbers_100_1000.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q03_numbers_100_1000"
+  },
+  {
+   "id": "daccf9be-e663-458d-9947-d483cf123e85",
+   "scope": "quest",
+   "quest_id": "1f4846fa-a700-47d3-9938-9e5c174a5d31",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "health_potion(l)_recipe",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-02T08:28:41.895573+00:00",
+   "_quest_key": "line_msysmv9a__q04_village_head"
+  },
+  {
+   "id": "daf63526-3719-432f-8aa1-48f9729a7db0",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "7eaceb9d-6902-4dc2-a457-a241f2e25e13",
+   "reward_type": "xp",
+   "xp_amount": 250,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "db8ef065-3109-43c5-915d-993b699ef09d",
+   "scope": "quest",
+   "quest_id": "512f14c5-3b0f-447a-9ae9-87d75e55f3a9",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q02_festival.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q02_festival"
+  },
+  {
+   "id": "dcbf6d30-4ac8-4fcd-8f48-422c24b1fa6a",
+   "scope": "quest",
+   "quest_id": "f5b7bf03-3e3c-49e2-94a6-97b81f8395c7",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T10:23:51.057032+00:00",
+   "_quest_key": "monday__q01_gathering_letters"
+  },
+  {
+   "id": "de5bc8cf-2013-47e5-b94e-ceb706c41083",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "96422807-12c8-4c0e-a6af-5d6d03d72ed8",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "dffb1794-e141-47ff-814f-5b5a64deab13",
+   "scope": "quest",
+   "quest_id": "c2609a4d-64d6-494e-8bae-1eccfc6182c6",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 175,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": "noun_repair_shop__q02_the_runaway_objects"
+  },
+  {
+   "id": "e0aabf72-6edf-45f8-8afa-eb1ae1b59b68",
+   "scope": "quest",
+   "quest_id": "cc6aeab2-47ed-4aab-b5f5-60e91bec070a",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "source_path": "questlines\\nouns_festival\\nouns_festival__q03_animals.yaml"
+   },
+   "created_at": "2026-09-15T07:06:10.990815+00:00",
+   "_quest_key": "nouns_festival__nouns_festival__q03_animals"
+  },
+  {
+   "id": "e0d9c7d9-0ab1-4c53-91e0-ec5b980b5448",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "213bc7fd-22d7-4612-91a8-0c1fb1597d6a",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 20,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-25T10:36:48.850336+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "e58e3328-05fa-4cce-b69b-39774465dca0",
+   "scope": "quest",
+   "quest_id": "4526bc82-ad16-4f34-a447-bc675cec5ff0",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 10,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q07_royal_noun_trial.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q07_royal_noun_trial"
+  },
+  {
+   "id": "e67ac1ce-981b-4ba1-b38b-5b57884d7d37",
+   "scope": "quest",
+   "quest_id": "d4b432ee-3b3c-4505-9822-7bc197d0a671",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 175,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines/wh_questions/wh_questions__q02_the_sailor_who_saw.yaml"
+   },
+   "created_at": "2026-09-09T10:46:38.368028+00:00",
+   "_quest_key": "wh_questions__q02_the_sailor_who_saw"
+  },
+  {
+   "id": "e979d20a-35d9-4786-bf19-9daeb4cb4744",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "310c6888-2d44-4737-adef-9c0abf086c1a",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "ee58bd1f-5d5c-4347-ae4a-6807a4406cac",
+   "scope": "quest",
+   "quest_id": "e2cac430-2e4c-4f59-bf7d-642e14a00507",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 400,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\kingdom_nouns\\q01_roles_without_names.yaml"
+   },
+   "created_at": "2026-08-04T06:18:01.881334+00:00",
+   "_quest_key": "q01_roles_without_names"
+  },
+  {
+   "id": "f0d94842-4d18-4b5b-90c3-7f8601d5a9b1",
+   "scope": "quest",
+   "quest_id": "c91d98fb-1c75-4287-8f6b-504abf26d154",
+   "step_id": null,
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 25,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-19T10:11:18.594622+00:00",
+   "_quest_key": "a__q04_new_quest"
+  },
+  {
+   "id": "f146d948-f652-4a22-9c00-1dc9b7daf1bb",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "4c07f1f2-12e5-4097-b445-fc0621450e36",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "enchantment_recipe",
+   "amount": 1,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-26T18:09:29.033464+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "f17230d1-51fc-43f9-a80c-8dc0e16e0c7b",
+   "scope": "quest",
+   "quest_id": "38a5e0ac-b539-4260-aafa-e4429cd889ee",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 100,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\missing_verbs\\missing_verbs__q01_benny_can_t_build_verbs.yaml"
+   },
+   "created_at": "2026-09-15T06:45:14.910444+00:00",
+   "_quest_key": "missing_verbs__missing_verbs__q01_benny_can_t_build_verbs"
+  },
+  {
+   "id": "f25f43ca-0259-4c16-83db-4b4a7be52344",
+   "scope": "quest",
+   "quest_id": "80f68d11-a086-416e-8633-8250424ae20c",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 250,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\the_royal_impostor\\the_royal_impostor__q02_the_witnesses.yaml"
+   },
+   "created_at": "2026-09-07T08:47:35.474285+00:00",
+   "_quest_key": "the_royal_impostor__the_royal_impostor__q02_the_witnesses"
+  },
+  {
+   "id": "f2d6cd84-f8c0-4233-bcdf-e2d58c809244",
+   "scope": "quest",
+   "quest_id": "af27e10b-c14b-4e25-9137-4024efb9a05e",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": "line_msoh2r7m__q02_does"
+  },
+  {
+   "id": "f4dc252b-e040-45cc-9c21-e2179cd4df13",
+   "scope": "quest",
+   "quest_id": "30e46ce3-de8f-4a7e-8b15-0c1e54797648",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-11T07:35:23.198541+00:00",
+   "_quest_key": "q05_new_quest"
+  },
+  {
+   "id": "f5ed6de7-645c-4595-aa05-c1a7a4e06c07",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "968116d9-9ffd-41ed-9fc9-e76c5548ede4",
+   "reward_type": "xp",
+   "xp_amount": 50,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-24T13:39:04.011409+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "f6e7343b-76c4-4e35-a8aa-bd1c3e541093",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "b3f5508c-70f6-4df7-bed6-efe1a97140ed",
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-08-25T10:36:48.850336+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "f71fcec5-ea07-4a53-a2cb-05fd13abdadb",
+   "scope": "quest",
+   "quest_id": "943e799a-9cf2-430f-90f1-040530be1fad",
+   "step_id": null,
+   "reward_type": "xp",
+   "xp_amount": 150,
+   "item_external_id": null,
+   "amount": null,
+   "source_metadata": {
+    "source_path": "questlines\\numbers_advanced_homework\\q02_numbers_20_100.yaml"
+   },
+   "created_at": "2026-09-15T06:44:24.315526+00:00",
+   "_quest_key": "numbers_advanced_homework__q02_numbers_20_100"
+  },
+  {
+   "id": "f82a7e21-df46-4ced-b6d2-6bcb645ee2fa",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "96422807-12c8-4c0e-a6af-5d6d03d72ed8",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "coin",
+   "amount": 20,
+   "source_metadata": {
+    "local_draft": true
+   },
+   "created_at": "2026-09-09T12:40:25.324423+00:00",
+   "_quest_key": null
+  },
+  {
+   "id": "fd38a10a-2129-4e09-98af-6c1b6dd4798b",
+   "scope": "step",
+   "quest_id": null,
+   "step_id": "5fb0fd68-d854-4266-b843-5edcf9fee77c",
+   "reward_type": "item",
+   "xp_amount": null,
+   "item_external_id": "power_stone",
+   "amount": 1,
+   "source_metadata": {
+    "source_path": "questlines\\noun_repair_shop\\q02_the_runaway_objects.yaml",
+    "source_field": "reward_item_id"
+   },
+   "created_at": "2026-09-15T06:52:42.204865+00:00",
+   "_quest_key": null
+  }
+ ]
+}

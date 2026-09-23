@@ -1,0 +1,44 @@
+questline:
+  id: line_msoh2r7m
+  npc_id: Ghost
+  display_name: סוד פעלי העזר DO / DO NOT, DOES / DOES NOT
+  theme: DO / DO NOT, DOES / DOES NOT
+  quest_count: 4
+  level_range:
+    - 1
+    - 50
+quests:
+  - id: line_msoh2r7m__q01_do
+    name: 'אבני הדיבור: הפועל Do'
+    level: 50
+    prerequisite: null
+    rewards:
+      xp: 4800
+      items:
+        - id: coin
+          amount: 20
+  - id: line_msoh2r7m__q02_does
+    name: 'אבני הדיבור: הפועל Does'
+    level: 1
+    prerequisite: line_msoh2r7m__q01_do
+    rewards:
+      xp: 6000
+      items: []
+  - id: line_msoh2r7m__q03_do_not
+    name: 'אבני הדיבור: שלילה עם Do not'
+    level: 1
+    prerequisite: line_msoh2r7m__q02_does
+    rewards:
+      xp: 7200
+      items:
+        - id: ancient_ring
+          amount: 20
+  - id: line_msoh2r7m__q04_does_not
+    name: 'אבני הדיבור: שלילה עם Does not'
+    level: 1
+    prerequisite: line_msoh2r7m__q03_do_not
+    rewards:
+      xp: 12600
+      items:
+        - id: coin
+          amount: 50

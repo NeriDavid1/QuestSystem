@@ -32,6 +32,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -252,11 +253,16 @@ def parse_quest_definition(path: Path, guid_index: dict[str, Path] | None = None
 
     rewards = data.get("rewards") or {}
     reward_definition_items: list[dict[str, Any]] = []
+    reward_definition_xp: int | None = None
     reward_definition = data.get("rewardDefinition")
     if isinstance(reward_definition, dict) and reward_definition.get("guid") and guid_index:
         reward_path = guid_index.get(str(reward_definition["guid"]).lower())
         if reward_path and reward_path.is_file():
             reward_definition_items = parse_reward_definition(reward_path)
+            bundle = load_unity_yaml(reward_path).get("bundle") or {}
+            reward_definition_xp = sum(
+                int(entry.get("amount") or 0) for entry in bundle.get("xpRewards") or [] if isinstance(entry, dict)
+            )
     return {
         "path": str(path.relative_to(Path(DEFAULT_UNITY_ROOT))),
         "id": quest_id,
@@ -275,6 +281,7 @@ def parse_quest_definition(path: Path, guid_index: dict[str, Path] | None = None
             if isinstance(item, dict) and item.get("itemId")
         ],
         "rewardDefinitionItems": reward_definition_items,
+        "rewardDefinitionXp": reward_definition_xp,
         "objectives": objectives,
     }
 
@@ -285,13 +292,47 @@ def collect_unity_quests(unity_root: Path) -> dict[str, dict[str, Any]]:
     if not unity_root.is_dir():
         return quests
     guid_index = build_guid_index(unity_root)
+    line_ids: dict[Path, str] = {}
     for asset in sorted(unity_root.glob("*/QuestDefinition_*.asset")):
         definition = parse_quest_definition(asset, guid_index=guid_index)
         if not definition:
             continue
-        line_key = asset.parent.name
-        quests[f"{line_key}/{definition['id']}"] = definition
+        folder = asset.parent
+        if folder not in line_ids:
+            # Folders like "do - does lesson" hold line "line_msoh2r7m": key by the QuestLine lineId.
+            line_asset = next(iter(sorted(folder.glob("QuestLine_*.asset"))), None)
+            line_id = load_unity_yaml(line_asset).get("lineId") if line_asset else None
+            line_ids[folder] = str(line_id or folder.name)
+        quest_id = QUEST_ID_ALIASES.get(definition["id"], definition["id"])
+        quests[f"{line_ids[folder]}/{quest_id}"] = definition
     return quests
+
+
+# Unity quest ids whose authoring / Supabase key differs (see unity_to_yaml.QUEST_ID_ALIASES).
+QUEST_ID_ALIASES = {"q02_new_quest": "line_msochwy"}
+QUEST_NUMBER_RE = re.compile(r"(?:^|__)(q\d+)_")
+
+
+def match_bundle_key(key: str, bundle_by_key: dict[str, Any]) -> str | None:
+    """Exact `{line}/{quest}` match, else the unique quest with the same qNN in that line.
+
+    Older YAML dropped the doubled line prefix (personal_pronouns__q01_… vs Unity's
+    personal_pronouns__personal_pronouns__q01_…).
+    """
+    if key in bundle_by_key:
+        return key
+    line_key, quest_id = key.split("/", 1)
+    number = QUEST_NUMBER_RE.search(quest_id)
+    if not number:
+        return None
+    candidates = [
+        candidate
+        for candidate in bundle_by_key
+        if candidate.startswith(f"{line_key}/")
+        and (m := QUEST_NUMBER_RE.search(candidate.split("/", 1)[1]))
+        and m.group(1) == number.group(1)
+    ]
+    return candidates[0] if len(candidates) == 1 else None
 
 
 def bundle_quest_key(line_key: str, quest_key: str) -> str:
@@ -469,16 +510,34 @@ def compare_quest(
             yaml=yaml_xp,
             unity=unity_quest["rewardsXp"],
         )
-    # Item rewards may be granted inline, via a RewardDefinitionSO asset, or
-    # through a mix of both; resolve all sources into the authoring key space.
-    unity_items: dict[str, int] = {}
+    # QuestManager grants ONLY the RewardDefinition bundle when one is assigned, so a
+    # bundle carrying different XP than rewards.xp means players get the bundle value.
+    bundle_xp = unity_quest.get("rewardDefinitionXp")
+    if bundle_xp is not None and int(bundle_xp) != int(unity_quest["rewardsXp"]):
+        issue(
+            "error",
+            "reward_definition_xp_mismatch",
+            "RewardDefinition bundle XP (what the game grants) differs from rewards.xp.",
+            rewards_xp=unity_quest["rewardsXp"],
+            bundle_xp=bundle_xp,
+        )
+
+    # Item rewards may be granted inline, via a RewardDefinitionSO asset, or both.
+    # The bundle mirrors rewards.items, so take the larger amount per item rather
+    # than summing (summing reported every mirrored coin reward as doubled).
+    inline_items: dict[str, int] = {}
     for item in unity_quest["rewardsItems"]:
         key = resolve_item_key(item["itemId"], items)
-        unity_items[key] = unity_items.get(key, 0) + int(item["amount"] or 1)
+        inline_items[key] = inline_items.get(key, 0) + int(item["amount"] or 1)
+    bundle_items: dict[str, int] = {}
     for item in unity_quest.get("rewardDefinitionItems") or []:
         key = resolve_item_key(item["itemId"], items)
-        unity_items[key] = unity_items.get(key, 0) + int(item["amount"] or 1)
-    if yaml_items and yaml_items != unity_items:
+        bundle_items[key] = bundle_items.get(key, 0) + int(item["amount"] or 1)
+    unity_items = {
+        key: max(inline_items.get(key, 0), bundle_items.get(key, 0))
+        for key in set(inline_items) | set(bundle_items)
+    }
+    if (yaml_items or unity_items) and yaml_items != unity_items:
         issue(
             "warning",
             "item_reward_mismatch",
@@ -644,7 +703,8 @@ def validate(unity_root: Path) -> dict[str, Any]:
             bundle_by_key[bundle_quest_key(line["key"], quest["key"])] = (line["key"], quest)
 
     unity_paths: set[str] = set()
-    for key, unity_quest in unity_quests.items():
+    for unity_key, unity_quest in unity_quests.items():
+        key = match_bundle_key(unity_key, bundle_by_key) or unity_key
         unity_paths.add(key)
         if key not in bundle_by_key:
             issues.append(

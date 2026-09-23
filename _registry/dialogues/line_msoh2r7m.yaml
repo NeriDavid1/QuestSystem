@@ -1,0 +1,42 @@
+# Dialogue scripts exported from Unity — line_msoh2r7m
+dialogues:
+  do - does lesson_do - does lesson_q01_new_quest_start:
+    speaker: City Gaurd Info
+    lines:
+      - שלום לכם מטיילים! אני צריך את עזרתכם, אנחנו מספר שומרים שאחראיים על פעלי עזר
+        מאוד חשובים!...
+  do - does lesson_do - does lesson_q01_do_does_do_not_does_not_s07:
+    speaker: City Gaurd Info
+    lines:
+      - אני לא מאמין, האבן שלי.. תודה לכם! בזכותכם הכוח שלי חזר אליי!
+  do - does lesson_do - does lesson_q02_do_not_does_not_start:
+    speaker: Cannoneer
+    lines:
+      - השמועות רצות כאן די מהר.. אני יודע שאתם כאן כדי להציל את המצב!
+  do - does lesson_do - does lesson_q02_do_not_does_not_s07:
+    speaker: Cannoneer
+    lines:
+      - "אני לא מאמין! הקסם של האבן שלי חזר! \nשמעתי ששומר נוסף זקוק לעזרתכם תוכלו\
+        \ לעזור לו?"
+  do - does lesson_do - does lesson_q03_questions_start:
+    speaker: Secondary Gate Soldier
+    lines:
+      - 'היי לך אביר אמיץ!
+
+        אני זקוק לעזרתך'
+  do - does lesson_do - does lesson_q03_do_not_s09:
+    speaker: Secondary Gate Soldier
+    lines:
+      - "וואו. הכוחות שלכם מרשימים.. \nאני בחיים לא אשכח זאת"
+  do - does lesson_do - does lesson_q04_does_not_start:
+    speaker: Main Gate Gaurd 1
+    lines:
+      - 'היי לך אביר אמיץ,
+
+        אני זקוק לעזרתכם'
+  do - does lesson_do - does lesson_q04_does_not_s06:
+    speaker: Main Gate Gaurd 1
+    lines:
+      - 'אתם פשוט הגיבורים של הממלכה הזו!
+
+        זאת האבן שלי! והקסם שלה חזר!'

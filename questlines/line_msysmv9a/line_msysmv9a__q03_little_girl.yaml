@@ -1,0 +1,63 @@
+quest:
+  id: line_msysmv9a__q03_little_girl
+  name: 'These או Those: קרוב ורחוק'
+  level_required: 1
+  giver_npc: Little Girl
+  prerequisite: line_msysmv9a__q02_farmer
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 3300
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: Little Girl
+    dialogue_id: line_msysmv9a_line_msysmv9a_q03_little_girl_start
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q03_little_girl_minigame
+    display_text: 'אם נדבר על המגפיים המלוכלכות שנמצאות קרובות אליי, נגיד:
+
+      "_____ boots are so dirty!"'
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q03_little_girl_minigame_copy
+    display_text: 'אם נדבר על העצים הנמצאים מעבר לנהר המרוחק, נגיד:
+
+      "_____ trees are green"'
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q03_little_girl_minigame_copy_copy
+    display_text: 'ומה לגבי השיקויים שאצלך בתיק, איך נשלים את המשפט?
+
+      "_____ potions are in my bag"'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q03_little_girl_minigame_2
+    display_text: 'כאשר נדבר על חבורת ילדים הקרובה אלינו, נגיד:
+
+      '
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q03_little_girl_minigame_2_copy
+    display_text: 'כאשר נדבר על חבורת ילדים הרחוקה מאיתנו, נגיד:
+
+      '
+  - type: return_to_npc
+    npc_id: Little Girl
+    dialogue_id: line_msysmv9a_line_msysmv9a_q03_little_girl_turn_in

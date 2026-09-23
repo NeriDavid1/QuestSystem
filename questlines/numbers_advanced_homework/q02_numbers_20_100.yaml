@@ -7,8 +7,10 @@ quest:
   summary: עזרו לאיכר לסדר את המספרים מ־20 עד 100.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 150
-  items: [{ id: coin, amount: 1 }]
+  xp: 350
+  items:
+    - id: coin
+      amount: 1
 steps:
 - type: talk_to_npc
   npc_id: Farmer

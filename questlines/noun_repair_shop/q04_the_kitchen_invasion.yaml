@@ -7,7 +7,7 @@ quest:
   summary: הצילו את המטבח ותקנו את שמות הכלים והאנשים.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 225
+  xp: 800
   items: []
 steps:
 - type: talk_to_npc

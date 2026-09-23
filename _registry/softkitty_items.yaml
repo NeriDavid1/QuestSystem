@@ -732,13 +732,17 @@ softkitty_items:
     type: material
     description: Sockets on equipment to enchance its abilities.
 
-  ability_owl:
-    image: images/items/ability_owl.png
-    name: Owl
+  cloth_top_basic:
+    image: images/items/cloth_top_basic.png
+    name: Villager Tunic
     softkitty_id: 92
-    softkitty_uid: ability_owl
-    type: skill
-    description: Transform into an owl.
+    softkitty_uid: cloth_top_basic
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 2000
+    tags: [Torso]
 
   ability_bunny:
     image: images/items/ability_bunny.png
@@ -788,6 +792,18 @@ softkitty_items:
     type: skill
     description: A close-range magic slash in front of you.
 
+  cloth_top_ranger:
+    image: images/items/cloth_top_ranger.png
+    name: Ranger Vest
+    softkitty_id: 99
+    softkitty_uid: cloth_top_ranger
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Torso]
+
   ability_ice_crystals:
     image: images/items/ability_ice_crystals.png
     name: Ice Crystals
@@ -835,3 +851,927 @@ softkitty_items:
     softkitty_uid: ability_meteor_shower
     type: skill
     description: Calls down a powerful meteor shower on an area in front of you.
+
+  cloth_bottom_basic:
+    image: images/items/cloth_bottom_basic.png
+    name: Bottom_VillagerSlacks
+    softkitty_id: 106
+    softkitty_uid: cloth_bottom_basic
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 1600
+    tags: [Bottom]
+
+  cloth_boots_basic:
+    image: images/items/cloth_boots_basic.png
+    name: Villager Boots
+    softkitty_id: 107
+    softkitty_uid: cloth_boots_basic
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Boots]
+
+  cloth_hat_basic:
+    image: images/items/cloth_hat_basic.png
+    name: Hat_RusticHood
+    softkitty_id: 108
+    softkitty_uid: cloth_hat_basic
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Helmet]
+
+  cloth_top_battle_dress:
+    image: images/items/cloth_top_battle_dress.png
+    name: Battle Dress
+    softkitty_id: 109
+    softkitty_uid: cloth_top_battle_dress
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Torso]
+
+  cloth_top_devout_coat:
+    image: images/items/cloth_top_devout_coat.png
+    name: Devout Coat
+    softkitty_id: 110
+    softkitty_uid: cloth_top_devout_coat
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Torso]
+
+  cloth_top_fearsome_garb:
+    image: images/items/cloth_top_fearsome_garb.png
+    name: Fearsome Garb
+    softkitty_id: 111
+    softkitty_uid: cloth_top_fearsome_garb
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Torso]
+
+  cloth_top_meditative_vest:
+    image: images/items/cloth_top_meditative_vest.png
+    name: Meditative Vest
+    softkitty_id: 112
+    softkitty_uid: cloth_top_meditative_vest
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Torso]
+
+  cloth_top_rustic_corset:
+    image: images/items/cloth_top_rustic_corset.png
+    name: Rustic Corset
+    softkitty_id: 113
+    softkitty_uid: cloth_top_rustic_corset
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Torso]
+
+  cloth_top_rustic_tunic:
+    image: images/items/cloth_top_rustic_tunic.png
+    name: Rustic Tunic
+    softkitty_id: 114
+    softkitty_uid: cloth_top_rustic_tunic
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Torso]
+
+  cloth_top_sharp_armor:
+    image: images/items/cloth_top_sharp_armor.png
+    name: Sharp Armor
+    softkitty_id: 115
+    softkitty_uid: cloth_top_sharp_armor
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Torso]
+
+  cloth_top_steel_armor:
+    image: images/items/cloth_top_steel_armor.png
+    name: Steel Armor
+    softkitty_id: 116
+    softkitty_uid: cloth_top_steel_armor
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Torso]
+
+  cloth_top_vanguard_coat:
+    image: images/items/cloth_top_vanguard_coat.png
+    name: Vanguard Coat
+    softkitty_id: 117
+    softkitty_uid: cloth_top_vanguard_coat
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Torso]
+
+  cloth_top_witch_blouse:
+    image: images/items/cloth_top_witch_blouse.png
+    name: Witch Blouse
+    softkitty_id: 118
+    softkitty_uid: cloth_top_witch_blouse
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: top
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Torso]
+
+  cloth_bottom_apron_skirt:
+    image: images/items/cloth_bottom_apron_skirt.png
+    name: Bottom_ApronSkirt
+    softkitty_id: 119
+    softkitty_uid: cloth_bottom_apron_skirt
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Bottom]
+
+  cloth_bottom_cuffed_leggings:
+    image: images/items/cloth_bottom_cuffed_leggings.png
+    name: Bottom_CuffedLeggings
+    softkitty_id: 120
+    softkitty_uid: cloth_bottom_cuffed_leggings
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Bottom]
+
+  cloth_bottom_devout_pants:
+    image: images/items/cloth_bottom_devout_pants.png
+    name: Bottom_DevoutPants
+    softkitty_id: 121
+    softkitty_uid: cloth_bottom_devout_pants
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Bottom]
+
+  cloth_bottom_garter_slacks:
+    image: images/items/cloth_bottom_garter_slacks.png
+    name: Bottom_GarterSlacks
+    softkitty_id: 122
+    softkitty_uid: cloth_bottom_garter_slacks
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Bottom]
+
+  cloth_bottom_meditative_pants:
+    image: images/items/cloth_bottom_meditative_pants.png
+    name: Bottom_MeditativePants
+    softkitty_id: 123
+    softkitty_uid: cloth_bottom_meditative_pants
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Bottom]
+
+  cloth_bottom_meditative_skirt:
+    image: images/items/cloth_bottom_meditative_skirt.png
+    name: Bottom_MeditativeSkirt
+    softkitty_id: 124
+    softkitty_uid: cloth_bottom_meditative_skirt
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Bottom]
+
+  cloth_bottom_rustic_skirt:
+    image: images/items/cloth_bottom_rustic_skirt.png
+    name: Bottom_RusticSkirt
+    softkitty_id: 125
+    softkitty_uid: cloth_bottom_rustic_skirt
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Bottom]
+
+  cloth_bottom_sharp_greaves:
+    image: images/items/cloth_bottom_sharp_greaves.png
+    name: Bottom_SharpGreaves
+    softkitty_id: 126
+    softkitty_uid: cloth_bottom_sharp_greaves
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Bottom]
+
+  cloth_bottom_steel_greaves:
+    image: images/items/cloth_bottom_steel_greaves.png
+    name: Bottom_SteelGreaves
+    softkitty_id: 127
+    softkitty_uid: cloth_bottom_steel_greaves
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Bottom]
+
+  cloth_bottom_strapped_leggings:
+    image: images/items/cloth_bottom_strapped_leggings.png
+    name: Bottom_StrappedLeggings
+    softkitty_id: 128
+    softkitty_uid: cloth_bottom_strapped_leggings
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Bottom]
+
+  cloth_bottom_tattered_pants:
+    image: images/items/cloth_bottom_tattered_pants.png
+    name: Bottom_TatteredPants
+    softkitty_id: 129
+    softkitty_uid: cloth_bottom_tattered_pants
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Bottom]
+
+  cloth_bottom_tight_travel_pants:
+    image: images/items/cloth_bottom_tight_travel_pants.png
+    name: Bottom_TightTravelPants
+    softkitty_id: 130
+    softkitty_uid: cloth_bottom_tight_travel_pants
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Bottom]
+
+  cloth_bottom_villager_long_pants:
+    image: images/items/cloth_bottom_villager_long_pants.png
+    name: Bottom_VillagerLongPants
+    softkitty_id: 131
+    softkitty_uid: cloth_bottom_villager_long_pants
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: bottom
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Bottom]
+
+  cloth_boots_cuffed_boots:
+    image: images/items/cloth_boots_cuffed_boots.png
+    name: Cuffed Boots
+    softkitty_id: 132
+    softkitty_uid: cloth_boots_cuffed_boots
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Boots]
+
+  cloth_boots_fearsome_boots:
+    image: images/items/cloth_boots_fearsome_boots.png
+    name: Fearsome Boots
+    softkitty_id: 133
+    softkitty_uid: cloth_boots_fearsome_boots
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Boots]
+
+  cloth_boots_fencing_boots:
+    image: images/items/cloth_boots_fencing_boots.png
+    name: Fencing Boots
+    softkitty_id: 134
+    softkitty_uid: cloth_boots_fencing_boots
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Boots]
+
+  cloth_boots_forest_long_boots:
+    image: images/items/cloth_boots_forest_long_boots.png
+    name: Forest Long Boots
+    softkitty_id: 135
+    softkitty_uid: cloth_boots_forest_long_boots
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Boots]
+
+  cloth_boots_pointed_shoes:
+    image: images/items/cloth_boots_pointed_shoes.png
+    name: Pointed Shoes
+    softkitty_id: 136
+    softkitty_uid: cloth_boots_pointed_shoes
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Boots]
+
+  cloth_boots_sharp_boots:
+    image: images/items/cloth_boots_sharp_boots.png
+    name: Sharp Boots
+    softkitty_id: 137
+    softkitty_uid: cloth_boots_sharp_boots
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 3000
+    tags: [Boots]
+
+  cloth_boots_steel_sabatons:
+    image: images/items/cloth_boots_steel_sabatons.png
+    name: Steel Sabatons
+    softkitty_id: 138
+    softkitty_uid: cloth_boots_steel_sabatons
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Boots]
+
+  cloth_boots_tied_boots:
+    image: images/items/cloth_boots_tied_boots.png
+    name: Tied Boots
+    softkitty_id: 139
+    softkitty_uid: cloth_boots_tied_boots
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Boots]
+
+  cloth_boots_travel_sandal:
+    image: images/items/cloth_boots_travel_sandal.png
+    name: Travel Sandal
+    softkitty_id: 140
+    softkitty_uid: cloth_boots_travel_sandal
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: boots
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Boots]
+
+  cloth_hat_chain_helmet:
+    image: images/items/cloth_hat_chain_helmet.png
+    name: Hat_ChainHelmet
+    softkitty_id: 141
+    softkitty_uid: cloth_hat_chain_helmet
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Helmet]
+
+  cloth_hat_full_hood:
+    image: images/items/cloth_hat_full_hood.png
+    name: Hat_FullHood
+    softkitty_id: 142
+    softkitty_uid: cloth_hat_full_hood
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Helmet]
+
+  cloth_hat_kettle_helmet:
+    image: images/items/cloth_hat_kettle_helmet.png
+    name: Hat_KettleHelmet
+    softkitty_id: 143
+    softkitty_uid: cloth_hat_kettle_helmet
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Helmet]
+
+  cloth_hat_sharp_helmet:
+    image: images/items/cloth_hat_sharp_helmet.png
+    name: Hat_SharpHelmet
+    softkitty_id: 144
+    softkitty_uid: cloth_hat_sharp_helmet
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Helmet]
+
+  cloth_hat_soliders_helm:
+    image: images/items/cloth_hat_soliders_helm.png
+    name: Hat_SolidersHelm
+    softkitty_id: 145
+    softkitty_uid: cloth_hat_soliders_helm
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Helmet]
+
+  cloth_hat_steel_helmet:
+    image: images/items/cloth_hat_steel_helmet.png
+    name: Hat_SteelHelmet
+    softkitty_id: 146
+    softkitty_uid: cloth_hat_steel_helmet
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Helmet]
+
+  cloth_hat_strudy_helmet:
+    image: images/items/cloth_hat_strudy_helmet.png
+    name: Hat_StrudyHelmet
+    softkitty_id: 147
+    softkitty_uid: cloth_hat_strudy_helmet
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Helmet]
+
+  cloth_hat_witches_hat:
+    image: images/items/cloth_hat_witches_hat.png
+    name: Hat_WitchesHat
+    softkitty_id: 148
+    softkitty_uid: cloth_hat_witches_hat
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Helmet]
+
+  cloth_hat_wizard_hat:
+    image: images/items/cloth_hat_wizard_hat.png
+    name: Hat_WizardHat
+    softkitty_id: 149
+    softkitty_uid: cloth_hat_wizard_hat
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: helmet
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Helmet]
+
+  cloth_gloves_cloth_handwraps:
+    image: images/items/cloth_gloves_cloth_handwraps.png
+    name: Gloves_ClothHandwraps
+    softkitty_id: 150
+    softkitty_uid: cloth_gloves_cloth_handwraps
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Gauntlet]
+
+  cloth_gloves_cuffed_gloves:
+    image: images/items/cloth_gloves_cuffed_gloves.png
+    name: Gloves_CuffedGloves
+    softkitty_id: 151
+    softkitty_uid: cloth_gloves_cuffed_gloves
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Gauntlet]
+
+  cloth_gloves_fearsome_bracers:
+    image: images/items/cloth_gloves_fearsome_bracers.png
+    name: Gloves_FearsomeBracers
+    softkitty_id: 152
+    softkitty_uid: cloth_gloves_fearsome_bracers
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Gauntlet]
+
+  cloth_gloves_leather_armbands:
+    image: images/items/cloth_gloves_leather_armbands.png
+    name: Gloves_LeatherArmbands
+    softkitty_id: 153
+    softkitty_uid: cloth_gloves_leather_armbands
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Gauntlet]
+
+  cloth_gloves_leather_gloves:
+    image: images/items/cloth_gloves_leather_gloves.png
+    name: Gloves_LeatherGloves
+    softkitty_id: 154
+    softkitty_uid: cloth_gloves_leather_gloves
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Gauntlet]
+
+  cloth_gloves_magic_bracers:
+    image: images/items/cloth_gloves_magic_bracers.png
+    name: Gloves_MagicBracers
+    softkitty_id: 155
+    softkitty_uid: cloth_gloves_magic_bracers
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Gauntlet]
+
+  cloth_gloves_ornate_gloves:
+    image: images/items/cloth_gloves_ornate_gloves.png
+    name: Gloves_OrnateGloves
+    softkitty_id: 156
+    softkitty_uid: cloth_gloves_ornate_gloves
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Gauntlet]
+
+  cloth_gloves_rustic_gloves:
+    image: images/items/cloth_gloves_rustic_gloves.png
+    name: Gloves_RusticGloves
+    softkitty_id: 157
+    softkitty_uid: cloth_gloves_rustic_gloves
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Gauntlet]
+
+  cloth_gloves_sharp_gauntlets:
+    image: images/items/cloth_gloves_sharp_gauntlets.png
+    name: Gloves_SharpGauntlets
+    softkitty_id: 158
+    softkitty_uid: cloth_gloves_sharp_gauntlets
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Gauntlet]
+
+  cloth_gloves_steel_gauntlets:
+    image: images/items/cloth_gloves_steel_gauntlets.png
+    name: Gloves_SteelGauntlets
+    softkitty_id: 159
+    softkitty_uid: cloth_gloves_steel_gauntlets
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: gloves
+    rarity_via: upgradeLevel
+    common_price: 12000
+    tags: [Gauntlet]
+
+  cloth_neck_hooded_cape:
+    image: images/items/cloth_neck_hooded_cape.png
+    name: Neck_HoodedCape
+    softkitty_id: 160
+    softkitty_uid: cloth_neck_hooded_cape
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: neck
+    rarity_via: upgradeLevel
+    common_price: 5000
+    tags: [Cape]
+
+  cloth_neck_loose_scarf:
+    image: images/items/cloth_neck_loose_scarf.png
+    name: Neck_LooseScarf
+    softkitty_id: 161
+    softkitty_uid: cloth_neck_loose_scarf
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: neck
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Cape]
+
+  cloth_neck_tattered_muffler:
+    image: images/items/cloth_neck_tattered_muffler.png
+    name: Neck_TatteredMuffler
+    softkitty_id: 162
+    softkitty_uid: cloth_neck_tattered_muffler
+    type: equipment
+    description: BoZo clothing — changes player appearance when equipped.
+    slot: neck
+    rarity_via: upgradeLevel
+    common_price: 1200
+    tags: [Cape]
+
+  drop_cactus_fruit:
+    image: images/items/drop_cactus_fruit.png
+    name: Cactus Fruit
+    softkitty_id: 163
+    softkitty_uid: drop_cactus_fruit
+    type: material
+    description: Monster drop material.
+    monster: Cactus
+    tags: [MonsterDrop]
+
+  drop_cactus_pot:
+    image: images/items/drop_cactus_pot.png
+    name: Cactus Pot
+    softkitty_id: 164
+    softkitty_uid: drop_cactus_pot
+    type: material
+    description: Monster drop material.
+    monster: Cactus
+    tags: [MonsterDrop]
+
+  drop_chest:
+    image: images/items/drop_chest.png
+    name: Chest
+    softkitty_id: 165
+    softkitty_uid: drop_chest
+    type: material
+    description: Monster drop material.
+    monster: Chest
+    tags: [MonsterDrop]
+
+  drop_chest_eye:
+    image: images/items/drop_chest_eye.png
+    name: Chest Eye
+    softkitty_id: 166
+    softkitty_uid: drop_chest_eye
+    type: material
+    description: Monster drop material.
+    monster: Chest
+    tags: [MonsterDrop]
+
+  drop_crab_claw:
+    image: images/items/drop_crab_claw.png
+    name: Crab Claw
+    softkitty_id: 167
+    softkitty_uid: drop_crab_claw
+    type: material
+    description: Monster drop material.
+    monster: Crab
+    tags: [MonsterDrop]
+
+  drop_crab_meat:
+    image: images/items/drop_crab_meat.png
+    name: Crab Meat
+    softkitty_id: 168
+    softkitty_uid: drop_crab_meat
+    type: material
+    description: Monster drop material.
+    monster: Crab
+    tags: [MonsterDrop]
+
+  drop_crab_pearl:
+    image: images/items/drop_crab_pearl.png
+    name: Crab Pearl
+    softkitty_id: 169
+    softkitty_uid: drop_crab_pearl
+    type: material
+    description: Monster drop material.
+    monster: Crab
+    tags: [MonsterDrop]
+
+  drop_crab_shell:
+    image: images/items/drop_crab_shell.png
+    name: Crab Shell
+    softkitty_id: 170
+    softkitty_uid: drop_crab_shell
+    type: material
+    description: Monster drop material.
+    monster: Crab
+    tags: [MonsterDrop]
+
+  drop_jelly_slime:
+    image: images/items/drop_jelly_slime.png
+    name: Jelly Slime
+    softkitty_id: 171
+    softkitty_uid: drop_jelly_slime
+    type: material
+    description: Monster drop material.
+    monster: [Jelly, Turtle]
+    tags: [MonsterDrop]
+
+  drop_jelly_spike:
+    image: images/items/drop_jelly_spike.png
+    name: Jelly Spike
+    softkitty_id: 172
+    softkitty_uid: drop_jelly_spike
+    type: material
+    description: Monster drop material.
+    monster: [Jelly, Turtle]
+    tags: [MonsterDrop]
+
+  drop_monster_chest_fang:
+    image: images/items/drop_monster_chest_fang.png
+    name: Monster Chest Fang
+    softkitty_id: 173
+    softkitty_uid: drop_monster_chest_fang
+    type: material
+    description: Monster drop material.
+    monster: Chest
+    tags: [MonsterDrop]
+
+  drop_mushroom_basket:
+    image: images/items/drop_mushroom_basket.png
+    name: Mushroom Basket
+    softkitty_id: 174
+    softkitty_uid: drop_mushroom_basket
+    type: material
+    description: Monster drop material.
+    monster: Mushroom
+    tags: [MonsterDrop]
+
+  drop_mushroom_cap:
+    image: images/items/drop_mushroom_cap.png
+    name: Mushroom Cap
+    softkitty_id: 175
+    softkitty_uid: drop_mushroom_cap
+    type: material
+    description: Monster drop material.
+    monster: Mushroom
+    tags: [MonsterDrop]
+
+  drop_mushroom_egg:
+    image: images/items/drop_mushroom_egg.png
+    name: Mushroom Egg
+    softkitty_id: 176
+    softkitty_uid: drop_mushroom_egg
+    type: material
+    description: Monster drop material.
+    monster: Mushroom
+    tags: [MonsterDrop]
+
+  drop_mushroom_stem:
+    image: images/items/drop_mushroom_stem.png
+    name: Mushroom Stem
+    softkitty_id: 177
+    softkitty_uid: drop_mushroom_stem
+    type: material
+    description: Monster drop material.
+    monster: Mushroom
+    tags: [MonsterDrop]
+
+  drop_rat_knife:
+    image: images/items/drop_rat_knife.png
+    name: Rat Knife
+    softkitty_id: 178
+    softkitty_uid: drop_rat_knife
+    type: material
+    description: Monster drop material.
+    monster: RatAssassin
+    tags: [MonsterDrop]
+
+  drop_rat_scarf:
+    image: images/items/drop_rat_scarf.png
+    name: Rat Scarf
+    softkitty_id: 179
+    softkitty_uid: drop_rat_scarf
+    type: material
+    description: Monster drop material.
+    monster: RatAssassin
+    tags: [MonsterDrop]
+
+  drop_rat_tail:
+    image: images/items/drop_rat_tail.png
+    name: Rat Tail
+    softkitty_id: 180
+    softkitty_uid: drop_rat_tail
+    type: material
+    description: Monster drop material.
+    monster: RatAssassin
+    tags: [MonsterDrop]
+
+  drop_spider_egg:
+    image: images/items/drop_spider_egg.png
+    name: Spider Egg
+    softkitty_id: 181
+    softkitty_uid: drop_spider_egg
+    type: material
+    description: Monster drop material.
+    monster: Spider
+    tags: [MonsterDrop]
+
+  drop_spider_eyes:
+    image: images/items/drop_spider_eyes.png
+    name: Spider Eyes
+    softkitty_id: 182
+    softkitty_uid: drop_spider_eyes
+    type: material
+    description: Monster drop material.
+    monster: Spider
+    tags: [MonsterDrop]
+
+  drop_spider_fang:
+    image: images/items/drop_spider_fang.png
+    name: Spider Fang
+    softkitty_id: 183
+    softkitty_uid: drop_spider_fang
+    type: material
+    description: Monster drop material.
+    monster: Spider
+    tags: [MonsterDrop]
+
+  drop_spider_web:
+    image: images/items/drop_spider_web.png
+    name: Spider Web
+    softkitty_id: 184
+    softkitty_uid: drop_spider_web
+    type: material
+    description: Monster drop material.
+    monster: Spider
+    tags: [MonsterDrop]
+
+  drop_spiked_jelly_hat:
+    image: images/items/drop_spiked_jelly_hat.png
+    name: Spiked Jelly Hat
+    softkitty_id: 185
+    softkitty_uid: drop_spiked_jelly_hat
+    type: material
+    description: Monster drop material.
+    monster: [Jelly, Turtle]
+    tags: [MonsterDrop]
+
+  drop_spiky_cactus:
+    image: images/items/drop_spiky_cactus.png
+    name: Spiky Cactus
+    softkitty_id: 186
+    softkitty_uid: drop_spiky_cactus
+    type: material
+    description: Monster drop material.
+    monster: Cactus
+    tags: [MonsterDrop]

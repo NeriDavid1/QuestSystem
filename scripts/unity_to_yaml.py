@@ -101,6 +101,7 @@ MINIGAME_VARIANT = {
 
 # Unity QuestObjectiveType -> YAML step type
 OBJECTIVE_TO_STEP = {
+    0: "talk_to_npc",
     1: "reach_location",
     3: "play_minigame",
     4: "deliver_item",
@@ -423,20 +424,28 @@ def parse_quest(
                     "amount": int(item.get("amount") or 1),
                 }
             )
+    # The RewardDefinition bundle mirrors rewards.items (same coins/items), so merge
+    # per item id instead of appending — appending double-counted every grant.
     reward_def_guid = guid_of(data.get("rewardDefinition"))
     if reward_def_guid:
         reward_path = guid_index.get(reward_def_guid.lower())
         if reward_path:
-            reward_items.extend(
-                parse_reward_bundle(reward_path, lambda value: item_key(value, item_keys, item_reverse))
-            )
+            for bundle_item in parse_reward_bundle(
+                reward_path, lambda value: item_key(value, item_keys, item_reverse)
+            ):
+                existing = next((entry for entry in reward_items if entry["id"] == bundle_item["id"]), None)
+                if existing is None:
+                    reward_items.append(bundle_item)
+                else:
+                    existing["amount"] = max(existing["amount"], bundle_item["amount"])
+    prerequisite = (str(data.get("prerequisiteQuestId") or "")).strip() or None
     return {
         "path": asset,
-        "id": quest_id,
+        "id": QUEST_ID_ALIASES.get(quest_id, quest_id),
         "displayName": data.get("displayName"),
         "levelRequired": int(data.get("levelRequired") or 0),
         "giverNpcId": data.get("giverNpcId"),
-        "prerequisiteQuestId": (str(data.get("prerequisiteQuestId") or "")).strip() or None,
+        "prerequisiteQuestId": QUEST_ID_ALIASES.get(prerequisite, prerequisite),
         "waitForNpcTurnIn": bool(data.get("waitForNpcTurnIn")),
         "rewards": {
             "xp": int(rewards.get("xp") or 0),
@@ -507,7 +516,14 @@ def build_steps(
         step: "OrderedDict[str, Any]" = OrderedDict()
         step["type"] = step_type
 
-        if step_type == "reach_location":
+        if step_type == "talk_to_npc":
+            step["npc_id"] = target_id
+            talk_key = add_dialogue_ref(objective.get("dialogue"), target_id)
+            if talk_key:
+                step["dialogue_id"] = talk_key
+            # `count` marks this as a TalkToNpc objective, not the quest's start dialogue.
+            step["count"] = int(objective.get("count") or 1)
+        elif step_type == "reach_location":
             step["location_id"] = target_id
         elif step_type == "play_minigame":
             config_guid = guid_of(objective.get("miniGameConfig"))
@@ -774,6 +790,132 @@ def write_catalogs(unity_root: Path, catalogs: dict[str, list[dict[str, Any]]]) 
         write_yaml(REGISTRY / f"{kind}.yaml", doc, CATALOG_HEADER[kind])
 
 
+# --------------------------------------------------------------------------- #
+# Rewards-only sync (--rewards-only)
+# --------------------------------------------------------------------------- #
+
+# Unity quest ids whose Supabase / YAML key differs (matched by title in the
+# 2026-09 economy sync).
+QUEST_ID_ALIASES = {
+    "q02_new_quest": "line_msochwy",
+}
+
+PLAIN_SCALAR = re.compile(r"^[A-Za-z0-9_()]+$")
+QUEST_NUMBER = re.compile(r"(?:^|__)(q\d+)_")
+
+
+def _scalar(value: Any) -> str:
+    text = str(value)
+    return text if PLAIN_SCALAR.match(text) else '"' + text.replace('"', '\\"') + '"'
+
+
+def render_rewards(rewards: dict[str, Any], flow: bool, indent: int) -> list[str]:
+    items = rewards.get("items") or []
+    pad = " " * indent
+    if flow:
+        rendered = ", ".join(f"{{ id: {_scalar(i['id'])}, amount: {int(i['amount'])} }}" for i in items)
+        return [f"{pad}rewards: {{ xp: {int(rewards.get('xp') or 0)}, items: [{rendered}] }}"]
+    lines = [f"{pad}rewards:", f"{pad}  xp: {int(rewards.get('xp') or 0)}"]
+    if not items:
+        lines.append(f"{pad}  items: []")
+        return lines
+    lines.append(f"{pad}  items:")
+    for item in items:
+        lines.append(f"{pad}    - id: {_scalar(item['id'])}")
+        lines.append(f"{pad}      amount: {int(item['amount'])}")
+    return lines
+
+
+def _indent_of(line: str) -> int:
+    return len(line) - len(line.lstrip(" "))
+
+
+def replace_rewards_node(lines: list[str], start: int, end: int, rewards: dict[str, Any]) -> bool:
+    """Replace the first ``rewards:`` node in lines[start:end]. Returns True when found."""
+    for index in range(start, end):
+        stripped = lines[index].lstrip(" ")
+        if not stripped.startswith("rewards:"):
+            continue
+        indent = _indent_of(lines[index])
+        rest = stripped[len("rewards:"):].strip()
+        stop = index + 1
+        if rest:
+            depth = rest.count("{") + rest.count("[") - rest.count("}") - rest.count("]")
+            while depth > 0 and stop < len(lines):
+                depth += lines[stop].count("{") + lines[stop].count("[")
+                depth -= lines[stop].count("}") + lines[stop].count("]")
+                stop += 1
+        else:
+            while stop < len(lines) and (not lines[stop].strip() or _indent_of(lines[stop]) > indent):
+                stop += 1
+            while stop > index + 1 and not lines[stop - 1].strip():
+                stop -= 1
+        lines[index:stop] = render_rewards(rewards, flow=bool(rest), indent=indent)
+        return True
+    return False
+
+
+def _read_lines(path: Path) -> tuple[list[str], str]:
+    raw = path.read_bytes().decode("utf-8")
+    return raw.splitlines(), "\r\n" if "\r\n" in raw else "\n"
+
+
+def _write_lines(path: Path, lines: list[str], newline: str) -> None:
+    path.write_bytes((newline.join(lines) + newline).encode("utf-8"))
+
+
+def _match_quest(yaml_id: str, unity_by_id: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+    if yaml_id in unity_by_id:
+        return unity_by_id[yaml_id]
+    number = QUEST_NUMBER.search(yaml_id)
+    if not number:
+        return None
+    candidates = [q for qid, q in unity_by_id.items() if (m := QUEST_NUMBER.search(qid)) and m.group(1) == number.group(1)]
+    return candidates[0] if len(candidates) == 1 else None
+
+
+def sync_rewards_only(line_key: str, quests: list[dict[str, Any]]) -> list[str]:
+    """Patch only reward fields of questlines/<line_key>/ (index + detail files)."""
+    folder = QUESTLINES_DIR / line_key
+    unity_by_id = {QUEST_ID_ALIASES.get(q["id"], q["id"]): q for q in quests}
+    changes: list[str] = []
+
+    index_path = folder / "_index.yaml"
+    lines, newline = _read_lines(index_path)
+    id_rows = [i for i, line in enumerate(lines) if re.match(r"^\s*- id:\s*", line)]
+    # only quest entries (the shallowest "- id:"), not reward items like "- id: coin"
+    quest_indent = min((_indent_of(lines[i]) for i in id_rows), default=0)
+    id_rows = [i for i in id_rows if _indent_of(lines[i]) == quest_indent]
+    for position, row in enumerate(id_rows):
+        yaml_id = lines[row].split("id:", 1)[1].strip().strip("'\"")
+        quest = _match_quest(yaml_id, unity_by_id)
+        if quest is None:
+            changes.append(f"  !! {line_key}/_index.yaml: no Unity quest for {yaml_id}")
+            continue
+        end = id_rows[position + 1] if position + 1 < len(id_rows) else len(lines)
+        before = len(lines)
+        if replace_rewards_node(lines, row + 1, end, quest["rewards"]):
+            # keep later row numbers valid after the node changed length
+            shift = len(lines) - before
+            id_rows[position + 1:] = [r + shift for r in id_rows[position + 1:]]
+    _write_lines(index_path, lines, newline)
+
+    for detail in sorted(folder.glob("*.yaml")):
+        if detail.name.startswith("_"):
+            continue
+        detail_lines, detail_newline = _read_lines(detail)
+        quest_id = (load_yaml(detail).get("quest") or {}).get("id") or detail.stem
+        quest = _match_quest(str(quest_id), unity_by_id)
+        if quest is None:
+            changes.append(f"  !! {detail.relative_to(REPO_ROOT)}: no Unity quest for {quest_id}")
+            continue
+        top_level = [i for i, line in enumerate(detail_lines) if line.startswith("rewards:")]
+        if top_level and replace_rewards_node(detail_lines, top_level[0], top_level[0] + 1, quest["rewards"]):
+            _write_lines(detail, detail_lines, detail_newline)
+            changes.append(f"  {line_key}/{quest_id}: xp {quest['rewards']['xp']}, items {quest['rewards']['items']}")
+    return changes
+
+
 def prune_obsolete(active: set[str]) -> list[str]:
     removed: list[str] = []
     for folder in sorted(QUESTLINES_DIR.iterdir()):
@@ -801,6 +943,14 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--unity-root", type=Path, default=DEFAULT_UNITY_ROOT)
     parser.add_argument("--root", type=Path, default=REPO_ROOT)
+    parser.add_argument(
+        "--rewards-only",
+        action="store_true",
+        help=(
+            "Only patch quest rewards (xp/items) in existing questlines/<lineId>/ YAML, "
+            "export lines missing from QuestSystem in full, and never prune or rewrite catalogs."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -833,6 +983,27 @@ def main() -> int:
     catalogs = {kind: parse_catalog(unity_root / relative) for kind, relative in CATALOG_PATHS.items()}
     for kind, entries in catalogs.items():
         print(f"  catalog {kind}: {len(entries)} entries")
+
+    if args.rewards_only:
+        for folder_key in sorted(lines):
+            meta = lines[folder_key]
+            line_key = str(meta["line_id"] or folder_key)
+            if line_key.startswith("minigame_"):
+                print(f"  {line_key}: playtest line, skipped")
+                continue
+            if (QUESTLINES_DIR / line_key / "_index.yaml").exists():
+                quests = [
+                    parsed
+                    for asset in sorted(meta["unity_path"].parent.glob("QuestDefinition_*.asset"))
+                    if (parsed := parse_quest(asset, unity_root, guid_index, item_keys, item_reverse))
+                ]
+                for change in sync_rewards_only(line_key, quests):
+                    print(change)
+            else:
+                print(f"  {line_key}: not in QuestSystem yet, exporting from Unity folder '{folder_key}'")
+                process_line(line_key, meta, unity_root, guid_index, content_fields, item_keys, item_reverse)
+        print("Rewards-only sync complete.")
+        return 0
 
     for line_key in sorted(lines):
         process_line(

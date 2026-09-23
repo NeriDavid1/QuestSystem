@@ -7,8 +7,10 @@ quest:
   summary: 'עזרו לליטל בוי לתקן את מפת המספרים מ־10 עד 20.'
   wait_for_npc_turn_in: false
 rewards:
-  xp: 100
-  items: [{ id: coin, amount: 1 }]
+  xp: 275
+  items:
+    - id: coin
+      amount: 1
 steps:
 - type: talk_to_npc
   npc_id: Little Boy

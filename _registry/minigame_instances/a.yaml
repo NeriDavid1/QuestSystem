@@ -1,0 +1,456 @@
+# Per-step minigame briefs — a
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
+instances:
+  adjectives_mastery_q01_adjectives_minigame:
+    minigame_id: letter_ordering
+    instruction: 'הפסל ממש מלוכלך...כתוב את המילה "מלוכלך" באנגלית '
+    tasks:
+      - 'הפסל ממש מלוכלך...כתוב את המילה "מלוכלך" באנגלית '
+    target: Dirty
+    variant: word_spelling
+    success: DIRTY נכתב נכון
+    params:
+      prompt: 'הפסל ממש מלוכלך...כתוב את המילה "מלוכלך" באנגלית '
+      targetWord: Dirty
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q01_adjectives_minigame_2:
+    minigame_id: letter_ordering
+    instruction: כשמגיע הלילה בעיירה, מאוד חשוך בחוץ... כתוב את המילה "חשוך" באנגלית!
+    tasks:
+      - כשמגיע הלילה בעיירה, מאוד חשוך בחוץ... כתוב את המילה "חשוך" באנגלית!
+    target: Dark
+    variant: word_spelling
+    success: DARK נכתב נכון
+    params:
+      prompt: כשמגיע הלילה בעיירה, מאוד חשוך בחוץ... כתוב את המילה "חשוך" באנגלית!
+      targetWord: Dark
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q01_adjectives_minigame_2_copy:
+    minigame_id: letter_ordering
+    instruction: אם נדליק את המדורה... יהיה פה מאוד בהיר!! כתוב את המילה "בהיר" באנגלית
+    tasks:
+      - אם נדליק את המדורה... יהיה פה מאוד בהיר!! כתוב את המילה "בהיר" באנגלית
+    target: Bright
+    variant: word_spelling
+    success: BRIGHT נכתב נכון
+    params:
+      prompt: אם נדליק את המדורה... יהיה פה מאוד בהיר!! כתוב את המילה "בהיר" באנגלית
+      targetWord: Bright
+      extraDistractorCount: 3
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q01_adjectives_minigame_2_copy_copy:
+    minigame_id: letter_ordering
+    instruction: אי אפשר לפתוח את התיבה אם אנחנו חלשים... כתוב את המילה "חלש" באנגלית
+    tasks:
+      - אי אפשר לפתוח את התיבה אם אנחנו חלשים... כתוב את המילה "חלש" באנגלית
+    target: Weak
+    variant: word_spelling
+    success: WEAK נכתב נכון
+    params:
+      prompt: אי אפשר לפתוח את התיבה אם אנחנו חלשים... כתוב את המילה "חלש" באנגלית
+      targetWord: Weak
+      extraDistractorCount: 3
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q01_adjectives_minigame_2_copy_copy_copy:
+    minigame_id: letter_ordering
+    instruction: אם נרצה לפתוח את התיבה.. נצטרך להיות חזקים! כתוב "חזק" באנגלית
+    tasks:
+      - אם נרצה לפתוח את התיבה.. נצטרך להיות חזקים! כתוב "חזק" באנגלית
+    target: Strong
+    variant: word_spelling
+    success: STRONG נכתב נכון
+    params:
+      prompt: אם נרצה לפתוח את התיבה.. נצטרך להיות חזקים! כתוב "חזק" באנגלית
+      targetWord: Strong
+      extraDistractorCount: 3
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q01_adjectives_minigame_copy:
+    minigame_id: letter_ordering
+    instruction: בוא ננקה אותו, כתוב את המילה "נקי" באנגלית!
+    tasks:
+      - בוא ננקה אותו, כתוב את המילה "נקי" באנגלית!
+    target: Clean
+    variant: word_spelling
+    success: CLEAN נכתב נכון
+    params:
+      prompt: בוא ננקה אותו, כתוב את המילה "נקי" באנגלית!
+      targetWord: Clean
+      extraDistractorCount: 2
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q02_boo_radcliff_minigame:
+    minigame_id: word_ordering
+    instruction: צרו את המשפט "תלמיד חזק"
+    tasks:
+      - צרו את המשפט "תלמיד חזק"
+    target: Strong Student.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צרו את המשפט "תלמיד חזק"
+      translation: null
+      englishWordsInOrder:
+        - Strong
+        - Student
+      preFilledIndices: []
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q02_boo_radcliff_minigame_3:
+    minigame_id: word_ordering
+    instruction: צרו את המשפט "מכשף חכם וחזק" !
+    tasks:
+      - צרו את המשפט "מכשף חכם וחזק" !
+    target: A Smart and Strong wizard.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צרו את המשפט "מכשף חכם וחזק" !
+      translation: null
+      englishWordsInOrder:
+        - A
+        - Smart
+        - and
+        - Strong
+        - wizard
+      preFilledIndices:
+        - 8796094070784
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q02_boo_radcliff_minigame_copy:
+    minigame_id: word_ordering
+    instruction: צרו את המשפט "חולצה נקייה"
+    tasks:
+      - צרו את המשפט "חולצה נקייה"
+    target: Clean Shirt.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צרו את המשפט "חולצה נקייה"
+      translation: null
+      englishWordsInOrder:
+        - Clean
+        - Shirt
+      preFilledIndices: []
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q02_boo_radcliff_minigame_copy_copy:
+    minigame_id: word_ordering
+    instruction: צרו את המשפט "חרב חלשה"
+    tasks:
+      - צרו את המשפט "חרב חלשה"
+    target: Weak Sword.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צרו את המשפט "חרב חלשה"
+      translation: null
+      englishWordsInOrder:
+        - Weak
+        - Sword
+      preFilledIndices: []
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q02_boo_radcliff_minigame_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: צרו את המשפט "שמש בהירה"
+    tasks:
+      - צרו את המשפט "שמש בהירה"
+    target: Bright Sun.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צרו את המשפט "שמש בהירה"
+      translation: null
+      englishWordsInOrder:
+        - Bright
+        - Sun
+      preFilledIndices: []
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q02_boo_radcliff_minigame_copy_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: צרו את המשפט "לילה חשוך"
+    tasks:
+      - צרו את המשפט "לילה חשוך"
+    target: Dark Night.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צרו את המשפט "לילה חשוך"
+      translation: null
+      englishWordsInOrder:
+        - Dark
+        - Night
+      preFilledIndices: []
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q03_mountain_guide_minigame:
+    minigame_id: letter_ordering
+    instruction: תכתבו "נקי יותר" באנגלית, זה יהיה המילה Clean__ ?
+    tasks:
+      - תכתבו "נקי יותר" באנגלית, זה יהיה המילה Clean__ ?
+    target: Cleaner
+    variant: word_spelling
+    success: CLEANER נכתב נכון
+    params:
+      prompt: תכתבו "נקי יותר" באנגלית, זה יהיה המילה Clean__ ?
+      targetWord: Cleaner
+      extraDistractorCount: 4
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q03_mountain_guide_minigame_2:
+    minigame_id: word_ordering
+    instruction: "השלם את המשפט \n\"אני לא חלש, אני חזק יותר ממך\""
+    tasks:
+      - "השלם את המשפט \n\"אני לא חלש, אני חזק יותר ממך\""
+    target: I'm not Weak I'm  Stronger than  you.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "השלם את המשפט \n\"אני לא חלש, אני חזק יותר ממך\""
+      translation: null
+      englishWordsInOrder:
+        - I'm
+        - not
+        - Weak
+        - 'I''m '
+        - Stronger
+        - 'than '
+        - you
+      preFilledIndices:
+        - 1237940260646331149647872000
+      distractorWords:
+        - Weaker
+        - Strong
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q03_mountain_guide_minigame_2_copy:
+    minigame_id: word_ordering
+    instruction: "השלם את המשפט \n\"החדר חשוך מידי\""
+    tasks:
+      - "השלם את המשפט \n\"החדר חשוך מידי\""
+    target: The room is too Dark.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "השלם את המשפט \n\"החדר חשוך מידי\""
+      translation: null
+      englishWordsInOrder:
+        - The
+        - room
+        - is
+        - too
+        - Dark
+      preFilledIndices:
+        - 73786985090932015104
+      distractorWords:
+        - Bright
+        - Darker
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q03_mountain_guide_minigame_copy:
+    minigame_id: letter_ordering
+    instruction: תכתבו "חזק יותר" באנגלית, זה יהיה המילה Strong__ ?
+    tasks:
+      - תכתבו "חזק יותר" באנגלית, זה יהיה המילה Strong__ ?
+    target: Stronger
+    variant: word_spelling
+    success: STRONGER נכתב נכון
+    params:
+      prompt: תכתבו "חזק יותר" באנגלית, זה יהיה המילה Strong__ ?
+      targetWord: Stronger
+      extraDistractorCount: 4
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q03_mountain_guide_minigame_copy_copy:
+    minigame_id: letter_ordering
+    instruction: תכתבו "חשוך יותר" באנגלית, זה יהיה המילה Dark__ ?
+    tasks:
+      - תכתבו "חשוך יותר" באנגלית, זה יהיה המילה Dark__ ?
+    target: Darker
+    variant: word_spelling
+    success: DARKER נכתב נכון
+    params:
+      prompt: תכתבו "חשוך יותר" באנגלית, זה יהיה המילה Dark__ ?
+      targetWord: Darker
+      extraDistractorCount: 3
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q03_mountain_guide_minigame_copy_copy_copy:
+    minigame_id: speak_aloud
+    instruction: 'אם הכלב גדול יותר מהנמלה, באנגלית נגיד:
+
+      The dog is_____than the ant'
+    tasks:
+      - 'אם הכלב גדול יותר מהנמלה, באנגלית נגיד:
+
+        The dog is_____than the ant'
+    target: Bigger
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'אם הכלב גדול יותר מהנמלה, באנגלית נגיד:
+
+        The dog is_____than the ant'
+      targetWords: []
+      targetPhrase: Bigger
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q04_new_quest_minigame_2:
+    minigame_id: word_ordering
+    instruction: "השלם את המילה הנכונה במשפט \n\"היהלום בהיר\""
+    tasks:
+      - "השלם את המילה הנכונה במשפט \n\"היהלום בהיר\""
+    target: The diamond is Bright.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "השלם את המילה הנכונה במשפט \n\"היהלום בהיר\""
+      translation: null
+      englishWordsInOrder:
+        - The
+        - diamond
+        - is
+        - Bright
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - Dark
+        - Strong
+        - Brighter
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q04_new_quest_minigame_3:
+    minigame_id: letter_ordering
+    instruction: "השלם את המשפט: \n\"השרביט הזה הרבה יותר חזק\"\nThis wand is much________."
+    tasks:
+      - "השלם את המשפט: \n\"השרביט הזה הרבה יותר חזק\"\nThis wand is much________."
+    target: stronger
+    variant: word_spelling
+    success: STRONGER נכתב נכון
+    params:
+      prompt: "השלם את המשפט: \n\"השרביט הזה הרבה יותר חזק\"\nThis wand is much________."
+      targetWord: stronger
+      extraDistractorCount: 4
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q04_new_quest_minigame_3_copy:
+    minigame_id: letter_ordering
+    instruction: 'בעברית נגיד: "רצפה מלוכלכת
+
+      באנגלית, השלימו את המשפט
+
+      ______floor'
+    tasks:
+      - 'בעברית נגיד: "רצפה מלוכלכת
+
+        באנגלית, השלימו את המשפט
+
+        ______floor'
+    target: Dirty
+    variant: word_spelling
+    success: DIRTY נכתב נכון
+    params:
+      prompt: 'בעברית נגיד: "רצפה מלוכלכת
+
+        באנגלית, השלימו את המשפט
+
+        ______floor'
+      targetWord: Dirty
+      extraDistractorCount: 3
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q04_new_quest_minigame_3_copy_copy:
+    minigame_id: letter_ordering
+    instruction: 'השלם את האותיות הנכונות במשפט "החרב שלי חדה יותר"
+
+      My sword is sharp__'
+    tasks:
+      - 'השלם את האותיות הנכונות במשפט "החרב שלי חדה יותר"
+
+        My sword is sharp__'
+    target: er
+    variant: word_spelling
+    success: ER נכתב נכון
+    params:
+      prompt: 'השלם את האותיות הנכונות במשפט "החרב שלי חדה יותר"
+
+        My sword is sharp__'
+      targetWord: er
+      extraDistractorCount: 5
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q04_new_quest_minigame_3_copy_copy_copy:
+    minigame_id: speak_aloud
+    instruction: 'אם לילה בחוץ אך הדלקנו מנורה בבית, נוכל להגיד:
+
+      "It is________in the house"'
+    tasks:
+      - 'אם לילה בחוץ אך הדלקנו מנורה בבית, נוכל להגיד:
+
+        "It is________in the house"'
+    target: Brighter
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'אם לילה בחוץ אך הדלקנו מנורה בבית, נוכל להגיד:
+
+        "It is________in the house"'
+      targetWords:
+        - Brighter
+      targetPhrase: null
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q04_new_quest_minigame_3_copy_copy_copy_copy:
+    minigame_id: speak_aloud
+    instruction: 'אם לילה בחוץ אך הדלקנו מנורה בבית, נוכל להגיד:
+
+      "It is_______outside"'
+    tasks:
+      - 'אם לילה בחוץ אך הדלקנו מנורה בבית, נוכל להגיד:
+
+        "It is_______outside"'
+    target: Darker
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'אם לילה בחוץ אך הדלקנו מנורה בבית, נוכל להגיד:
+
+        "It is_______outside"'
+      targetWords:
+        - Darker
+      targetPhrase: null
+      silenceTimeoutSeconds: 0.8
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  adjectives_mastery_q04_new_quest_minigame_4:
+    minigame_id: word_ordering
+    instruction: השלם את המשפט
+    tasks:
+      - השלם את המשפט
+    target: You have strong armor.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: השלם את המשפט
+      translation: null
+      englishWordsInOrder:
+        - You
+        - have
+        - strong
+        - armor
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - weak
+        - dark
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

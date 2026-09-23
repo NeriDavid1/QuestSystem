@@ -8,7 +8,7 @@ quest:
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: adjectives_basics_q06_finish
 rewards:
-  xp: 350
+  xp: 1750
   items:
     - id: coin
       amount: 10

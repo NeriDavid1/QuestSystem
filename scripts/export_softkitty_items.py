@@ -16,6 +16,8 @@ import re
 import shutil
 from pathlib import Path
 
+import yaml
+
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "_registry"
 IMAGES_ITEMS = REGISTRY / "images" / "items"
@@ -34,6 +36,20 @@ TYPE_NAMES = {
     4: "skill",
 }
 
+CLOTHING_STAT_CATALOG = Path("Assets/_OurAssets/Data/Items/ClothingStatCatalog.asset")
+DROPPED_ITEMS = Path("Assets/_OurAssets/Data/DroppedItems")
+
+# SoftKitty tag on a cloth_* item -> equipment slot recorded in catalog metadata.
+CLOTH_SLOT_TAGS = {
+    "Torso": "top",
+    "Bottom": "bottom",
+    "Boots": "boots",
+    "Helmet": "helmet",
+    "Gauntlet": "gloves",
+    "Cape": "neck",  # SoftKitty tags the Neck looks (scarf, muffler, cape) as Cape
+    "Neck": "neck",
+}
+
 INVALID_FILENAME_CHARS = '<>:"/\\|?*'
 
 
@@ -47,6 +63,8 @@ def build_guid_map(unity_root: Path) -> dict[str, Path]:
     roots = [
         unity_root / "Assets" / "_ThirdParty" / "SoftKitty" / "InventoryEngine" / "Textures",
         unity_root / "Assets" / "_OurAssets" / "Art" / "Sprites" / "UI Ability",
+        unity_root / "Assets" / "_OurAssets" / "Art" / "Sprites" / "UI" / "ClothingIcons",
+        unity_root / "Assets" / "_OurAssets" / "Art" / "Sprites" / "UI" / "Drops",
     ]
     guid_re = re.compile(r"^guid:\s*([0-9a-f]{32})\s*$", re.I | re.M)
     mapping: dict[str, Path] = {}
@@ -113,15 +131,29 @@ def parse_items(text: str) -> list[dict]:
         if current is None:
             continue
 
+        if current.get("_in_tags"):
+            if line.startswith("    - "):
+                current["tags"].append(line[len("    - "):].strip())
+                continue
+            current.pop("_in_tags")
+
         if line.startswith("    name:"):
-            current["name"] = line.split(":", 1)[1].strip()
+            current["name"] = unquote_scalar(line.split(":", 1)[1].strip())
         elif line.startswith("    description:"):
-            current["description"] = line.split(":", 1)[1].strip()
+            current["description"] = unquote_scalar(line.split(":", 1)[1].strip())
         elif line.startswith("    type:"):
             try:
                 current["type_id"] = int(line.split(":", 1)[1].strip())
             except ValueError:
                 current["type_id"] = 0
+        elif line.startswith("    price:"):
+            try:
+                current["price"] = int(float(line.split(":", 1)[1].strip()))
+            except ValueError:
+                pass
+        elif line.startswith("    tags:"):
+            current["tags"] = []
+            current["_in_tags"] = True
         elif "icon:" in line and "guid:" in line:
             gm = re.search(r"guid:\s*([0-9a-f]{32})", line, re.I)
             if gm:
@@ -129,8 +161,85 @@ def parse_items(text: str) -> list[dict]:
 
     if current:
         items.append(current)
+    for item in items:
+        item.pop("_in_tags", None)
 
     return items
+
+
+def unquote_scalar(raw: str) -> str:
+    """Decode a single-line Unity YAML scalar ("..."-quoted with \\u escapes, or plain)."""
+    if len(raw) >= 2 and raw[0] == raw[-1] and raw[0] in "\"'":
+        try:
+            value = yaml.safe_load(raw)
+            if isinstance(value, str):
+                return value
+        except yaml.YAMLError:
+            pass
+    return raw
+
+
+def parse_clothing_prices(unity_root: Path) -> dict[str, int]:
+    """cloth uid -> commonPrice from ClothingStatCatalog._lookPrices (rarity multiplies it)."""
+    path = unity_root / CLOTHING_STAT_CATALOG
+    if not path.exists():
+        return {}
+    text = path.read_text(encoding="utf-8", errors="ignore")
+    return {
+        m.group(1): int(m.group(2))
+        for m in re.finditer(r"- itemUid:\s*(\S+)\s*\n\s+commonPrice:\s*(\d+)", text)
+    }
+
+
+def parse_drop_monsters(unity_root: Path) -> dict[str, list[str]]:
+    """drop uid -> monsters whose Gift_<Monster> table references its ContentDefinition."""
+    base = unity_root / DROPPED_ITEMS
+    drops_dir = base / "PossibleItems" / "MonsterDrops"
+    if not drops_dir.exists():
+        return {}
+    gifts = {
+        gift.stem[len("Gift_"):]: gift.read_text(encoding="utf-8", errors="ignore")
+        for gift in sorted((base / "GiftVarients").glob("Gift_*.asset"))
+    }
+    result: dict[str, list[str]] = {}
+    for asset in sorted(drops_dir.glob("*.asset")):
+        uid_match = re.search(r"softKittyItemUid:\s*(\S+)", asset.read_text(encoding="utf-8", errors="ignore"))
+        meta = asset.with_name(asset.name + ".meta")
+        guid_match = (
+            re.search(r"^guid:\s*([0-9a-f]{32})", meta.read_text(encoding="utf-8"), re.M) if meta.exists() else None
+        )
+        if not uid_match or not guid_match:
+            continue
+        monsters = [name for name, text in gifts.items() if guid_match.group(1) in text]
+        if monsters:
+            result[uid_match.group(1)] = monsters
+    return result
+
+
+def classify(item: dict, clothing_prices: dict[str, int], drop_monsters: dict[str, list[str]]) -> dict:
+    """Catalog type + metadata. SoftKitty authors clothing as type 0, so cloth_* is overridden."""
+    uid = item["uid"]
+    tags = list(item.get("tags") or [])
+    extra: dict = {}
+    if uid.startswith("cloth_"):
+        slot_tag = next((tag for tag in tags if tag in CLOTH_SLOT_TAGS), None)
+        extra["type"] = "equipment"
+        extra["slot"] = CLOTH_SLOT_TAGS[slot_tag] if slot_tag else uid.split("_")[1]
+        extra["rarity_via"] = "upgradeLevel"
+        if uid in clothing_prices:
+            extra["common_price"] = clothing_prices[uid]
+    elif uid.startswith("drop_"):
+        extra["type"] = "material"
+        if "MonsterDrop" not in tags:
+            tags.append("MonsterDrop")
+        monsters = drop_monsters.get(uid)
+        if monsters:
+            extra["monster"] = monsters[0] if len(monsters) == 1 else monsters
+    else:
+        extra["type"] = TYPE_NAMES.get(int(item.get("type_id", 0)), "material")
+    if tags and (uid.startswith("cloth_") or uid.startswith("drop_")):
+        extra["tags"] = tags
+    return extra
 
 
 def yaml_escape(value: str) -> str:
@@ -164,6 +273,15 @@ def write_softkitty_yaml(entries: list[dict]) -> None:
             lines.append(f"    description: {yaml_escape(e['description'])}")
         if e.get("image"):
             lines.append(f"    image: {e['image']}")
+        for field in ("slot", "rarity_via", "common_price", "monster", "tags"):
+            value = e.get(field)
+            if value is None:
+                continue
+            if isinstance(value, list):
+                value = "[" + ", ".join(yaml_escape(str(v)) for v in value) + "]"
+            elif isinstance(value, str):
+                value = yaml_escape(value)
+            lines.append(f"    {field}: {value}")
         lines.append("")
 
     OUT_YAML.write_text("\n".join(lines), encoding="utf-8")
@@ -180,6 +298,10 @@ def export(unity_root: Path) -> None:
     items = parse_items(text)
     print(f"parsed {len(uid_to_id)} id mappings, {len(items)} item defs")
 
+    clothing_prices = parse_clothing_prices(unity_root)
+    drop_monsters = parse_drop_monsters(unity_root)
+    print(f"clothing prices: {len(clothing_prices)}, drops with monsters: {len(drop_monsters)}")
+
     guid_map = build_guid_map(unity_root)
     print(f"guid map size: {len(guid_map)}")
 
@@ -194,7 +316,7 @@ def export(unity_root: Path) -> None:
             continue
         softkitty_id = uid_to_id.get(uid)
         # Skip orphan manager keys without item — we only iterate items
-        type_name = TYPE_NAMES.get(int(item.get("type_id", 0)), "material")
+        extra = classify(item, clothing_prices, drop_monsters)
         file_stem = sanitize_file_name(uid)
         rel_image = None
         guid = item.get("icon_guid")
@@ -220,10 +342,10 @@ def export(unity_root: Path) -> None:
                 "id": uid,
                 "name": item.get("name") or uid,
                 "description": item.get("description") or "",
-                "type": type_name,
                 "softkitty_id": softkitty_id,
                 "softkitty_uid": uid,
                 "image": rel_image,
+                **extra,
             }
         )
 

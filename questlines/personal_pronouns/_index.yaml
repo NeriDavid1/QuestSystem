@@ -11,24 +11,24 @@ quests:
     name: "The Notebook Ran Out"
     level: 50
     prerequisite: null
-    rewards: { xp: 150, items: [] }
+    rewards: { xp: 750, items: [] }
   - id: personal_pronouns__q02_two_actors_one_name
     name: "Two Actors, One Name"
     level: 1
     prerequisite: personal_pronouns__q01_the_notebook_ran_out
-    rewards: { xp: 175, items: [] }
+    rewards: { xp: 950, items: [] }
   - id: personal_pronouns__q03_the_hat_and_the_troupe
     name: "The Hat and the Whole Troupe"
     level: 1
     prerequisite: personal_pronouns__q02_two_actors_one_name
-    rewards: { xp: 200, items: [] }
+    rewards: { xp: 1100, items: [] }
   - id: personal_pronouns__q04_the_crowd_scene
     name: "The Crowd Scene"
     level: 1
     prerequisite: personal_pronouns__q03_the_hat_and_the_troupe
-    rewards: { xp: 225, items: [] }
+    rewards: { xp: 1300, items: [] }
   - id: personal_pronouns__q05_opening_night
     name: "Opening Night"
     level: 1
     prerequisite: personal_pronouns__q04_the_crowd_scene
-    rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }
+    rewards: { xp: 2250, items: [{ id: coin, amount: 10 }] }

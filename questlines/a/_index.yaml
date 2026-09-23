@@ -1,0 +1,44 @@
+questline:
+  id: a
+  npc_id: teacher_maya
+  display_name: The Adjectives Mastery
+  theme: בשיעור זה נהפוך למאסטרים של Adjectives - שמות תואר! נלמד על עוד שמות תואר
+    חדשים, על היפוך הסדר כאשר מתארים דברים בתוך משפט, ועל שמות תואר כמילות השוואה
+    (BiggER, SmallER ועוד)!
+  quest_count: 4
+  level_range:
+    - 2
+    - 50
+quests:
+  - id: a__q01_adjectives
+    name: 'Adjectives: מילות התיאור הראשונות'
+    level: 50
+    prerequisite: null
+    rewards:
+      xp: 1700
+      items: []
+  - id: a__q02_boo_radcliff
+    name: 'Adjectives: התואר לפני שם העצם'
+    level: 2
+    prerequisite: a__q01_adjectives
+    rewards:
+      xp: 2100
+      items: []
+  - id: a__q03_mountain_guide
+    name: 'Adjectives: השוואה עם סיומת er'
+    level: 3
+    prerequisite: a__q02_boo_radcliff
+    rewards:
+      xp: 2550
+      items:
+        - id: iron_ore
+          amount: 3
+  - id: a__q04_new_quest
+    name: 'Adjectives: מבחן הסיום'
+    level: 4
+    prerequisite: a__q03_mountain_guide
+    rewards:
+      xp: 4450
+      items:
+        - id: coin
+          amount: 25

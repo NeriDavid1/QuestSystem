@@ -7,7 +7,7 @@ quest:
   summary: "במפרץ הנטוש מחפשים סיבה ואופן. שאלו Why ו-How כדי להבין מה קרה לספינה."
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: wh_questions_q03_finish
-rewards: { xp: 200, items: [] }
+rewards: { xp: 5600, items: [] }
 steps:
   - type: talk_to_npc
     npc_id: Cannoneer

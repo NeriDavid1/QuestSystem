@@ -7,7 +7,7 @@ quest:
   summary: "בתמונה השנייה במחזה יש זמר ורקדנית, והשמות שלהם כתובים שבע עשרה פעמים. למדו מתי אומרים He ומתי אומרים She."
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: personal_pronouns_q02_finish
-rewards: { xp: 175, items: [] }
+rewards: { xp: 950, items: [] }
 steps:
   - type: talk_to_npc
     npc_id: Little Boy

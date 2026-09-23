@@ -7,7 +7,7 @@ quest:
   summary: "ליד המדורה במגדל מרכיבים את כל הסיפור של הרוח ומשתמשים בכל מילות השאלה."
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: wh_questions_q05_finish
-rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }
+rewards: { xp: 11100, items: [{ id: coin, amount: 10 }] }
 steps:
   - type: talk_to_npc
     npc_id: "Mountain Guide"

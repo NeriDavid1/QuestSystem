@@ -1,0 +1,45 @@
+questline:
+  id: verbs_to_be
+  npc_id: teacher_maya
+  display_name: The Royal Speech Crystal
+  theme: ללמד את התלמיד על הפעלים to be ואיך להשתמש ב-am, is, are במשפטים פשוטים ונכונים.
+  quest_count: 5
+  level_range:
+    - 1
+    - 50
+quests:
+  - id: line_msochwy
+    name: 'הפועל To be: לומדים Is'
+    level: 1
+    prerequisite: q01_new_quest
+    rewards:
+      xp: 1250
+      items: []
+  - id: q01_new_quest
+    name: 'הפועל To be: לומדים Am'
+    level: 50
+    prerequisite: null
+    rewards:
+      xp: 1000
+      items: []
+  - id: q03_new_quest
+    name: 'הפועל To be: מתי Am ומתי Is'
+    level: 1
+    prerequisite: line_msochwy
+    rewards:
+      xp: 1500
+      items: []
+  - id: q04_new_quest
+    name: 'הפועל To be: תרגול Are'
+    level: 1
+    prerequisite: q03_new_quest
+    rewards:
+      xp: 1750
+      items: []
+  - id: q05_new_quest
+    name: 'הפועל To be: מבחן Am, Is, Are'
+    level: 1
+    prerequisite: q04_new_quest
+    rewards:
+      xp: 3000
+      items: []

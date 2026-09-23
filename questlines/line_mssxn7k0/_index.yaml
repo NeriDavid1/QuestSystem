@@ -1,0 +1,24 @@
+questline:
+  id: line_mssxn7k0
+  npc_id: teacher_maya
+  display_name: 'שיעורי בית בנושא : Do & Does \ Do not & Does not'
+  theme: ''
+  quest_count: 2
+  level_range:
+    - 2
+    - 50
+quests:
+  - id: line_mssxn7k0__q01_do_does
+    name: 'שיעורי בית: Do או Does'
+    level: 50
+    prerequisite: null
+    rewards:
+      xp: 2900
+      items: []
+  - id: line_mssxn7k0__q02_do_not_does_not
+    name: 'שיעורי בית: Do not ו-Does not'
+    level: 2
+    prerequisite: null
+    rewards:
+      xp: 5400
+      items: []

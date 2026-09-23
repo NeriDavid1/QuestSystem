@@ -13,28 +13,28 @@ quests:
     level: 50
     prerequisite: null
     rewards:
-      xp: 100
+      xp: 600
       items: []
   - id: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
     name: Nobody Is Doing Their Job
     level: 1
     prerequisite: the_kingdoms_worst_day__q01_what_is_missing
     rewards:
-      xp: 150
+      xp: 750
       items: []
   - id: the_kingdoms_worst_day__q03_royal_description_disaster
     name: The Royal Description Disaster
     level: 1
     prerequisite: the_kingdoms_worst_day__q02_nobody_is_doing_their_job
     rewards:
-      xp: 200
+      xp: 900
       items: []
   - id: the_kingdoms_worst_day__q04_save_the_royal_schedule
     name: Save the Royal Schedule
     level: 1
     prerequisite: the_kingdoms_worst_day__q03_royal_description_disaster
     rewards:
-      xp: 300
+      xp: 1600
       items:
         - id: coin
           amount: 50

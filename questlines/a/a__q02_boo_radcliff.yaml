@@ -1,0 +1,60 @@
+quest:
+  id: a__q02_boo_radcliff
+  name: 'Adjectives: התואר לפני שם העצם'
+  level_required: 2
+  giver_npc: Ghost
+  prerequisite: a__q01_adjectives
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 2100
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: Ghost
+    dialogue_id: adjectives_mastery_adjectives_mastery_q02_boo_radcliff_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q02_boo_radcliff_minigame
+    display_text: צרו את המשפט "תלמיד חזק"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q02_boo_radcliff_minigame_copy
+    display_text: צרו את המשפט "חולצה נקייה"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q02_boo_radcliff_minigame_copy_copy
+    display_text: צרו את המשפט "חרב חלשה"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q02_boo_radcliff_minigame_copy_copy_copy
+    display_text: צרו את המשפט "שמש בהירה"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q02_boo_radcliff_minigame_copy_copy_copy_copy
+    display_text: צרו את המשפט "לילה חשוך"
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q02_boo_radcliff_minigame_3
+    display_text: צרו את המשפט "מכשף חכם וחזק" !
+  - type: return_to_npc
+    npc_id: Ghost
+    dialogue_id: adjectives_mastery_adjectives_mastery_q02_boo_radcliff_s06

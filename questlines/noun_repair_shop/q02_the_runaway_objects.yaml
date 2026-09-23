@@ -7,7 +7,7 @@ quest:
   summary: מצאו את שמות החפצים שעזבו את השק של הילד.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 175
+  xp: 550
   items: []
 steps:
 - type: talk_to_npc

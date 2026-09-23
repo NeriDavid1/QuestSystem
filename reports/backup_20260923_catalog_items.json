@@ -1,0 +1,2188 @@
+{
+ "meta": {
+  "n": 117,
+  "cloth": 0,
+  "drops": 0
+ },
+ "rows": [
+  {
+   "id": 294,
+   "kind": "item",
+   "name": "BlueNova",
+   "status": null,
+   "metadata": {
+    "name": "BlueNova",
+    "type": "skill",
+    "image": "images/items/ability_blue_nova.png",
+    "description": "Unleashes the most powerful nova in all directions around you.",
+    "softkitty_id": 104,
+    "softkitty_uid": "ability_blue_nova"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_blue_nova.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Unleashes the most powerful nova in all directions around you.",
+   "external_id": "ability_blue_nova"
+  },
+  {
+   "id": 295,
+   "kind": "item",
+   "name": "Bunny",
+   "status": null,
+   "metadata": {
+    "name": "Bunny",
+    "type": "skill",
+    "image": "images/items/ability_bunny.png",
+    "description": "Transform into a bunny.",
+    "softkitty_id": 93,
+    "softkitty_uid": "ability_bunny"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_bunny.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Transform into a bunny.",
+   "external_id": "ability_bunny"
+  },
+  {
+   "id": 296,
+   "kind": "item",
+   "name": "Cat",
+   "status": null,
+   "metadata": {
+    "name": "Cat",
+    "type": "skill",
+    "image": "images/items/ability_cat.png",
+    "description": "Transform into a cat.",
+    "softkitty_id": 94,
+    "softkitty_uid": "ability_cat"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_cat.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Transform into a cat.",
+   "external_id": "ability_cat"
+  },
+  {
+   "id": 297,
+   "kind": "item",
+   "name": "Dance",
+   "status": null,
+   "metadata": {
+    "name": "Dance",
+    "type": "skill",
+    "image": "images/items/ability_dance.png",
+    "description": "Hip-hop dance until you move.",
+    "softkitty_id": 95,
+    "softkitty_uid": "ability_dance"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_dance.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Hip-hop dance until you move.",
+   "external_id": "ability_dance"
+  },
+  {
+   "id": 298,
+   "kind": "item",
+   "name": "IceBurst",
+   "status": null,
+   "metadata": {
+    "name": "IceBurst",
+    "type": "skill",
+    "image": "images/items/ability_ice_burst.png",
+    "description": "Releases an explosive ring of ice crystals around you.",
+    "softkitty_id": 101,
+    "softkitty_uid": "ability_ice_burst"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_ice_burst.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Releases an explosive ring of ice crystals around you.",
+   "external_id": "ability_ice_burst"
+  },
+  {
+   "id": 299,
+   "kind": "item",
+   "name": "Ice Crystals",
+   "status": null,
+   "metadata": {
+    "name": "Ice Crystals",
+    "type": "skill",
+    "image": "images/items/ability_ice_crystals.png",
+    "description": "Summons a sweeping cone of crystals that damages enemies in front",
+    "softkitty_id": 100,
+    "softkitty_uid": "ability_ice_crystals"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_ice_crystals.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Summons a sweeping cone of crystals that damages enemies in front",
+   "external_id": "ability_ice_crystals"
+  },
+  {
+   "id": 300,
+   "kind": "item",
+   "name": "Magic Bolt",
+   "status": null,
+   "metadata": {
+    "name": "Magic Bolt",
+    "type": "skill",
+    "image": "images/items/ability_magic_bolt.png",
+    "description": "Fires a magic bolt in front of you.",
+    "softkitty_id": 96,
+    "softkitty_uid": "ability_magic_bolt"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_magic_bolt.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Fires a magic bolt in front of you.",
+   "external_id": "ability_magic_bolt"
+  },
+  {
+   "id": 301,
+   "kind": "item",
+   "name": "PurpleNova",
+   "status": null,
+   "metadata": {
+    "name": "PurpleNova",
+    "type": "skill",
+    "image": "images/items/ability_magic_nova.png",
+    "description": "Unleashes purple magic in all directions around you.",
+    "softkitty_id": 97,
+    "softkitty_uid": "ability_magic_nova"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_magic_nova.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Unleashes purple magic in all directions around you.",
+   "external_id": "ability_magic_nova"
+  },
+  {
+   "id": 302,
+   "kind": "item",
+   "name": "Magic Slash",
+   "status": null,
+   "metadata": {
+    "name": "Magic Slash",
+    "type": "skill",
+    "image": "images/items/ability_magic_slash.png",
+    "description": "A close-range magic slash in front of you.",
+    "softkitty_id": 98,
+    "softkitty_uid": "ability_magic_slash"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_magic_slash.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "A close-range magic slash in front of you.",
+   "external_id": "ability_magic_slash"
+  },
+  {
+   "id": 303,
+   "kind": "item",
+   "name": "Meteor Shower",
+   "status": null,
+   "metadata": {
+    "name": "Meteor Shower",
+    "type": "skill",
+    "image": "images/items/ability_meteor_shower.png",
+    "description": "Calls down a powerful meteor shower on an area in front of you.",
+    "softkitty_id": 105,
+    "softkitty_uid": "ability_meteor_shower"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_meteor_shower.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Calls down a powerful meteor shower on an area in front of you.",
+   "external_id": "ability_meteor_shower"
+  },
+  {
+   "id": 304,
+   "kind": "item",
+   "name": "Owl",
+   "status": null,
+   "metadata": {
+    "name": "Owl",
+    "type": "skill",
+    "image": "images/items/ability_owl.png",
+    "description": "Transform into an owl.",
+    "softkitty_id": 92,
+    "softkitty_uid": "ability_owl"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_owl.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Transform into an owl.",
+   "external_id": "ability_owl"
+  },
+  {
+   "id": 305,
+   "kind": "item",
+   "name": "Red Energy Explosion",
+   "status": null,
+   "metadata": {
+    "name": "Red Energy Explosion",
+    "type": "skill",
+    "image": "images/items/ability_red_energy_explosion.png",
+    "description": "Unleashes a radial blast of red energy around you.",
+    "softkitty_id": 102,
+    "softkitty_uid": "ability_red_energy_explosion"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_red_energy_explosion.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Unleashes a radial blast of red energy around you.",
+   "external_id": "ability_red_energy_explosion"
+  },
+  {
+   "id": 306,
+   "kind": "item",
+   "name": "RedNova",
+   "status": null,
+   "metadata": {
+    "name": "RedNova",
+    "type": "skill",
+    "image": "images/items/ability_red_nova.png",
+    "description": "Unleashes a powerful red nova in all directions around you.",
+    "softkitty_id": 103,
+    "softkitty_uid": "ability_red_nova"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ability_red_nova.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Unleashes a powerful red nova in all directions around you.",
+   "external_id": "ability_red_nova"
+  },
+  {
+   "id": 307,
+   "kind": "item",
+   "name": "Ancient Ring",
+   "status": null,
+   "metadata": {
+    "name": "Ancient Ring",
+    "type": "equipment",
+    "image": "images/items/ancient_ring.png",
+    "description": "Legendary magic ring.",
+    "softkitty_id": 38,
+    "softkitty_uid": "ancient_ring"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ancient_ring.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Legendary magic ring.",
+   "external_id": "ancient_ring"
+  },
+  {
+   "id": 308,
+   "kind": "item",
+   "name": "Ancient Rune",
+   "status": null,
+   "metadata": {
+    "name": "Ancient Rune",
+    "type": "material",
+    "image": "images/items/ancient_rune.png",
+    "max_stack": 99,
+    "description": "Magic rune to enhance your equipments.",
+    "softkitty_id": 60,
+    "softkitty_uid": "ancient_rune"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/ancient_rune.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Magic rune to enhance your equipments.",
+   "external_id": "ancient_rune"
+  },
+  {
+   "id": 309,
+   "kind": "item",
+   "name": "Bear's Skin",
+   "status": null,
+   "metadata": {
+    "name": "Bear's Skin",
+    "type": "material",
+    "image": "images/items/bear_skin.png",
+    "description": "Crafting material.",
+    "softkitty_id": 13,
+    "softkitty_uid": "bear_skin"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/bear_skin.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "bear_skin"
+  },
+  {
+   "id": 310,
+   "kind": "item",
+   "name": "Bear's Tooth",
+   "status": null,
+   "metadata": {
+    "name": "Bear's Tooth",
+    "type": "material",
+    "image": "images/items/bear_tooth.png",
+    "description": "Crafting material.",
+    "softkitty_id": 15,
+    "softkitty_uid": "bear_tooth"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/bear_tooth.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "bear_tooth"
+  },
+  {
+   "id": 311,
+   "kind": "item",
+   "name": "Blue Gem Necklace",
+   "status": null,
+   "metadata": {
+    "name": "Blue Gem Necklace",
+    "type": "equipment",
+    "image": "images/items/blue_gem_necklace.png",
+    "description": "Beauftiful necklace with blue gem.",
+    "softkitty_id": 40,
+    "softkitty_uid": "blue_gem_necklace"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/blue_gem_necklace.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Beauftiful necklace with blue gem.",
+   "external_id": "blue_gem_necklace"
+  },
+  {
+   "id": 312,
+   "kind": "item",
+   "name": "Buckler",
+   "status": null,
+   "metadata": {
+    "name": "Buckler",
+    "type": "equipment",
+    "image": "images/items/buckler.png",
+    "description": "Small buckler made with leather and woods.",
+    "softkitty_id": 56,
+    "softkitty_uid": "buckler"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/buckler.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Small buckler made with leather and woods.",
+   "external_id": "buckler"
+  },
+  {
+   "id": 313,
+   "kind": "item",
+   "name": "Coin",
+   "status": null,
+   "metadata": {
+    "name": "Coin",
+    "type": "currency"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "coin"
+  },
+  {
+   "id": 314,
+   "kind": "item",
+   "name": "Copper Ore",
+   "status": null,
+   "metadata": {
+    "name": "Copper Ore",
+    "type": "material",
+    "image": "images/items/copper_ore.png",
+    "description": "Crafting material.",
+    "softkitty_id": 7,
+    "softkitty_uid": "copper_ore"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/copper_ore.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "copper_ore"
+  },
+  {
+   "id": 315,
+   "kind": "item",
+   "name": "Copper Ring",
+   "status": null,
+   "metadata": {
+    "name": "Copper Ring",
+    "type": "equipment",
+    "image": "images/items/copper_ring.png",
+    "description": "Nice copper ring with magical power.",
+    "softkitty_id": 37,
+    "softkitty_uid": "copper_ring"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/copper_ring.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Nice copper ring with magical power.",
+   "external_id": "copper_ring"
+  },
+  {
+   "id": 316,
+   "kind": "item",
+   "name": "Corn",
+   "status": null,
+   "metadata": {
+    "name": "Corn",
+    "type": "material",
+    "image": "images/items/corn.png",
+    "max_stack": 99,
+    "description": "Quest item.",
+    "softkitty_id": 20,
+    "softkitty_uid": "corn"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/corn.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "corn"
+  },
+  {
+   "id": 317,
+   "kind": "item",
+   "name": "Dark Hoods",
+   "status": null,
+   "metadata": {
+    "name": "Dark Hoods",
+    "type": "equipment",
+    "image": "images/items/dark_hoods.png",
+    "description": "Dark hoods with golden embroider.",
+    "softkitty_id": 48,
+    "softkitty_uid": "dark_hoods"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/dark_hoods.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Dark hoods with golden embroider.",
+   "external_id": "dark_hoods"
+  },
+  {
+   "id": 318,
+   "kind": "item",
+   "name": "Enchantment Recipe",
+   "status": null,
+   "metadata": {
+    "name": "Enchantment Recipe",
+    "type": "material",
+    "image": "images/items/enchantment_recipe.png",
+    "description": "Add enchantments to your equipment.",
+    "softkitty_id": 61,
+    "softkitty_uid": "enchantment_recipe"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/enchantment_recipe.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Add enchantments to your equipment.",
+   "external_id": "enchantment_recipe"
+  },
+  {
+   "id": 319,
+   "kind": "item",
+   "name": "Energy Potion(L)",
+   "status": null,
+   "metadata": {
+    "name": "Energy Potion(L)",
+    "type": "consumable",
+    "image": "images/items/energy_potion(l).png",
+    "description": "Recover 100 stamina points.",
+    "softkitty_id": 3,
+    "softkitty_uid": "energy_potion(l)"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/energy_potion(l).png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Recover 100 stamina points.",
+   "external_id": "energy_potion(l)"
+  },
+  {
+   "id": 320,
+   "kind": "item",
+   "name": "Energy Potion(S)",
+   "status": null,
+   "metadata": {
+    "name": "Energy Potion(S)",
+    "type": "consumable",
+    "image": "images/items/energy_potion(s).png",
+    "description": "Recover 50 stamina points.",
+    "softkitty_id": 2,
+    "softkitty_uid": "energy_potion(s)"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/energy_potion(s).png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Recover 50 stamina points.",
+   "external_id": "energy_potion(s)"
+  },
+  {
+   "id": 321,
+   "kind": "item",
+   "name": "Gem",
+   "status": null,
+   "metadata": {
+    "name": "Gem",
+    "type": "material",
+    "image": "images/items/gem.png",
+    "max_stack": 99,
+    "description": "Quest item.",
+    "softkitty_id": 26,
+    "softkitty_uid": "gem"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/gem.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "gem"
+  },
+  {
+   "id": 322,
+   "kind": "item",
+   "name": "Gem of Life",
+   "status": null,
+   "metadata": {
+    "name": "Gem of Life",
+    "type": "material",
+    "image": "images/items/gem_of_life.png",
+    "description": "Sockets on equipment to enchance its abilities.",
+    "softkitty_id": 89,
+    "softkitty_uid": "gem_of_life"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/gem_of_life.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Sockets on equipment to enchance its abilities.",
+   "external_id": "gem_of_life"
+  },
+  {
+   "id": 323,
+   "kind": "item",
+   "name": "Gem of Precision",
+   "status": null,
+   "metadata": {
+    "name": "Gem of Precision",
+    "type": "material",
+    "image": "images/items/gem_of_precision.png",
+    "description": "Sockets on equipment to enchance its abilities.",
+    "softkitty_id": 90,
+    "softkitty_uid": "gem_of_precision"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/gem_of_precision.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Sockets on equipment to enchance its abilities.",
+   "external_id": "gem_of_precision"
+  },
+  {
+   "id": 324,
+   "kind": "item",
+   "name": "Gem of Speed",
+   "status": null,
+   "metadata": {
+    "name": "Gem of Speed",
+    "type": "material",
+    "image": "images/items/gem_of_speed.png",
+    "description": "Sockets on equipment to enchance its abilities.",
+    "softkitty_id": 88,
+    "softkitty_uid": "gem_of_speed"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/gem_of_speed.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Sockets on equipment to enchance its abilities.",
+   "external_id": "gem_of_speed"
+  },
+  {
+   "id": 325,
+   "kind": "item",
+   "name": "Gem of Strengh",
+   "status": null,
+   "metadata": {
+    "name": "Gem of Strengh",
+    "type": "material",
+    "image": "images/items/gem_of_strengh.png",
+    "description": "Sockets on equipment to enchance its abilities.",
+    "softkitty_id": 87,
+    "softkitty_uid": "gem_of_strengh"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/gem_of_strengh.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Sockets on equipment to enchance its abilities.",
+   "external_id": "gem_of_strengh"
+  },
+  {
+   "id": 326,
+   "kind": "item",
+   "name": "Gift For Jenny",
+   "status": null,
+   "metadata": {
+    "name": "Gift For Jenny",
+    "type": "questing",
+    "image": "images/items/gift_for_jenny.png",
+    "description": "Quest item.",
+    "softkitty_id": 17,
+    "softkitty_uid": "gift_for_jenny"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/gift_for_jenny.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "gift_for_jenny"
+  },
+  {
+   "id": 327,
+   "kind": "item",
+   "name": "Gold Ore",
+   "status": null,
+   "metadata": {
+    "name": "Gold Ore",
+    "type": "material",
+    "image": "images/items/gold_ore.png",
+    "description": "Crafting material.",
+    "softkitty_id": 9,
+    "softkitty_uid": "gold_ore"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/gold_ore.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "gold_ore"
+  },
+  {
+   "id": 328,
+   "kind": "item",
+   "name": "Great Axe",
+   "status": null,
+   "metadata": {
+    "name": "Great Axe",
+    "type": "equipment",
+    "image": "images/items/great_axe.png",
+    "description": "Great sword can destroy anything. {stun}% chance to stun enemy on",
+    "softkitty_id": 33,
+    "softkitty_uid": "great_axe"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/great_axe.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Great sword can destroy anything. {stun}% chance to stun enemy on",
+   "external_id": "great_axe"
+  },
+  {
+   "id": 329,
+   "kind": "item",
+   "name": "Great Axe Blueprint",
+   "status": null,
+   "metadata": {
+    "name": "Great Axe Blueprint",
+    "type": "material",
+    "image": "images/items/great_axe_blueprint.png",
+    "description": "Crafting blueprint.",
+    "softkitty_id": 29,
+    "softkitty_uid": "great_axe_blueprint"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/great_axe_blueprint.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting blueprint.",
+   "external_id": "great_axe_blueprint"
+  },
+  {
+   "id": 330,
+   "kind": "item",
+   "name": "Guard's Boots",
+   "status": null,
+   "metadata": {
+    "name": "Guard's Boots",
+    "type": "equipment",
+    "image": "images/items/guard_boots.png",
+    "description": "Leather boots with metal pieces.",
+    "softkitty_id": 46,
+    "softkitty_uid": "guard_boots"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/guard_boots.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Leather boots with metal pieces.",
+   "external_id": "guard_boots"
+  },
+  {
+   "id": 331,
+   "kind": "item",
+   "name": "Guard's Gauntlet",
+   "status": null,
+   "metadata": {
+    "name": "Guard's Gauntlet",
+    "type": "equipment",
+    "image": "images/items/guard_gauntlet.png",
+    "description": "Leather gauntlet with metal armor.",
+    "softkitty_id": 51,
+    "softkitty_uid": "guard_gauntlet"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/guard_gauntlet.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Leather gauntlet with metal armor.",
+   "external_id": "guard_gauntlet"
+  },
+  {
+   "id": 332,
+   "kind": "item",
+   "name": "Guard's Helmet",
+   "status": null,
+   "metadata": {
+    "name": "Guard's Helmet",
+    "type": "equipment",
+    "image": "images/items/guard_helmet.png",
+    "description": "Metal helmet with good protection.",
+    "softkitty_id": 54,
+    "softkitty_uid": "guard_helmet"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/guard_helmet.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Metal helmet with good protection.",
+   "external_id": "guard_helmet"
+  },
+  {
+   "id": 333,
+   "kind": "item",
+   "name": "Health Potion(L)",
+   "status": null,
+   "metadata": {
+    "name": "Health Potion(L)",
+    "type": "consumable",
+    "image": "images/items/health_potion(l).png",
+    "description": "No description yet.",
+    "softkitty_id": 1,
+    "softkitty_uid": "health_potion(l)"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/health_potion(l).png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "No description yet.",
+   "external_id": "health_potion(l)"
+  },
+  {
+   "id": 334,
+   "kind": "item",
+   "name": "Health Potion(L) Recipe",
+   "status": null,
+   "metadata": {
+    "name": "Health Potion(L) Recipe",
+    "type": "material",
+    "image": "images/items/health_potion(l)_recipe.png",
+    "description": "Example Skill.",
+    "softkitty_id": 86,
+    "softkitty_uid": "health_potion(l)_recipe"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/health_potion(l)_recipe.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "health_potion(l)_recipe"
+  },
+  {
+   "id": 335,
+   "kind": "item",
+   "name": "Health Potion(S)",
+   "status": null,
+   "metadata": {
+    "name": "Health Potion(S)",
+    "type": "consumable",
+    "image": "images/items/health_potion(s).png",
+    "description": "Heal 50 health points.",
+    "softkitty_id": 0,
+    "softkitty_uid": "health_potion(s)"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/health_potion(s).png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Heal 50 health points.",
+   "external_id": "health_potion(s)"
+  },
+  {
+   "id": 336,
+   "kind": "item",
+   "name": "Herbs",
+   "status": null,
+   "metadata": {
+    "name": "Herbs",
+    "type": "material",
+    "image": "images/items/herbs.png",
+    "max_stack": 99,
+    "description": "Permanent increase defence for 1 points.",
+    "softkitty_id": 5,
+    "softkitty_uid": "herbs"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/herbs.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Permanent increase defence for 1 points.",
+   "external_id": "herbs"
+  },
+  {
+   "id": 337,
+   "kind": "item",
+   "name": "Iron Ore",
+   "status": null,
+   "metadata": {
+    "name": "Iron Ore",
+    "type": "material",
+    "image": "images/items/iron_ore.png",
+    "description": "Crafting material.",
+    "softkitty_id": 6,
+    "softkitty_uid": "iron_ore"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/iron_ore.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "iron_ore"
+  },
+  {
+   "id": 338,
+   "kind": "item",
+   "name": "King's Sword",
+   "status": null,
+   "metadata": {
+    "name": "King's Sword",
+    "type": "equipment",
+    "image": "images/items/king_sword.png",
+    "description": "Burning sword with ultimate power.  {stun}% chance to stun enemy",
+    "softkitty_id": 35,
+    "softkitty_uid": "king_sword"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/king_sword.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Burning sword with ultimate power.  {stun}% chance to stun enemy",
+   "external_id": "king_sword"
+  },
+  {
+   "id": 339,
+   "kind": "item",
+   "name": "Knight's Armor",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Armor",
+    "type": "equipment",
+    "image": "images/items/knight_armor.png",
+    "description": "Knight's plate armor to protect the torso.",
+    "softkitty_id": 44,
+    "softkitty_uid": "knight_armor"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_armor.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Knight's plate armor to protect the torso.",
+   "external_id": "knight_armor"
+  },
+  {
+   "id": 340,
+   "kind": "item",
+   "name": "Knight's Boots",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Boots",
+    "type": "equipment",
+    "image": "images/items/knight_boots.png",
+    "description": "Knight's plate armor boots.",
+    "softkitty_id": 47,
+    "softkitty_uid": "knight_boots"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_boots.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Knight's plate armor boots.",
+   "external_id": "knight_boots"
+  },
+  {
+   "id": 341,
+   "kind": "item",
+   "name": "Knight's Cape",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Cape",
+    "type": "equipment",
+    "image": "images/items/knight_cape.png",
+    "description": "Heavy red cape with armor pieces.",
+    "softkitty_id": 49,
+    "softkitty_uid": "knight_cape"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_cape.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Heavy red cape with armor pieces.",
+   "external_id": "knight_cape"
+  },
+  {
+   "id": 342,
+   "kind": "item",
+   "name": "Knight's Gauntlet",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Gauntlet",
+    "type": "equipment",
+    "image": "images/items/knight_gauntlet.png",
+    "description": "Plate armor gauntlet.",
+    "softkitty_id": 52,
+    "softkitty_uid": "knight_gauntlet"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_gauntlet.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Plate armor gauntlet.",
+   "external_id": "knight_gauntlet"
+  },
+  {
+   "id": 343,
+   "kind": "item",
+   "name": "Knight's Gauntlet Blueprint",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Gauntlet Blueprint",
+    "type": "material",
+    "image": "images/items/knight_gauntlet_blueprint.png",
+    "description": "Crafting blueprint.",
+    "softkitty_id": 27,
+    "softkitty_uid": "knight_gauntlet_blueprint"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_gauntlet_blueprint.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting blueprint.",
+   "external_id": "knight_gauntlet_blueprint"
+  },
+  {
+   "id": 344,
+   "kind": "item",
+   "name": "Knight's Helmet",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Helmet",
+    "type": "equipment",
+    "image": "images/items/knight_helmet.png",
+    "description": "Plate armor helmet with best protection.",
+    "softkitty_id": 55,
+    "softkitty_uid": "knight_helmet"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_helmet.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Plate armor helmet with best protection.",
+   "external_id": "knight_helmet"
+  },
+  {
+   "id": 345,
+   "kind": "item",
+   "name": "Knight's Helmet Blueprint",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Helmet Blueprint",
+    "type": "material",
+    "image": "images/items/knight_helmet_blueprint.png",
+    "description": "Crafting blueprint.",
+    "softkitty_id": 30,
+    "softkitty_uid": "knight_helmet_blueprint"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_helmet_blueprint.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting blueprint.",
+   "external_id": "knight_helmet_blueprint"
+  },
+  {
+   "id": 346,
+   "kind": "item",
+   "name": "Knight's Shield",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Shield",
+    "type": "equipment",
+    "image": "images/items/knight_shield.png",
+    "description": "Metal shield can block any attack.",
+    "softkitty_id": 58,
+    "softkitty_uid": "knight_shield"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_shield.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Metal shield can block any attack.",
+   "external_id": "knight_shield"
+  },
+  {
+   "id": 347,
+   "kind": "item",
+   "name": "Knight's Sword",
+   "status": null,
+   "metadata": {
+    "name": "Knight's Sword",
+    "type": "equipment",
+    "image": "images/items/knight_sword.png",
+    "description": "Fine heavy sword. {stun}% chance to stun enemy on hit.",
+    "softkitty_id": 34,
+    "softkitty_uid": "knight_sword"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/knight_sword.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Fine heavy sword. {stun}% chance to stun enemy on hit.",
+   "external_id": "knight_sword"
+  },
+  {
+   "id": 348,
+   "kind": "item",
+   "name": "Leather Armor",
+   "status": null,
+   "metadata": {
+    "name": "Leather Armor",
+    "type": "equipment",
+    "image": "images/items/leather_armor.png",
+    "description": "Leather armor to protect the torso.",
+    "softkitty_id": 42,
+    "softkitty_uid": "leather_armor"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/leather_armor.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Leather armor to protect the torso.",
+   "external_id": "leather_armor"
+  },
+  {
+   "id": 349,
+   "kind": "item",
+   "name": "Leather Boots",
+   "status": null,
+   "metadata": {
+    "name": "Leather Boots",
+    "type": "equipment",
+    "image": "images/items/leather_boots.png",
+    "description": "Light weight leather boots.",
+    "softkitty_id": 45,
+    "softkitty_uid": "leather_boots"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/leather_boots.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Light weight leather boots.",
+   "external_id": "leather_boots"
+  },
+  {
+   "id": 350,
+   "kind": "item",
+   "name": "Leather Glove",
+   "status": null,
+   "metadata": {
+    "name": "Leather Glove",
+    "type": "equipment",
+    "image": "images/items/leather_glove.png",
+    "description": "Heavy red cape with armor pieces.",
+    "softkitty_id": 50,
+    "softkitty_uid": "leather_glove"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/leather_glove.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Heavy red cape with armor pieces.",
+   "external_id": "leather_glove"
+  },
+  {
+   "id": 351,
+   "kind": "item",
+   "name": "Leather Helmet",
+   "status": null,
+   "metadata": {
+    "name": "Leather Helmet",
+    "type": "equipment",
+    "image": "images/items/leather_helmet.png",
+    "description": "Light weight leather helmet.",
+    "softkitty_id": 53,
+    "softkitty_uid": "leather_helmet"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/leather_helmet.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Light weight leather helmet.",
+   "external_id": "leather_helmet"
+  },
+  {
+   "id": 352,
+   "kind": "item",
+   "name": "Leather Shield",
+   "status": null,
+   "metadata": {
+    "name": "Leather Shield",
+    "type": "equipment",
+    "image": "images/items/leather_shield.png",
+    "description": "Nice shield made with leather and woods.",
+    "softkitty_id": 57,
+    "softkitty_uid": "leather_shield"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/leather_shield.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Nice shield made with leather and woods.",
+   "external_id": "leather_shield"
+  },
+  {
+   "id": 353,
+   "kind": "item",
+   "name": "Letter",
+   "status": null,
+   "metadata": {
+    "name": "Letter",
+    "type": "questing",
+    "image": "images/items/letter.png",
+    "description": "Quest item.",
+    "softkitty_id": 16,
+    "softkitty_uid": "letter"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/letter.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "letter"
+  },
+  {
+   "id": 354,
+   "kind": "item",
+   "name": "Letter A",
+   "status": null,
+   "metadata": {
+    "name": "Letter A",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_a"
+  },
+  {
+   "id": 355,
+   "kind": "item",
+   "name": "Letter B",
+   "status": null,
+   "metadata": {
+    "name": "Letter B",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_b"
+  },
+  {
+   "id": 356,
+   "kind": "item",
+   "name": "Letter C",
+   "status": null,
+   "metadata": {
+    "name": "Letter C",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_c"
+  },
+  {
+   "id": 357,
+   "kind": "item",
+   "name": "Letter D",
+   "status": null,
+   "metadata": {
+    "name": "Letter D",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_d"
+  },
+  {
+   "id": 358,
+   "kind": "item",
+   "name": "Letter E",
+   "status": null,
+   "metadata": {
+    "name": "Letter E",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_e"
+  },
+  {
+   "id": 359,
+   "kind": "item",
+   "name": "Letter F",
+   "status": null,
+   "metadata": {
+    "name": "Letter F",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_f"
+  },
+  {
+   "id": 360,
+   "kind": "item",
+   "name": "Letter G",
+   "status": null,
+   "metadata": {
+    "name": "Letter G",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_g"
+  },
+  {
+   "id": 361,
+   "kind": "item",
+   "name": "Letter H",
+   "status": null,
+   "metadata": {
+    "name": "Letter H",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_h"
+  },
+  {
+   "id": 362,
+   "kind": "item",
+   "name": "Letter I",
+   "status": null,
+   "metadata": {
+    "name": "Letter I",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_i"
+  },
+  {
+   "id": 363,
+   "kind": "item",
+   "name": "Letter J",
+   "status": null,
+   "metadata": {
+    "name": "Letter J",
+    "type": "quest_item"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "letter_j"
+  },
+  {
+   "id": 364,
+   "kind": "item",
+   "name": "Long Sword",
+   "status": null,
+   "metadata": {
+    "name": "Long Sword",
+    "type": "equipment",
+    "image": "images/items/long_sword.png",
+    "description": "Sharp sword made with copper.",
+    "softkitty_id": 32,
+    "softkitty_uid": "long_sword"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/long_sword.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Sharp sword made with copper.",
+   "external_id": "long_sword"
+  },
+  {
+   "id": 365,
+   "kind": "item",
+   "name": "Lucky Fruit",
+   "status": null,
+   "metadata": {
+    "name": "Lucky Fruit",
+    "type": "consumable",
+    "image": "images/items/lucky_fruit.png",
+    "description": "Permanent increase Luck for 1 points.",
+    "softkitty_id": 4,
+    "softkitty_uid": "lucky_fruit"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/lucky_fruit.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Permanent increase Luck for 1 points.",
+   "external_id": "lucky_fruit"
+  },
+  {
+   "id": 366,
+   "kind": "item",
+   "name": "Monster Head",
+   "status": null,
+   "metadata": {
+    "name": "Monster Head",
+    "type": "material",
+    "image": "images/items/monster_head.png",
+    "description": "Quest item.",
+    "softkitty_id": 22,
+    "softkitty_uid": "monster_head"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/monster_head.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "monster_head"
+  },
+  {
+   "id": 367,
+   "kind": "item",
+   "name": "Monster Meat",
+   "status": null,
+   "metadata": {
+    "name": "Monster Meat",
+    "type": "material",
+    "image": "images/items/monster_meat.png",
+    "description": "Quest item.",
+    "softkitty_id": 23,
+    "softkitty_uid": "monster_meat"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/monster_meat.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "monster_meat"
+  },
+  {
+   "id": 368,
+   "kind": "item",
+   "name": "Monster Skin",
+   "status": null,
+   "metadata": {
+    "name": "Monster Skin",
+    "type": "questing",
+    "image": "images/items/monster_skin.png",
+    "description": "Quest item.",
+    "softkitty_id": 25,
+    "softkitty_uid": "monster_skin"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/monster_skin.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "monster_skin"
+  },
+  {
+   "id": 369,
+   "kind": "item",
+   "name": "Monster Wing",
+   "status": null,
+   "metadata": {
+    "name": "Monster Wing",
+    "type": "questing",
+    "image": "images/items/monster_wing.png",
+    "description": "Quest item.",
+    "softkitty_id": 24,
+    "softkitty_uid": "monster_wing"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/monster_wing.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "monster_wing"
+  },
+  {
+   "id": 370,
+   "kind": "item",
+   "name": "Necklace of Fire",
+   "status": null,
+   "metadata": {
+    "name": "Necklace of Fire",
+    "type": "equipment",
+    "image": "images/items/necklace_of_fire.png",
+    "description": "Necklace with fire power.",
+    "softkitty_id": 39,
+    "softkitty_uid": "necklace_of_fire"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/necklace_of_fire.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Necklace with fire power.",
+   "external_id": "necklace_of_fire"
+  },
+  {
+   "id": 371,
+   "kind": "item",
+   "name": "Oak Log",
+   "status": null,
+   "metadata": {
+    "name": "Oak Log",
+    "type": "material",
+    "image": "images/items/oak_log.png",
+    "max_stack": 99,
+    "description": "Crafting material.",
+    "softkitty_id": 10,
+    "softkitty_uid": "oak_log"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/oak_log.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "oak_log"
+  },
+  {
+   "id": 372,
+   "kind": "item",
+   "name": "Pass Permit",
+   "status": null,
+   "metadata": {
+    "name": "Pass Permit",
+    "type": "questing",
+    "image": "images/items/pass_permit.png",
+    "description": "Quest item.",
+    "softkitty_id": 18,
+    "softkitty_uid": "pass_permit"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/pass_permit.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "pass_permit"
+  },
+  {
+   "id": 373,
+   "kind": "item",
+   "name": "Plate Armor",
+   "status": null,
+   "metadata": {
+    "name": "Plate Armor",
+    "type": "equipment",
+    "image": "images/items/plate_armor.png",
+    "description": "Plate armor to protect the torso.",
+    "softkitty_id": 43,
+    "softkitty_uid": "plate_armor"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/plate_armor.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Plate armor to protect the torso.",
+   "external_id": "plate_armor"
+  },
+  {
+   "id": 374,
+   "kind": "item",
+   "name": "Plate Armor Blueprint",
+   "status": null,
+   "metadata": {
+    "name": "Plate Armor Blueprint",
+    "type": "material",
+    "image": "images/items/plate_armor_blueprint.png",
+    "description": "Crafting blueprint.",
+    "softkitty_id": 28,
+    "softkitty_uid": "plate_armor_blueprint"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/plate_armor_blueprint.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting blueprint.",
+   "external_id": "plate_armor_blueprint"
+  },
+  {
+   "id": 375,
+   "kind": "item",
+   "name": "Poison",
+   "status": null,
+   "metadata": {
+    "name": "Poison",
+    "type": "questing",
+    "image": "images/items/poison.png",
+    "description": "Quest item.",
+    "softkitty_id": 21,
+    "softkitty_uid": "poison"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/poison.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "poison"
+  },
+  {
+   "id": 376,
+   "kind": "item",
+   "name": "Power Stone",
+   "status": null,
+   "metadata": {
+    "name": "Power Stone",
+    "type": "material",
+    "image": "images/items/power_stone.png",
+    "max_stack": 99,
+    "description": "Magic stone to enhance your equipments.",
+    "softkitty_id": 59,
+    "softkitty_uid": "power_stone"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/power_stone.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Magic stone to enhance your equipments.",
+   "external_id": "power_stone"
+  },
+  {
+   "id": 377,
+   "kind": "item",
+   "name": "Red Gem Necklace",
+   "status": null,
+   "metadata": {
+    "name": "Red Gem Necklace",
+    "type": "equipment",
+    "image": "images/items/red_gem_necklace.png",
+    "description": "Beauftiful necklace with red gem.",
+    "softkitty_id": 41,
+    "softkitty_uid": "red_gem_necklace"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/red_gem_necklace.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Beauftiful necklace with red gem.",
+   "external_id": "red_gem_necklace"
+  },
+  {
+   "id": 378,
+   "kind": "item",
+   "name": "Short Sword",
+   "status": null,
+   "metadata": {
+    "name": "Short Sword",
+    "type": "equipment",
+    "image": "images/items/short_sword.png",
+    "description": "Basic sword made with iron.",
+    "softkitty_id": 31,
+    "softkitty_uid": "short_sword"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/short_sword.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Basic sword made with iron.",
+   "external_id": "short_sword"
+  },
+  {
+   "id": 379,
+   "kind": "item",
+   "name": "Shuriken",
+   "status": null,
+   "metadata": {
+    "name": "Shuriken",
+    "type": "equipment",
+    "image": "images/items/shuriken.png",
+    "description": "Simple ring made with leather.",
+    "softkitty_id": 36,
+    "softkitty_uid": "shuriken"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/shuriken.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Simple ring made with leather.",
+   "external_id": "shuriken"
+  },
+  {
+   "id": 380,
+   "kind": "item",
+   "name": "Silver Ore",
+   "status": null,
+   "metadata": {
+    "name": "Silver Ore",
+    "type": "material",
+    "image": "images/items/silver_ore.png",
+    "description": "Crafting material.",
+    "softkitty_id": 8,
+    "softkitty_uid": "silver_ore"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/silver_ore.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "silver_ore"
+  },
+  {
+   "id": 381,
+   "kind": "item",
+   "name": "Skill 1",
+   "status": null,
+   "metadata": {
+    "name": "Skill 1",
+    "type": "skill",
+    "image": "images/items/skill_1.png",
+    "description": "Example Skill.",
+    "softkitty_id": 62,
+    "softkitty_uid": "skill_1"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_1.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_1"
+  },
+  {
+   "id": 382,
+   "kind": "item",
+   "name": "Skill 10",
+   "status": null,
+   "metadata": {
+    "name": "Skill 10",
+    "type": "skill",
+    "image": "images/items/skill_10.png",
+    "description": "Example Skill.",
+    "softkitty_id": 71,
+    "softkitty_uid": "skill_10"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_10.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_10"
+  },
+  {
+   "id": 383,
+   "kind": "item",
+   "name": "Skill 11",
+   "status": null,
+   "metadata": {
+    "name": "Skill 11",
+    "type": "skill",
+    "image": "images/items/skill_11.png",
+    "description": "Example Skill.",
+    "softkitty_id": 72,
+    "softkitty_uid": "skill_11"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_11.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_11"
+  },
+  {
+   "id": 384,
+   "kind": "item",
+   "name": "Skill 12",
+   "status": null,
+   "metadata": {
+    "name": "Skill 12",
+    "type": "skill",
+    "image": "images/items/skill_12.png",
+    "description": "Example Skill.",
+    "softkitty_id": 73,
+    "softkitty_uid": "skill_12"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_12.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_12"
+  },
+  {
+   "id": 385,
+   "kind": "item",
+   "name": "Skill 13",
+   "status": null,
+   "metadata": {
+    "name": "Skill 13",
+    "type": "skill",
+    "image": "images/items/skill_13.png",
+    "description": "Example Skill.",
+    "softkitty_id": 74,
+    "softkitty_uid": "skill_13"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_13.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_13"
+  },
+  {
+   "id": 386,
+   "kind": "item",
+   "name": "Skill 14",
+   "status": null,
+   "metadata": {
+    "name": "Skill 14",
+    "type": "skill",
+    "image": "images/items/skill_14.png",
+    "description": "Example Skill.",
+    "softkitty_id": 75,
+    "softkitty_uid": "skill_14"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_14.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_14"
+  },
+  {
+   "id": 387,
+   "kind": "item",
+   "name": "Skill 15",
+   "status": null,
+   "metadata": {
+    "name": "Skill 15",
+    "type": "skill",
+    "image": "images/items/skill_15.png",
+    "description": "Example Skill.",
+    "softkitty_id": 76,
+    "softkitty_uid": "skill_15"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_15.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_15"
+  },
+  {
+   "id": 388,
+   "kind": "item",
+   "name": "Skill 16",
+   "status": null,
+   "metadata": {
+    "name": "Skill 16",
+    "type": "skill",
+    "image": "images/items/skill_16.png",
+    "description": "Example Skill.",
+    "softkitty_id": 77,
+    "softkitty_uid": "skill_16"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_16.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_16"
+  },
+  {
+   "id": 389,
+   "kind": "item",
+   "name": "Skill 17",
+   "status": null,
+   "metadata": {
+    "name": "Skill 17",
+    "type": "skill",
+    "image": "images/items/skill_17.png",
+    "description": "Example Skill.",
+    "softkitty_id": 78,
+    "softkitty_uid": "skill_17"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_17.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_17"
+  },
+  {
+   "id": 390,
+   "kind": "item",
+   "name": "Skill 18",
+   "status": null,
+   "metadata": {
+    "name": "Skill 18",
+    "type": "skill",
+    "image": "images/items/skill_18.png",
+    "description": "Example Skill.",
+    "softkitty_id": 79,
+    "softkitty_uid": "skill_18"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_18.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_18"
+  },
+  {
+   "id": 391,
+   "kind": "item",
+   "name": "Skill 19",
+   "status": null,
+   "metadata": {
+    "name": "Skill 19",
+    "type": "skill",
+    "image": "images/items/skill_19.png",
+    "description": "Example Skill.",
+    "softkitty_id": 80,
+    "softkitty_uid": "skill_19"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_19.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_19"
+  },
+  {
+   "id": 392,
+   "kind": "item",
+   "name": "Skill 2",
+   "status": null,
+   "metadata": {
+    "name": "Skill 2",
+    "type": "skill",
+    "image": "images/items/skill_2.png",
+    "description": "Example Skill.",
+    "softkitty_id": 63,
+    "softkitty_uid": "skill_2"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_2.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_2"
+  },
+  {
+   "id": 393,
+   "kind": "item",
+   "name": "Skill 20",
+   "status": null,
+   "metadata": {
+    "name": "Skill 20",
+    "type": "skill",
+    "image": "images/items/skill_20.png",
+    "description": "Example Skill.",
+    "softkitty_id": 81,
+    "softkitty_uid": "skill_20"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_20.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_20"
+  },
+  {
+   "id": 394,
+   "kind": "item",
+   "name": "Skill 21",
+   "status": null,
+   "metadata": {
+    "name": "Skill 21",
+    "type": "skill",
+    "image": "images/items/skill_21.png",
+    "description": "Example Skill.",
+    "softkitty_id": 82,
+    "softkitty_uid": "skill_21"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_21.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_21"
+  },
+  {
+   "id": 395,
+   "kind": "item",
+   "name": "Skill 22",
+   "status": null,
+   "metadata": {
+    "name": "Skill 22",
+    "type": "skill",
+    "image": "images/items/skill_22.png",
+    "description": "Example Skill.",
+    "softkitty_id": 83,
+    "softkitty_uid": "skill_22"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_22.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_22"
+  },
+  {
+   "id": 396,
+   "kind": "item",
+   "name": "Skill 23",
+   "status": null,
+   "metadata": {
+    "name": "Skill 23",
+    "type": "skill",
+    "image": "images/items/skill_23.png",
+    "description": "Example Skill.",
+    "softkitty_id": 84,
+    "softkitty_uid": "skill_23"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_23.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_23"
+  },
+  {
+   "id": 397,
+   "kind": "item",
+   "name": "Skill 24",
+   "status": null,
+   "metadata": {
+    "name": "Skill 24",
+    "type": "skill",
+    "image": "images/items/skill_24.png",
+    "description": "Example Skill.",
+    "softkitty_id": 85,
+    "softkitty_uid": "skill_24"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_24.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_24"
+  },
+  {
+   "id": 398,
+   "kind": "item",
+   "name": "Skill 3",
+   "status": null,
+   "metadata": {
+    "name": "Skill 3",
+    "type": "skill",
+    "image": "images/items/skill_3.png",
+    "description": "Example Skill.",
+    "softkitty_id": 64,
+    "softkitty_uid": "skill_3"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_3.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_3"
+  },
+  {
+   "id": 399,
+   "kind": "item",
+   "name": "Skill 4",
+   "status": null,
+   "metadata": {
+    "name": "Skill 4",
+    "type": "skill",
+    "image": "images/items/skill_4.png",
+    "description": "Example Skill.",
+    "softkitty_id": 65,
+    "softkitty_uid": "skill_4"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_4.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_4"
+  },
+  {
+   "id": 400,
+   "kind": "item",
+   "name": "Skill 5",
+   "status": null,
+   "metadata": {
+    "name": "Skill 5",
+    "type": "skill",
+    "image": "images/items/skill_5.png",
+    "description": "Example Skill.",
+    "softkitty_id": 66,
+    "softkitty_uid": "skill_5"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_5.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_5"
+  },
+  {
+   "id": 401,
+   "kind": "item",
+   "name": "Skill 6",
+   "status": null,
+   "metadata": {
+    "name": "Skill 6",
+    "type": "skill",
+    "image": "images/items/skill_6.png",
+    "description": "Example Skill.",
+    "softkitty_id": 67,
+    "softkitty_uid": "skill_6"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_6.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_6"
+  },
+  {
+   "id": 402,
+   "kind": "item",
+   "name": "Skill 7",
+   "status": null,
+   "metadata": {
+    "name": "Skill 7",
+    "type": "skill",
+    "image": "images/items/skill_7.png",
+    "description": "Example Skill.",
+    "softkitty_id": 68,
+    "softkitty_uid": "skill_7"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_7.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_7"
+  },
+  {
+   "id": 403,
+   "kind": "item",
+   "name": "Skill 8",
+   "status": null,
+   "metadata": {
+    "name": "Skill 8",
+    "type": "skill",
+    "image": "images/items/skill_8.png",
+    "description": "Example Skill.",
+    "softkitty_id": 69,
+    "softkitty_uid": "skill_8"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_8.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_8"
+  },
+  {
+   "id": 404,
+   "kind": "item",
+   "name": "Skill 9",
+   "status": null,
+   "metadata": {
+    "name": "Skill 9",
+    "type": "skill",
+    "image": "images/items/skill_9.png",
+    "description": "Example Skill.",
+    "softkitty_id": 70,
+    "softkitty_uid": "skill_9"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/skill_9.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Example Skill.",
+   "external_id": "skill_9"
+  },
+  {
+   "id": 405,
+   "kind": "item",
+   "name": "Slash Ability",
+   "status": null,
+   "metadata": {
+    "name": "Slash Ability",
+    "type": "ability_unlock",
+    "ability_id": "slash",
+    "description": "Unlocks the Slash combat ability when granted as a quest reward."
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Unlocks the Slash combat ability when granted as a quest reward.",
+   "external_id": "slash_ability"
+  },
+  {
+   "id": 406,
+   "kind": "item",
+   "name": "Strange Egg",
+   "status": null,
+   "metadata": {
+    "name": "Strange Egg",
+    "type": "questing",
+    "image": "images/items/strange_egg.png",
+    "description": "Quest item.",
+    "softkitty_id": 19,
+    "softkitty_uid": "strange_egg"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/strange_egg.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Quest item.",
+   "external_id": "strange_egg"
+  },
+  {
+   "id": 407,
+   "kind": "item",
+   "name": "Walnut Log",
+   "status": null,
+   "metadata": {
+    "name": "Walnut Log",
+    "type": "material",
+    "image": "images/items/walnut_log.png",
+    "description": "Crafting material.",
+    "softkitty_id": 11,
+    "softkitty_uid": "walnut_log"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/walnut_log.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "walnut_log"
+  },
+  {
+   "id": 408,
+   "kind": "item",
+   "name": "Wolf's Claw",
+   "status": null,
+   "metadata": {
+    "name": "Wolf's Claw",
+    "type": "material",
+    "image": "images/items/wolf_claw.png",
+    "description": "Crafting material.",
+    "softkitty_id": 14,
+    "softkitty_uid": "wolf_claw"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/wolf_claw.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "wolf_claw"
+  },
+  {
+   "id": 409,
+   "kind": "item",
+   "name": "Wolf's Skin",
+   "status": null,
+   "metadata": {
+    "name": "Wolf's Skin",
+    "type": "material",
+    "image": "images/items/wolf_skin.png",
+    "description": "Crafting material.",
+    "softkitty_id": 12,
+    "softkitty_uid": "wolf_skin"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": "images/items/wolf_skin.png",
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": "Crafting material.",
+   "external_id": "wolf_skin"
+  },
+  {
+   "id": 410,
+   "kind": "item",
+   "name": "Word Hero Badge",
+   "status": null,
+   "metadata": {
+    "name": "Word Hero Badge",
+    "type": "accessory"
+   },
+   "created_at": "2026-08-03T16:01:48.923518+00:00",
+   "image_path": null,
+   "updated_at": "2026-08-03T16:01:48.923518+00:00",
+   "description": null,
+   "external_id": "word_hero_badge"
+  }
+ ]
+}

@@ -7,7 +7,7 @@ quest:
   summary: "אספו מידע מוויל ומהציירת כדי לבדוק מי מכיר את אנשי הממלכה."
   wait_for_npc_turn_in: false
 
-rewards: { xp: 200, items: [] }
+rewards: { xp: 1300, items: [] }
 
 steps:
   - type: play_minigame

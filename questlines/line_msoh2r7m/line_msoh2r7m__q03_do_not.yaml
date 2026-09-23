@@ -1,0 +1,59 @@
+quest:
+  id: line_msoh2r7m__q03_do_not
+  name: 'אבני הדיבור: שלילה עם Do not'
+  level_required: 1
+  giver_npc: Secondary Gate Soldier
+  prerequisite: line_msoh2r7m__q02_does
+  summary: ''
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 7200
+  items:
+    - id: ancient_ring
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: Secondary Gate Soldier
+    dialogue_id: do - does lesson_do - does lesson_q03_questions_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest6_The_Last_Roar
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q03_questions_minigame
+    display_text: "השלם את הפועל עזר הנכון במשפט:\n אני לא יודע "
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest6_The_Last_Roar
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q03_questions_minigame_2
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      למה שלא נתחיל?'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest6_The_Last_Roar
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q03_do_not_minigame
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      אל תוותר!'
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest6_The_Last_Roar
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q03_questions_minigame_4
+    reward_item_id: gem_of_speed
+    reward_amount: 1
+    display_text: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      Why________you sit down?'
+  - type: deliver_item
+    npc_id: Secondary Gate Soldier
+    item_id: gem_of_speed
+    amount: 1
+    dialogue_id: do - does lesson_do - does lesson_q03_do_not_s09
+    display_text: Deliver 1 Gem of Speed to Secondary Gate Soldier

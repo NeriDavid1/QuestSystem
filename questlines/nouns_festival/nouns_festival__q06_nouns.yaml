@@ -6,7 +6,7 @@ quest:
   prerequisite: [nouns_festival__q02_festival, nouns_festival__q03_animals, nouns_festival__q04_things, nouns_festival__q05_nouns]
   summary: "עזרו לראש הכפר להשלים את השלטים האחרונים לפני פתיחת הפסטיבל."
   wait_for_npc_turn_in: false
-rewards: {xp: 250, items: [{id: coin, amount: 36}]}
+rewards: { xp: 825, items: [{ id: coin, amount: 36 }] }
 steps:
   - {type: talk_to_npc, npc_id: "Village Head", dialogue_id: nouns_festival_q06_start}
   - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q06_rocket, minigame_id: word_ordering, world_object_id: Wooden_Cart1_Inside_Gate}

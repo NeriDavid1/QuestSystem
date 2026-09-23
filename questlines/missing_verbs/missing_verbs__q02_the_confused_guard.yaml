@@ -6,7 +6,7 @@ quest:
   prerequisite: missing_verbs__q01_benny_can_t_build_verbs
   summary: "עזרו לשומר להבין את פעלי הפעולה בפקודות המלך."
   wait_for_npc_turn_in: false
-rewards: { xp: 100, items: [{ id: coin, amount: 10 }] }
+rewards: { xp: 450, items: [{ id: coin, amount: 10 }] }
 steps:
   - type: talk_to_npc
     npc_id: "Main Gate Gaurd 1"

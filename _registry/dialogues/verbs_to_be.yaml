@@ -1,0 +1,81 @@
+# Dialogue scripts exported from Unity — verbs_to_be
+dialogues:
+  verbs_to_be_q02_new_quest_step_01:
+    speaker: Benny the Builder
+    lines:
+      - שלום לכם! אני Benny the Builder.
+  verbs_to_be_q02_new_quest_step_04:
+    speaker: Benny the Builder
+    lines:
+      - 'כל הכבוד!
+
+        הצלחתם לפתור את כל האתגרים!
+
+        אבל... יש לנו בעיה קטנה.'
+  verbs_to_be_q02_new_quest_step_08:
+    speaker: Benny the Builder
+    lines:
+      - 'מצאתם את ה-Knight Gauntlet Blueprint! מצוין!
+
+        עכשיו אני סוף סוף יכול להתחיל לבנות את הבסיס.'
+  mayadialougtobe:
+    speaker: teacher_maya
+    lines:
+      - 'אוי לא... אני בצרה!
+
+        שכחתי את חוקי האנגלית של הממלכה - am, is ו-are...'
+  verbs_to_be_q01_new_quest_step_01_3:
+    speaker: Cannoneer
+    lines:
+      - 'שלום! אני Cannoneer!
+
+        I am Cannoneer!
+
+        אני המומחה של הפועל הקסום AM.'
+  verbs_to_be_q02_new_quest_start:
+    speaker: Cannoneer
+    lines:
+      - "כל הכבוד! \nאני ממש מתרשם! נראה שהבנתם מצוין איך משתמשים ב-AM.\nאבל המסע\
+        \ שלנו עדיין לא הסתיים..."
+  verbs_to_be_q03_new_quest_step_01:
+    speaker: Old Man
+    lines:
+      - 'שלום, הרפתקנים צעירים.
+
+        Benny the Builder כבר סיפר לי שתגיעו.
+
+        ואני יודע בדיוק למה אתם כאן.'
+  verbs_to_be_q03_new_quest_step_06:
+    speaker: Old Man
+    lines:
+      - "חזרתם!\nואני רואה שגם Whiskers חזר איתכם! \nידעתי שהוא יגיע רק אם תשתמשו\
+        \ נכון ב-AM וב-IS."
+  verbs_to_be_q04_new_quest_start:
+    speaker: Old Man
+    lines:
+      - מצוין! עכשיו תורכם להתאמן על הפועל ARE.
+      - 'לכו ל-Silver Fountain Court ול-Exam Table ב-Fairy Rose Park.
+
+        השלימו את כל האתגרים בשני המקומות, ואז חזרו אליי.'
+  verbs_to_be_q05_new_quest_start:
+    speaker: Old Man
+    lines:
+      - 'כל הכבוד!
+
+        השלמתם את כל האתגרים בהצלחה.
+
+        עכשיו אתם מכירים את כל שלושת הפעלים הקסומים - AM, IS ו-ARE'
+  verbs_to_be_q05_new_quest_step_01:
+    speaker: teacher_maya
+    lines:
+      - 'חזרתם!
+
+        אז... הצלחתם ללמוד את כל החוקים?
+
+        אבל אני עדיין לא זוכרת אותם...
+
+        '
+  verbs_to_be_q05_new_quest_step_07:
+    speaker: teacher_maya
+    lines:
+      - "תודה רבה לכם! \nממש הצלתם אותי.\nכל כך פחדתי שהשומרים יגלו ששכחתי את החוקים..."

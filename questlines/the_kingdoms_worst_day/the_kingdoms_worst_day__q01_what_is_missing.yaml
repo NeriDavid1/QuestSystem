@@ -7,7 +7,7 @@ quest:
   summary: השלימו שמות של חפצים ועזרו לפן לתקן את רשימת השער.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 100
+  xp: 600
   items: []
 steps:
 - type: talk_to_npc

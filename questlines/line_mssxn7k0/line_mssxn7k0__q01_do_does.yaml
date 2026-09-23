@@ -1,0 +1,64 @@
+quest:
+  id: line_mssxn7k0__q01_do_does
+  name: 'שיעורי בית: Do או Does'
+  level_required: 50
+  giver_npc: teacher_maya
+  prerequisite: null
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 2900
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: Do does home work_Do does home work_q01_do_does_start
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q01_do_does_minigame
+    display_text: "השלימו את הפועל עזר החסר במשפט:\n_____you know? \n האם אתה יודע?"
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q01_do_does_minigame_2
+    display_text: 'השלימו את הפועל עזר החסר במשפט:
+
+      I_____my homework everyday!
+
+      אני עושה את שיעורי הבית שלי כל יום!'
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q01_do_does_minigame_3
+    display_text: 'השלימו את הפועל עזר החסר במשפט:
+
+      האם יש לה?
+
+      ____she have?'
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: 1
+    success_required: true
+    instance_id: Do does home work_q01_do_does_minigame_5
+    display_text: "השלימו את הפועל עזר החסר במשפט:\n מה אתה אוהב?\nWhat________you\
+      \ like?"
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q01_do_does_minigame_5_copy
+    display_text: 'השלימו את הפועל עזר החסר במשפט:
+
+      Where________she live? - איפה היא גרה?'
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: Do does home work_Do does home work_q01_do_does_s06

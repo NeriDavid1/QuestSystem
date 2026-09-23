@@ -1,0 +1,72 @@
+quest:
+  id: a__q01_adjectives
+  name: 'Adjectives: מילות התיאור הראשונות'
+  level_required: 50
+  giver_npc: teacher_maya
+  prerequisite: null
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 1700
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: adjectives_mastery_adjectives_mastery_q01_adjectives_start
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q01_adjectives_minigame
+    display_text: 'הפסל ממש מלוכלך...כתוב את המילה "מלוכלך" באנגלית '
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q01_adjectives_minigame_copy
+    display_text: בוא ננקה אותו, כתוב את המילה "נקי" באנגלית!
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: adjectives_mastery_adjectives_mastery_q01_adjectives_s03
+    count: 1
+    display_text: Talk to Teacher Maya
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q01_adjectives_minigame_2
+    display_text: כשמגיע הלילה בעיירה, מאוד חשוך בחוץ... כתוב את המילה "חשוך" באנגלית!
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q01_adjectives_minigame_2_copy
+    display_text: אם נדליק את המדורה... יהיה פה מאוד בהיר!! כתוב את המילה "בהיר" באנגלית
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: adjectives_mastery_adjectives_mastery_q01_adjectives_s03_copy
+    count: 1
+    display_text: Talk to Teacher Maya
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q01_adjectives_minigame_2_copy_copy
+    display_text: Aאי אפשר לפתוח את התיבה אם אנחנו חלשים... כתוב את המילה "חלש" באנגלית
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 1
+    success_required: true
+    instance_id: adjectives_mastery_q01_adjectives_minigame_2_copy_copy_copy
+    reward_item_id: great_axe
+    reward_amount: 1
+    display_text: אם נרצה לפתוח את התיבה.. נצטרך להיות חזקים! כתוב "חזק" באנגלית
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: adjectives_mastery_adjectives_mastery_q01_adjectives_s09

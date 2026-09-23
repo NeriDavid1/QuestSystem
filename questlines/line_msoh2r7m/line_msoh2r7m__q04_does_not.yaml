@@ -1,0 +1,61 @@
+quest:
+  id: line_msoh2r7m__q04_does_not
+  name: 'אבני הדיבור: שלילה עם Does not'
+  level_required: 1
+  giver_npc: Main Gate Gaurd 1
+  prerequisite: line_msoh2r7m__q03_do_not
+  summary: ''
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 12600
+  items:
+    - id: coin
+      amount: 50
+steps:
+  - type: talk_to_npc
+    npc_id: Main Gate Gaurd 1
+    dialogue_id: do - does lesson_do - does lesson_q04_does_not_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q04_does_not_minigame
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      היא לא מסכימה'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q04_does_not_minigame_copy
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      למה הוא לא עונה?'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q04_does_not_minigame_copy_copy
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      זה לא עובד'
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q04_does_not_minigame_2
+    reward_item_id: gem_of_strengh
+    reward_amount: 1
+    display_text: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      ________he play games?'
+  - type: deliver_item
+    npc_id: Main Gate Gaurd 1
+    item_id: gem_of_strengh
+    amount: 1
+    dialogue_id: do - does lesson_do - does lesson_q04_does_not_s06
+    display_text: Deliver 1 Gem of Strengh to Tomlin the Yawner

@@ -7,7 +7,7 @@ quest:
   summary: "השלימו את המבחן המלכותי וחשפו מי אינו יודע למי שייכים הדברים."
   wait_for_npc_turn_in: false
 
-rewards: { xp: 400, items: [{ id: coin, amount: 10 }] }
+rewards: { xp: 3900, items: [{ id: coin, amount: 50 }] }
 
 steps:
   - type: play_minigame

@@ -7,8 +7,10 @@ quest:
   summary: עזרו לפרופסור להשלים את המספרים מ־100 עד 1000.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 200
-  items: [{ id: coin, amount: 1 }]
+  xp: 400
+  items:
+    - id: coin
+      amount: 1
 steps:
 - type: talk_to_npc
   npc_id: Professor Crazy

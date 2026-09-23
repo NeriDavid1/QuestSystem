@@ -1,0 +1,48 @@
+quest:
+  id: q05_new_quest
+  name: 'הפועל To be: מבחן Am, Is, Are'
+  level_required: 1
+  giver_npc: teacher_maya
+  prerequisite: q04_new_quest
+  summary: ''
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 3000
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: verbs_to_be_q05_new_quest_step_01
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: q05_new_quest_minigame_2
+    display_text: Which verb fits I
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: q05_new_quest_minigame_3
+    display_text: Which verb fits HE, SHE, IT
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: q05_new_quest_minigame_3_copy
+    display_text: Which verb fits You, We, They
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 1
+    success_required: true
+    instance_id: LetterConnectionLevelConfig_q05_new_quest_minigame_4
+    display_text: Complete word_matching
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: verbs_to_be_q05_new_quest_step_07
+    count: 1
+    display_text: Talk to Teacher Maya

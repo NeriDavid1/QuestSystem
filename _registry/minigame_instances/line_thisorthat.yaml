@@ -1,0 +1,414 @@
+# Per-step minigame briefs — line_thisorthat
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
+instances:
+  line_thisorthat_q01_village_head_minigame:
+    minigame_id: word_ordering
+    instruction: "השלימו את המשפט \n\"השולחן הזה\" (קרוב)"
+    tasks:
+      - "השלימו את המשפט \n\"השולחן הזה\" (קרוב)"
+    target: THIS TABLE.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "השלימו את המשפט \n\"השולחן הזה\" (קרוב)"
+      translation: null
+      englishWordsInOrder:
+        - THIS
+        - TABLE
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - THAT
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q01_village_head_minigame_2_copy:
+    minigame_id: letter_ordering
+    instruction: "הרכיבו את המילה THIS \nזה / זאת (קרוב)"
+    tasks:
+      - "הרכיבו את המילה THIS \nזה / זאת (קרוב)"
+    target: THIS
+    variant: word_spelling
+    success: THIS נכתב נכון
+    params:
+      prompt: "הרכיבו את המילה THIS \nזה / זאת (קרוב)"
+      targetWord: THIS
+      extraDistractorCount: 4
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q01_village_head_minigame_2_copy_copy_2:
+    minigame_id: letter_ordering
+    instruction: "הרכיבו את המילה THAT \nזה / זאת (קרוב)"
+    tasks:
+      - "הרכיבו את המילה THAT \nזה / זאת (קרוב)"
+    target: THAT
+    variant: word_spelling
+    success: THAT נכתב נכון
+    params:
+      prompt: "הרכיבו את המילה THAT \nזה / זאת (קרוב)"
+      targetWord: THAT
+      extraDistractorCount: 4
+      customDistractors: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q01_village_head_minigame_3:
+    minigame_id: word_ordering
+    instruction: 'הרכיבו את המשפט
+
+      "הפרי המתוק הזה" (קרוב)'
+    tasks:
+      - 'הרכיבו את המשפט
+
+        "הפרי המתוק הזה" (קרוב)'
+    target: THIS SWEET FRUIT.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'הרכיבו את המשפט
+
+        "הפרי המתוק הזה" (קרוב)'
+      translation: null
+      englishWordsInOrder:
+        - THIS
+        - SWEET
+        - FRUIT
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - THAT
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q01_village_head_minigame_3_copy:
+    minigame_id: word_ordering
+    instruction: 'הרכיבו את המשפט
+
+      "המסעדה היקרה ההיא" (רחוקה)'
+    tasks:
+      - 'הרכיבו את המשפט
+
+        "המסעדה היקרה ההיא" (רחוקה)'
+    target: THAT EXPANSIVE RESTAURANT.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'הרכיבו את המשפט
+
+        "המסעדה היקרה ההיא" (רחוקה)'
+      translation: null
+      englishWordsInOrder:
+        - THAT
+        - EXPANSIVE
+        - RESTAURANT
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - THIS
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q01_village_head_minigame_4:
+    minigame_id: speak_aloud
+    instruction: תגידו בקול רם את המילה THIS!
+    tasks:
+      - תגידו בקול רם את המילה THIS!
+    target: THIS
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: תגידו בקול רם את המילה THIS!
+      targetWords:
+        - THIS
+      targetPhrase: null
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q01_village_head_minigame_4_copy:
+    minigame_id: speak_aloud
+    instruction: תגידו בקול רם את המילה THAT!
+    tasks:
+      - תגידו בקול רם את המילה THAT!
+    target: THAT
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: תגידו בקול רם את המילה THAT!
+      targetWords:
+        - THAT
+      targetPhrase: null
+      silenceTimeoutSeconds: 2.5
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q01_village_head_minigame_copy:
+    minigame_id: word_ordering
+    instruction: "הרכיבו את המשפט \n\"ההר ההוא\" (רחוק)"
+    tasks:
+      - "הרכיבו את המשפט \n\"ההר ההוא\" (רחוק)"
+    target: THAT MOUNTAINE.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "הרכיבו את המשפט \n\"ההר ההוא\" (רחוק)"
+      translation: null
+      englishWordsInOrder:
+        - THAT
+        - MOUNTAINE
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - THIS
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q02_old_woman_minigame:
+    minigame_id: word_ordering
+    instruction: 'הספר מונח על השולחן לצידך... השלימו את המילה הנכונה עבור המשפט:
+
+      '
+    tasks:
+      - 'הספר מונח על השולחן לצידך... השלימו את המילה הנכונה עבור המשפט:
+
+        '
+    target: THIS OLD BOOK.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'הספר מונח על השולחן לצידך... השלימו את המילה הנכונה עבור המשפט:
+
+        '
+      translation: null
+      englishWordsInOrder:
+        - THIS
+        - OLD
+        - BOOK
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - THAT
+        - THESE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q02_old_woman_minigame_copy:
+    minigame_id: word_ordering
+    instruction: 'את/ה צופה בנוף ורואה מגדל באופק... השלימו את המילה הנכונה עבור המשפט:'
+    tasks:
+      - 'את/ה צופה בנוף ורואה מגדל באופק... השלימו את המילה הנכונה עבור המשפט:'
+    target: THAT LEGENDARY TOWER.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'את/ה צופה בנוף ורואה מגדל באופק... השלימו את המילה הנכונה עבור המשפט:'
+      translation: null
+      englishWordsInOrder:
+        - THAT
+        - LEGENDARY
+        - TOWER
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - THIS
+        - THESE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q02_old_woman_minigame_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'אם נרצה לדבר על הפרפר היושב לנו על האצבע נגיד... השלימו את המילה
+      הנכונה עבור המשפט:'
+    tasks:
+      - 'אם נרצה לדבר על הפרפר היושב לנו על האצבע נגיד... השלימו את המילה הנכונה עבור
+        המשפט:'
+    target: THIS COLORFUL BUTTERFLY.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'אם נרצה לדבר על הפרפר היושב לנו על האצבע נגיד... השלימו את המילה הנכונה
+        עבור המשפט:'
+      translation: null
+      englishWordsInOrder:
+        - THIS
+        - COLORFUL
+        - BUTTERFLY
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - THAT
+        - THESE
+        - THOSE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q02_old_woman_minigame_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'אם נרצה להצביע על שער כבד במבצר המרוחק, נגיד: ... השלימו את המילה
+      הנכונה עבור המשפט:'
+    tasks:
+      - 'אם נרצה להצביע על שער כבד במבצר המרוחק, נגיד: ... השלימו את המילה הנכונה
+        עבור המשפט:'
+    target: THAT HEAVY GATE.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'אם נרצה להצביע על שער כבד במבצר המרוחק, נגיד: ... השלימו את המילה הנכונה
+        עבור המשפט:'
+      translation: null
+      englishWordsInOrder:
+        - THAT
+        - HEAVY
+        - GATE
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - THESE
+        - THIS
+        - THOSE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q03_knowledge_advisors_minigame:
+    minigame_id: word_ordering
+    instruction: 'הרכיבו את המשפט
+
+      "השיקויים החזקים האלה" (הנמצאים קרובים אלינו)'
+    tasks:
+      - 'הרכיבו את המשפט
+
+        "השיקויים החזקים האלה" (הנמצאים קרובים אלינו)'
+    target: THESE STRONG POTIONS.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'הרכיבו את המשפט
+
+        "השיקויים החזקים האלה" (הנמצאים קרובים אלינו)'
+      translation: null
+      englishWordsInOrder:
+        - THESE
+        - STRONG
+        - POTIONS
+      preFilledIndices: []
+      distractorWords:
+        - THAT
+        - THOSE
+        - THIS
+        - POTION
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q03_knowledge_advisors_minigame_copy:
+    minigame_id: word_ordering
+    instruction: 'הרכיבו את המשפט
+
+      "השרביט הסגול הזה" (היושב בתיק שעל גבך)'
+    tasks:
+      - 'הרכיבו את המשפט
+
+        "השרביט הסגול הזה" (היושב בתיק שעל גבך)'
+    target: THIS PURPLE WAND.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'הרכיבו את המשפט
+
+        "השרביט הסגול הזה" (היושב בתיק שעל גבך)'
+      translation: null
+      englishWordsInOrder:
+        - THIS
+        - PURPLE
+        - WAND
+      preFilledIndices: []
+      distractorWords:
+        - WANDS
+        - THOSE
+        - THESE
+        - THAT
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q03_knowledge_advisors_minigame_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'הרכיבו את המשפט
+
+      "הסוסים המהירים ההם" (נמצאים במירוץ מרוחק)'
+    tasks:
+      - 'הרכיבו את המשפט
+
+        "הסוסים המהירים ההם" (נמצאים במירוץ מרוחק)'
+    target: THOSE FAST HORSES.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'הרכיבו את המשפט
+
+        "הסוסים המהירים ההם" (נמצאים במירוץ מרוחק)'
+      translation: null
+      englishWordsInOrder:
+        - THOSE
+        - FAST
+        - HORSES
+      preFilledIndices: []
+      distractorWords:
+        - THIS
+        - HORSE
+        - THESE
+        - THAT
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q03_knowledge_advisors_minigame_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'כאשר נדבר על אביר אמיץ ספציפי ומפורסם, נגיד:
+
+      '
+    tasks:
+      - 'כאשר נדבר על אביר אמיץ ספציפי ומפורסם, נגיד:
+
+        '
+    target: THE BRAVE KNIGHT.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'כאשר נדבר על אביר אמיץ ספציפי ומפורסם, נגיד:
+
+        '
+      translation: null
+      englishWordsInOrder:
+        - THE
+        - BRAVE
+        - KNIGHT
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - THIS
+        - THAT
+        - THOSE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q03_knowledge_advisors_minigame_copy_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: "הרכיבו את המשפט \n\"הקסדה המוזהבת הזאת\" (נמצאת ביד שלך)"
+    tasks:
+      - "הרכיבו את המשפט \n\"הקסדה המוזהבת הזאת\" (נמצאת ביד שלך)"
+    target: THIS GOLDEN HELMET.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "הרכיבו את המשפט \n\"הקסדה המוזהבת הזאת\" (נמצאת ביד שלך)"
+      translation: null
+      englishWordsInOrder:
+        - THIS
+        - GOLDEN
+        - HELMET
+      preFilledIndices: []
+      distractorWords:
+        - THESE
+        - THAT
+        - THOSE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_thisorthat_q03_knowledge_advisors_minigame_copy_copy_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'אם נקבל מכתב ספציפי ומיוחד, נוכל להגיד:
+
+      '
+    tasks:
+      - 'אם נקבל מכתב ספציפי ומיוחד, נוכל להגיד:
+
+        '
+    target: THE SPECIAL LETTER.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'אם נקבל מכתב ספציפי ומיוחד, נוכל להגיד:
+
+        '
+      translation: null
+      englishWordsInOrder:
+        - THE
+        - SPECIAL
+        - LETTER
+      preFilledIndices: []
+      distractorWords:
+        - THESE
+        - THAT
+        - THOSE
+        - THIS
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

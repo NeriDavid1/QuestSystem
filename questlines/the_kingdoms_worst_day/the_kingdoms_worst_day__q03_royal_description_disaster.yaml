@@ -7,7 +7,7 @@ quest:
   summary: השלימו מילות תיאור ועזרו לציירת Painter לתאר את החפצים.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 200
+  xp: 900
   items: []
 steps:
 - type: talk_to_npc

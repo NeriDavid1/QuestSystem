@@ -6,7 +6,7 @@ quest:
   prerequisite: null
   summary: "עזרו לראש הכפר להכין את אזור הפסטיבל לפני שהחקלאי יפתח את דוכן החיות."
   wait_for_npc_turn_in: false
-rewards: {xp: 50, items: []}
+rewards: { xp: 275, items: [] }
 steps:
   - {type: talk_to_npc, npc_id: "Village Head", dialogue_id: nouns_festival_q02_start}
   - {type: play_minigame, npc_id: "Village Head", difficulty: 1, instance_id: nouns_festival_q02_candle, minigame_id: letter_ordering, world_object_id: Fire_Camp_Tower_Of_Lost_Vigil}

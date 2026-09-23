@@ -1,0 +1,59 @@
+# Dialogue scripts exported from Unity — line_msysmv9a
+dialogues:
+  line_msysmv9a_line_msysmv9a_q01_the_these_those_start:
+    speaker: Village Head
+    lines:
+      - 'אה! לא ראיתי אתכם שם...
+
+        וכן... אני נורא מודאג!'
+  line_msysmv9a_line_msysmv9a_q01_the_these_those_s04:
+    speaker: Village Head
+    lines:
+      - 'מצוין! המילה The תעזור לנו לדבר על דברים ספציפיים, נשים אותה לפני המילה שעליה
+        נרצה לדבר
+
+        '
+  line_msysmv9a_line_msysmv9a_q01_the_these_those_s04_copy:
+    speaker: Village Head
+    lines:
+      - 'או! אתם כבר נראים מקצוענים יותר.
+
+        המילה THESE תעזור לנו עם עצמים רבים שנמצאים בקרבתנו'
+  line_msysmv9a_line_msysmv9a_q01_the_these_those_s04_copy_copy:
+    speaker: Village Head
+    lines:
+      - אלופים! עברתם על שלושת המילים, האחרונה THOSE תעזור לנו עם דברים רחוקים...
+  line_msysmv9a_line_msysmv9a_q01_the_these_those_turn_in:
+    speaker: Village Head
+    lines:
+      - אני חייב שגם אתם תדעו איך להשתמש במילים, אבל אני לא מסביר את זה נהדר... תעברו
+        אצל ה Farmer!
+  line_msysmv9a_line_msysmv9a_q02_the_farmer_start:
+    speaker: Farmer
+    lines:
+      - שלום חברים! בדיוק מסדר את האספקה לחווה.
+  line_msysmv9a_line_msysmv9a_q02_farmer_s04:
+    speaker: Farmer
+    lines:
+      - יפה מאוד, אני רואה שאתם מבינים איך להשתמש ב THE, אבל האם תוכלו להבחין בהבדל
+        הבא?
+  line_msysmv9a_line_msysmv9a_q02_farmer_turn_in:
+    speaker: Farmer
+    lines:
+      - וואו! עכשיו נוכל לדבר שעות על החווה
+  line_msysmv9a_line_msysmv9a_q03_little_girl_start:
+    speaker: Little Girl
+    lines:
+      - היי! באתם ללמוד על מרחקים? זה ממש פשוט!
+  line_msysmv9a_line_msysmv9a_q03_little_girl_turn_in:
+    speaker: Little Girl
+    lines:
+      - אני רואה שהבנתם חבר'ה....
+  line_msysmv9a_line_msysmv9a_q04_village_head_start:
+    speaker: Village Head
+    lines:
+      - לא ייאמן! כבר חזרתם??
+  line_msysmv9a_line_msysmv9a_q04_village_head_s05:
+    speaker: Village Head
+    lines:
+      - אני לא מאמין... יש לכם את כל ה Corn!

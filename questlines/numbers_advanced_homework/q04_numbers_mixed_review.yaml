@@ -7,8 +7,10 @@ quest:
   summary: 'חברו את כל טווחי המספרים והשלימו את המפה.'
   wait_for_npc_turn_in: false
 rewards:
-  xp: 250
-  items: [{ id: coin, amount: 10 }]
+  xp: 725
+  items:
+    - id: coin
+      amount: 30
 steps:
 - type: talk_to_npc
   npc_id: teacher_maya

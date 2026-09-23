@@ -1,0 +1,64 @@
+quest:
+  id: line_mssxn7k0__q02_do_not_does_not
+  name: 'שיעורי בית: Do not ו-Does not'
+  level_required: 2
+  giver_npc: teacher_maya
+  prerequisite: null
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 5400
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: Do does home work_Do does home work_q02_new_quest_start
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q02_new_quest_minigame
+    display_text: 'השלימו את הפועל עזר החסר במשפט:
+
+      It______ ____matter - זה לא משנה
+
+      '
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q02_new_quest_minigame_copy
+    display_text: 'השלימו בקולכם את הפועל עזר שחסר במשפט:
+
+      I ____ ______ know! - אני לא יודע!'
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q02_do_not_does_not_minigame_2
+    display_text: 'השלימו את הפועל עזר החסר במשפט:
+
+      She_______want that! - היא לא רוצה את זה'
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q02_new_quest_minigame_copy_copy_copy
+    display_text: 'השלימו את הפועל עזר החסר במשפט:
+
+      They________need - הם לא צריכים'
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: Do does home work_q02_do_not_does_not_minigame_3
+    display_text: "השלימו בקולכם את הפועל עזר שחסר במשפט: הוא לא רוצה אבל אנחנו כן\n\
+      He_________want but we_____\n "
+  - type: return_to_npc
+    npc_id: teacher_maya
+    dialogue_id: Do does home work_Do does home work_q02_new_quest_s02_copy_copy_copy_copy

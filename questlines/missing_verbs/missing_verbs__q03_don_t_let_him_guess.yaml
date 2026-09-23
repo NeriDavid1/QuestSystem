@@ -6,7 +6,7 @@ quest:
   prerequisite: missing_verbs__q02_the_confused_guard
   summary: "עזרו לתותחן לבחור את פועל הפעולה הנכון."
   wait_for_npc_turn_in: false
-rewards: { xp: 150, items: [{ id: coin, amount: 15 }] }
+rewards: { xp: 800, items: [{ id: coin, amount: 15 }] }
 steps:
   - type: talk_to_npc
     npc_id: Cannoneer

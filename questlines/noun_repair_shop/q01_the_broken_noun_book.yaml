@@ -7,7 +7,7 @@ quest:
   summary: השלימו שמות עצם ועזרו למאיה לתקן את ספר המילים.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 150
+  xp: 450
   items: []
 steps:
 - type: talk_to_npc

@@ -1,0 +1,61 @@
+quest:
+  id: line_msoh2r7m__q02_does
+  name: 'אבני הדיבור: הפועל Does'
+  level_required: 1
+  giver_npc: Cannoneer
+  prerequisite: line_msoh2r7m__q01_do
+  summary: ''
+  wait_for_npc_turn_in: false
+rewards:
+  xp: 6000
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: Cannoneer
+    dialogue_id: do - does lesson_do - does lesson_q02_do_not_does_not_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q02_new_quest_minigame
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      היא עושה את שיעורי הבית שלה כל יום
+
+      '
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q02_new_quest_minigame_2
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      האם הוא מדבר אנגלית?'
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q02_new_quest_minigame_3
+    display_text: 'השלם את הפועל עזר הנכון במשפט:
+
+      האם זה משנה?'
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest4_Sanctum_Of_Whispering_Light
+    difficulty: null
+    success_required: true
+    instance_id: do - does lesson_q02_do_not_does_not_minigame
+    reward_item_id: gem_of_life
+    reward_amount: 1
+    display_text: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      She_______her best'
+  - type: deliver_item
+    npc_id: Cannoneer
+    item_id: gem_of_life
+    amount: 1
+    dialogue_id: do - does lesson_do - does lesson_q02_do_not_does_not_s07
+    display_text: Deliver 1 Gem of Life to Cannoneer

@@ -6,7 +6,7 @@ quest:
   prerequisite: null
   summary: "עזרו לבני להחזיר פעלים לפקודות הבנייה."
   wait_for_npc_turn_in: false
-rewards: { xp: 100, items: [{ id: coin, amount: 20 }] }
+rewards: { xp: 350, items: [{ id: coin, amount: 20 }] }
 steps:
   - type: talk_to_npc
     npc_id: "Benny the Builder"

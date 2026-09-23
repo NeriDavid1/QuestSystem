@@ -521,6 +521,8 @@ def build_bundle() -> dict[str, Any]:
                 if (
                     str(last_step.get("type") or "") in {"return_to_npc", "talk_to_npc"}
                     and last_step.get("dialogue_id")
+                    # `count` marks an explicit TalkToNpc objective, not a turn-in.
+                    and last_step.get("count") in (None, "")
                 ):
                     turn_in_step_index = len(steps_raw) - 1
                     promoted_turn_in_dialogue_id = str(last_step["dialogue_id"])

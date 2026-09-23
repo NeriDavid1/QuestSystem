@@ -7,7 +7,7 @@ quest:
   summary: חברו שמות, פעלים ותיאורים במשפטים ברורים והקריאו אותם.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 300
+  xp: 1600
   items:
     - id: coin
       amount: 50

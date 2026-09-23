@@ -7,7 +7,7 @@ quest:
   summary: "הקהל יושב והפנסים דולקים. הרכיבו את המשפטים לבד ואמרו את השורות שלכם בקול על הבמה."
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: personal_pronouns_q05_finish
-rewards: { xp: 300, items: [{ id: coin, amount: 10 }] }
+rewards: { xp: 2250, items: [{ id: coin, amount: 10 }] }
 steps:
   - type: talk_to_npc
     npc_id: Village Head

@@ -1,0 +1,226 @@
+# Per-step minigame briefs — line_mssxn7k0
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
+instances:
+  Do does home work_q01_do_does_minigame:
+    minigame_id: speak_aloud
+    instruction: "השלימו את הפועל עזר החסר במשפט:\n_____you know? \n האם אתה יודע?"
+    tasks:
+      - "השלימו את הפועל עזר החסר במשפט:\n_____you know? \n האם אתה יודע?"
+    target: Do
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: "השלימו את הפועל עזר החסר במשפט:\n_____you know? \n האם אתה יודע?"
+      targetWords:
+        - Do
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q01_do_does_minigame_2:
+    minigame_id: speak_aloud
+    instruction: 'השלימו את הפועל עזר החסר במשפט:
+
+      I_____my homework everyday!
+
+      אני עושה את שיעורי הבית שלי כל יום!'
+    tasks:
+      - 'השלימו את הפועל עזר החסר במשפט:
+
+        I_____my homework everyday!
+
+        אני עושה את שיעורי הבית שלי כל יום!'
+    target: do
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'השלימו את הפועל עזר החסר במשפט:
+
+        I_____my homework everyday!
+
+        אני עושה את שיעורי הבית שלי כל יום!'
+      targetWords:
+        - do
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q01_do_does_minigame_3:
+    minigame_id: speak_aloud
+    instruction: 'השלימו את הפועל עזר החסר במשפט:
+
+      האם יש לה?
+
+      ____she have?'
+    tasks:
+      - 'השלימו את הפועל עזר החסר במשפט:
+
+        האם יש לה?
+
+        ____she have?'
+    target: Does
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'השלימו את הפועל עזר החסר במשפט:
+
+        האם יש לה?
+
+        ____she have?'
+      targetWords:
+        - Does
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q01_do_does_minigame_5:
+    minigame_id: letter_ordering
+    instruction: "השלימו את הפועל עזר החסר במשפט:\n מה אתה אוהב?\nWhat________you\
+      \ like?"
+    tasks:
+      - "השלימו את הפועל עזר החסר במשפט:\n מה אתה אוהב?\nWhat________you like?"
+    target: do
+    variant: word_spelling
+    success: DO נכתב נכון
+    params:
+      prompt: "השלימו את הפועל עזר החסר במשפט:\n מה אתה אוהב?\nWhat________you like?"
+      targetWord: do
+      extraDistractorCount: 2
+      customDistractors: 670079006100
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q01_do_does_minigame_5_copy:
+    minigame_id: letter_ordering
+    instruction: 'השלימו את הפועל עזר החסר במשפט:
+
+      Where________she live? - איפה היא גרה?'
+    tasks:
+      - 'השלימו את הפועל עזר החסר במשפט:
+
+        Where________she live? - איפה היא גרה?'
+    target: does
+    variant: word_spelling
+    success: DOES נכתב נכון
+    params:
+      prompt: 'השלימו את הפועל עזר החסר במשפט:
+
+        Where________she live? - איפה היא גרה?'
+      targetWord: does
+      extraDistractorCount: 2
+      customDistractors: 74006800
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q02_do_not_does_not_minigame_2:
+    minigame_id: letter_ordering
+    instruction: 'השלימו את הפועל עזר החסר במשפט:
+
+      She_______want that! - היא לא רוצה את זה'
+    tasks:
+      - 'השלימו את הפועל עזר החסר במשפט:
+
+        She_______want that! - היא לא רוצה את זה'
+    target: doesnt
+    variant: word_spelling
+    success: DOESNT נכתב נכון
+    params:
+      prompt: 'השלימו את הפועל עזר החסר במשפט:
+
+        She_______want that! - היא לא רוצה את זה'
+      targetWord: doesnt
+      extraDistractorCount: 0
+      customDistractors: 75006600
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q02_do_not_does_not_minigame_3:
+    minigame_id: speak_aloud
+    instruction: "השלימו בקולכם את הפועל עזר שחסר במשפט: הוא לא רוצה אבל אנחנו כן\n\
+      He_________want but we_____\n "
+    tasks:
+      - "השלימו בקולכם את הפועל עזר שחסר במשפט: הוא לא רוצה אבל אנחנו כן\nHe_________want\
+        \ but we_____\n "
+    target: doesnt, do
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: "השלימו בקולכם את הפועל עזר שחסר במשפט: הוא לא רוצה אבל אנחנו כן\nHe_________want\
+        \ but we_____\n "
+      targetWords:
+        - doesnt
+        - do
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q02_new_quest_minigame:
+    minigame_id: speak_aloud
+    instruction: 'השלימו את הפועל עזר החסר במשפט:
+
+      It__________matter - זה לא משנה
+
+      '
+    tasks:
+      - 'השלימו את הפועל עזר החסר במשפט:
+
+        It__________matter - זה לא משנה
+
+        '
+    target: does not
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'השלימו את הפועל עזר החסר במשפט:
+
+        It__________matter - זה לא משנה
+
+        '
+      targetWords: []
+      targetPhrase: does not
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q02_new_quest_minigame_copy:
+    minigame_id: speak_aloud
+    instruction: 'השלימו בקולכם את הפועל עזר שחסר במשפט:
+
+      I__________know! - אני לא יודע!'
+    tasks:
+      - 'השלימו בקולכם את הפועל עזר שחסר במשפט:
+
+        I__________know! - אני לא יודע!'
+    target: do , not
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'השלימו בקולכם את הפועל עזר שחסר במשפט:
+
+        I__________know! - אני לא יודע!'
+      targetWords:
+        - 'do '
+        - not
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  Do does home work_q02_new_quest_minigame_copy_copy_copy:
+    minigame_id: letter_ordering
+    instruction: 'השלימו את הפועל עזר החסר במשפט:
+
+      They________need - הם לא צריכים'
+    tasks:
+      - 'השלימו את הפועל עזר החסר במשפט:
+
+        They________need - הם לא צריכים'
+    target: Dont
+    variant: word_spelling
+    success: DONT נכתב נכון
+    params:
+      prompt: 'השלימו את הפועל עזר החסר במשפט:
+
+        They________need - הם לא צריכים'
+      targetWord: Dont
+      extraDistractorCount: 2
+      customDistractors: 67007500
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

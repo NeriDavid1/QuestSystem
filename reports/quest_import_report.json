@@ -1,20 +1,72 @@
 {
   "importer_version": "1.0.0",
-  "source_digest": "6e3b1414b040fd9d064f3bb315c4a89544410fab7ff83ebba9475f137fafe139",
+  "source_digest": "0489ec1747940ca5ac6fe276e8459e9a960dfd78d601bcae8c192da9a1041f7a",
   "counts": {
-    "catalog_entries": 177,
+    "catalog_entries": 259,
     "step_type_definitions": 6,
-    "dialogues": 129,
-    "dialogue_lines": 422,
-    "minigame_instances": 268,
-    "questlines": 12,
-    "quests": 59,
-    "steps": 306,
+    "dialogues": 182,
+    "dialogue_lines": 476,
+    "minigame_instances": 377,
+    "questlines": 18,
+    "quests": 81,
+    "steps": 435,
     "errors": 0,
     "warnings": 0,
-    "info": 22
+    "info": 33
   },
   "conflicts": [
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\a\\a__q01_adjectives.yaml",
+      "context": {
+        "questline": "a",
+        "quest_id": "a__q01_adjectives",
+        "position": 9,
+        "step_type": "return_to_npc",
+        "dialogue_id": "adjectives_mastery_adjectives_mastery_q01_adjectives_s09"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\a\\a__q02_boo_radcliff.yaml",
+      "context": {
+        "questline": "a",
+        "quest_id": "a__q02_boo_radcliff",
+        "position": 7,
+        "step_type": "return_to_npc",
+        "dialogue_id": "adjectives_mastery_adjectives_mastery_q02_boo_radcliff_s06"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\a\\a__q03_mountain_guide.yaml",
+      "context": {
+        "questline": "a",
+        "quest_id": "a__q03_mountain_guide",
+        "position": 7,
+        "step_type": "return_to_npc",
+        "dialogue_id": "adjectives_mastery_adjectives_mastery_q03_mountain_guide_s06"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\a\\a__q04_new_quest.yaml",
+      "context": {
+        "questline": "a",
+        "quest_id": "a__q04_new_quest",
+        "position": 8,
+        "step_type": "return_to_npc",
+        "dialogue_id": "adjectives_mastery_adjectives_mastery_q04_new_quest_turn_in"
+      }
+    },
     {
       "kind": "promoted_turn_in_step",
       "severity": "info",
@@ -26,6 +78,97 @@
         "position": 3,
         "step_type": "return_to_npc",
         "dialogue_id": "will_first_slash_done"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\line_mssxn7k0\\line_mssxn7k0__q01_do_does.yaml",
+      "context": {
+        "questline": "line_mssxn7k0",
+        "quest_id": "line_mssxn7k0__q01_do_does",
+        "position": 6,
+        "step_type": "return_to_npc",
+        "dialogue_id": "Do does home work_Do does home work_q01_do_does_s06"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\line_mssxn7k0\\line_mssxn7k0__q02_do_not_does_not.yaml",
+      "context": {
+        "questline": "line_mssxn7k0",
+        "quest_id": "line_mssxn7k0__q02_do_not_does_not",
+        "position": 6,
+        "step_type": "return_to_npc",
+        "dialogue_id": "Do does home work_Do does home work_q02_new_quest_s02_copy_copy_copy_copy"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\line_msysmv9a\\line_msysmv9a__q01_the_these_those.yaml",
+      "context": {
+        "questline": "line_msysmv9a",
+        "quest_id": "line_msysmv9a__q01_the_these_those",
+        "position": 7,
+        "step_type": "return_to_npc",
+        "dialogue_id": "line_msysmv9a_line_msysmv9a_q01_the_these_those_turn_in"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\line_msysmv9a\\line_msysmv9a__q02_farmer.yaml",
+      "context": {
+        "questline": "line_msysmv9a",
+        "quest_id": "line_msysmv9a__q02_farmer",
+        "position": 8,
+        "step_type": "return_to_npc",
+        "dialogue_id": "line_msysmv9a_line_msysmv9a_q02_farmer_turn_in"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\line_msysmv9a\\line_msysmv9a__q03_little_girl.yaml",
+      "context": {
+        "questline": "line_msysmv9a",
+        "quest_id": "line_msysmv9a__q03_little_girl",
+        "position": 6,
+        "step_type": "return_to_npc",
+        "dialogue_id": "line_msysmv9a_line_msysmv9a_q03_little_girl_turn_in"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\line_thisorthat\\line_thisorthat__q02_old_woman.yaml",
+      "context": {
+        "questline": "line_thisorthat",
+        "quest_id": "line_thisorthat__q02_old_woman",
+        "position": 5,
+        "step_type": "return_to_npc",
+        "dialogue_id": "line_thisorthat_line_thisorthat_q02_old_woman_turn_in"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\line_thisorthat\\line_thisorthat__q03_knowledge_advisors.yaml",
+      "context": {
+        "questline": "line_thisorthat",
+        "quest_id": "line_thisorthat__q03_knowledge_advisors",
+        "position": 7,
+        "step_type": "return_to_npc",
+        "dialogue_id": "line_thisorthat_line_thisorthat_q03_knowledge_advisors_turn_in"
       }
     },
     {

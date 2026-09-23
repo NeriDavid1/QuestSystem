@@ -1,0 +1,36 @@
+questline:
+  id: line_thisorthat
+  npc_id: teacher_maya
+  display_name: This Or That? - משימת המשך
+  theme: משימת המשך לה' הידיעה ו THESE & THOSE - נרחיב על הנושא ונלמד גם על THIS &
+    THAT כאשר מדברים על עצם יחיד
+  quest_count: 3
+  level_range:
+    - 2
+    - 50
+quests:
+  - id: line_thisorthat__q01_village_head
+    name: 'This ו-That: קרוב או רחוק'
+    level: 50
+    prerequisite: null
+    rewards:
+      xp: 2800
+      items: []
+  - id: line_thisorthat__q02_old_woman
+    name: 'תרגול: מתי This ומתי That'
+    level: 2
+    prerequisite: line_thisorthat__q01_village_head
+    rewards:
+      xp: 3500
+      items:
+        - id: ancient_ring
+          amount: 1
+  - id: line_thisorthat__q03_knowledge_advisors
+    name: 'מבחן סיום: מילות הצבעה ו-The'
+    level: 3
+    prerequisite: line_thisorthat__q02_old_woman
+    rewards:
+      xp: 6300
+      items:
+        - id: enchantment_recipe
+          amount: 1

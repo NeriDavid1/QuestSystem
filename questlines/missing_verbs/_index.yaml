@@ -11,14 +11,14 @@ quests:
     name: "Benny Can't Build"
     level: 50
     prerequisite: null
-    rewards: { xp: 100, items: [{ id: coin, amount: 20 }] }
+    rewards: { xp: 350, items: [{ id: coin, amount: 20 }] }
   - id: missing_verbs__q02_the_confused_guard
     name: "The Confused Guard"
     level: 1
     prerequisite: missing_verbs__q01_benny_can_t_build_verbs
-    rewards: { xp: 100, items: [{ id: coin, amount: 10 }] }
+    rewards: { xp: 450, items: [{ id: coin, amount: 10 }] }
   - id: missing_verbs__q03_don_t_let_him_guess
     name: "Don't Let Him Guess!"
     level: 1
     prerequisite: missing_verbs__q02_the_confused_guard
-    rewards: { xp: 150, items: [{ id: coin, amount: 15 }] }
+    rewards: { xp: 800, items: [{ id: coin, amount: 15 }] }

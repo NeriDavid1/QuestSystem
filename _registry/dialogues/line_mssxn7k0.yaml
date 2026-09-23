@@ -1,0 +1,18 @@
+# Dialogue scripts exported from Unity — line_mssxn7k0
+dialogues:
+  Do does home work_Do does home work_q01_do_does_start:
+    speaker: teacher_maya
+    lines:
+      - היי לכם, אחרי שלמדתם את כל הנושא כלכך טוב עם המדריכים שלכם, בא לי לבחון אתכם!
+  Do does home work_Do does home work_q01_do_does_s06:
+    speaker: teacher_maya
+    lines:
+      - אוקיי, לא ציפיתי שתעברו את המבחן הזה בכזו קלות, ואו!
+  Do does home work_Do does home work_q02_new_quest_start:
+    speaker: teacher_maya
+    lines:
+      - החלטתם לעשות עוד מבחן? איזה כיף !
+  Do does home work_Do does home work_q02_new_quest_s02_copy_copy_copy_copy:
+    speaker: teacher_maya
+    lines:
+      - חזרתם! אני התרשמתי מאוד, קחו את זה  - מגיע לכם!

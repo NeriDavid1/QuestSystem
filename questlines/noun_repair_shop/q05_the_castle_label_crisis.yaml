@@ -7,7 +7,7 @@ quest:
   summary: תקנו את שמות הארמון לפני שהכתר יקבל שפם.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 250
+  xp: 900
   items: []
 steps:
 - type: talk_to_npc

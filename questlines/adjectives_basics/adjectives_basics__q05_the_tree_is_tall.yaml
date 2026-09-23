@@ -7,7 +7,7 @@ quest:
   summary: "עכשיו בונים משפטים שלמים על הציור: The tree is tall. למדו להשתמש ב-is וב-are לפני מילת התיאור."
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: adjectives_basics_q05_finish
-rewards: { xp: 275, items: [] }
+rewards: { xp: 1050, items: [] }
 steps:
   - type: talk_to_npc
     npc_id: "Little Girl"

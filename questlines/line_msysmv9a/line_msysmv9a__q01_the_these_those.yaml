@@ -1,0 +1,63 @@
+quest:
+  id: line_msysmv9a__q01_the_these_those
+  name: מכירים את The, These ו-Those
+  level_required: 40
+  giver_npc: Village Head
+  prerequisite: null
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 2200
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: line_msysmv9a_line_msysmv9a_q01_the_these_those_start
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q01_the_these_those_minigame
+    display_text: 'המילה THE היא ה'' הידיעה באנגלית, נשתמש בה כדי להצביע על חפץ ספציפי,
+      מוכר או יחיד במינו!
+
+      תגידו את המילה THE (דָה) בקול רם.'
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: line_msysmv9a_line_msysmv9a_q01_the_these_those_s04
+    count: 1
+    display_text: Talk to Village Head
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q01_the_these_those_minigame_2
+    display_text: 'המילה THESE אומרת "האלה" בעברית, נשתמש בה כדי לדבר על מספר עצמים
+      רבים הנמצאים קרוב אלינו
+
+      תגידו את המילה THESE (דִיז) בקול רם.'
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: line_msysmv9a_line_msysmv9a_q01_the_these_those_s04_copy
+    count: 1
+    display_text: Talk to Village Head
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 1
+    success_required: true
+    instance_id: line_msysmv9a_q01_the_these_those_minigame_2_copy
+    display_text: 'המילה THOSE אומרת "ההם" בעברית, נשתמש בה כדי לדבר על מספר עצמים
+      רבים הנמצאים רחוק מאיתנו
+
+      תגידו את המילה THOSE (דּוֹז) בקול רם.'
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: line_msysmv9a_line_msysmv9a_q01_the_these_those_s04_copy_copy
+    count: 1
+    display_text: Talk to Village Head
+  - type: return_to_npc
+    npc_id: Village Head
+    dialogue_id: line_msysmv9a_line_msysmv9a_q01_the_these_those_turn_in

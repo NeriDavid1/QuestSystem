@@ -1,0 +1,424 @@
+# Per-step minigame briefs — line_msysmv9a
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
+instances:
+  line_msysmv9a_q01_the_these_those_minigame:
+    minigame_id: speak_aloud
+    instruction: 'המילה THE היא ה'' הידיעה באנגלית, נשתמש בה כדי להצביע על חפץ ספציפי,
+      מוכר או יחיד במינו!
+
+      תגידו את המילה THE (דָה) בקול רם.'
+    tasks:
+      - 'המילה THE היא ה'' הידיעה באנגלית, נשתמש בה כדי להצביע על חפץ ספציפי, מוכר
+        או יחיד במינו!
+
+        תגידו את המילה THE (דָה) בקול רם.'
+    target: THE
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'המילה THE היא ה'' הידיעה באנגלית, נשתמש בה כדי להצביע על חפץ ספציפי,
+        מוכר או יחיד במינו!
+
+        תגידו את המילה THE (דָה) בקול רם.'
+      targetWords:
+        - THE
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q01_the_these_those_minigame_2:
+    minigame_id: speak_aloud
+    instruction: 'המילה THESE אומרת "האלה" בעברית, נשתמש בה כדי לדבר על מספר עצמים
+      רבים הנמצאים קרוב אלינו
+
+      תגידו את המילה THESE (דִיז) בקול רם.'
+    tasks:
+      - 'המילה THESE אומרת "האלה" בעברית, נשתמש בה כדי לדבר על מספר עצמים רבים הנמצאים
+        קרוב אלינו
+
+        תגידו את המילה THESE (דִיז) בקול רם.'
+    target: THESE
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'המילה THESE אומרת "האלה" בעברית, נשתמש בה כדי לדבר על מספר עצמים רבים
+        הנמצאים קרוב אלינו
+
+        תגידו את המילה THESE (דִיז) בקול רם.'
+      targetWords:
+        - THESE
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q01_the_these_those_minigame_2_copy:
+    minigame_id: speak_aloud
+    instruction: 'המילה THOSE אומרת "ההם" בעברית, נשתמש בה כדי לדבר על מספר עצמים
+      רבים הנמצאים רחוק מאיתנו
+
+      תגידו את המילה THOSE (דּוֹז) בקול רם.'
+    tasks:
+      - 'המילה THOSE אומרת "ההם" בעברית, נשתמש בה כדי לדבר על מספר עצמים רבים הנמצאים
+        רחוק מאיתנו
+
+        תגידו את המילה THOSE (דּוֹז) בקול רם.'
+    target: THOSE
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'המילה THOSE אומרת "ההם" בעברית, נשתמש בה כדי לדבר על מספר עצמים רבים
+        הנמצאים רחוק מאיתנו
+
+        תגידו את המילה THOSE (דּוֹז) בקול רם.'
+      targetWords:
+        - THOSE
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q02_farmer_minigame:
+    minigame_id: word_ordering
+    instruction: צור את המשפט "החזירים המלוכלכים"
+    tasks:
+      - צור את המשפט "החזירים המלוכלכים"
+    target: THE DIRTY PIGS.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צור את המשפט "החזירים המלוכלכים"
+      translation: null
+      englishWordsInOrder:
+        - THE
+        - DIRTY
+        - PIGS
+      preFilledIndices: []
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q02_farmer_minigame_copy:
+    minigame_id: word_ordering
+    instruction: צור את המשפט "החיטה הגבוהה"
+    tasks:
+      - צור את המשפט "החיטה הגבוהה"
+    target: THE TALL WHEAT.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צור את המשפט "החיטה הגבוהה"
+      translation: null
+      englishWordsInOrder:
+        - THE
+        - TALL
+        - WHEAT
+      preFilledIndices:
+        - 524288
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q02_farmer_minigame_copy_copy:
+    minigame_id: word_ordering
+    instruction: צור את המשפט "המים הנקיים"
+    tasks:
+      - צור את המשפט "המים הנקיים"
+    target: THE CLEAN WATER.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: צור את המשפט "המים הנקיים"
+      translation: null
+      englishWordsInOrder:
+        - THE
+        - CLEAN
+        - WATER
+      preFilledIndices: []
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q02_farmer_minigame_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'השלימו את המילים במקומות הנכונים, וצרו את המשפט
+
+      "ילד נמצא ליד הכלב"'
+    tasks:
+      - 'השלימו את המילים במקומות הנכונים, וצרו את המשפט
+
+        "ילד נמצא ליד הכלב"'
+    target: A  Boy is next to The  Dog.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלימו את המילים במקומות הנכונים, וצרו את המשפט
+
+        "ילד נמצא ליד הכלב"'
+      translation: null
+      englishWordsInOrder:
+        - 'A '
+        - Boy is next to
+        - 'The '
+        - Dog
+      preFilledIndices:
+        - 4398047297536
+      distractorWords: []
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q02_farmer_minigame_copy_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'אם אני מדבר על הגרזן של החווה
+
+      אני אגיד:'
+    tasks:
+      - 'אם אני מדבר על הגרזן של החווה
+
+        אני אגיד:'
+    target: THE AXE.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'אם אני מדבר על הגרזן של החווה
+
+        אני אגיד:'
+      translation: null
+      englishWordsInOrder:
+        - THE
+        - AXE
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - A
+        - AN
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q02_farmer_minigame_copy_copy_copy_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: אם אני חושב לעצמי "תחבוש כובע
+    tasks:
+      - אם אני חושב לעצמי "תחבוש כובע
+    target: Wear  A  Hat.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: אם אני חושב לעצמי "תחבוש כובע
+      translation: null
+      englishWordsInOrder:
+        - 'Wear '
+        - 'A '
+        - Hat
+      preFilledIndices:
+        - 524288
+      distractorWords:
+        - THE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q03_little_girl_minigame:
+    minigame_id: letter_ordering
+    instruction: 'אם נדבר על המגפיים המלוכלכות שנמצאות קרובות אליי, נגיד:
+
+      "_____ boots are so dirty!"'
+    tasks:
+      - 'אם נדבר על המגפיים המלוכלכות שנמצאות קרובות אליי, נגיד:
+
+        "_____ boots are so dirty!"'
+    target: These
+    variant: word_spelling
+    success: THESE נכתב נכון
+    params:
+      prompt: 'אם נדבר על המגפיים המלוכלכות שנמצאות קרובות אליי, נגיד:
+
+        "_____ boots are so dirty!"'
+      targetWord: These
+      extraDistractorCount: 3
+      customDistractors: 6f00
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q03_little_girl_minigame_2:
+    minigame_id: word_ordering
+    instruction: 'כאשר נדבר על חבורת ילדים הקרובה אלינו, נגיד:
+
+      '
+    tasks:
+      - 'כאשר נדבר על חבורת ילדים הקרובה אלינו, נגיד:
+
+        '
+    target: THESE KIDS.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'כאשר נדבר על חבורת ילדים הקרובה אלינו, נגיד:
+
+        '
+      translation: null
+      englishWordsInOrder:
+        - THESE
+        - KIDS
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - THOSE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q03_little_girl_minigame_2_copy:
+    minigame_id: word_ordering
+    instruction: 'כאשר נדבר על חבורת ילדים הרחוקה מאיתנו, נגיד:
+
+      '
+    tasks:
+      - 'כאשר נדבר על חבורת ילדים הרחוקה מאיתנו, נגיד:
+
+        '
+    target: THOSE KIDS.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'כאשר נדבר על חבורת ילדים הרחוקה מאיתנו, נגיד:
+
+        '
+      translation: null
+      englishWordsInOrder:
+        - THOSE
+        - KIDS
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - THESE
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q03_little_girl_minigame_copy:
+    minigame_id: letter_ordering
+    instruction: 'אם נדבר על העצים הנמצאים מעבר לנהר המרוחק, נגיד:
+
+      "_____ trees are green"'
+    tasks:
+      - 'אם נדבר על העצים הנמצאים מעבר לנהר המרוחק, נגיד:
+
+        "_____ trees are green"'
+    target: Those
+    variant: word_spelling
+    success: THOSE נכתב נכון
+    params:
+      prompt: 'אם נדבר על העצים הנמצאים מעבר לנהר המרוחק, נגיד:
+
+        "_____ trees are green"'
+      targetWord: Those
+      extraDistractorCount: 1
+      customDistractors: 7000
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q03_little_girl_minigame_copy_copy:
+    minigame_id: letter_ordering
+    instruction: 'ומה לגבי השיקויים שאצלך בתיק, איך נשלים את המשפט?
+
+      "_____ potions are in my bag"'
+    tasks:
+      - 'ומה לגבי השיקויים שאצלך בתיק, איך נשלים את המשפט?
+
+        "_____ potions are in my bag"'
+    target: These
+    variant: word_spelling
+    success: THESE נכתב נכון
+    params:
+      prompt: 'ומה לגבי השיקויים שאצלך בתיק, איך נשלים את המשפט?
+
+        "_____ potions are in my bag"'
+      targetWord: These
+      extraDistractorCount: 1
+      customDistractors: 6f00
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q04_village_head_minigame:
+    minigame_id: word_ordering
+    instruction: 'ראינו עננים יפים אי שם בשמיים (רחוקים),
+
+      נצטרך להגיד...'
+    tasks:
+      - 'ראינו עננים יפים אי שם בשמיים (רחוקים),
+
+        נצטרך להגיד...'
+    target: Those clouds are beautiful!.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'ראינו עננים יפים אי שם בשמיים (רחוקים),
+
+        נצטרך להגיד...'
+      translation: null
+      englishWordsInOrder:
+        - Those
+        - clouds are beautiful!
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - These
+        - The
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q04_village_head_minigame_copy:
+    minigame_id: word_ordering
+    instruction: 'אם נסתכל על היהלום החזק ביותר בחנות
+
+      נצטרך להגיד...'
+    tasks:
+      - 'אם נסתכל על היהלום החזק ביותר בחנות
+
+        נצטרך להגיד...'
+    target: The diamond is strong.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'אם נסתכל על היהלום החזק ביותר בחנות
+
+        נצטרך להגיד...'
+      translation: null
+      englishWordsInOrder:
+        - The
+        - diamond is strong
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - These
+        - Those
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q04_village_head_minigame_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'השלם את המשפט הנכונה:
+
+      "השרביטים בעלי כוח"'
+    tasks:
+      - 'השלם את המשפט הנכונה:
+
+        "השרביטים בעלי כוח"'
+    target: The wands have power.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את המשפט הנכונה:
+
+        "השרביטים בעלי כוח"'
+      translation: null
+      englishWordsInOrder:
+        - The
+        - wands
+        - have
+        - power
+      preFilledIndices:
+        - 73786985090932015104
+      distractorWords:
+        - These
+        - Those
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  line_msysmv9a_q04_village_head_minigame_copy_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'האבירים עומדים ממש לידנו... איך נשלים את המשפט?
+
+      '
+    tasks:
+      - 'האבירים עומדים ממש לידנו... איך נשלים את המשפט?
+
+        '
+    target: These Knights are  tall.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'האבירים עומדים ממש לידנו... איך נשלים את המשפט?
+
+        '
+      translation: null
+      englishWordsInOrder:
+        - These
+        - Knights are  tall
+      preFilledIndices:
+        - 262144
+      distractorWords:
+        - The
+        - Those
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

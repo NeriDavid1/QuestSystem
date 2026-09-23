@@ -1,0 +1,46 @@
+# Dialogue scripts exported from Unity — a
+dialogues:
+  adjectives_mastery_adjectives_mastery_q01_adjectives_start:
+    speaker: teacher_maya
+    lines:
+      - ברוכים השבים -  Welcome Back!
+  adjectives_mastery_adjectives_mastery_q01_adjectives_s03:
+    speaker: teacher_maya
+    lines:
+      - מצויין. למדנו על Dirty ו Clean! הפסל היה מלוכלך ועכשיו הוא נקי!
+  adjectives_mastery_adjectives_mastery_q01_adjectives_s03_copy:
+    speaker: teacher_maya
+    lines:
+      - אלופים! בלי המדורה יכל להיות מאוד Dark... שנדליק אותה יהיה Bright!
+  adjectives_mastery_adjectives_mastery_q01_adjectives_s09:
+    speaker: teacher_maya
+    lines:
+      - כל הכבוד! למדתם 6 שמות תואר חדשים!
+  adjectives_mastery_adjectives_mastery_q02_boo_radcliff_start:
+    speaker: Ghost
+    lines:
+      - 'שלוםםםםםםםם גיבור!
+
+        נשלחת אליי להיות מאסטר של שמות תואר?
+
+        אין בעיה!'
+  adjectives_mastery_adjectives_mastery_q02_boo_radcliff_s06:
+    speaker: Ghost
+    lines:
+      - וואו חברים! אני חושב שאתה סווווופר קרובים להיות מאסטרים של Adjectives!
+  adjectives_mastery_adjectives_mastery_q03_mountain_guide_start:
+    speaker: Mountain Guide
+    lines:
+      - היי חבר'ה! שמעתי אתם רוצים ללמוד משהו חדש....
+  adjectives_mastery_adjectives_mastery_q03_mountain_guide_s06:
+    speaker: Mountain Guide
+    lines:
+      - וואו!
+  adjectives_mastery_adjectives_mastery_q04_new_quest_start:
+    speaker: teacher_maya
+    lines:
+      - 'היי חזרתם! '
+  adjectives_mastery_adjectives_mastery_q04_new_quest_turn_in:
+    speaker: teacher_maya
+    lines:
+      - הפכתם למאסטרים לפניי.... אני חייבת לרוץ ללמוד!

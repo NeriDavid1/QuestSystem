@@ -11,24 +11,24 @@ quests:
     name: "Two Advisors"
     level: 50
     prerequisite: null
-    rewards: { xp: 200, items: [] }
+    rewards: { xp: 1300, items: [] }
   - id: the_royal_impostor__the_royal_impostor__q02_the_witnesses
     name: "The Witnesses"
     level: 8
     prerequisite: the_royal_impostor__the_royal_impostor__q01_two_advisors
-    rewards: { xp: 250, items: [] }
+    rewards: { xp: 1600, items: [] }
   - id: the_royal_impostor__the_royal_impostor__q03_the_torn_testimony
     name: "The Torn Testimony"
     level: 9
     prerequisite: the_royal_impostor__the_royal_impostor__q02_the_witnesses
-    rewards: { xp: 250, items: [] }
+    rewards: { xp: 1950, items: [] }
   - id: the_royal_impostor__the_royal_impostor__q04_the_ownership_code
     name: "The Ownership Code"
     level: 9
     prerequisite: the_royal_impostor__the_royal_impostor__q03_the_torn_testimony
-    rewards: { xp: 300, items: [] }
+    rewards: { xp: 2300, items: [] }
   - id: the_royal_impostor__the_royal_impostor__q05_the_royal_test
     name: "The Royal Test"
     level: 9
     prerequisite: the_royal_impostor__the_royal_impostor__q04_the_ownership_code
-    rewards: { xp: 400, items: [{ id: coin, amount: 10 }] }
+    rewards: { xp: 3900, items: [{ id: coin, amount: 50 }] }

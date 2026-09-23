@@ -1,0 +1,426 @@
+# Per-step minigame briefs — line_msoh2r7m
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
+instances:
+  do - does lesson_q01_do_does_do_not_does_not_minigame_2:
+    minigame_id: speak_aloud
+    instruction: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      How_____you know this?'
+    tasks:
+      - 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        How_____you know this?'
+    target: do
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        How_____you know this?'
+      targetWords:
+        - do
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q01_new_quest_minigame:
+    minigame_id: word_ordering
+    instruction: "השלם את הפועל עזר הנכון במשפט:\n אני עושה את שיעורי הבית שלי כל\
+      \ יום."
+    tasks:
+      - "השלם את הפועל עזר הנכון במשפט:\n אני עושה את שיעורי הבית שלי כל יום."
+    target: I do my homework.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "השלם את הפועל עזר הנכון במשפט:\n אני עושה את שיעורי הבית שלי כל יום."
+      translation: null
+      englishWordsInOrder:
+        - I
+        - do
+        - my
+        - homework
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - have
+        - is
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q01_new_quest_minigame_copy:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      האם אתה אוהב פיצה?'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        האם אתה אוהב פיצה?'
+    target: Do You like pizza?.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        האם אתה אוהב פיצה?'
+      translation: null
+      englishWordsInOrder:
+        - Do
+        - You
+        - like
+        - pizza?
+      preFilledIndices:
+        - 73786985090932015104
+      distractorWords:
+        - does
+        - are
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q01_new_quest_minigame_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      לאן אנחנו הולכים?'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        לאן אנחנו הולכים?'
+    target: Where do we go?.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        לאן אנחנו הולכים?'
+      translation: null
+      englishWordsInOrder:
+        - Where
+        - do
+        - we
+        - go?
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - does
+        - is
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q02_do_not_does_not_minigame:
+    minigame_id: speak_aloud
+    instruction: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      She_______her best'
+    tasks:
+      - 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        She_______her best'
+    target: does
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        She_______her best'
+      targetWords:
+        - does
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q02_new_quest_minigame:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      היא עושה את שיעורי הבית שלה כל יום
+
+      '
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        היא עושה את שיעורי הבית שלה כל יום
+
+        '
+    target: She does her homework.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        היא עושה את שיעורי הבית שלה כל יום
+
+        '
+      translation: null
+      englishWordsInOrder:
+        - She
+        - does
+        - her
+        - homework
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - do
+        - me
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q02_new_quest_minigame_2:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      האם הוא מדבר אנגלית?'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        האם הוא מדבר אנגלית?'
+    target: Does he speak English?.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        האם הוא מדבר אנגלית?'
+      translation: null
+      englishWordsInOrder:
+        - Does
+        - he
+        - speak
+        - English?
+      preFilledIndices:
+        - 73786985090932015104
+      distractorWords:
+        - do
+        - true
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q02_new_quest_minigame_3:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      האם זה משנה?'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        האם זה משנה?'
+    target: Does it matter?.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        האם זה משנה?'
+      translation: null
+      englishWordsInOrder:
+        - Does
+        - it
+        - matter?
+      preFilledIndices:
+        - 4398047035392
+      distractorWords:
+        - do
+        - is
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q03_do_not_minigame:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      אל תוותר!'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        אל תוותר!'
+    target: Do not give up!.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        אל תוותר!'
+      translation: null
+      englishWordsInOrder:
+        - Do
+        - not
+        - give
+        - up!
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - Does
+        - he
+        - It
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q03_questions_minigame:
+    minigame_id: word_ordering
+    instruction: "השלם את הפועל עזר הנכון במשפט:\n אני לא יודע "
+    tasks:
+      - "השלם את הפועל עזר הנכון במשפט:\n אני לא יודע "
+    target: I do not know.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: "השלם את הפועל עזר הנכון במשפט:\n אני לא יודע "
+      translation: null
+      englishWordsInOrder:
+        - I
+        - do
+        - not
+        - know
+      preFilledIndices:
+        - 786432
+      distractorWords:
+        - does
+        - are
+        - it
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q03_questions_minigame_2:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      למה שלא נתחיל?'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        למה שלא נתחיל?'
+    target: Why don't we start?.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        למה שלא נתחיל?'
+      translation: null
+      englishWordsInOrder:
+        - Why
+        - don't
+        - we
+        - start?
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - Do
+        - Is
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q03_questions_minigame_4:
+    minigame_id: speak_aloud
+    instruction: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      Why________you sit down?'
+    tasks:
+      - 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        Why________you sit down?'
+    target: don't
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        Why________you sit down?'
+      targetWords:
+        - don't
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q04_does_not_minigame:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      היא לא מסכימה'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        היא לא מסכימה'
+    target: She does not agree.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        היא לא מסכימה'
+      translation: null
+      englishWordsInOrder:
+        - She
+        - does
+        - not
+        - agree
+      preFilledIndices:
+        - 786432
+      distractorWords:
+        - do
+        - he
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q04_does_not_minigame_2:
+    minigame_id: speak_aloud
+    instruction: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+      ________he play games?'
+    tasks:
+      - 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        ________he play games?'
+    target: Doesn't
+    variant: single_word
+    success: המילים נקלטו
+    params:
+      prompt: 'אמרו באנגלית את הפועל עזר שחסר במשפט!
+
+        ________he play games?'
+      targetWords:
+        - Doesn't
+      targetPhrase: null
+      silenceTimeoutSeconds: 1
+      allowFuzzyMatch: true
+      referenceClip: ''
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q04_does_not_minigame_copy:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      למה הוא לא עונה?'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        למה הוא לא עונה?'
+    target: Why doesn't he answer?.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        למה הוא לא עונה?'
+      translation: null
+      englishWordsInOrder:
+        - Why
+        - doesn't
+        - he
+        - answer?
+      preFilledIndices:
+        - 8796093808640
+      distractorWords:
+        - do
+        - he
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset
+  do - does lesson_q04_does_not_minigame_copy_copy:
+    minigame_id: word_ordering
+    instruction: 'השלם את הפועל עזר הנכון במשפט:
+
+      זה לא עובד'
+    tasks:
+      - 'השלם את הפועל עזר הנכון במשפט:
+
+        זה לא עובד'
+    target: It doesn't work.
+    variant: sentence_building
+    success: המשפט סודר נכון
+    params:
+      prompt: 'השלם את הפועל עזר הנכון במשפט:
+
+        זה לא עובד'
+      translation: null
+      englishWordsInOrder:
+        - It
+        - doesn't
+        - work
+      preFilledIndices:
+        - 524288
+      distractorWords:
+        - do
+        - are
+      wordRevealDatabase: Art/Prefabs/UI/GamePlay/MiniGame/WordOrderingGame/WordTranslationDatabase.asset

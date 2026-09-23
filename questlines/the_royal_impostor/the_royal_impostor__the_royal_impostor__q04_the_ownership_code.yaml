@@ -7,7 +7,7 @@ quest:
   summary: "כתבו את שש המילים באנגלית ופתחו את הקוד למבחן המלכותי."
   wait_for_npc_turn_in: false
 
-rewards: { xp: 300, items: [] }
+rewards: { xp: 2300, items: [] }
 
 steps:
   - type: play_minigame

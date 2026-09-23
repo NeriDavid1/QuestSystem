@@ -7,7 +7,7 @@ quest:
   summary: "דייג במפרץ ראה משהו בלילה. שאלו Who ו-When כדי לדעת מי הייתה שם ומתי."
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: wh_questions_q02_finish
-rewards: { xp: 175, items: [] }
+rewards: { xp: 4600, items: [] }
 steps:
   - type: talk_to_npc
     npc_id: Fisherman

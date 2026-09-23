@@ -7,7 +7,7 @@ quest:
   summary: "שנו את המילים כשמדברים על שני השומרים ועל ארוחת הצהריים."
   wait_for_npc_turn_in: false
 
-rewards: { xp: 250, items: [] }
+rewards: { xp: 1600, items: [] }
 
 steps:
   - type: play_minigame

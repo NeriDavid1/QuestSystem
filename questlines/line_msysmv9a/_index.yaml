@@ -1,0 +1,42 @@
+questline:
+  id: line_msysmv9a
+  npc_id: teacher_maya
+  display_name: The, These & Those - קרובים רחוקים וה' הידיעה
+  theme: ''
+  quest_count: 4
+  level_range:
+    - 1
+    - 40
+quests:
+  - id: line_msysmv9a__q01_the_these_those
+    name: מכירים את The, These ו-Those
+    level: 40
+    prerequisite: null
+    rewards:
+      xp: 2200
+      items: []
+  - id: line_msysmv9a__q02_farmer
+    name: תרגול The בחווה
+    level: 1
+    prerequisite: line_msysmv9a__q01_the_these_those
+    rewards:
+      xp: 2750
+      items:
+        - id: coin
+          amount: 10
+  - id: line_msysmv9a__q03_little_girl
+    name: 'These או Those: קרוב ורחוק'
+    level: 1
+    prerequisite: line_msysmv9a__q02_farmer
+    rewards:
+      xp: 3300
+      items: []
+  - id: line_msysmv9a__q04_village_head
+    name: 'מבחן סיום: The, These ו-Those'
+    level: 1
+    prerequisite: line_msysmv9a__q03_little_girl
+    rewards:
+      xp: 5800
+      items:
+        - id: health_potion(l)_recipe
+          amount: 1

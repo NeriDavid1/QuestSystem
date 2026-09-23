@@ -7,7 +7,7 @@ quest:
   summary: תקנו את שמות הפירות והאוכל בשוק בלי לאכול את השלטים.
   wait_for_npc_turn_in: false
 rewards:
-  xp: 200
+  xp: 675
   items: []
 steps:
 - type: talk_to_npc

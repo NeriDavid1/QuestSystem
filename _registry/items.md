@@ -16,7 +16,6 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 | `ability_magic_nova` | PurpleNova | skill | 97 | ![PurpleNova](images/items/ability_magic_nova.png) |
 | `ability_magic_slash` | Magic Slash | skill | 98 | ![Magic Slash](images/items/ability_magic_slash.png) |
 | `ability_meteor_shower` | Meteor Shower | skill | 105 | ![Meteor Shower](images/items/ability_meteor_shower.png) |
-| `ability_owl` | Owl | skill | 92 | ![Owl](images/items/ability_owl.png) |
 | `ability_red_energy_explosion` | Red Energy Explosion | skill | 102 | ![Red Energy Explosion](images/items/ability_red_energy_explosion.png) |
 | `ability_red_nova` | RedNova | skill | 103 | ![RedNova](images/items/ability_red_nova.png) |
 | `ancient_ring` | Ancient Ring | equipment | 38 | ![Ancient Ring](images/items/ancient_ring.png) |
@@ -25,11 +24,94 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 | `bear_tooth` | Bear's Tooth | material | 15 | ![Bear's Tooth](images/items/bear_tooth.png) |
 | `blue_gem_necklace` | Blue Gem Necklace | equipment | 40 | ![Blue Gem Necklace](images/items/blue_gem_necklace.png) |
 | `buckler` | Buckler | equipment | 56 | ![Buckler](images/items/buckler.png) |
+| `cloth_boots_basic` | Villager Boots | equipment | 107 | ![Villager Boots](images/items/cloth_boots_basic.png) |
+| `cloth_boots_cuffed_boots` | Cuffed Boots | equipment | 132 | ![Cuffed Boots](images/items/cloth_boots_cuffed_boots.png) |
+| `cloth_boots_fearsome_boots` | Fearsome Boots | equipment | 133 | ![Fearsome Boots](images/items/cloth_boots_fearsome_boots.png) |
+| `cloth_boots_fencing_boots` | Fencing Boots | equipment | 134 | ![Fencing Boots](images/items/cloth_boots_fencing_boots.png) |
+| `cloth_boots_forest_long_boots` | Forest Long Boots | equipment | 135 | ![Forest Long Boots](images/items/cloth_boots_forest_long_boots.png) |
+| `cloth_boots_pointed_shoes` | Pointed Shoes | equipment | 136 | ![Pointed Shoes](images/items/cloth_boots_pointed_shoes.png) |
+| `cloth_boots_sharp_boots` | Sharp Boots | equipment | 137 | ![Sharp Boots](images/items/cloth_boots_sharp_boots.png) |
+| `cloth_boots_steel_sabatons` | Steel Sabatons | equipment | 138 | ![Steel Sabatons](images/items/cloth_boots_steel_sabatons.png) |
+| `cloth_boots_tied_boots` | Tied Boots | equipment | 139 | ![Tied Boots](images/items/cloth_boots_tied_boots.png) |
+| `cloth_boots_travel_sandal` | Travel Sandal | equipment | 140 | ![Travel Sandal](images/items/cloth_boots_travel_sandal.png) |
+| `cloth_bottom_apron_skirt` | Bottom_ApronSkirt | equipment | 119 | ![Bottom_ApronSkirt](images/items/cloth_bottom_apron_skirt.png) |
+| `cloth_bottom_basic` | Bottom_VillagerSlacks | equipment | 106 | ![Bottom_VillagerSlacks](images/items/cloth_bottom_basic.png) |
+| `cloth_bottom_cuffed_leggings` | Bottom_CuffedLeggings | equipment | 120 | ![Bottom_CuffedLeggings](images/items/cloth_bottom_cuffed_leggings.png) |
+| `cloth_bottom_devout_pants` | Bottom_DevoutPants | equipment | 121 | ![Bottom_DevoutPants](images/items/cloth_bottom_devout_pants.png) |
+| `cloth_bottom_garter_slacks` | Bottom_GarterSlacks | equipment | 122 | ![Bottom_GarterSlacks](images/items/cloth_bottom_garter_slacks.png) |
+| `cloth_bottom_meditative_pants` | Bottom_MeditativePants | equipment | 123 | ![Bottom_MeditativePants](images/items/cloth_bottom_meditative_pants.png) |
+| `cloth_bottom_meditative_skirt` | Bottom_MeditativeSkirt | equipment | 124 | ![Bottom_MeditativeSkirt](images/items/cloth_bottom_meditative_skirt.png) |
+| `cloth_bottom_rustic_skirt` | Bottom_RusticSkirt | equipment | 125 | ![Bottom_RusticSkirt](images/items/cloth_bottom_rustic_skirt.png) |
+| `cloth_bottom_sharp_greaves` | Bottom_SharpGreaves | equipment | 126 | ![Bottom_SharpGreaves](images/items/cloth_bottom_sharp_greaves.png) |
+| `cloth_bottom_steel_greaves` | Bottom_SteelGreaves | equipment | 127 | ![Bottom_SteelGreaves](images/items/cloth_bottom_steel_greaves.png) |
+| `cloth_bottom_strapped_leggings` | Bottom_StrappedLeggings | equipment | 128 | ![Bottom_StrappedLeggings](images/items/cloth_bottom_strapped_leggings.png) |
+| `cloth_bottom_tattered_pants` | Bottom_TatteredPants | equipment | 129 | ![Bottom_TatteredPants](images/items/cloth_bottom_tattered_pants.png) |
+| `cloth_bottom_tight_travel_pants` | Bottom_TightTravelPants | equipment | 130 | ![Bottom_TightTravelPants](images/items/cloth_bottom_tight_travel_pants.png) |
+| `cloth_bottom_villager_long_pants` | Bottom_VillagerLongPants | equipment | 131 | ![Bottom_VillagerLongPants](images/items/cloth_bottom_villager_long_pants.png) |
+| `cloth_gloves_cloth_handwraps` | Gloves_ClothHandwraps | equipment | 150 | ![Gloves_ClothHandwraps](images/items/cloth_gloves_cloth_handwraps.png) |
+| `cloth_gloves_cuffed_gloves` | Gloves_CuffedGloves | equipment | 151 | ![Gloves_CuffedGloves](images/items/cloth_gloves_cuffed_gloves.png) |
+| `cloth_gloves_fearsome_bracers` | Gloves_FearsomeBracers | equipment | 152 | ![Gloves_FearsomeBracers](images/items/cloth_gloves_fearsome_bracers.png) |
+| `cloth_gloves_leather_armbands` | Gloves_LeatherArmbands | equipment | 153 | ![Gloves_LeatherArmbands](images/items/cloth_gloves_leather_armbands.png) |
+| `cloth_gloves_leather_gloves` | Gloves_LeatherGloves | equipment | 154 | ![Gloves_LeatherGloves](images/items/cloth_gloves_leather_gloves.png) |
+| `cloth_gloves_magic_bracers` | Gloves_MagicBracers | equipment | 155 | ![Gloves_MagicBracers](images/items/cloth_gloves_magic_bracers.png) |
+| `cloth_gloves_ornate_gloves` | Gloves_OrnateGloves | equipment | 156 | ![Gloves_OrnateGloves](images/items/cloth_gloves_ornate_gloves.png) |
+| `cloth_gloves_rustic_gloves` | Gloves_RusticGloves | equipment | 157 | ![Gloves_RusticGloves](images/items/cloth_gloves_rustic_gloves.png) |
+| `cloth_gloves_sharp_gauntlets` | Gloves_SharpGauntlets | equipment | 158 | ![Gloves_SharpGauntlets](images/items/cloth_gloves_sharp_gauntlets.png) |
+| `cloth_gloves_steel_gauntlets` | Gloves_SteelGauntlets | equipment | 159 | ![Gloves_SteelGauntlets](images/items/cloth_gloves_steel_gauntlets.png) |
+| `cloth_hat_basic` | Hat_RusticHood | equipment | 108 | ![Hat_RusticHood](images/items/cloth_hat_basic.png) |
+| `cloth_hat_chain_helmet` | Hat_ChainHelmet | equipment | 141 | ![Hat_ChainHelmet](images/items/cloth_hat_chain_helmet.png) |
+| `cloth_hat_full_hood` | Hat_FullHood | equipment | 142 | ![Hat_FullHood](images/items/cloth_hat_full_hood.png) |
+| `cloth_hat_kettle_helmet` | Hat_KettleHelmet | equipment | 143 | ![Hat_KettleHelmet](images/items/cloth_hat_kettle_helmet.png) |
+| `cloth_hat_sharp_helmet` | Hat_SharpHelmet | equipment | 144 | ![Hat_SharpHelmet](images/items/cloth_hat_sharp_helmet.png) |
+| `cloth_hat_soliders_helm` | Hat_SolidersHelm | equipment | 145 | ![Hat_SolidersHelm](images/items/cloth_hat_soliders_helm.png) |
+| `cloth_hat_steel_helmet` | Hat_SteelHelmet | equipment | 146 | ![Hat_SteelHelmet](images/items/cloth_hat_steel_helmet.png) |
+| `cloth_hat_strudy_helmet` | Hat_StrudyHelmet | equipment | 147 | ![Hat_StrudyHelmet](images/items/cloth_hat_strudy_helmet.png) |
+| `cloth_hat_witches_hat` | Hat_WitchesHat | equipment | 148 | ![Hat_WitchesHat](images/items/cloth_hat_witches_hat.png) |
+| `cloth_hat_wizard_hat` | Hat_WizardHat | equipment | 149 | ![Hat_WizardHat](images/items/cloth_hat_wizard_hat.png) |
+| `cloth_neck_hooded_cape` | Neck_HoodedCape | equipment | 160 | ![Neck_HoodedCape](images/items/cloth_neck_hooded_cape.png) |
+| `cloth_neck_loose_scarf` | Neck_LooseScarf | equipment | 161 | ![Neck_LooseScarf](images/items/cloth_neck_loose_scarf.png) |
+| `cloth_neck_tattered_muffler` | Neck_TatteredMuffler | equipment | 162 | ![Neck_TatteredMuffler](images/items/cloth_neck_tattered_muffler.png) |
+| `cloth_top_basic` | Villager Tunic | equipment | 92 | ![Villager Tunic](images/items/cloth_top_basic.png) |
+| `cloth_top_battle_dress` | Battle Dress | equipment | 109 | ![Battle Dress](images/items/cloth_top_battle_dress.png) |
+| `cloth_top_devout_coat` | Devout Coat | equipment | 110 | ![Devout Coat](images/items/cloth_top_devout_coat.png) |
+| `cloth_top_fearsome_garb` | Fearsome Garb | equipment | 111 | ![Fearsome Garb](images/items/cloth_top_fearsome_garb.png) |
+| `cloth_top_meditative_vest` | Meditative Vest | equipment | 112 | ![Meditative Vest](images/items/cloth_top_meditative_vest.png) |
+| `cloth_top_ranger` | Ranger Vest | equipment | 99 | ![Ranger Vest](images/items/cloth_top_ranger.png) |
+| `cloth_top_rustic_corset` | Rustic Corset | equipment | 113 | ![Rustic Corset](images/items/cloth_top_rustic_corset.png) |
+| `cloth_top_rustic_tunic` | Rustic Tunic | equipment | 114 | ![Rustic Tunic](images/items/cloth_top_rustic_tunic.png) |
+| `cloth_top_sharp_armor` | Sharp Armor | equipment | 115 | ![Sharp Armor](images/items/cloth_top_sharp_armor.png) |
+| `cloth_top_steel_armor` | Steel Armor | equipment | 116 | ![Steel Armor](images/items/cloth_top_steel_armor.png) |
+| `cloth_top_vanguard_coat` | Vanguard Coat | equipment | 117 | ![Vanguard Coat](images/items/cloth_top_vanguard_coat.png) |
+| `cloth_top_witch_blouse` | Witch Blouse | equipment | 118 | ![Witch Blouse](images/items/cloth_top_witch_blouse.png) |
 | `coin` | Coin | currency |  | *(no image)* |
 | `copper_ore` | Copper Ore | material | 7 | ![Copper Ore](images/items/copper_ore.png) |
 | `copper_ring` | Copper Ring | equipment | 37 | ![Copper Ring](images/items/copper_ring.png) |
 | `corn` | Corn | material | 20 | ![Corn](images/items/corn.png) |
 | `dark_hoods` | Dark Hoods | equipment | 48 | ![Dark Hoods](images/items/dark_hoods.png) |
+| `drop_cactus_fruit` | Cactus Fruit | material | 163 | ![Cactus Fruit](images/items/drop_cactus_fruit.png) |
+| `drop_cactus_pot` | Cactus Pot | material | 164 | ![Cactus Pot](images/items/drop_cactus_pot.png) |
+| `drop_chest` | Chest | material | 165 | ![Chest](images/items/drop_chest.png) |
+| `drop_chest_eye` | Chest Eye | material | 166 | ![Chest Eye](images/items/drop_chest_eye.png) |
+| `drop_crab_claw` | Crab Claw | material | 167 | ![Crab Claw](images/items/drop_crab_claw.png) |
+| `drop_crab_meat` | Crab Meat | material | 168 | ![Crab Meat](images/items/drop_crab_meat.png) |
+| `drop_crab_pearl` | Crab Pearl | material | 169 | ![Crab Pearl](images/items/drop_crab_pearl.png) |
+| `drop_crab_shell` | Crab Shell | material | 170 | ![Crab Shell](images/items/drop_crab_shell.png) |
+| `drop_jelly_slime` | Jelly Slime | material | 171 | ![Jelly Slime](images/items/drop_jelly_slime.png) |
+| `drop_jelly_spike` | Jelly Spike | material | 172 | ![Jelly Spike](images/items/drop_jelly_spike.png) |
+| `drop_monster_chest_fang` | Monster Chest Fang | material | 173 | ![Monster Chest Fang](images/items/drop_monster_chest_fang.png) |
+| `drop_mushroom_basket` | Mushroom Basket | material | 174 | ![Mushroom Basket](images/items/drop_mushroom_basket.png) |
+| `drop_mushroom_cap` | Mushroom Cap | material | 175 | ![Mushroom Cap](images/items/drop_mushroom_cap.png) |
+| `drop_mushroom_egg` | Mushroom Egg | material | 176 | ![Mushroom Egg](images/items/drop_mushroom_egg.png) |
+| `drop_mushroom_stem` | Mushroom Stem | material | 177 | ![Mushroom Stem](images/items/drop_mushroom_stem.png) |
+| `drop_rat_knife` | Rat Knife | material | 178 | ![Rat Knife](images/items/drop_rat_knife.png) |
+| `drop_rat_scarf` | Rat Scarf | material | 179 | ![Rat Scarf](images/items/drop_rat_scarf.png) |
+| `drop_rat_tail` | Rat Tail | material | 180 | ![Rat Tail](images/items/drop_rat_tail.png) |
+| `drop_spider_egg` | Spider Egg | material | 181 | ![Spider Egg](images/items/drop_spider_egg.png) |
+| `drop_spider_eyes` | Spider Eyes | material | 182 | ![Spider Eyes](images/items/drop_spider_eyes.png) |
+| `drop_spider_fang` | Spider Fang | material | 183 | ![Spider Fang](images/items/drop_spider_fang.png) |
+| `drop_spider_web` | Spider Web | material | 184 | ![Spider Web](images/items/drop_spider_web.png) |
+| `drop_spiked_jelly_hat` | Spiked Jelly Hat | material | 185 | ![Spiked Jelly Hat](images/items/drop_spiked_jelly_hat.png) |
+| `drop_spiky_cactus` | Spiky Cactus | material | 186 | ![Spiky Cactus](images/items/drop_spiky_cactus.png) |
 | `enchantment_recipe` | Enchantment Recipe | material | 61 | ![Enchantment Recipe](images/items/enchantment_recipe.png) |
 | `energy_potion(l)` | Energy Potion(L) | consumable | 3 | ![Energy Potion(L)](images/items/energy_potion(l).png) |
 | `energy_potion(s)` | Energy Potion(S) | consumable | 2 | ![Energy Potion(S)](images/items/energy_potion(s).png) |
