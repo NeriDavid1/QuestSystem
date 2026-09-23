@@ -8,7 +8,7 @@ quest:
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: articles_a_an_q05_finish
 rewards:
-  xp: 275
+  xp: 12400
   items: []
 steps:
   - type: talk_to_npc

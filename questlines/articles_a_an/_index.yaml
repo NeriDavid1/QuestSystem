@@ -11,29 +11,29 @@ quests:
     name: "The Fisherman With No Net"
     level: 50
     prerequisite: null
-    rewards: { xp: 150, items: [] }
+    rewards: { xp: 6200, items: [] }
   - id: articles_a_an__q02_the_twin_fish
     name: "The Twin Fish"
     level: 1
     prerequisite: articles_a_an__q01_the_fisherman_with_no_net
-    rewards: { xp: 175, items: [] }
+    rewards: { xp: 7750, items: [] }
   - id: articles_a_an__q03_the_mixed_up_market
     name: "The Mixed-Up Market"
     level: 1
     prerequisite: articles_a_an__q02_the_twin_fish
-    rewards: { xp: 200, items: [] }
+    rewards: { xp: 9300, items: [] }
   - id: articles_a_an__q04_the_message_in_a_bottle
     name: "The Message in a Bottle"
     level: 1
     prerequisite: articles_a_an__q03_the_mixed_up_market
-    rewards: { xp: 225, items: [] }
+    rewards: { xp: 10850, items: [] }
   - id: articles_a_an__q05_the_tricky_word_in_the_middle
     name: "The Tricky Word in the Middle"
     level: 1
     prerequisite: articles_a_an__q04_the_message_in_a_bottle
-    rewards: { xp: 275, items: [] }
+    rewards: { xp: 12400, items: [] }
   - id: articles_a_an__q06_the_net_of_little_words
     name: "The Net of Little Words"
     level: 1
     prerequisite: articles_a_an__q05_the_tricky_word_in_the_middle
-    rewards: { xp: 350, items: [{ id: coin, amount: 10 }] }
+    rewards: { xp: 20900, items: [{ id: coin, amount: 10 }] }
