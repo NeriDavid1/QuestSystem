@@ -1,0 +1,44 @@
+quest:
+  id: articles_a_an__q05_the_tricky_word_in_the_middle
+  name: "The Tricky Word in the Middle"
+  level_required: 1
+  giver_npc: Fisherman
+  prerequisite: articles_a_an__q04_the_message_in_a_bottle
+  summary: "מילת תיאור נכנסה בין התאומים לבין השם. גלו שהמילה שבאה מיד אחרי a או an היא זאת שמחליטה."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: articles_a_an_q05_finish
+rewards:
+  xp: 275
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: Fisherman
+    dialogue_id: articles_a_an_q05_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 5
+    success_required: true
+    instance_id: articles_a_an_q05_a_big_egg
+    display_text: בנו את התיאור באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 5
+    success_required: true
+    instance_id: articles_a_an_q05_an_old_boat
+    display_text: בנו את התיאור באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 4
+    success_required: true
+    instance_id: articles_a_an_q05_match_first_letters
+    display_text: השלימו את האות החסרה במילה.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 6
+    success_required: true
+    instance_id: articles_a_an_q05_say_old_net
+    display_text: אמרו את המשפט הבא באנגלית בקול.

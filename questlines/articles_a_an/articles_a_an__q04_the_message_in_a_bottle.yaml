@@ -1,0 +1,44 @@
+quest:
+  id: articles_a_an__q04_the_message_in_a_bottle
+  name: "The Message in a Bottle"
+  level_required: 1
+  giver_npc: Fisherman
+  prerequisite: articles_a_an__q03_the_mixed_up_market
+  summary: "בקבוק עם מכתב ממלכת הים נסחף לחוף, והמים מחקו ממנו את המילים הקטנות. בנו מחדש את המשפטים שלה."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: articles_a_an_q04_finish
+rewards:
+  xp: 225
+  items: []
+steps:
+  - type: talk_to_npc
+    npc_id: Fisherman
+    dialogue_id: articles_a_an_q04_start
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 4
+    success_required: true
+    instance_id: articles_a_an_q04_i_see_an_octopus
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 5
+    success_required: true
+    instance_id: articles_a_an_q04_crab_on_the_rock
+    display_text: השלימו את המשפט לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 4
+    success_required: true
+    instance_id: articles_a_an_q04_spell_umbrella
+    display_text: כתבו באנגלית את המילה שפירושה מטרייה.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 6
+    success_required: true
+    instance_id: articles_a_an_q04_say_umbrella
+    display_text: אמרו את המשפט הבא באנגלית בקול.

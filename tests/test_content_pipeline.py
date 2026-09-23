@@ -29,15 +29,15 @@ class ContentPipelineTests(unittest.TestCase):
             {
                 "catalog_entries": 177,
                 "step_type_definitions": 6,
-                "dialogues": 97,
-                "dialogue_lines": 312,
-                "minigame_instances": 191,
-                "questlines": 9,
-                "quests": 43,
-                "steps": 276,
+                "dialogues": 129,
+                "dialogue_lines": 422,
+                "minigame_instances": 268,
+                "questlines": 12,
+                "quests": 59,
+                "steps": 306,
                 "errors": 0,
                 "warnings": 0,
-                "info": 0,
+                "info": 22,
             },
         )
 
@@ -75,7 +75,7 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         )
-        self.assertEqual(prerequisites, 40)
+        self.assertEqual(prerequisites, 53)
         self.assertEqual(rewards, 95)
 
     def test_report_and_generated_bundle_are_present(self):
@@ -183,7 +183,7 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         }
-        self.assertEqual(len(quests_by_key), 43)
+        self.assertEqual(len(quests_by_key), 59)
         self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
         self.assertTrue(
             quests_by_key["adjectives_basics__q01_the_painting_with_no_colors"]["wait_for_npc_turn_in"]
