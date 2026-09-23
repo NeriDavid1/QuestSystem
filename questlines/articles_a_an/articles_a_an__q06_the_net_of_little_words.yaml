@@ -35,7 +35,7 @@ steps:
     world_object_id: Lost_Chest2_Driftgold_Bay
     difficulty: 7
     success_required: true
-    instance_id: articles_a_an_q06_say_apple_and_egg
+    instance_id: articles_a_an_q06_say_i_see_an_ant
     display_text: אמרו את המשפט הבא באנגלית בקול.
   - type: play_minigame
     minigame_id: word_ordering

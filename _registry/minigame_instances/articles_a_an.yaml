@@ -4,7 +4,9 @@
 # so the blank length never reveals the answer. Simple, familiar vocabulary only.
 # Speak Aloud uses phrase mode: targetWords is empty and targetPhrase holds the sentence, so the
 # Unity SpeakAloudDataSO is synced as a phrase instead of a list of single words.
-# Letter pools are shuffled independently of wordTasks; no tile sits opposite its own word.
+# a / an tile order: with only two values, never placing a tile opposite its own word would reveal
+# every answer, so each pool uses a fixed non-alternating order where some tiles sit next to their word.
+# Speak Aloud sentences stay at four words or fewer, so the game forgives no missed word (a / an included).
 instances:
 
   # --- Q01 - The Fisherman With No Net ---
@@ -89,10 +91,10 @@ instances:
     success: "כל מילה מצאה את התאום שלה."
     params:
       letters:
-        - { id: art_q02b_tile_1, value: a }
+        - { id: art_q02b_tile_1, value: an }
         - { id: art_q02b_tile_2, value: an }
         - { id: art_q02b_tile_3, value: a }
-        - { id: art_q02b_tile_4, value: an }
+        - { id: art_q02b_tile_4, value: a }
       wordTasks:
         - { id: art_q02b_task_apple, image: '', fullWord: an apple, missingIndices: [0, 1] }
         - { id: art_q02b_task_fish, image: '', fullWord: a fish, missingIndices: [0] }
@@ -139,8 +141,8 @@ instances:
     params:
       letters:
         - { id: art_q03a_tile_1, value: an }
-        - { id: art_q03a_tile_2, value: a }
-        - { id: art_q03a_tile_3, value: an }
+        - { id: art_q03a_tile_2, value: an }
+        - { id: art_q03a_tile_3, value: a }
         - { id: art_q03a_tile_4, value: a }
       wordTasks:
         - { id: art_q03a_task_banana, image: '', fullWord: a banana, missingIndices: [0] }
@@ -215,8 +217,8 @@ instances:
     success: "עוד מילים קטנות חזרו אל המכתב."
     params:
       letters:
-        - { id: art_q04b_tile_1, value: an }
-        - { id: art_q04b_tile_2, value: a }
+        - { id: art_q04b_tile_1, value: a }
+        - { id: art_q04b_tile_2, value: an }
         - { id: art_q04b_tile_3, value: a }
         - { id: art_q04b_tile_4, value: an }
       wordTasks:
@@ -239,18 +241,18 @@ instances:
       preFilledIndices: [0, 1, 4, 5]
       distractorWords: [an, egg, boat]
 
-  articles_a_an_q04_say_orange_on_boat:
+  articles_a_an_q04_say_i_see_an_orange:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: [An, orange, is, "on", the, boat]
-    target: "An orange is on the boat."
+    tasks: [I, see, an, orange]
+    target: "I see an orange."
     variant: short_phrase
     success: "המכתב של מלכת הים שלם."
     params:
-      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש תפוז על הסירה."
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רואה תפוז."
       targetWords: []
-      targetPhrase: "An orange is on the boat."
-      silenceTimeoutSeconds: 3.5
+      targetPhrase: "I see an orange."
+      silenceTimeoutSeconds: 3.0
       allowFuzzyMatch: true
       referenceClip: ''
 
@@ -292,10 +294,10 @@ instances:
     success: "נכון. המילה שבאה מיד אחרי היא זאת שמחליטה."
     params:
       letters:
-        - { id: art_q05c_tile_1, value: an }
+        - { id: art_q05c_tile_1, value: a }
         - { id: art_q05c_tile_2, value: a }
         - { id: art_q05c_tile_3, value: an }
-        - { id: art_q05c_tile_4, value: a }
+        - { id: art_q05c_tile_4, value: an }
       wordTasks:
         - { id: art_q05c_task_big_apple, image: '', fullWord: a big apple, missingIndices: [0] }
         - { id: art_q05c_task_old_hat, image: '', fullWord: an old hat, missingIndices: [0, 1] }
@@ -305,15 +307,15 @@ instances:
   articles_a_an_q05_say_old_net:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: [I, have, an, old, net]
-    target: "I have an old net."
+    tasks: [It's, an, old, net]
+    target: "It's an old net."
     variant: short_phrase
     success: "התאומים שוחים שוב זה ליד זה."
     params:
-      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי רשת ישנה."
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: זאת רשת ישנה."
       targetWords: []
-      targetPhrase: "I have an old net."
-      silenceTimeoutSeconds: 3.5
+      targetPhrase: "It's an old net."
+      silenceTimeoutSeconds: 3.0
       allowFuzzyMatch: true
       referenceClip: ''
 
@@ -343,26 +345,26 @@ instances:
       letters:
         - { id: art_q06b_tile_1, value: a }
         - { id: art_q06b_tile_2, value: an }
-        - { id: art_q06b_tile_3, value: a }
-        - { id: art_q06b_tile_4, value: an }
+        - { id: art_q06b_tile_3, value: an }
+        - { id: art_q06b_tile_4, value: a }
       wordTasks:
         - { id: art_q06b_task_ant, image: '', fullWord: an ant, missingIndices: [0, 1] }
         - { id: art_q06b_task_dog, image: '', fullWord: a dog, missingIndices: [0] }
         - { id: art_q06b_task_old_net, image: '', fullWord: an old net, missingIndices: [0, 1] }
         - { id: art_q06b_task_red_apple, image: '', fullWord: a red apple, missingIndices: [0] }
 
-  articles_a_an_q06_say_apple_and_egg:
+  articles_a_an_q06_say_i_see_an_ant:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: [I, have, an, apple, and, an, egg]
-    target: "I have an apple and an egg."
+    tasks: [I, see, an, ant]
+    target: "I see an ant."
     variant: short_phrase
     success: "עוד קשר חזק נוסף לרשת."
     params:
-      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי תפוח וביצה."
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רואה נמלה."
       targetWords: []
-      targetPhrase: "I have an apple and an egg."
-      silenceTimeoutSeconds: 3.5
+      targetPhrase: "I see an ant."
+      silenceTimeoutSeconds: 3.0
       allowFuzzyMatch: true
       referenceClip: ''
 

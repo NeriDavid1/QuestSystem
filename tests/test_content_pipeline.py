@@ -27,17 +27,17 @@ class ContentPipelineTests(unittest.TestCase):
         self.assertEqual(
             self.bundle["counts"],
             {
-                "catalog_entries": 177,
+                "catalog_entries": 259,
                 "step_type_definitions": 6,
-                "dialogues": 129,
-                "dialogue_lines": 422,
-                "minigame_instances": 268,
-                "questlines": 12,
-                "quests": 59,
-                "steps": 306,
+                "dialogues": 182,
+                "dialogue_lines": 478,
+                "minigame_instances": 377,
+                "questlines": 18,
+                "quests": 81,
+                "steps": 435,
                 "errors": 0,
                 "warnings": 0,
-                "info": 22,
+                "info": 33,
             },
         )
 
@@ -75,8 +75,8 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         )
-        self.assertEqual(prerequisites, 53)
-        self.assertEqual(rewards, 95)
+        self.assertEqual(prerequisites, 68)
+        self.assertEqual(rewards, 136)
 
     def test_report_and_generated_bundle_are_present(self):
         report = json.loads((ROOT / "reports" / "quest_import_report.json").read_text(encoding="utf-8"))
@@ -183,7 +183,7 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         }
-        self.assertEqual(len(quests_by_key), 59)
+        self.assertEqual(len(quests_by_key), 81)
         self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
         self.assertTrue(
             quests_by_key["adjectives_basics__q01_the_painting_with_no_colors"]["wait_for_npc_turn_in"]
@@ -212,7 +212,11 @@ class ContentPipelineTests(unittest.TestCase):
         self.assertIn("updateQuest({ wait_for_npc_turn_in:", inspector)
         self.assertIn("waitForNpcTurnIn", messages)
 
-        quests_sql = (ROOT / "supabase" / "seed" / "generated" / "06_quests.sql").read_text(encoding="utf-8")
+        # The importer splits quests into 06_quests_NNN.sql chunks once the line count grows.
+        quests_sql = "".join(
+            path.read_text(encoding="utf-8")
+            for path in sorted((ROOT / "supabase" / "seed" / "generated").glob("06_quests*.sql"))
+        )
         self.assertIn("wait_for_npc_turn_in", quests_sql)
         # Every quest YAML declares the flag so the editor has a value to show.
         for questline in self.bundle["questlines"]:

@@ -40,5 +40,5 @@ steps:
     world_object_id: Lost_Chest2_Driftgold_Bay
     difficulty: 6
     success_required: true
-    instance_id: articles_a_an_q04_say_orange_on_boat
+    instance_id: articles_a_an_q04_say_i_see_an_orange
     display_text: אמרו את המשפט הבא באנגלית בקול.

@@ -5308,13 +5308,25 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "אבל לפעמים היא נקרעת בלי שום סיבה. יש לי סוד שעוד לא סיפרתי לאף אחד.",
+          "content": "אבל לפעמים היא נקרעת. אספר לכם סוד שעוד לא סיפרתי לאף אחד.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "תחזרו אליי, ואני אספר לכם.",
+          "content": "כשהייתי ילד נפלתי מהסירה של אבא שלי בסערה, ומלכת הים הצילה אותי.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "בתמורה הבטחתי לה לשמור על שני דגים קטנים ותאומים. אחד מהם ברח בסערה האחרונה.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
+          "content": "תחזרו אליי, ונחפש אותו יחד.",
           "line_format": "plain_text"
         }
       ]
@@ -5372,7 +5384,7 @@
         {
           "locale": "he",
           "line_order": 1,
-          "content": "אבל הסערה האחרונה בלבלה את כל המפרץ. בואו נבדוק מה קרה בשוק הדגים.",
+          "content": "אבל הסערה האחרונה בלבלה את כל המפרץ. בואו נבדוק מה קרה בשוק.",
           "line_format": "plain_text"
         }
       ]
@@ -5386,31 +5398,25 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "כשהייתי ילד נפלתי מהסירה של אבא שלי בסערה גדולה, ושקעתי במים.",
+          "content": "לתאומים קוראים A ו־AN. ל־AN יש זנב נוסף, האות n.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "מלכת הים הצילה אותי. בתמורה הבטחתי לה לשמור על שני דגים קטנים ותאומים.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 2,
-          "content": "לאחד קוראים A ולשני קוראים AN. ל־AN יש זנב נוסף, האות n.",
-          "line_format": "plain_text"
-        },
-        {
-          "locale": "he",
-          "line_order": 3,
           "content": "באנגלית יש חמש אותיות ניקוד: a, e, i, o, u. אות ניקוד = vowel.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
-          "line_order": 4,
-          "content": "כשהמילה הבאה מתחילה באות ניקוד, שמים an במקום a. an ant = נמלה אחת, an owl = ינשוף אחד.",
+          "line_order": 2,
+          "content": "כשהמילה הבאה מתחילה באות ניקוד, שמים an במקום a.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 3,
+          "content": "an ant = נמלה אחת, an owl = ינשוף אחד.",
           "line_format": "plain_text"
         }
       ]
@@ -5542,24 +5548,30 @@
         {
           "locale": "he",
           "line_order": 0,
-          "content": "זוכרים את מילות התיאור? big = גדול, old = ישן, small = קטן.",
+          "content": "הנה הסלעים. התאומים כאן, אבל הם שוב מבולבלים.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 1,
-          "content": "לפעמים מילת תיאור נכנסת בין a או an לבין השם של הדבר.",
+          "content": "זוכרים את מילות התיאור? big = גדול, old = ישן, small = קטן.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 2,
-          "content": "הכלל החשוב: רק המילה שבאה מיד אחרי a או an מחליטה, לא המילה שבסוף.",
+          "content": "לפעמים מילת תיאור נכנסת בין a או an לבין השם של הדבר.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 3,
+          "content": "הכלל החשוב: רק המילה שבאה מיד אחרי a או an מחליטה, לא המילה שבסוף.",
+          "line_format": "plain_text"
+        },
+        {
+          "locale": "he",
+          "line_order": 4,
           "content": "an ant = נמלה, אבל a big ant = נמלה גדולה.",
           "line_format": "plain_text"
         }
@@ -11229,7 +11241,7 @@
         "letters": [
           {
             "id": "art_q02b_tile_1",
-            "value": "a"
+            "value": "an"
           },
           {
             "id": "art_q02b_tile_2",
@@ -11241,7 +11253,7 @@
           },
           {
             "id": "art_q02b_tile_4",
-            "value": "an"
+            "value": "a"
           }
         ],
         "wordTasks": [
@@ -11395,11 +11407,11 @@
           },
           {
             "id": "art_q03a_tile_2",
-            "value": "a"
+            "value": "an"
           },
           {
             "id": "art_q03a_tile_3",
-            "value": "an"
+            "value": "a"
           },
           {
             "id": "art_q03a_tile_4",
@@ -11566,11 +11578,11 @@
         "letters": [
           {
             "id": "art_q04b_tile_1",
-            "value": "an"
+            "value": "a"
           },
           {
             "id": "art_q04b_tile_2",
-            "value": "a"
+            "value": "an"
           },
           {
             "id": "art_q04b_tile_3",
@@ -11622,26 +11634,24 @@
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q04_say_orange_on_boat",
+      "key": "articles_a_an_q04_say_i_see_an_orange",
       "locale": "he",
       "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
-        "An",
-        "orange",
-        "is",
-        "on",
-        "the",
-        "boat"
+        "I",
+        "see",
+        "an",
+        "orange"
       ],
-      "target": "An orange is on the boat.",
+      "target": "I see an orange.",
       "variant": "short_phrase",
       "success": "המכתב של מלכת הים שלם.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש תפוז על הסירה.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רואה תפוז.",
         "targetWords": [],
-        "targetPhrase": "An orange is on the boat.",
-        "silenceTimeoutSeconds": 3.5,
+        "targetPhrase": "I see an orange.",
+        "silenceTimeoutSeconds": 3.0,
         "allowFuzzyMatch": true,
         "referenceClip": ""
       },
@@ -11728,7 +11738,7 @@
         "letters": [
           {
             "id": "art_q05c_tile_1",
-            "value": "an"
+            "value": "a"
           },
           {
             "id": "art_q05c_tile_2",
@@ -11740,7 +11750,7 @@
           },
           {
             "id": "art_q05c_tile_4",
-            "value": "a"
+            "value": "an"
           }
         ],
         "wordTasks": [
@@ -11788,21 +11798,20 @@
       "locale": "he",
       "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
-        "I",
-        "have",
+        "It's",
         "an",
         "old",
         "net"
       ],
-      "target": "I have an old net.",
+      "target": "It's an old net.",
       "variant": "short_phrase",
       "success": "התאומים שוחים שוב זה ליד זה.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי רשת ישנה.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: זאת רשת ישנה.",
         "targetWords": [],
-        "targetPhrase": "I have an old net.",
-        "silenceTimeoutSeconds": 3.5,
+        "targetPhrase": "It's an old net.",
+        "silenceTimeoutSeconds": 3.0,
         "allowFuzzyMatch": true,
         "referenceClip": ""
       },
@@ -11908,11 +11917,11 @@
           },
           {
             "id": "art_q06b_tile_3",
-            "value": "a"
+            "value": "an"
           },
           {
             "id": "art_q06b_tile_4",
-            "value": "an"
+            "value": "a"
           }
         ],
         "wordTasks": [
@@ -11956,27 +11965,24 @@
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q06_say_apple_and_egg",
+      "key": "articles_a_an_q06_say_i_see_an_ant",
       "locale": "he",
       "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
         "I",
-        "have",
+        "see",
         "an",
-        "apple",
-        "and",
-        "an",
-        "egg"
+        "ant"
       ],
-      "target": "I have an apple and an egg.",
+      "target": "I see an ant.",
       "variant": "short_phrase",
       "success": "עוד קשר חזק נוסף לרשת.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי תפוח וביצה.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רואה נמלה.",
         "targetWords": [],
-        "targetPhrase": "I have an apple and an egg.",
-        "silenceTimeoutSeconds": 3.5,
+        "targetPhrase": "I see an ant.",
+        "silenceTimeoutSeconds": 3.0,
         "allowFuzzyMatch": true,
         "referenceClip": ""
       },
@@ -24865,7 +24871,7 @@
           "name": "The Mixed-Up Market",
           "level_required": 1,
           "giver_external_id": "Fisherman",
-          "summary": "הסערה בלבלה את השלטים בשוק הדגים. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
+          "summary": "הסערה בלבלה את השלטים בשוק. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "articles_a_an_q03_start",
           "turn_in_dialogue_id": "articles_a_an_q03_finish",
@@ -24973,7 +24979,7 @@
               "level_required": 1,
               "giver_npc": "Fisherman",
               "prerequisite": "articles_a_an__q02_the_twin_fish",
-              "summary": "הסערה בלבלה את השלטים בשוק הדגים. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
+              "summary": "הסערה בלבלה את השלטים בשוק. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
               "wait_for_npc_turn_in": true,
               "turn_in_dialogue_id": "articles_a_an_q03_finish"
             }
@@ -25052,7 +25058,7 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_daec131d_4",
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_391f69a3_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -25060,9 +25066,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 6,
                 "success_required": true,
-                "instance_id": "articles_a_an_q04_say_orange_on_boat",
+                "instance_id": "articles_a_an_q04_say_i_see_an_orange",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q04_say_orange_on_boat"
+                "instance_key": "articles_a_an_q04_say_i_see_an_orange"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -25273,7 +25279,7 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_effcac6a_3",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_acce3e34_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -25281,9 +25287,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 7,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_say_apple_and_egg",
+                "instance_id": "articles_a_an_q06_say_i_see_an_ant",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q06_say_apple_and_egg"
+                "instance_key": "articles_a_an_q06_say_i_see_an_ant"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -36101,7 +36107,7 @@
     "catalog_entries": 259,
     "step_type_definitions": 6,
     "dialogues": 182,
-    "dialogue_lines": 476,
+    "dialogue_lines": 478,
     "minigame_instances": 377,
     "questlines": 18,
     "quests": 81,
@@ -37851,7 +37857,7 @@
           "name": "The Mixed-Up Market",
           "level_required": 1,
           "giver_external_id": "Fisherman",
-          "summary": "הסערה בלבלה את השלטים בשוק הדגים. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
+          "summary": "הסערה בלבלה את השלטים בשוק. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "articles_a_an_q03_start",
           "turn_in_dialogue_id": "articles_a_an_q03_finish",
@@ -37959,7 +37965,7 @@
               "level_required": 1,
               "giver_npc": "Fisherman",
               "prerequisite": "articles_a_an__q02_the_twin_fish",
-              "summary": "הסערה בלבלה את השלטים בשוק הדגים. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
+              "summary": "הסערה בלבלה את השלטים בשוק. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
               "wait_for_npc_turn_in": true,
               "turn_in_dialogue_id": "articles_a_an_q03_finish"
             }
@@ -38038,7 +38044,7 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_daec131d_4",
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_391f69a3_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
@@ -38046,9 +38052,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 6,
                 "success_required": true,
-                "instance_id": "articles_a_an_q04_say_orange_on_boat",
+                "instance_id": "articles_a_an_q04_say_i_see_an_orange",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q04_say_orange_on_boat"
+                "instance_key": "articles_a_an_q04_say_i_see_an_orange"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -38259,7 +38265,7 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_effcac6a_3",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_acce3e34_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
@@ -38267,9 +38273,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 7,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_say_apple_and_egg",
+                "instance_id": "articles_a_an_q06_say_i_see_an_ant",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q06_say_apple_and_egg"
+                "instance_key": "articles_a_an_q06_say_i_see_an_ant"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -48502,5 +48508,5 @@
       ]
     }
   ],
-  "source_digest": "0489ec1747940ca5ac6fe276e8459e9a960dfd78d601bcae8c192da9a1041f7a"
+  "source_digest": "62edc0cb8ad9a46ff4ccd743df61ef02f4282e1e37313e79f88ae2046707ef6c"
 }

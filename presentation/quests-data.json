@@ -2909,25 +2909,26 @@
       "speaker": "Fisherman",
       "lines": [
         "יפה מאוד. כשאומרים את a נכון, הרשת מחזיקה חזק.",
-        "אבל לפעמים היא נקרעת בלי שום סיבה. יש לי סוד שעוד לא סיפרתי לאף אחד.",
-        "תחזרו אליי, ואני אספר לכם."
+        "אבל לפעמים היא נקרעת. אספר לכם סוד שעוד לא סיפרתי לאף אחד.",
+        "כשהייתי ילד נפלתי מהסירה של אבא שלי בסערה, ומלכת הים הצילה אותי.",
+        "בתמורה הבטחתי לה לשמור על שני דגים קטנים ותאומים. אחד מהם ברח בסערה האחרונה.",
+        "תחזרו אליי, ונחפש אותו יחד."
       ]
     },
     "articles_a_an_q02_start": {
       "speaker": "Fisherman",
       "lines": [
-        "כשהייתי ילד נפלתי מהסירה של אבא שלי בסערה גדולה, ושקעתי במים.",
-        "מלכת הים הצילה אותי. בתמורה הבטחתי לה לשמור על שני דגים קטנים ותאומים.",
-        "לאחד קוראים A ולשני קוראים AN. ל־AN יש זנב נוסף, האות n.",
+        "לתאומים קוראים A ו־AN. ל־AN יש זנב נוסף, האות n.",
         "באנגלית יש חמש אותיות ניקוד: a, e, i, o, u. אות ניקוד = vowel.",
-        "כשהמילה הבאה מתחילה באות ניקוד, שמים an במקום a. an ant = נמלה אחת, an owl = ינשוף אחד."
+        "כשהמילה הבאה מתחילה באות ניקוד, שמים an במקום a.",
+        "an ant = נמלה אחת, an owl = ינשוף אחד."
       ]
     },
     "articles_a_an_q02_finish": {
       "speaker": "Fisherman",
       "lines": [
         "מצאתם את AN. כבר שנים לא ראיתי אותו שוחה ככה.",
-        "אבל הסערה האחרונה בלבלה את כל המפרץ. בואו נבדוק מה קרה בשוק הדגים."
+        "אבל הסערה האחרונה בלבלה את כל המפרץ. בואו נבדוק מה קרה בשוק."
       ]
     },
     "articles_a_an_q03_start": {
@@ -2964,6 +2965,7 @@
     "articles_a_an_q05_start": {
       "speaker": "Fisherman",
       "lines": [
+        "הנה הסלעים. התאומים כאן, אבל הם שוב מבולבלים.",
         "זוכרים את מילות התיאור? big = גדול, old = ישן, small = קטן.",
         "לפעמים מילת תיאור נכנסת בין a או an לבין השם של הדבר.",
         "הכלל החשוב: רק המילה שבאה מיד אחרי a או an מחליטה, לא המילה שבסוף.",
@@ -6527,7 +6529,7 @@
                   "letters": [
                     {
                       "id": "art_q02b_tile_1",
-                      "value": "a"
+                      "value": "an"
                     },
                     {
                       "id": "art_q02b_tile_2",
@@ -6539,7 +6541,7 @@
                     },
                     {
                       "id": "art_q02b_tile_4",
-                      "value": "an"
+                      "value": "a"
                     }
                   ],
                   "wordTasks": [
@@ -6652,7 +6654,7 @@
           "name": "The Mixed-Up Market",
           "level": 1,
           "prerequisite": "articles_a_an__q02_the_twin_fish",
-          "summary": "הסערה בלבלה את השלטים בשוק הדגים. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
+          "summary": "הסערה בלבלה את השלטים בשוק. סדרו אותם מחדש והחליטו מתי כותבים a ומתי an.",
           "giver_npc": "Fisherman",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -6696,11 +6698,11 @@
                     },
                     {
                       "id": "art_q03a_tile_2",
-                      "value": "a"
+                      "value": "an"
                     },
                     {
                       "id": "art_q03a_tile_3",
-                      "value": "an"
+                      "value": "a"
                     },
                     {
                       "id": "art_q03a_tile_4",
@@ -6935,11 +6937,11 @@
                   "letters": [
                     {
                       "id": "art_q04b_tile_1",
-                      "value": "an"
+                      "value": "a"
                     },
                     {
                       "id": "art_q04b_tile_2",
-                      "value": "a"
+                      "value": "an"
                     },
                     {
                       "id": "art_q04b_tile_3",
@@ -7044,27 +7046,25 @@
               "world_object_id": "Lost_Chest2_Driftgold_Bay",
               "difficulty": 6,
               "success_required": true,
-              "instance_id": "articles_a_an_q04_say_orange_on_boat",
+              "instance_id": "articles_a_an_q04_say_i_see_an_orange",
               "display_text": "אמרו את המשפט הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
                 "instruction": "אמרו את המשפט הבא באנגלית בקול.",
                 "tasks": [
-                  "An",
-                  "orange",
-                  "is",
-                  "on",
-                  "the",
-                  "boat"
+                  "I",
+                  "see",
+                  "an",
+                  "orange"
                 ],
-                "target": "An orange is on the boat.",
+                "target": "I see an orange.",
                 "variant": "short_phrase",
                 "success": "המכתב של מלכת הים שלם.",
                 "params": {
-                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש תפוז על הסירה.",
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רואה תפוז.",
                   "targetWords": [],
-                  "targetPhrase": "An orange is on the boat.",
-                  "silenceTimeoutSeconds": 3.5,
+                  "targetPhrase": "I see an orange.",
+                  "silenceTimeoutSeconds": 3.0,
                   "allowFuzzyMatch": true,
                   "referenceClip": ""
                 }
@@ -7189,7 +7189,7 @@
                   "letters": [
                     {
                       "id": "art_q05c_tile_1",
-                      "value": "an"
+                      "value": "a"
                     },
                     {
                       "id": "art_q05c_tile_2",
@@ -7201,7 +7201,7 @@
                     },
                     {
                       "id": "art_q05c_tile_4",
-                      "value": "a"
+                      "value": "an"
                     }
                   ],
                   "wordTasks": [
@@ -7255,20 +7255,19 @@
                 "minigame_id": "speak_aloud",
                 "instruction": "אמרו את המשפט הבא באנגלית בקול.",
                 "tasks": [
-                  "I",
-                  "have",
+                  "It's",
                   "an",
                   "old",
                   "net"
                 ],
-                "target": "I have an old net.",
+                "target": "It's an old net.",
                 "variant": "short_phrase",
                 "success": "התאומים שוחים שוב זה ליד זה.",
                 "params": {
-                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי רשת ישנה.",
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: זאת רשת ישנה.",
                   "targetWords": [],
-                  "targetPhrase": "I have an old net.",
-                  "silenceTimeoutSeconds": 3.5,
+                  "targetPhrase": "It's an old net.",
+                  "silenceTimeoutSeconds": 3.0,
                   "allowFuzzyMatch": true,
                   "referenceClip": ""
                 }
@@ -7370,11 +7369,11 @@
                     },
                     {
                       "id": "art_q06b_tile_3",
-                      "value": "a"
+                      "value": "an"
                     },
                     {
                       "id": "art_q06b_tile_4",
-                      "value": "an"
+                      "value": "a"
                     }
                   ],
                   "wordTasks": [
@@ -7422,28 +7421,25 @@
               "world_object_id": "Lost_Chest2_Driftgold_Bay",
               "difficulty": 7,
               "success_required": true,
-              "instance_id": "articles_a_an_q06_say_apple_and_egg",
+              "instance_id": "articles_a_an_q06_say_i_see_an_ant",
               "display_text": "אמרו את המשפט הבא באנגלית בקול.",
               "minigame_brief": {
                 "minigame_id": "speak_aloud",
                 "instruction": "אמרו את המשפט הבא באנגלית בקול.",
                 "tasks": [
                   "I",
-                  "have",
+                  "see",
                   "an",
-                  "apple",
-                  "and",
-                  "an",
-                  "egg"
+                  "ant"
                 ],
-                "target": "I have an apple and an egg.",
+                "target": "I see an ant.",
                 "variant": "short_phrase",
                 "success": "עוד קשר חזק נוסף לרשת.",
                 "params": {
-                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי תפוח וביצה.",
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רואה נמלה.",
                   "targetWords": [],
-                  "targetPhrase": "I have an apple and an egg.",
-                  "silenceTimeoutSeconds": 3.5,
+                  "targetPhrase": "I see an ant.",
+                  "silenceTimeoutSeconds": 3.0,
                   "allowFuzzyMatch": true,
                   "referenceClip": ""
                 }
