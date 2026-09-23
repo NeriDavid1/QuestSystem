@@ -2,7 +2,7 @@ questline:
   id: articles_a_an
   npc_id: Fisherman
   display_name: "A / An - a או an"
-  theme: "Nemo the Netless guards two tiny twin fish named A and AN for the Sea Queen: learn that a means one thing, that an comes before a vowel, and that the very next word decides which one to use."
+  theme: "Nemo the Netless guards two tiny twin fish named A and AN for the Sea Queen: learn that a means one thing, that an comes before a vowel letter (a, e, i, o, u), and that the very next word decides which one to use."
   quest_count: 6
   level_range: [1, 50]
 

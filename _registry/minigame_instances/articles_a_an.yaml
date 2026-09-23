@@ -1,78 +1,76 @@
 # Runtime briefs for the A / An questline (Nemo and the twin fish).
+# Almost every task is an a / an choice: Word Ordering pools always offer the other article
+# (from Q2 on), so the learner must apply the rule. Word Matching tasks focus on the first letter,
+# which is what decides between a and an. Simple, familiar vocabulary only.
 # Letter pools are shuffled independently of wordTasks; no tile sits opposite its own word.
-# Word Ordering pools always offer the other article, so the choice between a and an must be made by the rule.
 instances:
 
   # --- Q1 - The Fisherman With No Net ---
-  articles_a_an_q01_match_sea_words:
-    minigame_id: word_matching
-    instruction: "השלימו את האות החסרה במילה."
-    tasks: [FIS_, _OAT, N_T]
-    target: "fish, boat, net"
-    variant: missing_letter_matching
-    success: "המילים של הים חזרו אל התיבה."
-    params:
-      letters:
-        - { id: art_q01a_tile_e, value: e }
-        - { id: art_q01a_tile_d, value: d }
-        - { id: art_q01a_tile_h, value: h }
-        - { id: art_q01a_tile_a, value: a }
-        - { id: art_q01a_tile_b, value: b }
-      wordTasks:
-        - { id: art_q01a_task_fish, image: '', fullWord: fish, missingIndices: [3] }
-        - { id: art_q01a_task_boat, image: '', fullWord: boat, missingIndices: [0] }
-        - { id: art_q01a_task_net, image: '', fullWord: net, missingIndices: [1] }
-
-  articles_a_an_q01_spell_net:
-    minigame_id: letter_ordering
-    instruction: "כתבו באנגלית את המילה שפירושה רשת."
-    tasks: [n, e, t]
-    target: net
-    variant: word_spelling
-    success: "נכון. זאת המילה שנמו הכי צריך."
-    params:
-      prompt: "כתבו באנגלית את המילה שפירושה רשת."
-      targetWord: net
-      extraDistractorCount: 2
-      customDistractors: []
-
-  articles_a_an_q01_a_big_fish:
+  articles_a_an_q01_a_fish:
     minigame_id: word_ordering
     instruction: "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
-    tasks: [a, big, fish]
-    target: "a big fish"
+    tasks: [a, fish]
+    target: "a fish"
     variant: sentence_building
     success: "נכון. a מראה שמדובר בדג אחד."
     params:
-      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: דג גדול אחד. סדרו את כל המילים."
-      translation: "דג גדול אחד"
-      englishWordsInOrder: [a, big, fish]
+      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: דג אחד. סדרו את כל המילים."
+      translation: "דג אחד"
+      englishWordsInOrder: [a, fish]
       preFilledIndices: []
-      distractorWords: [the, small, boat]
+      distractorWords: [the, two, boat]
 
-  articles_a_an_q01_say_boat:
+  articles_a_an_q01_a_big_boat:
+    minigame_id: word_ordering
+    instruction: "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [a, big, boat]
+    target: "a big boat"
+    variant: sentence_building
+    success: "נכון. סירה אחת, ולכן a."
+    params:
+      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: סירה גדולה אחת. סדרו את כל המילים."
+      translation: "סירה גדולה אחת"
+      englishWordsInOrder: [a, big, boat]
+      preFilledIndices: []
+      distractorWords: [the, two, small]
+
+  articles_a_an_q01_say_net:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: [I, have, a, boat]
-    target: "I have a boat."
+    tasks: [I, have, a, net]
+    target: "I have a net."
     variant: single_word
     success: "הרשת הראשונה מחזיקה חזק."
     params:
-      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי סירה."
-      targetWords: [boat]
-      targetPhrase: "I have a boat."
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי רשת."
+      targetWords: [net]
+      targetPhrase: "I have a net."
       silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
       referenceClip: ''
+
+  articles_a_an_q01_i_have_a_hat:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [I, have, a, hat]
+    target: "I have a hat."
+    variant: sentence_building
+    success: "נכון. כובע אחד, ולכן a."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: יש לי כובע. סדרו את כל המילים."
+      translation: "יש לי כובע."
+      englishWordsInOrder: [I, have, a, hat]
+      preFilledIndices: []
+      distractorWords: [the, two, bag]
 
   # --- Q2 - The Twin Fish ---
   articles_a_an_q02_match_vowel_starts:
     minigame_id: word_matching
     instruction: "השלימו את האות החסרה במילה."
-    tasks: [_PPLE, _GG, _CTOPUS]
-    target: "apple, egg, octopus"
+    tasks: [_PPLE, _GG, _RANGE]
+    target: "apple, egg, orange"
     variant: missing_letter_matching
-    success: "כל המילים האלה מתחילות באות תנועה."
+    success: "כל המילים האלה מתחילות באות ניקוד."
     params:
       letters:
         - { id: art_q02a_tile_u, value: u }
@@ -83,20 +81,7 @@ instances:
       wordTasks:
         - { id: art_q02a_task_apple, image: '', fullWord: apple, missingIndices: [0] }
         - { id: art_q02a_task_egg, image: '', fullWord: egg, missingIndices: [0] }
-        - { id: art_q02a_task_octopus, image: '', fullWord: octopus, missingIndices: [0] }
-
-  articles_a_an_q02_spell_egg:
-    minigame_id: letter_ordering
-    instruction: "כתבו באנגלית את המילה שפירושה ביצה."
-    tasks: [e, g, g]
-    target: egg
-    variant: word_spelling
-    success: "נכון. המילה הזאת מתחילה באות תנועה."
-    params:
-      prompt: "כתבו באנגלית את המילה שפירושה ביצה."
-      targetWord: egg
-      extraDistractorCount: 2
-      customDistractors: []
+        - { id: art_q02a_task_orange, image: '', fullWord: orange, missingIndices: [0] }
 
   articles_a_an_q02_an_apple:
     minigame_id: word_ordering
@@ -104,25 +89,39 @@ instances:
     tasks: [an, apple]
     target: "an apple"
     variant: sentence_building
-    success: "נכון. apple מתחילה באות תנועה, ולכן AN שוחה לפניה."
+    success: "נכון. apple מתחילה באות ניקוד, ולכן AN שוחה לפניה."
     params:
       prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: תפוח אחד. סדרו את כל המילים."
       translation: "תפוח אחד"
       englishWordsInOrder: [an, apple]
       preFilledIndices: []
-      distractorWords: [a, the, egg]
+      distractorWords: [a, the, two]
+
+  articles_a_an_q02_an_egg:
+    minigame_id: word_ordering
+    instruction: "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [an, egg]
+    target: "an egg"
+    variant: sentence_building
+    success: "נכון. egg מתחילה באות ניקוד, ולכן an."
+    params:
+      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: ביצה אחת. סדרו את כל המילים."
+      translation: "ביצה אחת"
+      englishWordsInOrder: [an, egg]
+      preFilledIndices: []
+      distractorWords: [a, the, some]
 
   articles_a_an_q02_say_egg:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: [It, is, an, egg]
-    target: "It is an egg."
+    tasks: [I, have, an, egg]
+    target: "I have an egg."
     variant: single_word
     success: "AN חזר אל המפרץ."
     params:
-      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: זאת ביצה."
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי ביצה."
       targetWords: [an]
-      targetPhrase: "It is an egg."
+      targetPhrase: "I have an egg."
       silenceTimeoutSeconds: 2.5
       allowFuzzyMatch: true
       referenceClip: ''
@@ -140,7 +139,7 @@ instances:
       translation: "תפוז אחד"
       englishWordsInOrder: [an, orange]
       preFilledIndices: []
-      distractorWords: [a, the, apple]
+      distractorWords: [a, the, two]
 
   articles_a_an_q03_a_banana:
     minigame_id: word_ordering
@@ -148,32 +147,13 @@ instances:
     tasks: [a, banana]
     target: "a banana"
     variant: sentence_building
-    success: "נכון. banana לא מתחילה באות תנועה, ולכן מספיק a."
+    success: "נכון. banana לא מתחילה באות ניקוד, ולכן מספיק a."
     params:
       prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: בננה אחת. סדרו את כל המילים."
       translation: "בננה אחת"
       englishWordsInOrder: [a, banana]
       preFilledIndices: []
-      distractorWords: [an, the, orange]
-
-  articles_a_an_q03_match_market:
-    minigame_id: word_matching
-    instruction: "השלימו את האות החסרה במילה."
-    tasks: [_CE, CR_B, UMB_ELLA]
-    target: "ice, crab, umbrella"
-    variant: missing_letter_matching
-    success: "כל השלטים בשוק שלמים עכשיו."
-    params:
-      letters:
-        - { id: art_q03c_tile_r, value: r }
-        - { id: art_q03c_tile_e, value: e }
-        - { id: art_q03c_tile_a, value: a }
-        - { id: art_q03c_tile_o, value: o }
-        - { id: art_q03c_tile_i, value: i }
-      wordTasks:
-        - { id: art_q03c_task_ice, image: '', fullWord: ice, missingIndices: [0] }
-        - { id: art_q03c_task_crab, image: '', fullWord: crab, missingIndices: [2] }
-        - { id: art_q03c_task_umbrella, image: '', fullWord: umbrella, missingIndices: [3] }
+      distractorWords: [an, the, two]
 
   articles_a_an_q03_say_orange:
     minigame_id: speak_aloud
@@ -190,6 +170,20 @@ instances:
       allowFuzzyMatch: true
       referenceClip: ''
 
+  articles_a_an_q03_an_ice_cream:
+    minigame_id: word_ordering
+    instruction: "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [an, ice, cream]
+    target: "an ice cream"
+    variant: sentence_building
+    success: "נכון. ice מתחילה באות ניקוד, ולכן an."
+    params:
+      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: גלידה אחת. סדרו את כל המילים."
+      translation: "גלידה אחת"
+      englishWordsInOrder: [an, ice, cream]
+      preFilledIndices: []
+      distractorWords: [a, the, two]
+
   # --- Q4 - The Message in a Bottle ---
   articles_a_an_q04_i_see_an_octopus:
     minigame_id: word_ordering
@@ -203,34 +197,21 @@ instances:
       translation: "אני רואה תמנון."
       englishWordsInOrder: [I, see, an, octopus]
       preFilledIndices: []
-      distractorWords: [a, the, crab]
+      distractorWords: [a, the, two]
 
-  articles_a_an_q04_crab_on_the_rock:
+  articles_a_an_q04_fish_in_the_net:
     minigame_id: word_ordering
     instruction: "השלימו את המשפט לפי התרגום המלא בעברית. בחרו את המילים החסרות."
-    tasks: [There, is, a, crab, "on", the, rock]
-    target: "There is a crab on the rock."
+    tasks: [There, is, a, fish, in, the, net]
+    target: "There is a fish in the net."
     variant: sentence_building
     success: "עוד שורה במכתב של מלכת הים ברורה."
     params:
-      prompt: "השלימו את המשפט לפי התרגום המלא בעברית: יש סרטן על הסלע. בחרו את המילים החסרות."
-      translation: "יש סרטן על הסלע."
-      englishWordsInOrder: [There, is, a, crab, "on", the, rock]
+      prompt: "השלימו את המשפט לפי התרגום המלא בעברית: יש דג ברשת. בחרו את המילים החסרות."
+      translation: "יש דג ברשת."
+      englishWordsInOrder: [There, is, a, fish, in, the, net]
       preFilledIndices: [0, 1, 4, 5]
       distractorWords: [an, egg, boat]
-
-  articles_a_an_q04_spell_umbrella:
-    minigame_id: letter_ordering
-    instruction: "כתבו באנגלית את המילה שפירושה מטרייה."
-    tasks: [u, m, b, r, e, l, l, a]
-    target: umbrella
-    variant: word_spelling
-    success: "נכון. גם המילה הזאת מתחילה באות תנועה."
-    params:
-      prompt: "כתבו באנגלית את המילה שפירושה מטרייה."
-      targetWord: umbrella
-      extraDistractorCount: 2
-      customDistractors: []
 
   articles_a_an_q04_say_umbrella:
     minigame_id: speak_aloud
@@ -238,7 +219,7 @@ instances:
     tasks: [An, umbrella, is, "on", the, boat]
     target: "An umbrella is on the boat."
     variant: short_phrase
-    success: "המכתב של מלכת הים שלם."
+    success: "המכתב של מלכת הים כמעט שלם."
     params:
       prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש מטרייה על הסירה."
       targetWords: [An, umbrella, is, "on", the, boat]
@@ -246,6 +227,20 @@ instances:
       silenceTimeoutSeconds: 3.5
       allowFuzzyMatch: true
       referenceClip: ''
+
+  articles_a_an_q04_i_have_an_umbrella:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [I, have, an, umbrella]
+    target: "I have an umbrella."
+    variant: sentence_building
+    success: "המכתב של מלכת הים שלם."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: יש לי מטרייה. סדרו את כל המילים."
+      translation: "יש לי מטרייה."
+      englishWordsInOrder: [I, have, an, umbrella]
+      preFilledIndices: []
+      distractorWords: [a, the, two]
 
   # --- Q5 - The Tricky Word in the Middle ---
   articles_a_an_q05_a_big_egg:
@@ -268,7 +263,7 @@ instances:
     tasks: [an, old, boat]
     target: "an old boat"
     variant: sentence_building
-    success: "נכון. old מתחילה באות תנועה, ולכן an."
+    success: "נכון. old מתחילה באות ניקוד, ולכן an."
     params:
       prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: סירה ישנה אחת. סדרו את כל המילים."
       translation: "סירה ישנה אחת"
@@ -311,63 +306,59 @@ instances:
       referenceClip: ''
 
   # --- Q6 - The Net of Little Words ---
-  articles_a_an_q06_fish_and_eel:
+  articles_a_an_q06_an_orange_hat:
     minigame_id: word_ordering
-    instruction: "השלימו את המשפט לפי התרגום המלא בעברית. בחרו את המילים החסרות."
-    tasks: [I, caught, a, fish, and, an, eel]
-    target: "I caught a fish and an eel."
+    instruction: "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [an, orange, hat]
+    target: "an orange hat"
     variant: sentence_building
-    success: "הקשר הראשון ברשת החדשה חזק."
+    success: "נכון. orange מתחילה באות ניקוד, ולכן an."
     params:
-      prompt: "השלימו את המשפט לפי התרגום המלא בעברית: תפסתי דג וצלופח. בחרו את המילים החסרות."
-      translation: "תפסתי דג וצלופח."
-      englishWordsInOrder: [I, caught, a, fish, and, an, eel]
-      preFilledIndices: [0, 4]
-      distractorWords: [the, crab, octopus]
+      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: כובע כתום אחד. סדרו את כל המילים."
+      translation: "כובע כתום אחד"
+      englishWordsInOrder: [an, orange, hat]
+      preFilledIndices: []
+      distractorWords: [a, the, red]
 
-  articles_a_an_q06_match_review:
-    minigame_id: word_matching
-    instruction: "השלימו את האות החסרה במילה."
-    tasks: [_EL, NE_, _RANGE]
-    target: "eel, net, orange"
-    variant: missing_letter_matching
-    success: "עוד קשרים נוספו לרשת."
+  articles_a_an_q06_a_red_apple:
+    minigame_id: word_ordering
+    instruction: "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [a, red, apple]
+    target: "a red apple"
+    variant: sentence_building
+    success: "נכון. המילה שבאה מיד אחרי היא red, ולכן a."
     params:
-      letters:
-        - { id: art_q06b_tile_t, value: t }
-        - { id: art_q06b_tile_o, value: o }
-        - { id: art_q06b_tile_s, value: s }
-        - { id: art_q06b_tile_e, value: e }
-        - { id: art_q06b_tile_i, value: i }
-      wordTasks:
-        - { id: art_q06b_task_eel, image: '', fullWord: eel, missingIndices: [0] }
-        - { id: art_q06b_task_net, image: '', fullWord: net, missingIndices: [2] }
-        - { id: art_q06b_task_orange, image: '', fullWord: orange, missingIndices: [0] }
+      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: תפוח אדום אחד. סדרו את כל המילים."
+      translation: "תפוח אדום אחד"
+      englishWordsInOrder: [a, red, apple]
+      preFilledIndices: []
+      distractorWords: [an, the, old]
 
-  articles_a_an_q06_spell_island:
-    minigame_id: letter_ordering
-    instruction: "כתבו באנגלית את המילה שפירושה אי."
-    tasks: [i, s, l, a, n, d]
-    target: island
-    variant: word_spelling
-    success: "נכון. לפני המילה הזאת AN שוחה."
-    params:
-      prompt: "כתבו באנגלית את המילה שפירושה אי."
-      targetWord: island
-      extraDistractorCount: 3
-      customDistractors: []
-
-  articles_a_an_q06_say_eel_in_net:
+  articles_a_an_q06_say_apple_and_egg:
     minigame_id: speak_aloud
     instruction: "אמרו את המשפט הבא באנגלית בקול."
-    tasks: [An, eel, is, in, the, net]
-    target: "An eel is in the net."
+    tasks: [I, have, an, apple, and, an, egg]
+    target: "I have an apple and an egg."
     variant: short_phrase
-    success: "מלכת הים שלחה את אבן החן שלה, והיא אצלכם."
+    success: "עוד קשר חזק נוסף לרשת."
     params:
-      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש צלופח ברשת."
-      targetWords: [An, eel, is, in, the, net]
-      targetPhrase: "An eel is in the net."
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי תפוח וביצה."
+      targetWords: [I, have, an, apple, and, an, egg]
+      targetPhrase: "I have an apple and an egg."
       silenceTimeoutSeconds: 3.5
       allowFuzzyMatch: true
       referenceClip: ''
+
+  articles_a_an_q06_fish_and_octopus:
+    minigame_id: word_ordering
+    instruction: "השלימו את המשפט לפי התרגום המלא בעברית. בחרו את המילים החסרות."
+    tasks: [I, see, a, fish, and, an, octopus]
+    target: "I see a fish and an octopus."
+    variant: sentence_building
+    success: "הרשת גמורה, ומלכת הים שלחה לכם את אבן החן שלה."
+    params:
+      prompt: "השלימו את המשפט לפי התרגום המלא בעברית: אני רואה דג ותמנון. בחרו את המילים החסרות."
+      translation: "אני רואה דג ותמנון."
+      englishWordsInOrder: [I, see, a, fish, and, an, octopus]
+      preFilledIndices: [0, 4]
+      distractorWords: [the, two, egg]

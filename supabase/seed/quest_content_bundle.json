@@ -3379,7 +3379,7 @@
         {
           "locale": "he",
           "line_order": 3,
-          "content": "a = אחד או אחת. שמים אותה לפני שם של דבר אחד. a shell = צדף אחד, a crab = סרטן אחד.",
+          "content": "a = אחד או אחת. שמים אותה לפני שם של דבר אחד. a cat = חתול אחד, a dog = כלב אחד.",
           "line_format": "plain_text"
         },
         {
@@ -3437,13 +3437,13 @@
         {
           "locale": "he",
           "line_order": 3,
-          "content": "באנגלית יש חמש אותיות תנועה: a, e, i, o, u. אות תנועה = vowel.",
+          "content": "באנגלית יש חמש אותיות ניקוד: a, e, i, o, u. אות ניקוד = vowel.",
           "line_format": "plain_text"
         },
         {
           "locale": "he",
           "line_order": 4,
-          "content": "כשהמילה הבאה מתחילה באות תנועה, שמים an במקום a. an ant = נמלה אחת, an owl = ינשוף אחד.",
+          "content": "כשהמילה הבאה מתחילה באות ניקוד, שמים an במקום a. an ant = נמלה אחת, an owl = ינשוף אחד.",
           "line_format": "plain_text"
         }
       ]
@@ -7490,30 +7490,59 @@
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q01_a_big_fish",
+      "key": "articles_a_an_q01_a_big_boat",
       "locale": "he",
       "instruction": "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
       "tasks": [
         "a",
         "big",
+        "boat"
+      ],
+      "target": "a big boat",
+      "variant": "sentence_building",
+      "success": "נכון. סירה אחת, ולכן a.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: סירה גדולה אחת. סדרו את כל המילים.",
+        "translation": "סירה גדולה אחת",
+        "englishWordsInOrder": [
+          "a",
+          "big",
+          "boat"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [
+          "the",
+          "two",
+          "small"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "articles_a_an_q01_a_fish",
+      "locale": "he",
+      "instruction": "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+      "tasks": [
+        "a",
         "fish"
       ],
-      "target": "a big fish",
+      "target": "a fish",
       "variant": "sentence_building",
       "success": "נכון. a מראה שמדובר בדג אחד.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: דג גדול אחד. סדרו את כל המילים.",
-        "translation": "דג גדול אחד",
+        "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: דג אחד. סדרו את כל המילים.",
+        "translation": "דג אחד",
         "englishWordsInOrder": [
           "a",
-          "big",
           "fish"
         ],
         "preFilledIndices": [],
         "distractorWords": [
           "the",
-          "small",
+          "two",
           "boat"
         ]
       },
@@ -7521,116 +7550,61 @@
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q01_match_sea_words",
+      "key": "articles_a_an_q01_i_have_a_hat",
       "locale": "he",
-      "instruction": "השלימו את האות החסרה במילה.",
+      "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
       "tasks": [
-        "FIS_",
-        "_OAT",
-        "N_T"
+        "I",
+        "have",
+        "a",
+        "hat"
       ],
-      "target": "fish, boat, net",
-      "variant": "missing_letter_matching",
-      "success": "המילים של הים חזרו אל התיבה.",
-      "minigame_id": "word_matching",
+      "target": "I have a hat.",
+      "variant": "sentence_building",
+      "success": "נכון. כובע אחד, ולכן a.",
+      "minigame_id": "word_ordering",
       "params": {
-        "letters": [
-          {
-            "id": "art_q01a_tile_e",
-            "value": "e"
-          },
-          {
-            "id": "art_q01a_tile_d",
-            "value": "d"
-          },
-          {
-            "id": "art_q01a_tile_h",
-            "value": "h"
-          },
-          {
-            "id": "art_q01a_tile_a",
-            "value": "a"
-          },
-          {
-            "id": "art_q01a_tile_b",
-            "value": "b"
-          }
+        "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: יש לי כובע. סדרו את כל המילים.",
+        "translation": "יש לי כובע.",
+        "englishWordsInOrder": [
+          "I",
+          "have",
+          "a",
+          "hat"
         ],
-        "wordTasks": [
-          {
-            "id": "art_q01a_task_fish",
-            "image": "",
-            "fullWord": "fish",
-            "missingIndices": [
-              3
-            ]
-          },
-          {
-            "id": "art_q01a_task_boat",
-            "image": "",
-            "fullWord": "boat",
-            "missingIndices": [
-              0
-            ]
-          },
-          {
-            "id": "art_q01a_task_net",
-            "image": "",
-            "fullWord": "net",
-            "missingIndices": [
-              1
-            ]
-          }
+        "preFilledIndices": [],
+        "distractorWords": [
+          "the",
+          "two",
+          "bag"
         ]
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q01_say_boat",
+      "key": "articles_a_an_q01_say_net",
       "locale": "he",
       "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
         "I",
         "have",
         "a",
-        "boat"
+        "net"
       ],
-      "target": "I have a boat.",
+      "target": "I have a net.",
       "variant": "single_word",
       "success": "הרשת הראשונה מחזיקה חזק.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי סירה.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי רשת.",
         "targetWords": [
-          "boat"
+          "net"
         ],
-        "targetPhrase": "I have a boat.",
+        "targetPhrase": "I have a net.",
         "silenceTimeoutSeconds": 2.5,
         "allowFuzzyMatch": true,
         "referenceClip": ""
-      },
-      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "articles_a_an_q01_spell_net",
-      "locale": "he",
-      "instruction": "כתבו באנגלית את המילה שפירושה רשת.",
-      "tasks": [
-        "n",
-        "e",
-        "t"
-      ],
-      "target": "net",
-      "variant": "word_spelling",
-      "success": "נכון. זאת המילה שנמו הכי צריך.",
-      "minigame_id": "letter_ordering",
-      "params": {
-        "prompt": "כתבו באנגלית את המילה שפירושה רשת.",
-        "targetWord": "net",
-        "extraDistractorCount": 2,
-        "customDistractors": []
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
       "source_metadata": {}
@@ -7645,7 +7619,7 @@
       ],
       "target": "an apple",
       "variant": "sentence_building",
-      "success": "נכון. apple מתחילה באות תנועה, ולכן AN שוחה לפניה.",
+      "success": "נכון. apple מתחילה באות ניקוד, ולכן AN שוחה לפניה.",
       "minigame_id": "word_ordering",
       "params": {
         "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: תפוח אחד. סדרו את כל המילים.",
@@ -7658,7 +7632,36 @@
         "distractorWords": [
           "a",
           "the",
+          "two"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "articles_a_an_q02_an_egg",
+      "locale": "he",
+      "instruction": "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+      "tasks": [
+        "an",
+        "egg"
+      ],
+      "target": "an egg",
+      "variant": "sentence_building",
+      "success": "נכון. egg מתחילה באות ניקוד, ולכן an.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: ביצה אחת. סדרו את כל המילים.",
+        "translation": "ביצה אחת",
+        "englishWordsInOrder": [
+          "an",
           "egg"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [
+          "a",
+          "the",
+          "some"
         ]
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
@@ -7671,11 +7674,11 @@
       "tasks": [
         "_PPLE",
         "_GG",
-        "_CTOPUS"
+        "_RANGE"
       ],
-      "target": "apple, egg, octopus",
+      "target": "apple, egg, orange",
       "variant": "missing_letter_matching",
-      "success": "כל המילים האלה מתחילות באות תנועה.",
+      "success": "כל המילים האלה מתחילות באות ניקוד.",
       "minigame_id": "word_matching",
       "params": {
         "letters": [
@@ -7718,9 +7721,9 @@
             ]
           },
           {
-            "id": "art_q02a_task_octopus",
+            "id": "art_q02a_task_orange",
             "image": "",
-            "fullWord": "octopus",
+            "fullWord": "orange",
             "missingIndices": [
               0
             ]
@@ -7735,46 +7738,24 @@
       "locale": "he",
       "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
-        "It",
-        "is",
+        "I",
+        "have",
         "an",
         "egg"
       ],
-      "target": "It is an egg.",
+      "target": "I have an egg.",
       "variant": "single_word",
       "success": "AN חזר אל המפרץ.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: זאת ביצה.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי ביצה.",
         "targetWords": [
           "an"
         ],
-        "targetPhrase": "It is an egg.",
+        "targetPhrase": "I have an egg.",
         "silenceTimeoutSeconds": 2.5,
         "allowFuzzyMatch": true,
         "referenceClip": ""
-      },
-      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "articles_a_an_q02_spell_egg",
-      "locale": "he",
-      "instruction": "כתבו באנגלית את המילה שפירושה ביצה.",
-      "tasks": [
-        "e",
-        "g",
-        "g"
-      ],
-      "target": "egg",
-      "variant": "word_spelling",
-      "success": "נכון. המילה הזאת מתחילה באות תנועה.",
-      "minigame_id": "letter_ordering",
-      "params": {
-        "prompt": "כתבו באנגלית את המילה שפירושה ביצה.",
-        "targetWord": "egg",
-        "extraDistractorCount": 2,
-        "customDistractors": []
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
       "source_metadata": {}
@@ -7789,7 +7770,7 @@
       ],
       "target": "a banana",
       "variant": "sentence_building",
-      "success": "נכון. banana לא מתחילה באות תנועה, ולכן מספיק a.",
+      "success": "נכון. banana לא מתחילה באות ניקוד, ולכן מספיק a.",
       "minigame_id": "word_ordering",
       "params": {
         "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: בננה אחת. סדרו את כל המילים.",
@@ -7802,7 +7783,38 @@
         "distractorWords": [
           "an",
           "the",
-          "orange"
+          "two"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "articles_a_an_q03_an_ice_cream",
+      "locale": "he",
+      "instruction": "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+      "tasks": [
+        "an",
+        "ice",
+        "cream"
+      ],
+      "target": "an ice cream",
+      "variant": "sentence_building",
+      "success": "נכון. ice מתחילה באות ניקוד, ולכן an.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: גלידה אחת. סדרו את כל המילים.",
+        "translation": "גלידה אחת",
+        "englishWordsInOrder": [
+          "an",
+          "ice",
+          "cream"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [
+          "a",
+          "the",
+          "two"
         ]
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
@@ -7831,73 +7843,7 @@
         "distractorWords": [
           "a",
           "the",
-          "apple"
-        ]
-      },
-      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "articles_a_an_q03_match_market",
-      "locale": "he",
-      "instruction": "השלימו את האות החסרה במילה.",
-      "tasks": [
-        "_CE",
-        "CR_B",
-        "UMB_ELLA"
-      ],
-      "target": "ice, crab, umbrella",
-      "variant": "missing_letter_matching",
-      "success": "כל השלטים בשוק שלמים עכשיו.",
-      "minigame_id": "word_matching",
-      "params": {
-        "letters": [
-          {
-            "id": "art_q03c_tile_r",
-            "value": "r"
-          },
-          {
-            "id": "art_q03c_tile_e",
-            "value": "e"
-          },
-          {
-            "id": "art_q03c_tile_a",
-            "value": "a"
-          },
-          {
-            "id": "art_q03c_tile_o",
-            "value": "o"
-          },
-          {
-            "id": "art_q03c_tile_i",
-            "value": "i"
-          }
-        ],
-        "wordTasks": [
-          {
-            "id": "art_q03c_task_ice",
-            "image": "",
-            "fullWord": "ice",
-            "missingIndices": [
-              0
-            ]
-          },
-          {
-            "id": "art_q03c_task_crab",
-            "image": "",
-            "fullWord": "crab",
-            "missingIndices": [
-              2
-            ]
-          },
-          {
-            "id": "art_q03c_task_umbrella",
-            "image": "",
-            "fullWord": "umbrella",
-            "missingIndices": [
-              3
-            ]
-          }
+          "two"
         ]
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
@@ -7934,33 +7880,33 @@
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q04_crab_on_the_rock",
+      "key": "articles_a_an_q04_fish_in_the_net",
       "locale": "he",
       "instruction": "השלימו את המשפט לפי התרגום המלא בעברית. בחרו את המילים החסרות.",
       "tasks": [
         "There",
         "is",
         "a",
-        "crab",
-        "on",
+        "fish",
+        "in",
         "the",
-        "rock"
+        "net"
       ],
-      "target": "There is a crab on the rock.",
+      "target": "There is a fish in the net.",
       "variant": "sentence_building",
       "success": "עוד שורה במכתב של מלכת הים ברורה.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: יש סרטן על הסלע. בחרו את המילים החסרות.",
-        "translation": "יש סרטן על הסלע.",
+        "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: יש דג ברשת. בחרו את המילים החסרות.",
+        "translation": "יש דג ברשת.",
         "englishWordsInOrder": [
           "There",
           "is",
           "a",
-          "crab",
-          "on",
+          "fish",
+          "in",
           "the",
-          "rock"
+          "net"
         ],
         "preFilledIndices": [
           0,
@@ -7972,6 +7918,39 @@
           "an",
           "egg",
           "boat"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "articles_a_an_q04_i_have_an_umbrella",
+      "locale": "he",
+      "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+      "tasks": [
+        "I",
+        "have",
+        "an",
+        "umbrella"
+      ],
+      "target": "I have an umbrella.",
+      "variant": "sentence_building",
+      "success": "המכתב של מלכת הים שלם.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: יש לי מטרייה. סדרו את כל המילים.",
+        "translation": "יש לי מטרייה.",
+        "englishWordsInOrder": [
+          "I",
+          "have",
+          "an",
+          "umbrella"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [
+          "a",
+          "the",
+          "two"
         ]
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
@@ -8004,7 +7983,7 @@
         "distractorWords": [
           "a",
           "the",
-          "crab"
+          "two"
         ]
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
@@ -8024,7 +8003,7 @@
       ],
       "target": "An umbrella is on the boat.",
       "variant": "short_phrase",
-      "success": "המכתב של מלכת הים שלם.",
+      "success": "המכתב של מלכת הים כמעט שלם.",
       "minigame_id": "speak_aloud",
       "params": {
         "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש מטרייה על הסירה.",
@@ -8040,33 +8019,6 @@
         "silenceTimeoutSeconds": 3.5,
         "allowFuzzyMatch": true,
         "referenceClip": ""
-      },
-      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "articles_a_an_q04_spell_umbrella",
-      "locale": "he",
-      "instruction": "כתבו באנגלית את המילה שפירושה מטרייה.",
-      "tasks": [
-        "u",
-        "m",
-        "b",
-        "r",
-        "e",
-        "l",
-        "l",
-        "a"
-      ],
-      "target": "umbrella",
-      "variant": "word_spelling",
-      "success": "נכון. גם המילה הזאת מתחילה באות תנועה.",
-      "minigame_id": "letter_ordering",
-      "params": {
-        "prompt": "כתבו באנגלית את המילה שפירושה מטרייה.",
-        "targetWord": "umbrella",
-        "extraDistractorCount": 2,
-        "customDistractors": []
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
       "source_metadata": {}
@@ -8113,7 +8065,7 @@
       ],
       "target": "an old boat",
       "variant": "sentence_building",
-      "success": "נכון. old מתחילה באות תנועה, ולכן an.",
+      "success": "נכון. old מתחילה באות ניקוד, ולכן an.",
       "minigame_id": "word_ordering",
       "params": {
         "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: סירה ישנה אחת. סדרו את כל המילים.",
@@ -8232,33 +8184,95 @@
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q06_fish_and_eel",
+      "key": "articles_a_an_q06_a_red_apple",
+      "locale": "he",
+      "instruction": "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+      "tasks": [
+        "a",
+        "red",
+        "apple"
+      ],
+      "target": "a red apple",
+      "variant": "sentence_building",
+      "success": "נכון. המילה שבאה מיד אחרי היא red, ולכן a.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: תפוח אדום אחד. סדרו את כל המילים.",
+        "translation": "תפוח אדום אחד",
+        "englishWordsInOrder": [
+          "a",
+          "red",
+          "apple"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [
+          "an",
+          "the",
+          "old"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "articles_a_an_q06_an_orange_hat",
+      "locale": "he",
+      "instruction": "בנו את התיאור באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+      "tasks": [
+        "an",
+        "orange",
+        "hat"
+      ],
+      "target": "an orange hat",
+      "variant": "sentence_building",
+      "success": "נכון. orange מתחילה באות ניקוד, ולכן an.",
+      "minigame_id": "word_ordering",
+      "params": {
+        "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: כובע כתום אחד. סדרו את כל המילים.",
+        "translation": "כובע כתום אחד",
+        "englishWordsInOrder": [
+          "an",
+          "orange",
+          "hat"
+        ],
+        "preFilledIndices": [],
+        "distractorWords": [
+          "a",
+          "the",
+          "red"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "articles_a_an_q06_fish_and_octopus",
       "locale": "he",
       "instruction": "השלימו את המשפט לפי התרגום המלא בעברית. בחרו את המילים החסרות.",
       "tasks": [
         "I",
-        "caught",
+        "see",
         "a",
         "fish",
         "and",
         "an",
-        "eel"
+        "octopus"
       ],
-      "target": "I caught a fish and an eel.",
+      "target": "I see a fish and an octopus.",
       "variant": "sentence_building",
-      "success": "הקשר הראשון ברשת החדשה חזק.",
+      "success": "הרשת גמורה, ומלכת הים שלחה לכם את אבן החן שלה.",
       "minigame_id": "word_ordering",
       "params": {
-        "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: תפסתי דג וצלופח. בחרו את המילים החסרות.",
-        "translation": "תפסתי דג וצלופח.",
+        "prompt": "השלימו את המשפט לפי התרגום המלא בעברית: אני רואה דג ותמנון. בחרו את המילים החסרות.",
+        "translation": "אני רואה דג ותמנון.",
         "englishWordsInOrder": [
           "I",
-          "caught",
+          "see",
           "a",
           "fish",
           "and",
           "an",
-          "eel"
+          "octopus"
         ],
         "preFilledIndices": [
           0,
@@ -8266,134 +8280,45 @@
         ],
         "distractorWords": [
           "the",
-          "crab",
-          "octopus"
+          "two",
+          "egg"
         ]
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
       "source_metadata": {}
     },
     {
-      "key": "articles_a_an_q06_match_review",
-      "locale": "he",
-      "instruction": "השלימו את האות החסרה במילה.",
-      "tasks": [
-        "_EL",
-        "NE_",
-        "_RANGE"
-      ],
-      "target": "eel, net, orange",
-      "variant": "missing_letter_matching",
-      "success": "עוד קשרים נוספו לרשת.",
-      "minigame_id": "word_matching",
-      "params": {
-        "letters": [
-          {
-            "id": "art_q06b_tile_t",
-            "value": "t"
-          },
-          {
-            "id": "art_q06b_tile_o",
-            "value": "o"
-          },
-          {
-            "id": "art_q06b_tile_s",
-            "value": "s"
-          },
-          {
-            "id": "art_q06b_tile_e",
-            "value": "e"
-          },
-          {
-            "id": "art_q06b_tile_i",
-            "value": "i"
-          }
-        ],
-        "wordTasks": [
-          {
-            "id": "art_q06b_task_eel",
-            "image": "",
-            "fullWord": "eel",
-            "missingIndices": [
-              0
-            ]
-          },
-          {
-            "id": "art_q06b_task_net",
-            "image": "",
-            "fullWord": "net",
-            "missingIndices": [
-              2
-            ]
-          },
-          {
-            "id": "art_q06b_task_orange",
-            "image": "",
-            "fullWord": "orange",
-            "missingIndices": [
-              0
-            ]
-          }
-        ]
-      },
-      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "articles_a_an_q06_say_eel_in_net",
+      "key": "articles_a_an_q06_say_apple_and_egg",
       "locale": "he",
       "instruction": "אמרו את המשפט הבא באנגלית בקול.",
       "tasks": [
-        "An",
-        "eel",
-        "is",
-        "in",
-        "the",
-        "net"
+        "I",
+        "have",
+        "an",
+        "apple",
+        "and",
+        "an",
+        "egg"
       ],
-      "target": "An eel is in the net.",
+      "target": "I have an apple and an egg.",
       "variant": "short_phrase",
-      "success": "מלכת הים שלחה את אבן החן שלה, והיא אצלכם.",
+      "success": "עוד קשר חזק נוסף לרשת.",
       "minigame_id": "speak_aloud",
       "params": {
-        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש צלופח ברשת.",
+        "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש לי תפוח וביצה.",
         "targetWords": [
-          "An",
-          "eel",
-          "is",
-          "in",
-          "the",
-          "net"
+          "I",
+          "have",
+          "an",
+          "apple",
+          "and",
+          "an",
+          "egg"
         ],
-        "targetPhrase": "An eel is in the net.",
+        "targetPhrase": "I have an apple and an egg.",
         "silenceTimeoutSeconds": 3.5,
         "allowFuzzyMatch": true,
         "referenceClip": ""
-      },
-      "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
-      "source_metadata": {}
-    },
-    {
-      "key": "articles_a_an_q06_spell_island",
-      "locale": "he",
-      "instruction": "כתבו באנגלית את המילה שפירושה אי.",
-      "tasks": [
-        "i",
-        "s",
-        "l",
-        "a",
-        "n",
-        "d"
-      ],
-      "target": "island",
-      "variant": "word_spelling",
-      "success": "נכון. לפני המילה הזאת AN שוחה.",
-      "minigame_id": "letter_ordering",
-      "params": {
-        "prompt": "כתבו באנגלית את המילה שפירושה אי.",
-        "targetWord": "island",
-        "extraDistractorCount": 3,
-        "customDistractors": []
       },
       "source_path": "_registry\\minigame_instances\\articles_a_an.yaml",
       "source_metadata": {}
@@ -18208,7 +18133,7 @@
     {
       "key": "articles_a_an",
       "display_name": "A / An - a או an",
-      "theme": "Nemo the Netless guards two tiny twin fish named A and AN for the Sea Queen: learn that a means one thing, that an comes before a vowel, and that the very next word decides which one to use.",
+      "theme": "Nemo the Netless guards two tiny twin fish named A and AN for the Sea Queen: learn that a means one thing, that an comes before a vowel letter (a, e, i, o, u), and that the very next word decides which one to use.",
       "default_giver_external_id": "Fisherman",
       "status": "draft",
       "level_min": 1,
@@ -18235,17 +18160,17 @@
           "prerequisites": [],
           "steps": [
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_5939380c_1",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_6ac8d0d3_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 2,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_match_sea_words",
-                "display_text": "השלימו את האות החסרה במילה.",
-                "instance_key": "articles_a_an_q01_match_sea_words"
+                "instance_id": "articles_a_an_q01_a_fish",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q01_a_fish"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -18254,17 +18179,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_67e07831_2",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_52201c99_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "letter_ordering",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 1,
+                "difficulty": 2,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_spell_net",
-                "display_text": "כתבו באנגלית את המילה שפירושה רשת.",
-                "instance_key": "articles_a_an_q01_spell_net"
+                "instance_id": "articles_a_an_q01_a_big_boat",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q01_a_big_boat"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -18273,17 +18198,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_92d411a0_3",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_805cdd58_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_ordering",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 2,
+                "difficulty": 4,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_a_big_fish",
-                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
-                "instance_key": "articles_a_an_q01_a_big_fish"
+                "instance_id": "articles_a_an_q01_say_net",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+                "instance_key": "articles_a_an_q01_say_net"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -18292,17 +18217,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_62d07f12_4",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_7ba1fb09_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
+                "difficulty": 3,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_say_boat",
-                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q01_say_boat"
+                "instance_id": "articles_a_an_q01_i_have_a_hat",
+                "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q01_i_have_a_hat"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -18345,7 +18270,7 @@
           "name": "The Twin Fish",
           "level_required": 1,
           "giver_external_id": "Fisherman",
-          "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות תנועה.",
+          "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות ניקוד.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "articles_a_an_q02_start",
           "turn_in_dialogue_id": "articles_a_an_q02_finish",
@@ -18374,27 +18299,8 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q02_the_twin_fish_play_minigame_1ebe383c_2",
+              "key": "articles_a_an_q02_the_twin_fish_play_minigame_17717283_2",
               "position": 2,
-              "type": "play_minigame",
-              "payload": {
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 2,
-                "success_required": true,
-                "instance_id": "articles_a_an_q02_spell_egg",
-                "display_text": "כתבו באנגלית את המילה שפירושה ביצה.",
-                "instance_key": "articles_a_an_q02_spell_egg"
-              },
-              "source_metadata": {
-                "source_position": 2,
-                "source_path": "questlines\\articles_a_an\\articles_a_an__q02_the_twin_fish.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "articles_a_an_q02_the_twin_fish_play_minigame_17717283_3",
-              "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
@@ -18404,6 +18310,25 @@
                 "instance_id": "articles_a_an_q02_an_apple",
                 "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
                 "instance_key": "articles_a_an_q02_an_apple"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\articles_a_an\\articles_a_an__q02_the_twin_fish.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "articles_a_an_q02_the_twin_fish_play_minigame_d6381bf7_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "articles_a_an_q02_an_egg",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q02_an_egg"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -18453,7 +18378,7 @@
               "level_required": 1,
               "giver_npc": "Fisherman",
               "prerequisite": "articles_a_an__q01_the_fisherman_with_no_net",
-              "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות תנועה.",
+              "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות ניקוד.",
               "wait_for_npc_turn_in": true,
               "turn_in_dialogue_id": "articles_a_an_q02_finish"
             }
@@ -18513,27 +18438,8 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_14c074de_3",
+              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_688e50c5_3",
               "position": 3,
-              "type": "play_minigame",
-              "payload": {
-                "minigame_id": "word_matching",
-                "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 3,
-                "success_required": true,
-                "instance_id": "articles_a_an_q03_match_market",
-                "display_text": "השלימו את האות החסרה במילה.",
-                "instance_key": "articles_a_an_q03_match_market"
-              },
-              "source_metadata": {
-                "source_position": 3,
-                "source_path": "questlines\\articles_a_an\\articles_a_an__q03_the_mixed_up_market.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_688e50c5_4",
-              "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
@@ -18543,6 +18449,25 @@
                 "instance_id": "articles_a_an_q03_say_orange",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "articles_a_an_q03_say_orange"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\articles_a_an\\articles_a_an__q03_the_mixed_up_market.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_72b1eafc_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "articles_a_an_q03_an_ice_cream",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q03_an_ice_cream"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -18614,7 +18539,7 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_7d3d942f_2",
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_e34b5a3c_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -18622,9 +18547,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 5,
                 "success_required": true,
-                "instance_id": "articles_a_an_q04_crab_on_the_rock",
+                "instance_id": "articles_a_an_q04_fish_in_the_net",
                 "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
-                "instance_key": "articles_a_an_q04_crab_on_the_rock"
+                "instance_key": "articles_a_an_q04_fish_in_the_net"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -18633,27 +18558,8 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_eb7f9497_3",
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_696b3bcb_3",
               "position": 3,
-              "type": "play_minigame",
-              "payload": {
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
-                "success_required": true,
-                "instance_id": "articles_a_an_q04_spell_umbrella",
-                "display_text": "כתבו באנגלית את המילה שפירושה מטרייה.",
-                "instance_key": "articles_a_an_q04_spell_umbrella"
-              },
-              "source_metadata": {
-                "source_position": 3,
-                "source_path": "questlines\\articles_a_an\\articles_a_an__q04_the_message_in_a_bottle.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_696b3bcb_4",
-              "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
@@ -18663,6 +18569,25 @@
                 "instance_id": "articles_a_an_q04_say_umbrella",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "articles_a_an_q04_say_umbrella"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\articles_a_an\\articles_a_an__q04_the_message_in_a_bottle.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_6358acab_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "articles_a_an_q04_i_have_an_umbrella",
+                "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q04_i_have_an_umbrella"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -18835,7 +18760,7 @@
           ],
           "steps": [
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_ea2e633c_1",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_4160df79_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -18843,9 +18768,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 6,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_fish_and_eel",
-                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
-                "instance_key": "articles_a_an_q06_fish_and_eel"
+                "instance_id": "articles_a_an_q06_an_orange_hat",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q06_an_orange_hat"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -18854,17 +18779,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_d1230ee9_2",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_b8529cde_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
+                "difficulty": 6,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_match_review",
-                "display_text": "השלימו את האות החסרה במילה.",
-                "instance_key": "articles_a_an_q06_match_review"
+                "instance_id": "articles_a_an_q06_a_red_apple",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q06_a_red_apple"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -18873,17 +18798,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_babad721_3",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_effcac6a_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "letter_ordering",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
+                "difficulty": 7,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_spell_island",
-                "display_text": "כתבו באנגלית את המילה שפירושה אי.",
-                "instance_key": "articles_a_an_q06_spell_island"
+                "instance_id": "articles_a_an_q06_say_apple_and_egg",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+                "instance_key": "articles_a_an_q06_say_apple_and_egg"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -18892,19 +18817,19 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_c1fc1dca_4",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_79bcd48c_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 7,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_say_eel_in_net",
+                "instance_id": "articles_a_an_q06_fish_and_octopus",
                 "reward_item_id": "gem",
                 "reward_amount": 1,
-                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q06_say_eel_in_net"
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q06_fish_and_octopus"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -18913,7 +18838,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "articles_a_an_q06_the_net_of_little_words_play_minigame_c1fc1dca_4",
+                  "step_key": "articles_a_an_q06_the_net_of_little_words_play_minigame_79bcd48c_4",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -27385,7 +27310,7 @@
     {
       "key": "articles_a_an",
       "display_name": "A / An - a או an",
-      "theme": "Nemo the Netless guards two tiny twin fish named A and AN for the Sea Queen: learn that a means one thing, that an comes before a vowel, and that the very next word decides which one to use.",
+      "theme": "Nemo the Netless guards two tiny twin fish named A and AN for the Sea Queen: learn that a means one thing, that an comes before a vowel letter (a, e, i, o, u), and that the very next word decides which one to use.",
       "default_giver_external_id": "Fisherman",
       "quests": [
         {
@@ -27402,17 +27327,17 @@
           "prerequisites": [],
           "steps": [
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_5939380c_1",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_6ac8d0d3_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 2,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_match_sea_words",
-                "display_text": "השלימו את האות החסרה במילה.",
-                "instance_key": "articles_a_an_q01_match_sea_words"
+                "instance_id": "articles_a_an_q01_a_fish",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q01_a_fish"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -27421,17 +27346,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_67e07831_2",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_52201c99_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "letter_ordering",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 1,
+                "difficulty": 2,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_spell_net",
-                "display_text": "כתבו באנגלית את המילה שפירושה רשת.",
-                "instance_key": "articles_a_an_q01_spell_net"
+                "instance_id": "articles_a_an_q01_a_big_boat",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q01_a_big_boat"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -27440,17 +27365,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_92d411a0_3",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_805cdd58_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_ordering",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 2,
+                "difficulty": 4,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_a_big_fish",
-                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
-                "instance_key": "articles_a_an_q01_a_big_fish"
+                "instance_id": "articles_a_an_q01_say_net",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+                "instance_key": "articles_a_an_q01_say_net"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -27459,17 +27384,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_62d07f12_4",
+              "key": "articles_a_an_q01_the_fisherman_with_no_net_play_minigame_7ba1fb09_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
+                "difficulty": 3,
                 "success_required": true,
-                "instance_id": "articles_a_an_q01_say_boat",
-                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q01_say_boat"
+                "instance_id": "articles_a_an_q01_i_have_a_hat",
+                "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q01_i_have_a_hat"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -27512,7 +27437,7 @@
           "name": "The Twin Fish",
           "level_required": 1,
           "giver_external_id": "Fisherman",
-          "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות תנועה.",
+          "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות ניקוד.",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": "articles_a_an_q02_start",
           "turn_in_dialogue_id": "articles_a_an_q02_finish",
@@ -27541,27 +27466,8 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q02_the_twin_fish_play_minigame_1ebe383c_2",
+              "key": "articles_a_an_q02_the_twin_fish_play_minigame_17717283_2",
               "position": 2,
-              "type": "play_minigame",
-              "payload": {
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 2,
-                "success_required": true,
-                "instance_id": "articles_a_an_q02_spell_egg",
-                "display_text": "כתבו באנגלית את המילה שפירושה ביצה.",
-                "instance_key": "articles_a_an_q02_spell_egg"
-              },
-              "source_metadata": {
-                "source_position": 2,
-                "source_path": "questlines\\articles_a_an\\articles_a_an__q02_the_twin_fish.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "articles_a_an_q02_the_twin_fish_play_minigame_17717283_3",
-              "position": 3,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "word_ordering",
@@ -27571,6 +27477,25 @@
                 "instance_id": "articles_a_an_q02_an_apple",
                 "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
                 "instance_key": "articles_a_an_q02_an_apple"
+              },
+              "source_metadata": {
+                "source_position": 2,
+                "source_path": "questlines\\articles_a_an\\articles_a_an__q02_the_twin_fish.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "articles_a_an_q02_the_twin_fish_play_minigame_d6381bf7_3",
+              "position": 3,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "difficulty": 3,
+                "success_required": true,
+                "instance_id": "articles_a_an_q02_an_egg",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q02_an_egg"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -27620,7 +27545,7 @@
               "level_required": 1,
               "giver_npc": "Fisherman",
               "prerequisite": "articles_a_an__q01_the_fisherman_with_no_net",
-              "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות תנועה.",
+              "summary": "נמו מגלה את הסוד שלו: שני דגים תאומים בשם A ו־AN. למדו מתי שמים an לפני מילה שמתחילה באות ניקוד.",
               "wait_for_npc_turn_in": true,
               "turn_in_dialogue_id": "articles_a_an_q02_finish"
             }
@@ -27680,27 +27605,8 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_14c074de_3",
+              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_688e50c5_3",
               "position": 3,
-              "type": "play_minigame",
-              "payload": {
-                "minigame_id": "word_matching",
-                "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 3,
-                "success_required": true,
-                "instance_id": "articles_a_an_q03_match_market",
-                "display_text": "השלימו את האות החסרה במילה.",
-                "instance_key": "articles_a_an_q03_match_market"
-              },
-              "source_metadata": {
-                "source_position": 3,
-                "source_path": "questlines\\articles_a_an\\articles_a_an__q03_the_mixed_up_market.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_688e50c5_4",
-              "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
@@ -27710,6 +27616,25 @@
                 "instance_id": "articles_a_an_q03_say_orange",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "articles_a_an_q03_say_orange"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\articles_a_an\\articles_a_an__q03_the_mixed_up_market.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "articles_a_an_q03_the_mixed_up_market_play_minigame_72b1eafc_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "difficulty": 4,
+                "success_required": true,
+                "instance_id": "articles_a_an_q03_an_ice_cream",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q03_an_ice_cream"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -27781,7 +27706,7 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_7d3d942f_2",
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_e34b5a3c_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
@@ -27789,9 +27714,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 5,
                 "success_required": true,
-                "instance_id": "articles_a_an_q04_crab_on_the_rock",
+                "instance_id": "articles_a_an_q04_fish_in_the_net",
                 "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
-                "instance_key": "articles_a_an_q04_crab_on_the_rock"
+                "instance_key": "articles_a_an_q04_fish_in_the_net"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -27800,27 +27725,8 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_eb7f9497_3",
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_696b3bcb_3",
               "position": 3,
-              "type": "play_minigame",
-              "payload": {
-                "minigame_id": "letter_ordering",
-                "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
-                "success_required": true,
-                "instance_id": "articles_a_an_q04_spell_umbrella",
-                "display_text": "כתבו באנגלית את המילה שפירושה מטרייה.",
-                "instance_key": "articles_a_an_q04_spell_umbrella"
-              },
-              "source_metadata": {
-                "source_position": 3,
-                "source_path": "questlines\\articles_a_an\\articles_a_an__q04_the_message_in_a_bottle.yaml"
-              },
-              "rewards": []
-            },
-            {
-              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_696b3bcb_4",
-              "position": 4,
               "type": "play_minigame",
               "payload": {
                 "minigame_id": "speak_aloud",
@@ -27830,6 +27736,25 @@
                 "instance_id": "articles_a_an_q04_say_umbrella",
                 "display_text": "אמרו את המשפט הבא באנגלית בקול.",
                 "instance_key": "articles_a_an_q04_say_umbrella"
+              },
+              "source_metadata": {
+                "source_position": 3,
+                "source_path": "questlines\\articles_a_an\\articles_a_an__q04_the_message_in_a_bottle.yaml"
+              },
+              "rewards": []
+            },
+            {
+              "key": "articles_a_an_q04_the_message_in_a_bottle_play_minigame_6358acab_4",
+              "position": 4,
+              "type": "play_minigame",
+              "payload": {
+                "minigame_id": "word_ordering",
+                "world_object_id": "Lost_Chest2_Driftgold_Bay",
+                "difficulty": 5,
+                "success_required": true,
+                "instance_id": "articles_a_an_q04_i_have_an_umbrella",
+                "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q04_i_have_an_umbrella"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -28002,7 +27927,7 @@
           ],
           "steps": [
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_ea2e633c_1",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_4160df79_1",
               "position": 1,
               "type": "play_minigame",
               "payload": {
@@ -28010,9 +27935,9 @@
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 6,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_fish_and_eel",
-                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
-                "instance_key": "articles_a_an_q06_fish_and_eel"
+                "instance_id": "articles_a_an_q06_an_orange_hat",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q06_an_orange_hat"
               },
               "source_metadata": {
                 "source_position": 1,
@@ -28021,17 +27946,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_d1230ee9_2",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_b8529cde_2",
               "position": 2,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "word_matching",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
+                "difficulty": 6,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_match_review",
-                "display_text": "השלימו את האות החסרה במילה.",
-                "instance_key": "articles_a_an_q06_match_review"
+                "instance_id": "articles_a_an_q06_a_red_apple",
+                "display_text": "בנו את התיאור באנגלית לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q06_a_red_apple"
               },
               "source_metadata": {
                 "source_position": 2,
@@ -28040,17 +27965,17 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_babad721_3",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_effcac6a_3",
               "position": 3,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "letter_ordering",
+                "minigame_id": "speak_aloud",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
-                "difficulty": 4,
+                "difficulty": 7,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_spell_island",
-                "display_text": "כתבו באנגלית את המילה שפירושה אי.",
-                "instance_key": "articles_a_an_q06_spell_island"
+                "instance_id": "articles_a_an_q06_say_apple_and_egg",
+                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+                "instance_key": "articles_a_an_q06_say_apple_and_egg"
               },
               "source_metadata": {
                 "source_position": 3,
@@ -28059,19 +27984,19 @@
               "rewards": []
             },
             {
-              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_c1fc1dca_4",
+              "key": "articles_a_an_q06_the_net_of_little_words_play_minigame_79bcd48c_4",
               "position": 4,
               "type": "play_minigame",
               "payload": {
-                "minigame_id": "speak_aloud",
+                "minigame_id": "word_ordering",
                 "world_object_id": "Lost_Chest2_Driftgold_Bay",
                 "difficulty": 7,
                 "success_required": true,
-                "instance_id": "articles_a_an_q06_say_eel_in_net",
+                "instance_id": "articles_a_an_q06_fish_and_octopus",
                 "reward_item_id": "gem",
                 "reward_amount": 1,
-                "display_text": "אמרו את המשפט הבא באנגלית בקול.",
-                "instance_key": "articles_a_an_q06_say_eel_in_net"
+                "display_text": "השלימו את המשפט לפי התרגום המלא בעברית.",
+                "instance_key": "articles_a_an_q06_fish_and_octopus"
               },
               "source_metadata": {
                 "source_position": 4,
@@ -28080,7 +28005,7 @@
               "rewards": [
                 {
                   "scope": "step",
-                  "step_key": "articles_a_an_q06_the_net_of_little_words_play_minigame_c1fc1dca_4",
+                  "step_key": "articles_a_an_q06_the_net_of_little_words_play_minigame_79bcd48c_4",
                   "reward_type": "item",
                   "xp_amount": null,
                   "item_external_id": "gem",
@@ -35379,5 +35304,5 @@
       ]
     }
   ],
-  "source_digest": "0ced724b307e439bf2ca5de1d27bff8897d58481affd3d38abe0a7091434feaa"
+  "source_digest": "f27dc81492ab87ceb93451e547b4182fa64318be30ed8aaf902bb58f44b37f69"
 }
