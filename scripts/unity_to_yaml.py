@@ -370,7 +370,8 @@ def default_brief(
         success = f"{target.upper()} נכתב נכון"
     elif minigame_id == "speak_aloud":
         words = [str(word) for word in (params.get("targetWords") or [])]
-        target = ", ".join(words)
+        # Phrase mode (empty targetWords) keeps the sentence in targetPhrase.
+        target = ", ".join(words) or str(params.get("targetPhrase") or "")
         success = "המילים נקלטו"
     elif minigame_id == "word_ordering":
         words = [str(word) for word in (params.get("englishWordsInOrder") or [])]
