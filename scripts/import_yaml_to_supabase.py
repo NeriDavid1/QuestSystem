@@ -282,6 +282,8 @@ CATALOG_MINIGAME_IDS = {
     "speak_aloud",
     "word_matching",
     "letter_drawing",
+    "dwarf_miner",
+    "fruit_slice",
 }
 
 
@@ -289,6 +291,10 @@ def infer_minigame_id(params: dict[str, Any], variant: Any = None) -> str | None
     """Infer catalog kind from Unity-shaped params or a legacy variant=external_id."""
     if not isinstance(params, dict):
         params = {}
+    if "categoryLabel" in params or "requiredCorrect" in params or "allowedMistakes" in params:
+        return "dwarf_miner"
+    if "targetText" in params or "segmentation" in params:
+        return "fruit_slice"
     if "targetWord" in params:
         return "letter_ordering"
     if "englishWordsInOrder" in params:

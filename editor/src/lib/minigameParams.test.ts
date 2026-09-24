@@ -228,3 +228,49 @@ describe('defaultValueForType', () => {
     expect(defaultValueForType('asset')).toBe('')
   })
 })
+
+describe('dwarf_miner and fruit_slice', () => {
+  const dwarfMiner = entry('dwarf_miner', ['prompt', 'categoryLabel', 'targetWords', 'distractorWords', 'requiredCorrect', 'allowedMistakes', 'background', 'wordRevealDatabase'], ['word_category'])
+  const fruitSlice = entry('fruit_slice', ['prompt', 'segmentation', 'targetText', 'preFilledIndices', 'distractors', 'extraLetterDistractorCount', 'background', 'wordRevealDatabase'], ['letter_slicing', 'word_slicing'])
+
+  it('uses each game’s own Unity defaults for shared fields', () => {
+    expect(defaultParamsForEntry(dwarfMiner)).toEqual({
+      prompt: 'Collect the right words',
+      categoryLabel: '',
+      targetWords: [],
+      distractorWords: [],
+      requiredCorrect: 5,
+      allowedMistakes: 3,
+      background: '',
+      wordRevealDatabase: '',
+    })
+    expect(defaultParamsForEntry(fruitSlice)).toMatchObject({
+      prompt: 'Slice them in the right order',
+      segmentation: 'Letters',
+      extraLetterDistractorCount: 2,
+    })
+  })
+
+  it('keeps the shared field definitions untouched', () => {
+    expect(MINIGAME_PARAM_FIELDS.prompt.default).toBe('Arrange the letters')
+    expect(getMinigameParamsForEntry(speakAloud).find((f) => f.name === 'targetWords')?.hintKey).toBe('minigameParamTargetWordsHint')
+    expect(getMinigameParamsForEntry(dwarfMiner).find((f) => f.name === 'targetWords')?.hintKey).toBe('minigameParamMinerTargetWordsHint')
+  })
+
+  it('seeds the category words and the slice answer from the brief', () => {
+    const miner = seedParamsFromBrief(dwarfMiner, defaultParamsForEntry(dwarfMiner), 'Ice, Snow , Boots', 'תאספו את מילות החורף')
+    expect(miner.targetWords).toEqual(['Ice', 'Snow', 'Boots'])
+    expect(miner.prompt).toBe('תאספו את מילות החורף')
+
+    const word = seedParamsFromBrief(fruitSlice, defaultParamsForEntry(fruitSlice), 'apple', null)
+    expect(word).toMatchObject({ targetText: 'apple', segmentation: 'Letters' })
+    const sentence = seedParamsFromBrief(fruitSlice, defaultParamsForEntry(fruitSlice), 'the dog is big', null)
+    expect(sentence).toMatchObject({ targetText: 'the dog is big', segmentation: 'Words' })
+  })
+
+  it('only accepts known segmentation values', () => {
+    const field = MINIGAME_PARAM_FIELDS.segmentation
+    expect(normalizeParamValue(field, 'Words')).toBe('Words')
+    expect(normalizeParamValue(field, 'Sentences')).toBe('Letters')
+  })
+})

@@ -102,3 +102,48 @@ minigames:
       - short_phrase
     typical_stations: [fire_camp, cart, chest]
     requires_microphone: true
+
+  dwarf_miner:
+    image: images/minigames/dwarf_miner.png
+    name: "Dwarf Miner"
+    unity_config: DwarfMinerQuestConfigSO
+    unity_content: MinerCategoryDataSO
+    category: vocabulary
+    description: "Swing the dwarf's hook to collect the words that belong to a category and avoid the ones that don't."
+    english_focus: "Vocabulary categories, word meaning"
+    difficulty_range: [1, 8]
+    content_fields:
+      - prompt
+      - categoryLabel
+      - targetWords
+      - distractorWords
+      - requiredCorrect
+      - allowedMistakes
+      - background
+      - wordRevealDatabase
+    variants:
+      - word_category
+    typical_stations: [chest, exam_table]
+
+  fruit_slice:
+    image: images/minigames/fruit_slice.png
+    name: "Fruit Slice"
+    unity_config: FruitSliceQuestConfigSO
+    unity_content: SliceOrderingDataSO
+    category: spelling
+    description: "Slice flying fruit in the right order to spell a word (letters) or build a sentence (words)."
+    english_focus: "Spelling, sentence order"
+    difficulty_range: [1, 8]
+    content_fields:
+      - prompt
+      - segmentation
+      - targetText
+      - preFilledIndices
+      - distractors
+      - extraLetterDistractorCount
+      - background
+      - wordRevealDatabase
+    variants:
+      - letter_slicing
+      - word_slicing
+    typical_stations: [chest, exam_table]

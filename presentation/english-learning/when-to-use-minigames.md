@@ -39,6 +39,8 @@ flowchart TD
 | [letter_ordering](minigames/letter_ordering.md) | Spell a word | 1–6 | תרשום כלב | d + o + g |
 | [word_matching](minigames/word_matching.md) | Vocab / gaps | 2–8 | התאם מילה לתמונה | dog ↔ 🐶 |
 | [speak_aloud](minigames/speak_aloud.md) | Pronunciation | 4–10 | אמור: כלב | Say "dog" |
+| [dwarf_miner](minigames/dwarf_miner.md) | Vocab categories | 1–8 | תאספו את בגדי החורף | Hook snow, boots; skip sun |
+| [fruit_slice](minigames/fruit_slice.md) | Spell / order a sentence | 1–8 | איך רושמים פרה | Slice c → o → w |
 
 ---
 
@@ -124,6 +126,31 @@ flowchart TD
 - Classroom with 30 kids and one mic — use optional bonus step only
 
 **Pair with:** `word_matching` warm-up in same quest, `talk_to_npc` with NPC model audio.
+
+---
+
+## When to use `dwarf_miner`
+
+**Use when:**
+- The lesson sorts words by meaning (seasons, clothes, verbs vs. nouns)
+- You want a quick recognition check before spelling or speaking the words
+
+**Don't use when:**
+- The goal is spelling or sentence order — use `letter_ordering`, `word_ordering` or `fruit_slice`
+
+**Pair with:** `speak_aloud` on two of the collected words.
+
+---
+
+## When to use `fruit_slice`
+
+**Use when:**
+- Spelling a word (Letters) or ordering a short sentence (Words) with more action than tile ordering
+
+**Don't use when:**
+- The sentence is longer than ~6 words — use `word_ordering`
+
+**Pair with:** `letter_ordering` for the same word earlier in the line.
 
 ---
 

@@ -193,7 +193,15 @@ class ContentPipelineTests(unittest.TestCase):
         for instance in self.bundle["minigame_instances"]:
             self.assertIn(
                 instance.get("minigame_id"),
-                {"letter_ordering", "word_ordering", "speak_aloud", "word_matching", "letter_drawing"},
+                {
+                    "letter_ordering",
+                    "word_ordering",
+                    "speak_aloud",
+                    "word_matching",
+                    "letter_drawing",
+                    "dwarf_miner",
+                    "fruit_slice",
+                },
                 msg=f"instance {instance.get('key')} missing catalog minigame_id",
             )
             self.assertIsInstance(instance.get("params"), dict)

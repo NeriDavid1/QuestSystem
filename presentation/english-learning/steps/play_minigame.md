@@ -51,6 +51,8 @@ The YAML step does not define the interactable art — only `minigame_id` and `d
 | `word_matching` | [Word Matching](../minigames/word_matching.md) | Vocabulary, missing letters |
 | `letter_drawing` | [Letter Drawing](../minigames/letter_drawing.md) | Writing letters (beginners) |
 | `speak_aloud` | [Speak Aloud](../minigames/speak_aloud.md) | Pronunciation (advanced) |
+| `dwarf_miner` | [Dwarf Miner](../minigames/dwarf_miner.md) | Vocabulary categories |
+| `fruit_slice` | [Fruit Slice](../minigames/fruit_slice.md) | Spelling or sentence order, with action |
 
 Full registry: `_registry/minigames.yaml`
 

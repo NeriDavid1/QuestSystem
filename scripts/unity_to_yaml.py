@@ -82,6 +82,8 @@ DATA_PREFIX_TO_MINIGAME = OrderedDict(
         ("SpeakAloudData_", "speak_aloud"),
         ("MissingLetterMatchingData_", "word_matching"),
         ("OppositeMatchingData_", "word_matching"),
+        ("MinerCategoryData_", "dwarf_miner"),
+        ("SliceOrderingData_", "fruit_slice"),
     )
 )
 
@@ -90,6 +92,8 @@ CONFIG_CLASS_TO_MINIGAME = {
     "WordOrderingQuestConfigSO": "word_ordering",
     "SpeakAloudQuestConfigSO": "speak_aloud",
     "LineMatchQuestConfigSO": "word_matching",
+    "DwarfMinerQuestConfigSO": "dwarf_miner",
+    "FruitSliceQuestConfigSO": "fruit_slice",
 }
 
 MINIGAME_VARIANT = {
@@ -97,7 +101,12 @@ MINIGAME_VARIANT = {
     "word_ordering": "sentence_building",
     "word_matching": "missing_letter_matching",
     "speak_aloud": "single_word",
+    "dwarf_miner": "word_category",
+    "fruit_slice": "letter_slicing",
 }
+
+# SliceOrderingDataSO.segmentation is the OrderingSegmentation enum (serialized as an int).
+SLICE_SEGMENTATION = {0: "Letters", 1: "Words"}
 
 # Unity QuestObjectiveType -> YAML step type
 OBJECTIVE_TO_STEP = {
@@ -135,6 +144,11 @@ def load_yaml(path: Path) -> dict[str, Any]:
         return yaml.safe_load(handle) or {}
 
 
+# int[] fields Unity writes as one hex string. Quoted before parsing so YAML keeps the
+# text (an all-digit value like 0000000001000000 would otherwise load as an octal int).
+HEX_INT_ARRAY_LINE = re.compile(r"^(\s*(?:- )?(?:preFilledIndices|missingIndices): )([0-9a-fA-F]+)$")
+
+
 def load_unity_yaml(path: Path) -> dict[str, Any]:
     """Parse a Unity .asset YAML document (strips %TAG and the tagged header)."""
     lines: list[str] = []
@@ -145,6 +159,7 @@ def load_unity_yaml(path: Path) -> dict[str, Any]:
                 continue
             if stripped.startswith("---"):
                 stripped = "---"
+            stripped = HEX_INT_ARRAY_LINE.sub(r"\1'\2'", stripped)
             lines.append(stripped)
     doc = yaml.safe_load("\n".join(lines))
     if not isinstance(doc, dict):
@@ -189,7 +204,7 @@ def resolve_path(guid_index: dict[str, Path], unity_root: Path, guid: str | None
 
 
 def decode_int_array(value: Any) -> list[int]:
-    """Decode Unity's hex-serialized int array (4-byte LE count + int32 values)."""
+    """Decode Unity's hex-serialized int array (consecutive little-endian int32 values)."""
     if value is None:
         return []
     if isinstance(value, list):
@@ -203,16 +218,10 @@ def decode_int_array(value: Any) -> list[int]:
         blob = bytes.fromhex(text)
     except ValueError:
         return []
-    if len(blob) < 4:
-        return []
-    count = int.from_bytes(blob[:4], "little")
-    result: list[int] = []
-    for i in range(count):
-        offset = 4 + i * 4
-        if offset + 4 > len(blob):
-            break
-        result.append(int.from_bytes(blob[offset : offset + 4], "little"))
-    return result
+    return [
+        int.from_bytes(blob[offset : offset + 4], "little", signed=True)
+        for offset in range(0, len(blob) - len(blob) % 4, 4)
+    ]
 
 
 def to_int(value: Any) -> int | Any:
@@ -357,6 +366,21 @@ def extract_params(
                 )
         params["letters"] = letters
         params["wordTasks"] = tasks
+    elif minigame_id in ("dwarf_miner", "fruit_slice"):
+        for field in fields:
+            if field in ("background", "wordRevealDatabase"):
+                params[field] = resolve_path(guid_index, unity_root, guid_of(data.get(field)))
+            elif field in ("requiredCorrect", "allowedMistakes", "extraLetterDistractorCount"):
+                params[field] = int(data.get(field) or 0)
+            elif field == "segmentation":
+                params[field] = SLICE_SEGMENTATION.get(int(data.get(field) or 0), "Letters")
+            elif field == "preFilledIndices":
+                params[field] = decode_int_array(data.get(field))
+            elif field in ("targetWords", "distractorWords", "distractors"):
+                params[field] = [str(word).strip() for word in (data.get(field) or [])]
+            else:
+                value = data.get(field)
+                params[field] = "" if value is None else str(value).strip()
     return params
 
 
@@ -386,6 +410,12 @@ def default_brief(
         ]
         target = ", ".join(words)
         success = "המילים הושלמו"
+    elif minigame_id == "dwarf_miner":
+        target = ", ".join(str(word) for word in (params.get("targetWords") or []))
+        success = "כל המילים של הנושא נאספו"
+    elif minigame_id == "fruit_slice":
+        target = str(params.get("targetText") or "")
+        success = "הפירות נחתכו בסדר הנכון"
     else:
         target = ""
         success = "המשחק הושלם"
@@ -393,7 +423,11 @@ def default_brief(
         "instruction": instruction,
         "tasks": [instruction] if instruction else [],
         "target": target,
-        "variant": MINIGAME_VARIANT.get(minigame_id, "word_spelling"),
+        "variant": (
+            "word_slicing"
+            if minigame_id == "fruit_slice" and params.get("segmentation") == "Words"
+            else MINIGAME_VARIANT.get(minigame_id, "word_spelling")
+        ),
         "success": success,
     }
 

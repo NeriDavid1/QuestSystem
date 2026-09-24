@@ -6,6 +6,8 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 
 | id | name | category | english_focus | preview |
 |----|----|----|----|----|
+| `dwarf_miner` | Dwarf Miner | vocabulary | Vocabulary categories, word meaning | ![Dwarf Miner](images/minigames/dwarf_miner.png) |
+| `fruit_slice` | Fruit Slice | spelling | Spelling, sentence order | ![Fruit Slice](images/minigames/fruit_slice.png) |
 | `letter_drawing` | Letter Drawing | motor_skills | Letter formation, stroke order | *(no image)* |
 | `letter_ordering` | Letter Ordering | spelling | Spelling, letter recognition | ![Letter Ordering](images/minigames/letter_ordering.png) |
 | `speak_aloud` | Speak Aloud | pronunciation | Pronunciation, spoken production | ![Speak Aloud](images/minigames/speak_aloud.png) |

@@ -17,13 +17,13 @@
     "npcs": 26,
     "interactables": 14,
     "items": 199,
-    "minigames": 5,
+    "minigames": 7,
     "step_types": 6,
     "areas_with_image": 15,
     "npcs_with_image": 26,
     "interactables_with_image": 14,
     "items_with_image": 186,
-    "minigames_with_image": 4
+    "minigames_with_image": 6
   },
   "areas": [
     {
@@ -2670,6 +2670,69 @@
     }
   ],
   "minigames": [
+    {
+      "image": "images/minigames/dwarf_miner.png",
+      "name": "Dwarf Miner",
+      "unity_config": "DwarfMinerQuestConfigSO",
+      "unity_content": "MinerCategoryDataSO",
+      "category": "vocabulary",
+      "description": "Swing the dwarf's hook to collect the words that belong to a category and avoid the ones that don't.",
+      "english_focus": "Vocabulary categories, word meaning",
+      "difficulty_range": [
+        1,
+        8
+      ],
+      "content_fields": [
+        "prompt",
+        "categoryLabel",
+        "targetWords",
+        "distractorWords",
+        "requiredCorrect",
+        "allowedMistakes",
+        "background",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "word_category"
+      ],
+      "typical_stations": [
+        "chest",
+        "exam_table"
+      ],
+      "id": "dwarf_miner"
+    },
+    {
+      "image": "images/minigames/fruit_slice.png",
+      "name": "Fruit Slice",
+      "unity_config": "FruitSliceQuestConfigSO",
+      "unity_content": "SliceOrderingDataSO",
+      "category": "spelling",
+      "description": "Slice flying fruit in the right order to spell a word (letters) or build a sentence (words).",
+      "english_focus": "Spelling, sentence order",
+      "difficulty_range": [
+        1,
+        8
+      ],
+      "content_fields": [
+        "prompt",
+        "segmentation",
+        "targetText",
+        "preFilledIndices",
+        "distractors",
+        "extraLetterDistractorCount",
+        "background",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "letter_slicing",
+        "word_slicing"
+      ],
+      "typical_stations": [
+        "chest",
+        "exam_table"
+      ],
+      "id": "fruit_slice"
+    },
     {
       "name": "Letter Drawing",
       "unity_config": "DrawingQuestConfigSO",

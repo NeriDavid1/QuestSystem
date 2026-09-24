@@ -252,6 +252,8 @@ const catalogSeed: Array<[CatalogEntry['kind'], string, string, string, string |
   ['minigame', 'word_matching', 'Word Matching', 'Match English words/fragments (includes opposite pairing / Line Match).', 'images/minigames/word_matching.png'],
   ['minigame', 'letter_drawing', 'Letter Drawing', 'Trace or draw an English letter on screen.', null],
   ['minigame', 'speak_aloud', 'Speak Aloud', 'Say an English word or phrase; speech recognition validates it.', 'images/minigames/speak_aloud.png'],
+  ['minigame', 'dwarf_miner', 'Dwarf Miner', "Swing the dwarf's hook to collect the words that belong to a category and avoid the ones that don't.", 'images/minigames/dwarf_miner.png'],
+  ['minigame', 'fruit_slice', 'Fruit Slice', 'Slice flying fruit in the right order to spell a word (letters) or build a sentence (words).', 'images/minigames/fruit_slice.png'],
 ]
 
 // Mirrors _registry/minigames.yaml so demo mode renders the same per-game
@@ -307,6 +309,26 @@ const minigameCatalogMetadata: Record<string, Record<string, unknown>> = {
     variants: ['single_word', 'short_phrase'],
     typical_stations: ['fire_camp', 'cart', 'chest'],
     requires_microphone: true,
+  },
+  dwarf_miner: {
+    unity_config: 'DwarfMinerQuestConfigSO',
+    unity_content: 'MinerCategoryDataSO',
+    category: 'vocabulary',
+    english_focus: 'Vocabulary categories, word meaning',
+    difficulty_range: [1, 8],
+    content_fields: ['prompt', 'categoryLabel', 'targetWords', 'distractorWords', 'requiredCorrect', 'allowedMistakes', 'background', 'wordRevealDatabase'],
+    variants: ['word_category'],
+    typical_stations: ['chest', 'exam_table'],
+  },
+  fruit_slice: {
+    unity_config: 'FruitSliceQuestConfigSO',
+    unity_content: 'SliceOrderingDataSO',
+    category: 'spelling',
+    english_focus: 'Spelling, sentence order',
+    difficulty_range: [1, 8],
+    content_fields: ['prompt', 'segmentation', 'targetText', 'preFilledIndices', 'distractors', 'extraLetterDistractorCount', 'background', 'wordRevealDatabase'],
+    variants: ['letter_slicing', 'word_slicing'],
+    typical_stations: ['chest', 'exam_table'],
   },
 }
 

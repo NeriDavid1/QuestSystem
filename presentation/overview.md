@@ -128,4 +128,4 @@ flowchart LR
 
 ## Allowed minigames
 
-`letter_ordering` · `word_ordering` · `word_matching` · `letter_drawing` · `speak_aloud`
+`letter_ordering` · `word_ordering` · `word_matching` · `letter_drawing` · `speak_aloud` · `dwarf_miner` · `fruit_slice`

@@ -369,7 +369,7 @@ export function MinigameParamsEditor({
               </div>
             )
           }
-          if (field.name === 'wordRevealDatabase') {
+          if (field.advanced) {
             return <AdvancedAssetField key={field.name} field={field} minigame={minigame} onChange={onChange} />
           }
 
@@ -387,6 +387,17 @@ export function MinigameParamsEditor({
                   checked={value === true}
                   onChange={(event) => setScalar(field, event.target.checked)}
                 />
+              ) : field.type === 'select' ? (
+                <select
+                  className="content-text"
+                  dir="ltr"
+                  value={String(value ?? '')}
+                  onChange={(event) => setScalar(field, event.target.value)}
+                >
+                  {(field.options ?? []).map((option) => (
+                    <option key={option} value={option}>{option}</option>
+                  ))}
+                </select>
               ) : field.type === 'textarea' ? (
                 <textarea
                   className="content-text"

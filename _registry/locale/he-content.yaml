@@ -178,6 +178,8 @@ minigames:
   word_matching: { name: "התאמת מילים" }
   letter_drawing: { name: "ציור אותיות" }
   speak_aloud: { name: "דיבור בקול" }
+  dwarf_miner: { name: "הכורה הגמד" }
+  fruit_slice: { name: "חיתוך פירות" }
 
 locations:
   q01_runaway_a_zone: "אזור ה־A הבורח"

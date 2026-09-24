@@ -4038,6 +4038,83 @@
     },
     {
       "kind": "minigame",
+      "external_id": "dwarf_miner",
+      "name": "Dwarf Miner",
+      "description": "Swing the dwarf's hook to collect the words that belong to a category and avoid the ones that don't.",
+      "status": null,
+      "image_path": "images/minigames/dwarf_miner.png",
+      "metadata": {
+        "image": "images/minigames/dwarf_miner.png",
+        "name": "Dwarf Miner",
+        "unity_config": "DwarfMinerQuestConfigSO",
+        "unity_content": "MinerCategoryDataSO",
+        "category": "vocabulary",
+        "description": "Swing the dwarf's hook to collect the words that belong to a category and avoid the ones that don't.",
+        "english_focus": "Vocabulary categories, word meaning",
+        "difficulty_range": [
+          1,
+          8
+        ],
+        "content_fields": [
+          "prompt",
+          "categoryLabel",
+          "targetWords",
+          "distractorWords",
+          "requiredCorrect",
+          "allowedMistakes",
+          "background",
+          "wordRevealDatabase"
+        ],
+        "variants": [
+          "word_category"
+        ],
+        "typical_stations": [
+          "chest",
+          "exam_table"
+        ]
+      }
+    },
+    {
+      "kind": "minigame",
+      "external_id": "fruit_slice",
+      "name": "Fruit Slice",
+      "description": "Slice flying fruit in the right order to spell a word (letters) or build a sentence (words).",
+      "status": null,
+      "image_path": "images/minigames/fruit_slice.png",
+      "metadata": {
+        "image": "images/minigames/fruit_slice.png",
+        "name": "Fruit Slice",
+        "unity_config": "FruitSliceQuestConfigSO",
+        "unity_content": "SliceOrderingDataSO",
+        "category": "spelling",
+        "description": "Slice flying fruit in the right order to spell a word (letters) or build a sentence (words).",
+        "english_focus": "Spelling, sentence order",
+        "difficulty_range": [
+          1,
+          8
+        ],
+        "content_fields": [
+          "prompt",
+          "segmentation",
+          "targetText",
+          "preFilledIndices",
+          "distractors",
+          "extraLetterDistractorCount",
+          "background",
+          "wordRevealDatabase"
+        ],
+        "variants": [
+          "letter_slicing",
+          "word_slicing"
+        ],
+        "typical_stations": [
+          "chest",
+          "exam_table"
+        ]
+      }
+    },
+    {
+      "kind": "minigame",
       "external_id": "letter_drawing",
       "name": "Letter Drawing",
       "description": "Trace or draw an English letter on screen.",
@@ -24722,7 +24799,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 150,
+              "xp_amount": 6200,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -24842,7 +24919,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 175,
+              "xp_amount": 7750,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -24962,7 +25039,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 200,
+              "xp_amount": 9300,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -25082,7 +25159,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 225,
+              "xp_amount": 10850,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -25202,7 +25279,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 275,
+              "xp_amount": 12400,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -25353,7 +25430,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 350,
+              "xp_amount": 20900,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -36104,7 +36181,7 @@
     }
   ],
   "counts": {
-    "catalog_entries": 259,
+    "catalog_entries": 261,
     "step_type_definitions": 6,
     "dialogues": 182,
     "dialogue_lines": 478,
@@ -37708,7 +37785,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 150,
+              "xp_amount": 6200,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -37828,7 +37905,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 175,
+              "xp_amount": 7750,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -37948,7 +38025,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 200,
+              "xp_amount": 9300,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -38068,7 +38145,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 225,
+              "xp_amount": 10850,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -38188,7 +38265,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 275,
+              "xp_amount": 12400,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -38339,7 +38416,7 @@
               "scope": "quest",
               "step_key": null,
               "reward_type": "xp",
-              "xp_amount": 350,
+              "xp_amount": 20900,
               "item_external_id": null,
               "amount": null,
               "source_metadata": {
@@ -48508,5 +48585,5 @@
       ]
     }
   ],
-  "source_digest": "62edc0cb8ad9a46ff4ccd743df61ef02f4282e1e37313e79f88ae2046707ef6c"
+  "source_digest": "a105350df85eac0ca93f322325ded46526c6be081f5de4898a07b759415098f6"
 }

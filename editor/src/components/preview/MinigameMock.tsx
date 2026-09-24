@@ -229,6 +229,84 @@ function LetterDrawingMock({ params, clearLabel, doneLabel }: { params: MockPara
   )
 }
 
+function MockHearts({ count }: { count: number }) {
+  return (
+    <div className="mg-mock-hearts" dir="ltr">
+      {Array.from({ length: Math.max(0, Math.min(count, 8)) }, (_, i) => (
+        <span className="mg-mock-heart" key={i}>♥</span>
+      ))}
+    </div>
+  )
+}
+
+// Dwarf Miner: word orbs scattered in a cave; the dwarf's hook swings from the top.
+function DwarfMinerMock({ params, prompt, seed }: { params: MockParams; prompt: string; seed: string }) {
+  const label = asString(params.categoryLabel).trim()
+  const targets = asStringArray(params.targetWords)
+  const distractors = asStringArray(params.distractorWords)
+  const required = Math.min(asNumber(params.requiredCorrect, 5), Math.max(targets.length, 1))
+  const orbs = stableShuffle([...targets, ...distractors], seed)
+  return (
+    <div className="mg-mock-miner" aria-hidden="true">
+      <span className="mg-mock-close red">×</span>
+      <div className="mg-mock-miner-hud">
+        <MockHearts count={asNumber(params.allowedMistakes, 3)} />
+        <span className="mg-mock-miner-score">0 / {required}</span>
+      </div>
+      <div className="mg-mock-miner-banner" dir="auto">
+        {label && <span className="mg-mock-miner-label">{label}</span>}
+        <span>{prompt || '…'}</span>
+      </div>
+      <div className="mg-mock-miner-hook" />
+      <div className="mg-mock-miner-cave" dir="ltr">
+        {orbs.map((word, i) => (
+          <span className="mg-mock-miner-orb" key={`${word}-${i}`}>{word}</span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+// Fruit Slice: the answer bar on top, fruits carrying letters/words flying below.
+function FruitSliceMock({ params, prompt, seed }: { params: MockParams; prompt: string; seed: string }) {
+  const text = asString(params.targetText)
+  const words = asString(params.segmentation) === 'Words'
+  const segments = words
+    ? text.split(/\s+/).filter(Boolean)
+    : text.replace(/\s+/g, '').toLowerCase().split('').filter(Boolean)
+  const preFilled = new Set(asNumberArray(params.preFilledIndices))
+  const distractors = asStringArray(params.distractors)
+  const extra = !words && distractors.length === 0
+    ? stableShuffle(DISTRACTOR_LETTERS.filter((ch) => !segments.includes(ch)), `${seed}-fill`)
+      .slice(0, asNumber(params.extraLetterDistractorCount, 2))
+    : []
+  const fruits = stableShuffle(
+    [...segments.filter((_, i) => !preFilled.has(i)), ...distractors, ...extra],
+    seed,
+  )
+  return (
+    <div className="mg-mock-slice" aria-hidden="true">
+      <span className="mg-mock-close red">×</span>
+      <MockHearts count={3} />
+      <div className="mg-mock-prompt mg-mock-slice-prompt" dir="auto">{prompt || '…'}</div>
+      <div className="mg-mock-slots" dir="ltr">
+        {(segments.length ? segments : ['']).map((segment, i) => (
+          <span className={`mg-mock-slot mg-mock-slice-slot ${preFilled.has(i) ? 'filled' : ''}`} key={i}>
+            {preFilled.has(i) ? segment.toUpperCase() : ''}
+          </span>
+        ))}
+      </div>
+      <div className="mg-mock-slice-field" dir="ltr">
+        {fruits.map((segment, i) => (
+          <span className="mg-mock-fruit" key={`${segment}-${i}`} style={{ marginTop: `${(hashSeed(`${seed}-${i}`) % 28)}px` }}>
+            {segment.toUpperCase()}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function MinigameMock({
   minigameId,
   params,
@@ -260,6 +338,12 @@ export function MinigameMock({
       break
     case 'letter_drawing':
       body = <LetterDrawingMock params={params} clearLabel={t('mgMockClear')} doneLabel={t('mgMockDone')} />
+      break
+    case 'dwarf_miner':
+      body = <DwarfMinerMock params={params} prompt={prompt} seed={seed} />
+      break
+    case 'fruit_slice':
+      body = <FruitSliceMock params={params} prompt={prompt} seed={seed} />
       break
     default:
       body = (
