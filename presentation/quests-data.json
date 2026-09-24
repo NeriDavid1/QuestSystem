@@ -2735,6 +2735,67 @@
         "chest"
       ],
       "requires_microphone": true
+    },
+    "dwarf_miner": {
+      "image": "images/minigames/dwarf_miner.png",
+      "name": "הכורה הגמד",
+      "unity_config": "DwarfMinerQuestConfigSO",
+      "unity_content": "MinerCategoryDataSO",
+      "category": "vocabulary",
+      "description": "Swing the dwarf's hook to collect the words that belong to a category and avoid the ones that don't.",
+      "english_focus": "Vocabulary categories, word meaning",
+      "difficulty_range": [
+        1,
+        8
+      ],
+      "content_fields": [
+        "prompt",
+        "categoryLabel",
+        "targetWords",
+        "distractorWords",
+        "requiredCorrect",
+        "allowedMistakes",
+        "background",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "word_category"
+      ],
+      "typical_stations": [
+        "chest",
+        "exam_table"
+      ]
+    },
+    "fruit_slice": {
+      "image": "images/minigames/fruit_slice.png",
+      "name": "חיתוך פירות",
+      "unity_config": "FruitSliceQuestConfigSO",
+      "unity_content": "SliceOrderingDataSO",
+      "category": "spelling",
+      "description": "Slice flying fruit in the right order to spell a word (letters) or build a sentence (words).",
+      "english_focus": "Spelling, sentence order",
+      "difficulty_range": [
+        1,
+        8
+      ],
+      "content_fields": [
+        "prompt",
+        "segmentation",
+        "targetText",
+        "preFilledIndices",
+        "distractors",
+        "extraLetterDistractorCount",
+        "background",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "letter_slicing",
+        "word_slicing"
+      ],
+      "typical_stations": [
+        "chest",
+        "exam_table"
+      ]
     }
   },
   "dialogues": {
@@ -2895,6 +2956,39 @@
         "קחו את המטבעות האלה כתודה. התערוכה נפתחת בזכותכם."
       ]
     },
+    "adjectives_basics_homework_q01_start": {
+      "speaker": "Painter",
+      "lines": [
+        "שלום שוב. הילדה מהפארק עזרה לנו מאוד עם השלטים לתערוכה, ואני רוצה לצייר לה ציור במתנה.",
+        "הפעם אצייר רק את מה שתתארו לי באנגלית. אם מילה אחת תהיה לא נכונה, גם הציור ייצא לא נכון.",
+        "היום אין מילים חדשות. תראו לי לבד מה אתם כבר יודעים. האבן ליד העץ מחכה לכם."
+      ]
+    },
+    "adjectives_basics_homework_q01_finish": {
+      "speaker": "Painter",
+      "lines": [
+        "תראו. הציור יצא בדיוק כמו שתיארתם, ומחר הילדה מהפארק תקבל אותו במתנה.",
+        "זכרו: מילת התיאור באה לפני שם הדבר, a red apple = תפוח אדום. אחרי is או are היא באה בסוף, The apples are red = התפוחים אדומים.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
+      ]
+    },
+    "adjectives_mastery_homework_q01_start": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "שלום שוב, מאסטרים של שמות תואר! אחרי שהפכתם למאסטרים לפניי, רצתי ללמוד כל הלילה.",
+        "עכשיו אני רוצה לבדוק את עצמי. כתבו כרטיסי תשובות ושימו אותם בתיבה ליד העץ הגדול, ואני אשווה אותם לכרטיסים שלי.",
+        "היום אין שום דבר חדש. אתם המאסטרים, אז כתבו את הכרטיסים לבד, בלי עזרה."
+      ]
+    },
+    "adjectives_mastery_homework_q01_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "הכרטיסים שלכם והכרטיסים שלי זהים. עכשיו גם אני מאסטרית של שמות תואר, בזכותכם.",
+        "זכרו: שם התואר בא לפני שם העצם. a sharp sword = חרב חדה.",
+        "סיומת er אומרת יותר: dark = חשוך, darker than day = חשוך יותר מיום.",
+        "כל הכבוד, מאסטרים. עשיתם את שיעורי הבית לבד."
+      ]
+    },
     "articles_a_an_q01_start": {
       "speaker": "Fisherman",
       "lines": [
@@ -2995,6 +3089,22 @@
         "קחו את המטבעות האלה כתודה. בזכותכם התאומים A ו־AN חזרו הביתה."
       ]
     },
+    "articles_a_an_homework_q01_start": {
+      "speaker": "Fisherman",
+      "lines": [
+        "שלום שוב. הרשת החדשה מחזיקה חזק, ומחר מלכת הים מגיעה לבדוק אותה.",
+        "היום אין כלל חדש. אני רק רוצה לראות שאתם זוכרים לבד מתי a ומתי an.",
+        "כל תשובה נכונה היא עוד קשר חזק ברשת. התיבה ליד המים מחכה לכם."
+      ]
+    },
+    "articles_a_an_homework_q01_finish": {
+      "speaker": "Fisherman",
+      "lines": [
+        "כל הקשרים ברשת חזקים. מלכת הים תהיה גאה בכם.",
+        "זכרו: המילה שבאה מיד אחרי a או an מחליטה. אם היא מתחילה ב־a, e, i, o, u, אומרים an.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
+      ]
+    },
     "will_runaway_hammer_start": {
       "speaker": "Blacksmith",
       "lines": [
@@ -3038,6 +3148,23 @@
       "lines": [
         "אייתתם gib — גדול! עכשיו אתם מוכנים.",
         "הנה היכולת Slash. נדנוד גדול… ואז שווווש!"
+      ]
+    },
+    "do_does_homework_q01_start": {
+      "speaker": "Main Gate Gaurd 1",
+      "lines": [
+        "שלום שוב. כל העיר מדברת עליכם - בזכותכם הקסם חזר לכל ארבע אבני הדיבור.",
+        "מחר יום שוק, וכל השומרים רוצים שתעמדו איתנו בשער, כשומרים ליום אחד.",
+        "אבל שומר אמיתי זוכר את סוד פעלי העזר לבד, בלי עזרה.",
+        "היום אין שום דבר חדש. רק תראו לי מה אתם זוכרים. התיבה בחצר המזרקה מחכה לכם."
+      ]
+    },
+    "do_does_homework_q01_finish": {
+      "speaker": "Main Gate Gaurd 1",
+      "lines": [
+        "ידעתי שתצליחו. אתם זוכרים את הסוד לבד, כמו שומרים אמיתיים, ומחר תעמדו איתנו בשער.",
+        "זכרו: I, you, we, they הולכים עם do. He, she, it הולכים עם does, ואחריו הפועל בלי s: Does he play? = האם הוא משחק?",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
       ]
     },
     "nouns_maya_missing_roles": {
@@ -3490,6 +3617,23 @@
         "תודה על העזרה. קחו את הפרס."
       ]
     },
+    "noun_repair_shop_homework_q01_start": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "שלום שוב. מאז שהחנות נפתחה מחדש, מביאים אליה תוויות שבורות מכל הממלכה.",
+        "הבוקר הגיעה קופסה מלאה, ומחר הבעלים באים לקחת את התוויות שלהם.",
+        "היום אין שום דבר חדש, רק שמות שאתם כבר מכירים. הפעם תתקנו לבד - הקופסה מחכה לכם על שולחן התיקונים בפארק."
+      ]
+    },
+    "noun_repair_shop_homework_q01_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "כל התוויות בקופסה מתוקנות, ומחר כל אחת תחזור לבעלים שלה.",
+        "עכשיו אני יודעת שאפשר לסמוך עליכם בחנות גם כשאני לא כאן.",
+        "זכרו: Noun = שם עצם, שם של אדם, חיה, מקום או דבר. למשל queen = מלכה, bird = ציפור, tower = מגדל, crown = כתר.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
+      ]
+    },
     "nouns_festival_q02_start": {
       "speaker": "Village Head",
       "lines": [
@@ -3735,6 +3879,23 @@
         "קבלו עשרה מטבעות עכשיו. סיימתם את הסיפור בהצלחה!"
       ]
     },
+    "personal_pronouns_homework_q01_start": {
+      "speaker": "Village Head",
+      "lines": [
+        "ההצגה הייתה הצלחה גדולה, וכל הכפר מבקש הצגה נוספת.",
+        "לפני שכותבים אותה, אני רוצה לבדוק שהלהקה זוכרת את כל כינויי הגוף.",
+        "היום אין מילים חדשות. תראו לי לבד מה אתם כבר יודעים. הכול מחכה לכם על השולחן בפארק."
+      ]
+    },
+    "personal_pronouns_homework_q01_finish": {
+      "speaker": "Village Head",
+      "lines": [
+        "מצוין. עם מילים כאלה גם ההצגה הבאה תיכנס בדף אחד.",
+        "זכרו: He = הוא, על בן. She = היא, על בת. It = זה, על חפץ או על בעל חיים.",
+        "We = אנחנו, אני ועוד אנשים. They = הם או הן, על אנשים אחרים.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
+      ]
+    },
     "the_kingdoms_worst_day_q01_fenn_start": {
       "speaker": "City Gaurd Info",
       "lines": [
@@ -3816,6 +3977,23 @@
         "Words make sentences, and sentences help people understand.",
         "מילים יוצרות משפטים, ומשפטים עוזרים לאנשים להבין.",
         "כל הכבוד! הנה 50 מטבעות בשבילכם."
+      ]
+    },
+    "the_kingdoms_worst_day_homework_q01_start": {
+      "speaker": "City Gaurd Info",
+      "lines": [
+        "איזה יום! בזכותכם היריד עבר נהדר, וכולם ליד השער עוד מדברים עליכם.",
+        "אבל רוח הערב העיפה את כרטיסי המילים מהלוח של היריד, והכול התערבב.",
+        "אין פה שום דבר חדש, את כל המילים אתם כבר מכירים. תראו לי שאתם יודעים לסדר את הלוח לבד.",
+        "את כל הכרטיסים אספתי לעגלה שליד השער. צריך לסיים לפני שמחשיך."
+      ]
+    },
+    "the_kingdoms_worst_day_homework_q01_finish": {
+      "speaker": "City Gaurd Info",
+      "lines": [
+        "הלוח שוב מסודר, והשער הגדול נסגר בזמן. היום הכי גרוע של הממלכה נגמר טוב.",
+        "זכרו: noun = שם עצם, שם של דבר. verb = פועל, מה עושים. adjective = שם תואר, איך הדבר נראה. באנגלית הוא בא לפני שם העצם: the big gate = השער הגדול.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד, ומחר כל מי שעובר בשער ישמע על זה."
       ]
     },
     "the_royal_impostor_q01_fenn_clue": {
@@ -3972,6 +4150,57 @@
         "אל דאגה. כבר מצאתם את הרמזים החשובים ביותר."
       ]
     },
+    "the_royal_impostor_homework_q01_start": {
+      "speaker": "City Gaurd Info",
+      "lines": [
+        "שלום שוב! אחרי החגיגה כל דבר חזר לבעלים שלו, ועגלת האבדות נשארה ריקה.",
+        "אבל הבוקר השער היה עמוס, ועכשיו יש בעגלה דברים חדשים שאנשים שכחו.",
+        "זוכרים את הרשימה הקרועה? היום אתם כותבים רשימה חדשה, כדי שכל אחד ימצא את הדבר שלו.",
+        "אין היום שום דבר חדש. אני חוזר לשמור על השער, ואתם עושים הכול לבד."
+      ]
+    },
+    "the_royal_impostor_homework_q01_finish": {
+      "speaker": "City Gaurd Info",
+      "lines": [
+        "העגלה ריקה שוב, וכל אחד מצא את הדבר שלו בזכות הרשימה שלכם.",
+        "ויל לקח את ארוחת הצהריים שלו, השומרים את המפה שלהם, והציירת את הכריכים שלה.",
+        "זכרו: my = שלי, your = שלך או שלכם, his = שלו, her = שלה, our = שלנו, their = שלהם.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
+      ]
+    },
+    "the_these_those_homework_q01_start": {
+      "speaker": "Farmer",
+      "lines": [
+        "שלום שוב, חברים. ראש הכפר עדיין מספר לכולם על התירס שהבאתם לו.",
+        "מחר הוא בא לראות את החווה, ואני רוצה להראות לו באנגלית מה קרוב אלינו ומה רחוק.",
+        "היום אין כלל חדש. תראו לי לבד שאתם זוכרים את The, These ו־Those. הכול מחכה לכם ליד המדורה."
+      ]
+    },
+    "the_these_those_homework_q01_finish": {
+      "speaker": "Farmer",
+      "lines": [
+        "בזכותכם אני מוכן. מחר אראה לראש הכפר את כל החווה, מהחזירים שלידנו ועד העצים שמעבר לנהר.",
+        "זכרו: The = ה' הידיעה. These = האלה, על כמה דברים קרובים. Those = ההם, על כמה דברים רחוקים.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
+      ]
+    },
+    "this_or_that_homework_q01_start": {
+      "speaker": "Village Head",
+      "lines": [
+        "יועצי הידע שלי, חזרתם! מחר מגיעים לעיירה אורחים מארץ רחוקה, והם מדברים רק אנגלית.",
+        "אתם תהיו המדריכים שלהם. תראו להם את העיירה ותמסרו להם את מכתב הברכה שלי.",
+        "היום אין מילים חדשות. אני רק רוצה לראות שאתם יודעים להצביע נכון באנגלית, בלי עזרה.",
+        "שולחן המבחנים בפארק כבר מחכה לכם."
+      ]
+    },
+    "this_or_that_homework_q01_finish": {
+      "speaker": "Village Head",
+      "lines": [
+        "מושלם! מחר תמסרו לאורחים את המכתב, והם יבינו כל דבר שתראו להם.",
+        "זכרו: this = הזה או הזאת, that = ההוא או ההיא, these = האלה, those = ההם. וכשלא מצביעים, the = ה' הידיעה.",
+        "כל הכבוד, יועצי הידע. עשיתם את שיעורי הבית לבד."
+      ]
+    },
     "verbs_to_be_q02_new_quest_step_01": {
       "speaker": "Benny the Builder",
       "lines": [
@@ -4043,6 +4272,23 @@
       "speaker": "teacher_maya",
       "lines": [
         "תודה רבה לכם! \nממש הצלתם אותי.\nכל כך פחדתי שהשומרים יגלו ששכחתי את החוקים..."
+      ]
+    },
+    "verbs_to_be_homework_q01_start": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "שלום שוב! בזכותכם אני זוכרת את כל החוקים, והשומרים לא גילו כלום.",
+        "מחר מגיעים לממלכה ילדים חדשים, כמו שאתם הגעתם. והפעם אני אלמד אותם בעצמי.",
+        "היום אין חוק חדש. אני רק רוצה לראות שאתם זוכרים הכול לבד.",
+        "כל משפט נכון שלכם אכתוב על הלוח לשיעור של מחר. התיבה ליד המים מחכה לכם."
+      ]
+    },
+    "verbs_to_be_homework_q01_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "הלוח מוכן. מחר הילדים החדשים ילמדו מהמשפטים שלכם, כמו שאני למדתי מכם.",
+        "זכרו: I am = אני. He is = הוא, She is = היא, It is = זה. We are = אנחנו, You are = אתה, את או אתם, They are = הם או הן.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
       ]
     },
     "wh_questions_q01_start": {
@@ -4124,6 +4370,23 @@
         "הרוח שמעה את הסיפור המלא, והיא נרגעת מול האש. קוראים לה בו Boo.",
         "עשיתם עבודת חקירה מצוינת עם כל מילות השאלה.",
         "קבלו עשרה מטבעות עכשיו. סיימתם את הסיפור בהצלחה!"
+      ]
+    },
+    "wh_questions_homework_q01_start": {
+      "speaker": "Ghost",
+      "lines": [
+        "חזרתם. בזכותכם אני זוכרת את השם שלי ואת הלילה של הסערה.",
+        "עכשיו אני כותבת מחברת שאלות, כדי שלא אשכח שוב אף פעם.",
+        "היום אין מילים חדשות. תראו לי לבד שאתם זוכרים את כל מילות השאלה."
+      ]
+    },
+    "wh_questions_homework_q01_finish": {
+      "speaker": "Ghost",
+      "lines": [
+        "המחברת מלאה בשאלות טובות. עכשיו אני כבר לא מפחדת לשכוח.",
+        "זכרו: What = מה, על דבר. Where = איפה, על מקום. When = מתי, על זמן.",
+        "Who = מי, על אדם. Why = למה, על סיבה. How = איך, על הדרך שבה משהו קורה.",
+        "כל הכבוד. עשיתם את שיעורי הבית לבד."
       ]
     }
   },
@@ -6270,6 +6533,620 @@
       ]
     },
     {
+      "id": "adjectives_basics_homework",
+      "folder": "adjectives_basics_homework",
+      "displayName": "Adjectives - שיעורי בית",
+      "theme": "Homework for the Adjectives line: no new words. The Painter paints a gift for the girl from the park only from the learner's describing words, and the learner shows without help that they still know colors, sizes and feelings, the adjective before the noun, and the adjective after is / are.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "Painter",
+      "npc": {
+        "id": "Painter",
+        "name": "צייר",
+        "title": "צייר",
+        "location": "עץ צריח השמש",
+        "description": "צייר חולם שמחפש צבעים ורעיונות למילים.",
+        "image": "images/npcs/Painter.png"
+      },
+      "quests": [
+        {
+          "id": "adjectives_basics_homework__q01_the_gift_painting",
+          "name": "The Gift Painting",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "הילדה מהפארק תקבל ציור במתנה, והוא ייצא בדיוק כמו המילים שלכם. הראו לבד שאתם זוכרים את מילות התיאור ואיפה הן עומדות במשפט.",
+          "giver_npc": "Painter",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "adjectives_basics_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 475,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 85
+              },
+              {
+                "id": "quest_loot_early_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Painter",
+              "dialogue_id": "adjectives_basics_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "adjectives_basics_homework_q01_mine_describing_words",
+              "display_text": "אספו רק את מילות התיאור.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את מילות התיאור.",
+                "tasks": [
+                  "blue",
+                  "yellow",
+                  "long",
+                  "small",
+                  "angry",
+                  "tired"
+                ],
+                "target": "blue, yellow, long, small, angry, tired",
+                "variant": "word_category",
+                "success": "נכון. אספתם רק מילים שמתארות, ולא שמות של דברים.",
+                "params": {
+                  "prompt": "אספו רק את מילות התיאור.",
+                  "categoryLabel": "Adjectives",
+                  "targetWords": [
+                    "blue",
+                    "yellow",
+                    "long",
+                    "small",
+                    "angry",
+                    "tired"
+                  ],
+                  "distractorWords": [
+                    "tree",
+                    "bird",
+                    "apple",
+                    "sun",
+                    "sky",
+                    "girl"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "adjectives_basics_homework_q01_match_is_are",
+              "display_text": "השלימו כל משפט ב־is או ב־are.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו כל משפט ב־is או ב־are.",
+                "tasks": [
+                  "THE SUN ___ YELLOW",
+                  "THE APPLES ___ RED",
+                  "THE FLOWERS ___ BLUE",
+                  "THE TREE ___ BIG"
+                ],
+                "target": "the sun is yellow, the apples are red, the flowers are blue, the tree is big",
+                "variant": "missing_letter_matching",
+                "success": "נכון. is על דבר אחד, ו־are על כמה דברים.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "adj_hw_tile_1",
+                      "value": "is"
+                    },
+                    {
+                      "id": "adj_hw_tile_2",
+                      "value": "is"
+                    },
+                    {
+                      "id": "adj_hw_tile_3",
+                      "value": "are"
+                    },
+                    {
+                      "id": "adj_hw_tile_4",
+                      "value": "are"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "adj_hw_task_sun",
+                      "image": "",
+                      "fullWord": "the sun is yellow",
+                      "missingIndices": [
+                        8,
+                        9
+                      ]
+                    },
+                    {
+                      "id": "adj_hw_task_apples",
+                      "image": "",
+                      "fullWord": "the apples are red",
+                      "missingIndices": [
+                        11,
+                        12,
+                        13
+                      ]
+                    },
+                    {
+                      "id": "adj_hw_task_flowers",
+                      "image": "",
+                      "fullWord": "the flowers are blue",
+                      "missingIndices": [
+                        12,
+                        13,
+                        14
+                      ]
+                    },
+                    {
+                      "id": "adj_hw_task_tree",
+                      "image": "",
+                      "fullWord": "the tree is big",
+                      "missingIndices": [
+                        9,
+                        10
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "adjectives_basics_homework_q01_a_big_red_apple",
+              "display_text": "בנו את התיאור באנגלית לפי התרגום בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את התיאור באנגלית לפי התרגום בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "a",
+                  "big",
+                  "red",
+                  "apple"
+                ],
+                "target": "a big red apple",
+                "variant": "sentence_building",
+                "success": "נכון. big ו־red באים לפני apple, והתפוח כבר מצויר.",
+                "params": {
+                  "prompt": "בנו את התיאור באנגלית לפי התרגום המלא בעברית: תפוח אדום גדול. סדרו את כל המילים.",
+                  "translation": "תפוח אדום גדול",
+                  "englishWordsInOrder": [
+                    "a",
+                    "big",
+                    "red",
+                    "apple"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "small",
+                    "green",
+                    "tree"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "adjectives_basics_homework_q01_a_tall_green_tree",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את התיאור באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את התיאור באנגלית.",
+                "tasks": [
+                  "a",
+                  "tall",
+                  "green",
+                  "tree"
+                ],
+                "target": "a tall green tree",
+                "variant": "word_slicing",
+                "success": "נכון. מילות התיאור לפני tree, והעץ הגבוה כבר עומד בציור.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את התיאור באנגלית: עץ ירוק גבוה.",
+                  "segmentation": "Words",
+                  "targetText": "a tall green tree",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "long",
+                    "yellow",
+                    "bird"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "adjectives_basics_homework_q01_the_small_birds_are_happy",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "The",
+                  "small",
+                  "birds",
+                  "are",
+                  "happy"
+                ],
+                "target": "The small birds are happy.",
+                "variant": "sentence_building",
+                "success": "נכון. small לפני birds, ו־are כי יש כמה ציפורים.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: הציפורים הקטנות שמחות. סדרו את כל המילים.",
+                  "translation": "הציפורים הקטנות שמחות.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "small",
+                    "birds",
+                    "are",
+                    "happy"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "is",
+                    "big",
+                    "sad"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "adjectives_basics_homework_q01_say_the_girl_is_happy",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "The",
+                  "girl",
+                  "is",
+                  "happy"
+                ],
+                "target": "The girl is happy.",
+                "variant": "short_phrase",
+                "success": "הילדה בציור מחייכת, והמתנה מוכנה.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: הילדה שמחה.",
+                  "targetWords": [
+                    "The",
+                    "girl",
+                    "is",
+                    "happy"
+                  ],
+                  "targetPhrase": "The girl is happy.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adjectives_mastery_homework",
+      "folder": "adjectives_mastery_homework",
+      "displayName": "The Adjectives Mastery - שיעורי בית",
+      "theme": "Homework for The Adjectives Mastery line: no new rule. The lesson ended with Maya running off to study because the learners became masters before her. She comes back after a night of studying and wants to check her own answer cards against cards the masters write alone: the adjective before the noun, and comparisons with -er and than.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "teacher_maya",
+      "npc": {
+        "id": "teacher_maya",
+        "name": "המורה מאיה",
+        "title": "מורת אנגלית",
+        "location": "כיכר האלף-בית",
+        "description": "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים.",
+        "image": "images/npcs/teacher_maya.png"
+      },
+      "quests": [
+        {
+          "id": "adjectives_mastery_homework__q01_mayas_answer_cards",
+          "name": "Maya's Answer Cards",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "המורה מאיה למדה כל הלילה ורוצה לבדוק את עצמה. כתבו לבד כרטיסי תשובות לתיבה, והראו שאתם זוכרים איפה בא שם התואר ואיך משווים עם er.",
+          "giver_npc": "teacher_maya",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "adjectives_mastery_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 1550,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 280
+              },
+              {
+                "id": "quest_loot_mid_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "adjectives_mastery_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "adjectives_mastery_homework_q01_mine_words_before_than",
+              "display_text": "אספו רק מילים שיכולות לבוא לפני than.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק מילים שיכולות לבוא לפני than.",
+                "tasks": [
+                  "stronger",
+                  "darker",
+                  "brighter",
+                  "cleaner",
+                  "sharper"
+                ],
+                "target": "stronger, darker, brighter, cleaner, sharper",
+                "variant": "word_category",
+                "success": "נכון. לפני than באה רק מילת השוואה - שם תואר עם er.",
+                "params": {
+                  "prompt": "אספו רק מילים שיכולות לבוא לפני than.",
+                  "categoryLabel": "___ than",
+                  "targetWords": [
+                    "stronger",
+                    "darker",
+                    "brighter",
+                    "cleaner",
+                    "sharper"
+                  ],
+                  "distractorWords": [
+                    "strong",
+                    "dark",
+                    "bright",
+                    "teacher",
+                    "sister",
+                    "water"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "adjectives_mastery_homework_q01_spell_bigger",
+              "display_text": "חתכו את הפירות לפי הסדר וכתבו את המילה באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר וכתבו באנגלית את המילה שפירושה גדול יותר.",
+                "tasks": [
+                  "b",
+                  "i",
+                  "g",
+                  "g",
+                  "e",
+                  "r"
+                ],
+                "target": "bigger",
+                "variant": "letter_slicing",
+                "success": "נכון. ב־bigger כותבים את g פעמיים.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר וכתבו באנגלית את המילה שפירושה גדול יותר.",
+                  "segmentation": "Letters",
+                  "targetText": "bigger",
+                  "preFilledIndices": [],
+                  "distractors": [],
+                  "extraLetterDistractorCount": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "adjectives_mastery_homework_q01_armor_is_stronger",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "Armor",
+                  "is",
+                  "stronger",
+                  "than",
+                  "a",
+                  "shirt"
+                ],
+                "target": "Armor is stronger than a shirt.",
+                "variant": "sentence_building",
+                "success": "נכון. חזק יותר זו מילה אחת באנגלית - stronger.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: שריון חזק יותר מחולצה. סדרו את כל המילים.",
+                  "translation": "שריון חזק יותר מחולצה.",
+                  "englishWordsInOrder": [
+                    "Armor",
+                    "is",
+                    "stronger",
+                    "than",
+                    "a",
+                    "shirt"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "strong",
+                    "more",
+                    "weaker"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "adjectives_mastery_homework_q01_a_sharp_sword",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "I",
+                  "have",
+                  "a",
+                  "sharp",
+                  "sword"
+                ],
+                "target": "I have a sharp sword",
+                "variant": "word_slicing",
+                "success": "נכון. שם התואר sharp בא לפני sword.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: יש לי חרב חדה.",
+                  "segmentation": "Words",
+                  "targetText": "I have a sharp sword",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "sharper",
+                    "weak",
+                    "wand"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "adjectives_mastery_homework_q01_a_clean_and_bright_room",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "This",
+                  "is",
+                  "a",
+                  "clean",
+                  "and",
+                  "bright",
+                  "room"
+                ],
+                "target": "This is a clean and bright room.",
+                "variant": "sentence_building",
+                "success": "נכון. גם כשיש שני שמות תואר, שניהם באים לפני שם העצם.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: זה חדר נקי ובהיר.",
+                  "translation": "זה חדר נקי ובהיר.",
+                  "englishWordsInOrder": [
+                    "This",
+                    "is",
+                    "a",
+                    "clean",
+                    "and",
+                    "bright",
+                    "room"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    1
+                  ],
+                  "distractorWords": [
+                    "cleaner",
+                    "brighter",
+                    "dirty"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest7_The_Sunspire_Tree",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "adjectives_mastery_homework_q01_say_night_is_darker",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "Night",
+                  "is",
+                  "darker",
+                  "than",
+                  "day"
+                ],
+                "target": "Night is darker than day.",
+                "variant": "short_phrase",
+                "success": "הכרטיס האחרון בתיבה. עכשיו מאיה יכולה לבדוק את הכרטיסים שלה.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: לילה חשוך יותר מיום.",
+                  "targetWords": [],
+                  "targetPhrase": "Night is darker than day.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "articles_a_an",
       "folder": "articles_a_an",
       "displayName": "A / An - a או an",
@@ -6301,7 +7178,7 @@
           "turn_in_dialogue_id": "articles_a_an_q01_finish",
           "status": "complete",
           "rewards": {
-            "xp": 150,
+            "xp": 6200,
             "items": []
           },
           "steps": [
@@ -6462,7 +7339,7 @@
           "turn_in_dialogue_id": "articles_a_an_q02_finish",
           "status": "complete",
           "rewards": {
-            "xp": 175,
+            "xp": 7750,
             "items": []
           },
           "steps": [
@@ -6661,7 +7538,7 @@
           "turn_in_dialogue_id": "articles_a_an_q03_finish",
           "status": "complete",
           "rewards": {
-            "xp": 200,
+            "xp": 9300,
             "items": []
           },
           "steps": [
@@ -6866,7 +7743,7 @@
           "turn_in_dialogue_id": "articles_a_an_q04_finish",
           "status": "complete",
           "rewards": {
-            "xp": 225,
+            "xp": 10850,
             "items": []
           },
           "steps": [
@@ -7084,7 +7961,7 @@
           "turn_in_dialogue_id": "articles_a_an_q05_finish",
           "status": "complete",
           "rewards": {
-            "xp": 275,
+            "xp": 12400,
             "items": []
           },
           "steps": [
@@ -7287,7 +8164,7 @@
           "turn_in_dialogue_id": "articles_a_an_q06_finish",
           "status": "complete",
           "rewards": {
-            "xp": 350,
+            "xp": 20900,
             "items": [
               {
                 "id": "coin",
@@ -7506,6 +8383,334 @@
       ]
     },
     {
+      "id": "articles_a_an_homework",
+      "folder": "articles_a_an_homework",
+      "displayName": "A / An - שיעורי בית",
+      "theme": "Homework for the A / An line: no new rule. Nemo asks the learner to show, without help, that they still choose a or an correctly, including when a describing word stands in the middle.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "Fisherman",
+      "npc": {
+        "id": "Fisherman",
+        "name": "נמו בלי הרשת",
+        "title": "דייג",
+        "location": "מפרץ דריפטגולד",
+        "description": "דייג שמאבד רשתות ומבקש עזרה.",
+        "image": "images/npcs/Fisherman.png"
+      },
+      "quests": [
+        {
+          "id": "articles_a_an_homework__q01_nemos_practice_net",
+          "name": "Nemo's Practice Net",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "מלכת הים מגיעה מחר לבדוק את הרשת של נמו. הראו לו לבד שאתם זוכרים מתי אומרים a ומתי an.",
+          "giver_npc": "Fisherman",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "articles_a_an_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 5600,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 1010
+              },
+              {
+                "id": "quest_loot_late_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Fisherman",
+              "dialogue_id": "articles_a_an_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "articles_a_an_homework_q01_mine_an_words",
+              "display_text": "אספו רק את המילים שבאות אחרי an.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את המילים שבאות אחרי an.",
+                "tasks": [
+                  "apple",
+                  "egg",
+                  "owl",
+                  "ant",
+                  "orange",
+                  "octopus"
+                ],
+                "target": "apple, egg, owl, ant, orange, octopus",
+                "variant": "word_category",
+                "success": "הרשת תפסה רק את המילים של AN.",
+                "params": {
+                  "prompt": "אספו רק את המילים שבאות אחרי an.",
+                  "categoryLabel": "an",
+                  "targetWords": [
+                    "apple",
+                    "egg",
+                    "owl",
+                    "ant",
+                    "orange",
+                    "octopus"
+                  ],
+                  "distractorWords": [
+                    "fish",
+                    "boat",
+                    "cake",
+                    "banana",
+                    "net",
+                    "hat"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "articles_a_an_homework_q01_match_little_words",
+              "display_text": "חברו כל מילה ל־a או ל־an.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "חברו כל מילה ל־a או ל־an.",
+                "tasks": [
+                  "___ OWL",
+                  "___ HAT",
+                  "___ OLD CAT",
+                  "___ SMALL APPLE"
+                ],
+                "target": "an owl, a hat, an old cat, a small apple",
+                "variant": "missing_letter_matching",
+                "success": "עוד קשרים חזקים נוספו לרשת.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "art_hw_tile_1",
+                      "value": "an"
+                    },
+                    {
+                      "id": "art_hw_tile_2",
+                      "value": "a"
+                    },
+                    {
+                      "id": "art_hw_tile_3",
+                      "value": "a"
+                    },
+                    {
+                      "id": "art_hw_tile_4",
+                      "value": "an"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "art_hw_task_owl",
+                      "image": "",
+                      "fullWord": "an owl",
+                      "missingIndices": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "id": "art_hw_task_hat",
+                      "image": "",
+                      "fullWord": "a hat",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "art_hw_task_old_cat",
+                      "image": "",
+                      "fullWord": "an old cat",
+                      "missingIndices": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "id": "art_hw_task_small_apple",
+                      "image": "",
+                      "fullWord": "a small apple",
+                      "missingIndices": [
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "articles_a_an_homework_q01_an_old_boat",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "I",
+                  "have",
+                  "an",
+                  "old",
+                  "boat"
+                ],
+                "target": "I have an old boat.",
+                "variant": "sentence_building",
+                "success": "נכון. המילה שבאה מיד אחרי היא old, ולכן an.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: יש לי סירה ישנה. סדרו את כל המילים.",
+                  "translation": "יש לי סירה ישנה.",
+                  "englishWordsInOrder": [
+                    "I",
+                    "have",
+                    "an",
+                    "old",
+                    "boat"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "a",
+                    "the",
+                    "big"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "articles_a_an_homework_q01_owl_in_a_tree",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "I",
+                  "see",
+                  "an",
+                  "owl",
+                  "in",
+                  "a",
+                  "tree"
+                ],
+                "target": "I see an owl in a tree",
+                "variant": "word_slicing",
+                "success": "נכון. an לפני owl, ו־a לפני tree.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: אני רואה ינשוף על עץ.",
+                  "segmentation": "Words",
+                  "targetText": "I see an owl in a tree",
+                  "preFilledIndices": [
+                    0,
+                    1
+                  ],
+                  "distractors": [
+                    "the",
+                    "two",
+                    "egg"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "articles_a_an_homework_q01_a_big_apple",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "This",
+                  "is",
+                  "a",
+                  "big",
+                  "apple"
+                ],
+                "target": "This is a big apple.",
+                "variant": "sentence_building",
+                "success": "נכון. המילה שבאה מיד אחרי היא big, ולכן a.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: זה תפוח גדול. סדרו את כל המילים.",
+                  "translation": "זה תפוח גדול.",
+                  "englishWordsInOrder": [
+                    "This",
+                    "is",
+                    "a",
+                    "big",
+                    "apple"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "an",
+                    "the",
+                    "small"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "articles_a_an_homework_q01_say_i_want_an_egg",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "I",
+                  "want",
+                  "an",
+                  "egg"
+                ],
+                "target": "I want an egg.",
+                "variant": "short_phrase",
+                "success": "הרשת גמורה ומוכנה למלכת הים.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אני רוצה ביצה.",
+                  "targetWords": [],
+                  "targetPhrase": "I want an egg.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "blacksmith_will",
       "folder": "blacksmith_will",
       "displayName": "ויל הנפח — ה־Slash הראשון",
@@ -7717,6 +8922,344 @@
               "type": "return_to_npc",
               "npc_id": "Blacksmith",
               "dialogue_id": "will_first_slash_done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "do_does_homework",
+      "folder": "do_does_homework",
+      "displayName": "The DO / DOES Secret - שיעורי בית",
+      "theme": "Homework for the DO / DOES Secret line: no new rule. The four speaking stones work again and tomorrow is market day, so Tomlin, the gate guard whose stone was the last one saved, checks that the learner can stand at the gate as a guard for a day: choosing do or does alone in questions and in not sentences, with no -s on the verb after does.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "Main Gate Gaurd 1",
+      "npc": {
+        "id": "Main Gate Gaurd 1",
+        "name": "טומלין המפהק",
+        "title": "שומר שער",
+        "location": "שער הממלכה",
+        "description": "שומר ישנוני שבכל זאת מבחין בצרות.",
+        "image": "images/npcs/Main Gate Gaurd 1.png"
+      },
+      "quests": [
+        {
+          "id": "do_does_homework__q01_guard_for_a_day",
+          "name": "Guard for a Day",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "מחר יום שוק, והשומרים רוצים שתעמדו איתם בשער. הראו לשומר טומלין Tomlin לבד שאתם זוכרים מתי אומרים do ומתי does.",
+          "giver_npc": "Main Gate Gaurd 1",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "do_does_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 4300,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 775
+              },
+              {
+                "id": "quest_loot_mid_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Main Gate Gaurd 1",
+              "dialogue_id": "do_does_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "do_does_homework_q01_mine_does_words",
+              "display_text": "אספו רק את המילים שהולכות עם does.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את המילים שהולכות עם does.",
+                "tasks": [
+                  "he",
+                  "she",
+                  "it",
+                  "my sister",
+                  "the dog",
+                  "the king"
+                ],
+                "target": "he, she, it, my sister, the dog, the king",
+                "variant": "word_category",
+                "success": "נכון. אחות היא she, כלב הוא it ומלך הוא he, ולכן does.",
+                "params": {
+                  "prompt": "אספו רק את המילים שהולכות עם does.",
+                  "categoryLabel": "does",
+                  "targetWords": [
+                    "he",
+                    "she",
+                    "it",
+                    "my sister",
+                    "the dog",
+                    "the king"
+                  ],
+                  "distractorWords": [
+                    "I",
+                    "you",
+                    "we",
+                    "they",
+                    "my friends",
+                    "the boys"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "do_does_homework_q01_match_do_or_does",
+              "display_text": "חברו כל משפט ל־do או ל־does.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "חברו כל משפט ל־do או ל־does.",
+                "tasks": [
+                  "___ IT WORK",
+                  "___ THEY PLAY",
+                  "WE ___ NOT AGREE",
+                  "MY SISTER ___ NOT PLAY"
+                ],
+                "target": "does it work, do they play, we do not agree, my sister does not play",
+                "variant": "missing_letter_matching",
+                "success": "נכון. it ו־my sister הולכים עם does, they ו־we הולכים עם do.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "dd_hw_tile_1",
+                      "value": "do"
+                    },
+                    {
+                      "id": "dd_hw_tile_2",
+                      "value": "do"
+                    },
+                    {
+                      "id": "dd_hw_tile_3",
+                      "value": "does"
+                    },
+                    {
+                      "id": "dd_hw_tile_4",
+                      "value": "does"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "dd_hw_task_it_work",
+                      "image": "",
+                      "fullWord": "does it work",
+                      "missingIndices": [
+                        0,
+                        1,
+                        2,
+                        3
+                      ]
+                    },
+                    {
+                      "id": "dd_hw_task_they_play",
+                      "image": "",
+                      "fullWord": "do they play",
+                      "missingIndices": [
+                        0,
+                        1
+                      ]
+                    },
+                    {
+                      "id": "dd_hw_task_we_agree",
+                      "image": "",
+                      "fullWord": "we do not agree",
+                      "missingIndices": [
+                        3,
+                        4
+                      ]
+                    },
+                    {
+                      "id": "dd_hw_task_sister_play",
+                      "image": "",
+                      "fullWord": "my sister does not play",
+                      "missingIndices": [
+                        10,
+                        11,
+                        12,
+                        13
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "do_does_homework_q01_when_does_the_market_start",
+              "display_text": "בנו את השאלה באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את השאלה באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "When",
+                  "does",
+                  "the",
+                  "market",
+                  "start"
+                ],
+                "target": "When does the market start?",
+                "variant": "sentence_building",
+                "success": "נכון. השוק הוא it, ולכן does.",
+                "params": {
+                  "prompt": "בנו את השאלה באנגלית לפי התרגום המלא בעברית: מתי השוק מתחיל? סדרו את כל המילים.",
+                  "translation": "מתי השוק מתחיל?",
+                  "englishWordsInOrder": [
+                    "When",
+                    "does",
+                    "the",
+                    "market",
+                    "start"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "do",
+                    "is",
+                    "starts"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "do_does_homework_q01_we_do_not_give_up",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "We",
+                  "do",
+                  "not",
+                  "give",
+                  "up"
+                ],
+                "target": "We do not give up",
+                "variant": "word_slicing",
+                "success": "נכון. עם we אומרים do not, וכך אומר כל שומר בשער.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: אנחנו לא מוותרים.",
+                  "segmentation": "Words",
+                  "targetText": "We do not give up",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "does",
+                    "are",
+                    "gives"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "do_does_homework_q01_she_does_not_know_the_answer",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "She",
+                  "does",
+                  "not",
+                  "know",
+                  "the",
+                  "answer"
+                ],
+                "target": "She does not know the answer.",
+                "variant": "sentence_building",
+                "success": "נכון. אחרי does הפועל נשאר know, בלי s.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: היא לא יודעת את התשובה. סדרו את כל המילים.",
+                  "translation": "היא לא יודעת את התשובה.",
+                  "englishWordsInOrder": [
+                    "She",
+                    "does",
+                    "not",
+                    "know",
+                    "the",
+                    "answer"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "do",
+                    "knows",
+                    "is"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest5_Silver_Fountain_Court",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "do_does_homework_q01_say_do_your_friends_speak_english",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "Do",
+                  "your",
+                  "friends",
+                  "speak",
+                  "English"
+                ],
+                "target": "Do your friends speak English?",
+                "variant": "short_phrase",
+                "success": "עם שאלה כזאת אתם מוכנים ליום השוק מחר.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: האם החברים שלך מדברים אנגלית?",
+                  "targetWords": [
+                    "Do",
+                    "your",
+                    "friends",
+                    "speak",
+                    "English"
+                  ],
+                  "targetPhrase": "Do your friends speak English?",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
             }
           ]
         }
@@ -14789,6 +16332,333 @@
       ]
     },
     {
+      "id": "noun_repair_shop_homework",
+      "folder": "noun_repair_shop_homework",
+      "displayName": "Noun Repair Shop: The Missing Names - שיעורי בית",
+      "theme": "Homework for the Noun Repair Shop line: no new words. Since the shop reopened, broken name tags keep arriving from all over the kingdom, and Maya asks the learner to fix today's box alone - telling nouns from other words, completing and spelling them, and using them in short sentences.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "teacher_maya",
+      "npc": {
+        "id": "teacher_maya",
+        "name": "המורה מאיה",
+        "title": "מורת אנגלית",
+        "location": "כיכר האלף-בית",
+        "description": "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים.",
+        "image": "images/npcs/teacher_maya.png"
+      },
+      "quests": [
+        {
+          "id": "noun_repair_shop_homework__q01_the_box_of_broken_tags",
+          "name": "The Box of Broken Tags",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "לחנות של מאיה הגיעה קופסה מלאה בתוויות שבורות. תקנו אותן לבד והראו לה שאתם זוכרים את שמות העצם.",
+          "giver_npc": "teacher_maya",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "noun_repair_shop_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 400,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 70
+              },
+              {
+                "id": "quest_loot_early_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "noun_repair_shop_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "noun_repair_shop_homework_q01_mine_the_nouns",
+              "display_text": "אספו רק את המילים שהן שמות עצם.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את המילים שהן שמות עצם.",
+                "tasks": [
+                  "farmer",
+                  "guard",
+                  "market",
+                  "park",
+                  "rabbit",
+                  "apples"
+                ],
+                "target": "farmer, guard, market, park, rabbit, apples",
+                "variant": "word_category",
+                "success": "נכון. אדם, חיה, מקום ודבר הם שמות עצם, אבל red ו־sits לא.",
+                "params": {
+                  "prompt": "אספו רק את המילים שהן שמות עצם.",
+                  "categoryLabel": "Nouns",
+                  "targetWords": [
+                    "farmer",
+                    "guard",
+                    "market",
+                    "park",
+                    "rabbit",
+                    "apples"
+                  ],
+                  "distractorWords": [
+                    "sits",
+                    "sees",
+                    "has",
+                    "red",
+                    "fresh",
+                    "big"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "noun_repair_shop_homework_q01_fix_missing_letters",
+              "display_text": "השלימו את האות החסרה בכל שם עצם.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל שם עצם.",
+                "tasks": [
+                  "CAS_LE",
+                  "_NIGHT",
+                  "BR_AD",
+                  "DRAGO_"
+                ],
+                "target": "castle, knight, bread, dragon",
+                "variant": "missing_letter_matching",
+                "success": "נכון. ב־castle וב־knight יש אות שלא שומעים, אבל כותבים אותה.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "nrs_hw_tile_1",
+                      "value": "k"
+                    },
+                    {
+                      "id": "nrs_hw_tile_2",
+                      "value": "e"
+                    },
+                    {
+                      "id": "nrs_hw_tile_3",
+                      "value": "n"
+                    },
+                    {
+                      "id": "nrs_hw_tile_4",
+                      "value": "s"
+                    },
+                    {
+                      "id": "nrs_hw_tile_5",
+                      "value": "a"
+                    },
+                    {
+                      "id": "nrs_hw_tile_6",
+                      "value": "t"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "nrs_hw_task_castle",
+                      "image": "",
+                      "fullWord": "castle",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "nrs_hw_task_knight",
+                      "image": "",
+                      "fullWord": "knight",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "nrs_hw_task_bread",
+                      "image": "",
+                      "fullWord": "bread",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "nrs_hw_task_dragon",
+                      "image": "",
+                      "fullWord": "dragon",
+                      "missingIndices": [
+                        5
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "noun_repair_shop_homework_q01_spell_chair",
+              "display_text": "כתבו באנגלית את המילה שפירושה כיסא.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שפירושה כיסא.",
+                "tasks": [
+                  "c",
+                  "h",
+                  "a",
+                  "i",
+                  "r"
+                ],
+                "target": "chair",
+                "variant": "word_spelling",
+                "success": "נכון. גם התווית של הכיסא שלמה שוב.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שפירושה כיסא.",
+                  "targetWord": "chair",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "noun_repair_shop_homework_q01_the_baker_holds_a_cake",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "The",
+                  "baker",
+                  "holds",
+                  "a",
+                  "cake"
+                ],
+                "target": "The baker holds a cake.",
+                "variant": "sentence_building",
+                "success": "נכון. אופה הוא baker, ושף הוא chef.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: האופה מחזיק עוגה. סדרו את כל המילים.",
+                  "translation": "האופה מחזיק עוגה.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "baker",
+                    "holds",
+                    "a",
+                    "cake"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "chef",
+                    "bread",
+                    "sees"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "noun_repair_shop_homework_q01_the_queen_has_a_crown",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "The",
+                  "queen",
+                  "has",
+                  "a",
+                  "crown"
+                ],
+                "target": "The queen has a crown",
+                "variant": "word_slicing",
+                "success": "נכון. מלכה היא queen, ומלך הוא king.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: למלכה יש כתר.",
+                  "segmentation": "Words",
+                  "targetText": "The queen has a crown",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "king",
+                    "throne",
+                    "sits"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "noun_repair_shop_homework_q01_say_a_bird_is_on_the_tower",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "A",
+                  "bird",
+                  "is",
+                  "on",
+                  "the",
+                  "tower"
+                ],
+                "target": "A bird is on the tower.",
+                "variant": "short_phrase",
+                "success": "התווית האחרונה מוכנה, והקופסה ריקה.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש ציפור על המגדל.",
+                  "targetWords": [
+                    "A",
+                    "bird",
+                    "is",
+                    "on",
+                    "the",
+                    "tower"
+                  ],
+                  "targetPhrase": "A bird is on the tower.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "nouns_festival",
       "folder": "nouns_festival",
       "displayName": "The Nouns Festival Homework",
@@ -18392,6 +20262,283 @@
       ]
     },
     {
+      "id": "personal_pronouns_homework",
+      "folder": "personal_pronouns_homework",
+      "displayName": "Personal Pronouns - שיעורי בית",
+      "theme": "Homework for the Personal Pronouns line: no new words. Before the next village show, the Village Head checks that the learner still uses I, You, He, She, It, We and They without help.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "Village Head",
+      "npc": {
+        "id": "Village Head",
+        "name": "ראש הכפר",
+        "title": "ראש כפר",
+        "location": "פארק ורד הפיות",
+        "description": "ראש כפר ידידותי שמארגן משימות מקומיות.",
+        "image": "images/npcs/Village Head.png"
+      },
+      "quests": [
+        {
+          "id": "personal_pronouns_homework__q01_rehearsal_for_the_next_show",
+          "name": "Rehearsal for the Next Show",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "כל הכפר מבקש הצגה נוספת. לפני החזרות, הראו לראש הכפר שאתם זוכרים לבד את כל כינויי הגוף.",
+          "giver_npc": "Village Head",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "personal_pronouns_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 675,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 120
+              },
+              {
+                "id": "quest_loot_early_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "personal_pronouns_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "personal_pronouns_homework_q01_mine_it_words",
+              "display_text": "אספו רק את מה שאפשר לקרוא לו It.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את מה שאפשר לקרוא לו It.",
+                "tasks": [
+                  "hat",
+                  "crown",
+                  "dog",
+                  "ball",
+                  "cat",
+                  "tree"
+                ],
+                "target": "hat, crown, dog, ball, cat, tree",
+                "variant": "word_category",
+                "success": "נכון. It בא במקום חפץ או בעל חיים, אף פעם לא במקום אדם.",
+                "params": {
+                  "prompt": "אספו רק את מה שאפשר לקרוא לו It.",
+                  "categoryLabel": "It",
+                  "targetWords": [
+                    "hat",
+                    "crown",
+                    "dog",
+                    "ball",
+                    "cat",
+                    "tree"
+                  ],
+                  "distractorWords": [
+                    "king",
+                    "girl",
+                    "teacher",
+                    "mother",
+                    "boy",
+                    "singer"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "personal_pronouns_homework_q01_she_is_my_sister",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "She",
+                  "is",
+                  "my",
+                  "sister"
+                ],
+                "target": "She is my sister.",
+                "variant": "sentence_building",
+                "success": "נכון. אחות היא בת, ולכן She.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: היא אחותי. סדרו את כל המילים.",
+                  "translation": "היא אחותי.",
+                  "englishWordsInOrder": [
+                    "She",
+                    "is",
+                    "my",
+                    "sister"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "He",
+                    "They",
+                    "are",
+                    "brother"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "personal_pronouns_homework_q01_spell_they",
+              "display_text": "כתבו באנגלית את המילה שפירושה הם או הן.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "כתבו באנגלית את המילה שפירושה הם או הן.",
+                "tasks": [
+                  "t",
+                  "h",
+                  "e",
+                  "y"
+                ],
+                "target": "they",
+                "variant": "word_spelling",
+                "success": "נכון. במילה הזאת מדברים על כמה אנשים אחרים.",
+                "params": {
+                  "prompt": "כתבו באנגלית את המילה שפירושה הם או הן.",
+                  "targetWord": "they",
+                  "extraDistractorCount": 2,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "personal_pronouns_homework_q01_they_are_in_the_park",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "They",
+                  "are",
+                  "in",
+                  "the",
+                  "park"
+                ],
+                "target": "They are in the park.",
+                "variant": "sentence_building",
+                "success": "נכון. כמה אנשים אחרים, ולכן They.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: הם בפארק. סדרו את כל המילים.",
+                  "translation": "הם בפארק.",
+                  "englishWordsInOrder": [
+                    "They",
+                    "are",
+                    "in",
+                    "the",
+                    "park"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "We",
+                    "He",
+                    "is"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "personal_pronouns_homework_q01_it_is_a_big_dog",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "It",
+                  "is",
+                  "a",
+                  "big",
+                  "dog"
+                ],
+                "target": "It is a big dog",
+                "variant": "word_slicing",
+                "success": "נכון. כלב הוא בעל חיים, ולכן It.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: זה כלב גדול.",
+                  "segmentation": "Words",
+                  "targetText": "It is a big dog",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "He",
+                    "She",
+                    "are"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "personal_pronouns_homework_q01_say_we_are_good_friends",
+              "display_text": "אמרו בקול את המשפט המלא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו בקול את המשפט המלא באנגלית.",
+                "tasks": [
+                  "We",
+                  "are",
+                  "good",
+                  "friends"
+                ],
+                "target": "We are good friends.",
+                "variant": "short_phrase",
+                "success": "ראש הכפר מוחא כפיים. הלהקה מוכנה להצגה הבאה.",
+                "params": {
+                  "prompt": "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: אנחנו חברים טובים.",
+                  "targetWords": [
+                    "We",
+                    "are",
+                    "good",
+                    "friends"
+                  ],
+                  "targetPhrase": "We are good friends.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "the_kingdoms_worst_day",
       "folder": "the_kingdoms_worst_day",
       "displayName": "The Kingdom’s Worst Day - שיעור תרגול verbs nouns adjectivs",
@@ -19340,6 +21487,348 @@
               "type": "return_to_npc",
               "npc_id": "teacher_maya",
               "dialogue_id": "the_kingdoms_worst_day_q04_maya_done"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the_kingdoms_worst_day_homework",
+      "folder": "the_kingdoms_worst_day_homework",
+      "displayName": "The Kingdom's Worst Day - שיעורי בית",
+      "theme": "Homework for The Kingdom's Worst Day line: no new words. On the evening after the fair, the wind mixes up the word cards on the fair's board by the gate. Fenn the guard asks the learner to pick out the verbs, put nouns, verbs and adjectives in their places, and rebuild short sentences alone before the gate closes for the night.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "City Gaurd Info",
+      "npc": {
+        "id": "City Gaurd Info",
+        "name": "פן הפטפטן",
+        "title": "שומר עיר",
+        "location": "שער הממלכה",
+        "description": "שומר דברן שמכיר כל שמועה בעיר.",
+        "image": "images/npcs/City Gaurd Info.png"
+      },
+      "quests": [
+        {
+          "id": "the_kingdoms_worst_day_homework__q01_fenns_windy_evening",
+          "name": "Fenn's Windy Evening",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "רוח הערב ערבבה את כרטיסי המילים בלוח של היריד. הראו לשומר פן שאתם זוכרים לבד שמות, פעולות ותיאורים, וסדרו את הלוח לפני שהשער נסגר.",
+          "giver_npc": "City Gaurd Info",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_kingdoms_worst_day_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 550,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 100
+              },
+              {
+                "id": "quest_loot_early_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "City Gaurd Info",
+              "dialogue_id": "the_kingdoms_worst_day_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day_homework_q01_mine_verbs",
+              "display_text": "אספו רק את מילות הפעולה.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את מילות הפעולה.",
+                "tasks": [
+                  "fix",
+                  "open",
+                  "carry",
+                  "close",
+                  "help",
+                  "make"
+                ],
+                "target": "fix, open, carry, close, help, make",
+                "variant": "word_category",
+                "success": "נכון. כל המילים שאספתם מספרות מה עושים, וכרטיסי הפעולה חזרו למקום.",
+                "params": {
+                  "prompt": "אספו רק את מילות הפעולה.",
+                  "categoryLabel": "Verbs",
+                  "targetWords": [
+                    "fix",
+                    "open",
+                    "carry",
+                    "close",
+                    "help",
+                    "make"
+                  ],
+                  "distractorWords": [
+                    "key",
+                    "gate",
+                    "tool",
+                    "big",
+                    "dark",
+                    "bright"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day_homework_q01_match_word_places",
+              "display_text": "חברו כל מילה למקום החסר שמתאים לה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "חברו כל מילה למקום החסר שמתאים לה.",
+                "tasks": [
+                  "I ___ THE BOOK",
+                  "THE ___ TREE",
+                  "THE BIG ___",
+                  "THE GATE ___ DARK"
+                ],
+                "target": "I close the book, the small tree, the big tool, the gate is dark",
+                "variant": "missing_letter_matching",
+                "success": "נכון. כל מילה נכנסה למקום שמתאים לסוג שלה, וארבע שורות קצרות חזרו ללוח.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "kwd_hw_tile_1",
+                      "value": "is"
+                    },
+                    {
+                      "id": "kwd_hw_tile_2",
+                      "value": "tool"
+                    },
+                    {
+                      "id": "kwd_hw_tile_3",
+                      "value": "close"
+                    },
+                    {
+                      "id": "kwd_hw_tile_4",
+                      "value": "small"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "kwd_hw_task_close_book",
+                      "image": "",
+                      "fullWord": "I close the book",
+                      "missingIndices": [
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                      ]
+                    },
+                    {
+                      "id": "kwd_hw_task_small_tree",
+                      "image": "",
+                      "fullWord": "the small tree",
+                      "missingIndices": [
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                      ]
+                    },
+                    {
+                      "id": "kwd_hw_task_big_tool",
+                      "image": "",
+                      "fullWord": "the big tool",
+                      "missingIndices": [
+                        8,
+                        9,
+                        10,
+                        11
+                      ]
+                    },
+                    {
+                      "id": "kwd_hw_task_gate_is_dark",
+                      "image": "",
+                      "fullWord": "the gate is dark",
+                      "missingIndices": [
+                        9,
+                        10
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day_homework_q01_the_crown_is_small",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "The",
+                  "crown",
+                  "is",
+                  "small"
+                ],
+                "target": "The crown is small.",
+                "variant": "sentence_building",
+                "success": "נכון. המילה small מתארת את הכתר ובאה אחרי is, והשורה חזרה ללוח.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: הכתר קטן. סדרו את כל המילים.",
+                  "translation": "הכתר קטן.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "crown",
+                    "is",
+                    "small"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "big",
+                    "dark",
+                    "book"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day_homework_q01_open_the_big_book",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "Open",
+                  "the",
+                  "big",
+                  "book"
+                ],
+                "target": "Open the big book",
+                "variant": "word_slicing",
+                "success": "נכון. big בא לפני book, והשורה על הספר הגדול חזרה ללוח.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: פתחו את הספר הגדול.",
+                  "segmentation": "Words",
+                  "targetText": "Open the big book",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "Close",
+                    "small",
+                    "gate"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day_homework_q01_small_key_big_gate",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את המילים החסרות.",
+                "tasks": [
+                  "The",
+                  "small",
+                  "key",
+                  "opens",
+                  "the",
+                  "big",
+                  "gate"
+                ],
+                "target": "The small key opens the big gate.",
+                "variant": "sentence_building",
+                "success": "נכון. כל מילת תיאור באה לפני שם העצם שלה, ועכשיו השומרים יודעים איזה מפתח לקחת בבוקר.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: המפתח הקטן פותח את השער הגדול. סדרו את המילים החסרות.",
+                  "translation": "המפתח הקטן פותח את השער הגדול.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "small",
+                    "key",
+                    "opens",
+                    "the",
+                    "big",
+                    "gate"
+                  ],
+                  "preFilledIndices": [
+                    0,
+                    4
+                  ],
+                  "distractorWords": [
+                    "dark",
+                    "closes",
+                    "book"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "the_kingdoms_worst_day_homework_q01_say_close_the_big_gate",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "Close",
+                  "the",
+                  "big",
+                  "gate"
+                ],
+                "target": "Close the big gate.",
+                "variant": "short_phrase",
+                "success": "השומרים סוגרים את השער הגדול, והממלכה הולכת לישון בשקט.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: סגרו את השער הגדול.",
+                  "targetWords": [
+                    "Close",
+                    "the",
+                    "big",
+                    "gate"
+                  ],
+                  "targetPhrase": "Close the big gate.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
             }
           ]
         }
@@ -20612,6 +23101,936 @@
       ]
     },
     {
+      "id": "the_royal_impostor_homework",
+      "folder": "the_royal_impostor_homework",
+      "displayName": "The Lost & Found Cart - שיעורי בית",
+      "theme": "Homework for The Lost & Found Cart line: no new words. New forgotten things fill the cart again, and while Fenn guards the gate the learner writes the new owner list alone, then helps Will, the Painter and the two gate guards find their things with my, your, his, her, our and their.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "City Gaurd Info",
+      "npc": {
+        "id": "City Gaurd Info",
+        "name": "פן הפטפטן",
+        "title": "שומר עיר",
+        "location": "שער הממלכה",
+        "description": "שומר דברן שמכיר כל שמועה בעיר.",
+        "image": "images/npcs/City Gaurd Info.png"
+      },
+      "quests": [
+        {
+          "id": "the_royal_impostor_homework__q01_a_new_list_for_the_cart",
+          "name": "A New List for the Cart",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "עגלת האבדות שוב מלאה בדברים שנשכחו. הראו לפן שאתם יודעים לבד למי שייך כל דבר.",
+          "giver_npc": "City Gaurd Info",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_royal_impostor_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 1150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 205
+              },
+              {
+                "id": "quest_loot_early_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "City Gaurd Info",
+              "dialogue_id": "the_royal_impostor_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "the_royal_impostor_homework_q01_mine_owner_words",
+              "display_text": "אספו רק את המילים שאומרות של מי הדבר.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את המילים שאפשר לשים לפני map כדי להגיד של מי המפה.",
+                "tasks": [
+                  "my",
+                  "your",
+                  "his",
+                  "her",
+                  "our",
+                  "their"
+                ],
+                "target": "my, your, his, her, our, their",
+                "variant": "word_category",
+                "success": "נכון. רק המילים האלה אומרות של מי הדבר, והן מוכנות לרשימה.",
+                "params": {
+                  "prompt": "אספו רק את המילים שאפשר לשים לפני map כדי להגיד של מי המפה.",
+                  "categoryLabel": "___ map",
+                  "targetWords": [
+                    "my",
+                    "your",
+                    "his",
+                    "her",
+                    "our",
+                    "their"
+                  ],
+                  "distractorWords": [
+                    "I",
+                    "you",
+                    "he",
+                    "she",
+                    "we",
+                    "they"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "the_royal_impostor_homework_q01_complete_owner_words",
+              "display_text": "השלימו את האות החסרה בכל מילה שאומרת של מי הדבר.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילה שאומרת של מי הדבר.",
+                "tasks": [
+                  "YO_R",
+                  "_UR",
+                  "THE_R",
+                  "HE_"
+                ],
+                "target": "your, our, their, her",
+                "variant": "missing_letter_matching",
+                "success": "יפה. עכשיו כל מילה כתובה נכון, ואפשר להתחיל את הרשימה.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "poss_hw_tile_1",
+                      "value": "e"
+                    },
+                    {
+                      "id": "poss_hw_tile_2",
+                      "value": "i"
+                    },
+                    {
+                      "id": "poss_hw_tile_3",
+                      "value": "u"
+                    },
+                    {
+                      "id": "poss_hw_tile_4",
+                      "value": "o"
+                    },
+                    {
+                      "id": "poss_hw_tile_5",
+                      "value": "a"
+                    },
+                    {
+                      "id": "poss_hw_tile_6",
+                      "value": "r"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "poss_hw_task_your",
+                      "image": "",
+                      "fullWord": "your",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "poss_hw_task_our",
+                      "image": "",
+                      "fullWord": "our",
+                      "missingIndices": [
+                        0
+                      ]
+                    },
+                    {
+                      "id": "poss_hw_task_their",
+                      "image": "",
+                      "fullWord": "their",
+                      "missingIndices": [
+                        3
+                      ]
+                    },
+                    {
+                      "id": "poss_hw_task_her",
+                      "image": "",
+                      "fullWord": "her",
+                      "missingIndices": [
+                        2
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "the_royal_impostor_homework_q01_these_are_her_sandwiches",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "These",
+                  "are",
+                  "her",
+                  "sandwiches"
+                ],
+                "target": "These are her sandwiches.",
+                "variant": "sentence_building",
+                "success": "נכון. הכריכים שייכים רק לציירת, ולכן her, גם כשיש הרבה כריכים.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: אלה הכריכים שלה. סדרו את כל המילים.",
+                  "translation": "אלה הכריכים שלה.",
+                  "englishWordsInOrder": [
+                    "These",
+                    "are",
+                    "her",
+                    "sandwiches"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "their",
+                    "our",
+                    "his"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "the_royal_impostor_homework_q01_their_map_his_lunch",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "Their",
+                  "map",
+                  "is",
+                  "next",
+                  "to",
+                  "his",
+                  "lunch"
+                ],
+                "target": "Their map is next to his lunch",
+                "variant": "word_slicing",
+                "success": "נכון. המפה של טומלין וגאריק, ולכן their, וארוחת הצהריים של ויל, ולכן his.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: המפה שלהם נמצאת ליד ארוחת הצהריים שלו.",
+                  "segmentation": "Words",
+                  "targetText": "Their map is next to his lunch",
+                  "preFilledIndices": [
+                    3,
+                    4
+                  ],
+                  "distractors": [
+                    "Our",
+                    "her",
+                    "my"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "the_royal_impostor_homework_q01_your_lunch_our_map",
+              "display_text": "בנו באנגלית את מה שהשומרים אומרים לוויל.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו באנגלית את מה שהשומרים אומרים לוויל, לפי התרגום המלא בעברית.",
+                "tasks": [
+                  "Your",
+                  "lunch",
+                  "is",
+                  "next",
+                  "to",
+                  "our",
+                  "map"
+                ],
+                "target": "Your lunch is next to our map.",
+                "variant": "sentence_building",
+                "success": "נכון. השומרים מדברים אל ויל, ולכן your, ועל המפה של עצמם, ולכן our.",
+                "params": {
+                  "prompt": "השומרים אומרים לוויל: ארוחת הצהריים שלך נמצאת ליד המפה שלנו. בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+                  "translation": "ארוחת הצהריים שלך נמצאת ליד המפה שלנו.",
+                  "englishWordsInOrder": [
+                    "Your",
+                    "lunch",
+                    "is",
+                    "next",
+                    "to",
+                    "our",
+                    "map"
+                  ],
+                  "preFilledIndices": [
+                    3,
+                    4
+                  ],
+                  "distractorWords": [
+                    "His",
+                    "their",
+                    "my"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Wooden_Cart1_Inside_Gate",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "the_royal_impostor_homework_q01_say_these_are_your_sandwiches",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "These",
+                  "are",
+                  "your",
+                  "sandwiches"
+                ],
+                "target": "These are your sandwiches.",
+                "variant": "short_phrase",
+                "success": "הציירת לוקחת את הכריכים שלה, ובעגלה לא נשאר אף דבר.",
+                "params": {
+                  "prompt": "הציירת מגיעה לעגלה. אמרו לה את המשפט הבא באנגלית בקול. משמעותו בעברית: אלה הכריכים שלך.",
+                  "targetWords": [
+                    "These",
+                    "are",
+                    "your",
+                    "sandwiches"
+                  ],
+                  "targetPhrase": "These are your sandwiches.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the_these_those_homework",
+      "folder": "the_these_those_homework",
+      "displayName": "The, These & Those - שיעורי בית",
+      "theme": "Homework for the The, These & Those line: no new rule. The Village Head comes to see the farm tomorrow, and the Farmer checks that the learner still chooses the, these (near) and those (far) without help.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "Farmer",
+      "npc": {
+        "id": "Farmer",
+        "name": "חקלאי",
+        "title": "חקלאי",
+        "location": "פארק ורד הפיות",
+        "description": "חקלאי פשוט שצריך עזרה עם חיות ושדות.",
+        "image": "images/npcs/Farmer.png"
+      },
+      "quests": [
+        {
+          "id": "the_these_those_homework__q01_near_and_far_on_the_farm",
+          "name": "Near and Far on the Farm",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "ראש הכפר בא מחר לראות את החווה. הראו לחקלאי לבד שאתם זוכרים מתי אומרים The, מתי These ומתי Those.",
+          "giver_npc": "Farmer",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_these_those_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 2000,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 360
+              },
+              {
+                "id": "quest_loot_mid_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Farmer",
+              "dialogue_id": "the_these_those_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "the_these_those_homework_q01_mine_more_than_one",
+              "display_text": "אספו רק מילים שיכולות לבוא אחרי these או those.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק מילים שיכולות לבוא אחרי these או those.",
+                "tasks": [
+                  "pigs",
+                  "boots",
+                  "trees",
+                  "kids",
+                  "clouds",
+                  "knights"
+                ],
+                "target": "pigs, boots, trees, kids, clouds, knights",
+                "variant": "word_category",
+                "success": "נכון. אחרי these ו־those תמיד באים כמה דברים, לא דבר אחד.",
+                "params": {
+                  "prompt": "אספו רק מילים שיכולות לבוא אחרי these או those.",
+                  "categoryLabel": "these / those",
+                  "targetWords": [
+                    "pigs",
+                    "boots",
+                    "trees",
+                    "kids",
+                    "clouds",
+                    "knights"
+                  ],
+                  "distractorWords": [
+                    "dog",
+                    "axe",
+                    "hat",
+                    "boy",
+                    "bag",
+                    "is"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "the_these_those_homework_q01_these_pigs_are_dirty",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "These",
+                  "pigs",
+                  "are",
+                  "dirty"
+                ],
+                "target": "These pigs are dirty.",
+                "variant": "sentence_building",
+                "success": "נכון. החזירים קרובים אלינו, ולכן These.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: החזירים האלה מלוכלכים. סדרו את כל המילים.",
+                  "translation": "החזירים האלה מלוכלכים.",
+                  "englishWordsInOrder": [
+                    "These",
+                    "pigs",
+                    "are",
+                    "dirty"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "Those",
+                    "The",
+                    "is"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "the_these_those_homework_q01_those_trees_are_tall",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "Those",
+                  "trees",
+                  "are",
+                  "tall"
+                ],
+                "target": "Those trees are tall.",
+                "variant": "sentence_building",
+                "success": "נכון. העצים רחוקים, מעבר לנהר, ולכן Those.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: העצים ההם גבוהים. סדרו את כל המילים.",
+                  "translation": "העצים ההם גבוהים.",
+                  "englishWordsInOrder": [
+                    "Those",
+                    "trees",
+                    "are",
+                    "tall"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "These",
+                    "is",
+                    "tree"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "the_these_those_homework_q01_the_dog_and_those_kids",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "The",
+                  "dog",
+                  "is",
+                  "next",
+                  "to",
+                  "those",
+                  "kids"
+                ],
+                "target": "The dog is next to those kids",
+                "variant": "word_slicing",
+                "success": "נכון. יש כלב אחד, ולכן The, והילדים רחוקים, ולכן those.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: הכלב ליד הילדים ההם.",
+                  "segmentation": "Words",
+                  "targetText": "The dog is next to those kids",
+                  "preFilledIndices": [
+                    3,
+                    4
+                  ],
+                  "distractors": [
+                    "these",
+                    "are",
+                    "kid"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "the_these_those_homework_q01_the_hat_in_my_bag",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "The",
+                  "hat",
+                  "is",
+                  "in",
+                  "my",
+                  "bag"
+                ],
+                "target": "The hat is in my bag.",
+                "variant": "sentence_building",
+                "success": "נכון. זה כובע אחד ומסוים, ולכן The.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: הכובע בתיק שלי. סדרו את כל המילים.",
+                  "translation": "הכובע בתיק שלי.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "hat",
+                    "is",
+                    "in",
+                    "my",
+                    "bag"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "These",
+                    "Those",
+                    "A"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Fire_Camp_Tower_Of_Lost_Vigil",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "the_these_those_homework_q01_say_these_boots_are_clean",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "These",
+                  "boots",
+                  "are",
+                  "clean"
+                ],
+                "target": "These boots are clean.",
+                "variant": "short_phrase",
+                "success": "המגפיים הנקיים מחכים לראש הכפר, והחווה מוכנה לביקור.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: המגפיים האלה נקיים.",
+                  "targetWords": [
+                    "These",
+                    "boots",
+                    "are",
+                    "clean"
+                  ],
+                  "targetPhrase": "These boots are clean.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "this_or_that_homework",
+      "folder": "this_or_that_homework",
+      "displayName": "This Or That? - שיעורי בית",
+      "theme": "Homework for the This Or That? line: no new words. Tomorrow guests who speak only English visit the town, and the new Knowledge Advisors show the Village Head, without help, that they still point correctly with this, that, these and those, and use plain the when nothing is pointed at.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "Village Head",
+      "npc": {
+        "id": "Village Head",
+        "name": "ראש הכפר",
+        "title": "ראש כפר",
+        "location": "פארק ורד הפיות",
+        "description": "ראש כפר ידידותי שמארגן משימות מקומיות.",
+        "image": "images/npcs/Village Head.png"
+      },
+      "quests": [
+        {
+          "id": "this_or_that_homework__q01_the_advisors_first_tour",
+          "name": "The Advisors' First Tour",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "מחר מגיעים לעיירה אורחים שמדברים רק אנגלית, ואתם תהיו המדריכים שלהם. הראו לראש הכפר לבד שאתם זוכרים מתי אומרים this, that, these, those ו־the.",
+          "giver_npc": "Village Head",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "this_or_that_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 2500,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 450
+              },
+              {
+                "id": "quest_loot_mid_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Village Head",
+              "dialogue_id": "this_or_that_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "this_or_that_homework_q01_mine_one_thing_words",
+              "display_text": "אספו רק מילים שיכולות לבוא אחרי this או that.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק מילים שיכולות לבוא אחרי this או that.",
+                "tasks": [
+                  "gate",
+                  "tower",
+                  "horse",
+                  "letter",
+                  "helmet",
+                  "table"
+                ],
+                "target": "gate, tower, horse, letter, helmet, table",
+                "variant": "word_category",
+                "success": "נכון. this ו־that מצביעים תמיד על דבר אחד.",
+                "params": {
+                  "prompt": "אספו רק מילים שיכולות לבוא אחרי this או that.",
+                  "categoryLabel": "this / that",
+                  "targetWords": [
+                    "gate",
+                    "tower",
+                    "horse",
+                    "letter",
+                    "helmet",
+                    "table"
+                  ],
+                  "distractorWords": [
+                    "gates",
+                    "horses",
+                    "knights",
+                    "potions",
+                    "books"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "this_or_that_homework_q01_that_tower_is_very_old",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "That",
+                  "tower",
+                  "is",
+                  "very",
+                  "old"
+                ],
+                "target": "That tower is very old.",
+                "variant": "sentence_building",
+                "success": "נכון. מגדל אחד והוא רחוק, ולכן That.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: המגדל ההוא ישן מאוד. סדרו את כל המילים.",
+                  "translation": "המגדל ההוא ישן מאוד.",
+                  "englishWordsInOrder": [
+                    "That",
+                    "tower",
+                    "is",
+                    "very",
+                    "old"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "This",
+                    "Those",
+                    "The"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "this_or_that_homework_q01_the_letter_on_this_table",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "The",
+                  "letter",
+                  "is",
+                  "on",
+                  "this",
+                  "table"
+                ],
+                "target": "The letter is on this table.",
+                "variant": "sentence_building",
+                "success": "נכון. על השולחן הקרוב מצביעים עם this, והמכתב מקבל רק The.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: המכתב על השולחן הזה. סדרו את כל המילים.",
+                  "translation": "המכתב על השולחן הזה.",
+                  "englishWordsInOrder": [
+                    "The",
+                    "letter",
+                    "is",
+                    "on",
+                    "this",
+                    "table"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "That",
+                    "these",
+                    "those"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "this_or_that_homework_q01_these_horses_are_strong",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "These",
+                  "horses",
+                  "are",
+                  "strong"
+                ],
+                "target": "These horses are strong",
+                "variant": "word_slicing",
+                "success": "נכון. הרבה סוסים ממש לידכם, ולכן These.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: הסוסים האלה חזקים.",
+                  "segmentation": "Words",
+                  "targetText": "These horses are strong",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "Those",
+                    "This",
+                    "The"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "this_or_that_homework_q01_those_gates_are_very_heavy",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "Those",
+                  "gates",
+                  "are",
+                  "very",
+                  "heavy"
+                ],
+                "target": "Those gates are very heavy.",
+                "variant": "sentence_building",
+                "success": "נכון. יש הרבה שערים והם רחוקים, ולכן Those ולא That.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: השערים ההם כבדים מאוד. סדרו את כל המילים.",
+                  "translation": "השערים ההם כבדים מאוד.",
+                  "englishWordsInOrder": [
+                    "Those",
+                    "gates",
+                    "are",
+                    "very",
+                    "heavy"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "That",
+                    "gate",
+                    "is",
+                    "These"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "this_or_that_homework_q01_say_this_letter_is_for_you",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "This",
+                  "letter",
+                  "is",
+                  "for",
+                  "you"
+                ],
+                "target": "This letter is for you.",
+                "variant": "short_phrase",
+                "success": "בדיוק כך תגידו מחר, כשתמסרו לאורחים את מכתב הברכה.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: המכתב הזה בשבילכם.",
+                  "targetWords": [
+                    "This",
+                    "letter",
+                    "is",
+                    "for",
+                    "you"
+                  ],
+                  "targetPhrase": "This letter is for you.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "verbs_to_be",
       "folder": "verbs_to_be",
       "displayName": "The Royal Speech Crystal",
@@ -21675,6 +25094,348 @@
               "dialogue_id": "verbs_to_be_q05_new_quest_step_07",
               "count": 1,
               "display_text": "Talk to Teacher Maya"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbs_to_be_homework",
+      "folder": "verbs_to_be_homework",
+      "displayName": "The Royal Speech Crystal - שיעורי בית",
+      "theme": "Homework for the Royal Speech Crystal line (the verb to be): no new rule. New kids arrive in the kingdom tomorrow and Teacher Maya will teach them herself, so the learner fills her board, without help, with sentences that use am, is and are correctly - after pronouns, after plural nouns and after a singular You.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "teacher_maya",
+      "npc": {
+        "id": "teacher_maya",
+        "name": "המורה מאיה",
+        "title": "מורת אנגלית",
+        "location": "כיכר האלף-בית",
+        "description": "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים.",
+        "image": "images/npcs/teacher_maya.png"
+      },
+      "quests": [
+        {
+          "id": "verbs_to_be_homework__q01_mayas_new_class",
+          "name": "Maya's New Class",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "מחר מגיעים לממלכה ילדים חדשים, והמורה מאיה תלמד אותם בעצמה. הראו לה לבד שאתם זוכרים מתי אומרים am, is ו־are.",
+          "giver_npc": "teacher_maya",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "verbs_to_be_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 900,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 160
+              },
+              {
+                "id": "quest_loot_early_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "verbs_to_be_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "verbs_to_be_homework_q01_mine_are_words",
+              "display_text": "אספו רק את המילים שהולכות עם are.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק את המילים שהולכות עם are.",
+                "tasks": [
+                  "we",
+                  "you",
+                  "they",
+                  "dragons",
+                  "villagers",
+                  "friends"
+                ],
+                "target": "we, you, they, dragons, villagers, friends",
+                "variant": "word_category",
+                "success": "נכון. We, You, They, וגם מילים ברבים כמו dragons, הולכים עם are.",
+                "params": {
+                  "prompt": "אספו רק את המילים שהולכות עם are.",
+                  "categoryLabel": "are",
+                  "targetWords": [
+                    "we",
+                    "you",
+                    "they",
+                    "dragons",
+                    "villagers",
+                    "friends"
+                  ],
+                  "distractorWords": [
+                    "I",
+                    "he",
+                    "she",
+                    "it",
+                    "dragon",
+                    "cat"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "verbs_to_be_homework_q01_match_am_is_are",
+              "display_text": "השלימו כל משפט עם am, is או are.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו כל משפט עם am, is או are.",
+                "tasks": [
+                  "YOU ___ STRONG",
+                  "I ___ HUNGRY",
+                  "THE CAT ___ HAPPY",
+                  "THE DRAGONS ___ BIG",
+                  "SHE ___ READY"
+                ],
+                "target": "You are strong, I am hungry, The cat is happy, The dragons are big, She is ready",
+                "variant": "missing_letter_matching",
+                "success": "חמישה משפטים נכונים כבר כתובים על הלוח.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "tb_hw_tile_1",
+                      "value": "am"
+                    },
+                    {
+                      "id": "tb_hw_tile_2",
+                      "value": "is"
+                    },
+                    {
+                      "id": "tb_hw_tile_3",
+                      "value": "are"
+                    },
+                    {
+                      "id": "tb_hw_tile_4",
+                      "value": "is"
+                    },
+                    {
+                      "id": "tb_hw_tile_5",
+                      "value": "are"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "tb_hw_task_you_strong",
+                      "image": "",
+                      "fullWord": "You are strong",
+                      "missingIndices": [
+                        4,
+                        5,
+                        6
+                      ]
+                    },
+                    {
+                      "id": "tb_hw_task_i_hungry",
+                      "image": "",
+                      "fullWord": "I am hungry",
+                      "missingIndices": [
+                        2,
+                        3
+                      ]
+                    },
+                    {
+                      "id": "tb_hw_task_cat_happy",
+                      "image": "",
+                      "fullWord": "The cat is happy",
+                      "missingIndices": [
+                        8,
+                        9
+                      ]
+                    },
+                    {
+                      "id": "tb_hw_task_dragons_big",
+                      "image": "",
+                      "fullWord": "The dragons are big",
+                      "missingIndices": [
+                        12,
+                        13,
+                        14
+                      ]
+                    },
+                    {
+                      "id": "tb_hw_task_she_ready",
+                      "image": "",
+                      "fullWord": "She is ready",
+                      "missingIndices": [
+                        4,
+                        5
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "verbs_to_be_homework_q01_my_friends_are_in_the_castle",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "My",
+                  "friends",
+                  "are",
+                  "in",
+                  "the",
+                  "castle"
+                ],
+                "target": "My friends are in the castle.",
+                "variant": "sentence_building",
+                "success": "נכון. כמה חברים, ולכן are.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: החברים שלי בטירה. סדרו את כל המילים.",
+                  "translation": "החברים שלי בטירה.",
+                  "englishWordsInOrder": [
+                    "My",
+                    "friends",
+                    "are",
+                    "in",
+                    "the",
+                    "castle"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "is",
+                    "am",
+                    "friend"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "verbs_to_be_homework_q01_the_dragon_is_hungry",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.",
+                "tasks": [
+                  "The",
+                  "dragon",
+                  "is",
+                  "hungry"
+                ],
+                "target": "The dragon is hungry",
+                "variant": "word_slicing",
+                "success": "נכון. דרקון אחד, ולכן is.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: הדרקון רעב.",
+                  "segmentation": "Words",
+                  "targetText": "The dragon is hungry",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "are",
+                    "am",
+                    "dragons"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "verbs_to_be_homework_q01_you_are_a_brave_knight",
+              "display_text": "בנו את המשפט באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "You",
+                  "are",
+                  "a",
+                  "brave",
+                  "knight"
+                ],
+                "target": "You are a brave knight.",
+                "variant": "sentence_building",
+                "success": "נכון. גם כשמדברים אל אדם אחד, You הולך עם are.",
+                "params": {
+                  "prompt": "בנו את המשפט באנגלית לפי התרגום המלא בעברית: אתה אביר אמיץ. סדרו את כל המילים.",
+                  "translation": "אתה אביר אמיץ.",
+                  "englishWordsInOrder": [
+                    "You",
+                    "are",
+                    "a",
+                    "brave",
+                    "knight"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "is",
+                    "am",
+                    "He"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Lost_Chest2_Driftgold_Bay",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "verbs_to_be_homework_q01_say_we_are_your_friends",
+              "display_text": "אמרו את המשפט הבא באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את המשפט הבא באנגלית בקול.",
+                "tasks": [
+                  "We",
+                  "are",
+                  "your",
+                  "friends"
+                ],
+                "target": "We are your friends.",
+                "variant": "short_phrase",
+                "success": "מאיה כותבת את המשפט הזה בראש הלוח, כדי שהילדים החדשים ירגישו בבית.",
+                "params": {
+                  "prompt": "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אנחנו החברים שלכם.",
+                  "targetWords": [],
+                  "targetPhrase": "We are your friends.",
+                  "silenceTimeoutSeconds": 3.0,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
             }
           ]
         }
@@ -23014,6 +26775,338 @@
                   ],
                   "targetPhrase": "How are you?",
                   "silenceTimeoutSeconds": 2.5,
+                  "allowFuzzyMatch": true,
+                  "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wh_questions_homework",
+      "folder": "wh_questions_homework",
+      "displayName": "Wh-Questions - שיעורי בית",
+      "theme": "Homework for the Wh-Questions line: no new words. The ghost writes a question notebook so she never forgets again, and the learner fills it with What, Where, When, Who, Why and How questions without help.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 1,
+      "npcId": "Ghost",
+      "npc": {
+        "id": "Ghost",
+        "name": "בו רדקליף",
+        "title": "רוח",
+        "location": "האבנים הבוכות",
+        "description": "רוח ידידותית שאוהבת הפתעות במקומות שקטים.",
+        "image": "images/npcs/Ghost.png"
+      },
+      "quests": [
+        {
+          "id": "wh_questions_homework__q01_the_ghosts_question_notebook",
+          "name": "The Ghost's Question Notebook",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "הרוח כותבת מחברת שאלות כדי שלא תשכח שוב. עזרו לה למלא אותה לבד, עם כל מילות השאלה.",
+          "giver_npc": "Ghost",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "wh_questions_homework_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 3350,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 605
+              },
+              {
+                "id": "quest_loot_mid_finale",
+                "amount": 1
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Ghost",
+              "dialogue_id": "wh_questions_homework_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 3,
+              "success_required": true,
+              "instance_id": "wh_questions_homework_q01_mine_when_answers",
+              "display_text": "אספו רק מילים שעונות על השאלה When.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אספו רק מילים שעונות על השאלה When.",
+                "tasks": [
+                  "night",
+                  "morning",
+                  "today",
+                  "tomorrow",
+                  "evening",
+                  "winter"
+                ],
+                "target": "night, morning, today, tomorrow, evening, winter",
+                "variant": "word_category",
+                "success": "נכון. When שואלת על זמן.",
+                "params": {
+                  "prompt": "אספו רק מילים שעונות על השאלה When.",
+                  "categoryLabel": "When?",
+                  "targetWords": [
+                    "night",
+                    "morning",
+                    "today",
+                    "tomorrow",
+                    "evening",
+                    "winter"
+                  ],
+                  "distractorWords": [
+                    "ship",
+                    "sailor",
+                    "sea",
+                    "tower",
+                    "girl",
+                    "box"
+                  ],
+                  "requiredCorrect": 5,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 4,
+              "success_required": true,
+              "instance_id": "wh_questions_homework_q01_match_question_words",
+              "display_text": "השלימו את האות החסרה בכל מילת שאלה.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלימו את האות החסרה בכל מילת שאלה.",
+                "tasks": [
+                  "WH_T",
+                  "WHER_",
+                  "W_Y",
+                  "HO_"
+                ],
+                "target": "what, where, why, how",
+                "variant": "missing_letter_matching",
+                "success": "ארבע מילות שאלה חזרו למחברת.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "wh_hw_tile_e",
+                      "value": "e"
+                    },
+                    {
+                      "id": "wh_hw_tile_w",
+                      "value": "w"
+                    },
+                    {
+                      "id": "wh_hw_tile_a",
+                      "value": "a"
+                    },
+                    {
+                      "id": "wh_hw_tile_n",
+                      "value": "n"
+                    },
+                    {
+                      "id": "wh_hw_tile_h",
+                      "value": "h"
+                    },
+                    {
+                      "id": "wh_hw_tile_o",
+                      "value": "o"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "wh_hw_task_what",
+                      "image": "",
+                      "fullWord": "what",
+                      "missingIndices": [
+                        2
+                      ]
+                    },
+                    {
+                      "id": "wh_hw_task_where",
+                      "image": "",
+                      "fullWord": "where",
+                      "missingIndices": [
+                        4
+                      ]
+                    },
+                    {
+                      "id": "wh_hw_task_why",
+                      "image": "",
+                      "fullWord": "why",
+                      "missingIndices": [
+                        1
+                      ]
+                    },
+                    {
+                      "id": "wh_hw_task_how",
+                      "image": "",
+                      "fullWord": "how",
+                      "missingIndices": [
+                        2
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "wh_questions_homework_q01_where_is_the_old_tower",
+              "display_text": "בנו את השאלה באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את השאלה באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "Where",
+                  "is",
+                  "the",
+                  "old",
+                  "tower"
+                ],
+                "target": "Where is the old tower?",
+                "variant": "sentence_building",
+                "success": "נכון. שואלים על מקום, ולכן Where.",
+                "params": {
+                  "prompt": "בנו את השאלה באנגלית לפי התרגום המלא בעברית: איפה המגדל הישן? סדרו את כל המילים.",
+                  "translation": "איפה המגדל הישן?",
+                  "englishWordsInOrder": [
+                    "Where",
+                    "is",
+                    "the",
+                    "old",
+                    "tower"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "When",
+                    "Who",
+                    "are"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 5,
+              "success_required": true,
+              "instance_id": "wh_questions_homework_q01_who_is_at_the_door",
+              "display_text": "חתכו את הפירות לפי הסדר ובנו את השאלה באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתכו את הפירות לפי הסדר ובנו את השאלה באנגלית.",
+                "tasks": [
+                  "Who",
+                  "is",
+                  "at",
+                  "the",
+                  "door"
+                ],
+                "target": "Who is at the door",
+                "variant": "word_slicing",
+                "success": "נכון. שואלים על אדם, ולכן Who.",
+                "params": {
+                  "prompt": "חתכו את הפירות לפי הסדר ובנו את השאלה באנגלית: מי בדלת?",
+                  "segmentation": "Words",
+                  "targetText": "Who is at the door",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "What",
+                    "Where",
+                    "are"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_ordering",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "wh_questions_homework_q01_why_are_you_sad",
+              "display_text": "בנו את השאלה באנגלית לפי התרגום המלא בעברית.",
+              "minigame_brief": {
+                "minigame_id": "word_ordering",
+                "instruction": "בנו את השאלה באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים.",
+                "tasks": [
+                  "Why",
+                  "are",
+                  "you",
+                  "sad"
+                ],
+                "target": "Why are you sad?",
+                "variant": "sentence_building",
+                "success": "נכון. שואלים על סיבה, ולכן Why.",
+                "params": {
+                  "prompt": "בנו את השאלה באנגלית לפי התרגום המלא בעברית: למה אתה עצוב? סדרו את כל המילים.",
+                  "translation": "למה אתה עצוב?",
+                  "englishWordsInOrder": [
+                    "Why",
+                    "are",
+                    "you",
+                    "sad"
+                  ],
+                  "preFilledIndices": [],
+                  "distractorWords": [
+                    "How",
+                    "When",
+                    "is"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "speak_aloud",
+              "world_object_id": "Tomb_Stone_The_Weeping_Stones",
+              "difficulty": 6,
+              "success_required": true,
+              "instance_id": "wh_questions_homework_q01_say_who_is_your_teacher",
+              "display_text": "אמרו את השאלה הבאה באנגלית בקול.",
+              "minigame_brief": {
+                "minigame_id": "speak_aloud",
+                "instruction": "אמרו את השאלה הבאה באנגלית בקול.",
+                "tasks": [
+                  "Who",
+                  "is",
+                  "your",
+                  "teacher"
+                ],
+                "target": "Who is your teacher?",
+                "variant": "short_phrase",
+                "success": "הרוח כותבת את השאלה האחרונה במחברת.",
+                "params": {
+                  "prompt": "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מי המורה שלך?",
+                  "targetWords": [
+                    "Who",
+                    "is",
+                    "your",
+                    "teacher"
+                  ],
+                  "targetPhrase": "Who is your teacher?",
+                  "silenceTimeoutSeconds": 3.0,
                   "allowFuzzyMatch": true,
                   "referenceClip": ""
                 }

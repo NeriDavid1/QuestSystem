@@ -1,0 +1,14 @@
+questline:
+  id: do_does_homework
+  npc_id: "Main Gate Gaurd 1"
+  display_name: "The DO / DOES Secret - שיעורי בית"
+  theme: "Homework for the DO / DOES Secret line: no new rule. The four speaking stones work again and tomorrow is market day, so Tomlin, the gate guard whose stone was the last one saved, checks that the learner can stand at the gate as a guard for a day: choosing do or does alone in questions and in not sentences, with no -s on the verb after does."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: do_does_homework__q01_guard_for_a_day
+    name: "Guard for a Day"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 4300, items: [{ id: coin, amount: 775 }, { id: quest_loot_mid_finale, amount: 1 }] }

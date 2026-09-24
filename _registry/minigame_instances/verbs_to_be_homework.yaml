@@ -1,0 +1,104 @@
+# Homework for the verb to be line (The Royal Speech Crystal) - Maya's board for the new kids.
+# One quest, no new rule: every task asks for am, is or are after a new subject, built only from lesson
+# words (I, you, he, she, it, we, they, cat, dragon, dragons, friend, friends, villagers, knight, castle,
+# hungry, happy, big, ready, strong, brave, my, your) in new sentences.
+# Ladder: recognise what goes with are (Dwarf Miner) -> apply am / is / are (Word Matching)
+# -> build a plural-noun sentence (Word Ordering) -> build fast, one dragon (Fruit Slice)
+# -> the singular You trap (Word Ordering) -> say it (Speak Aloud, phrase mode like the lesson line).
+# Traps: one dragon takes is although the lesson said The dragons are; You takes are even for one person.
+# Word Matching has three values (am / is / are), so no tile sits opposite its own sentence: [am, is, are, is, are].
+instances:
+
+  verbs_to_be_homework_q01_mine_are_words:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק את המילים שהולכות עם are."
+    tasks: [we, you, they, dragons, villagers, friends]
+    target: "we, you, they, dragons, villagers, friends"
+    variant: word_category
+    success: "נכון. We, You, They, וגם מילים ברבים כמו dragons, הולכים עם are."
+    params:
+      prompt: "אספו רק את המילים שהולכות עם are."
+      categoryLabel: "are"
+      targetWords: [we, you, they, dragons, villagers, friends]
+      distractorWords: [I, he, she, it, dragon, cat]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  verbs_to_be_homework_q01_match_am_is_are:
+    minigame_id: word_matching
+    instruction: "השלימו כל משפט עם am, is או are."
+    tasks: ["YOU ___ STRONG", "I ___ HUNGRY", "THE CAT ___ HAPPY", "THE DRAGONS ___ BIG", "SHE ___ READY"]
+    target: "You are strong, I am hungry, The cat is happy, The dragons are big, She is ready"
+    variant: missing_letter_matching
+    success: "חמישה משפטים נכונים כבר כתובים על הלוח."
+    params:
+      letters:
+        - { id: tb_hw_tile_1, value: am }
+        - { id: tb_hw_tile_2, value: is }
+        - { id: tb_hw_tile_3, value: are }
+        - { id: tb_hw_tile_4, value: is }
+        - { id: tb_hw_tile_5, value: are }
+      wordTasks:
+        - { id: tb_hw_task_you_strong, image: '', fullWord: You are strong, missingIndices: [4, 5, 6] }
+        - { id: tb_hw_task_i_hungry, image: '', fullWord: I am hungry, missingIndices: [2, 3] }
+        - { id: tb_hw_task_cat_happy, image: '', fullWord: The cat is happy, missingIndices: [8, 9] }
+        - { id: tb_hw_task_dragons_big, image: '', fullWord: The dragons are big, missingIndices: [12, 13, 14] }
+        - { id: tb_hw_task_she_ready, image: '', fullWord: She is ready, missingIndices: [4, 5] }
+
+  verbs_to_be_homework_q01_my_friends_are_in_the_castle:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [My, friends, are, in, the, castle]
+    target: "My friends are in the castle."
+    variant: sentence_building
+    success: "נכון. כמה חברים, ולכן are."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: החברים שלי בטירה. סדרו את כל המילים."
+      translation: "החברים שלי בטירה."
+      englishWordsInOrder: [My, friends, are, in, the, castle]
+      preFilledIndices: []
+      distractorWords: [is, am, friend]
+
+  verbs_to_be_homework_q01_the_dragon_is_hungry:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [The, dragon, is, hungry]
+    target: "The dragon is hungry"
+    variant: word_slicing
+    success: "נכון. דרקון אחד, ולכן is."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: הדרקון רעב."
+      segmentation: Words
+      targetText: "The dragon is hungry"
+      preFilledIndices: []
+      distractors: [are, am, dragons]
+      extraLetterDistractorCount: 0
+
+  verbs_to_be_homework_q01_you_are_a_brave_knight:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [You, are, a, brave, knight]
+    target: "You are a brave knight."
+    variant: sentence_building
+    success: "נכון. גם כשמדברים אל אדם אחד, You הולך עם are."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: אתה אביר אמיץ. סדרו את כל המילים."
+      translation: "אתה אביר אמיץ."
+      englishWordsInOrder: [You, are, a, brave, knight]
+      preFilledIndices: []
+      distractorWords: [is, am, He]
+
+  verbs_to_be_homework_q01_say_we_are_your_friends:
+    minigame_id: speak_aloud
+    instruction: "אמרו את המשפט הבא באנגלית בקול."
+    tasks: [We, are, your, friends]
+    target: "We are your friends."
+    variant: short_phrase
+    success: "מאיה כותבת את המשפט הזה בראש הלוח, כדי שהילדים החדשים ירגישו בבית."
+    params:
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: אנחנו החברים שלכם."
+      targetWords: []
+      targetPhrase: "We are your friends."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

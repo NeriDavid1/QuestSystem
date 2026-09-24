@@ -1,0 +1,96 @@
+# Homework for the This Or That? line (the advisors' first tour). One quest, no new words: every task
+# asks the learner to point with this / that / these / those (one or many, near or far) or to use plain
+# the when nothing is pointed at. The full Hebrew translation decides (הזה / ההוא / האלה / ההם, or no
+# pointing word = the); the wrong options are the other pointing words, so only the meaning picks one.
+# Ladder: recognise which nouns can follow this / that (Dwarf Miner) -> apply that (Word Ordering)
+# -> build the + this in one sentence (Word Ordering) -> build fast these (Fruit Slice)
+# -> trap: those gates against the lesson's that heavy gate (Word Ordering) -> say it (Speak Aloud,
+# every word checked, like the lesson line's targetWords).
+instances:
+
+  this_or_that_homework_q01_mine_one_thing_words:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק מילים שיכולות לבוא אחרי this או that."
+    tasks: [gate, tower, horse, letter, helmet, table]
+    target: "gate, tower, horse, letter, helmet, table"
+    variant: word_category
+    success: "נכון. this ו־that מצביעים תמיד על דבר אחד."
+    params:
+      prompt: "אספו רק מילים שיכולות לבוא אחרי this או that."
+      categoryLabel: "this / that"
+      targetWords: [gate, tower, horse, letter, helmet, table]
+      distractorWords: [gates, horses, knights, potions, books]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  this_or_that_homework_q01_that_tower_is_very_old:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [That, tower, is, very, old]
+    target: "That tower is very old."
+    variant: sentence_building
+    success: "נכון. מגדל אחד והוא רחוק, ולכן That."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: המגדל ההוא ישן מאוד. סדרו את כל המילים."
+      translation: "המגדל ההוא ישן מאוד."
+      englishWordsInOrder: [That, tower, is, very, old]
+      preFilledIndices: []
+      distractorWords: [This, Those, The]
+
+  this_or_that_homework_q01_the_letter_on_this_table:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [The, letter, is, "on", this, table]
+    target: "The letter is on this table."
+    variant: sentence_building
+    success: "נכון. על השולחן הקרוב מצביעים עם this, והמכתב מקבל רק The."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: המכתב על השולחן הזה. סדרו את כל המילים."
+      translation: "המכתב על השולחן הזה."
+      englishWordsInOrder: [The, letter, is, "on", this, table]
+      preFilledIndices: []
+      distractorWords: [That, these, those]
+
+  this_or_that_homework_q01_these_horses_are_strong:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [These, horses, are, strong]
+    target: "These horses are strong"
+    variant: word_slicing
+    success: "נכון. הרבה סוסים ממש לידכם, ולכן These."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: הסוסים האלה חזקים."
+      segmentation: Words
+      targetText: "These horses are strong"
+      preFilledIndices: []
+      distractors: [Those, This, The]
+      extraLetterDistractorCount: 0
+
+  this_or_that_homework_q01_those_gates_are_very_heavy:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [Those, gates, are, very, heavy]
+    target: "Those gates are very heavy."
+    variant: sentence_building
+    success: "נכון. יש הרבה שערים והם רחוקים, ולכן Those ולא That."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: השערים ההם כבדים מאוד. סדרו את כל המילים."
+      translation: "השערים ההם כבדים מאוד."
+      englishWordsInOrder: [Those, gates, are, very, heavy]
+      preFilledIndices: []
+      distractorWords: [That, gate, is, These]
+
+  this_or_that_homework_q01_say_this_letter_is_for_you:
+    minigame_id: speak_aloud
+    instruction: "אמרו את המשפט הבא באנגלית בקול."
+    tasks: [This, letter, is, for, you]
+    target: "This letter is for you."
+    variant: short_phrase
+    success: "בדיוק כך תגידו מחר, כשתמסרו לאורחים את מכתב הברכה."
+    params:
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: המכתב הזה בשבילכם."
+      targetWords: [This, letter, is, for, you]
+      targetPhrase: "This letter is for you."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

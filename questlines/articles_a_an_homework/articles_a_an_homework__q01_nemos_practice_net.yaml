@@ -1,0 +1,56 @@
+quest:
+  id: articles_a_an_homework__q01_nemos_practice_net
+  name: "Nemo's Practice Net"
+  level_required: 50
+  giver_npc: Fisherman
+  prerequisite: null
+  summary: "מלכת הים מגיעה מחר לבדוק את הרשת של נמו. הראו לו לבד שאתם זוכרים מתי אומרים a ומתי an."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: articles_a_an_homework_q01_finish
+rewards: { xp: 5600, items: [{ id: coin, amount: 1010 }, { id: quest_loot_late_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: Fisherman
+    dialogue_id: articles_a_an_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 3
+    success_required: true
+    instance_id: articles_a_an_homework_q01_mine_an_words
+    display_text: אספו רק את המילים שבאות אחרי an.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 4
+    success_required: true
+    instance_id: articles_a_an_homework_q01_match_little_words
+    display_text: חברו כל מילה ל־a או ל־an.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 5
+    success_required: true
+    instance_id: articles_a_an_homework_q01_an_old_boat
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 5
+    success_required: true
+    instance_id: articles_a_an_homework_q01_owl_in_a_tree
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 6
+    success_required: true
+    instance_id: articles_a_an_homework_q01_a_big_apple
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 6
+    success_required: true
+    instance_id: articles_a_an_homework_q01_say_i_want_an_egg
+    display_text: אמרו את המשפט הבא באנגלית בקול.

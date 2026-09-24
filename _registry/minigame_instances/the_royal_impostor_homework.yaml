@@ -1,0 +1,103 @@
+# Homework for The Lost & Found Cart line (my, your, his, her, our, their). One quest, no new words: every
+# task asks whose thing it is and who is speaking. All at the cart (Wooden_Cart1_Inside_Gate).
+# Ladder: tell ownership words from person words (Dwarf Miner) -> spell four forms (Word Matching)
+# -> build a list line (Word Ordering) -> build fast (Fruit Slice) -> the speaker trap (Word Ordering)
+# -> say it (Speak Aloud, every word checked like the lesson line).
+# Traps: her with many sandwiches (their and our are distractors); the guards repeat the Fruit Slice list
+# line in their own words, so Their / his must become our / Your.
+# Word Matching gaps vary (middle, beginning, near the end, end) and no tile sits opposite its own word.
+instances:
+
+  the_royal_impostor_homework_q01_mine_owner_words:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק את המילים שאפשר לשים לפני map כדי להגיד של מי המפה."
+    tasks: [my, your, his, her, our, their]
+    target: "my, your, his, her, our, their"
+    variant: word_category
+    success: "נכון. רק המילים האלה אומרות של מי הדבר, והן מוכנות לרשימה."
+    params:
+      prompt: "אספו רק את המילים שאפשר לשים לפני map כדי להגיד של מי המפה."
+      categoryLabel: "___ map"
+      targetWords: [my, your, his, her, our, their]
+      distractorWords: [I, you, he, she, we, they]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  the_royal_impostor_homework_q01_complete_owner_words:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל מילה שאומרת של מי הדבר."
+    tasks: [YO_R, _UR, THE_R, HE_]
+    target: "your, our, their, her"
+    variant: missing_letter_matching
+    success: "יפה. עכשיו כל מילה כתובה נכון, ואפשר להתחיל את הרשימה."
+    params:
+      letters:
+        - { id: poss_hw_tile_1, value: e }
+        - { id: poss_hw_tile_2, value: i }
+        - { id: poss_hw_tile_3, value: u }
+        - { id: poss_hw_tile_4, value: o }
+        - { id: poss_hw_tile_5, value: a }
+        - { id: poss_hw_tile_6, value: r }
+      wordTasks:
+        - { id: poss_hw_task_your, image: '', fullWord: your, missingIndices: [2] }
+        - { id: poss_hw_task_our, image: '', fullWord: our, missingIndices: [0] }
+        - { id: poss_hw_task_their, image: '', fullWord: their, missingIndices: [3] }
+        - { id: poss_hw_task_her, image: '', fullWord: her, missingIndices: [2] }
+
+  the_royal_impostor_homework_q01_these_are_her_sandwiches:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [These, are, her, sandwiches]
+    target: "These are her sandwiches."
+    variant: sentence_building
+    success: "נכון. הכריכים שייכים רק לציירת, ולכן her, גם כשיש הרבה כריכים."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: אלה הכריכים שלה. סדרו את כל המילים."
+      translation: "אלה הכריכים שלה."
+      englishWordsInOrder: [These, are, her, sandwiches]
+      preFilledIndices: []
+      distractorWords: [their, our, his]
+
+  the_royal_impostor_homework_q01_their_map_his_lunch:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [Their, map, is, next, to, his, lunch]
+    target: "Their map is next to his lunch"
+    variant: word_slicing
+    success: "נכון. המפה של טומלין וגאריק, ולכן their, וארוחת הצהריים של ויל, ולכן his."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: המפה שלהם נמצאת ליד ארוחת הצהריים שלו."
+      segmentation: Words
+      targetText: "Their map is next to his lunch"
+      preFilledIndices: [3, 4]
+      distractors: [Our, her, my]
+      extraLetterDistractorCount: 0
+
+  the_royal_impostor_homework_q01_your_lunch_our_map:
+    minigame_id: word_ordering
+    instruction: "בנו באנגלית את מה שהשומרים אומרים לוויל, לפי התרגום המלא בעברית."
+    tasks: [Your, lunch, is, next, to, our, map]
+    target: "Your lunch is next to our map."
+    variant: sentence_building
+    success: "נכון. השומרים מדברים אל ויל, ולכן your, ועל המפה של עצמם, ולכן our."
+    params:
+      prompt: "השומרים אומרים לוויל: ארוחת הצהריים שלך נמצאת ליד המפה שלנו. בנו את המשפט באנגלית לפי התרגום המלא בעברית."
+      translation: "ארוחת הצהריים שלך נמצאת ליד המפה שלנו."
+      englishWordsInOrder: [Your, lunch, is, next, to, our, map]
+      preFilledIndices: [3, 4]
+      distractorWords: [His, their, my]
+
+  the_royal_impostor_homework_q01_say_these_are_your_sandwiches:
+    minigame_id: speak_aloud
+    instruction: "אמרו את המשפט הבא באנגלית בקול."
+    tasks: [These, are, your, sandwiches]
+    target: "These are your sandwiches."
+    variant: short_phrase
+    success: "הציירת לוקחת את הכריכים שלה, ובעגלה לא נשאר אף דבר."
+    params:
+      prompt: "הציירת מגיעה לעגלה. אמרו לה את המשפט הבא באנגלית בקול. משמעותו בעברית: אלה הכריכים שלך."
+      targetWords: [These, are, your, sandwiches]
+      targetPhrase: "These are your sandwiches."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

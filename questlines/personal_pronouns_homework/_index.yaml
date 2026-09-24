@@ -1,0 +1,14 @@
+questline:
+  id: personal_pronouns_homework
+  npc_id: Village Head
+  display_name: "Personal Pronouns - שיעורי בית"
+  theme: "Homework for the Personal Pronouns line: no new words. Before the next village show, the Village Head checks that the learner still uses I, You, He, She, It, We and They without help."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: personal_pronouns_homework__q01_rehearsal_for_the_next_show
+    name: "Rehearsal for the Next Show"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 675, items: [{ id: coin, amount: 120 }, { id: quest_loot_early_finale, amount: 1 }] }

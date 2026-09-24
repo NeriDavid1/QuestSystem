@@ -1,0 +1,100 @@
+# Homework for the Adjectives line (a gift painting for the girl from the park). One quest, no new
+# words: every task is a describing-word decision built from the lesson's words in new combinations.
+# Ladder: recognise describing words (Dwarf Miner) -> is / are (Word Matching, whole-word blanks)
+# -> build (Word Ordering) -> build fast (Fruit Slice) -> the before-and-after trap (Word Ordering)
+# -> say it (Speak Aloud, every word checked like the lesson's last Speak Aloud tasks).
+# Word Matching tile order [is, is, are, are] is fixed and non-alternating (two values only). The blank
+# sits in the middle of each sentence; Unity's WordSlotState detects a whole-word gap in any position.
+instances:
+
+  adjectives_basics_homework_q01_mine_describing_words:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק את מילות התיאור."
+    tasks: [blue, yellow, long, small, angry, tired]
+    target: "blue, yellow, long, small, angry, tired"
+    variant: word_category
+    success: "נכון. אספתם רק מילים שמתארות, ולא שמות של דברים."
+    params:
+      prompt: "אספו רק את מילות התיאור."
+      categoryLabel: "Adjectives"
+      targetWords: [blue, yellow, long, small, angry, tired]
+      distractorWords: [tree, bird, apple, sun, sky, girl]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  adjectives_basics_homework_q01_match_is_are:
+    minigame_id: word_matching
+    instruction: "השלימו כל משפט ב־is או ב־are."
+    tasks: ["THE SUN ___ YELLOW", "THE APPLES ___ RED", "THE FLOWERS ___ BLUE", "THE TREE ___ BIG"]
+    target: "the sun is yellow, the apples are red, the flowers are blue, the tree is big"
+    variant: missing_letter_matching
+    success: "נכון. is על דבר אחד, ו־are על כמה דברים."
+    params:
+      letters:
+        - { id: adj_hw_tile_1, value: is }
+        - { id: adj_hw_tile_2, value: is }
+        - { id: adj_hw_tile_3, value: are }
+        - { id: adj_hw_tile_4, value: are }
+      wordTasks:
+        - { id: adj_hw_task_sun, image: '', fullWord: the sun is yellow, missingIndices: [8, 9] }
+        - { id: adj_hw_task_apples, image: '', fullWord: the apples are red, missingIndices: [11, 12, 13] }
+        - { id: adj_hw_task_flowers, image: '', fullWord: the flowers are blue, missingIndices: [12, 13, 14] }
+        - { id: adj_hw_task_tree, image: '', fullWord: the tree is big, missingIndices: [9, 10] }
+
+  adjectives_basics_homework_q01_a_big_red_apple:
+    minigame_id: word_ordering
+    instruction: "בנו את התיאור באנגלית לפי התרגום בעברית. סדרו את כל המילים."
+    tasks: [a, big, red, apple]
+    target: "a big red apple"
+    variant: sentence_building
+    success: "נכון. big ו־red באים לפני apple, והתפוח כבר מצויר."
+    params:
+      prompt: "בנו את התיאור באנגלית לפי התרגום המלא בעברית: תפוח אדום גדול. סדרו את כל המילים."
+      translation: "תפוח אדום גדול"
+      englishWordsInOrder: [a, big, red, apple]
+      preFilledIndices: []
+      distractorWords: [small, green, tree]
+
+  adjectives_basics_homework_q01_a_tall_green_tree:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את התיאור באנגלית."
+    tasks: [a, tall, green, tree]
+    target: "a tall green tree"
+    variant: word_slicing
+    success: "נכון. מילות התיאור לפני tree, והעץ הגבוה כבר עומד בציור."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את התיאור באנגלית: עץ ירוק גבוה."
+      segmentation: Words
+      targetText: "a tall green tree"
+      preFilledIndices: []
+      distractors: [long, yellow, bird]
+      extraLetterDistractorCount: 0
+
+  adjectives_basics_homework_q01_the_small_birds_are_happy:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [The, small, birds, are, happy]
+    target: "The small birds are happy."
+    variant: sentence_building
+    success: "נכון. small לפני birds, ו־are כי יש כמה ציפורים."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: הציפורים הקטנות שמחות. סדרו את כל המילים."
+      translation: "הציפורים הקטנות שמחות."
+      englishWordsInOrder: [The, small, birds, are, happy]
+      preFilledIndices: []
+      distractorWords: [is, big, sad]
+
+  adjectives_basics_homework_q01_say_the_girl_is_happy:
+    minigame_id: speak_aloud
+    instruction: "אמרו את המשפט הבא באנגלית בקול."
+    tasks: [The, girl, is, happy]
+    target: "The girl is happy."
+    variant: short_phrase
+    success: "הילדה בציור מחייכת, והמתנה מוכנה."
+    params:
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: הילדה שמחה."
+      targetWords: [The, girl, is, happy]
+      targetPhrase: "The girl is happy."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

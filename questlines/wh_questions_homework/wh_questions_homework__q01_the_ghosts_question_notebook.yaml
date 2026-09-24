@@ -1,0 +1,56 @@
+quest:
+  id: wh_questions_homework__q01_the_ghosts_question_notebook
+  name: "The Ghost's Question Notebook"
+  level_required: 50
+  giver_npc: Ghost
+  prerequisite: null
+  summary: "הרוח כותבת מחברת שאלות כדי שלא תשכח שוב. עזרו לה למלא אותה לבד, עם כל מילות השאלה."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: wh_questions_homework_q01_finish
+rewards: { xp: 3350, items: [{ id: coin, amount: 605 }, { id: quest_loot_mid_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: Ghost
+    dialogue_id: wh_questions_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 3
+    success_required: true
+    instance_id: wh_questions_homework_q01_mine_when_answers
+    display_text: אספו רק מילים שעונות על השאלה When.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 4
+    success_required: true
+    instance_id: wh_questions_homework_q01_match_question_words
+    display_text: השלימו את האות החסרה בכל מילת שאלה.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 5
+    success_required: true
+    instance_id: wh_questions_homework_q01_where_is_the_old_tower
+    display_text: בנו את השאלה באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 5
+    success_required: true
+    instance_id: wh_questions_homework_q01_who_is_at_the_door
+    display_text: חתכו את הפירות לפי הסדר ובנו את השאלה באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 6
+    success_required: true
+    instance_id: wh_questions_homework_q01_why_are_you_sad
+    display_text: בנו את השאלה באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Tomb_Stone_The_Weeping_Stones
+    difficulty: 6
+    success_required: true
+    instance_id: wh_questions_homework_q01_say_who_is_your_teacher
+    display_text: אמרו את השאלה הבאה באנגלית בקול.

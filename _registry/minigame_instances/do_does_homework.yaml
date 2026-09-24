@@ -1,0 +1,103 @@
+# Homework for the DO / DOES Secret line (guard for a day at the Kingdom Gate). One quest, no new rule:
+# every task makes the learner choose do or does from who the sentence is about, in questions and in
+# not sentences, and keep the verb without -s after does. All sentences are new combinations of the
+# lesson verbs (work, play, agree, start, give up, know, speak) with very simple support words.
+# Ladder: which subjects take does (Dwarf Miner) -> do or does in four short sentences (Word Matching)
+# -> build a Does question (Word Ordering) -> build a do not sentence fast (Fruit Slice)
+# -> the no -s trap after does not (Word Ordering) -> ask a Do question aloud (Speak Aloud, every word checked).
+# Distractors are the real mistakes: do / does swapped, is / are instead of do (Hebrew has no helper verb),
+# and the verb with -s. Word Matching tile order [do, do, does, does] is fixed and non-alternating
+# (two values only): tiles 2 and 4 sit next to their own sentence, tiles 1 and 3 do not.
+instances:
+
+  do_does_homework_q01_mine_does_words:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק את המילים שהולכות עם does."
+    tasks: [he, she, it, my sister, the dog, the king]
+    target: "he, she, it, my sister, the dog, the king"
+    variant: word_category
+    success: "נכון. אחות היא she, כלב הוא it ומלך הוא he, ולכן does."
+    params:
+      prompt: "אספו רק את המילים שהולכות עם does."
+      categoryLabel: "does"
+      targetWords: [he, she, it, my sister, the dog, the king]
+      distractorWords: [I, you, we, they, my friends, the boys]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  do_does_homework_q01_match_do_or_does:
+    minigame_id: word_matching
+    instruction: "חברו כל משפט ל־do או ל־does."
+    tasks: ["___ IT WORK", "___ THEY PLAY", "WE ___ NOT AGREE", "MY SISTER ___ NOT PLAY"]
+    target: "does it work, do they play, we do not agree, my sister does not play"
+    variant: missing_letter_matching
+    success: "נכון. it ו־my sister הולכים עם does, they ו־we הולכים עם do."
+    params:
+      letters:
+        - { id: dd_hw_tile_1, value: do }
+        - { id: dd_hw_tile_2, value: do }
+        - { id: dd_hw_tile_3, value: does }
+        - { id: dd_hw_tile_4, value: does }
+      wordTasks:
+        - { id: dd_hw_task_it_work, image: '', fullWord: does it work, missingIndices: [0, 1, 2, 3] }
+        - { id: dd_hw_task_they_play, image: '', fullWord: do they play, missingIndices: [0, 1] }
+        - { id: dd_hw_task_we_agree, image: '', fullWord: we do not agree, missingIndices: [3, 4] }
+        - { id: dd_hw_task_sister_play, image: '', fullWord: my sister does not play, missingIndices: [10, 11, 12, 13] }
+
+  do_does_homework_q01_when_does_the_market_start:
+    minigame_id: word_ordering
+    instruction: "בנו את השאלה באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [When, does, the, market, start]
+    target: "When does the market start?"
+    variant: sentence_building
+    success: "נכון. השוק הוא it, ולכן does."
+    params:
+      prompt: "בנו את השאלה באנגלית לפי התרגום המלא בעברית: מתי השוק מתחיל? סדרו את כל המילים."
+      translation: "מתי השוק מתחיל?"
+      englishWordsInOrder: [When, does, the, market, start]
+      preFilledIndices: []
+      distractorWords: [do, is, starts]
+
+  do_does_homework_q01_we_do_not_give_up:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [We, do, not, give, up]
+    target: "We do not give up"
+    variant: word_slicing
+    success: "נכון. עם we אומרים do not, וכך אומר כל שומר בשער."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: אנחנו לא מוותרים."
+      segmentation: Words
+      targetText: "We do not give up"
+      preFilledIndices: []
+      distractors: [does, are, gives]
+      extraLetterDistractorCount: 0
+
+  do_does_homework_q01_she_does_not_know_the_answer:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [She, does, not, know, the, answer]
+    target: "She does not know the answer."
+    variant: sentence_building
+    success: "נכון. אחרי does הפועל נשאר know, בלי s."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: היא לא יודעת את התשובה. סדרו את כל המילים."
+      translation: "היא לא יודעת את התשובה."
+      englishWordsInOrder: [She, does, not, know, the, answer]
+      preFilledIndices: []
+      distractorWords: [do, knows, is]
+
+  do_does_homework_q01_say_do_your_friends_speak_english:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [Do, your, friends, speak, English]
+    target: "Do your friends speak English?"
+    variant: short_phrase
+    success: "עם שאלה כזאת אתם מוכנים ליום השוק מחר."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: האם החברים שלך מדברים אנגלית?"
+      targetWords: [Do, your, friends, speak, English]
+      targetPhrase: "Do your friends speak English?"
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

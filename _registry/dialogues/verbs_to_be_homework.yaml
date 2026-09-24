@@ -1,0 +1,20 @@
+# Verb to be homework (The Royal Speech Crystal) - Maya prepares her board for the new kids.
+# Continues after the lesson ending: Maya remembers am, is and are again, and the guards never found out.
+# Homework teaches nothing new: no rule before practice, a short rule reminder at the end.
+# Maya is feminine throughout. Hebrew-first, short blocks. No quotation marks inside dialogue text. No em dash.
+dialogues:
+
+  verbs_to_be_homework_q01_start:
+    speaker: teacher_maya
+    lines:
+      - "שלום שוב! בזכותכם אני זוכרת את כל החוקים, והשומרים לא גילו כלום."
+      - "מחר מגיעים לממלכה ילדים חדשים, כמו שאתם הגעתם. והפעם אני אלמד אותם בעצמי."
+      - "היום אין חוק חדש. אני רק רוצה לראות שאתם זוכרים הכול לבד."
+      - "כל משפט נכון שלכם אכתוב על הלוח לשיעור של מחר. התיבה ליד המים מחכה לכם."
+
+  verbs_to_be_homework_q01_finish:
+    speaker: teacher_maya
+    lines:
+      - "הלוח מוכן. מחר הילדים החדשים ילמדו מהמשפטים שלכם, כמו שאני למדתי מכם."
+      - "זכרו: I am = אני. He is = הוא, She is = היא, It is = זה. We are = אנחנו, You are = אתה, את או אתם, They are = הם או הן."
+      - "כל הכבוד. עשיתם את שיעורי הבית לבד."

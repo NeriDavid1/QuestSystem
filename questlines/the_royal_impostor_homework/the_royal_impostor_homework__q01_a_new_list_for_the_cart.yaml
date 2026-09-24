@@ -1,0 +1,56 @@
+quest:
+  id: the_royal_impostor_homework__q01_a_new_list_for_the_cart
+  name: "A New List for the Cart"
+  level_required: 50
+  giver_npc: "City Gaurd Info"
+  prerequisite: null
+  summary: "עגלת האבדות שוב מלאה בדברים שנשכחו. הראו לפן שאתם יודעים לבד למי שייך כל דבר."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: the_royal_impostor_homework_q01_finish
+rewards: { xp: 1150, items: [{ id: coin, amount: 205 }, { id: quest_loot_early_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: "City Gaurd Info"
+    dialogue_id: the_royal_impostor_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 3
+    success_required: true
+    instance_id: the_royal_impostor_homework_q01_mine_owner_words
+    display_text: אספו רק את המילים שאומרות של מי הדבר.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 4
+    success_required: true
+    instance_id: the_royal_impostor_homework_q01_complete_owner_words
+    display_text: השלימו את האות החסרה בכל מילה שאומרת של מי הדבר.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 5
+    success_required: true
+    instance_id: the_royal_impostor_homework_q01_these_are_her_sandwiches
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 5
+    success_required: true
+    instance_id: the_royal_impostor_homework_q01_their_map_his_lunch
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 6
+    success_required: true
+    instance_id: the_royal_impostor_homework_q01_your_lunch_our_map
+    display_text: בנו באנגלית את מה שהשומרים אומרים לוויל.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 6
+    success_required: true
+    instance_id: the_royal_impostor_homework_q01_say_these_are_your_sandwiches
+    display_text: אמרו את המשפט הבא באנגלית בקול.

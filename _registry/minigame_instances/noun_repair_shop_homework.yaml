@@ -1,0 +1,101 @@
+# Homework for the Noun Repair Shop line (the box of broken tags). One quest, no new words: only
+# nouns the lesson taught - people, animals, places, things and food.
+# Ladder: tell nouns from other words (Dwarf Miner) -> complete (Word Matching) -> spell (Letter
+# Ordering) -> build (Word Ordering) -> build fast with the queen / king trap (Fruit Slice) -> say it.
+# Dwarf Miner trap: non-nouns from the lesson sentences (sits, red, fresh...), and 4 of 6 targets are
+# people or places, so nouns = objects cannot reach 5; apples stops the -s ending marking the verbs.
+# Word Matching gaps sit on forgotten letters (silent t, silent k, ea, last letter); seeded tile order.
+instances:
+
+  noun_repair_shop_homework_q01_mine_the_nouns:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק את המילים שהן שמות עצם."
+    tasks: [farmer, guard, market, park, rabbit, apples]
+    target: "farmer, guard, market, park, rabbit, apples"
+    variant: word_category
+    success: "נכון. אדם, חיה, מקום ודבר הם שמות עצם, אבל red ו־sits לא."
+    params:
+      prompt: "אספו רק את המילים שהן שמות עצם."
+      categoryLabel: "Nouns"
+      targetWords: [farmer, guard, market, park, rabbit, apples]
+      distractorWords: [sits, sees, has, red, fresh, big]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  noun_repair_shop_homework_q01_fix_missing_letters:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל שם עצם."
+    tasks: [CAS_LE, _NIGHT, BR_AD, DRAGO_]
+    target: "castle, knight, bread, dragon"
+    variant: missing_letter_matching
+    success: "נכון. ב־castle וב־knight יש אות שלא שומעים, אבל כותבים אותה."
+    params:
+      letters:
+        - { id: nrs_hw_tile_1, value: k }
+        - { id: nrs_hw_tile_2, value: e }
+        - { id: nrs_hw_tile_3, value: n }
+        - { id: nrs_hw_tile_4, value: s }
+        - { id: nrs_hw_tile_5, value: a }
+        - { id: nrs_hw_tile_6, value: t }
+      wordTasks:
+        - { id: nrs_hw_task_castle, image: '', fullWord: castle, missingIndices: [3] }
+        - { id: nrs_hw_task_knight, image: '', fullWord: knight, missingIndices: [0] }
+        - { id: nrs_hw_task_bread, image: '', fullWord: bread, missingIndices: [2] }
+        - { id: nrs_hw_task_dragon, image: '', fullWord: dragon, missingIndices: [5] }
+
+  noun_repair_shop_homework_q01_spell_chair:
+    minigame_id: letter_ordering
+    instruction: "כתבו באנגלית את המילה שפירושה כיסא."
+    tasks: [c, h, a, i, r]
+    target: chair
+    variant: word_spelling
+    success: "נכון. גם התווית של הכיסא שלמה שוב."
+    params:
+      prompt: "כתבו באנגלית את המילה שפירושה כיסא."
+      targetWord: chair
+      extraDistractorCount: 2
+      customDistractors: []
+
+  noun_repair_shop_homework_q01_the_baker_holds_a_cake:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [The, baker, holds, a, cake]
+    target: "The baker holds a cake."
+    variant: sentence_building
+    success: "נכון. אופה הוא baker, ושף הוא chef."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: האופה מחזיק עוגה. סדרו את כל המילים."
+      translation: "האופה מחזיק עוגה."
+      englishWordsInOrder: [The, baker, holds, a, cake]
+      preFilledIndices: []
+      distractorWords: [chef, bread, sees]
+
+  noun_repair_shop_homework_q01_the_queen_has_a_crown:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [The, queen, has, a, crown]
+    target: "The queen has a crown"
+    variant: word_slicing
+    success: "נכון. מלכה היא queen, ומלך הוא king."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: למלכה יש כתר."
+      segmentation: Words
+      targetText: "The queen has a crown"
+      preFilledIndices: []
+      distractors: [king, throne, sits]
+      extraLetterDistractorCount: 0
+
+  noun_repair_shop_homework_q01_say_a_bird_is_on_the_tower:
+    minigame_id: speak_aloud
+    instruction: "אמרו את המשפט הבא באנגלית בקול."
+    tasks: [A, bird, is, "on", the, tower]
+    target: "A bird is on the tower."
+    variant: short_phrase
+    success: "התווית האחרונה מוכנה, והקופסה ריקה."
+    params:
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: יש ציפור על המגדל."
+      targetWords: [A, bird, is, "on", the, tower]
+      targetPhrase: "A bird is on the tower."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

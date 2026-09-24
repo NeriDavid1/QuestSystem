@@ -1,0 +1,56 @@
+quest:
+  id: this_or_that_homework__q01_the_advisors_first_tour
+  name: "The Advisors' First Tour"
+  level_required: 50
+  giver_npc: Village Head
+  prerequisite: null
+  summary: "מחר מגיעים לעיירה אורחים שמדברים רק אנגלית, ואתם תהיו המדריכים שלהם. הראו לראש הכפר לבד שאתם זוכרים מתי אומרים this, that, these, those ו־the."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: this_or_that_homework_q01_finish
+rewards: { xp: 2500, items: [{ id: coin, amount: 450 }, { id: quest_loot_mid_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: this_or_that_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 3
+    success_required: true
+    instance_id: this_or_that_homework_q01_mine_one_thing_words
+    display_text: אספו רק מילים שיכולות לבוא אחרי this או that.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 4
+    success_required: true
+    instance_id: this_or_that_homework_q01_that_tower_is_very_old
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 5
+    success_required: true
+    instance_id: this_or_that_homework_q01_the_letter_on_this_table
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 5
+    success_required: true
+    instance_id: this_or_that_homework_q01_these_horses_are_strong
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 6
+    success_required: true
+    instance_id: this_or_that_homework_q01_those_gates_are_very_heavy
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 6
+    success_required: true
+    instance_id: this_or_that_homework_q01_say_this_letter_is_for_you
+    display_text: אמרו את המשפט הבא באנגלית בקול.

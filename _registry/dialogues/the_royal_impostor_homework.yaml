@@ -1,0 +1,22 @@
+# The Lost & Found Cart homework - the cart fills up again, and Fenn leaves the new owner list to the learner.
+# Continues after the lesson ending (everything went back to its owner). Fenn is masculine, the Painter is
+# feminine, Tomlin and Garrick are the two gate guards. The payoff names the three new lost things.
+# Homework teaches nothing new: no rule before practice, a short rule reminder at the end.
+# Hebrew-first, short blocks. No quotation marks inside dialogue text. No em dash.
+dialogues:
+
+  the_royal_impostor_homework_q01_start:
+    speaker: "City Gaurd Info"
+    lines:
+      - "שלום שוב! אחרי החגיגה כל דבר חזר לבעלים שלו, ועגלת האבדות נשארה ריקה."
+      - "אבל הבוקר השער היה עמוס, ועכשיו יש בעגלה דברים חדשים שאנשים שכחו."
+      - "זוכרים את הרשימה הקרועה? היום אתם כותבים רשימה חדשה, כדי שכל אחד ימצא את הדבר שלו."
+      - "אין היום שום דבר חדש. אני חוזר לשמור על השער, ואתם עושים הכול לבד."
+
+  the_royal_impostor_homework_q01_finish:
+    speaker: "City Gaurd Info"
+    lines:
+      - "העגלה ריקה שוב, וכל אחד מצא את הדבר שלו בזכות הרשימה שלכם."
+      - "ויל לקח את ארוחת הצהריים שלו, השומרים את המפה שלהם, והציירת את הכריכים שלה."
+      - "זכרו: my = שלי, your = שלך או שלכם, his = שלו, her = שלה, our = שלנו, their = שלהם."
+      - "כל הכבוד. עשיתם את שיעורי הבית לבד."

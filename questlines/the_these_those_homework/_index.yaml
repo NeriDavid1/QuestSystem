@@ -1,0 +1,14 @@
+questline:
+  id: the_these_those_homework
+  npc_id: Farmer
+  display_name: "The, These & Those - שיעורי בית"
+  theme: "Homework for the The, These & Those line: no new rule. The Village Head comes to see the farm tomorrow, and the Farmer checks that the learner still chooses the, these (near) and those (far) without help."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: the_these_those_homework__q01_near_and_far_on_the_farm
+    name: "Near and Far on the Farm"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 2000, items: [{ id: coin, amount: 360 }, { id: quest_loot_mid_finale, amount: 1 }] }

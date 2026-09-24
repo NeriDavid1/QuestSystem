@@ -1,0 +1,96 @@
+# Homework for the The, These & Those line (near and far on the farm). One quest, no new rule:
+# every task asks for the (a known thing), these (near, more than one) or those (far, more than one),
+# in new sentences built only from words the lesson already used.
+# Ladder: recognise what can follow these / those (Dwarf Miner) -> build near (Word Ordering)
+# -> build far (Word Ordering) -> build fast, the + those in one sentence (Fruit Slice)
+# -> the one-hat trap: near but only one, so The (Word Ordering) -> say it (Speak Aloud, full phrase checked).
+# Every Hebrew translation marks near / far with האלה / ההם, so these / those is never a guess.
+# No Word Matching: it has no prompt field and no picture per card, so ___ BOOTS could take these or those.
+instances:
+
+  the_these_those_homework_q01_mine_more_than_one:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק מילים שיכולות לבוא אחרי these או those."
+    tasks: [pigs, boots, trees, kids, clouds, knights]
+    target: "pigs, boots, trees, kids, clouds, knights"
+    variant: word_category
+    success: "נכון. אחרי these ו־those תמיד באים כמה דברים, לא דבר אחד."
+    params:
+      prompt: "אספו רק מילים שיכולות לבוא אחרי these או those."
+      categoryLabel: "these / those"
+      targetWords: [pigs, boots, trees, kids, clouds, knights]
+      distractorWords: [dog, axe, hat, boy, bag, is]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  the_these_those_homework_q01_these_pigs_are_dirty:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [These, pigs, are, dirty]
+    target: "These pigs are dirty."
+    variant: sentence_building
+    success: "נכון. החזירים קרובים אלינו, ולכן These."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: החזירים האלה מלוכלכים. סדרו את כל המילים."
+      translation: "החזירים האלה מלוכלכים."
+      englishWordsInOrder: [These, pigs, are, dirty]
+      preFilledIndices: []
+      distractorWords: [Those, The, is]
+
+  the_these_those_homework_q01_those_trees_are_tall:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [Those, trees, are, tall]
+    target: "Those trees are tall."
+    variant: sentence_building
+    success: "נכון. העצים רחוקים, מעבר לנהר, ולכן Those."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: העצים ההם גבוהים. סדרו את כל המילים."
+      translation: "העצים ההם גבוהים."
+      englishWordsInOrder: [Those, trees, are, tall]
+      preFilledIndices: []
+      distractorWords: [These, is, tree]
+
+  the_these_those_homework_q01_the_dog_and_those_kids:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [The, dog, is, next, to, those, kids]
+    target: "The dog is next to those kids"
+    variant: word_slicing
+    success: "נכון. יש כלב אחד, ולכן The, והילדים רחוקים, ולכן those."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: הכלב ליד הילדים ההם."
+      segmentation: Words
+      targetText: "The dog is next to those kids"
+      preFilledIndices: [3, 4]
+      distractors: [these, are, kid]
+      extraLetterDistractorCount: 0
+
+  the_these_those_homework_q01_the_hat_in_my_bag:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [The, hat, is, in, my, bag]
+    target: "The hat is in my bag."
+    variant: sentence_building
+    success: "נכון. זה כובע אחד ומסוים, ולכן The."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: הכובע בתיק שלי. סדרו את כל המילים."
+      translation: "הכובע בתיק שלי."
+      englishWordsInOrder: [The, hat, is, in, my, bag]
+      preFilledIndices: []
+      distractorWords: [These, Those, A]
+
+  the_these_those_homework_q01_say_these_boots_are_clean:
+    minigame_id: speak_aloud
+    instruction: "אמרו את המשפט הבא באנגלית בקול."
+    tasks: [These, boots, are, clean]
+    target: "These boots are clean."
+    variant: short_phrase
+    success: "המגפיים הנקיים מחכים לראש הכפר, והחווה מוכנה לביקור."
+    params:
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: המגפיים האלה נקיים."
+      targetWords: [These, boots, are, clean]
+      targetPhrase: "These boots are clean."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

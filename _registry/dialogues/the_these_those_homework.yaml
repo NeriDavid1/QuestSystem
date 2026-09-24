@@ -1,0 +1,19 @@
+# The, These & Those homework - the Farmer gets the farm ready for the Village Head's visit.
+# Epilogue: the Village Head is still happy with the corn from the lesson and comes to see the farm.
+# Homework teaches nothing new: no rule before practice, a short rule reminder at the end.
+# Hebrew-first, short blocks. No quotation marks inside dialogue text. No em dash.
+dialogues:
+
+  the_these_those_homework_q01_start:
+    speaker: Farmer
+    lines:
+      - "שלום שוב, חברים. ראש הכפר עדיין מספר לכולם על התירס שהבאתם לו."
+      - "מחר הוא בא לראות את החווה, ואני רוצה להראות לו באנגלית מה קרוב אלינו ומה רחוק."
+      - "היום אין כלל חדש. תראו לי לבד שאתם זוכרים את The, These ו־Those. הכול מחכה לכם ליד המדורה."
+
+  the_these_those_homework_q01_finish:
+    speaker: Farmer
+    lines:
+      - "בזכותכם אני מוכן. מחר אראה לראש הכפר את כל החווה, מהחזירים שלידנו ועד העצים שמעבר לנהר."
+      - "זכרו: The = ה' הידיעה. These = האלה, על כמה דברים קרובים. Those = ההם, על כמה דברים רחוקים."
+      - "כל הכבוד. עשיתם את שיעורי הבית לבד."

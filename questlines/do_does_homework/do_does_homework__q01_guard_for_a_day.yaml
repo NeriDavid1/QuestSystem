@@ -1,0 +1,56 @@
+quest:
+  id: do_does_homework__q01_guard_for_a_day
+  name: "Guard for a Day"
+  level_required: 50
+  giver_npc: "Main Gate Gaurd 1"
+  prerequisite: null
+  summary: "מחר יום שוק, והשומרים רוצים שתעמדו איתם בשער. הראו לשומר טומלין Tomlin לבד שאתם זוכרים מתי אומרים do ומתי does."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: do_does_homework_q01_finish
+rewards: { xp: 4300, items: [{ id: coin, amount: 775 }, { id: quest_loot_mid_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: "Main Gate Gaurd 1"
+    dialogue_id: do_does_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 3
+    success_required: true
+    instance_id: do_does_homework_q01_mine_does_words
+    display_text: אספו רק את המילים שהולכות עם does.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 4
+    success_required: true
+    instance_id: do_does_homework_q01_match_do_or_does
+    display_text: חברו כל משפט ל־do או ל־does.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 5
+    success_required: true
+    instance_id: do_does_homework_q01_when_does_the_market_start
+    display_text: בנו את השאלה באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 5
+    success_required: true
+    instance_id: do_does_homework_q01_we_do_not_give_up
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 6
+    success_required: true
+    instance_id: do_does_homework_q01_she_does_not_know_the_answer
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest5_Silver_Fountain_Court
+    difficulty: 6
+    success_required: true
+    instance_id: do_does_homework_q01_say_do_your_friends_speak_english
+    display_text: אמרו את השאלה הבאה באנגלית בקול.

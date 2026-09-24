@@ -1,0 +1,14 @@
+questline:
+  id: articles_a_an_homework
+  npc_id: Fisherman
+  display_name: "A / An - שיעורי בית"
+  theme: "Homework for the A / An line: no new rule. Nemo asks the learner to show, without help, that they still choose a or an correctly, including when a describing word stands in the middle."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: articles_a_an_homework__q01_nemos_practice_net
+    name: "Nemo's Practice Net"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 5600, items: [{ id: coin, amount: 1010 }, { id: quest_loot_late_finale, amount: 1 }] }

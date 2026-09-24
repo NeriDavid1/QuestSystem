@@ -1,0 +1,14 @@
+questline:
+  id: adjectives_basics_homework
+  npc_id: Painter
+  display_name: "Adjectives - שיעורי בית"
+  theme: "Homework for the Adjectives line: no new words. The Painter paints a gift for the girl from the park only from the learner's describing words, and the learner shows without help that they still know colors, sizes and feelings, the adjective before the noun, and the adjective after is / are."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: adjectives_basics_homework__q01_the_gift_painting
+    name: "The Gift Painting"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 475, items: [{ id: coin, amount: 85 }, { id: quest_loot_early_finale, amount: 1 }] }

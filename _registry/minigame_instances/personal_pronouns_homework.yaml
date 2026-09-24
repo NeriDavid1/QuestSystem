@@ -1,0 +1,91 @@
+# Homework for the Personal Pronouns line (rehearsal for the next show). One quest, no new words:
+# every task asks the learner to pick the pronoun that fits a person, a group, an object or an animal.
+# Ladder: recognise what It stands for (Dwarf Miner) -> build (Word Ordering) -> spell (Letter Ordering)
+# -> build (Word Ordering) -> build fast (Fruit Slice) -> say it (Speak Aloud, full phrase checked).
+instances:
+
+  personal_pronouns_homework_q01_mine_it_words:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק את מה שאפשר לקרוא לו It."
+    tasks: [hat, crown, dog, ball, cat, tree]
+    target: "hat, crown, dog, ball, cat, tree"
+    variant: word_category
+    success: "נכון. It בא במקום חפץ או בעל חיים, אף פעם לא במקום אדם."
+    params:
+      prompt: "אספו רק את מה שאפשר לקרוא לו It."
+      categoryLabel: "It"
+      targetWords: [hat, crown, dog, ball, cat, tree]
+      distractorWords: [king, girl, teacher, mother, boy, singer]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  personal_pronouns_homework_q01_she_is_my_sister:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [She, is, my, sister]
+    target: "She is my sister."
+    variant: sentence_building
+    success: "נכון. אחות היא בת, ולכן She."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: היא אחותי. סדרו את כל המילים."
+      translation: "היא אחותי."
+      englishWordsInOrder: [She, is, my, sister]
+      preFilledIndices: []
+      distractorWords: [He, They, are, brother]
+
+  personal_pronouns_homework_q01_spell_they:
+    minigame_id: letter_ordering
+    instruction: "כתבו באנגלית את המילה שפירושה הם או הן."
+    tasks: [t, h, e, y]
+    target: they
+    variant: word_spelling
+    success: "נכון. במילה הזאת מדברים על כמה אנשים אחרים."
+    params:
+      prompt: "כתבו באנגלית את המילה שפירושה הם או הן."
+      targetWord: they
+      extraDistractorCount: 2
+      customDistractors: []
+
+  personal_pronouns_homework_q01_they_are_in_the_park:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [They, are, in, the, park]
+    target: "They are in the park."
+    variant: sentence_building
+    success: "נכון. כמה אנשים אחרים, ולכן They."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: הם בפארק. סדרו את כל המילים."
+      translation: "הם בפארק."
+      englishWordsInOrder: [They, are, in, the, park]
+      preFilledIndices: []
+      distractorWords: [We, He, is]
+
+  personal_pronouns_homework_q01_it_is_a_big_dog:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [It, is, a, big, dog]
+    target: "It is a big dog"
+    variant: word_slicing
+    success: "נכון. כלב הוא בעל חיים, ולכן It."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: זה כלב גדול."
+      segmentation: Words
+      targetText: "It is a big dog"
+      preFilledIndices: []
+      distractors: [He, She, are]
+      extraLetterDistractorCount: 0
+
+  personal_pronouns_homework_q01_say_we_are_good_friends:
+    minigame_id: speak_aloud
+    instruction: "אמרו בקול את המשפט המלא באנגלית."
+    tasks: [We, are, good, friends]
+    target: "We are good friends."
+    variant: short_phrase
+    success: "ראש הכפר מוחא כפיים. הלהקה מוכנה להצגה הבאה."
+    params:
+      prompt: "אמרו בקול את המשפט המלא באנגלית. משמעותו בעברית: אנחנו חברים טובים."
+      targetWords: [We, are, good, friends]
+      targetPhrase: "We are good friends."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

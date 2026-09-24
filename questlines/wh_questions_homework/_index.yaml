@@ -1,0 +1,14 @@
+questline:
+  id: wh_questions_homework
+  npc_id: Ghost
+  display_name: "Wh-Questions - שיעורי בית"
+  theme: "Homework for the Wh-Questions line: no new words. The ghost writes a question notebook so she never forgets again, and the learner fills it with What, Where, When, Who, Why and How questions without help."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: wh_questions_homework__q01_the_ghosts_question_notebook
+    name: "The Ghost's Question Notebook"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 3350, items: [{ id: coin, amount: 605 }, { id: quest_loot_mid_finale, amount: 1 }] }

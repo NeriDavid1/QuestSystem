@@ -1,0 +1,21 @@
+# DO / DOES homework - guard for a day. Continues after the lesson: the magic is back in all four
+# speaking stones, and Tomlin, the gate guard whose stone the learner saved last, wants the learner beside the guards on market day.
+# Homework teaches nothing new: no rule before practice, a short rule reminder at the end.
+# Tomlin is masculine; the learner is addressed in plural. Hebrew-first, short blocks.
+# No quotation marks inside dialogue text. No em dash.
+dialogues:
+
+  do_does_homework_q01_start:
+    speaker: "Main Gate Gaurd 1"
+    lines:
+      - "שלום שוב. כל העיר מדברת עליכם - בזכותכם הקסם חזר לכל ארבע אבני הדיבור."
+      - "מחר יום שוק, וכל השומרים רוצים שתעמדו איתנו בשער, כשומרים ליום אחד."
+      - "אבל שומר אמיתי זוכר את סוד פעלי העזר לבד, בלי עזרה."
+      - "היום אין שום דבר חדש. רק תראו לי מה אתם זוכרים. התיבה בחצר המזרקה מחכה לכם."
+
+  do_does_homework_q01_finish:
+    speaker: "Main Gate Gaurd 1"
+    lines:
+      - "ידעתי שתצליחו. אתם זוכרים את הסוד לבד, כמו שומרים אמיתיים, ומחר תעמדו איתנו בשער."
+      - "זכרו: I, you, we, they הולכים עם do. He, she, it הולכים עם does, ואחריו הפועל בלי s: Does he play? = האם הוא משחק?"
+      - "כל הכבוד. עשיתם את שיעורי הבית לבד."

@@ -1,0 +1,14 @@
+questline:
+  id: noun_repair_shop_homework
+  npc_id: teacher_maya
+  display_name: "Noun Repair Shop: The Missing Names - שיעורי בית"
+  theme: "Homework for the Noun Repair Shop line: no new words. Since the shop reopened, broken name tags keep arriving from all over the kingdom, and Maya asks the learner to fix today's box alone - telling nouns from other words, completing and spelling them, and using them in short sentences."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: noun_repair_shop_homework__q01_the_box_of_broken_tags
+    name: "The Box of Broken Tags"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 400, items: [{ id: coin, amount: 70 }, { id: quest_loot_early_finale, amount: 1 }] }

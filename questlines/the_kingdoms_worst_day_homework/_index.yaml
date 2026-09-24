@@ -1,0 +1,14 @@
+questline:
+  id: the_kingdoms_worst_day_homework
+  npc_id: City Gaurd Info
+  display_name: "The Kingdom's Worst Day - שיעורי בית"
+  theme: "Homework for The Kingdom's Worst Day line: no new words. On the evening after the fair, the wind mixes up the word cards on the fair's board by the gate. Fenn the guard asks the learner to pick out the verbs, put nouns, verbs and adjectives in their places, and rebuild short sentences alone before the gate closes for the night."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: the_kingdoms_worst_day_homework__q01_fenns_windy_evening
+    name: "Fenn's Windy Evening"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 550, items: [{ id: coin, amount: 100 }, { id: quest_loot_early_finale, amount: 1 }] }

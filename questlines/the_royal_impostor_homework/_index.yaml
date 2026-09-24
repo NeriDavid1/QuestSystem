@@ -1,0 +1,14 @@
+questline:
+  id: the_royal_impostor_homework
+  npc_id: "City Gaurd Info"
+  display_name: "The Lost & Found Cart - שיעורי בית"
+  theme: "Homework for The Lost & Found Cart line: no new words. New forgotten things fill the cart again, and while Fenn guards the gate the learner writes the new owner list alone, then helps Will, the Painter and the two gate guards find their things with my, your, his, her, our and their."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: the_royal_impostor_homework__q01_a_new_list_for_the_cart
+    name: "A New List for the Cart"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 1150, items: [{ id: coin, amount: 205 }, { id: quest_loot_early_finale, amount: 1 }] }

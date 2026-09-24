@@ -1,0 +1,14 @@
+questline:
+  id: this_or_that_homework
+  npc_id: Village Head
+  display_name: "This Or That? - שיעורי בית"
+  theme: "Homework for the This Or That? line: no new words. Tomorrow guests who speak only English visit the town, and the new Knowledge Advisors show the Village Head, without help, that they still point correctly with this, that, these and those, and use plain the when nothing is pointed at."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: this_or_that_homework__q01_the_advisors_first_tour
+    name: "The Advisors' First Tour"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 2500, items: [{ id: coin, amount: 450 }, { id: quest_loot_mid_finale, amount: 1 }] }

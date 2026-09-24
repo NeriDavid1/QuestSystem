@@ -1,0 +1,18 @@
+# A / An homework - Nemo checks the practice net before the Sea Queen visits.
+# Homework teaches nothing new: no rule before practice, a short rule reminder at the end.
+# Hebrew-first, short blocks. No quotation marks inside dialogue text. No em dash.
+dialogues:
+
+  articles_a_an_homework_q01_start:
+    speaker: Fisherman
+    lines:
+      - "שלום שוב. הרשת החדשה מחזיקה חזק, ומחר מלכת הים מגיעה לבדוק אותה."
+      - "היום אין כלל חדש. אני רק רוצה לראות שאתם זוכרים לבד מתי a ומתי an."
+      - "כל תשובה נכונה היא עוד קשר חזק ברשת. התיבה ליד המים מחכה לכם."
+
+  articles_a_an_homework_q01_finish:
+    speaker: Fisherman
+    lines:
+      - "כל הקשרים ברשת חזקים. מלכת הים תהיה גאה בכם."
+      - "זכרו: המילה שבאה מיד אחרי a או an מחליטה. אם היא מתחילה ב־a, e, i, o, u, אומרים an."
+      - "כל הכבוד. עשיתם את שיעורי הבית לבד."

@@ -1,0 +1,56 @@
+quest:
+  id: the_these_those_homework__q01_near_and_far_on_the_farm
+  name: "Near and Far on the Farm"
+  level_required: 50
+  giver_npc: Farmer
+  prerequisite: null
+  summary: "ראש הכפר בא מחר לראות את החווה. הראו לחקלאי לבד שאתם זוכרים מתי אומרים The, מתי These ומתי Those."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: the_these_those_homework_q01_finish
+rewards: { xp: 2000, items: [{ id: coin, amount: 360 }, { id: quest_loot_mid_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: Farmer
+    dialogue_id: the_these_those_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 3
+    success_required: true
+    instance_id: the_these_those_homework_q01_mine_more_than_one
+    display_text: אספו רק מילים שיכולות לבוא אחרי these או those.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 4
+    success_required: true
+    instance_id: the_these_those_homework_q01_these_pigs_are_dirty
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 5
+    success_required: true
+    instance_id: the_these_those_homework_q01_those_trees_are_tall
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 5
+    success_required: true
+    instance_id: the_these_those_homework_q01_the_dog_and_those_kids
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 6
+    success_required: true
+    instance_id: the_these_those_homework_q01_the_hat_in_my_bag
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Fire_Camp_Tower_Of_Lost_Vigil
+    difficulty: 6
+    success_required: true
+    instance_id: the_these_those_homework_q01_say_these_boots_are_clean
+    display_text: אמרו את המשפט הבא באנגלית בקול.

@@ -1,0 +1,97 @@
+# Homework for The Adjectives Mastery line (Maya's answer cards). One quest, no new rule: every task checks
+# the adjective before the noun or a comparison with -er and than, in new sentences built from lesson words.
+# Ladder: recognise what can stand before than (Dwarf Miner) -> spell bigger with its double g (Fruit Slice Letters)
+# -> build a comparison (Word Ordering) -> build fast, adjective before the noun (Fruit Slice Words)
+# -> the two-adjective order trap (Word Ordering) -> say a comparison (Speak Aloud, phrase mode like lesson q03).
+# Traps: -er nouns (teacher, sister, water) and base adjectives (strong, dark, bright) in the mine - 5 targets, all
+# required, so collecting every -er word or every adjective fails most runs; strong / more / weaker next to stronger;
+# sharper next to a sharp sword; cleaner / brighter / dirty next to a clean and bright room (Hebrew puts the noun first).
+instances:
+
+  adjectives_mastery_homework_q01_mine_words_before_than:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק מילים שיכולות לבוא לפני than."
+    tasks: [stronger, darker, brighter, cleaner, sharper]
+    target: "stronger, darker, brighter, cleaner, sharper"
+    variant: word_category
+    success: "נכון. לפני than באה רק מילת השוואה - שם תואר עם er."
+    params:
+      prompt: "אספו רק מילים שיכולות לבוא לפני than."
+      categoryLabel: "___ than"
+      targetWords: [stronger, darker, brighter, cleaner, sharper]
+      distractorWords: [strong, dark, bright, teacher, sister, water]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  adjectives_mastery_homework_q01_spell_bigger:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר וכתבו באנגלית את המילה שפירושה גדול יותר."
+    tasks: [b, i, g, g, e, r]
+    target: bigger
+    variant: letter_slicing
+    success: "נכון. ב־bigger כותבים את g פעמיים."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר וכתבו באנגלית את המילה שפירושה גדול יותר."
+      segmentation: Letters
+      targetText: bigger
+      preFilledIndices: []
+      distractors: []
+      extraLetterDistractorCount: 3
+
+  adjectives_mastery_homework_q01_armor_is_stronger:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [Armor, is, stronger, than, a, shirt]
+    target: "Armor is stronger than a shirt."
+    variant: sentence_building
+    success: "נכון. חזק יותר זו מילה אחת באנגלית - stronger."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: שריון חזק יותר מחולצה. סדרו את כל המילים."
+      translation: "שריון חזק יותר מחולצה."
+      englishWordsInOrder: [Armor, is, stronger, than, a, shirt]
+      preFilledIndices: []
+      distractorWords: [strong, more, weaker]
+
+  adjectives_mastery_homework_q01_a_sharp_sword:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית."
+    tasks: [I, have, a, sharp, sword]
+    target: "I have a sharp sword"
+    variant: word_slicing
+    success: "נכון. שם התואר sharp בא לפני sword."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית: יש לי חרב חדה."
+      segmentation: Words
+      targetText: "I have a sharp sword"
+      preFilledIndices: []
+      distractors: [sharper, weak, wand]
+      extraLetterDistractorCount: 0
+
+  adjectives_mastery_homework_q01_a_clean_and_bright_room:
+    minigame_id: word_ordering
+    instruction: "בנו את המשפט באנגלית לפי התרגום המלא בעברית."
+    tasks: [This, is, a, clean, and, bright, room]
+    target: "This is a clean and bright room."
+    variant: sentence_building
+    success: "נכון. גם כשיש שני שמות תואר, שניהם באים לפני שם העצם."
+    params:
+      prompt: "בנו את המשפט באנגלית לפי התרגום המלא בעברית: זה חדר נקי ובהיר."
+      translation: "זה חדר נקי ובהיר."
+      englishWordsInOrder: [This, is, a, clean, and, bright, room]
+      preFilledIndices: [0, 1]
+      distractorWords: [cleaner, brighter, dirty]
+
+  adjectives_mastery_homework_q01_say_night_is_darker:
+    minigame_id: speak_aloud
+    instruction: "אמרו את המשפט הבא באנגלית בקול."
+    tasks: [Night, is, darker, than, day]
+    target: "Night is darker than day."
+    variant: short_phrase
+    success: "הכרטיס האחרון בתיבה. עכשיו מאיה יכולה לבדוק את הכרטיסים שלה."
+    params:
+      prompt: "אמרו את המשפט הבא באנגלית בקול. משמעותו בעברית: לילה חשוך יותר מיום."
+      targetWords: []
+      targetPhrase: "Night is darker than day."
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

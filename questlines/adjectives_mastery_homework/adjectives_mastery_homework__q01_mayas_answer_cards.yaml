@@ -1,0 +1,56 @@
+quest:
+  id: adjectives_mastery_homework__q01_mayas_answer_cards
+  name: "Maya's Answer Cards"
+  level_required: 50
+  giver_npc: teacher_maya
+  prerequisite: null
+  summary: "המורה מאיה למדה כל הלילה ורוצה לבדוק את עצמה. כתבו לבד כרטיסי תשובות לתיבה, והראו שאתם זוכרים איפה בא שם התואר ואיך משווים עם er."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: adjectives_mastery_homework_q01_finish
+rewards: { xp: 1550, items: [{ id: coin, amount: 280 }, { id: quest_loot_mid_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: adjectives_mastery_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 3
+    success_required: true
+    instance_id: adjectives_mastery_homework_q01_mine_words_before_than
+    display_text: אספו רק מילים שיכולות לבוא לפני than.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 4
+    success_required: true
+    instance_id: adjectives_mastery_homework_q01_spell_bigger
+    display_text: חתכו את הפירות לפי הסדר וכתבו את המילה באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 5
+    success_required: true
+    instance_id: adjectives_mastery_homework_q01_armor_is_stronger
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 5
+    success_required: true
+    instance_id: adjectives_mastery_homework_q01_a_sharp_sword
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 6
+    success_required: true
+    instance_id: adjectives_mastery_homework_q01_a_clean_and_bright_room
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 6
+    success_required: true
+    instance_id: adjectives_mastery_homework_q01_say_night_is_darker
+    display_text: אמרו את המשפט הבא באנגלית בקול.

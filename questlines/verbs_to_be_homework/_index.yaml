@@ -1,0 +1,14 @@
+questline:
+  id: verbs_to_be_homework
+  npc_id: teacher_maya
+  display_name: "The Royal Speech Crystal - שיעורי בית"
+  theme: "Homework for the Royal Speech Crystal line (the verb to be): no new rule. New kids arrive in the kingdom tomorrow and Teacher Maya will teach them herself, so the learner fills her board, without help, with sentences that use am, is and are correctly - after pronouns, after plural nouns and after a singular You."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: verbs_to_be_homework__q01_mayas_new_class
+    name: "Maya's New Class"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 900, items: [{ id: coin, amount: 160 }, { id: quest_loot_early_finale, amount: 1 }] }

@@ -1,0 +1,56 @@
+quest:
+  id: adjectives_basics_homework__q01_the_gift_painting
+  name: "The Gift Painting"
+  level_required: 50
+  giver_npc: Painter
+  prerequisite: null
+  summary: "הילדה מהפארק תקבל ציור במתנה, והוא ייצא בדיוק כמו המילים שלכם. הראו לבד שאתם זוכרים את מילות התיאור ואיפה הן עומדות במשפט."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: adjectives_basics_homework_q01_finish
+rewards: { xp: 475, items: [{ id: coin, amount: 85 }, { id: quest_loot_early_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: Painter
+    dialogue_id: adjectives_basics_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 3
+    success_required: true
+    instance_id: adjectives_basics_homework_q01_mine_describing_words
+    display_text: אספו רק את מילות התיאור.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 4
+    success_required: true
+    instance_id: adjectives_basics_homework_q01_match_is_are
+    display_text: השלימו כל משפט ב־is או ב־are.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 5
+    success_required: true
+    instance_id: adjectives_basics_homework_q01_a_big_red_apple
+    display_text: בנו את התיאור באנגלית לפי התרגום בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 5
+    success_required: true
+    instance_id: adjectives_basics_homework_q01_a_tall_green_tree
+    display_text: חתכו את הפירות לפי הסדר ובנו את התיאור באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 6
+    success_required: true
+    instance_id: adjectives_basics_homework_q01_the_small_birds_are_happy
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest7_The_Sunspire_Tree
+    difficulty: 6
+    success_required: true
+    instance_id: adjectives_basics_homework_q01_say_the_girl_is_happy
+    display_text: אמרו את המשפט הבא באנגלית בקול.

@@ -1,0 +1,56 @@
+quest:
+  id: verbs_to_be_homework__q01_mayas_new_class
+  name: "Maya's New Class"
+  level_required: 50
+  giver_npc: teacher_maya
+  prerequisite: null
+  summary: "מחר מגיעים לממלכה ילדים חדשים, והמורה מאיה תלמד אותם בעצמה. הראו לה לבד שאתם זוכרים מתי אומרים am, is ו־are."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: verbs_to_be_homework_q01_finish
+rewards: { xp: 900, items: [{ id: coin, amount: 160 }, { id: quest_loot_early_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: teacher_maya
+    dialogue_id: verbs_to_be_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 3
+    success_required: true
+    instance_id: verbs_to_be_homework_q01_mine_are_words
+    display_text: אספו רק את המילים שהולכות עם are.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 4
+    success_required: true
+    instance_id: verbs_to_be_homework_q01_match_am_is_are
+    display_text: השלימו כל משפט עם am, is או are.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 5
+    success_required: true
+    instance_id: verbs_to_be_homework_q01_my_friends_are_in_the_castle
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 5
+    success_required: true
+    instance_id: verbs_to_be_homework_q01_the_dragon_is_hungry
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 6
+    success_required: true
+    instance_id: verbs_to_be_homework_q01_you_are_a_brave_knight
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Lost_Chest2_Driftgold_Bay
+    difficulty: 6
+    success_required: true
+    instance_id: verbs_to_be_homework_q01_say_we_are_your_friends
+    display_text: אמרו את המשפט הבא באנגלית בקול.

@@ -1,0 +1,19 @@
+# Adjectives homework - the Painter paints a gift for the girl from the park, only from the learner's words.
+# Homework teaches nothing new: no rule before practice, a short rule reminder at the end.
+# The Painter's lines avoid gendered first-person forms (the lesson says הצייר, other lines say הציירת).
+# Hebrew-first, short blocks. No quotation marks inside dialogue text. No em dash.
+dialogues:
+
+  adjectives_basics_homework_q01_start:
+    speaker: Painter
+    lines:
+      - "שלום שוב. הילדה מהפארק עזרה לנו מאוד עם השלטים לתערוכה, ואני רוצה לצייר לה ציור במתנה."
+      - "הפעם אצייר רק את מה שתתארו לי באנגלית. אם מילה אחת תהיה לא נכונה, גם הציור ייצא לא נכון."
+      - "היום אין מילים חדשות. תראו לי לבד מה אתם כבר יודעים. האבן ליד העץ מחכה לכם."
+
+  adjectives_basics_homework_q01_finish:
+    speaker: Painter
+    lines:
+      - "תראו. הציור יצא בדיוק כמו שתיארתם, ומחר הילדה מהפארק תקבל אותו במתנה."
+      - "זכרו: מילת התיאור באה לפני שם הדבר, a red apple = תפוח אדום. אחרי is או are היא באה בסוף, The apples are red = התפוחים אדומים."
+      - "כל הכבוד. עשיתם את שיעורי הבית לבד."

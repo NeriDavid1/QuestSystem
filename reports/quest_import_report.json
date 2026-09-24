@@ -1,15 +1,15 @@
 {
   "importer_version": "1.0.0",
-  "source_digest": "a105350df85eac0ca93f322325ded46526c6be081f5de4898a07b759415098f6",
+  "source_digest": "7c56cb1aae181b246a32f4fef79652a66c83655987da21ce013555810db895c8",
   "counts": {
     "catalog_entries": 261,
     "step_type_definitions": 6,
-    "dialogues": 182,
-    "dialogue_lines": 478,
-    "minigame_instances": 377,
-    "questlines": 18,
-    "quests": 81,
-    "steps": 435,
+    "dialogues": 206,
+    "dialogue_lines": 560,
+    "minigame_instances": 449,
+    "questlines": 30,
+    "quests": 93,
+    "steps": 507,
     "errors": 0,
     "warnings": 0,
     "info": 33

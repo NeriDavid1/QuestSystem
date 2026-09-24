@@ -1,0 +1,56 @@
+quest:
+  id: the_kingdoms_worst_day_homework__q01_fenns_windy_evening
+  name: "Fenn's Windy Evening"
+  level_required: 50
+  giver_npc: City Gaurd Info
+  prerequisite: null
+  summary: "רוח הערב ערבבה את כרטיסי המילים בלוח של היריד. הראו לשומר פן שאתם זוכרים לבד שמות, פעולות ותיאורים, וסדרו את הלוח לפני שהשער נסגר."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: the_kingdoms_worst_day_homework_q01_finish
+rewards: { xp: 550, items: [{ id: coin, amount: 100 }, { id: quest_loot_early_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: City Gaurd Info
+    dialogue_id: the_kingdoms_worst_day_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 3
+    success_required: true
+    instance_id: the_kingdoms_worst_day_homework_q01_mine_verbs
+    display_text: אספו רק את מילות הפעולה.
+  - type: play_minigame
+    minigame_id: word_matching
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 4
+    success_required: true
+    instance_id: the_kingdoms_worst_day_homework_q01_match_word_places
+    display_text: חברו כל מילה למקום החסר שמתאים לה.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 4
+    success_required: true
+    instance_id: the_kingdoms_worst_day_homework_q01_the_crown_is_small
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 5
+    success_required: true
+    instance_id: the_kingdoms_worst_day_homework_q01_open_the_big_book
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 6
+    success_required: true
+    instance_id: the_kingdoms_worst_day_homework_q01_small_key_big_gate
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Wooden_Cart1_Inside_Gate
+    difficulty: 6
+    success_required: true
+    instance_id: the_kingdoms_worst_day_homework_q01_say_close_the_big_gate
+    display_text: אמרו את המשפט הבא באנגלית בקול.

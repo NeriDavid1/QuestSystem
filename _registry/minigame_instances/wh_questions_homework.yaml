@@ -1,0 +1,100 @@
+# Homework for the Wh-Questions line (the ghost's question notebook). One quest, no new words:
+# the learner must pick the question word from the Hebrew meaning, never from word shape.
+# Ladder: know what When asks about (Dwarf Miner) -> spell question words (Word Matching)
+# -> build (Word Ordering) -> build fast (Fruit Slice) -> build (Word Ordering) -> ask it (Speak Aloud).
+# Word Matching gaps vary (middle, end, middle, end) and the letter order never sits opposite its word.
+instances:
+
+  wh_questions_homework_q01_mine_when_answers:
+    minigame_id: dwarf_miner
+    instruction: "אספו רק מילים שעונות על השאלה When."
+    tasks: [night, morning, today, tomorrow, evening, winter]
+    target: "night, morning, today, tomorrow, evening, winter"
+    variant: word_category
+    success: "נכון. When שואלת על זמן."
+    params:
+      prompt: "אספו רק מילים שעונות על השאלה When."
+      categoryLabel: "When?"
+      targetWords: [night, morning, today, tomorrow, evening, winter]
+      distractorWords: [ship, sailor, sea, tower, girl, box]
+      requiredCorrect: 5
+      allowedMistakes: 3
+
+  wh_questions_homework_q01_match_question_words:
+    minigame_id: word_matching
+    instruction: "השלימו את האות החסרה בכל מילת שאלה."
+    tasks: [WH_T, WHER_, W_Y, HO_]
+    target: "what, where, why, how"
+    variant: missing_letter_matching
+    success: "ארבע מילות שאלה חזרו למחברת."
+    params:
+      letters:
+        - { id: wh_hw_tile_e, value: e }
+        - { id: wh_hw_tile_w, value: w }
+        - { id: wh_hw_tile_a, value: a }
+        - { id: wh_hw_tile_n, value: n }
+        - { id: wh_hw_tile_h, value: h }
+        - { id: wh_hw_tile_o, value: o }
+      wordTasks:
+        - { id: wh_hw_task_what, image: '', fullWord: what, missingIndices: [2] }
+        - { id: wh_hw_task_where, image: '', fullWord: where, missingIndices: [4] }
+        - { id: wh_hw_task_why, image: '', fullWord: why, missingIndices: [1] }
+        - { id: wh_hw_task_how, image: '', fullWord: how, missingIndices: [2] }
+
+  wh_questions_homework_q01_where_is_the_old_tower:
+    minigame_id: word_ordering
+    instruction: "בנו את השאלה באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [Where, is, the, old, tower]
+    target: "Where is the old tower?"
+    variant: sentence_building
+    success: "נכון. שואלים על מקום, ולכן Where."
+    params:
+      prompt: "בנו את השאלה באנגלית לפי התרגום המלא בעברית: איפה המגדל הישן? סדרו את כל המילים."
+      translation: "איפה המגדל הישן?"
+      englishWordsInOrder: [Where, is, the, old, tower]
+      preFilledIndices: []
+      distractorWords: [When, Who, are]
+
+  wh_questions_homework_q01_who_is_at_the_door:
+    minigame_id: fruit_slice
+    instruction: "חתכו את הפירות לפי הסדר ובנו את השאלה באנגלית."
+    tasks: [Who, is, at, the, door]
+    target: "Who is at the door"
+    variant: word_slicing
+    success: "נכון. שואלים על אדם, ולכן Who."
+    params:
+      prompt: "חתכו את הפירות לפי הסדר ובנו את השאלה באנגלית: מי בדלת?"
+      segmentation: Words
+      targetText: "Who is at the door"
+      preFilledIndices: []
+      distractors: [What, Where, are]
+      extraLetterDistractorCount: 0
+
+  wh_questions_homework_q01_why_are_you_sad:
+    minigame_id: word_ordering
+    instruction: "בנו את השאלה באנגלית לפי התרגום המלא בעברית. סדרו את כל המילים."
+    tasks: [Why, are, you, sad]
+    target: "Why are you sad?"
+    variant: sentence_building
+    success: "נכון. שואלים על סיבה, ולכן Why."
+    params:
+      prompt: "בנו את השאלה באנגלית לפי התרגום המלא בעברית: למה אתה עצוב? סדרו את כל המילים."
+      translation: "למה אתה עצוב?"
+      englishWordsInOrder: [Why, are, you, sad]
+      preFilledIndices: []
+      distractorWords: [How, When, is]
+
+  wh_questions_homework_q01_say_who_is_your_teacher:
+    minigame_id: speak_aloud
+    instruction: "אמרו את השאלה הבאה באנגלית בקול."
+    tasks: [Who, is, your, teacher]
+    target: "Who is your teacher?"
+    variant: short_phrase
+    success: "הרוח כותבת את השאלה האחרונה במחברת."
+    params:
+      prompt: "אמרו את השאלה הבאה באנגלית בקול. משמעותה בעברית: מי המורה שלך?"
+      targetWords: [Who, is, your, teacher]
+      targetPhrase: "Who is your teacher?"
+      silenceTimeoutSeconds: 3.0
+      allowFuzzyMatch: true
+      referenceClip: ''

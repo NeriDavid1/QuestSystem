@@ -1,0 +1,14 @@
+questline:
+  id: adjectives_mastery_homework
+  npc_id: teacher_maya
+  display_name: "The Adjectives Mastery - שיעורי בית"
+  theme: "Homework for The Adjectives Mastery line: no new rule. The lesson ended with Maya running off to study because the learners became masters before her. She comes back after a night of studying and wants to check her own answer cards against cards the masters write alone: the adjective before the noun, and comparisons with -er and than."
+  quest_count: 1
+  level_range: [1, 50]
+
+quests:
+  - id: adjectives_mastery_homework__q01_mayas_answer_cards
+    name: "Maya's Answer Cards"
+    level: 50
+    prerequisite: null
+    rewards: { xp: 1550, items: [{ id: coin, amount: 280 }, { id: quest_loot_mid_finale, amount: 1 }] }

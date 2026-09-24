@@ -1,0 +1,56 @@
+quest:
+  id: personal_pronouns_homework__q01_rehearsal_for_the_next_show
+  name: "Rehearsal for the Next Show"
+  level_required: 50
+  giver_npc: Village Head
+  prerequisite: null
+  summary: "כל הכפר מבקש הצגה נוספת. לפני החזרות, הראו לראש הכפר שאתם זוכרים לבד את כל כינויי הגוף."
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: personal_pronouns_homework_q01_finish
+rewards: { xp: 675, items: [{ id: coin, amount: 120 }, { id: quest_loot_early_finale, amount: 1 }] }
+steps:
+  - type: talk_to_npc
+    npc_id: Village Head
+    dialogue_id: personal_pronouns_homework_q01_start
+  - type: play_minigame
+    minigame_id: dwarf_miner
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 3
+    success_required: true
+    instance_id: personal_pronouns_homework_q01_mine_it_words
+    display_text: אספו רק את מה שאפשר לקרוא לו It.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 4
+    success_required: true
+    instance_id: personal_pronouns_homework_q01_she_is_my_sister
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: letter_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 4
+    success_required: true
+    instance_id: personal_pronouns_homework_q01_spell_they
+    display_text: כתבו באנגלית את המילה שפירושה הם או הן.
+  - type: play_minigame
+    minigame_id: word_ordering
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 5
+    success_required: true
+    instance_id: personal_pronouns_homework_q01_they_are_in_the_park
+    display_text: בנו את המשפט באנגלית לפי התרגום המלא בעברית.
+  - type: play_minigame
+    minigame_id: fruit_slice
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 5
+    success_required: true
+    instance_id: personal_pronouns_homework_q01_it_is_a_big_dog
+    display_text: חתכו את הפירות לפי הסדר ובנו את המשפט באנגלית.
+  - type: play_minigame
+    minigame_id: speak_aloud
+    world_object_id: Exam_Table_Fairy_Rose_Park
+    difficulty: 6
+    success_required: true
+    instance_id: personal_pronouns_homework_q01_say_we_are_good_friends
+    display_text: אמרו בקול את המשפט המלא באנגלית.
