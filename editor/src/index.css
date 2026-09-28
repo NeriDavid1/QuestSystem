@@ -3202,17 +3202,25 @@ select:focus {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
 }
 
-.mg-mock-listening .mg-mock-parchment {
-  border-color: #087477;
-  background: linear-gradient(180deg, #fff5dc, #f1e4c0);
-  color: #193c42;
-  box-shadow: inset 0 0 0 2px #d6b259;
-}
-.mg-mock-listening .mg-mock-slot { border-color: #087477; }
-.mg-mock-listening .mg-mock-letter-tile { border-color: #b18b32; color: #193c42; text-transform: uppercase; }
-.mg-mock-listen-control { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 auto 16px; max-width: 100%; }
-.mg-mock-listen-control > svg { flex-shrink: 0; width: 44px; height: 44px; padding: 10px; border-radius: 50%; background: #087477; color: white; }
-.mg-mock-listen-control small { max-width: 220px; line-height: 1.4; }
+.mg-listen-preview { max-width: 940px; margin-inline: auto; }
+.mg-listen-board { position: relative; aspect-ratio: 5 / 3; container-type: inline-size; color: #193c42; }
+.mg-listen-frame { display: block; width: 100%; height: 100%; }
+.mg-listen-title { position: absolute; inset: 5% 26% auto; text-align: center; font-size: clamp(12px, 3cqi, 30px); font-weight: 800; line-height: 1.3; }
+.mg-listen-close { position: absolute; top: 11%; right: 6%; width: 5%; aspect-ratio: 1; display: grid; place-items: center; background-size: contain; background-repeat: no-repeat; color: #176470; font-size: clamp(12px, 2.6cqi, 26px); font-weight: 800; }
+.mg-listen-prompt { position: absolute; inset: 16% 15% auto; text-align: center; font-size: clamp(9px, 1.7cqi, 17px); font-weight: 600; line-height: 1.3; height: 10%; overflow: auto; overflow-wrap: anywhere; }
+.mg-listen-controls { position: absolute; inset: 23% 25% auto; height: 22%; display: flex; justify-content: center; align-items: center; gap: 6%; padding-bottom: 5%; }
+.mg-listen-controls > img { height: 100%; width: auto; }
+.mg-listen-controls > small { position: absolute; bottom: 0; inset-inline: 0; text-align: center; font-size: clamp(8px, 1.6cqi, 16px); }
+.mg-listen-wave { height: 56%; width: 22%; display: flex; justify-content: center; align-items: center; gap: 5%; opacity: .42; }
+.mg-listen-wave i { width: 5%; background: #24777a; border-radius: 3px; }
+.mg-listen-slots, .mg-listen-tiles { position: absolute; display: flex; justify-content: center; align-content: center; flex-wrap: wrap; gap: 1%; }
+.mg-listen-slots { inset: 45% 12% auto; height: 18%; }
+.mg-listen-slots img { height: 85%; max-width: 12%; object-fit: contain; }
+.mg-listen-divider { position: absolute; inset: 66% 15% auto; height: 1px; background: #b1935266; }
+.mg-listen-tiles { inset: 68% 7% auto; height: 18%; }
+.mg-listen-tiles span { display: grid; place-items: center; height: 90%; aspect-ratio: 1; max-width: 12%; background-size: contain; background-repeat: no-repeat; background-position: center; font-family: Georgia, serif; font-size: clamp(10px, 2.5cqi, 25px); font-weight: 700; }
+.mg-listen-helper { position: absolute; inset: 85% 13% auto; text-align: center; font-size: clamp(8px, 1.5cqi, 15px); }
+.mg-listen-note { display: block; margin-top: 6px; text-align: center; color: var(--ink-soft); font-size: 11px; }
 
 .mg-mock-close {
   position: absolute;

@@ -2,6 +2,10 @@ import type { ReactNode } from 'react'
 import { useT } from '../../i18n'
 import { tracingSymbols } from '../../lib/letterDrawing'
 import { orderingVisual } from '../../lib/letterOrdering'
+import listeningFrame from '../../assets/minigames/listen-build/ListeningFrame.png'
+import listeningTile from '../../assets/minigames/listen-build/LetterTile.png'
+import listeningButton from '../../assets/minigames/listen-build/ListenButton.png'
+import listeningSlot from '../../assets/minigames/listen-build/AnswerSlot.png'
 
 type MockParams = Record<string, unknown>
 
@@ -94,11 +98,39 @@ function LetterOrderingMock({ params, prompt, seed, listening = false }: { param
   const extra = asNumber(params.extraDistractorCount, 2)
   const custom = asStringArray(params.customDistractors)
   const pool = buildLetterPool(targetWord, extra, custom, seed)
+  if (listening) {
+    const hasAudio = Boolean(asString(params.promptAudio).trim())
+    const textClue = !hasAudio || params.hintMode === 'TextAndAudio' || params.hintMode === 1
+    return (
+      <div className="mg-listen-preview">
+        <div className="mg-listen-board" aria-hidden="true">
+          <img className="mg-listen-frame" src={listeningFrame} alt="" />
+          <div className="mg-listen-title">{t('mgMockListeningTitle')}</div>
+          <span className="mg-listen-close" style={{ backgroundImage: `url(${listeningSlot})` }}>×</span>
+          <div className="mg-listen-prompt" dir="auto">{textClue ? prompt || '…' : t('mgMockListeningInstruction')}</div>
+          {hasAudio && <div className="mg-listen-controls">
+            <div className="mg-listen-wave">{[30, 60, 85, 100, 85, 60, 30].map((height, i) => <i key={i} style={{ height: `${height}%` }} />)}</div>
+            <img src={listeningButton} alt="" />
+            <div className="mg-listen-wave">{[30, 60, 85, 100, 85, 60, 30].map((height, i) => <i key={i} style={{ height: `${height}%` }} />)}</div>
+            <small>{t('mgMockListeningReplay')}</small>
+          </div>}
+          <div className="mg-listen-slots" dir="ltr">
+            {Array.from({ length: Math.max(1, targetWord.length) }, (_, i) => <img src={listeningSlot} key={i} alt="" />)}
+          </div>
+          <div className="mg-listen-divider" />
+          <div className="mg-listen-tiles" dir="ltr">
+            {pool.map((ch, i) => <span key={`${ch}-${i}`} style={{ backgroundImage: `url(${listeningTile})` }}>{ch.toUpperCase()}</span>)}
+          </div>
+          <div className="mg-listen-helper">{t('mgMockListeningHelper')}</div>
+        </div>
+        <small className="mg-listen-note">{t('mgMockListeningPreview')}</small>
+      </div>
+    )
+  }
   return (
-    <div className={listening ? 'mg-mock-listening' : ''}>
     <ParchmentShell>
-      <div className="mg-mock-prompt" dir="auto">{listening && params.hintMode !== 'TextAndAudio' && params.hintMode !== 1 && params.promptAudio ? t('mgMockListeningInstruction') : prompt || '…'}</div>
-      {listening && params.promptAudio ? <div className="mg-mock-listen-control" title={t('mgMockListeningPreview')}><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9h4l5-4v14l-5-4H3z" /><path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M16 8a6 6 0 0 1 0 8M19 5a10 10 0 0 1 0 14" /></svg><small>{t('mgMockListeningPreview')}</small></div> : null}
+      <div className="mg-mock-prompt" dir="auto">{prompt || '…'}</div>
+
       <div className="mg-mock-slots" dir="ltr">
         {Array.from({ length: Math.max(1, targetWord.length) }, (_, i) => (
           <span className="mg-mock-slot" key={i} />
@@ -110,7 +142,6 @@ function LetterOrderingMock({ params, prompt, seed, listening = false }: { param
         ))}
       </div>
     </ParchmentShell>
-    </div>
   )
 }
 
