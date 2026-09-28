@@ -34,7 +34,8 @@ describe('current Letter Drawing contract', () => {
   it('resolves a typed word with case, repetitions and trimmed outer whitespace', () => {
     expect(tracingSymbols({ drawingInputMode: 'Word', word: ' Apple ', symbols: ['B'] })).toEqual(['A', 'p', 'p', 'l', 'e'])
     expect(tracingSymbols({ word: 'aAa' })).toEqual(['a', 'A', 'a'])
-    expect(tracingSymbols({ drawingInputMode: 'Symbols', word: 'Apple', symbols: ['z'] })).toEqual(['z'])
+    expect(tracingSymbols({ drawingInputMode: 'Symbols', word: 'Apple', symbols: ['z'] })).toEqual(['A', 'p', 'p', 'l', 'e'])
+    expect(tracingSymbols({ drawingInputMode: 'Symbols', word: '', symbols: ['z'] })).toEqual(['z'])
   })
   it('rejects invalid words without falling back to selected symbols', () => {
     for (const word of ['', 'two words', 'abc1', 'é', 'a-b']) {

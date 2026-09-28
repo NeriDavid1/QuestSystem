@@ -29,16 +29,17 @@ function DrawingForm() {
 describe('Letter Drawing word authoring', () => {
   it('shows word input for an existing catalog-based exercise and resolves typed letters', () => {
     const ui = render(<DrawingForm />)
-    const word = ui.getByPlaceholderText('Apple')
+    const word = ui.getByPlaceholderText('הקלידו כאן מילה לציור')
     expect(word).not.toBeNull()
+    expect((word as HTMLInputElement).value).toBe('')
+    expect(ui.getByTestId('resolved-letters').textContent).toBe('B')
     fireEvent.change(word, { target: { value: 'Apple' } })
     expect(ui.getByTestId('resolved-letters').textContent).toBe('Apple')
     const saved = JSON.parse(ui.getByTestId('saved-params').textContent!)
     expect(saved).toEqual({ symbols: ['B'], word: 'Apple', drawingInputMode: 'Word' })
-    const mode = ui.container.querySelector('select')!
-    expect(mode.value).toBe('Word')
-    fireEvent.change(mode, { target: { value: 'Symbols' } })
+    expect(ui.container.querySelector('select')).toBeNull()
+    fireEvent.change(word, { target: { value: '' } })
     expect(ui.getByTestId('resolved-letters').textContent).toBe('B')
-    expect((word as HTMLInputElement).value).toBe('Apple')
+    expect(JSON.parse(ui.getByTestId('saved-params').textContent!).drawingInputMode).toBe('Symbols')
   })
 })

@@ -45,7 +45,7 @@ describe('Letter Drawing preview', () => {
     expect(letters[2].getAttribute('aria-pressed')).toBe('true')
   })
   it('shows a typed word as one composed drawing rather than separate rounds', () => {
-    const ui = preview('letter_drawing', { drawingInputMode: 'Word', word: 'Apple', symbols: ['B'] })
+    const ui = preview('letter_drawing', { drawingInputMode: 'Symbols', word: 'Apple', symbols: ['B'] })
     expect(ui.querySelector('.mg-mock-draw-word')?.textContent).toBe('Apple')
     expect(ui.querySelector('.mg-drawing-sequence')).toBeNull()
     expect(ui.querySelector('.mg-mock-draw-actions')).toBeNull()

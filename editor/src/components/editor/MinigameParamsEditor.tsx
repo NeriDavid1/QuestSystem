@@ -355,7 +355,7 @@ export function MinigameParamsEditor({
   const params = minigame.params ?? {}
   const setScalar = (field: MinigameParamField, value: unknown) => {
     if (minigame.minigame_id === 'letter_drawing' && field.name === 'word') {
-      onChange({ ...params, word: normalizeParamValue(field, value), drawingInputMode: 'Word' })
+      onChange({ ...params, word: normalizeParamValue(field, value), drawingInputMode: String(value).trim() ? 'Word' : 'Symbols' })
       return
     }
     onChange({ ...params, [field.name]: normalizeParamValue(field, value) })
@@ -369,6 +369,7 @@ export function MinigameParamsEditor({
         fields.map((field) => {
           if (field.name === 'visualVariant') return null
           if (minigame.minigame_id === 'letter_drawing') {
+            if (field.name === 'drawingInputMode') return null
             const mode = drawingInputMode(params)
             if (field.name === 'symbols' && mode === 'Word') return null
           }
@@ -439,7 +440,7 @@ export function MinigameParamsEditor({
                   className="content-text"
                   dir={field.type === 'asset' || field.name === 'word' ? 'ltr' : 'auto'}
                   value={String(value ?? '')}
-                  placeholder={field.type === 'asset' ? 'Assets/…' : field.name === 'word' ? 'Apple' : ''}
+                  placeholder={field.type === 'asset' ? 'Assets/…' : field.name === 'word' ? t('minigameDrawingWordPlaceholder') : ''}
                   onChange={(event) => setScalar(field, event.target.value)}
                 />
               ) : field.type === 'number' || field.type === 'integer' ? (

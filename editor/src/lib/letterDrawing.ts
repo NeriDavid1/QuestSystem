@@ -25,8 +25,9 @@ export function currentLetterDrawingCatalog(entry: CatalogEntry): CatalogEntry {
 }
 
 export function drawingInputMode(params: Record<string, unknown>): string {
+  if (typeof params.word === 'string' && params.word.trim()) return 'Word'
   if (Object.hasOwn(params, 'drawingInputMode')) return String(params.drawingInputMode)
-  return typeof params.word === 'string' && params.word.trim() ? 'Word' : 'Symbols'
+  return 'Symbols'
 }
 
 export function tracingSymbols(params: Record<string, unknown>, target?: string | null): string[] {
