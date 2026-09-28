@@ -19,10 +19,11 @@ describe('Letter Ordering presentation contract', () => {
     expect(listening?.image_path).toBe('images/minigames/listening_letter_ordering.png')
   })
 
-  it('uses explicit per-exercise selection over catalog defaults', () => {
+  it('uses the selected minigame even when old presentation params disagree', () => {
     expect(orderingVisual('letter_ordering', {})).toBe('Classic')
     expect(orderingVisual(LISTENING_LETTER_ORDERING_ID, {})).toBe('ListenAndBuild')
-    expect(orderingVisual(LISTENING_LETTER_ORDERING_ID, { visualVariant: 'Classic' })).toBe('Classic')
+    expect(orderingVisual(LISTENING_LETTER_ORDERING_ID, { visualVariant: 'Classic' })).toBe('ListenAndBuild')
+    expect(orderingVisual('letter_ordering', { visualVariant: 'ListenAndBuild' })).toBe('Classic')
   })
 
   it('allows optional recording and validates enum selections before publishing', () => {

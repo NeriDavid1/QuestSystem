@@ -29,8 +29,10 @@ The minigame catalog includes **Letter Ordering** (`letter_ordering`) and
 Both use `LetterOrderingQuestConfigSO` / `LetterOrderingDataSO` and the same
 ordering validation. The second catalog choice defaults to the listening visual.
 
-In a `play_minigame` step, create/attach an exercise and choose **Game version**:
-`Classic` or `ListenAndBuild`. For the listening version, assign **English word
+In a `play_minigame` step, choose **Letter Ordering** or **Listen & Build**
+from the minigame catalog, then create/attach an exercise. This selection sets
+the visual automatically; there is no separate Game version control. For the
+listening game, optionally assign **English word
 recording** using an existing Unity AudioClip path, then choose **Audio only**
 or **Text and audio**. Example parameters:
 
@@ -39,7 +41,6 @@ or **Text and audio**. Example parameters:
   "targetWord": "bee",
   "prompt": "דבורה",
   "extraDistractorCount": 2,
-  "visualVariant": "ListenAndBuild",
   "promptAudio": "Assets/_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/BEE.mp3",
   "hintMode": "AudioOnly"
 }
@@ -51,7 +52,7 @@ runs in Unity. No microphone is needed. Audio is optional: leave the field blank
 to assign the recording manually in Unity later. Reimport of a listening exercise
 with a blank audio field preserves a manually assigned recording. Old exercises
 with no presentation fields stay Classic.
-An explicit `visualVariant` overrides the catalog default.
+Legacy `visualVariant` params cannot override the selected minigame.
 
 Save and publish the questline on the website, then import it through Unity's
 **Tools > English Kingdom > Quests > Database Sync**. Quest Sync resolves the

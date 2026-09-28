@@ -362,6 +362,7 @@ export function MinigameParamsEditor({
         <p className="minigame-empty-hint">{t('minigameParamsNone')}</p>
       ) : (
         fields.map((field) => {
+          if (field.name === 'visualVariant') return null
           const visual = orderingVisual(minigame.minigame_id, minigame.params ?? {})
           const listening = visual === 'ListenAndBuild' || visual === 1
           if ((field.name === 'promptAudio' || field.name === 'hintMode') && !listening) return null

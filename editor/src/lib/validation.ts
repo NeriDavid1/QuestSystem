@@ -1,7 +1,7 @@
 import type { EditorData, Questline, ValidationIssue } from './types'
 import type { MessageKey } from '../i18n/messages'
 import { tracingSymbols } from './letterDrawing'
-import { isLetterOrdering, orderingVisual } from './letterOrdering'
+import { isLetterOrdering } from './letterOrdering'
 import {
   getCatalogKindForRef,
   getQuestSteps,
@@ -98,9 +98,7 @@ export function validateQuestline(
       if (!isLetterOrdering(step.payload.minigame_id)) continue
       const instance = data.minigames.find(game => game.key === getStepMinigameKey(step))
       const params = instance?.params ?? {}
-      const visual = orderingVisual(step.payload.minigame_id, params)
-      if (!['Classic', 'ListenAndBuild', 0, 1].includes(visual as string | number) ||
-          !['AudioOnly', 'TextAndAudio', 0, 1].includes((params.hintMode ?? 'AudioOnly') as string | number)) {
+      if (!['AudioOnly', 'TextAndAudio', 0, 1].includes((params.hintMode ?? 'AudioOnly') as string | number)) {
         issues.push({ severity: 'error', code: 'invalid_ordering_presentation', message: t('validationOrderingPresentation'), entityId: step.id })
       }
     }

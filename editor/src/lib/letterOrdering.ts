@@ -14,8 +14,9 @@ export function isLetterOrdering(kind: unknown): boolean {
   return kind === 'letter_ordering' || kind === LISTENING_LETTER_ORDERING_ID
 }
 
-export function orderingVisual(kind: unknown, params: Record<string, unknown>): unknown {
-  return params.visualVariant ?? (kind === LISTENING_LETTER_ORDERING_ID ? 'ListenAndBuild' : 'Classic')
+// Catalog selection owns the presentation; legacy params cannot override it.
+export function orderingVisual(kind: unknown, _params: Record<string, unknown>): unknown {
+  return kind === LISTENING_LETTER_ORDERING_ID ? 'ListenAndBuild' : 'Classic'
 }
 
 /** Shipped schemas remain available with older database catalogs. */
