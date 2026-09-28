@@ -47,8 +47,10 @@ or **Text and audio**. Example parameters:
 
 The recording must already exist in the Unity project; this field does not
 upload an audio file. The website preview shows the selected visual; playback
-runs in Unity. No microphone is needed. Missing audio blocks publishing/import
-for a listening exercise. Old exercises with no presentation fields stay Classic.
+runs in Unity. No microphone is needed. Audio is optional: leave the field blank
+to assign the recording manually in Unity later. Reimport of a listening exercise
+with a blank audio field preserves a manually assigned recording. Old exercises
+with no presentation fields stay Classic.
 An explicit `visualVariant` overrides the catalog default.
 
 Save and publish the questline on the website, then import it through Unity's

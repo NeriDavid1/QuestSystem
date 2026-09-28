@@ -1004,7 +1004,7 @@ code {
 
 .editor-layout {
   display: grid;
-  grid-template-columns: 250px minmax(0, 1fr) 320px;
+  grid-template-columns: 250px minmax(0, 1fr) 420px;
   min-height: 0;
   flex: 1;
 }
@@ -1462,7 +1462,7 @@ code {
 }
 
 .inspector-top h2 {
-  max-width: 220px;
+  max-width: 100%;
   margin-top: 5px;
   font-size: 18px;
   letter-spacing: -0.05em;

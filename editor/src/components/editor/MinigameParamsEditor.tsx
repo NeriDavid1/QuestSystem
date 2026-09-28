@@ -414,9 +414,7 @@ export function MinigameParamsEditor({
                 <>
                   <input className="content-text" dir="ltr" value={String(value ?? '')}
                     placeholder="Assets/_OurAssets/Art/Audio/…/BEE.mp3"
-                    aria-invalid={!String(value ?? '').trim()}
                     onChange={(event) => setScalar(field, event.target.value)} />
-                  {!String(value ?? '').trim() && <span className="minigame-param-json-hint" role="alert">{t('validationOrderingAudio')}</span>}
                 </>
               ) : field.type === 'textarea' ? (
                 <textarea

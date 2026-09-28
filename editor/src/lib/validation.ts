@@ -103,10 +103,6 @@ export function validateQuestline(
           !['AudioOnly', 'TextAndAudio', 0, 1].includes((params.hintMode ?? 'AudioOnly') as string | number)) {
         issues.push({ severity: 'error', code: 'invalid_ordering_presentation', message: t('validationOrderingPresentation'), entityId: step.id })
       }
-      if ((visual === 'ListenAndBuild' || visual === 1) &&
-          (typeof params.promptAudio !== 'string' || !params.promptAudio.trim())) {
-        issues.push({ severity: 'error', code: 'missing_ordering_audio', message: t('validationOrderingAudio'), entityId: step.id })
-      }
     }
     for (const step of steps) {
       if (step.payload.minigame_id !== 'letter_drawing') continue

@@ -25,7 +25,7 @@ describe('Letter Ordering presentation contract', () => {
     expect(orderingVisual(LISTENING_LETTER_ORDERING_ID, { visualVariant: 'Classic' })).toBe('Classic')
   })
 
-  it('requires recording only for listening and validates enum selections before publishing', () => {
+  it('allows optional recording and validates enum selections before publishing', () => {
     const data = createDemoData()
     const line = data.questlines[0]
     const quest = data.quests.find(q => q.questline_id === line.id)!
@@ -34,7 +34,7 @@ describe('Letter Ordering presentation contract', () => {
     step.payload = { minigame_id: LISTENING_LETTER_ORDERING_ID, world_object_id: 'WoodenCart3_The_Oath_stone_Bridge', instance_key: game.key }
     game.params = { targetWord: 'bee' }
     const codes = () => validateQuestline(data, line, key => key).filter(i => i.entityId === step.id).map(i => i.code)
-    expect(codes()).toContain('missing_ordering_audio')
+    expect(codes()).not.toContain('missing_ordering_audio')
     game.params.promptAudio = 'Assets/_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/BEE.mp3'
     expect(codes()).not.toContain('missing_ordering_audio')
     game.params.visualVariant = 'Classic'
