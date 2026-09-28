@@ -84,6 +84,7 @@ DATA_PREFIX_TO_MINIGAME = OrderedDict(
         ("OppositeMatchingData_", "word_matching"),
         ("MinerCategoryData_", "dwarf_miner"),
         ("SliceOrderingData_", "fruit_slice"),
+        ("TracingLesson_", "letter_drawing"),
     )
 )
 
@@ -94,6 +95,7 @@ CONFIG_CLASS_TO_MINIGAME = {
     "LineMatchQuestConfigSO": "word_matching",
     "DwarfMinerQuestConfigSO": "dwarf_miner",
     "FruitSliceQuestConfigSO": "fruit_slice",
+    "LetterTracingQuestConfigSO": "letter_drawing",
 }
 
 MINIGAME_VARIANT = {
@@ -103,6 +105,7 @@ MINIGAME_VARIANT = {
     "speak_aloud": "single_word",
     "dwarf_miner": "word_category",
     "fruit_slice": "letter_slicing",
+    "letter_drawing": "trace_guided",
 }
 
 # SliceOrderingDataSO.segmentation is the OrderingSegmentation enum (serialized as an int).
@@ -366,6 +369,17 @@ def extract_params(
                 )
         params["letters"] = letters
         params["wordTasks"] = tasks
+    elif minigame_id == "letter_drawing":
+        symbols = []
+        if data.get("symbol") is not None:
+            symbol = data["symbol"]
+            symbols.append(chr(symbol) if isinstance(symbol, int) else str(symbol))
+        for reference in data.get("symbols") or []:
+            path = guid_index.get((guid_of(reference) or "").lower())
+            if path:
+                symbol = load_unity_yaml(path).get("symbol")
+                symbols.append(chr(symbol) if isinstance(symbol, int) else str(symbol))
+        params["symbols"] = symbols
     elif minigame_id in ("dwarf_miner", "fruit_slice"):
         for field in fields:
             if field in ("background", "wordRevealDatabase"):
@@ -413,6 +427,10 @@ def default_brief(
     elif minigame_id == "dwarf_miner":
         target = ", ".join(str(word) for word in (params.get("targetWords") or []))
         success = "כל המילים של הנושא נאספו"
+    elif minigame_id == "letter_drawing":
+        instruction = str(data.get("title") or "מתחילים בנקודה הזוהרת")
+        target = ", ".join(params.get("symbols") or [])
+        success = "כל האותיות צוירו לפי הסדר"
     elif minigame_id == "fruit_slice":
         target = str(params.get("targetText") or "")
         success = "הפירות נחתכו בסדר הנכון"
@@ -568,7 +586,7 @@ def build_steps(
                 if config_path:
                     config_data = load_unity_yaml(config_path)
                     minigame_id = minigame_type_for_config(config_data)
-                    data_ref = config_data.get("data") or config_data.get("levelConfig")
+                    data_ref = config_data.get("data") or config_data.get("levelConfig") or config_data.get("lesson") or config_data.get("symbolPath")
                     data_guid = guid_of(data_ref)
                     if data_guid:
                         data_path = guid_index.get(data_guid.lower())

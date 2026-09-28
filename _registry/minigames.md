@@ -8,7 +8,7 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 |----|----|----|----|----|
 | `dwarf_miner` | Dwarf Miner | vocabulary | Vocabulary categories, word meaning | ![Dwarf Miner](images/minigames/dwarf_miner.png) |
 | `fruit_slice` | Fruit Slice | spelling | Spelling, sentence order | ![Fruit Slice](images/minigames/fruit_slice.png) |
-| `letter_drawing` | Letter Drawing | motor_skills | Letter formation, stroke order | *(no image)* |
+| `letter_drawing` | Letter Drawing | motor_skills | Letter formation, stroke order | ![Letter Drawing](images/minigames/letter_drawing.png) |
 | `letter_ordering` | Letter Ordering | spelling | Spelling, letter recognition | ![Letter Ordering](images/minigames/letter_ordering.png) |
 | `speak_aloud` | Speak Aloud | pronunciation | Pronunciation, spoken production | ![Speak Aloud](images/minigames/speak_aloud.png) |
 | `word_matching` | Word Matching | vocabulary | Vocabulary, missing-letter recognition, opposites | ![Word Matching](images/minigames/word_matching.png) |

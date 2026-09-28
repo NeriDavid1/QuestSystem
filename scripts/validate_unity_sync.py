@@ -83,6 +83,8 @@ CONTENT_FIELD_NAMES = {
     "data",
     "levelConfig",
     "letterPath",
+    "lesson",
+    "symbolPath",
 }
 
 

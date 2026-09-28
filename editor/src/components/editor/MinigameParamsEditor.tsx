@@ -113,13 +113,21 @@ function ArrayParamInput({
         <div className="minigame-param-row" key={index}>
           <label>
             <span className="minigame-task-index">{index + 1}</span>
-            <input
+            {field.options ? <select
+              className="content-text"
+              dir="ltr"
+              value={item}
+              onChange={(event) => commit(items.map((entry, entryIndex) => entryIndex === index ? event.target.value : entry))}
+            >
+              <option value="">—</option>
+              {field.options.map((option) => <option key={option} value={option}>{option}</option>)}
+            </select> : <input
               className="content-text"
               dir="ltr"
               type={numeric ? 'number' : 'text'}
               value={item}
               onChange={(event) => commit(items.map((entry, entryIndex) => (entryIndex === index ? event.target.value : entry)))}
-            />
+            />}
           </label>
           <button
             type="button"
@@ -132,7 +140,7 @@ function ArrayParamInput({
           </button>
         </div>
       ))}
-      <button type="button" className="button subtle compact" onClick={() => commit([...items, ''])}>
+      <button type="button" className="button subtle compact" onClick={() => commit([...items, field.options?.[0] ?? ''])}>
         <Icon name="plus" /> {t('minigameParamAdd')}
       </button>
     </div>

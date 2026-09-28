@@ -303,7 +303,7 @@ def infer_minigame_id(params: dict[str, Any], variant: Any = None) -> str | None
         return "speak_aloud"
     if "letters" in params or "wordTasks" in params:
         return "word_matching"
-    if "strokes" in params or ("letter" in params and "previewImage" in params):
+    if "symbols" in params or "strokes" in params or ("letter" in params and "previewImage" in params):
         return "letter_drawing"
     if isinstance(variant, str) and variant in CATALOG_MINIGAME_IDS:
         return variant

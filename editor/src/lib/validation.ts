@@ -1,5 +1,6 @@
 import type { EditorData, Questline, ValidationIssue } from './types'
 import type { MessageKey } from '../i18n/messages'
+import { tracingSymbols } from './letterDrawing'
 import {
   getCatalogKindForRef,
   getQuestSteps,
@@ -92,6 +93,15 @@ export function validateQuestline(
     }
 
     const steps = getQuestSteps(data, quest.id)
+    for (const step of steps) {
+      if (step.payload.minigame_id !== 'letter_drawing') continue
+      const instance = data.minigames.find((game) => game.key === getStepMinigameKey(step))
+      const symbols = instance ? tracingSymbols(instance.params ?? {}, instance.target) : []
+      if (symbols.length === 0 || symbols.some((symbol) => !/^[A-Za-z]$/.test(symbol))) {
+        issues.push({ severity: 'error', code: 'invalid_tracing_symbols',
+          message: t('validationTracingSymbols'), entityId: step.id })
+      }
+    }
     if (steps.length === 0) {
       issues.push({
         severity: 'error',

@@ -1,4 +1,5 @@
 import type { CatalogEntry, EditorData, MinigameInstance, QuestStep } from './types'
+import { currentLetterDrawingCatalog, TRACING_SYMBOLS } from './letterDrawing'
 
 /**
  * Editable parameter kinds. They mirror the public properties of the Unity data
@@ -8,7 +9,7 @@ import type { CatalogEntry, EditorData, MinigameInstance, QuestStep } from './ty
  * - LetterOrderingDataSO → letter_ordering
  * - SpeakAloudDataSO     → speak_aloud
  * - LetterConnectionLevelConfigSO → word_matching
- * - LetterPathSO         → letter_drawing
+ * - TracingLessonSO      → letter_drawing (references ready SymbolPathSO assets)
  * - MinerCategoryDataSO  → dwarf_miner
  * - SliceOrderingDataSO  → fruit_slice
  *
@@ -67,7 +68,9 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
   letters: { name: 'letters', labelKey: 'minigameParamLetters', type: 'json', default: [] },
   wordTasks: { name: 'wordTasks', labelKey: 'minigameParamWordTasks', type: 'json', default: [] },
 
-  // LetterPathSO
+  // TracingLessonSO: case-sensitive IDs of ready Unity SymbolPathSO assets.
+  symbols: { name: 'symbols', labelKey: 'minigameParamSymbols', hintKey: 'minigameParamSymbolsHint', type: 'stringArray', default: ['A'], options: TRACING_SYMBOLS },
+  // Legacy drawing fields remain readable for old documents.
   letter: { name: 'letter', labelKey: 'minigameParamLetter', type: 'string', default: 'A' },
   strokes: { name: 'strokes', labelKey: 'minigameParamStrokes', type: 'json', default: [] },
   previewImage: { name: 'previewImage', labelKey: 'minigameParamPreviewImage', type: 'asset', default: '' },
@@ -137,12 +140,12 @@ function getMetadataArray(entry: CatalogEntry | undefined, key: string): string[
 
 /** The `content_fields` declared on the catalog minigame entry (from _registry/minigames.yaml). */
 export function getMinigameParamFieldNames(entry: CatalogEntry | undefined): string[] {
-  return getMetadataArray(entry, 'content_fields')
+  return getMetadataArray(entry ? currentLetterDrawingCatalog(entry) : entry, 'content_fields')
 }
 
 /** The allowed gameplay variants declared on the catalog minigame entry. */
 export function getMinigameVariantsForEntry(entry: CatalogEntry | undefined): string[] {
-  return getMetadataArray(entry, 'variants')
+  return getMetadataArray(entry ? currentLetterDrawingCatalog(entry) : entry, 'variants')
 }
 
 /** Resolve the editable parameter fields for a catalog minigame entry. */
@@ -214,6 +217,11 @@ export function seedParamsFromBrief(
   const trimmedTarget = (target ?? '').trim()
   const trimmedInstruction = (instruction ?? '').trim()
 
+  if (entry?.external_id === 'letter_drawing' && !Object.hasOwn(next, 'symbols')) {
+    const legacy = typeof next.letter === 'string' ? next.letter : trimmedTarget
+    if (/^[A-Za-z]$/.test(legacy)) next.symbols = [legacy]
+  }
+
   if (fields.has('prompt')) {
     const currentPrompt = typeof next.prompt === 'string' ? next.prompt.trim() : ''
     const promptField = resolveField(entry?.external_id, 'prompt')
@@ -257,6 +265,10 @@ export function seedParamsFromBrief(
 
 /** Read a parameter value, falling back to the field default when unset. */
 export function readMinigameParam(minigame: MinigameInstance, field: MinigameParamField): unknown {
+  if (field.name === 'symbols' && !Object.hasOwn(minigame.params ?? {}, 'symbols')) {
+    const legacy = minigame.params?.letter ?? minigame.target
+    if (typeof legacy === 'string' && /^[A-Za-z]$/.test(legacy)) return [legacy]
+  }
   const value = minigame.params?.[field.name]
   if (value === undefined || value === null || value === '') {
     return field.default ?? defaultValueForType(field.type)

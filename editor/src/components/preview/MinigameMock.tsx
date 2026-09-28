@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { useT } from '../../i18n'
+import { tracingSymbols } from '../../lib/letterDrawing'
 
 type MockParams = Record<string, unknown>
 
@@ -210,16 +211,15 @@ function SpeakAloudMock({ params, prompt, speakLabel }: { params: MockParams; pr
 }
 
 function LetterDrawingMock({ params, clearLabel, doneLabel }: { params: MockParams; clearLabel: string; doneLabel: string }) {
-  const letter = asString(params.letter) || 'A'
-  const preview = asString(params.previewImage)
+  const symbols = tracingSymbols(params)
+  const letter = symbols[0] || '…'
   return (
     <ParchmentShell>
+      <div className="mg-mock-slots" dir="ltr">
+        {symbols.map((symbol, index) => <span className={`mg-mock-slot ${index === 0 ? 'filled' : ''}`} key={index}>{symbol}</span>)}
+      </div>
       <div className="mg-mock-draw-canvas">
-        {preview ? (
-          <img src={preview} alt={letter} className="mg-mock-draw-preview" />
-        ) : (
-          <span className="mg-mock-draw-letter">{letter.toUpperCase()}</span>
-        )}
+        <span className="mg-mock-draw-letter">{letter}</span>
       </div>
       <div className="mg-mock-draw-actions">
         <button type="button" className="mg-mock-draw-btn" disabled>{clearLabel}</button>
@@ -337,7 +337,7 @@ export function MinigameMock({
       body = <SpeakAloudMock params={params} prompt={prompt} speakLabel={t('mgMockSpeak')} />
       break
     case 'letter_drawing':
-      body = <LetterDrawingMock params={params} clearLabel={t('mgMockClear')} doneLabel={t('mgMockDone')} />
+      body = <LetterDrawingMock params={params} clearLabel={t('mgMockRetry')} doneLabel={t('mgMockClose')} />
       break
     case 'dwarf_miner':
       body = <DwarfMinerMock params={params} prompt={prompt} seed={seed} />

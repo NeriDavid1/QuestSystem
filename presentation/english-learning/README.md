@@ -64,7 +64,7 @@ NPC story (introduce word)
 | `letter_ordering` | LetterOrderingQuestConfigSO | [letter_ordering.md](minigames/letter_ordering.md) | Arrange letters → spell word |
 | `word_ordering` | WordOrderingQuestConfigSO | (see minigames.yaml) | Arrange words → sentence |
 | `word_matching` | LineMatchQuestConfigSO | [word_matching.md](minigames/word_matching.md) | Match words / opposites |
-| `letter_drawing` | DrawingQuestConfigSO | [letter_drawing.md](minigames/letter_drawing.md) | Trace/draw a letter |
+| `letter_drawing` | LetterTracingQuestConfigSO | [letter_drawing.md](minigames/letter_drawing.md) | Trace/draw a letter |
 | `speak_aloud` | SpeakAloudQuestConfigSO | [speak_aloud.md](minigames/speak_aloud.md) | Say word into microphone |
 | `dwarf_miner` | DwarfMinerQuestConfigSO | [dwarf_miner.md](minigames/dwarf_miner.md) | Hook the words that fit a category |
 | `fruit_slice` | FruitSliceQuestConfigSO | [fruit_slice.md](minigames/fruit_slice.md) | Slice letters/words in order |

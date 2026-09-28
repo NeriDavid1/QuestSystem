@@ -63,21 +63,18 @@ minigames:
     typical_stations: [chest, exam_table]
 
   letter_drawing:
+    image: images/minigames/letter_drawing.png
     name: "Letter Drawing"
-    unity_config: DrawingQuestConfigSO
-    unity_content: LetterPathSO
+    unity_config: LetterTracingQuestConfigSO
+    unity_content: TracingLessonSO
     category: motor_skills
-    description: "Trace or draw an English letter on screen."
+    description: "Trace selected English letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs."
     english_focus: "Letter formation, stroke order"
     difficulty_range: [1, 4]
     content_fields:
-      - letter
-      - strokes
-      - previewImage
-      - clip
+      - symbols
     variants:
       - trace_guided
-      - free_draw
     typical_stations: [shop, chest, cart]
 
   speak_aloud:
