@@ -1,3 +1,4 @@
+import { currentMiniGameCatalog } from './letterOrdering'
 import type {
   CatalogEntry,
   Dialogue,
@@ -519,7 +520,7 @@ export function createDemoData(): EditorData {
     steps,
     prerequisites: createPrerequisites(quests),
     rewards: createRewards(quests, steps),
-    catalog: createCatalog(),
+    catalog: currentMiniGameCatalog(createCatalog()),
     stepTypes: createStepTypes(),
     dialogues,
     dialogueLines: createDialogueLines(dialogues),

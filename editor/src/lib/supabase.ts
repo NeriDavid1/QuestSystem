@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js'
 import type { EditorData } from './types'
-import { currentLetterDrawingCatalog } from './letterDrawing'
+import { currentMiniGameCatalog } from './letterOrdering'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined
@@ -71,7 +71,7 @@ export async function loadEditorData(): Promise<EditorData> {
     steps: steps.data ?? [],
     prerequisites: prerequisites.data ?? [],
     rewards: rewards.data ?? [],
-    catalog: (catalog.data ?? []).map(currentLetterDrawingCatalog),
+    catalog: currentMiniGameCatalog(catalog.data ?? []),
     stepTypes: stepTypes.data ?? [],
     dialogues: dialogues.data ?? [],
     dialogueLines: dialogueLines.data ?? [],

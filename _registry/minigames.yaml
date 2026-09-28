@@ -19,9 +19,35 @@ minigames:
       - targetWord
       - extraDistractorCount
       - customDistractors
+      - visualVariant
+      - promptAudio
+      - hintMode
       - wordRevealDatabase
     variants:
       - word_spelling
+    typical_stations: [chest, cart, tombstone, exam_table]
+
+  listening_letter_ordering:
+    image: images/minigames/listening_letter_ordering.png
+    name: "Listen & Build"
+    unity_config: LetterOrderingQuestConfigSO
+    unity_content: LetterOrderingDataSO
+    category: spelling
+    description: "Listen to the assigned English recording, then arrange letters to spell the word. Separate teal and gold visuals, replay button, and optional text clue. Uses the shared Letter Ordering validation."
+    english_focus: "Listening comprehension, spelling"
+    difficulty_range: [1, 6]
+    default_visual_variant: ListenAndBuild
+    content_fields:
+      - prompt
+      - targetWord
+      - extraDistractorCount
+      - customDistractors
+      - visualVariant
+      - promptAudio
+      - hintMode
+      - wordRevealDatabase
+    variants:
+      - listening_spelling
     typical_stations: [chest, cart, tombstone, exam_table]
 
   word_ordering:

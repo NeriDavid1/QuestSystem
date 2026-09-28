@@ -200,6 +200,8 @@ def extract_unity_minigame_params(
     if not content_path or not content_path.is_file():
         return minigame_id, {}
     content_data = load_unity_yaml(content_path)
+    if minigame_id == "letter_ordering" and content_data.get("visualVariant") in (1, "ListenAndBuild"):
+        minigame_id = "listening_letter_ordering"
     return minigame_id, extract_params(minigame_id or "", content_data, guid_index, our_assets, content_fields)
 
 def parse_reward_definition(path: Path) -> list[dict[str, Any]]:

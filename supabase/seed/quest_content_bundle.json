@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "importer_version": "1.0.0",
-  "source_root": "C:\\Users\\123ne\\OneDrive\\מסמכים\\QuestSystem",
+  "source_root": "C:\\English Room\\QuestSystem",
   "catalog_entries": [
     {
       "kind": "area",
@@ -4169,10 +4169,54 @@
           "targetWord",
           "extraDistractorCount",
           "customDistractors",
+          "visualVariant",
+          "promptAudio",
+          "hintMode",
           "wordRevealDatabase"
         ],
         "variants": [
           "word_spelling"
+        ],
+        "typical_stations": [
+          "chest",
+          "cart",
+          "tombstone",
+          "exam_table"
+        ]
+      }
+    },
+    {
+      "kind": "minigame",
+      "external_id": "listening_letter_ordering",
+      "name": "Listen & Build",
+      "description": "Listen to the assigned English recording, then arrange letters to spell the word. Separate teal and gold visuals, replay button, and optional text clue. Uses the shared Letter Ordering validation.",
+      "status": null,
+      "image_path": "images/minigames/listening_letter_ordering.png",
+      "metadata": {
+        "image": "images/minigames/listening_letter_ordering.png",
+        "name": "Listen & Build",
+        "unity_config": "LetterOrderingQuestConfigSO",
+        "unity_content": "LetterOrderingDataSO",
+        "category": "spelling",
+        "description": "Listen to the assigned English recording, then arrange letters to spell the word. Separate teal and gold visuals, replay button, and optional text clue. Uses the shared Letter Ordering validation.",
+        "english_focus": "Listening comprehension, spelling",
+        "difficulty_range": [
+          1,
+          6
+        ],
+        "default_visual_variant": "ListenAndBuild",
+        "content_fields": [
+          "prompt",
+          "targetWord",
+          "extraDistractorCount",
+          "customDistractors",
+          "visualVariant",
+          "promptAudio",
+          "hintMode",
+          "wordRevealDatabase"
+        ],
+        "variants": [
+          "listening_spelling"
         ],
         "typical_stations": [
           "chest",
@@ -42036,7 +42080,7 @@
     }
   ],
   "counts": {
-    "catalog_entries": 261,
+    "catalog_entries": 262,
     "step_type_definitions": 6,
     "dialogues": 206,
     "dialogue_lines": 560,
@@ -56672,5 +56716,5 @@
       ]
     }
   ],
-  "source_digest": "7c56cb1aae181b246a32f4fef79652a66c83655987da21ce013555810db895c8"
+  "source_digest": "2a5c040901f4cf6b8f089376bdee54f738e6a7477447e563d227d93352af9c6c"
 }

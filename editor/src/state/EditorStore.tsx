@@ -25,6 +25,7 @@ import type {
 import { emptyEditorData } from '../lib/types'
 import { hasSupabaseConfig, loadEditorData, supabase } from '../lib/supabase'
 import { createDemoData } from '../lib/demoData'
+import { isLetterOrdering, LISTENING_LETTER_ORDERING_ID } from '../lib/letterOrdering'
 import {
   defaultParamsForEntry,
   getMinigameCatalogEntry,
@@ -450,10 +451,27 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   }, [selectedLine, selectedQuest])
 
   const updateStep = useCallback((stepId: string, patch: Partial<QuestStep>) => {
-    setData((current) => ({
-      ...current,
-      steps: current.steps.map((step) => (step.id === stepId ? { ...step, ...patch } : step)),
-    }))
+    setData((current) => {
+      const previous = current.steps.find(step => step.id === stepId)
+      const kind = patch.payload?.minigame_id
+      const existing = previous ? getStepMinigame(current, previous) : undefined
+      // Give this step its own content when selecting the other ordering game.
+      // An instance can be shared by other steps, whose visual must remain intact.
+      const switchOrdering = previous && kind !== previous.payload.minigame_id && isLetterOrdering(kind) && isLetterOrdering(previous.payload.minigame_id) && existing
+      const nextInstance = switchOrdering ? {
+        ...existing, id: makeLocalId('minigame'), key: uniqueMinigameKey(current, `${existing.key}_version`),
+        minigame_id: String(kind), variant: kind === LISTENING_LETTER_ORDERING_ID ? 'listening_spelling' : 'word_spelling',
+        params: { ...existing.params, visualVariant: kind === LISTENING_LETTER_ORDERING_ID ? 'ListenAndBuild' : 'Classic' },
+        source_path: null, source_metadata: { local_draft: true },
+      } : undefined
+      if (nextInstance) touchedMinigameIds.current.add(nextInstance.id)
+      const resolvedPatch = nextInstance ? { ...patch, payload: { ...patch.payload, instance_id: nextInstance.key, instance_key: nextInstance.key } } : patch
+      return {
+        ...current,
+        minigames: nextInstance ? [...current.minigames, nextInstance] : current.minigames,
+        steps: current.steps.map(step => step.id === stepId ? { ...step, ...resolvedPatch } : step),
+      }
+    })
     setDirty(true)
   }, [])
 

@@ -10,6 +10,7 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 | `fruit_slice` | Fruit Slice | spelling | Spelling, sentence order | ![Fruit Slice](images/minigames/fruit_slice.png) |
 | `letter_drawing` | Letter Drawing | motor_skills | Letter formation, stroke order | ![Letter Drawing](images/minigames/letter_drawing.png) |
 | `letter_ordering` | Letter Ordering | spelling | Spelling, letter recognition | ![Letter Ordering](images/minigames/letter_ordering.png) |
+| `listening_letter_ordering` | Listen & Build | spelling | Listening comprehension, spelling | ![Listen & Build](images/minigames/listening_letter_ordering.png) |
 | `speak_aloud` | Speak Aloud | pronunciation | Pronunciation, spoken production | ![Speak Aloud](images/minigames/speak_aloud.png) |
 | `word_matching` | Word Matching | vocabulary | Vocabulary, missing-letter recognition, opposites | ![Word Matching](images/minigames/word_matching.png) |
 | `word_ordering` | Word Ordering | grammar | Sentence structure, adjective placement | ![Word Ordering](images/minigames/word_ordering.png) |

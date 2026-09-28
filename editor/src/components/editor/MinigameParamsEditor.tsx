@@ -8,6 +8,7 @@ import {
 } from '../../lib/minigameParams'
 import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
+import { orderingVisual } from '../../lib/letterOrdering'
 
 type LetterTile = { id: string; value: string }
 type WordTask = { id: string; image: string; fullWord: string; missingIndices: number[] }
@@ -361,6 +362,9 @@ export function MinigameParamsEditor({
         <p className="minigame-empty-hint">{t('minigameParamsNone')}</p>
       ) : (
         fields.map((field) => {
+          const visual = orderingVisual(minigame.minigame_id, minigame.params ?? {})
+          const listening = visual === 'ListenAndBuild' || visual === 1
+          if ((field.name === 'promptAudio' || field.name === 'hintMode') && !listening) return null
           if (field.name === 'letters') {
             return (
               <div className="minigame-param-field" key={field.name}>
@@ -403,9 +407,17 @@ export function MinigameParamsEditor({
                   onChange={(event) => setScalar(field, event.target.value)}
                 >
                   {(field.options ?? []).map((option) => (
-                    <option key={option} value={option}>{option}</option>
+                    <option key={option} value={option}>{field.optionLabelKeys?.[option] ? t(field.optionLabelKeys[option] as MessageKey) : option}</option>
                   ))}
                 </select>
+              ) : field.name === 'promptAudio' ? (
+                <>
+                  <input className="content-text" dir="ltr" value={String(value ?? '')}
+                    placeholder="Assets/_OurAssets/Art/Audio/…/BEE.mp3"
+                    aria-invalid={!String(value ?? '').trim()}
+                    onChange={(event) => setScalar(field, event.target.value)} />
+                  {!String(value ?? '').trim() && <span className="minigame-param-json-hint" role="alert">{t('validationOrderingAudio')}</span>}
+                </>
               ) : field.type === 'textarea' ? (
                 <textarea
                   className="content-text"

@@ -278,6 +278,7 @@ GENERIC_MINI_KEY_FIELDS = {
 }
 CATALOG_MINIGAME_IDS = {
     "letter_ordering",
+    "listening_letter_ordering",
     "word_ordering",
     "speak_aloud",
     "word_matching",
@@ -296,7 +297,7 @@ def infer_minigame_id(params: dict[str, Any], variant: Any = None) -> str | None
     if "targetText" in params or "segmentation" in params:
         return "fruit_slice"
     if "targetWord" in params:
-        return "letter_ordering"
+        return "listening_letter_ordering" if params.get("visualVariant") in ("ListenAndBuild", 1) else "letter_ordering"
     if "englishWordsInOrder" in params:
         return "word_ordering"
     if "targetWords" in params or "targetPhrase" in params:

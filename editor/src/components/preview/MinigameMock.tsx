@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { useT } from '../../i18n'
 import { tracingSymbols } from '../../lib/letterDrawing'
+import { orderingVisual } from '../../lib/letterOrdering'
 
 type MockParams = Record<string, unknown>
 
@@ -87,14 +88,17 @@ function ParchmentShell({
   )
 }
 
-function LetterOrderingMock({ params, prompt, seed }: { params: MockParams; prompt: string; seed: string }) {
+function LetterOrderingMock({ params, prompt, seed, listening = false }: { params: MockParams; prompt: string; seed: string; listening?: boolean }) {
+  const t = useT()
   const targetWord = asString(params.targetWord) || asString(params.target) || 'word'
   const extra = asNumber(params.extraDistractorCount, 2)
   const custom = asStringArray(params.customDistractors)
   const pool = buildLetterPool(targetWord, extra, custom, seed)
   return (
+    <div className={listening ? 'mg-mock-listening' : ''}>
     <ParchmentShell>
-      <div className="mg-mock-prompt" dir="auto">{prompt || '…'}</div>
+      <div className="mg-mock-prompt" dir="auto">{listening && params.hintMode !== 'TextAndAudio' && params.hintMode !== 1 && params.promptAudio ? t('mgMockListeningInstruction') : prompt || '…'}</div>
+      {listening && params.promptAudio ? <div className="mg-mock-listen-control" title={t('mgMockListeningPreview')}><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 9h4l5-4v14l-5-4H3z" /><path fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" d="M16 8a6 6 0 0 1 0 8M19 5a10 10 0 0 1 0 14" /></svg><small>{t('mgMockListeningPreview')}</small></div> : null}
       <div className="mg-mock-slots" dir="ltr">
         {Array.from({ length: Math.max(1, targetWord.length) }, (_, i) => (
           <span className="mg-mock-slot" key={i} />
@@ -106,6 +110,7 @@ function LetterOrderingMock({ params, prompt, seed }: { params: MockParams; prom
         ))}
       </div>
     </ParchmentShell>
+    </div>
   )
 }
 
@@ -325,8 +330,11 @@ export function MinigameMock({
   let body: ReactNode = null
   switch (id) {
     case 'letter_ordering':
-      body = <LetterOrderingMock params={params} prompt={prompt} seed={seed} />
+    case 'listening_letter_ordering': {
+      const visual = orderingVisual(id, params)
+      body = <LetterOrderingMock params={params} prompt={prompt} seed={seed} listening={visual === 'ListenAndBuild' || visual === 1} />
       break
+    }
     case 'word_ordering':
       body = <WordOrderingMock params={params} prompt={prompt} seed={seed} />
       break

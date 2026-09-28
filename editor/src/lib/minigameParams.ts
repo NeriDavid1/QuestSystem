@@ -1,5 +1,6 @@
 import type { CatalogEntry, EditorData, MinigameInstance, QuestStep } from './types'
 import { currentLetterDrawingCatalog, TRACING_SYMBOLS } from './letterDrawing'
+import { currentLetterOrderingCatalog } from './letterOrdering'
 
 /**
  * Editable parameter kinds. They mirror the public properties of the Unity data
@@ -39,6 +40,7 @@ export interface MinigameParamField {
   max?: number
   /** Allowed values for `select` fields (Unity enum names). */
   options?: string[]
+  optionLabelKeys?: Record<string, string>
   /** Rendered collapsed behind the "Advanced" toggle (optional Unity asset references). */
   advanced?: boolean
 }
@@ -50,6 +52,9 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
   targetWord: { name: 'targetWord', labelKey: 'minigameParamTargetWord', type: 'string', default: '' },
   extraDistractorCount: { name: 'extraDistractorCount', labelKey: 'minigameParamExtraDistractors', type: 'integer', min: 0, default: 2 },
   customDistractors: { name: 'customDistractors', labelKey: 'minigameParamCustomDistractors', type: 'charArray', default: [] },
+  visualVariant: { name: 'visualVariant', labelKey: 'minigameParamVisualVariant', hintKey: 'minigameParamVisualVariantHint', type: 'select', options: ['Classic', 'ListenAndBuild'], optionLabelKeys: { Classic: 'minigameVisualClassic', ListenAndBuild: 'minigameVisualListening' }, default: 'Classic' },
+  promptAudio: { name: 'promptAudio', labelKey: 'minigameParamPromptAudio', hintKey: 'minigameParamPromptAudioHint', type: 'asset', default: '' },
+  hintMode: { name: 'hintMode', labelKey: 'minigameParamHintMode', hintKey: 'minigameParamHintModeHint', type: 'select', options: ['AudioOnly', 'TextAndAudio'], optionLabelKeys: { AudioOnly: 'minigameHintAudioOnly', TextAndAudio: 'minigameHintTextAndAudio' }, default: 'AudioOnly' },
 
   // WordOrderingDataSO
   translation: { name: 'translation', labelKey: 'minigameParamTranslation', hintKey: 'minigameParamTranslationHint', type: 'textarea', default: '' },
@@ -97,6 +102,7 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
  * data SO gives it a different default or meaning (e.g. each game's `prompt` default).
  */
 const MINIGAME_FIELD_OVERRIDES: Record<string, Record<string, Partial<MinigameParamField>>> = {
+  listening_letter_ordering: { visualVariant: { default: 'ListenAndBuild' } },
   dwarf_miner: {
     prompt: { default: 'Collect the right words' },
     targetWords: { hintKey: 'minigameParamMinerTargetWordsHint' },
@@ -140,7 +146,7 @@ function getMetadataArray(entry: CatalogEntry | undefined, key: string): string[
 
 /** The `content_fields` declared on the catalog minigame entry (from _registry/minigames.yaml). */
 export function getMinigameParamFieldNames(entry: CatalogEntry | undefined): string[] {
-  return getMetadataArray(entry ? currentLetterDrawingCatalog(entry) : entry, 'content_fields')
+  return getMetadataArray(entry ? currentLetterOrderingCatalog(currentLetterDrawingCatalog(entry)) : entry, 'content_fields')
 }
 
 /** The allowed gameplay variants declared on the catalog minigame entry. */
@@ -270,6 +276,9 @@ export function readMinigameParam(minigame: MinigameInstance, field: MinigamePar
     if (typeof legacy === 'string' && /^[A-Za-z]$/.test(legacy)) return [legacy]
   }
   const value = minigame.params?.[field.name]
+  if (field.type === 'select' && typeof value === 'number' && Number.isInteger(value)) {
+    return field.options?.[value] ?? value
+  }
   if (value === undefined || value === null || value === '') {
     return field.default ?? defaultValueForType(field.type)
   }

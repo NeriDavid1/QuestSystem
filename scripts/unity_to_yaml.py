@@ -64,6 +64,7 @@ INDEX_ROOTS = (
     "Data/Quests",
     "Data/MiniGames",
     "Art/Prefabs/UI/GamePlay/MiniGame",
+    "Art/Audio",
 )
 
 CATALOG_PATHS = {
@@ -100,6 +101,7 @@ CONFIG_CLASS_TO_MINIGAME = {
 
 MINIGAME_VARIANT = {
     "letter_ordering": "word_spelling",
+    "listening_letter_ordering": "listening_spelling",
     "word_ordering": "sentence_building",
     "word_matching": "missing_letter_matching",
     "speak_aloud": "single_word",
@@ -328,10 +330,14 @@ def extract_params(
 ) -> "OrderedDict[str, Any]":
     params: "OrderedDict[str, Any]" = OrderedDict()
     fields = content_fields.get(minigame_id) or []
-    if minigame_id in ("letter_ordering", "word_ordering", "speak_aloud"):
+    if minigame_id in ("letter_ordering", "listening_letter_ordering", "word_ordering", "speak_aloud"):
         for field in fields:
-            if field in ("wordRevealDatabase", "referenceClip"):
+            if field in ("wordRevealDatabase", "referenceClip", "promptAudio"):
                 params[field] = resolve_path(guid_index, unity_root, guid_of(data.get(field)))
+            elif field == "visualVariant":
+                params[field] = {0: "Classic", 1: "ListenAndBuild"}.get(data.get(field, 0), data.get(field, "Classic"))
+            elif field == "hintMode":
+                params[field] = {0: "AudioOnly", 1: "TextAndAudio"}.get(data.get(field, 0), data.get(field, "AudioOnly"))
             elif field == "allowFuzzyMatch":
                 params[field] = bool(data.get(field))
             elif field == "silenceTimeoutSeconds":
@@ -404,7 +410,7 @@ def default_brief(
     params: "OrderedDict[str, Any]",
 ) -> dict[str, Any]:
     instruction = str(data.get("prompt") or "")
-    if minigame_id == "letter_ordering":
+    if minigame_id in ("letter_ordering", "listening_letter_ordering"):
         target = str(params.get("targetWord") or "")
         success = f"{target.upper()} נכתב נכון"
     elif minigame_id == "speak_aloud":
@@ -592,6 +598,8 @@ def build_steps(
                         data_path = guid_index.get(data_guid.lower())
                         if data_path:
                             data = load_unity_yaml(data_path)
+                            if minigame_id == "letter_ordering" and data.get("visualVariant") in (1, "ListenAndBuild"):
+                                minigame_id = "listening_letter_ordering"
                             data_name = data.get("m_Name") or data_path.stem
                             instance_id = instance_key_for_data(str(data_name))
                             if minigame_id and instance_id:

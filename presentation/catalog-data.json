@@ -17,13 +17,13 @@
     "npcs": 26,
     "interactables": 14,
     "items": 199,
-    "minigames": 7,
+    "minigames": 8,
     "step_types": 6,
     "areas_with_image": 15,
     "npcs_with_image": 26,
     "interactables_with_image": 14,
     "items_with_image": 186,
-    "minigames_with_image": 7
+    "minigames_with_image": 8
   },
   "areas": [
     {
@@ -2775,6 +2775,9 @@
         "targetWord",
         "extraDistractorCount",
         "customDistractors",
+        "visualVariant",
+        "promptAudio",
+        "hintMode",
         "wordRevealDatabase"
       ],
       "variants": [
@@ -2787,6 +2790,40 @@
         "exam_table"
       ],
       "id": "letter_ordering"
+    },
+    {
+      "image": "images/minigames/listening_letter_ordering.png",
+      "name": "Listen & Build",
+      "unity_config": "LetterOrderingQuestConfigSO",
+      "unity_content": "LetterOrderingDataSO",
+      "category": "spelling",
+      "description": "Listen to the assigned English recording, then arrange letters to spell the word. Separate teal and gold visuals, replay button, and optional text clue. Uses the shared Letter Ordering validation.",
+      "english_focus": "Listening comprehension, spelling",
+      "difficulty_range": [
+        1,
+        6
+      ],
+      "default_visual_variant": "ListenAndBuild",
+      "content_fields": [
+        "prompt",
+        "targetWord",
+        "extraDistractorCount",
+        "customDistractors",
+        "visualVariant",
+        "promptAudio",
+        "hintMode",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "listening_spelling"
+      ],
+      "typical_stations": [
+        "chest",
+        "cart",
+        "tombstone",
+        "exam_table"
+      ],
+      "id": "listening_letter_ordering"
     },
     {
       "image": "images/minigames/speak_aloud.png",

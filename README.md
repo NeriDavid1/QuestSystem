@@ -22,6 +22,44 @@ python scripts/build_catalog.py      # creator catalog + galleries
 
 ## How to write a quest
 
+### Letter Ordering and Listen & Build
+
+The minigame catalog includes **Letter Ordering** (`letter_ordering`) and
+**Listen & Build** (`listening_letter_ordering`) with its own Unity screenshot.
+Both use `LetterOrderingQuestConfigSO` / `LetterOrderingDataSO` and the same
+ordering validation. The second catalog choice defaults to the listening visual.
+
+In a `play_minigame` step, create/attach an exercise and choose **Game version**:
+`Classic` or `ListenAndBuild`. For the listening version, assign **English word
+recording** using an existing Unity AudioClip path, then choose **Audio only**
+or **Text and audio**. Example parameters:
+
+```json
+{
+  "targetWord": "bee",
+  "prompt": "דבורה",
+  "extraDistractorCount": 2,
+  "visualVariant": "ListenAndBuild",
+  "promptAudio": "Assets/_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/BEE.mp3",
+  "hintMode": "AudioOnly"
+}
+```
+
+The recording must already exist in the Unity project; this field does not
+upload an audio file. The website preview shows the selected visual; playback
+runs in Unity. No microphone is needed. Missing audio blocks publishing/import
+for a listening exercise. Old exercises with no presentation fields stay Classic.
+An explicit `visualVariant` overrides the catalog default.
+
+Save and publish the questline on the website, then import it through Unity's
+**Tools > English Kingdom > Quests > Database Sync**. Quest Sync resolves the
+recording, applies the selected visual/clue mode and preserves the world station
+ID. Reimport updates the same assets; returning to Classic clears stale audio.
+
+`currentMiniGameCatalog` also supplies this entry to older connected catalogs.
+For database catalog clients outside the editor, apply the scoped migration
+`supabase/migrations/20260928120000_listening_letter_ordering.sql`.
+
 1. Browse the **[Creator catalog](presentation/catalog.html)** and copy exact IDs (prefer `live_used` over `catalog_stub`).
 2. Prefer **[QuestForge](editor/)** — quest keys are auto-generated as `{lineKey}__qNN_slug` and must be **unique across the whole OpenWorld game**.
 3. If editing YAML by hand: open the target questline folder under [`questlines/`](questlines/) and use a globally unique key (line-scoped form above). Do not reuse bare `q01_*` across lines.
