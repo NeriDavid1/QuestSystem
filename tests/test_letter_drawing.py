@@ -40,3 +40,12 @@ class LetterDrawingContractTests(unittest.TestCase):
     def test_single_symbol_playtest_export_stays_one_lowercase_letter(self):
         exporter = module("unity_to_yaml")
         self.assertEqual(exporter.extract_params("letter_drawing", {"symbol": ord("b")}, {}, ROOT, {}), {"symbols": ["b"]})
+
+    def test_composed_word_export_preserves_word_mode_and_case(self):
+        exporter = module("unity_to_yaml")
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            word = root / "Word.asset"
+            word.write_text("MonoBehaviour:\n  symbol: 0\n  displayText: Apple\n  glyphs:\n  - source: {fileID: 11400000, guid: upper}\n    offset: {x: -1, y: 0}\n    scale: 1\n", encoding="utf-8")
+            params = exporter.extract_params("letter_drawing", {"symbols": [{"guid": "word"}]}, {"word": word}, root, {})
+            self.assertEqual(params, {"drawingInputMode": "Word", "word": "Apple"})

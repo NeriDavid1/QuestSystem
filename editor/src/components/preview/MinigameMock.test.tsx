@@ -30,9 +30,9 @@ describe('Listen & Build preview', () => {
   })
 })
 
-describe('Letter Drawing word preview', () => {
+describe('Letter Drawing preview', () => {
   it('lets authors inspect repeated and mixed-case letters independently', () => {
-    const ui = preview('letter_drawing', { drawingInputMode: 'Word', word: 'Apple', symbols: ['B'] })
+    const ui = preview('letter_drawing', { drawingInputMode: 'Symbols', symbols: ['A', 'p', 'p', 'l', 'e'] })
     const letters = ui.querySelectorAll<HTMLButtonElement>('.mg-drawing-sequence button')
     expect([...letters].map(button => button.textContent)).toEqual(['A', 'p', 'p', 'l', 'e'])
     fireEvent.click(letters[2])
@@ -44,4 +44,11 @@ describe('Letter Drawing word preview', () => {
     fireEvent.click(actions[0])
     expect(letters[2].getAttribute('aria-pressed')).toBe('true')
   })
+  it('shows a typed word as one composed drawing rather than separate rounds', () => {
+    const ui = preview('letter_drawing', { drawingInputMode: 'Word', word: 'Apple', symbols: ['B'] })
+    expect(ui.querySelector('.mg-mock-draw-word')?.textContent).toBe('Apple')
+    expect(ui.querySelector('.mg-drawing-sequence')).toBeNull()
+    expect(ui.querySelector('.mg-mock-draw-actions')).toBeNull()
+  })
+
 })

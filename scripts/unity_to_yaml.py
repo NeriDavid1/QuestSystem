@@ -383,7 +383,12 @@ def extract_params(
         for reference in data.get("symbols") or []:
             path = guid_index.get((guid_of(reference) or "").lower())
             if path:
-                symbol = load_unity_yaml(path).get("symbol")
+                asset = load_unity_yaml(path)
+                if len(data.get("symbols") or []) == 1 and asset.get("glyphs") and asset.get("displayText"):
+                    params["drawingInputMode"] = "Word"
+                    params["word"] = str(asset["displayText"])
+                    return params
+                symbol = asset.get("symbol")
                 symbols.append(chr(symbol) if isinstance(symbol, int) else str(symbol))
         params["symbols"] = symbols
     elif minigame_id in ("dwarf_miner", "fruit_slice"):

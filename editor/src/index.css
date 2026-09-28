@@ -4552,3 +4552,7 @@ select:focus {
 .mg-mock-draw-btn:disabled { opacity: .45; cursor: default; }
 
 .mg-drawing-sequence button[aria-pressed="true"] { background: #d5eee6; border: 2px solid #0d7c85; box-shadow: 0 0 0 2px #0d7c8520; }
+
+.mg-mock-draw-word-canvas { container-type: inline-size; }
+.mg-mock-draw-word { white-space: nowrap; max-width: 100%; }
+.mg-mock-word-note { font-size: 12px; text-align: center; color: #70533e; margin: 10px 0 0; }
