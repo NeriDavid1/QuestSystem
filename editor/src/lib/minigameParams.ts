@@ -1,5 +1,5 @@
 import type { CatalogEntry, EditorData, MinigameInstance, QuestStep } from './types'
-import { currentLetterDrawingCatalog, TRACING_SYMBOLS } from './letterDrawing'
+import { currentLetterDrawingCatalog, drawingInputMode, TRACING_SYMBOLS } from './letterDrawing'
 import { currentLetterOrderingCatalog } from './letterOrdering'
 
 /**
@@ -74,6 +74,8 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
   wordTasks: { name: 'wordTasks', labelKey: 'minigameParamWordTasks', type: 'json', default: [] },
 
   // TracingLessonSO: case-sensitive IDs of ready Unity SymbolPathSO assets.
+  drawingInputMode: { name: 'drawingInputMode', labelKey: 'minigameDrawingInputMode', type: 'select', default: 'Symbols', options: ['Symbols', 'Word'], optionLabelKeys: { Symbols: 'minigameDrawingSymbolsMode', Word: 'minigameDrawingWordMode' } },
+  word: { name: 'word', labelKey: 'minigameDrawingWord', hintKey: 'minigameDrawingWordHint', type: 'string', default: '' },
   symbols: { name: 'symbols', labelKey: 'minigameParamSymbols', hintKey: 'minigameParamSymbolsHint', type: 'stringArray', default: ['A'], options: TRACING_SYMBOLS },
   // Legacy drawing fields remain readable for old documents.
   letter: { name: 'letter', labelKey: 'minigameParamLetter', type: 'string', default: 'A' },
@@ -271,6 +273,7 @@ export function seedParamsFromBrief(
 
 /** Read a parameter value, falling back to the field default when unset. */
 export function readMinigameParam(minigame: MinigameInstance, field: MinigameParamField): unknown {
+  if (field.name === 'drawingInputMode') return drawingInputMode(minigame.params ?? {})
   if (field.name === 'symbols' && !Object.hasOwn(minigame.params ?? {}, 'symbols')) {
     const legacy = minigame.params?.letter ?? minigame.target
     if (typeof legacy === 'string' && /^[A-Za-z]$/.test(legacy)) return [legacy]

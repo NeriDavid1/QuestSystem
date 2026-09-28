@@ -4117,7 +4117,7 @@
       "kind": "minigame",
       "external_id": "letter_drawing",
       "name": "Letter Drawing",
-      "description": "Trace selected English letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs.",
+      "description": "Trace a typed English word or selected letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs.",
       "status": null,
       "image_path": "images/minigames/letter_drawing.png",
       "metadata": {
@@ -4126,13 +4126,15 @@
         "unity_config": "LetterTracingQuestConfigSO",
         "unity_content": "TracingLessonSO",
         "category": "motor_skills",
-        "description": "Trace selected English letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs.",
+        "description": "Trace a typed English word or selected letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs.",
         "english_focus": "Letter formation, stroke order",
         "difficulty_range": [
           1,
           4
         ],
         "content_fields": [
+          "drawingInputMode",
+          "word",
           "symbols"
         ],
         "variants": [
@@ -56716,5 +56718,5 @@
       ]
     }
   ],
-  "source_digest": "2a5c040901f4cf6b8f089376bdee54f738e6a7477447e563d227d93352af9c6c"
+  "source_digest": "64c40dedcab0a35053f2ebf2999305eccac08842c83a55716522ecb206271b7d"
 }

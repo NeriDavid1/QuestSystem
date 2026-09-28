@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useT } from '../../i18n'
 import { tracingSymbols } from '../../lib/letterDrawing'
 import { orderingVisual } from '../../lib/letterOrdering'
@@ -80,12 +80,14 @@ function gapifyWord(fullWord: string, missingIndices: number[]): string {
 function ParchmentShell({
   children,
   closeClass = 'brown',
+  interactive = false,
 }: {
   children: ReactNode
   closeClass?: 'brown' | 'red'
+  interactive?: boolean
 }) {
   return (
-    <div className="mg-mock-parchment" aria-hidden="true">
+    <div className="mg-mock-parchment" aria-hidden={interactive ? undefined : true}>
       <span className={`mg-mock-close ${closeClass}`}>×</span>
       {children}
     </div>
@@ -246,20 +248,30 @@ function SpeakAloudMock({ params, prompt, speakLabel }: { params: MockParams; pr
   )
 }
 
-function LetterDrawingMock({ params, clearLabel, doneLabel }: { params: MockParams; clearLabel: string; doneLabel: string }) {
+function LetterDrawingMock({ params }: { params: MockParams }) {
+  const t = useT()
   const symbols = tracingSymbols(params)
-  const letter = symbols[0] || '…'
+  const [selected, setSelected] = useState(0)
+  const index = Math.min(selected, Math.max(0, symbols.length - 1))
   return (
-    <ParchmentShell>
-      <div className="mg-mock-slots" dir="ltr">
-        {symbols.map((symbol, index) => <span className={`mg-mock-slot ${index === 0 ? 'filled' : ''}`} key={index}>{symbol}</span>)}
+    <ParchmentShell interactive>
+      <div className="mg-mock-slots mg-drawing-sequence" dir="ltr">
+        {symbols.map((symbol, position) => (
+          <button type="button" className={`mg-mock-slot ${position === index ? 'filled' : ''}`}
+            key={position} aria-pressed={position === index}
+            aria-label={t('drawingPreviewLetter', { letter: symbol, index: position + 1, count: symbols.length })}
+            onClick={() => setSelected(position)}>{symbol}</button>
+        ))}
       </div>
       <div className="mg-mock-draw-canvas">
-        <span className="mg-mock-draw-letter">{letter}</span>
+        <span className="mg-mock-draw-letter">{symbols[index] || '…'}</span>
       </div>
       <div className="mg-mock-draw-actions">
-        <button type="button" className="mg-mock-draw-btn" disabled>{clearLabel}</button>
-        <button type="button" className="mg-mock-draw-btn primary" disabled>{doneLabel}</button>
+        <button type="button" className="mg-mock-draw-btn" disabled={index === 0}
+          onClick={() => setSelected(index - 1)}>{t('drawingPreviewPrevious')}</button>
+        <span dir="ltr">{symbols.length ? index + 1 : 0} / {symbols.length}</span>
+        <button type="button" className="mg-mock-draw-btn primary" disabled={index >= symbols.length - 1}
+          onClick={() => setSelected(index + 1)}>{t('drawingPreviewNext')}</button>
       </div>
     </ParchmentShell>
   )
@@ -376,7 +388,7 @@ export function MinigameMock({
       body = <SpeakAloudMock params={params} prompt={prompt} speakLabel={t('mgMockSpeak')} />
       break
     case 'letter_drawing':
-      body = <LetterDrawingMock params={params} clearLabel={t('mgMockRetry')} doneLabel={t('mgMockClose')} />
+      body = <LetterDrawingMock key={tracingSymbols(params).join('')} params={params} />
       break
     case 'dwarf_miner':
       body = <DwarfMinerMock params={params} prompt={prompt} seed={seed} />
@@ -394,7 +406,7 @@ export function MinigameMock({
 
   return (
     <div className="mg-mock">
-      <small className="eyebrow mg-mock-badge">{t('mgMockPreviewOnly')}</small>
+      <small className="eyebrow mg-mock-badge">{t(minigameId === 'letter_drawing' ? 'drawingPreviewTitle' : 'mgMockPreviewOnly')}</small>
       <div className="mg-mock-board" dir="ltr">
         {body}
       </div>

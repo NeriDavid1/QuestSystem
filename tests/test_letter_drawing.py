@@ -17,8 +17,9 @@ class LetterDrawingContractTests(unittest.TestCase):
     def test_selected_symbols_are_recognized_as_letter_drawing(self):
         seed = module("import_yaml_to_supabase")
         self.assertEqual(seed.infer_minigame_id({"symbols": ["A", "b"]}), "letter_drawing")
+        self.assertEqual(seed.infer_minigame_id({"drawingInputMode": "Word", "word": "Apple"}), "letter_drawing")
         entry = next(e for e in seed.catalog_bundle()[0] if e["kind"] == "minigame" and e["external_id"] == "letter_drawing")
-        self.assertEqual(entry["metadata"]["content_fields"], ["symbols"])
+        self.assertEqual(entry["metadata"]["content_fields"], ["drawingInputMode", "word", "symbols"])
         self.assertEqual(entry["metadata"]["unity_config"], "LetterTracingQuestConfigSO")
         self.assertEqual(entry["image_path"], "images/minigames/letter_drawing.png")
 

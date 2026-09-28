@@ -1,3 +1,4 @@
+import { drawingInputMode } from '../../lib/letterDrawing'
 import { useState } from 'react'
 import { useT, type MessageKey } from '../../i18n'
 import type { MinigameInstance } from '../../lib/types'
@@ -363,6 +364,11 @@ export function MinigameParamsEditor({
       ) : (
         fields.map((field) => {
           if (field.name === 'visualVariant') return null
+          if (minigame.minigame_id === 'letter_drawing') {
+            const mode = drawingInputMode(params)
+            if (field.name === 'word' && mode !== 'Word') return null
+            if (field.name === 'symbols' && mode === 'Word') return null
+          }
           const visual = orderingVisual(minigame.minigame_id, minigame.params ?? {})
           const listening = visual === 'ListenAndBuild' || visual === 1
           if ((field.name === 'promptAudio' || field.name === 'hintMode') && !listening) return null
@@ -428,7 +434,7 @@ export function MinigameParamsEditor({
               ) : field.type === 'string' || field.type === 'asset' ? (
                 <input
                   className="content-text"
-                  dir={field.type === 'asset' ? 'ltr' : 'auto'}
+                  dir={field.type === 'asset' || field.name === 'word' ? 'ltr' : 'auto'}
                   value={String(value ?? '')}
                   placeholder={field.type === 'asset' ? 'Assets/…' : ''}
                   onChange={(event) => setScalar(field, event.target.value)}

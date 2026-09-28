@@ -7,11 +7,11 @@ export const LETTER_DRAWING_METADATA = {
   category: 'motor_skills',
   english_focus: 'Letter formation, stroke order',
   difficulty_range: [1, 4],
-  content_fields: ['symbols'],
+  content_fields: ['drawingInputMode', 'word', 'symbols'],
   variants: ['trace_guided'],
   typical_stations: ['shop', 'chest', 'cart'],
 }
-export const LETTER_DRAWING_DESCRIPTION = 'Trace selected English letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs.'
+export const LETTER_DRAWING_DESCRIPTION = 'Trace a typed English word or selected letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs.'
 
 /** Keep the shipped runtime contract current even when a DB catalog row predates it. */
 export function currentLetterDrawingCatalog(entry: CatalogEntry): CatalogEntry {
@@ -24,7 +24,18 @@ export function currentLetterDrawingCatalog(entry: CatalogEntry): CatalogEntry {
   }
 }
 
+export function drawingInputMode(params: Record<string, unknown>): string {
+  if (Object.hasOwn(params, 'drawingInputMode')) return String(params.drawingInputMode)
+  return typeof params.word === 'string' && params.word.trim() ? 'Word' : 'Symbols'
+}
+
 export function tracingSymbols(params: Record<string, unknown>, target?: string | null): string[] {
+  const mode = drawingInputMode(params)
+  if (mode === 'Word') {
+    const word = typeof params.word === 'string' ? params.word.trim() : ''
+    return /^[A-Za-z]+$/.test(word) ? [...word] : []
+  }
+  if (mode !== 'Symbols') return []
   if (Object.hasOwn(params, 'symbols')) {
     return Array.isArray(params.symbols) ? params.symbols.map(String) : []
   }

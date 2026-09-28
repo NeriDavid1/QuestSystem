@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { LocaleProvider } from '../../i18n/LocaleContext'
 import { MinigameMock } from './MinigameMock'
@@ -27,5 +27,21 @@ describe('Listen & Build preview', () => {
     const ui = preview('letter_ordering', { targetWord: 'bee', visualVariant: 'ListenAndBuild' })
     expect(ui.querySelector('.mg-mock-parchment')).not.toBeNull()
     expect(ui.querySelector('.mg-listen-board')).toBeNull()
+  })
+})
+
+describe('Letter Drawing word preview', () => {
+  it('lets authors inspect repeated and mixed-case letters independently', () => {
+    const ui = preview('letter_drawing', { drawingInputMode: 'Word', word: 'Apple', symbols: ['B'] })
+    const letters = ui.querySelectorAll<HTMLButtonElement>('.mg-drawing-sequence button')
+    expect([...letters].map(button => button.textContent)).toEqual(['A', 'p', 'p', 'l', 'e'])
+    fireEvent.click(letters[2])
+    expect(ui.querySelector('.mg-mock-draw-letter')?.textContent).toBe('p')
+    expect(letters[2].getAttribute('aria-pressed')).toBe('true')
+    const actions = ui.querySelectorAll<HTMLButtonElement>('.mg-mock-draw-actions button')
+    fireEvent.click(actions[1])
+    expect(ui.querySelector('.mg-mock-draw-letter')?.textContent).toBe('l')
+    fireEvent.click(actions[0])
+    expect(letters[2].getAttribute('aria-pressed')).toBe('true')
   })
 })
