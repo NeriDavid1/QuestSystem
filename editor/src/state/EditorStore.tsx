@@ -308,19 +308,28 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     const client = supabase
     let mounted = true
 
-    const enterWorkspace = async (sessionUser: { id: string; email?: string | null }) => {
+    let workspaceUserId: string | null = null
+    let workspaceLoad: Promise<void> | null = null
+    const enterWorkspace = (sessionUser: { id: string; email?: string | null }): Promise<void> => {
+      // getSession and INITIAL_SESSION can arrive together. Share the same
+      // load, and never replace an open draft on a same-user auth refresh.
+      if (workspaceUserId === sessionUser.id && workspaceLoad) return workspaceLoad
+      workspaceUserId = sessionUser.id
+      workspaceLoad = (async () => {
       const displayName = sessionUser.email?.split('@')[0] ?? null
       const { error: membershipError } = await client.rpc('ensure_workspace_member', {
         p_display_name: displayName,
       })
       if (membershipError) throw membershipError
       const loaded = await loadEditorData()
-      if (!mounted) return
+      if (!mounted || workspaceUserId !== sessionUser.id) return
       setData(loaded)
       questlineVersions.current = Object.fromEntries(
         loaded.questlines.map((line) => [line.id, line.updated_at ?? '']),
       )
       setLoadError('')
+      })()
+      return workspaceLoad
     }
 
     const initialize = async () => {
@@ -346,6 +355,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
           if (mounted) setLoadError(error instanceof Error ? error.message : t('loadEditorFailed'))
         })
       } else {
+        workspaceUserId = null
+        workspaceLoad = null
         setData(emptyEditorData())
       }
     })

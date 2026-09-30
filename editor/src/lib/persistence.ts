@@ -344,17 +344,10 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
 
 export async function saveQuestlineDraft(payload: QuestlineSavePayload): Promise<SaveResult> {
   const result = await saveViaRpc(payload)
-  if (await draftMatchesServer(payload)) return result
-  // Some older hosted RPCs acknowledge a save without applying the supplied
-  // graph. Retry through the existing, RLS-protected scoped writer, then read
-  // back before allowing the editor to mark the content as saved.
-  const fallbackResult = await saveViaClient({ ...payload, force: false })
   if (!await draftMatchesServer(payload)) {
     throw new Error('The server acknowledged the save, but the saved questline does not match the draft. Your local changes are still available.')
   }
-  const { data, error } = await supabase!.from('questlines').select('updated_at').eq('id', payload.questline.id).single()
-  if (error) throw new Error(error.message)
-  return { ...fallbackResult, updatedAt: data.updated_at }
+  return result
 }
 
 async function draftMatchesServer(payload: QuestlineSavePayload): Promise<boolean> {
