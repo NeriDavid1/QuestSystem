@@ -31,6 +31,9 @@ export function Sidebar() {
       <button className={`main-nav settings-link ${view === 'settings' ? 'active' : ''}`} onClick={() => setView('settings')}>
         <Icon name="settings" /><span>{t('navSettings')}</span>
       </button>
+      <a className="main-nav settings-link" href="voice.html">
+        <Icon name="voice" /><span>{t('navVoiceReview')}</span>
+      </a>
       <div className="sidebar-spacer" />
       <div className={`connection-card ${demoMode ? 'demo' : ''}`}>
         <span className="connection-dot" />

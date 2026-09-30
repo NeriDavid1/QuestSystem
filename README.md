@@ -10,6 +10,7 @@ Authoring workspace for English-learning Open World quests. Synced to Unity `Que
 | Creators (local) | Double-click [`presentation/OPEN_CATALOG.bat`](presentation/OPEN_CATALOG.bat) (serves over localhost — opening the HTML file directly stays empty) |
 | Boss / stakeholders (עברית) | **[Quest map](https://neridavid1.github.io/QuestSystem/viewer.html)** · local [`presentation/viewer.html`](presentation/viewer.html) |
 | Authenticated quest editors | **[QuestForge editor](https://neridavid1.github.io/QuestSystem/editor/)** · local `cd editor && npm install && npm run dev` |
+| Guides reviewing voice-over | **[Voice Review](https://neridavid1.github.io/QuestSystem/editor/voice.html)** · how it syncs with Unity: [`docs/voice-review.md`](docs/voice-review.md) |
 | Landing page | [`presentation/index.html`](presentation/index.html) |
 
 After changing registry YAML or capturing new pictures, rebuild:
