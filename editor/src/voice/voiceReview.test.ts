@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildDecision, groupTitle, nextToReview, sectionsOf, stateOf, summarizeGroups, type VoiceDecision, type VoiceItem } from './voiceReview'
+import { buildDecision, groupTitle, matchesFilter, nextToReview, sectionsOf, stateOf, summarizeGroups, whisperHint, type VoiceDecision, type VoiceItem } from './voiceReview'
 
 const item = (n: number, group = 'articles_a_an', section = 'Quest 1 · start'): VoiceItem => ({
   clip_path: `clip_${group}_${n}.mp3`, group_key: group, section, position: n, speaker: 'Nemo', voice_name: 'EK - Nemo',
@@ -52,5 +52,16 @@ describe('voice review', () => {
     expect(sectionsOf(items.slice(1)).map((s) => s.section)).toEqual(['Quest 1 · start', 'Quest 1 · finish'])
     expect(groupTitle('the_royal_impostor')).toBe('The royal impostor')
     expect(groupTitle('Legacy/Level1')).toBe('Legacy · Level1')
+  })
+
+  it('shows Whisper hints only for the take it checked, and filters lines that need attention', () => {
+    const line = { ...item(1), asr_take_hash: 'take1', asr_level: 'check' as const, asr_text: 'לאבחן', asr_flags: ['words'], asr_missing: ['להבחן'], asr_extra: ['לאבחן'] }
+    expect(whisperHint(line)?.messages[0]).toContain('להבחן')
+    expect(matchesFilter('toReview', 'attention', line)).toBe(true)
+    expect(matchesFilter('accepted', 'attention', line)).toBe(false)
+    expect(whisperHint({ ...line, asr_take_hash: 'older' })).toBeNull()
+    expect(whisperHint({ ...line, asr_level: 'ok' })).toBeNull()
+    expect(whisperHint({ ...line, asr_flags: ['no_speech'], asr_missing: [], asr_extra: [] })?.messages).toEqual(['לא נשמע דיבור בהקלטה.'])
+    expect(summarizeGroups([line, item(2)], new Map())[0]).toMatchObject({ toReview: 2, attention: 1 })
   })
 })
