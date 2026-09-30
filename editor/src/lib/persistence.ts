@@ -94,7 +94,9 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
     if (isFunctionMissingError(error)) {
       return saveViaClient(payload)
     }
-    if (error.message?.includes('CONFLICT')) {
+    // Only our explicit concurrency exception means a stale editor version.
+    // PostgreSQL diagnostics mentioning ON CONFLICT are persistence failures.
+    if (error.message?.trim() === 'CONFLICT') {
       // A confirmed overwrite must remain usable while a deployed RPC is older
       // than the repository migration that added p_force. The client fallback
       // is scoped to this questline and the rows touched by this session.
