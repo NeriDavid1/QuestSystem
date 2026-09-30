@@ -9,9 +9,9 @@ Date: 2026-09-30. Role: Quest QA and Learning Review. Sources: Designer brief, a
 | Learning, story and language | PASS | All 29 exercises reviewed in order; teaching precedes practice; full independent spelling limited to taught dad/bad; Hebrew without niqqud; all character speech addresses the player. |
 | Source contracts and references | PASS | Inline Python checks covered 7 quests, 29 distinct referenced instances, 24 dialogues, all gap indices/tile occurrences, exact IDs, supported fields/ranges, levels/prerequisites, matching index/file rewards and seven existing audio paths. |
 | Acoustic verification | PENDING | Existing clips and durations established. Cached Whisper recognizes Apple/Bag/Dog/Bad/Dad; acorn is A corn and cat is Cut!. ASR does not certify vowel/phoneme accuracy. No replacement with an unverified sound effect. |
-| Generated bundle / editor import | PENDING | Parent owns importer/build/browser evidence. Static source validation is complete; this report does not claim that a browser import or Unity import passed. |
+| Generated bundle / editor import | PASS | Importer: 0 errors / 0 warnings. Hosted editor imported the seven-quest line; full semantic ZIP readback passed. Unity import remains unperformed. |
 | Unity gameplay | PENDING | No live replay, audio button, tracing round, matching UI, letter-to-sound production or motor accessibility playthrough. |
-| Hosted replacement / publication | PENDING | Parent owns exact target backup, deployment/import and hosted readback. Draft and public publish are distinct evidence states. |
+| Hosted replacement / publication | DRAFT PASS | Saved hosted draft survives independent reload. Public snapshot was not published. |
 
 No unresolved source-content blockers or major findings remain. Runtime limitations are explicitly retained below.
 
@@ -83,3 +83,17 @@ Parent should append actual importer/build/editor/publication evidence when thos
 - Editor scoped replacement-key regression tests: 2 passed; TypeScript check and production build passed.
 - Hosted baseline exported to the_alphabet_adventure-questline.zip before replacement and preserved in a separate temporary backup directory.
 - Editor import/save and Unity playback remain pending at this preflight stage.
+
+## Parent hosted postflight evidence
+
+- Three session agents completed the pedagogical design, content authoring and independent QA roles. QA also reviewed the persistence repairs without running tests or touching the browser.
+- Content commit cc83957e68e76ee35b9533d02581c1cb90cb1c50 and editor repair commit 5d63489c9a94a6557e90f1de506074a43390d1b2 reached GitHub Pages successfully. The final editor deployment run was 36728872906.
+- The exact hosted line remains the_alphabet_adventure / The Alphabet Adventure, with the existing A/B external quest keys retained. An initial two-quest UI export was preserved before replacement.
+- Browser reload without a load command returned seven server-backed quests and the saved indicator. The editor reports no blocking validation issues. No target questline deletion or public Publish Snapshot action was used.
+- Downloaded the hosted draft again after the independent reload. reports/alphabet_adventure_hosted_readback_2026-09-30.json records PASS: 7 quests, 39 learning steps, 24 dialogues, all 114 Hebrew dialogue lines, and 29 game instances. Compared quest fields, step payloads, prerequisites, rewards, speakers, dialogue text and game parameters with the generated source bundle; no semantic mismatch remains.
+- Explicit comparison normalizations: editor draft status versus source completeness status; contiguous zero-based learning-step positions after opening-dialogue promotion; order-independent reward lists. Learning-step sequence and payloads were compared without reordering.
+- Production TypeScript/Vite build passed after the final repairs. Git diff whitespace check passed. Earlier two scoped-key regression tests passed; no additional tests were added or run during the later repairs.
+- Resolved editor findings: preserve quest IDs by key on replacement; reserve step IDs by key before assigning rows to new steps; exclude retained rows from deletion; distinguish PostgreSQL ON CONFLICT diagnostics from explicit version conflicts; share initial same-user auth loads and prevent translator/auth-refresh reloads from replacing drafts; paginate all editor tables with stable ordering to avoid the server's row cap truncating dialogue lines.
+- The post-save graph verifier checks graph structure. Full authored content correctness is separately evidenced by the hosted ZIP semantic readback above.
+- Screenshot: reports/alphabet_adventure_hosted_2026-09-30.png. Export: C:/Users/kiril/Downloads/the_alphabet_adventure-questline (2).zip.
+- Unity gameplay, audio replay and phonetic audition remain PENDING. Existing short acorn/cat recordings retain the uncertainties described above. Saved draft is not a published runtime snapshot.
