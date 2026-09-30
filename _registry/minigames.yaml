@@ -94,12 +94,10 @@ minigames:
     unity_config: LetterTracingQuestConfigSO
     unity_content: TracingLessonSO
     category: motor_skills
-    description: "Trace selected letters, a typed English word, or selected letters followed by a word. Letter case and authored order are preserved."
+    description: "Type letters or English words in the order they should be traced. Each entry is one round; letter case is preserved."
     english_focus: "Letter formation, stroke order"
     difficulty_range: [1, 4]
     content_fields:
-      - drawingInputMode
-      - word
       - symbols
     variants:
       - trace_guided

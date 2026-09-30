@@ -1,6 +1,6 @@
 import type { EditorData, Questline, ValidationIssue } from './types'
 import type { MessageKey } from '../i18n/messages'
-import { drawingInputMode, tracingSymbols } from './letterDrawing'
+import { tracingSteps } from './letterDrawing'
 import { isLetterOrdering } from './letterOrdering'
 import { stepFieldLabel, stepTypeName } from './stepPresentation'
 import {
@@ -106,11 +106,10 @@ export function validateQuestline(
     for (const step of steps) {
       if (step.payload.minigame_id !== 'letter_drawing') continue
       const instance = data.minigames.find((game) => game.key === getStepMinigameKey(step))
-      const symbols = instance ? tracingSymbols(instance.params ?? {}, instance.target) : []
-      if (symbols.length === 0 || symbols.some((symbol) => !/^[A-Za-z]$/.test(symbol))) {
+      const steps = instance ? tracingSteps(instance.params ?? {}, instance.target) : []
+      if (steps.length === 0) {
         issues.push({ severity: 'error', code: 'invalid_tracing_symbols',
-          message: t(drawingInputMode(instance?.params ?? {}) === 'SymbolsThenWord' ? 'validationTracingLettersThenWord' :
-            drawingInputMode(instance?.params ?? {}) === 'Word' ? 'validationTracingWord' : 'validationTracingSymbols'), entityId: step.id })
+          message: t('validationTracingSymbols'), entityId: step.id })
       }
     }
     if (steps.length === 0) {

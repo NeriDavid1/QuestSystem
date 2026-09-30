@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { useT } from '../../i18n'
-import { drawingInputMode, tracingSteps } from '../../lib/letterDrawing'
+import { tracingSteps } from '../../lib/letterDrawing'
 import { orderingVisual } from '../../lib/letterOrdering'
 import listeningFrame from '../../assets/minigames/listen-build/ListeningFrame.png'
 import listeningTile from '../../assets/minigames/listen-build/LetterTile.png'
@@ -253,16 +253,6 @@ function LetterDrawingMock({ params }: { params: MockParams }) {
   const symbols = tracingSteps(params)
   const [selected, setSelected] = useState(0)
   const index = Math.min(selected, Math.max(0, symbols.length - 1))
-  if (drawingInputMode(params) === 'Word') {
-    const word = symbols.join('')
-    return <ParchmentShell>
-      <div className="mg-mock-draw-canvas mg-mock-draw-word-canvas" dir="ltr">
-        <span className="mg-mock-draw-letter mg-mock-draw-word"
-          style={{ fontSize: `min(82px, ${120 / Math.max(1, word.length)}cqi)` }}>{word || '…'}</span>
-      </div>
-      <p className="mg-mock-word-note">{t('drawingPreviewWholeWord')}</p>
-    </ParchmentShell>
-  }
   return (
     <ParchmentShell interactive>
       <div className="mg-mock-slots mg-drawing-sequence" dir="ltr">

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { currentLetterDrawingCatalog, tracingSymbols, TRACING_SYMBOLS } from './letterDrawing'
+import { currentLetterDrawingCatalog, tracingSteps, tracingSymbols } from './letterDrawing'
 import { defaultParamsForEntry, getMinigameParamsForEntry, readMinigameParam } from './minigameParams'
 import type { CatalogEntry, MinigameInstance } from './types'
 
@@ -13,9 +13,8 @@ describe('current Letter Drawing contract', () => {
     expect(current.metadata.unity_config).toBe('LetterTracingQuestConfigSO')
     expect(current.metadata.variants).toEqual(['trace_guided'])
     expect(current.image_path).toBe('images/minigames/letter_drawing.png')
-    expect(getMinigameParamsForEntry(oldCatalog).map((field) => field.name)).toEqual(['drawingInputMode', 'word', 'symbols'])
-    expect(defaultParamsForEntry(oldCatalog)).toEqual({ drawingInputMode: 'Symbols', word: '', symbols: ['A'] })
-    expect(TRACING_SYMBOLS).toHaveLength(52)
+    expect(getMinigameParamsForEntry(oldCatalog).map((field) => field.name)).toEqual(['symbols'])
+    expect(defaultParamsForEntry(oldCatalog)).toEqual({ symbols: ['A'] })
   })
   it('keeps arbitrary order, letter case and repetitions', () => {
     expect(tracingSymbols({ symbols: ['A', 'b', 'A', 'z'] })).toEqual(['A', 'b', 'A', 'z'])
@@ -36,6 +35,7 @@ describe('current Letter Drawing contract', () => {
     expect(tracingSymbols({ word: 'aAa' })).toEqual(['a', 'A', 'a'])
     expect(tracingSymbols({ drawingInputMode: 'Symbols', word: 'Apple', symbols: ['z'] })).toEqual(['A', 'p', 'p', 'l', 'e'])
     expect(tracingSymbols({ drawingInputMode: 'Symbols', word: '', symbols: ['z'] })).toEqual(['z'])
+    expect(tracingSteps({ symbols: ['B', 'b', 'bag'] })).toEqual(['B', 'b', 'bag'])
   })
   it('rejects invalid words without falling back to selected symbols', () => {
     for (const word of ['', 'two words', 'abc1', 'é', 'a-b']) {

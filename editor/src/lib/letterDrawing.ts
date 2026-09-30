@@ -1,17 +1,16 @@
 import type { CatalogEntry } from './types'
 
-export const TRACING_SYMBOLS = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz']
 export const LETTER_DRAWING_METADATA = {
   unity_config: 'LetterTracingQuestConfigSO',
   unity_content: 'TracingLessonSO',
   category: 'motor_skills',
   english_focus: 'Letter formation, stroke order',
   difficulty_range: [1, 4],
-  content_fields: ['drawingInputMode', 'word', 'symbols'],
+  content_fields: ['symbols'],
   variants: ['trace_guided'],
   typical_stations: ['shop', 'chest', 'cart'],
 }
-export const LETTER_DRAWING_DESCRIPTION = 'Trace selected letters, a typed English word, or selected letters followed by a word. Letter case and authored order are preserved.'
+export const LETTER_DRAWING_DESCRIPTION = 'Type letters or English words in the order they should be traced. Each entry is one round; letter case is preserved.'
 
 /** Keep the shipped runtime contract current even when a DB catalog row predates it. */
 export function currentLetterDrawingCatalog(entry: CatalogEntry): CatalogEntry {
@@ -32,28 +31,27 @@ export function drawingInputMode(params: Record<string, unknown>): string {
 }
 
 export function tracingSymbols(params: Record<string, unknown>, target?: string | null): string[] {
-  const mode = drawingInputMode(params)
-  if (mode === 'Word' || mode === 'SymbolsThenWord') {
-    const word = typeof params.word === 'string' ? params.word.trim() : ''
-    if (!/^[A-Za-z]+$/.test(word)) return []
-    if (mode === 'Word') return [...word]
-  }
-  if (mode !== 'Symbols' && mode !== 'SymbolsThenWord') return []
-  if (Object.hasOwn(params, 'symbols')) {
-    const symbols = Array.isArray(params.symbols) ? params.symbols.map(String) : []
-    if (mode === 'SymbolsThenWord' && (symbols.length === 0 || symbols.some((symbol) => !/^[A-Za-z]$/.test(symbol)))) return []
-    return mode === 'SymbolsThenWord' ? [...symbols, ...(params.word as string).trim()] : symbols
-  }
-  const legacy = typeof params.letter === 'string' ? params.letter : target
-  return legacy ? (mode === 'SymbolsThenWord' ? [legacy, ...(params.word as string).trim()] : [legacy]) : []
+  const steps = tracingSteps(params, target)
+  return steps.flatMap((step) => [...step])
 }
 
 export function tracingSteps(params: Record<string, unknown>, target?: string | null): string[] {
-  const symbols = tracingSymbols(params, target)
-  if (!symbols.length) return []
   const mode = drawingInputMode(params)
+  if (mode !== 'Symbols' && mode !== 'Word' && mode !== 'SymbolsThenWord') return []
   const word = typeof params.word === 'string' ? params.word.trim() : ''
-  if (mode === 'Word') return [word]
-  if (mode === 'SymbolsThenWord') return [...symbols.slice(0, -word.length), word]
-  return symbols
+  // Published exercises with the old word field keep their original order.
+  if (word || mode === 'Word' || mode === 'SymbolsThenWord') {
+    if (!/^[A-Za-z]+$/.test(word)) return []
+    if (mode === 'Word') return [word]
+    if (mode === 'SymbolsThenWord') {
+      const selected = Array.isArray(params.symbols) ? params.symbols.map(String) :
+        [typeof params.letter === 'string' ? params.letter : target ?? '']
+      return selected.length && selected.every((entry) => /^[A-Za-z]$/.test(entry)) ? [...selected, word] : []
+    }
+  }
+  const entries = Object.hasOwn(params, 'symbols') ? params.symbols :
+    [typeof params.letter === 'string' ? params.letter : target ?? '']
+  if (!Array.isArray(entries) || !entries.length) return []
+  const steps = entries.map(String)
+  return steps.every((entry) => /^[A-Za-z]+$/.test(entry)) ? steps : []
 }
