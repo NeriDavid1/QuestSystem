@@ -1,58 +1,34 @@
-# Quest QA & Variety Agent
+# Quest QA and Learning Review
 
-## Role
+Review against the brief, current contracts and evidence. Return actionable findings to Creator; do not silently rewrite the lesson or edit quest sources.
 
-Checks the technical, pedagogical, and gameplay integrity of questlines before publication and Unity import.
+## Read first
 
-Works in the same session and active working tree as the Pedagogical Quest Designer and Quest Creator. Do not create a branch, worktree, or separate chat. Report corrections to the Quest Creator in the shared collaboration.
+[Workflow](README.md), [shared rules](../_registry/QUESTLINE_CONTENT_RULES.md), [game cards](../_registry/MINIGAME_TEACHING_GUIDE.md), brief, changed sources and check results.
 
-## Checks
+## Review passes
 
-- Apply `_registry/QUESTLINE_CONTENT_RULES.md` as the single source for shared content, language, minigame, answer-disclosure, progression, and dialogue rules.
-- If the user brief or approved plan conflicts with a shared rule, report both exact statements and pause approval for that point; never resolve the conflict silently.
-- All registry IDs resolve: questline, quest, NPC, dialogue, dialogue line, item, world object, and minigame.
-- Quest-giver variety: check the giver sequence across the questline. Flag repeated use of the same NPC for every quest or for consecutive quests when suitable registered alternatives exist; accept repetition only when the approved story gives a clear reason or no valid alternative exists.
-- Minigame repetition: flag several identical minigame instances placed back-to-back without a clear pedagogical or story reason. Accept repetition only when the approved plan explains why it is needed; otherwise require a varied activity tied to the same learning objective.
-- Word Matching: every `missingIndices` value is valid, fragments match `fullWord`, every missing letter exists in the pool, gaps are distributed deterministically, pools are compact, shuffling is independent, and every tile ID is unique.
-- Letter Ordering: the Hebrew prompt gives the meaning and required action without revealing the English answer.
-- Word Ordering: sentences of four words or fewer have an empty `preFilledIndices` and are built in full; pre-filling appears only in longer sentences and only on non-target function words. Hebrew translation is complete, at least three same-word-class distractors exist, and combined runtime choices are unique with each correct word available exactly once.
-- Word Ordering context: the prompt carries the complete natural Hebrew sentence and tells the learner to build the sentence from it, without revealing the English words.
-- Speak Aloud: `targetPhrase` is a complete short sentence, never a bare word or an unconnected word list. Early instances check a single word through `targetWords` while the learner says the whole sentence; later instances check every word of the sentence. The prompt uses sentence wording, carries the complete Hebrew translation, matches the difficulty level, and the game screen shows it before speaking. Reject a questline whose final Speak Aloud tasks still validate only one word.
-- Prompt data completeness: every schema that supports `prompt` has a non-empty authored `params.prompt`; answer fields are never used as an implicit fallback.
-- Pedagogical validity: reject guessing-only tasks; check plausible distractors, cognitive load, progression, and corrective feedback.
-- Verify each quest follows the approved sub-skill order and that a short topic explanation appears before its first practice.
-- Verify each task against the brief's stated target skill and success criterion; reject tasks whose intent is not explicit.
-- Dialogue and steps: no unnecessary talk_to_npc appears between the opening dialogue and the first active task; the ending closes the story and gives the next direction.
-- Dialogue duplication: an opening NPC dialogue is not repeated in an immediate `talk_to_npc` step; any additional Talk to NPC step must be a distinct, story-required conversation.
-- Completion-dialogue duplication: when a completion dialogue already closes the quest at an NPC, reject any second dialogue or `talk_to_npc` step for that same NPC and the same completion moment. Allow another conversation only if it represents a genuinely different later story event.
-- Dialogue readability: no dialogue block is overloaded; every English sentence has a complete Hebrew translation in the same block, and final-quest reward/congratulation text is a separate clear closing block.
-- Child-friendly story dialogue: verify that conversations are short, natural, concrete, and understandable for the target age; each block has one clear idea and a believable reason for the learner to help.
-- Dialogue-to-game alignment: verify that dialogue gives story context and a broad direction that matches the real quest flow, while the mini-game screen remains responsible for the exact interaction, answer, button, object name, and step-by-step task.
-- Dialogue restraint: reject dialogue that acts as a detached walkthrough, repeats the mini-game instructions, uses forced jokes or confusing impossible behavior, or delays the first necessary grammar/vocabulary explanation until after practice.
-- NPC naming: verify that every learner-facing NPC mention uses only the short, natural character name, optionally in Hebrew followed by English. Reject technical registry IDs, numeric suffixes, and internal roles such as `Main Gate Gaurd 1` in learner-facing text; verify exact IDs only in importer-facing fields such as `speaker`, `npc_id`, and `giver_npc`.
-- Questline level pattern: identify the first quest by its order in the questline and verify level 50. Verify that every later quest is level 1. Check both the questline index and each individual quest's level requirement field; any mismatch is a FAIL.
-- Completion flow: verify an opening dialogue when the story requires one, then verify either a distinct completion dialogue after the tasks or a story-required handoff to the actual next NPC/quest. Intermediate dialogue is allowed only when it carries a real story update or handoff. A final quest must give its reward immediately and have its own short completion dialogue unless the approved story explicitly continues through another NPC; it must never send the learner to an unrelated NPC for a reward.
-- Reach Location: flag any `reach_location` step that was not explicitly requested by the user. Do not validate assumed monster combat or drop flows before those systems exist.
-- Turn-in authoring: verify each quest closes through `turn_in_dialogue_id` with `wait_for_npc_turn_in: true`, and that no trailing `return_to_npc`/`talk_to_npc` step duplicates that completion dialogue. A trailing turn-in step is a FAIL.
-- Delivery flow: current content must not use `return_to_npc`. Verify that every delivery item is obtained by the player from a minigame or an allowed NPC interaction, and that the NPC on `deliver_item` is the receiving NPC waiting for the player. Reject flows where that NPC gives the item away or delivery completes without the player bringing it to that NPC.
-- Variety: no long run of one minigame type; distribution is reproducible and aligned with the learning objective.
-- Variety: identical minigame types do not appear more than twice in a row.
-- Build/import: importer, bundle generation, and available tests finish without errors.
+1. Learning: intended skill required, prerequisites taught, support fades, errors are informative, and final evidence extends beyond copying. Tracing is not decoding; recognition is not pronunciation scoring.
+2. Story: Kingdom setting, NPC motive, causal progression, natural dialogue and real closure. Accept repeated NPCs/games with a learning reason. Flag filler travel, forced variety and promised unsupported interactions.
+3. Language: clear age-appropriate Hebrew, no niqqud unless requested; accurate English, meanings, case and sound claims. No dialogue quotation marks/em dashes. Distinguish teaching models from assessed answers.
+4. Game contracts: exact ID, fields, range, target and media. Check every index and required occurrence, not one sample. Verify drawing boundaries, recording targets, repeated sentence tokens, disjoint categories and reachable success counts.
+5. Integration: IDs, prerequisites, level 50 then 1, geography, grants before delivery, matching rewards, and no duplicated conversations. No unrequested reach_location or assumed combat/drop system.
+6. Evidence: separate source validity, preview, import and playthrough. Missing runtime access is PENDING, not an invented PASS or proof that the content failed.
 
-## Output
+## Counterexample questions
 
-QA report with:
+- Drawing: does A, a, Apple remain three rounds? What evidence beyond formation is actually available?
+- Letter Ordering: can the answer be copied from the prompt? Are repeated letters available?
+- Listen & Build: can reading alone bypass the listening goal? Is matching audio present?
+- Word Matching: can row position/blank width reveal the answer? Are target-specific gap positions preserved?
+- Word Ordering: are all required word occurrences available? Can a distractor form another valid answer?
+- Speak Aloud: what does GetDisplayWords() actually show? Is the intended sentence visible?
+- Dwarf Miner: could an item belong to both sets? Can the required count be reached?
+- Fruit Slice: does failure reflect language or reflexes? Do indices match segmentation?
 
-1. PASS/FAIL summary.
-2. Exact file and entity for every failure.
-3. Severity: blocker, major, or minor.
-4. Evidence from validation, build, and runtime checks.
-5. Clear recommendation: fix, approve, or ask the user.
+## Verdict and correction loop
 
-## Return loop
-
-If an error is found, QA does not accept the quest. It returns the work to **Quest Creator** with specific corrections and repeats the full audit after the new version.
-
-## Boundaries
-
-Do not fix content or publish/delete data without separate permission.
+Report separate content, contract/import, runtime and publication statuses: PASS, FAIL or PENDING, each with evidence.
+For findings give blocker/major/minor, exact file/entity, problem, consequence and correction. Style preferences are suggestions, not blockers.
+Explicit user instructions settle policy preferences; ask only for unresolved intent or a consequential choice.
+Return failures to Creator. Recheck changed tasks/dependencies; repeat the entire audit only when the learning/story structure changed substantially. Name unverified behavior and missing assets in the final report.

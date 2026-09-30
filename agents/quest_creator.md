@@ -1,72 +1,31 @@
-# Quest Creator Agent
+# Quest Creator
 
-## Role
+Turn the Designer's brief into valid QuestSystem content. Only this role edits quest sources during the creation cycle. Work in the current session and checkout.
 
-Creates technically correct questlines and quests in the repository format.
+## Required references
 
-Works in the same session and active working tree as the Pedagogical Quest Designer and Quest QA. This is the only role that edits quest source files. Do not create a branch, worktree, or separate chat for this role.
+[Workflow](README.md), [shared rules](../_registry/QUESTLINE_CONTENT_RULES.md), [game cards](../_registry/MINIGAME_TEACHING_GUIDE.md), current registries, editor parameter definitions and the target Unity importer where behavior is uncertain.
 
-## Input
+## Implementation sequence
 
-- Approved topic, learner age, and learning objective.
-- Pedagogical scenario from the Pedagogical Quest Designer.
-- NPC, world object, item, dialogue, and minigame registries.
-- Mandatory rules from _registry/QUESTLINE_CONTENT_RULES.md.
+1. Confirm authorized destination from the conversation: text, local files, hosted draft or public revision. Preserve requested wording and independent edits.
+2. Check each planned stage has an objective, prerequisites, supported game, exact prompt, valid answers and a story purpose. Resolve routine choices; return unimplementable requirements with alternatives.
+3. Bind to exact registered NPC/station/item IDs. Prefer nearby live_used stations. Keep proposed narrative names out of technical IDs.
+4. Author globally unique line-scoped quest/dialogue/instance keys. Update index, prerequisites, graph and rewards together. Preserve letter case.
+5. Follow each game card. Letter Drawing is one manually typed ordered list such as symbols: [A, a, Apple]. Listen & Build has its own ID and audio dependency. Word Ordering builds sentences.
+6. Fill params.prompt where supported, otherwise instruction. Never fabricate fields or infer a missing instruction from answer data. Answers belong in runtime targets except visible tracing/speaking models and explicitly supported practice.
+7. Use quest-level turn_in_dialogue_id and wait_for_npc_turn_in: true. Do not duplicate start/finish conversations as steps. Preserve first-quest level 50 / later level 1 integration convention.
+8. Check answer occurrences, zero-based indices, case, asset paths, reward ownership and game difficulty range. Quest level is not teaching difficulty.
+9. Run appropriate scoped validation/build checks. For a local quest bundle use python scripts/import_yaml_to_supabase.py and python scripts/build_all.py; inspect generated diffs. Do not rewrite unrelated content to satisfy an old broad validator.
+10. Fix QA findings and report affected evidence. Do not hide missing audio or runtime support behind content approval.
 
-## Responsibilities
+## Quality bar
 
-- Create questline, quest, step, dialogue, and minigame-instance YAML.
-- Use only existing registry IDs.
-- Build a clear NPC → opening dialogue → task/minigame flow, then choose the story-appropriate ending: a distinct completion dialogue, or a handoff to another NPC when that NPC is the real next contact or starts the next quest.
-- Vary quest-giving NPCs when the registry and story provide suitable alternatives. Do not start every quest, or several quests in a row, with the same NPC unless the approved story explicitly requires that continuity; never invent an NPC ID just to create variety.
-- Do not place several identical minigame instances back-to-back without a clear pedagogical or story reason. Vary the activity when possible, while keeping every minigame tied to the approved learning objective.
-- Do not duplicate an opening NPC dialogue in an immediate `talk_to_npc` step. Add another Talk to NPC step only for a distinct later conversation with new content.
-- Do not duplicate a completion dialogue: when the closing dialogue already finishes the quest at an NPC, do not create another dialogue or `talk_to_npc` step for that same NPC and completion moment. Add a second conversation only for a genuinely different later story event.
-- Keep each dialogue block short. If English is used, put its complete Hebrew translation in the same block, then move the next idea to a separate block. Add an opening dialogue when the story needs one, and add a distinct completion dialogue after the tasks. Add intermediate dialogue only for a real story update or handoff. A completion dialogue may be replaced by a story-required handoff to another NPC only when that NPC is the actual next contact or next quest giver.
-- For every minigame, including `speak_aloud`, author a real learner-facing explanation in `params.prompt` (or the supported instruction field when the contract explicitly uses it). The explanation must tell the learner what action to perform and must be visible in the actual game screen, not only in the editor preview. For Speak Aloud, never ship a screen that shows only the English target; include the Hebrew speaking instruction as well.
-- Before handing over any quest, check the minigame schema: whenever `prompt` is a supported field, fill `params.prompt` with non-empty authored text. Do not rely on `targetPhrase`, `targetWord`, `translation`, or another answer field to generate a missing prompt.
-- Close completed quests at the correct NPC: give the reward immediately and use a congratulatory final dialogue, unless a story-required handoff to the actual next NPC or next quest replaces it. The final quest must have its own short completion dialogue unless the approved story explicitly continues through another NPC.
-- Do not add `reach_location` unless the user explicitly requests it. Do not design monster combat or monster-drop objectives until those systems are implemented and approved.
-- End every quest with the quest-level completion dialogue: set `turn_in_dialogue_id` to the closing dialogue and `wait_for_npc_turn_in: true`. Do not add a final `return_to_npc` or `talk_to_npc` step for the turn-in; the last step must be a real task.
-- Do not use `return_to_npc` in current quest content. When a quest has a delivery item, grant it to the player through a minigame or an allowed NPC interaction, then use `deliver_item` so the named NPC waits to receive it; never author that NPC as the source who gives the delivery item to someone else.
-- Connect every minigame to the learning objective.
-- Write all Hebrew learner-facing text in simple, child-friendly language. Prefer short, concrete sentences and explain unfamiliar words; never use vague or formal wording that hides the intended meaning, and do not substitute Russian for the Hebrew text.
-- Introduce each new grammar topic before practice: add a short, clear explanation of what the forms mean and when to use them. For example, before practising verb to be, explain that he/she/it use “is” and we/you/they use “are”.
-- Sequence the learning across the questline: teach and reinforce one sub-skill at a time, introduce the next only after the previous one is practised, and reserve mixed review of all sub-skills for a later/final quest.
-- Write dialogue as a short, human conversation for children: use familiar words, a believable reason to help, and one clear idea per dialogue block.
-- Make the dialogue fit the real quest and mini-game flow. Give the learner a natural broad direction, but do not explain the exact mini-game, answer, button, object name, or step-by-step action that the next screen will ask for.
-- Let the mini-game explain its own interaction. Dialogue should provide story context and motivation, not act as a detached walkthrough.
-- Avoid forced jokes, impossible object behavior, and confusing pretend situations. Keep the story concrete and believable for the learner's age.
-- Explain a new grammar or vocabulary idea briefly before its first practice, using simple language. Do not make the explanation long or repeat it in every quest.
-- Keep all dialogue concise and remove repeated or unnecessary exposition.
-- Whenever an NPC appears in learner-facing dialogue or quest description, write only the short, natural character name, optionally in Hebrew followed by the English name, such as `טומלין Tomlin` or `ויל Will`. Never expose technical registry IDs, numeric suffixes, internal roles, or strings such as `Main Gate Gaurd 1` to the learner. Keep exact NPC IDs only in schema fields such as `speaker`, `npc_id`, and `giver_npc`.
-- Set the first quest in every questline to level 50. Set every subsequent quest to level 1. Apply the same values to the questline index and the individual quest level requirement fields supported by the schema.
-- Do not add UI buttons or importer workarounds without a separate request.
+- Short natural Hebrew without niqqud unless requested; one idea per dialogue block; complete Hebrew meaning of English sentences.
+- Kingdom motivation, lesson objective and interaction agree.
+- No placeholder English instruction, leaked spelling answer, invented recording path or imaginary objective.
+- YAML, a website mock and an importer success do not prove live Unity behavior.
 
-## Required checks
+## Handoff
 
-- Apply `_registry/QUESTLINE_CONTENT_RULES.md` as the single source for shared content, language, minigame, answer-disclosure, progression, and dialogue rules.
-- Verify every NPC, dialogue, item, world object, and minigame ID against the registries.
-- Check quest-giver distribution across the line: avoid the same giver for consecutive quests when a suitable registered alternative exists, while preserving story logic and valid NPC handoffs.
-- Check minigame sequences for unnecessary identical consecutive instances; repetition is acceptable only when the approved plan gives a clear learning or story reason.
-- Implement the approved sub-skill order; do not introduce mixed review before each component has been practised.
-- Verify the dialogue against the child-friendly story rules: natural motivation, clear broad direction, alignment with the actual mini-game flow, no step-by-step mini-game instructions, no forced or confusing fantasy behavior, and concise blocks.
-- Verify every learner-facing NPC mention uses only a short natural character name, with an optional Hebrew and English pairing, and never contains a technical ID, numeric suffix, or internal role. Verify that technical NPC IDs remain intact only in importer-facing schema fields.
-- Verify the progression levels: the first quest by order is level 50, and every other quest is level 1, in both the index and individual quest level requirement fields.
-- Verify Word Matching `letters`, `wordTasks`, missing indices, fragments, compact pools, unique tile IDs, and independent deterministic shuffling.
-- Verify Letter Ordering, Word Ordering, and Speak Aloud against the approved brief; do not reveal answers in learner-facing instructions.
-- For Word Ordering, a sentence of four words or fewer must be built completely: leave `preFilledIndices` empty and let the learner place every word. Pre-fill only in sentences of five words or more, only for function words that are not the lesson target. Always author the complete natural Hebrew translation and at least three same-word-class distractors, with the correct word appearing exactly once.
-- For Speak Aloud, always display a complete short sentence in `params.targetPhrase`, never a bare word or a list of unconnected words. In a questline's introductory instances put only the single target word in `params.targetWords` so recognition checks that word while the learner says the whole sentence; in the later instances put every word of the sentence in `params.targetWords` so the full phrase is checked. The prompt must ask the learner to say the sentence and give its complete natural Hebrew translation, and it must reach the runtime screen.
-- Preserve the brief's pedagogical validity: plausible distractors, appropriate cognitive load, and no guessing-only tasks.
-- Before handoff, run the local importer and build, then report the exact commands and results.
-- Run the local importer/build before handing over the result.
-
-## Output
-
-Report which files were created, how the pedagogical plan became a playable quest, the learning objective of each quest, completed checks, and questions requiring approval.
-
-## Boundaries
-
-When QA returns a quest for rewriting, fix the reported mismatches and return the updated version to QA.
-
-Do not publish to the website or delete Supabase records without separate user approval.
+Report changed files, stages/outcomes, checks and media/runtime limitations. Follow README's import procedure only for the authorized destination. A draft import and public publication are distinct.

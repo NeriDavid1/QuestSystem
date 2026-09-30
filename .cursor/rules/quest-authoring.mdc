@@ -1,109 +1,26 @@
 ---
-description: Rules for authoring quests in the QuestSystem workspace
+description: Current QuestSystem authoring workflow and content contracts
 globs:
+  - agents/**
   - questlines/**
   - _registry/**
   - presentation/**
 ---
 
-# Quest authoring rules
+# Quest authoring entry point
 
-When creating or editing quests in this workspace:
+Read agents/README.md, _registry/QUESTLINE_CONTENT_RULES.md and _registry/MINIGAME_TEACHING_GUIDE.md before designing or editing learning content. Use the Designer -> Creator -> QA cycle and agents/BRIEF_TEMPLATE.md. These shared files own policy; this file routes to them.
 
-## Allowed questlines only
-
-- `english_kingdom_maya` — authored here (OpenWorld IDs; no Unity QuestDefinition SOs yet)
-- `adjective_crown` — **live in Unity** (prefer this pattern for shippable OpenWorld quests)
-- `blacksmith_will` — authored here (beginner forge fun; Slash unlock item)
-- `kingdom_nouns` — authored here (שמות עצם / kingdom nouns; Teacher Maya hub; q01 level 50, rest level 1)
-
-Do not create Theron/Lina/Marcus/Elara/Vex/Vocabulary lines, or restore deleted `royal_nouns` as-is.
-
-## What to read
-
-1. **Creator catalog** — `presentation/catalog.html` (or GitHub Pages `catalog.html`) for searchable IDs + pictures
-2. `_registry/systems.yaml` — step types (maps to Unity QuestObjectiveType)
-3. `_registry/unity_mapping.yaml` — Unity ↔ YAML map and live pattern
-4. `_registry/npcs.yaml` — NPC IDs (NpcCatalog_OpenWorld)
-5. `_registry/areas.yaml` — area IDs (AreaCatalog_OpenWorld)
-6. `_registry/interactables.yaml` — world station IDs (InteractableCatalog_OpenWorld)
-7. `_registry/npcs.md` / `areas.md` / `interactables.md` / `items.md` / `minigames.md` — galleries
-8. `_registry/items.yaml` + `_registry/softkitty_items.yaml` — quest aliases + full SoftKitty inventory (with icons)
-9. `_registry/minigames.yaml` — only the 5 real minigame types
-10. The **target questline's** `_index.yaml` only
-11. The **specific quest file** being created or edited
-
-## What NOT to read
-
-- Do not read other questlines unless explicitly asked
-- Do not read other quest files in the same line unless checking prerequisites or continuity
-- Do not use the Hebrew boss `viewer.html` as the ID source of truth (use Creator catalog / YAML)
-
-## World catalog rule (critical)
-
-- `npc_id`, `location_id`, and `world_object_id` must use **exact Unity catalog IDs**
-- Some IDs contain spaces (e.g. `"The Oathstone Bridge"`, `"City Gaurd Info"`) — copy them exactly
-- Prefer `status: live_used` areas/stations over `catalog_stub` semantic IDs
-- When an entry has `image: images/...`, open that PNG (or the gallery md / catalog.html) for visual context
-- `play_minigame.world_object_id` = Open World station (chest/cart/camp/table), not a type name
-- Deliverable SoftKitty items must have `softkitty_id` in `items.yaml`
-- Never invent minigame types, NPCs, areas, or stations
-
-## Canonical shippable pattern (Adjective Crown)
-
-```yaml
-- type: talk_to_npc
-  npc_id: teacher_maya
-  dialogue_id: ...
-- type: reach_location
-  location_id: The Oathstone Bridge
-- type: play_minigame
-  minigame_id: letter_ordering
-  world_object_id: WoodenCart3_The_Oath_stone_Bridge
-  difficulty: 1
-  reward_item_id: oak_log
-  reward_amount: 1
-- type: deliver_item
-  npc_id: teacher_maya
-  item_id: oak_log
-  amount: 1
-```
-
-## When creating a new quest
-
-1. Prefer **QuestForge** (`editor/`) — quest content keys are **auto-generated** as `{lineKey}__qNN_{slug}` and must be unique across the whole OpenWorld game (not just the line).
-2. If authoring YAML by hand: do **not** invent bare `q01_*` ids that another line already uses. Use `{lineKey}__qNN_{snake_name}` (e.g. `adjective_crown__q01_bridge_too_short`). Existing live unscoped keys may stay if still globally unique.
-3. Create the quest file using existing quests in that line as format reference (filename can match the key).
-4. Use only step types defined in `systems.yaml`
-5. Reference NPCs / areas / interactables / items by registry ID (copy from Creator catalog)
-6. Append a summary row to `_index.yaml` (id, name, level, prerequisite, rewards)
-7. Add the node to `_graph.mmd` with prerequisite arrow
-
-World catalog IDs (`npc_id`, `location_id`, `world_object_id`) are **picked** from Unity catalogs — never invent them.
-
-## File format
-
-- Quest files: YAML with `quest`, `rewards`, `steps` sections
-- Steps: list of objects with `type` matching a key in `systems.yaml`
-- Keep dialogue IDs descriptive: `maya_runaway_a_intro`, `adjective_knight_oak_log_request`
-
-## Presentation
-
-- Creator knowledge browser: `presentation/catalog.html` — rebuild with `python scripts/build_catalog.py`
-- Boss-facing Hebrew map: `presentation/viewer.html` — rebuild with `python scripts/build_presentation.py`
-- Or both: `python scripts/build_all.py`
-- Boss-facing text overview: `presentation/overview.md`
-- Questline graphs use Mermaid in `_graph.mmd`
-
-## Minigame runtime prompts
-
-- When a minigame schema provides a `prompt` field, the creator must fill `params.prompt` with non-empty learner-facing text. Empty, null, or answer-derived fallback prompts are invalid.
-- Every minigame must carry a learner-facing explanation into the actual game screen, not only into QuestForge, Editor Preview, or the public viewer.
-- For `speak_aloud`, show the Hebrew instruction describing the speaking action together with the English target. A screen that shows only the target word or phrase is invalid and must be returned for runtime/integration correction.
-- For `speak_aloud`, the prompt must include the Hebrew translation of the exact target: a word translation at Level 1, or a complete natural translation of the phrase/sentence at Levels 2–3. The prompt must contain both the action and the meaning, not only “say the next word”.
-- Speak Aloud format must follow the user's approved difficulty: Level 1 = one word; Level 2 = several words or a short sentence appropriate to the topic; Level 3 = more words or a more difficult sentence. Do not add multi-word targets or sentences without an explicit user/approved-plan request, and keep Level 2 sentences short.
-
-## Word Match letter pools
-
-- In `word_matching`, correctness is determined by the letter tile's `value` and the word's missing character, never by matching IDs or row positions. Shuffle the available letter tiles independently from the word tasks.
-- Keep the pool compact: include every required missing-letter occurrence plus only intentional distractors. Every tile must have a unique technical `id`; IDs are not semantic links and duplicate IDs are invalid.
+- Work within the user's scope and current checkout. Do not require repeated approval for authorized routine decisions.
+- The current catalog has eight games; recheck _registry/minigames.yaml rather than relying on a fixed historical count.
+- Use exact IDs from systems.yaml, npcs.yaml, areas.yaml, interactables.yaml, items.yaml and softkitty_items.yaml. Prefer live_used stations; consult catalog pictures for setting.
+- New questline topics are allowed when requested; there is no four-line allowlist. Do not restore deleted content without a request.
+- Authorized new story characters are proposals/off-screen figures until a registered speaker exists. Do not invent technical IDs or runtime capabilities.
+- Read relevant quests for continuity/prerequisites. Use catalog/YAML IDs, not names copied from a presentation.
+- Use globally unique line-scoped keys, update index/prerequisites/rewards/graph, and keep current turn-in conventions.
+- No reach_location unless requested; no trailing return_to_npc or duplicate closing talk step.
+- Learner-facing Hebrew is simple and without niqqud by default. Dialogue and minigame instructions have distinct purposes.
+- Letter Drawing uses one manual symbols list, each entry a letter or a whole word.
+- Listen & Build is listening_letter_ordering and requires real matching audio for a listening objective.
+- Follow the current Speak Aloud display contract; do not assume one-word targetWords preserves a full targetPhrase on screen.
+- For hosted import, use the single procedure in agents/README.md. Report draft/published status and verification honestly.
