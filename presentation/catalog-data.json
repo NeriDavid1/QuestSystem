@@ -13,19 +13,26 @@
     }
   },
   "counts": {
-    "areas": 15,
-    "npcs": 26,
+    "areas": 16,
+    "npcs": 31,
     "interactables": 14,
     "items": 199,
     "minigames": 7,
     "step_types": 6,
-    "areas_with_image": 15,
-    "npcs_with_image": 26,
+    "areas_with_image": 16,
+    "npcs_with_image": 31,
     "interactables_with_image": 14,
     "items_with_image": 186,
     "minigames_with_image": 6
   },
   "areas": [
+    {
+      "image": "images/areas/AbcValley.png",
+      "name": "Letterhollow (ABC Valley)",
+      "status": "catalog_stub",
+      "description": "Hidden mountain-hollow village north of the castle, three houses around a well and the 26 stone letters on the ridge; the player starts here and learns the ABC.",
+      "id": "AbcValley"
+    },
     {
       "image": "images/areas/BuildersHome.png",
       "name": "Builders Home",
@@ -150,6 +157,14 @@
       "id": "Blacksmith"
     },
     {
+      "image": "images/npcs/bruno_gardener.png",
+      "name": "Bruno the Gardener",
+      "title": "Word Gardener",
+      "location": "AbcValley",
+      "description": "Warm, forgetful gardener of the House of Words who grows words from letter seeds.",
+      "id": "bruno_gardener"
+    },
+    {
       "image": "images/npcs/Cannoneer.png",
       "name": "Cannoneer",
       "title": "Cannoneer",
@@ -211,6 +226,14 @@
       "id": "Ghost"
     },
     {
+      "image": "images/npcs/grandpa_tobias.png",
+      "name": "Grandpa Tobias",
+      "title": "Valley Elder",
+      "location": "AbcValley",
+      "description": "Sleepy old keeper of the well who greets every newcomer and remembers when the sky still glowed.",
+      "id": "grandpa_tobias"
+    },
+    {
       "image": "images/npcs/Little Boy.png",
       "name": "Little Boy",
       "title": "Child",
@@ -243,6 +266,14 @@
       "id": "Main Gate Gaurd 2"
     },
     {
+      "image": "images/npcs/mira_stonecarver.png",
+      "name": "Mira the Stonecarver",
+      "title": "Stonecarver",
+      "location": "AbcValley",
+      "description": "Tough, warm stonecarver of the House of Shapes who knows letters by touch.",
+      "id": "mira_stonecarver"
+    },
+    {
       "image": "images/npcs/Mountain Guide.png",
       "name": "Mountain Guide",
       "title": "Mountain Guide",
@@ -254,6 +285,14 @@
       "image": "images/npcs/Museum Clerk.png",
       "name": "Museum Clerk",
       "id": "Museum Clerk"
+    },
+    {
+      "image": "images/npcs/noa.png",
+      "name": "Noa",
+      "title": "Valley Girl",
+      "location": "AbcValley",
+      "description": "The valley's only child, the new student's first friend, sure the lost sounds hide in the cave.",
+      "id": "noa"
     },
     {
       "image": "images/npcs/Old Man.png",
@@ -283,6 +322,14 @@
       "image": "images/npcs/Palace Guard.png",
       "name": "Palace Guard",
       "id": "Palace Guard"
+    },
+    {
+      "image": "images/npcs/pip_bellringer.png",
+      "name": "Pip the Bell-Ringer",
+      "title": "Bell Ringer",
+      "location": "AbcValley",
+      "description": "Fast-talking bell ringer of the House of Sounds, waiting for the lost bell notes to return.",
+      "id": "pip_bellringer"
     },
     {
       "image": "images/npcs/Professor Crazy.png",

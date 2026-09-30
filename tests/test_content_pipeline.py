@@ -27,7 +27,7 @@ class ContentPipelineTests(unittest.TestCase):
         self.assertEqual(
             self.bundle["counts"],
             {
-                "catalog_entries": 261,
+                "catalog_entries": 267,
                 "step_type_definitions": 6,
                 "dialogues": 206,
                 "dialogue_lines": 560,

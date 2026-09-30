@@ -5,6 +5,20 @@
   "catalog_entries": [
     {
       "kind": "area",
+      "external_id": "AbcValley",
+      "name": "Letterhollow (ABC Valley)",
+      "description": "Hidden mountain-hollow village north of the castle, three houses around a well and the 26 stone letters on the ridge; the player starts here and learns the ABC.",
+      "status": "catalog_stub",
+      "image_path": "images/areas/AbcValley.png",
+      "metadata": {
+        "image": "images/areas/AbcValley.png",
+        "name": "Letterhollow (ABC Valley)",
+        "status": "catalog_stub",
+        "description": "Hidden mountain-hollow village north of the castle, three houses around a well and the 26 stone letters on the ridge; the player starts here and learns the ABC."
+      }
+    },
+    {
+      "kind": "area",
       "external_id": "BuildersHome",
       "name": "Builders Home",
       "description": "Workshop home for builders, chefs, and smith work.",
@@ -4328,6 +4342,21 @@
     },
     {
       "kind": "npc",
+      "external_id": "bruno_gardener",
+      "name": "Bruno the Gardener",
+      "description": "Warm, forgetful gardener of the House of Words who grows words from letter seeds.",
+      "status": null,
+      "image_path": "images/npcs/bruno_gardener.png",
+      "metadata": {
+        "image": "images/npcs/bruno_gardener.png",
+        "name": "Bruno the Gardener",
+        "title": "Word Gardener",
+        "location": "AbcValley",
+        "description": "Warm, forgetful gardener of the House of Words who grows words from letter seeds."
+      }
+    },
+    {
+      "kind": "npc",
       "external_id": "Cannoneer",
       "name": "Cannoneer",
       "description": "Loud cannoneer who guards the cove and loves big booms.",
@@ -4445,6 +4474,21 @@
     },
     {
       "kind": "npc",
+      "external_id": "grandpa_tobias",
+      "name": "Grandpa Tobias",
+      "description": "Sleepy old keeper of the well who greets every newcomer and remembers when the sky still glowed.",
+      "status": null,
+      "image_path": "images/npcs/grandpa_tobias.png",
+      "metadata": {
+        "image": "images/npcs/grandpa_tobias.png",
+        "name": "Grandpa Tobias",
+        "title": "Valley Elder",
+        "location": "AbcValley",
+        "description": "Sleepy old keeper of the well who greets every newcomer and remembers when the sky still glowed."
+      }
+    },
+    {
+      "kind": "npc",
       "external_id": "Little Boy",
       "name": "Little Boy",
       "description": "Curious boy who loses toys and asks lots of questions.",
@@ -4505,6 +4549,21 @@
     },
     {
       "kind": "npc",
+      "external_id": "mira_stonecarver",
+      "name": "Mira the Stonecarver",
+      "description": "Tough, warm stonecarver of the House of Shapes who knows letters by touch.",
+      "status": null,
+      "image_path": "images/npcs/mira_stonecarver.png",
+      "metadata": {
+        "image": "images/npcs/mira_stonecarver.png",
+        "name": "Mira the Stonecarver",
+        "title": "Stonecarver",
+        "location": "AbcValley",
+        "description": "Tough, warm stonecarver of the House of Shapes who knows letters by touch."
+      }
+    },
+    {
+      "kind": "npc",
       "external_id": "Mountain Guide",
       "name": "Mountain Guide",
       "description": "Guide who knows the high paths and lonely towers.",
@@ -4528,6 +4587,21 @@
       "metadata": {
         "image": "images/npcs/Museum Clerk.png",
         "name": "Museum Clerk"
+      }
+    },
+    {
+      "kind": "npc",
+      "external_id": "noa",
+      "name": "Noa",
+      "description": "The valley's only child, the new student's first friend, sure the lost sounds hide in the cave.",
+      "status": null,
+      "image_path": "images/npcs/noa.png",
+      "metadata": {
+        "image": "images/npcs/noa.png",
+        "name": "Noa",
+        "title": "Valley Girl",
+        "location": "AbcValley",
+        "description": "The valley's only child, the new student's first friend, sure the lost sounds hide in the cave."
       }
     },
     {
@@ -4585,6 +4659,21 @@
       "metadata": {
         "image": "images/npcs/Palace Guard.png",
         "name": "Palace Guard"
+      }
+    },
+    {
+      "kind": "npc",
+      "external_id": "pip_bellringer",
+      "name": "Pip the Bell-Ringer",
+      "description": "Fast-talking bell ringer of the House of Sounds, waiting for the lost bell notes to return.",
+      "status": null,
+      "image_path": "images/npcs/pip_bellringer.png",
+      "metadata": {
+        "image": "images/npcs/pip_bellringer.png",
+        "name": "Pip the Bell-Ringer",
+        "title": "Bell Ringer",
+        "location": "AbcValley",
+        "description": "Fast-talking bell ringer of the House of Sounds, waiting for the lost bell notes to return."
       }
     },
     {
@@ -42039,7 +42128,7 @@
     }
   ],
   "counts": {
-    "catalog_entries": 261,
+    "catalog_entries": 267,
     "step_type_definitions": 6,
     "dialogues": 206,
     "dialogue_lines": 560,
@@ -56675,5 +56764,5 @@
       ]
     }
   ],
-  "source_digest": "7c56cb1aae181b246a32f4fef79652a66c83655987da21ce013555810db895c8"
+  "source_digest": "68ad887056148cae22b90b11c2b611fbe4b33ba975b6d1dec55f43854f14a6cb"
 }

@@ -1,8 +1,8 @@
 {
   "importer_version": "1.0.0",
-  "source_digest": "7c56cb1aae181b246a32f4fef79652a66c83655987da21ce013555810db895c8",
+  "source_digest": "68ad887056148cae22b90b11c2b611fbe4b33ba975b6d1dec55f43854f14a6cb",
   "counts": {
-    "catalog_entries": 261,
+    "catalog_entries": 267,
     "step_type_definitions": 6,
     "dialogues": 206,
     "dialogue_lines": 560,

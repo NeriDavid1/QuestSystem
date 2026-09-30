@@ -8,6 +8,7 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 |----|----|----|----|----|
 | `Benny the Builder` | Benny the Builder | Builder | BuildersHome | ![Benny the Builder](images/npcs/Benny the Builder.png) |
 | `Blacksmith` | Will The Smith | Blacksmith | BuildersHome | ![Will The Smith](images/npcs/Blacksmith.png) |
+| `bruno_gardener` | Bruno the Gardener | Word Gardener | AbcValley | ![Bruno the Gardener](images/npcs/bruno_gardener.png) |
 | `Cannoneer` | Cannoneer | Cannoneer | Forsaken Cove | ![Cannoneer](images/npcs/Cannoneer.png) |
 | `Chef` | Chef |  |  | ![Chef](images/npcs/Chef.png) |
 | `City Gaurd Info` | Fenn the Chatty | City Guard | KingdomGate | ![Fenn the Chatty](images/npcs/City Gaurd Info.png) |
@@ -16,16 +17,20 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 | `Fisherman` | Nemo the Netless | Fisherman | Driftgold Bay | ![Nemo the Netless](images/npcs/Fisherman.png) |
 | `Flight Guide` | Flight Guide | Flight Guide | The Sunspire Tree | ![Flight Guide](images/npcs/Flight Guide.png) |
 | `Ghost` | Boo Radcliff | Ghost | The Weeping Stones | ![Boo Radcliff](images/npcs/Ghost.png) |
+| `grandpa_tobias` | Grandpa Tobias | Valley Elder | AbcValley | ![Grandpa Tobias](images/npcs/grandpa_tobias.png) |
 | `Little Boy` | Little Boy | Child | FairyRosePark | ![Little Boy](images/npcs/Little Boy.png) |
 | `Little Girl` | Little Girl | Child | FairyRosePark | ![Little Girl](images/npcs/Little Girl.png) |
 | `Main Gate Gaurd 1` | Tomlin the Yawner | Gate Guard | KingdomGate | ![Tomlin the Yawner](images/npcs/Main Gate Gaurd 1.png) |
 | `Main Gate Gaurd 2` | Garrick the Unmoving | Gate Guard | KingdomGate | ![Garrick the Unmoving](images/npcs/Main Gate Gaurd 2.png) |
+| `mira_stonecarver` | Mira the Stonecarver | Stonecarver | AbcValley | ![Mira the Stonecarver](images/npcs/mira_stonecarver.png) |
 | `Mountain Guide` | Mountain Guide | Mountain Guide | TowerOfLostVigil | ![Mountain Guide](images/npcs/Mountain Guide.png) |
 | `Museum Clerk` | Museum Clerk |  |  | ![Museum Clerk](images/npcs/Museum Clerk.png) |
+| `noa` | Noa | Valley Girl | AbcValley | ![Noa](images/npcs/noa.png) |
 | `Old Man` | Old Man | Old Man | MoonriverCottage | ![Old Man](images/npcs/Old Man.png) |
 | `Old Woman` | Old Woman | Old Woman | MoonriverCottage | ![Old Woman](images/npcs/Old Woman.png) |
 | `Painter` | Painter | Painter | The Sunspire Tree | ![Painter](images/npcs/Painter.png) |
 | `Palace Guard` | Palace Guard |  |  | ![Palace Guard](images/npcs/Palace Guard.png) |
+| `pip_bellringer` | Pip the Bell-Ringer | Bell Ringer | AbcValley | ![Pip the Bell-Ringer](images/npcs/pip_bellringer.png) |
 | `Professor Crazy` | Professor Crazy | Professor | Solitude Tower | ![Professor Crazy](images/npcs/Professor Crazy.png) |
 | `Riding Guide` | Riding Guide | Riding Guide | Driftgold Bay | ![Riding Guide](images/npcs/Riding Guide.png) |
 | `Secondary Gate Main` | Secondary Gate Main | Gate Captain | KingdomGate | ![Secondary Gate Main](images/npcs/Secondary Gate Main.png) |

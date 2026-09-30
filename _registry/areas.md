@@ -6,6 +6,7 @@ Interactive browser: [`presentation/catalog.html`](../presentation/catalog.html)
 
 | id | name | status | preview |
 |----|----|----|----|
+| `AbcValley` | Letterhollow (ABC Valley) | catalog_stub | ![Letterhollow (ABC Valley)](images/areas/AbcValley.png) |
 | `BuildersHome` | Builders Home | live_used | ![Builders Home](images/areas/BuildersHome.png) |
 | `Driftgold Bay` | Driftgold Bay | live_used | ![Driftgold Bay](images/areas/Driftgold Bay.png) |
 | `FairyRosePark` | Fairy Rose Park | live_used | ![Fairy Rose Park](images/areas/FairyRosePark.png) |

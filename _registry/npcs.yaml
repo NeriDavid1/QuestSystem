@@ -148,3 +148,33 @@ npcs:
     title: Riding Guide
     location: Driftgold Bay
     description: Guide who teaches safe riding near the bay paths.
+  grandpa_tobias:
+    image: images/npcs/grandpa_tobias.png
+    name: Grandpa Tobias
+    title: Valley Elder
+    location: AbcValley
+    description: Sleepy old keeper of the well who greets every newcomer and remembers when the sky still glowed.
+  mira_stonecarver:
+    image: images/npcs/mira_stonecarver.png
+    name: Mira the Stonecarver
+    title: Stonecarver
+    location: AbcValley
+    description: Tough, warm stonecarver of the House of Shapes who knows letters by touch.
+  pip_bellringer:
+    image: images/npcs/pip_bellringer.png
+    name: Pip the Bell-Ringer
+    title: Bell Ringer
+    location: AbcValley
+    description: Fast-talking bell ringer of the House of Sounds, waiting for the lost bell notes to return.
+  bruno_gardener:
+    image: images/npcs/bruno_gardener.png
+    name: Bruno the Gardener
+    title: Word Gardener
+    location: AbcValley
+    description: Warm, forgetful gardener of the House of Words who grows words from letter seeds.
+  noa:
+    image: images/npcs/noa.png
+    name: Noa
+    title: Valley Girl
+    location: AbcValley
+    description: The valley's only child, the new student's first friend, sure the lost sounds hide in the cave.

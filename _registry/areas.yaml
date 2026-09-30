@@ -76,3 +76,8 @@ areas:
     name: Builders Home
     status: live_used
     description: Workshop home for builders, chefs, and smith work.
+  AbcValley:
+    image: images/areas/AbcValley.png
+    name: Letterhollow (ABC Valley)
+    status: catalog_stub
+    description: Hidden mountain-hollow village north of the castle, three houses around a well and the 26 stone letters on the ridge; the player starts here and learns the ABC.

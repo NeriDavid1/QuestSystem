@@ -150,6 +150,31 @@ npcs:
     title: "מדריך רכיבה"
     location: "מפרץ דריפטגולד"
     description: "מדריך שמלמד רכיבה בטוחה ליד המפרץ."
+  grandpa_tobias:
+    name: "סבא טוביאס"
+    title: "זקן העמק"
+    location: "עמק האותיות"
+    description: "שומר הבאר והשביל, שעוד זוכר את השמיים זוהרים ונרדם באמצע משפט."
+  mira_stonecarver:
+    name: "מירה"
+    title: "סתתת — בית הצורות"
+    location: "עמק האותיות"
+    description: "סתתת קשוחה וחמה שמכירה את האותיות במגע: ״תרגיש את הצורה״."
+  pip_bellringer:
+    name: "פיפ"
+    title: "מצלצל הפעמון — בית הצלילים"
+    location: "עמק האותיות"
+    description: "נער אנרגטי שמצלצל כל בוקר ובטוח שצלילי הפעמון יחזרו."
+  bruno_gardener:
+    name: "ברונו"
+    title: "גנן המילים — בית המילים"
+    location: "עמק האותיות"
+    description: "גנן חם ומפוזר שמגדל מילים מזרעי אותיות."
+  noa:
+    name: "נועה"
+    title: "הילדה של העמק"
+    location: "עמק האותיות"
+    description: "הילדה היחידה בעמק, החברה הראשונה של התלמיד, בטוחה שהצלילים האבודים מתחבאים במערה."
 
 items:
   herbs: { name: "עשבים" }
@@ -213,6 +238,7 @@ locations:
   "The Oathstone Bridge": "גשר אבן השבועה"
   TowerOfLostVigil: "מגדל המשמר האבוד"
   "The Sunspire Tree": "עץ צריח השמש"
+  AbcValley: "עמק האותיות"
   "The Weeping Stones": "האבנים הבוכות"
   "The Last Roar": "השאגה האחרונה"
 
