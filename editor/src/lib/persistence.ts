@@ -344,13 +344,13 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
 
 export async function saveQuestlineDraft(payload: QuestlineSavePayload): Promise<SaveResult> {
   const result = await saveViaRpc(payload)
-  if (!await draftMatchesServer(payload)) {
-    throw new Error('The server acknowledged the save, but the saved questline does not match the draft. Your local changes are still available.')
+  if (!await draftGraphMatchesServer(payload)) {
+    throw new Error('The server acknowledged the save, but the saved quest graph does not match the draft. Your local changes are still available.')
   }
   return result
 }
 
-async function draftMatchesServer(payload: QuestlineSavePayload): Promise<boolean> {
+async function draftGraphMatchesServer(payload: QuestlineSavePayload): Promise<boolean> {
   if (!supabase) throw new Error('Supabase is not configured')
   const [line, quests] = await Promise.all([
     supabase.from('questlines').select('key,display_name,theme').eq('id', payload.questline.id).single(),

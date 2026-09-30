@@ -122,11 +122,22 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
     const visibleSteps = sourceSteps.filter((step: Record<string, any>, index: number) => !(
       index === 0 && step.type === 'talk_to_npc' && step.payload?.dialogue_id === (questDoc.start_dialogue_id ?? startStep?.payload?.dialogue_id) && sourceSteps.length > 1
     ) && index !== promotedIndex)
+    const existingSteps = current.steps.filter((step) => step.quest_id === questId)
+    const existingByKey = recordMap(existingSteps)
+    // Reserve logical matches before assigning rows to genuinely new steps.
+    // Otherwise a reordered import can update two UUIDs to the same step key.
+    const reservedIds = new Set(visibleSteps.flatMap((step: Record<string, any>) => {
+      const existing = existingByKey.get(String(step.key))
+      return existing ? [existing.id] : []
+    }))
+    const usedIds = new Set<string>()
     for (const [index, stepDoc] of visibleSteps.entries()) {
-      // Preserve each existing position's row during a lesson replacement.
-      // The save RPC frees these rows' positions before writing the new steps.
-      const existingStep = current.steps.find((step) => step.quest_id === questId && step.position === index)
+      const available = existingSteps.filter((step) => !reservedIds.has(step.id) && !usedIds.has(step.id))
+      const existingStep = existingByKey.get(String(stepDoc.key))
+        ?? available.find((step) => step.position === index)
+        ?? available[0]
       const id = existingStep?.id ?? makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
+      usedIds.add(id)
       steps.push({ id, quest_id: questId, key: String(stepDoc.key), position: index, step_type: String(stepDoc.type), payload: stepDoc.payload ?? {}, source_metadata: stepDoc.source_metadata ?? {} })
     }
   }

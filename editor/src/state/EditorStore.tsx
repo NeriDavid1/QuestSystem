@@ -202,6 +202,8 @@ function nextPosition(items: Array<{ position: number }>): number {
 
 export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const t = useT()
+  const authTranslate = useRef(t)
+  authTranslate.current = t
   const demoMode = !hasSupabaseConfig
   const [data, setData] = useState<EditorData>(() => (demoMode ? createDemoData() : emptyEditorData()))
   const [user, setUser] = useState<{ id: string; email?: string } | null>(null)
@@ -316,18 +318,18 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       if (workspaceUserId === sessionUser.id && workspaceLoad) return workspaceLoad
       workspaceUserId = sessionUser.id
       workspaceLoad = (async () => {
-      const displayName = sessionUser.email?.split('@')[0] ?? null
-      const { error: membershipError } = await client.rpc('ensure_workspace_member', {
-        p_display_name: displayName,
-      })
-      if (membershipError) throw membershipError
-      const loaded = await loadEditorData()
-      if (!mounted || workspaceUserId !== sessionUser.id) return
-      setData(loaded)
-      questlineVersions.current = Object.fromEntries(
-        loaded.questlines.map((line) => [line.id, line.updated_at ?? '']),
-      )
-      setLoadError('')
+        const displayName = sessionUser.email?.split('@')[0] ?? null
+        const { error: membershipError } = await client.rpc('ensure_workspace_member', {
+          p_display_name: displayName,
+        })
+        if (membershipError) throw membershipError
+        const loaded = await loadEditorData()
+        if (!mounted || workspaceUserId !== sessionUser.id) return
+        setData(loaded)
+        questlineVersions.current = Object.fromEntries(
+          loaded.questlines.map((line) => [line.id, line.updated_at ?? '']),
+        )
+        setLoadError('')
       })()
       return workspaceLoad
     }
@@ -341,7 +343,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         try {
           await enterWorkspace(sessionUser)
         } catch (error) {
-          if (mounted) setLoadError(error instanceof Error ? error.message : t('loadEditorFailed'))
+          if (mounted) setLoadError(error instanceof Error ? error.message : authTranslate.current('loadEditorFailed'))
         }
       }
       setAuthReady(true)
@@ -352,7 +354,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       setUser(sessionUser ? { id: sessionUser.id, email: sessionUser.email } : null)
       if (sessionUser) {
         void enterWorkspace(sessionUser).catch((error: unknown) => {
-          if (mounted) setLoadError(error instanceof Error ? error.message : t('loadEditorFailed'))
+          if (mounted) setLoadError(error instanceof Error ? error.message : authTranslate.current('loadEditorFailed'))
         })
       } else {
         workspaceUserId = null
@@ -364,7 +366,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       mounted = false
       authListener.subscription.unsubscribe()
     }
-  }, [t])
+  }, [])
 
   // --- Selection sanity effects ---
   useEffect(() => {
