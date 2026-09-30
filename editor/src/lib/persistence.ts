@@ -343,7 +343,43 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
 }
 
 export async function saveQuestlineDraft(payload: QuestlineSavePayload): Promise<SaveResult> {
-  return saveViaRpc(payload)
+  const result = await saveViaRpc(payload)
+  if (await draftMatchesServer(payload)) return result
+  // Some older hosted RPCs acknowledge a save without applying the supplied
+  // graph. Retry through the existing, RLS-protected scoped writer, then read
+  // back before allowing the editor to mark the content as saved.
+  const fallbackResult = await saveViaClient({ ...payload, force: false })
+  if (!await draftMatchesServer(payload)) {
+    throw new Error('The server acknowledged the save, but the saved questline does not match the draft. Your local changes are still available.')
+  }
+  const { data, error } = await supabase!.from('questlines').select('updated_at').eq('id', payload.questline.id).single()
+  if (error) throw new Error(error.message)
+  return { ...fallbackResult, updatedAt: data.updated_at }
+}
+
+async function draftMatchesServer(payload: QuestlineSavePayload): Promise<boolean> {
+  if (!supabase) throw new Error('Supabase is not configured')
+  const [line, quests] = await Promise.all([
+    supabase.from('questlines').select('key,display_name,theme').eq('id', payload.questline.id).single(),
+    supabase.from('quests').select('id,key,name').eq('questline_id', payload.questline.id),
+  ])
+  if (line.error) throw new Error(line.error.message)
+  if (quests.error) throw new Error(quests.error.message)
+  if (line.data.key !== payload.questline.key || line.data.display_name !== payload.questline.display_name
+    || line.data.theme !== payload.questline.theme || quests.data.length !== payload.quests.length) return false
+  const savedQuests = new Map(quests.data.map((quest) => [quest.id, quest]))
+  if (payload.quests.some((quest) => savedQuests.get(quest.id)?.key !== quest.key
+    || savedQuests.get(quest.id)?.name !== quest.name)) return false
+  if (!payload.quests.length) return payload.steps.length === 0
+  const steps = await supabase.from('quest_steps').select('id,quest_id,key,position,step_type').in('quest_id', payload.quests.map((quest) => quest.id))
+  if (steps.error) throw new Error(steps.error.message)
+  if (steps.data.length !== payload.steps.length) return false
+  const savedSteps = new Map(steps.data.map((step) => [step.id, step]))
+  return payload.steps.every((step) => {
+    const saved = savedSteps.get(step.id)
+    return saved?.quest_id === step.quest_id && saved.key === step.key
+      && saved.position === step.position && saved.step_type === step.step_type
+  })
 }
 
 /** Deletes questlines by id. Child quests/steps/rewards/revisions cascade in the DB. */
