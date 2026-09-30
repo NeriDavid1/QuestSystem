@@ -1,4 +1,3 @@
-import { drawingInputMode } from '../../lib/letterDrawing'
 import { useState } from 'react'
 import { useT, type MessageKey } from '../../i18n'
 import type { MinigameInstance } from '../../lib/types'
@@ -105,7 +104,15 @@ function ArrayParamInput({
   const t = useT()
   const value = readMinigameParam(minigame, field)
   const items = Array.isArray(value) ? value.map((item) => String(item ?? '')) : ['']
-  const commit = (next: string[]) => onChange({ ...(minigame.params ?? {}), [field.name]: normalizeParamValue(field, next) })
+  const commit = (next: string[]) => {
+    const params = { ...(minigame.params ?? {}), [field.name]: normalizeParamValue(field, next) }
+    if (minigame.minigame_id === 'letter_drawing' && field.name === 'symbols') {
+      delete params.word
+      delete params.drawingInputMode
+      delete params.letter
+    }
+    onChange(params)
+  }
   const numeric = field.type === 'integerArray'
 
   return (
@@ -128,6 +135,7 @@ function ArrayParamInput({
               dir="ltr"
               type={numeric ? 'number' : 'text'}
               value={item}
+              placeholder={minigame.minigame_id === 'letter_drawing' && field.name === 'symbols' ? 'A / Apple' : undefined}
               onChange={(event) => commit(items.map((entry, entryIndex) => (entryIndex === index ? event.target.value : entry)))}
             />}
           </label>
@@ -143,7 +151,7 @@ function ArrayParamInput({
         </div>
       ))}
       <button type="button" className="button subtle compact" onClick={() => commit([...items, field.options?.[0] ?? ''])}>
-        <Icon name="plus" /> {t('minigameParamAdd')}
+        <Icon name="plus" /> {t(minigame.minigame_id === 'letter_drawing' && field.name === 'symbols' ? 'minigameDrawingAddEntry' : 'minigameParamAdd')}
       </button>
     </div>
   )
@@ -354,10 +362,6 @@ export function MinigameParamsEditor({
   const t = useT()
   const params = minigame.params ?? {}
   const setScalar = (field: MinigameParamField, value: unknown) => {
-    if (minigame.minigame_id === 'letter_drawing' && field.name === 'word') {
-      onChange({ ...params, word: normalizeParamValue(field, value), drawingInputMode: String(value).trim() ? 'Word' : 'Symbols' })
-      return
-    }
     onChange({ ...params, [field.name]: normalizeParamValue(field, value) })
   }
 
@@ -368,11 +372,6 @@ export function MinigameParamsEditor({
       ) : (
         fields.map((field) => {
           if (field.name === 'visualVariant') return null
-          if (minigame.minigame_id === 'letter_drawing') {
-            if (field.name === 'drawingInputMode') return null
-            const mode = drawingInputMode(params)
-            if (field.name === 'symbols' && mode === 'Word') return null
-          }
           const visual = orderingVisual(minigame.minigame_id, minigame.params ?? {})
           const listening = visual === 'ListenAndBuild' || visual === 1
           if ((field.name === 'promptAudio' || field.name === 'hintMode') && !listening) return null
@@ -394,6 +393,12 @@ export function MinigameParamsEditor({
           }
           if (field.advanced) {
             return <AdvancedAssetField key={field.name} field={field} minigame={minigame} onChange={onChange} />
+          }
+          if (minigame.minigame_id === 'letter_drawing' && field.name === 'symbols') {
+            return <div className="minigame-param-field" key={field.name}>
+              <FieldLabel hint={t(field.hintKey as MessageKey)}>{t(field.labelKey as MessageKey)}</FieldLabel>
+              <ArrayParamInput field={field} minigame={minigame} onChange={onChange} />
+            </div>
           }
 
           const value = readMinigameParam(minigame, field)

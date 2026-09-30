@@ -1,126 +1,90 @@
-# Questline Content and Minigame Rules
+# Questline Content Rules
 
-These rules are mandatory for every questline and minigame instance in this repository. They apply to new content and to edits of existing content, not only to noun lessons.
+Authoritative shared authoring policy. Role files describe responsibilities; the [minigame teaching guide](MINIGAME_TEACHING_GUIDE.md) describes all game-specific contracts and examples. Explicit user instructions take precedence over project preferences. They do not make an unsupported runtime feature exist: explain such a limitation and provide a supported alternative.
 
-## Pedagogical validity
+## Evidence and scope
 
-- Every learning task must require the learner to apply the intended objective. Success must not be possible through guessing, translation matching alone, eliminating obviously wrong answers, or following superficial visual cues.
-- Distractors must be plausible and pedagogically meaningful. Keep cognitive load appropriate to the learner's level and increase difficulty progressively from recognition to discrimination, application, combination, and transfer.
-- Context should support comprehension without revealing the answer. Feedback should briefly reinforce why an answer is correct or guide the learner toward the relevant rule after an error.
-- Before approving any task, ask: **Can the learner answer correctly without understanding the target skill?** If yes, redesign the task.
+- Use current registries, editor fields, importer and runtime source. When these disagree, record the discrepancy and use the supported path; never invent behavior from a catalog label.
+- Distinguish proposal, authored source, valid import, runtime verification, hosted draft and published revision.
+- Continue authorized work without repeated approvals. A story-only request does not authorize quest creation. Publication/deletion must be within the user's requested destination and target.
+- Read relevant neighboring quests for prerequisites and continuity; do not broadly rewrite unrelated lines.
+- New games/characters/locations require actual integration before their IDs can be used. Authorized narrative proposals and off-screen characters are allowed and labeled.
 
-## Language accessibility
+## Learning design
 
-- All translations, instructions, hints, and native-language dialogue must use clear, natural, age-appropriate everyday language. The native language is scaffolding for learning, never an additional comprehension task.
-- Avoid unnecessarily formal, literary, academic, bureaucratic, or uncommon wording. Prefer short, direct sentences and familiar words.
-- Translate meaning naturally rather than mirroring English structure word-for-word. Translation complexity must not exceed what is needed to understand the task.
-- Before approving text, ask: **Would a learner of the target age understand this immediately without needing the wording itself explained?** If not, simplify it while preserving the meaning.
-- A grammar explanation before practice may name the target forms and explain when to use them. This is different from a minigame `instruction` or `params.prompt`: those must remain answer-free when the learner is expected to choose, match, order, or spell an answer. Keep the explanation before the practice, and keep each practice prompt focused on the action and meaning without giving away the required answer.
-- “Hebrew-first” means that learner-facing instructions, explanations, hints, and support are primarily in clear Hebrew; English is retained only for the target language material the learner must recognize, read, write, order, or say. Do not use “Hebrew-first” as a vague learner-facing label; describe the concrete support instead.
+- Define an observable target and prerequisites for every stage. Teach -> model -> supported practice -> independent practice -> review/transfer is a useful sequence, adjusted to readiness.
+- Introduce one new distinction at a time. Revisit older learning across later tasks.
+- Separate motor formation, visual recognition, listening, decoding, spelling, vocabulary, syntax and speaking. Success in one does not prove mastery of another.
+- Recognition and translation matching are valid when recognition/meaning is the objective. They do not by themselves assess independent spelling or grammar production.
+- Chance success is possible in choice games. Reduce superficial shortcuts and use several contrasting examples or a later independent task; do not promise guessing is impossible.
+- Distractors reflect plausible learner confusions and must not be equally correct. Increase language, memory and motor load deliberately, not simultaneously by accident.
+- Guided practice may show a model and use fewer/no distractors. Mark that support and reduce it in later assessment.
+- No fixed quest count, compulsory game coverage, NPC rotation or ban on a third consecutive game. Explain purposeful repetition; vary activity when it improves the lesson.
+- Provide a short corrective explanation for likely errors. Use supported feedback fields or actual teacher/completion dialogue; proposed feedback is not an implemented per-answer feature.
 
-## Dialogue typography
+## Kingdom stories and dialogue
 
-- Dialogue text must not contain quotation marks such as `"`, `“”`, `„“`, or `«»`. The dialogue UI already presents the speaker's text, so extra quotation marks are redundant.
-- Dialogue text must not use the em dash `—`. Use a short hyphen `-` when a separator is needed, with spaces around it.
-- Creator checks these rules while authoring; QA scans every learner-facing dialogue line before approving the questline.
+- Ground stories in Kingdom geography, occupations and established fantasy. No futuristic vehicles/devices unless explicitly requested.
+- Give the NPC a concrete motive, a problem, a meaningful development and closure. Let discoveries and character choices create humor.
+- Fantasy is permitted when coherent with the world. Do not ban ghosts or magic merely because they are impossible in reality.
+- Match promised actions to implemented steps. A narrated discovery does not imply a new searchable object, animation or inventory action.
+- Keep stations close where sensible and reuse a station for consecutive learning tasks. Do not invent geographic adjacency from names alone.
+- Dialogue is short and natural, one idea per block. Avoid forced jokes, humiliation and exposition.
+- Teach a new concept briefly before first practice. Teaching examples may show English; assessment prompts must not supply answers to be reconstructed.
+- NPCs motivate and give natural direction. Game UI explains exact controls and task actions.
+- Learner-facing NPC names are short and natural, optionally Hebrew plus English. Exact technical IDs belong only in schema fields.
+- One opening and one closing conversation per actual encounter; no immediate duplicate talk step. Intermediate dialogue needs new teaching, story information or a handoff.
+- For The Alphabet Adventure, combine the story and teaching in the opening dialogue. Start the learning steps with a game; do not split the same introduction into a second NPC conversation. Use concise game prompts as reminders during practice.
 
-## Child-friendly story dialogue
+## Language and visible answers
 
-- Dialogue must be short, natural, and easy for a child to understand. Use familiar everyday words and concrete reasons for the learner to help.
-- Dialogue must match the actual quest flow and the available mini-games. The learner should understand why they are helping and what broad direction to follow, without receiving a detached list of game instructions.
-- Do not make an NPC explain the exact mini-game, answer, button, object name, or step-by-step task that the learner is about to perform. The mini-game screen gives those instructions.
-- Use dialogue to motivate and guide the learner naturally. Say that a needed item or clue is somewhere relevant when appropriate, but do not turn the conversation into a walkthrough of the next interaction.
-- Avoid forced jokes, impossible behavior, or objects acting like people when that does not support the story. Prefer believable situations that a child can follow.
-- Introduce an unfamiliar grammar or vocabulary idea briefly before its first practice. Explain what the idea means in simple language, then let the mini-game provide the practice.
-- When introducing a grammar term, show the learner the clear Hebrew-to-English connection in the explanation, for example `פועל = verb`, then explain its meaning in simple Hebrew before the first practice.
-- Keep each dialogue block focused on one idea. Remove repeated explanations and unnecessary exposition.
-- When learner-facing dialogue or quest description mentions an NPC, show only the short, natural character name, optionally in Hebrew followed by the English name, for example `טומלין Tomlin` or `ויל Will`. Never show technical registry IDs, numeric suffixes, internal roles, or strings such as `Main Gate Gaurd 1` to the learner. Keep exact registry IDs only in schema fields such as `speaker`, `npc_id`, and `giver_npc` so the importer can resolve them.
+- Learner-facing explanations/instructions are simple Hebrew without niqqud by default. Keep English for target learning material. User requests can change these preferences.
+- Translate meaning naturally; provide complete Hebrew meaning of an English sentence used in dialogue or a sentence-building/speaking instruction.
+- Dialogue text contains no quotation marks or em dash; use a short hyphen if needed. This restriction does not prohibit YAML/JSON serialization quotes.
+- Spelling, matching and ordering assessment prompts describe meaning/action without displaying the finished English answer.
+- Tracing necessarily displays its model; speaking displays the sentence to pronounce; listening supplies the target through sound. These are legitimate modality-specific supports.
+- For every schema supporting prompt, author a nonempty params.prompt. Otherwise use the supported instruction field. Never fabricate params.prompt where it is ignored.
+- Do not rely on targetWord, translation, targetPhrase or similar answer data to generate a missing instruction. A Word Ordering prompt explicitly includes the Hebrew sentence, even when translation is also stored.
+- Verify what is actually rendered. If unavailable, mark runtime PENDING. A known missing instruction is an integration defect; a preview alone cannot establish a runtime PASS.
 
-## Questline level pattern
+## Phonics
 
-- The first quest in every questline, identified by quest order, must be level 50.
-- Every quest after the first must be level 1.
-- Apply this pattern consistently in the questline index and in each quest's level requirement field. The first quest must be `level: 50` / `level_required: 50`; all later quests must be `level: 1` / `level_required: 1`, according to the applicable schema.
-- QA must reject a questline when the first quest or any later quest does not follow this pattern.
+- Distinguish letter shape, name and represented sounds. A/a is one letter in two cases.
+- Use the user's preferred learner term אות ניקוד in The Alphabet Adventure. Explain simply that A is an English letter that helps us read sounds; Hebrew uses niqqud marks. Technical briefs may use vowel letter / אות תנועה. Do not present an English letter as a Hebrew diacritic.
+- A, E, I, O, U are the main vowel letters; sound depends on word/spelling context. Do not claim each letter has exactly one sound.
+- For initial A, use drawing and Listen & Build, not compulsory Speak Aloud. Introduce /æ/ and /eɪ/ through clear recorded examples such as apple and acorn, with meanings; do not demand spelling all their untaught letters.
+- Hebrew transliteration cannot fully represent /æ/. Use recorded English, not a misleading Hebrew approximation. Short/long vowel labels do not mean merely speaking longer.
+- Do not put IPA such as /æ/ or /eɪ/ in beginner-facing dialogue or prompts. Explain in simple Hebrew with familiar word recordings; IPA may remain in internal technical notes.
+- Hebrew cues such as בא, קא and דא may guide construction of taught consonant-plus-vowel combinations in Letter Ordering. Label them צירוף צלילים or הברה, not English vocabulary words. Hebrew spelling is a memory aid for sound order, not an exact transcription of the English vowel.
+- Teach consonant sounds without adding a vowel: /b/, not the letter name /biː/ during blending.
+- C as /k/ in cat is a contextual example, not a universal rule. Introduce additional sounds later.
+- Blend in order, then say/listen to the whole word. Teach T before independent cat and G before independent bag, or explicitly scaffold those letters.
+- Do not infer sound mastery from tracing or use a speech recognizer as a clinical/phonetic scoring tool.
+- In the first A lesson trace A/a, not a long word such as apple. Short taught combinations or words follow after the necessary letters and sounds have been introduced.
+- Select varied exercises with distinct purposes: formation in Drawing, both visible letter forms as Miner targets, repeated recognition in Slice, sound combination in Ordering, and targeted listening. Do not substitute several identical one-letter listening screens for this whole sequence.
 
-## Word Matching
+## Quest integration
 
-- Every `word_matching` instance must define `params.letters` as the available letter tiles. Each tile has a stable `id` and its single-letter `value`.
-- Every `word_matching` instance must also define `params.wordTasks`. Each task has an `id`, the complete `fullWord`, and `missingIndices` containing one or more zero-based indices of the missing letters.
-- Every character at every `missingIndices` position must exist in `params.letters[].value`. If a word has two missing letters, both letters must be available in the letter pool.
-- The letter pool must be compact: include the letters required by the missing positions and only a small, intentional set of distractors. Do not add a large list of unrelated letters or letters that are already visible as a redundant “paired” answer.
-- Matching correctness is based on the letter `value`, not on the tile or task `id`. A tile with any ID may complete any gap when its value is the required missing character; IDs must never be used as positional links between a letter and a word.
-- The order of `params.letters` must be independently shuffled from the order of `params.wordTasks`, using a reproducible pseudo-random seed. Never place a letter opposite its word or rely on matching row positions.
-- Every letter tile must have a unique stable `id`; IDs are technical identity only and do not represent the correct answer. Duplicate IDs are invalid because the UI may hide or collapse tiles with the same ID. Distinct IDs may be used for distinct tiles, including same-value tiles only when the task genuinely requires multiple occurrences.
-- Missing positions must be selected by a deterministic pseudo-random rule derived from the task/instance key, not by always using index 0. Across a questline, distribute valid gaps between the beginning, middle, and end whenever the word allows it.
-- For a task with two or more missing letters, every missing character must be present in the letter pool; validate the complete set, not only the first missing index.
-- Regenerate the visible fragment from `fullWord` and `missingIndices`; never hand-edit a fragment independently of its indices.
-- The player-facing `instruction`, quest `display_text`, and task copy must not reveal the completed answer. Use Hebrew guidance such as `השלימו את האות החסרה במילה` (or a subject-specific equivalent such as `במילת ה־noun`).
-- Whole-word matching (for example connecting nouns to `a` / `an`): `fullWord` may hold several words separated by single spaces, such as `an apple`. When `missingIndices` cover every letter of one of those words, that word is a single blank: the runtime, editor preview, and viewer show it as a fixed-width `___` whatever its length, and only a tile whose `value` is the entire word (such as `an`) fills it. In this case a tile value may be a whole word instead of a single letter. Provide one tile per blank, so repeated values such as two `a` tiles are genuinely required and must use distinct IDs. The visible `tasks` fragment is written as `___ APPLE`. Exception to the shuffling rule above: when the pool has only two distinct values (such as `a` / `an`), never placing a tile opposite its own word would reveal every answer. Use a fixed, non-alternating order in which some tiles sit next to their own word and some do not, and vary that pattern between instances.
+- Exact IDs come from systems/npcs/areas/interactables/items/minigames registries. Prefer live_used over catalog_stub.
+- Quest keys are globally unique and line-scoped; dialogue/instance keys are also unique.
+- Preserve the project integration convention: first quest by order level 50, all later quests level 1, consistently in index and quest files. These values do not describe cognitive difficulty.
+- Mini-game difficulty uses its catalog range. Explain the actual support/content progression separately.
+- Use quest-level start/turn-in dialogue. Set turn_in_dialogue_id and wait_for_npc_turn_in: true; do not append return_to_npc or a talk step that duplicates completion.
+- Final completion thanks the learner and gives the stated reward at the real completion point. A next-NPC handoff is meaningful only when a real next quest follows; do not send a finished quest elsewhere just for its reward.
+- A delivery item is granted to the player first; deliver_item names the recipient waiting for it. Item/reward values in prose and data agree.
+- Do not add reach_location unless requested. Do not assume monster combat/drop objectives exist.
+- Keep prerequisite chains, summaries, rewards and graph consistent. No unreachable endings or unexplained rewards.
 
-## Letter Ordering and Word Ordering
+## Game policy
 
-- Letter Ordering must never reveal the English answer in the instruction. Give the Hebrew meaning and explicitly require the English answer, for example `כתבו את המילה ספר באנגלית.`
-- All player-facing minigame instructions must avoid revealing the answer. Use Hebrew task guidance; show English answers only as runtime tiles, targets, or other elements that the learner must actively solve or say.
-- Word Ordering must not write the completed sentence or the answer noun in the player-facing instruction. Give a Hebrew prompt such as `השלימו את המשפט לפי התרגום בעברית` and show the Hebrew translation.
-- Word Ordering must not let the learner succeed by guessing. A sentence of four words or fewer must be built completely: `params.preFilledIndices` must be empty, and the learner places every word, including articles and the verb.
-- `params.preFilledIndices` may be used only for sentences of five words or more, only to lock function words that are not the lesson target, and only while at least two content words stay open.
-- Every Word Ordering task must provide at least three `params.distractorWords`. Distractors must belong to the same word class as the words the learner has to place, so the correct sentence cannot be found by elimination or by word shape.
-- Every Word Ordering choice list must contain unique words: never show the same option more than once. The combined runtime choices must include the exact correct word needed for the open position exactly once; `distractorWords` must contain only unique, intentional wrong options and must not repeat the correct open word.
-- Word Ordering tasks must include a Hebrew translation in `params.translation`.
-- Every Word Ordering prompt must give the complete natural Hebrew translation of the full sentence and tell the learner to build the sentence from that translation. The translation supports understanding of the whole sentence; it must never reveal the English answer word by word.
+Use [MINIGAME_TEACHING_GUIDE.md](MINIGAME_TEACHING_GUIDE.md) for the eight supported IDs, fields, examples and failure checks. Technical requirements are mandatory; teaching defaults may be adapted to the documented objective.
 
-## Language and answer disclosure
+For Word Ordering, default to full assembly for short sentences. A documented guided stage may prefill nontarget scaffolding, but must leave the target open and lead to independent practice. Do not impose an arbitrary three-distractor minimum. Preserve every required occurrence of repeated words; only redundant distractors are removed.
 
-- Learner-facing instructions and task descriptions should be primarily Hebrew, with only the necessary English learning material.
-- Never give the English answer in an instruction when the learner is expected to spell, choose, match, or order it. Give the Hebrew meaning and the required action instead.
-- Speak Aloud is the intentional exception: the English sentence may be shown because the learner must say it in English. If the game UI already displays it, do not duplicate it in the instruction.
-- When assembling a sentence, always provide the Hebrew translation. Short sentences are assembled in full so that the learner cannot guess; see the Word Ordering rules for when pre-filling is allowed at all.
+For Word Matching, choose gap positions from the lesson objective first. Initial-sound lessons may deliberately use initial gaps. Vary positions in later review where valid; randomization must not move the target to an irrelevant position. Shuffle pools independently without enforcing a positional pattern that reveals answers.
 
-## Preview and runtime display contract
+For Speak Aloud, default to a complete short taught sentence with targetWords: [] and targetPhrase set. Nonempty targetWords affect the displayed text in the inspected runtime. Never assume a whole displayed sentence plus one-word scoring without verifying that capability. There is no compulsory speech task in every questline.
 
-- For every minigame whose schema contains a `prompt` field, `params.prompt` must be present and non-empty in the authored instance. Do not leave it blank, null, or dependent on an answer-data fallback.
-- Every preview must render the authored learner-facing `params.prompt` (or the authored minigame instruction when the prompt field is intentionally absent) for Letter Ordering, Word Ordering, Speak Aloud, Word Matching, and every other minigame. The editor and public viewer must not invent, append, or infer explanatory text from answer data.
-- The actual in-game minigame screen must render the same authored learner-facing explanation before the interaction controls. It is not sufficient for the prompt to appear only in Quest Creator, Editor Preview, or the public quest viewer.
-- For `speak_aloud`, the game screen must show an explicit Hebrew instruction explaining what the learner must say, such as `אמרו את המשפט הבא באנגלית בקול`, together with the English sentence that the learner must pronounce. Showing only the sentence with no Hebrew instruction is a runtime content defect.
-- For `speak_aloud`, the authored prompt must also provide the complete natural Hebrew translation of the displayed sentence, whether recognition checks one word or the whole phrase. The prompt must explain the action and the meaning without replacing the English sentence on screen.
-- QA must verify this in the running game or an authoritative runtime screen, not only by reading YAML or inspecting the editor preview. If the prompt is missing in the game, mark the result as FAIL and return it for runtime/integration correction.
-- Do not use `translation`, `englishWordsInOrder`, `targetWord`, `targetPhrase`, `tasks`, or similar answer fields as a fallback instruction or as an extra learner-facing line. These fields remain runtime data and validation data.
-- If a translation or explanation is needed in the preview, write it explicitly inside the authored prompt. For Word Ordering, `params.translation` may remain available to the runtime, but it must not appear as a separate preview line unless the author included it in `params.prompt`.
-- Keep the editor preview, public viewer, and runtime aligned: no surface may silently add text that is not present in the authored prompt/instruction. A missing prompt must remain visibly missing or use a neutral placeholder, never reveal the answer.
-- For Letter Ordering and Word Ordering, put the learner's required meaning/action and any needed Hebrew translation in the authored prompt. For Speak Aloud, keep an explicit speaking instruction; if the sentence is already displayed by the game, do not repeat it in the prompt.
+## Delivery workflow
 
-## Questline and quest structure
-
-- A questline should contain a clear progression of connected quests, with a coherent story, NPC task, active mini-games, and a clear completion path.
-- When the story calls for it, begin a quest with a short opening dialogue from the quest NPC. After the active tasks, add a distinct completion dialogue that thanks or congratulates the learner and closes that quest. An intermediate dialogue is optional and is allowed only when the story needs a genuine update, reaction, or handoff; never add it only to increase the step count.
-- A completed intermediate quest may use either a completion dialogue or a story-required handoff to another NPC. Use the handoff option when the other NPC is the real next contact or starts the next quest; in that case a separate completion dialogue is not required. The handoff must not pretend that the current quest is still unfinished or send the learner to collect a reward from an unrelated NPC.
-- A completed quest must end at its actual completion point. If it is the final quest, the turn-in NPC must not send the learner to another NPC to collect a reward or continue the finished quest. Give the reward immediately and close with thanks, praise, or a clear completion message. A direction to another NPC is allowed only for an intermediate quest with a real next quest.
-- Do not use `reach_location` unless the user explicitly requests it. The future monster-combat flow may use it to send the learner to a monster location, complete combat and drop objectives, and return to an NPC, but that implementation does not exist yet and must not be assumed.
-- Quest completion is authored on the quest, not as a step: the closing conversation belongs in the quest-level `turn_in_dialogue_id` (דיאלוג סיום) with `wait_for_npc_turn_in: true`. Never end a quest with a `return_to_npc` or `talk_to_npc` step that only repeats the completion dialogue; the importer promotes such a trailing step and drops it.
-- Current delivery flow: do not use `return_to_npc`. A delivery item must be obtained by the player from a minigame or, when supported by the project data, from an NPC. The NPC named by a `deliver_item` step is the receiving NPC and must wait for the player to bring the item; it must not hand that delivery item to someone else. QA must reject any flow that reverses this ownership or completes delivery without the player bringing the item to that NPC.
-- Use several varied mini-games per quest when appropriate, keeping every mini-game tied to the lesson objective. Do not repeat identical tasks or mix unrelated vocabulary into a lesson.
-- Place minigame stations according to the questline context and known world geography. Keep stations near one another when possible, and reuse one station for two or three consecutive minigames when that is natural, so the learner does not need to cross the map for every task. Use a different station only when the story or location meaningfully requires it.
-- Dialogue flow must not insert an unnecessary `talk_to_npc` step between the opening dialogue and the first active task; return to an NPC only when the story or handoff requires it.
-- If a quest already has an opening NPC dialogue, do not add an immediate `talk_to_npc` step that repeats the same dialogue. The opening dialogue is the conversation for that encounter; a separate `talk_to_npc` step is allowed only for a distinct, necessary later conversation with different content.
-- Keep dialogue blocks short and easy to read: use clear, separated sentences rather than one long text block. Whenever an English sentence appears, provide its complete Hebrew translation in the same dialogue block. Put the next idea in a separate dialogue block.
-- A final quest dialogue must be a clear, short closure: summarize the success, give the reward immediately, and congratulate the learner. Do not hide the completion message inside a long mixed-language paragraph. A final quest may omit this dialogue only when the approved story explicitly ends by handing the learner to another NPC for a real continuation; otherwise the final quest must close with its own completion dialogue.
-- Use exact registry IDs for NPCs, world objects, minigame instances, items, and dialogues so the Unity importer can resolve every step.
-
-## Speak Aloud
-
-- Speak Aloud always practices a real sentence. `params.targetPhrase` must hold a complete, short, natural English sentence that the learner says out loud. Never ship a bare word or a list of unconnected words such as `tall long` as the thing displayed to the learner.
-- What the learner says and what the recognition checks are two separate decisions:
-  - Introductory stage - the learner says the whole displayed sentence, but `params.targetWords` contains only the single target word being taught. Recognition validates that one word, so a beginner is not failed for the rest of the sentence.
-  - Later stage in the same questline - `params.targetWords` contains every word of the displayed sentence, so the complete phrase is validated. Move to this stage once the learner has practiced the words on their own.
-  - Phrase mode - `params.targetWords` is an empty list and `params.targetPhrase` holds the sentence (for example `targetWords: []`, `targetPhrase: "I have an egg."`). This matches the Unity `SpeakAloudDataSO` phrase mode: when Target Words is empty, the game reads the sentence from Target Phrase, and the sync writes both fields exactly as authored. Use it when the learner should say the sentence as a phrase rather than practice a list of single words.
-- Use the introductory stage for the first Speak Aloud tasks of a questline and the full-phrase stage for the later ones. A questline must not stay on single-word recognition all the way to its final quest.
-- The sentence must be built from vocabulary the learner already met in the questline, plus simple supporting words. Keep it short enough to say in one breath.
-- Every Speak Aloud instance must have an explicit player-facing prompt containing the speaking action, such as `אמרו את המשפט הבא באנגלית בקול`, together with the complete natural Hebrew translation of the displayed sentence.
-- Use sentence wording in the instruction, because a sentence is always what the learner says. Do not write `אמרו את המילה הבאה` when a sentence is displayed.
-- English target text may be shown because the learner must pronounce it. If the game UI already displays the sentence, do not repeat it inside the prompt; keep the explicit speaking action and the Hebrew meaning.
-- Difficulty must stay inside the registry range for `speak_aloud`, and should rise from the introductory stage to the full-phrase stage.
-
-## Local-to-site import
-
-The local-to-site import sequence is defined only in `agents/README.md`. Follow that procedure for every subject and questline; do not duplicate or modify it here. This file remains the single source for content and minigame rules.
+[agents/README.md](../agents/README.md) owns the local-to-site procedure. Use its sequence only for the authorized target/destination. The QA report separates content, import, runtime and publication evidence.

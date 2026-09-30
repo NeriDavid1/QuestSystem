@@ -70,24 +70,27 @@ For database catalog clients outside the editor, apply the scoped migration
 4. Use only step types from [`_registry/systems.yaml`](_registry/systems.yaml).
 5. Update that line’s `_index.yaml` and `_graph.mmd`.
 
-### Canonical live pattern (Adjective Crown)
+### Current authoring pattern
 
 ```yaml
-- type: talk_to_npc
-  npc_id: teacher_maya
-  dialogue_id: ...
-- type: reach_location
-  location_id: The Oathstone Bridge
-- type: play_minigame
-  minigame_id: letter_ordering
-  world_object_id: WoodenCart3_The_Oath_stone_Bridge
-  difficulty: 1
-  reward_item_id: oak_log
-  reward_amount: 1
-- type: deliver_item
-  npc_id: teacher_maya
-  item_id: oak_log
-  amount: 1
+quest:
+  # Other required identity/prerequisite fields omitted in this fragment.
+  giver_npc: teacher_maya
+  start_dialogue_id: line_q01_intro
+  turn_in_dialogue_id: line_q01_finish
+  wait_for_npc_turn_in: true
+steps:
+  - type: play_minigame
+    minigame_id: letter_ordering
+    instance_id: line_q01_spelling
+    world_object_id: WoodenCart3_The_Oath_stone_Bridge
+    difficulty: 1
+    reward_item_id: oak_log
+    reward_amount: 1
+  - type: deliver_item
+    npc_id: teacher_maya
+    item_id: oak_log
+    amount: 1
 ```
 
 ## World catalog (all knowledge)
@@ -161,19 +164,20 @@ From the English Kingdom Unity project (OpenWorld scene open):
 
 ## AI authoring
 
-Cursor reads [`.cursor/rules/quest-authoring.mdc`](.cursor/rules/quest-authoring.mdc) automatically. Prefer the Creator catalog / gallery markdown for visual context when choosing IDs.
+Start with the [three-role workflow](agents/README.md), [shared content rules](_registry/QUESTLINE_CONTENT_RULES.md), [teaching cards for all eight games](_registry/MINIGAME_TEACHING_GUIDE.md), and [brief template](agents/BRIEF_TEMPLATE.md).
+Cursor reads [`.cursor/rules/quest-authoring.mdc`](.cursor/rules/quest-authoring.mdc) as a routing entry point. Prefer the Creator catalog / gallery markdown for visual context when choosing IDs.
 
 ### Prompt example
 
 ```
-Using _registry/systems.yaml and unity_mapping.yaml, add quest q07 to adjective_crown:
-talk to teacher_maya → reach The Last Roar → letter_ordering on Lost_Chest6_The_Last_Roar
-→ deliver softkitty item to Maya. Update _index.yaml and _graph.mmd.
+Using the three-role workflow, design and author a quest in adjective_crown:
+Maya introduces a taught adjective contrast; practise at a verified nearby station;
+finish through the quest-level completion dialogue. Update index and graph.
 ```
 
 ## File conventions
 
-- Quest IDs: `q01`, `q02`, … (zero-padded)
+- New quest IDs: globally unique, line-scoped, e.g. `adjective_crown__q07_review`; preserve existing live IDs.
 - Registry IDs: exact Unity catalog IDs (may include spaces)
 - One quest = one YAML file
 - Index files stay high-level — no step detail

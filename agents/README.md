@@ -1,36 +1,36 @@
 # QuestSystem Agent Workflow
 
-The project uses three specialized roles:
+Three roles form one authoring cycle:
+1. [Pedagogical Quest Designer](pedagogical_quest_designer.md): objectives, prerequisites, Kingdom story and exercise brief.
+2. [Quest Creator](quest_creator.md): source content and exact runtime bindings.
+3. [Quest QA and Learning Review](quest_qa_agent.md): independent review and evidence.
 
-1. **Pedagogical Quest Designer** — designs the learning objective, story, and progression.
-2. **Quest Creator** — converts the approved brief into YAML and technical project links.
-3. **Quest QA & Variety Agent** — checks content, parameters, builds, imports, and minigame variety.
+## Required reading and authority
 
-### Shared dialogue typography check
+- [_registry/QUESTLINE_CONTENT_RULES.md](../_registry/QUESTLINE_CONTENT_RULES.md) owns shared content policy.
+- [_registry/MINIGAME_TEACHING_GUIDE.md](../_registry/MINIGAME_TEACHING_GUIDE.md) owns game-specific teaching and parameter guidance for all eight games.
+- [BRIEF_TEMPLATE.md](BRIEF_TEMPLATE.md) defines the Designer handoff.
+- Live registries/editor/importer define technical capability; stale examples do not override them.
+- Explicit user instructions override project preferences. Record an intentional exception without requesting the same permission again. Unsupported capabilities require an honest limitation and supported alternative, not an invented field.
 
-- Creator must not put quotation marks inside dialogue text.
-- Creator must not use the em dash `—` inside dialogue text; use a short hyphen `-` when a separator is needed.
-- QA must scan all learner-facing dialogue lines for quotation marks and em dashes before approving the questline.
+## Cycle
 
-## Workflow
+1. Designer records the scope, readiness assumptions, observable outcomes, prerequisite ladder and two short story premises; develops the selected one into an exact brief.
+2. Creator implements when authorized. A user asking only for a story receives text; creating a brief does not authorize external publication.
+3. QA checks against the brief, game cards and current runtime evidence.
+4. Creator fixes actionable findings; QA rechecks the changed tasks and affected dependencies.
+5. Deliver separate content, import, runtime and publication statuses. Missing runtime access is PENDING, not an invented PASS.
 
-1. **Pedagogical Quest Designer** receives a topic, requirements, or an existing story and creates or adapts a pedagogical plan.
-2. **Quest Creator** creates the questline and quests from the approved plan.
-3. **Quest QA & Variety Agent** checks technical, pedagogical, and gameplay integrity.
-4. If QA finds a mismatch, QA returns the work to **Quest Creator** with exact corrections.
-5. After the correction, QA runs the checks again. The loop continues until the quest passes.
+No fixed minimum number of quests/games, automatic NPC rotation, or absolute two-identical-games limit. Purposeful repetition and a recurring teacher are valid. Explain the learning purpose of repetition and remove filler.
 
-If the user brief, pedagogical plan, or an agent rule conflicts with `_registry/QUESTLINE_CONTENT_RULES.md`, do not silently choose a side: record the exact conflict and ask the user to decide before implementation.
+## Session coordination
 
-The number of quests and minigames is determined by the user brief or pedagogical plan; no fixed minimum is applied automatically.
+The roles work in the current session and active checkout. Role names do not automatically authorize separate chats or parallel agents. Creator alone edits quest sources during the cycle; Designer supplies the brief and QA reports corrections. Preserve independent edits.
 
-Identical minigame types may not appear more than twice in a row. QA checks this together with learning-goal alignment.
+## Documentation maintenance
 
-Shared content rules are authoritative in `_registry/QUESTLINE_CONTENT_RULES.md`; agent files may repeat operational checklists for their role, but may not override or contradict that file.
+When a game contract changes, update its teaching card, registry and applicable role references together. Do not duplicate shared policy across role files. Mark source/runtime/catalog mismatches and recheck them against the target build before authoring dependent content.
 
-## Session and workspace coordination
-
-All three roles run in the same user session and the same active working tree: Pedagogical Quest Designer, Quest Creator, and Quest QA & Variety Agent. They are sequential responsibilities in one collaboration, not separate repository branches. Do not create a branch, worktree, or separate chat for an agent. The Quest Creator is the only role that edits quest source files; the Designer provides the plan and the QA Agent reports findings back to the Creator. Keep the agreed repository branch and working context throughout the cycle.
 
 ## Local Questline Import Procedure
 
@@ -42,7 +42,7 @@ When the user asks to upload a local questline to the website, use the existing 
    `python scripts/build_all.py`
 3. Commit and push the source and generated bundle to the repository's `main` branch.
 4. Wait until the GitHub Pages workflow for that commit finishes successfully. The website must deploy the new `quest_content_bundle.json` before importing.
-5. Delete the exact existing target questline from the website catalog before importing. This is the current agreed replacement workflow: remove the site Questline first, then recreate it from the local bundle. Never delete a different, duplicate, or unrequested questline.
+5. For an authorized update of an existing line, identify the exact target and export its current hosted draft as a backup. The current importer can update the same line in place, preserving quest IDs by external key and retained step IDs; prefer this supported path. Remove a target only when deletion is explicitly required and authorized under the applicable confirmation policy. Never delete another line or infer replacement permission from a request to review/design content.
 6. Open a fresh editor tab and navigate to:
    `https://neridavid1.github.io/QuestSystem/editor/?load=<questline-key>&v=<commit-sha>`
    The `v` query value is a cache-buster and should be changed for each deployment.

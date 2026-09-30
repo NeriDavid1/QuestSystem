@@ -36,6 +36,12 @@ function recordMap<T extends { key: string }>(items: T[]): Map<string, T> {
   return new Map(items.map((item) => [item.key, item]))
 }
 
+function scopedQuestKey(lineKey: string, sourceKey: unknown): string {
+  const key = String(sourceKey)
+  const prefix = `${lineKey}__`
+  return key.startsWith(prefix) ? key : `${prefix}${key}`
+}
+
 /**
  * A finished quest closes with its quest-level completion dialogue and NPC
  * turn-in, not with a trailing "go back and talk to the NPC" objective.
@@ -68,6 +74,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
 
   const oldQuests = current.quests.filter((quest) => quest.questline_id === line.id)
   const oldQuestIds = oldQuests.map((quest) => quest.id)
+  const oldQuestByKey = recordMap(oldQuests)
   const oldStepIds = current.steps.filter((step) => oldQuestIds.includes(step.quest_id)).map((step) => step.id)
   const questDocs = Array.isArray(doc.quests) ? doc.quests : []
   const quests: Quest[] = questDocs.map((item, index) => ({
@@ -91,7 +98,9 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
         wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in) || promotedIndex >= 0,
       }
     })(),
-    id: makeLocalId('quest'), questline_id: line.id, key: `${line.key}__${String(item.key)}`, position: index,
+    // Replacing content must update the existing natural key, not insert a
+    // second UUID with that key before the RPC applies queued deletions.
+    id: oldQuestByKey.get(scopedQuestKey(line.key, item.key))?.id ?? makeLocalId('quest'), questline_id: line.id, key: scopedQuestKey(line.key, item.key), position: index,
     name: String(item.name ?? item.key), level_required: Number(item.level_required ?? 1),
     giver_external_id: item.giver_external_id ?? null, summary: item.summary ?? null,
     status: 'draft', source_path: item.source_path ?? null,
@@ -101,7 +110,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   const steps: QuestStep[] = []
   const stepIds = new Map<string, string>()
   for (const questDoc of questDocs) {
-    const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); if (!questId) continue
+    const questId = questIds.get(scopedQuestKey(line.key, questDoc.key)); if (!questId) continue
     const sourceSteps = Array.isArray(questDoc.steps) ? questDoc.steps : []
     const startStep = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
     // The first NPC conversation is promoted to quest.start_dialogue_id above.
@@ -113,21 +122,35 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
     const visibleSteps = sourceSteps.filter((step: Record<string, any>, index: number) => !(
       index === 0 && step.type === 'talk_to_npc' && step.payload?.dialogue_id === (questDoc.start_dialogue_id ?? startStep?.payload?.dialogue_id) && sourceSteps.length > 1
     ) && index !== promotedIndex)
+    const existingSteps = current.steps.filter((step) => step.quest_id === questId)
+    const existingByKey = recordMap(existingSteps)
+    // Reserve logical matches before assigning rows to genuinely new steps.
+    // Otherwise a reordered import can update two UUIDs to the same step key.
+    const reservedIds = new Set(visibleSteps.flatMap((step: Record<string, any>) => {
+      const existing = existingByKey.get(String(step.key))
+      return existing ? [existing.id] : []
+    }))
+    const usedIds = new Set<string>()
     for (const [index, stepDoc] of visibleSteps.entries()) {
-      const id = makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
+      const available = existingSteps.filter((step) => !reservedIds.has(step.id) && !usedIds.has(step.id))
+      const existingStep = existingByKey.get(String(stepDoc.key))
+        ?? available.find((step) => step.position === index)
+        ?? available[0]
+      const id = existingStep?.id ?? makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
+      usedIds.add(id)
       steps.push({ id, quest_id: questId, key: String(stepDoc.key), position: index, step_type: String(stepDoc.type), payload: stepDoc.payload ?? {}, source_metadata: stepDoc.source_metadata ?? {} })
     }
   }
   const rewards: QuestReward[] = []
   for (const questDoc of questDocs) {
-    const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); if (!questId) continue
+    const questId = questIds.get(scopedQuestKey(line.key, questDoc.key)); if (!questId) continue
     for (const reward of (Array.isArray(questDoc.rewards) ? questDoc.rewards : [])) rewards.push({ id: makeLocalId('reward'), scope: 'quest', quest_id: questId, step_id: null, reward_type: reward.reward_type === 'item' ? 'item' : 'xp', xp_amount: reward.xp_amount ?? null, item_external_id: reward.item_external_id ?? null, amount: reward.amount ?? null, source_metadata: reward.source_metadata ?? {} })
     for (const stepDoc of (Array.isArray(questDoc.steps) ? questDoc.steps : [])) {
       const stepId = stepIds.get(`${questDoc.key}::${stepDoc.key}`); if (!stepId) continue
       for (const reward of (Array.isArray(stepDoc.rewards) ? stepDoc.rewards : [])) rewards.push({ id: makeLocalId('reward'), scope: 'step', quest_id: null, step_id: stepId, reward_type: reward.reward_type === 'item' ? 'item' : 'xp', xp_amount: reward.xp_amount ?? null, item_external_id: reward.item_external_id ?? null, amount: reward.amount ?? null, source_metadata: reward.source_metadata ?? {} })
     }
   }
-  const prerequisites: QuestPrerequisite[] = questDocs.flatMap((questDoc) => (questDoc.prerequisites ?? []).flatMap((key: string) => { const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); const prerequisiteQuestId = questIds.get(`${line.key}__${String(key)}`); return questId && prerequisiteQuestId ? [{ quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] : [] }))
+  const prerequisites: QuestPrerequisite[] = questDocs.flatMap((questDoc) => (questDoc.prerequisites ?? []).flatMap((key: string) => { const questId = questIds.get(scopedQuestKey(line.key, questDoc.key)); const prerequisiteQuestId = questIds.get(scopedQuestKey(line.key, key)); return questId && prerequisiteQuestId ? [{ quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] : [] }))
 
   const usedDialogueKeys = new Set<string>(quests.flatMap((quest) => [quest.start_dialogue_id, quest.turn_in_dialogue_id].filter((key): key is string => Boolean(key)))); const usedMinigameKeys = new Set<string>()
   for (const step of steps) { const p = step.payload; if (typeof p.dialogue_id === 'string') usedDialogueKeys.add(p.dialogue_id); if (typeof p.instance_id === 'string') usedMinigameKeys.add(p.instance_id); if (typeof p.instance_key === 'string') usedMinigameKeys.add(p.instance_key) }

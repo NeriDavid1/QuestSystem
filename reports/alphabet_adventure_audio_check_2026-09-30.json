@@ -1,0 +1,40 @@
+{
+  "method": "Cached Whisper base automatic transcription; not phonetic scoring or live Unity playback",
+  "clips": [
+    {
+      "asset": "C:\\English Room\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Art\\Audio\\Voice\\Words\\apple.mp3",
+      "duration_seconds": 0.6,
+      "transcript": "Apple"
+    },
+    {
+      "asset": "C:\\English Room\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Art\\Audio\\Voice\\Words\\acorn.mp3",
+      "duration_seconds": 0.77,
+      "transcript": "A corn"
+    },
+    {
+      "asset": "C:\\English Room\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Art\\Audio\\Voice\\Words\\bag.mp3",
+      "duration_seconds": 0.66,
+      "transcript": "Bag?"
+    },
+    {
+      "asset": "C:\\English Room\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Art\\Audio\\Voice\\Words\\cat.mp3",
+      "duration_seconds": 0.59,
+      "transcript": "Cut!"
+    },
+    {
+      "asset": "C:\\English Room\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Art\\Audio\\Voice\\Words\\dog.mp3",
+      "duration_seconds": 0.61,
+      "transcript": "Dog"
+    },
+    {
+      "asset": "C:\\English Room\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Art\\Audio\\Voice\\Words\\bad.mp3",
+      "duration_seconds": 0.62,
+      "transcript": "Bad."
+    },
+    {
+      "asset": "C:\\English Room\\Animal-English-World\\English Kingdom\\Assets\\_OurAssets\\Art\\Audio\\Museum sounds\\SOUNDS FOR MUSEUM new\\DAD.mp3",
+      "duration_seconds": 0.68,
+      "transcript": "Dad."
+    }
+  ]
+}

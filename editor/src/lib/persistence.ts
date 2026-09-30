@@ -94,14 +94,18 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
     if (isFunctionMissingError(error)) {
       return saveViaClient(payload)
     }
-    if (error.message?.includes('CONFLICT')) {
+    // Only our explicit concurrency exception means a stale editor version.
+    // PostgreSQL diagnostics mentioning ON CONFLICT are persistence failures.
+    if (error.message?.trim() === 'CONFLICT') {
       // A confirmed overwrite must remain usable while a deployed RPC is older
       // than the repository migration that added p_force. The client fallback
       // is scoped to this questline and the rows touched by this session.
       if (payload.force) return saveViaClient(payload)
       throw new SaveConflictError()
     }
-    throw error
+    // Supabase errors are plain objects; preserve their useful message in the
+    // editor instead of reducing them to the generic "[object Object]" toast.
+    throw new Error([error.message, error.details, error.hint].filter(Boolean).join(' — '))
   }
   const result = data as { questline_id?: string; updated_at?: string } | null
   return {
@@ -339,7 +343,36 @@ async function saveViaClient(payload: QuestlineSavePayload): Promise<SaveResult>
 }
 
 export async function saveQuestlineDraft(payload: QuestlineSavePayload): Promise<SaveResult> {
-  return saveViaRpc(payload)
+  const result = await saveViaRpc(payload)
+  if (!await draftGraphMatchesServer(payload)) {
+    throw new Error('The server acknowledged the save, but the saved quest graph does not match the draft. Your local changes are still available.')
+  }
+  return result
+}
+
+async function draftGraphMatchesServer(payload: QuestlineSavePayload): Promise<boolean> {
+  if (!supabase) throw new Error('Supabase is not configured')
+  const [line, quests] = await Promise.all([
+    supabase.from('questlines').select('key,display_name,theme').eq('id', payload.questline.id).single(),
+    supabase.from('quests').select('id,key,name').eq('questline_id', payload.questline.id),
+  ])
+  if (line.error) throw new Error(line.error.message)
+  if (quests.error) throw new Error(quests.error.message)
+  if (line.data.key !== payload.questline.key || line.data.display_name !== payload.questline.display_name
+    || line.data.theme !== payload.questline.theme || quests.data.length !== payload.quests.length) return false
+  const savedQuests = new Map(quests.data.map((quest) => [quest.id, quest]))
+  if (payload.quests.some((quest) => savedQuests.get(quest.id)?.key !== quest.key
+    || savedQuests.get(quest.id)?.name !== quest.name)) return false
+  if (!payload.quests.length) return payload.steps.length === 0
+  const steps = await supabase.from('quest_steps').select('id,quest_id,key,position,step_type').in('quest_id', payload.quests.map((quest) => quest.id))
+  if (steps.error) throw new Error(steps.error.message)
+  if (steps.data.length !== payload.steps.length) return false
+  const savedSteps = new Map(steps.data.map((step) => [step.id, step]))
+  return payload.steps.every((step) => {
+    const saved = savedSteps.get(step.id)
+    return saved?.quest_id === step.quest_id && saved.key === step.key
+      && saved.position === step.position && saved.step_type === step.step_type
+  })
 }
 
 /** Deletes questlines by id. Child quests/steps/rewards/revisions cascade in the DB. */

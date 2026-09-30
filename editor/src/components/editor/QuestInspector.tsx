@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useT } from '../../i18n'
 import { useEditorStore } from '../../state/EditorStore'
 import { getQuestPrerequisites, getQuestRewards, getQuestSteps, getQuestlineQuests } from '../../lib/editorData'
@@ -10,6 +10,7 @@ import { InspectorSection } from './InspectorSection'
 import { PrerequisiteEditor } from './PrerequisiteEditor'
 import { RewardEditor } from './RewardEditor'
 import { StepEditor } from './StepEditor'
+import { StepList } from './StepList'
 
 export function QuestInspector() {
   const t = useT()
@@ -21,22 +22,24 @@ export function QuestInspector() {
     setSelectedStepId,
     updateLine,
     updateQuest,
-    addStep,
     togglePrerequisite,
     addReward,
     updateReward,
     removeReward,
     removeQuest,
-    removeStep,
-    moveStep,
     duplicateQuest,
-    duplicateStep,
     openConfirm,
     createDialogueForQuest,
     issues,
+    inspectorFocus,
   } = useEditorStore()
   const [openSection, setOpenSection] = useState<'quest' | 'steps' | 'line'>('quest')
   const [showKeyEdit, setShowKeyEdit] = useState(false)
+
+  // A validation issue was clicked: open the section that holds it.
+  useEffect(() => {
+    if (inspectorFocus) setOpenSection(inspectorFocus.section)
+  }, [inspectorFocus])
 
   if (!selectedLine || !selectedQuest) {
     return (
@@ -64,16 +67,6 @@ export function QuestInspector() {
         removeQuest(quest.id)
         setOpenSection('quest')
       },
-    })
-  }
-
-  const confirmDeleteStep = (step: { id: string; key: string }) => {
-    openConfirm({
-      title: t('deleteStepAria'),
-      message: step.key,
-      confirmLabel: t('deleteStepAria'),
-      tone: 'danger',
-      onConfirm: () => removeStep(step.id),
     })
   }
 
@@ -129,22 +122,8 @@ export function QuestInspector() {
           </div>
         </InspectorSection>
         <InspectorSection title={t('learningSteps', { count: steps.length })} open={openSection === 'steps'} onToggle={() => setOpenSection(openSection === 'steps' ? 'quest' : 'steps')}>
-          <div className="step-list">
-            {steps.map((step, index) => (
-              <div className={`step-row-wrap ${selectedStep?.id === step.id ? 'selected' : ''}`} key={step.id}>
-                <button className="step-row" onClick={() => { setSelectedStepId(step.id); setOpenSection('steps') }}>
-                  <span className="step-index">{String(index + 1).padStart(2, '0')}</span><span className="step-copy"><strong>{step.step_type.replaceAll('_', ' ')}</strong><small>{step.key}</small></span><Icon name="chevron" />
-                </button>
-                <div className="step-row-actions">
-                  <button type="button" className="icon-button tiny" aria-label={t('duplicateStepAria')} title={t('duplicateStepAria')} onClick={() => duplicateStep(step.id)}><Icon name="copy" /></button>
-                  <button type="button" className="icon-button tiny" aria-label={t('moveStepUp')} title={t('moveStepUp')} disabled={index === 0} onClick={() => moveStep(step.id, -1)}><Icon name="undo" /></button>
-                  <button type="button" className="icon-button tiny" aria-label={t('moveStepDown')} title={t('moveStepDown')} disabled={index === steps.length - 1} onClick={() => moveStep(step.id, 1)}><Icon name="redo" /></button>
-                  <button type="button" className="icon-button tiny" aria-label={t('deleteStepAria')} title={t('deleteStepAria')} onClick={() => confirmDeleteStep(step)}><Icon name="close" /></button>
-                </div>
-              </div>
-            ))}
-            <button className="add-step-button" onClick={addStep}><Icon name="plus" /> {t('addLearningStep')}</button>
-          </div>
+          <StepList steps={steps} onSelect={setSelectedStepId} />
+          {selectedStep && <StepEditor step={selectedStep} />}
         </InspectorSection>
         <InspectorSection title={t('lineSettings')} open={openSection === 'line'} onToggle={() => setOpenSection(openSection === 'line' ? 'quest' : 'line')}>
           <div className="form-stack">
@@ -153,7 +132,6 @@ export function QuestInspector() {
             <label><FieldLabel>{t('defaultGiver')}</FieldLabel><CatalogSelect kind="npc" value={selectedLine.default_giver_external_id ?? ''} data={data} onChange={(value) => updateLine({ default_giver_external_id: value })} /></label>
           </div>
         </InspectorSection>
-        {selectedStep && <StepEditor step={selectedStep} />}
       </div>
     </aside>
   )

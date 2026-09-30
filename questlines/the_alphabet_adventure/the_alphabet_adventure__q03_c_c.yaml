@@ -1,0 +1,51 @@
+quest:
+  id: the_alphabet_adventure__q03_c_c
+  name: C - האורח בתוך התיק
+  level_required: 1
+  giver_npc: Old Man
+  prerequisite: the_alphabet_adventure__q02_b_b
+  summary: לומדים C ו-c בהקשר של cat, מחברים ca ומשלימים אות ראשונה בעזרת משמעות נתונה.
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: the_alphabet_adventure_q03_finish
+rewards:
+  xp: 100
+  items: []
+steps:
+- type: talk_to_npc
+  npc_id: Old Man
+  dialogue_id: the_alphabet_adventure_q03_start
+- type: play_minigame
+  minigame_id: letter_drawing
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_form
+  display_text: צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.
+- type: play_minigame
+  minigame_id: dwarf_miner
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_mine_c
+  display_text: אסוף רק C ו-c. התרחק מהאותיות האחרות.
+- type: play_minigame
+  minigame_id: listening_letter_ordering
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_listen_cat
+  display_text: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+- type: play_minigame
+  minigame_id: letter_ordering
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_build_ca
+  display_text: הרכב את צירוף הצלילים קא לפי הסדר.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_gap_cat
+  display_text: השלם רק את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב.

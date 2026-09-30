@@ -1,0 +1,20 @@
+{
+  "hosted_readback": "PASS",
+  "archive": "C:\\Users\\kiril\\Downloads\\the_alphabet_adventure-questline (2).zip",
+  "editor_deployment_commit": "5d63489c9a94a6557e90f1de506074a43390d1b2",
+  "quests": 7,
+  "learning_steps": 39,
+  "dialogues": 24,
+  "dialogue_lines": 114,
+  "minigame_instances": 29,
+  "mismatches": [],
+  "normalizations": [
+    "Editor draft status instead of source completeness status.",
+    "Zero-based contiguous learning-step positions after opening-dialogue promotion.",
+    "Reward list order is not semantically significant."
+  ],
+  "boundaries": [
+    "Saved hosted draft; public snapshot not published.",
+    "Unity gameplay and phonetic audition not performed."
+  ]
+}

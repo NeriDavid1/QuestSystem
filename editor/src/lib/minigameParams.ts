@@ -1,5 +1,5 @@
 import type { CatalogEntry, EditorData, MinigameInstance, QuestStep } from './types'
-import { currentLetterDrawingCatalog, drawingInputMode, TRACING_SYMBOLS } from './letterDrawing'
+import { currentLetterDrawingCatalog, tracingSteps } from './letterDrawing'
 import { currentLetterOrderingCatalog } from './letterOrdering'
 
 /**
@@ -76,7 +76,7 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
   // TracingLessonSO: case-sensitive IDs of ready Unity SymbolPathSO assets.
   drawingInputMode: { name: 'drawingInputMode', labelKey: 'minigameDrawingInputMode', type: 'select', default: 'Symbols', options: ['Symbols', 'Word'], optionLabelKeys: { Symbols: 'minigameDrawingSymbolsMode', Word: 'minigameDrawingWordMode' } },
   word: { name: 'word', labelKey: 'minigameDrawingWord', hintKey: 'minigameDrawingWordHint', type: 'string', default: '' },
-  symbols: { name: 'symbols', labelKey: 'minigameParamSymbols', hintKey: 'minigameParamSymbolsHint', type: 'stringArray', default: ['A'], options: TRACING_SYMBOLS },
+  symbols: { name: 'symbols', labelKey: 'minigameParamSymbols', hintKey: 'minigameParamSymbolsHint', type: 'stringArray', default: ['A'] },
   // Legacy drawing fields remain readable for old documents.
   letter: { name: 'letter', labelKey: 'minigameParamLetter', type: 'string', default: 'A' },
   strokes: { name: 'strokes', labelKey: 'minigameParamStrokes', type: 'json', default: [] },
@@ -273,11 +273,8 @@ export function seedParamsFromBrief(
 
 /** Read a parameter value, falling back to the field default when unset. */
 export function readMinigameParam(minigame: MinigameInstance, field: MinigameParamField): unknown {
-  if (field.name === 'drawingInputMode') return drawingInputMode(minigame.params ?? {})
-  if (field.name === 'symbols' && !Object.hasOwn(minigame.params ?? {}, 'symbols')) {
-    const legacy = minigame.params?.letter ?? minigame.target
-    if (typeof legacy === 'string' && /^[A-Za-z]$/.test(legacy)) return [legacy]
-  }
+  if (field.name === 'symbols' && (minigame.params?.word || !Object.hasOwn(minigame.params ?? {}, 'symbols')))
+    return tracingSteps(minigame.params ?? {}, minigame.target)
   const value = minigame.params?.[field.name]
   if (field.type === 'select' && typeof value === 'number' && Number.isInteger(value)) {
     return field.options?.[value] ?? value
