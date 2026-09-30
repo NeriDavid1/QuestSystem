@@ -109,7 +109,8 @@ export function validateQuestline(
       const symbols = instance ? tracingSymbols(instance.params ?? {}, instance.target) : []
       if (symbols.length === 0 || symbols.some((symbol) => !/^[A-Za-z]$/.test(symbol))) {
         issues.push({ severity: 'error', code: 'invalid_tracing_symbols',
-          message: t(drawingInputMode(instance?.params ?? {}) === 'Word' ? 'validationTracingWord' : 'validationTracingSymbols'), entityId: step.id })
+          message: t(drawingInputMode(instance?.params ?? {}) === 'SymbolsThenWord' ? 'validationTracingLettersThenWord' :
+            drawingInputMode(instance?.params ?? {}) === 'Word' ? 'validationTracingWord' : 'validationTracingSymbols'), entityId: step.id })
       }
     }
     if (steps.length === 0) {

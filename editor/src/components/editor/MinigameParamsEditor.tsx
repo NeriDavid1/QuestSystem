@@ -355,7 +355,9 @@ export function MinigameParamsEditor({
   const params = minigame.params ?? {}
   const setScalar = (field: MinigameParamField, value: unknown) => {
     if (minigame.minigame_id === 'letter_drawing' && field.name === 'word') {
-      onChange({ ...params, word: normalizeParamValue(field, value), drawingInputMode: String(value).trim() ? 'Word' : 'Symbols' })
+      const hasWord = Boolean(String(value).trim())
+      onChange({ ...params, word: normalizeParamValue(field, value), drawingInputMode: hasWord
+        ? (params.drawingInputMode === 'SymbolsThenWord' ? 'SymbolsThenWord' : 'Word') : 'Symbols' })
       return
     }
     onChange({ ...params, [field.name]: normalizeParamValue(field, value) })
@@ -372,6 +374,21 @@ export function MinigameParamsEditor({
             if (field.name === 'drawingInputMode') return null
             const mode = drawingInputMode(params)
             if (field.name === 'symbols' && mode === 'Word') return null
+            if (field.name === 'word') return (
+              <div className="minigame-param-field" key={field.name}>
+                <label>
+                  <FieldLabel hint={t(field.hintKey as MessageKey)}>{t(field.labelKey as MessageKey)}</FieldLabel>
+                  <input className="content-text" dir="ltr" value={String(readMinigameParam(minigame, field) ?? '')}
+                    placeholder={t('minigameDrawingWordPlaceholder')}
+                    onChange={(event) => setScalar(field, event.target.value)} />
+                </label>
+                {String(params.word ?? '').trim() && <label>
+                  <input type="checkbox" checked={mode === 'SymbolsThenWord'}
+                    onChange={(event) => onChange({ ...params, drawingInputMode: event.target.checked ? 'SymbolsThenWord' : 'Word' })} />
+                  {t('minigameDrawingLettersThenWord')}
+                </label>}
+              </div>
+            )
           }
           const visual = orderingVisual(minigame.minigame_id, minigame.params ?? {})
           const listening = visual === 'ListenAndBuild' || visual === 1

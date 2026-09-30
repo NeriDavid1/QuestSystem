@@ -15,6 +15,11 @@ English letter per round. Order and repeats are preserved. Unity Quest Sync crea
 assets. It completes the station objective after the entire list. Museum pairing
 is separate. Legacy single-letter `params.letter` / `target` remain supported.
 
+For one exercise that traces selected letters and then a complete word, use
+`params: { "drawingInputMode": "SymbolsThenWord", "symbols": ["A", "a"], "word": "Apple" }`.
+Unity imports the selected letters as individual rounds and appends the composed
+word as the final round. Existing Symbols and Word exercises keep their behavior.
+
 QuestForge normalizes older Letter Drawing catalog rows to this shipped contract
 when loading the connected editor. The registry and catalog seed contain the same
 metadata and screenshot; other catalog kinds and existing published revisions are

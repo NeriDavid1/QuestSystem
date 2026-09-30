@@ -94,7 +94,7 @@ minigames:
     unity_config: LetterTracingQuestConfigSO
     unity_content: TracingLessonSO
     category: motor_skills
-    description: "Trace a typed English word or selected letters in order along authored strokes and points. Letter case is preserved; Open World exercises do not require uppercase/lowercase pairs."
+    description: "Trace selected letters, a typed English word, or selected letters followed by a word. Letter case and authored order are preserved."
     english_focus: "Letter formation, stroke order"
     difficulty_range: [1, 4]
     content_fields:

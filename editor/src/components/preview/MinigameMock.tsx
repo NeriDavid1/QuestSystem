@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { useT } from '../../i18n'
-import { drawingInputMode, tracingSymbols } from '../../lib/letterDrawing'
+import { drawingInputMode, tracingSteps } from '../../lib/letterDrawing'
 import { orderingVisual } from '../../lib/letterOrdering'
 import listeningFrame from '../../assets/minigames/listen-build/ListeningFrame.png'
 import listeningTile from '../../assets/minigames/listen-build/LetterTile.png'
@@ -250,7 +250,7 @@ function SpeakAloudMock({ params, prompt, speakLabel }: { params: MockParams; pr
 
 function LetterDrawingMock({ params }: { params: MockParams }) {
   const t = useT()
-  const symbols = tracingSymbols(params)
+  const symbols = tracingSteps(params)
   const [selected, setSelected] = useState(0)
   const index = Math.min(selected, Math.max(0, symbols.length - 1))
   if (drawingInputMode(params) === 'Word') {
@@ -258,7 +258,7 @@ function LetterDrawingMock({ params }: { params: MockParams }) {
     return <ParchmentShell>
       <div className="mg-mock-draw-canvas mg-mock-draw-word-canvas" dir="ltr">
         <span className="mg-mock-draw-letter mg-mock-draw-word"
-          style={{ fontSize: `min(82px, ${120 / Math.max(1, symbols.length)}cqi)` }}>{word || '…'}</span>
+          style={{ fontSize: `min(82px, ${120 / Math.max(1, word.length)}cqi)` }}>{word || '…'}</span>
       </div>
       <p className="mg-mock-word-note">{t('drawingPreviewWholeWord')}</p>
     </ParchmentShell>
@@ -274,7 +274,8 @@ function LetterDrawingMock({ params }: { params: MockParams }) {
         ))}
       </div>
       <div className="mg-mock-draw-canvas">
-        <span className="mg-mock-draw-letter">{symbols[index] || '…'}</span>
+        <span className={`mg-mock-draw-letter ${symbols[index]?.length > 1 ? 'mg-mock-draw-word' : ''}`}
+          style={symbols[index]?.length > 1 ? { fontSize: `min(82px, ${120 / symbols[index].length}cqi)` } : undefined}>{symbols[index] || '…'}</span>
       </div>
       <div className="mg-mock-draw-actions">
         <button type="button" className="mg-mock-draw-btn" disabled={index === 0}
@@ -398,7 +399,7 @@ export function MinigameMock({
       body = <SpeakAloudMock params={params} prompt={prompt} speakLabel={t('mgMockSpeak')} />
       break
     case 'letter_drawing':
-      body = <LetterDrawingMock key={tracingSymbols(params).join('')} params={params} />
+      body = <LetterDrawingMock key={tracingSteps(params).join('|')} params={params} />
       break
     case 'dwarf_miner':
       body = <DwarfMinerMock params={params} prompt={prompt} seed={seed} />
