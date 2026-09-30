@@ -1,0 +1,491 @@
+instances:
+  the_alphabet_adventure_q01_form:
+    minigame_id: letter_drawing
+    instruction: צייר את האותיות הגדולות והקטנות לפי הקווים.
+    tasks:
+    - A
+    - a
+    target: A, a
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - A
+      - a
+  the_alphabet_adventure_q01_listen_apple:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - a
+    target: a
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/apple.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 1
+      customDistractors:
+      - b
+  the_alphabet_adventure_q01_listen_acorn:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - a
+    target: a
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/acorn.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 1
+      customDistractors:
+      - b
+  the_alphabet_adventure_q01_word_model:
+    minigame_id: letter_drawing
+    instruction: צייר את המילה תפוח באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.
+    tasks:
+    - apple
+    target: apple
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - apple
+  the_alphabet_adventure_q02_form:
+    minigame_id: letter_drawing
+    instruction: צייר את האותיות הגדולות והקטנות לפי הקווים.
+    tasks:
+    - B
+    - b
+    - A
+    - a
+    target: B, b, A, a
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - B
+      - b
+      - A
+      - a
+  the_alphabet_adventure_q02_listen_bag:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - b
+    target: b
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: b
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/bag.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 1
+      customDistractors:
+      - a
+  the_alphabet_adventure_q02_review_apple:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - a
+    target: a
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/apple.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 1
+      customDistractors:
+      - b
+  the_alphabet_adventure_q02_gap_bag:
+    minigame_id: word_matching
+    instruction: השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.
+    tasks:
+    - bag
+    target: bag
+    variant: letter_to_gap
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      letters:
+      - id: tile_1
+        value: a
+      - id: tile_2
+        value: b
+      wordTasks:
+      - id: picture_1
+        fullWord: bag
+        missingIndices:
+        - 0
+  the_alphabet_adventure_q02_word_model:
+    minigame_id: letter_drawing
+    instruction: צייר את המילה תיק באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.
+    tasks:
+    - bag
+    target: bag
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - bag
+  the_alphabet_adventure_q03_form:
+    minigame_id: letter_drawing
+    instruction: צייר את האותיות הגדולות והקטנות לפי הקווים.
+    tasks:
+    - C
+    - c
+    - B
+    - b
+    target: C, c, B, b
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - C
+      - c
+      - B
+      - b
+  the_alphabet_adventure_q03_listen_cat:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - c
+    target: c
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: c
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/cat.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+      - a
+      - b
+  the_alphabet_adventure_q03_gap_cat:
+    minigame_id: word_matching
+    instruction: השלם את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.
+    tasks:
+    - cat
+    target: cat
+    variant: letter_to_gap
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      letters:
+      - id: tile_1
+        value: b
+      - id: tile_2
+        value: c
+      wordTasks:
+      - id: picture_1
+        fullWord: cat
+        missingIndices:
+        - 0
+  the_alphabet_adventure_q03_review_bag:
+    minigame_id: word_matching
+    instruction: השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.
+    tasks:
+    - bag
+    target: bag
+    variant: letter_to_gap
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      letters:
+      - id: tile_1
+        value: a
+      - id: tile_2
+        value: b
+      wordTasks:
+      - id: picture_1
+        fullWord: bag
+        missingIndices:
+        - 0
+  the_alphabet_adventure_q03_word_model:
+    minigame_id: letter_drawing
+    instruction: צייר את המילה חתול באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.
+    tasks:
+    - cat
+    target: cat
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - cat
+  the_alphabet_adventure_q04_form:
+    minigame_id: letter_drawing
+    instruction: צייר את האותיות הגדולות והקטנות לפי הקווים.
+    tasks:
+    - D
+    - d
+    - b
+    - d
+    target: D, d, b, d
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - D
+      - d
+      - b
+      - d
+  the_alphabet_adventure_q04_listen_dog:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - d
+    target: d
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: d
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/dog.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+      - a
+      - b
+      - c
+  the_alphabet_adventure_q04_word_models:
+    minigame_id: letter_drawing
+    instruction: 'צייר לפי הקווים את שתי המילים שלמדת: אבא ורע. כל מילה מופיעה כדוגמה.'
+    tasks:
+    - dad
+    - bad
+    target: dad, bad
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - dad
+      - bad
+  the_alphabet_adventure_q04_gap_dad:
+    minigame_id: word_matching
+    instruction: השלם את האות הראשונה במילה שפירושה אבא.
+    tasks:
+    - dad
+    target: dad
+    variant: letter_to_gap
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      letters:
+      - id: tile_1
+        value: b
+      - id: tile_2
+        value: d
+      wordTasks:
+      - id: picture_1
+        fullWord: dad
+        missingIndices:
+        - 0
+  the_alphabet_adventure_q04_listen_bad:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+    tasks:
+    - b
+    - a
+    - d
+    target: bad
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+      targetWord: bad
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/bad.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 1
+      customDistractors:
+      - c
+  the_alphabet_adventure_q04_listen_dad:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+    tasks:
+    - d
+    - a
+    - d
+    target: dad
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+      targetWord: dad
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/DAD.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+      - b
+      - c
+  the_alphabet_adventure_q05_mixed_forms:
+    minigame_id: letter_drawing
+    instruction: צייר את האותיות הגדולות והקטנות לפי הקווים.
+    tasks:
+    - b
+    - d
+    - B
+    - D
+    - A
+    - a
+    - C
+    - c
+    target: b, d, B, D, A, a, C, c
+    variant: trace_guided
+    success: השלמת את הציור לפי הדוגמה. חזרת על הצורות.
+    params:
+      symbols:
+      - b
+      - d
+      - B
+      - D
+      - A
+      - a
+      - C
+      - c
+  the_alphabet_adventure_q05_listen_bag:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - b
+    target: b
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: b
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/bag.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+      - a
+      - c
+      - d
+  the_alphabet_adventure_q05_listen_dog:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - d
+    target: d
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: d
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/dog.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+      - a
+      - b
+      - c
+  the_alphabet_adventure_q06_listen_cat:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - c
+    target: c
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: c
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/cat.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+      - a
+      - b
+      - d
+  the_alphabet_adventure_q06_listen_acorn:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - a
+    target: a
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/acorn.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+      - b
+      - c
+      - d
+  the_alphabet_adventure_q06_listen_apple:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+    tasks:
+    - a
+    target: a
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/apple.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+      - b
+      - c
+      - d
+  the_alphabet_adventure_q07_spell_dad:
+    minigame_id: letter_ordering
+    instruction: הרכב את המילה אבא באנגלית מכל האותיות לפי הסדר.
+    tasks:
+    - d
+    - a
+    - d
+    target: dad
+    variant: word_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הרכב את המילה אבא באנגלית מכל האותיות לפי הסדר.
+      targetWord: dad
+      extraDistractorCount: 2
+      customDistractors:
+      - b
+      - c
+  the_alphabet_adventure_q07_listen_bad:
+    minigame_id: listening_letter_ordering
+    instruction: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+    tasks:
+    - b
+    - a
+    - d
+    target: bad
+    variant: listening_spelling
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+      targetWord: bad
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/bad.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 1
+      customDistractors:
+      - c
+  the_alphabet_adventure_q07_slice_bad:
+    minigame_id: fruit_slice
+    instruction: חתוך את האותיות לפי הסדר כדי להרכיב את המילה רע באנגלית.
+    tasks:
+    - b
+    - a
+    - d
+    target: bad
+    variant: letter_slicing
+    success: השלמת את התרגול לפי הצלילים והאותיות שלמדת.
+    params:
+      prompt: חתוך את האותיות לפי הסדר כדי להרכיב את המילה רע באנגלית.
+      segmentation: Letters
+      targetText: bad
+      preFilledIndices: []
+      distractors:
+      - c
+      extraLetterDistractorCount: 0

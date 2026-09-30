@@ -1,0 +1,57 @@
+quest:
+  id: the_alphabet_adventure__q03_c_c
+  name: C - האורח בתוך התיק
+  level_required: 1
+  giver_npc: Old Man
+  prerequisite: the_alphabet_adventure__q02_b_b
+  summary: לומדים C ו-c עם הצליל /k/ בהקשר של חתול. משלימים אות ראשונה וחוזרים על B.
+  wait_for_npc_turn_in: true
+  turn_in_dialogue_id: the_alphabet_adventure_q03_finish
+rewards:
+  xp: 100
+  items: []
+steps:
+- type: talk_to_npc
+  npc_id: Old Man
+  dialogue_id: the_alphabet_adventure_q03_start
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: the_alphabet_adventure_q03_form_teaching
+- type: play_minigame
+  minigame_id: letter_drawing
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_form
+  display_text: צייר את האותיות הגדולות והקטנות לפי הקווים.
+- type: play_minigame
+  minigame_id: listening_letter_ordering
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 2
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_listen_cat
+  display_text: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
+- type: talk_to_npc
+  npc_id: teacher_maya
+  dialogue_id: the_alphabet_adventure_q03_blending
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_gap_cat
+  display_text: השלם את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.
+- type: play_minigame
+  minigame_id: word_matching
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_review_bag
+  display_text: השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.
+- type: play_minigame
+  minigame_id: letter_drawing
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q03_word_model
+  display_text: צייר את המילה חתול באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.

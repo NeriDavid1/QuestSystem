@@ -1,0 +1,63 @@
+questline:
+  id: the_alphabet_adventure
+  npc_id: teacher_maya
+  display_name: The Alphabet Adventure
+  theme: אורן מחפש מפתח לספר החגיגה. לומדים A, B, C ו-D, צורות וצלילים, וחוזרים עליהם בשלושה קווסטים של שיעורי בית.
+  quest_count: 7
+  level_range:
+  - 1
+  - 50
+quests:
+- id: the_alphabet_adventure__q01_a_a
+  name: A - התפוח והרמז הראשון
+  level: 50
+  prerequisite: null
+  rewards:
+    xp: 50
+    items: []
+- id: the_alphabet_adventure__q02_b_b
+  name: B - התיק שהשמיע רחש
+  level: 1
+  prerequisite: the_alphabet_adventure__q01_a_a
+  rewards:
+    xp: 75
+    items: []
+- id: the_alphabet_adventure__q03_c_c
+  name: C - האורח בתוך התיק
+  level: 1
+  prerequisite: the_alphabet_adventure__q02_b_b
+  rewards:
+    xp: 100
+    items: []
+- id: the_alphabet_adventure__q04_d_d
+  name: D - הכרית של אבא והמפתח
+  level: 1
+  prerequisite: the_alphabet_adventure__q03_c_c
+  rewards:
+    xp: 150
+    items:
+    - id: coin
+      amount: 5
+- id: the_alphabet_adventure__q05_homework_similar_letters
+  name: שיעורי בית 1 - שתי אותיות דומות
+  level: 1
+  prerequisite: the_alphabet_adventure__q04_d_d
+  rewards:
+    xp: 50
+    items: []
+- id: the_alphabet_adventure__q06_homework_mixed_clues
+  name: שיעורי בית 2 - הרמזים בסדר חדש
+  level: 1
+  prerequisite: the_alphabet_adventure__q05_homework_similar_letters
+  rewards:
+    xp: 50
+    items: []
+- id: the_alphabet_adventure__q07_homework_two_words
+  name: שיעורי בית 3 - שתי מילים ושני סיפורים
+  level: 1
+  prerequisite: the_alphabet_adventure__q06_homework_mixed_clues
+  rewards:
+    xp: 75
+    items:
+    - id: coin
+      amount: 5

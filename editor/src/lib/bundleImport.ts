@@ -36,6 +36,12 @@ function recordMap<T extends { key: string }>(items: T[]): Map<string, T> {
   return new Map(items.map((item) => [item.key, item]))
 }
 
+function scopedQuestKey(lineKey: string, sourceKey: unknown): string {
+  const key = String(sourceKey)
+  const prefix = `${lineKey}__`
+  return key.startsWith(prefix) ? key : `${prefix}${key}`
+}
+
 /**
  * A finished quest closes with its quest-level completion dialogue and NPC
  * turn-in, not with a trailing "go back and talk to the NPC" objective.
@@ -91,7 +97,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
         wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in) || promotedIndex >= 0,
       }
     })(),
-    id: makeLocalId('quest'), questline_id: line.id, key: `${line.key}__${String(item.key)}`, position: index,
+    id: makeLocalId('quest'), questline_id: line.id, key: scopedQuestKey(line.key, item.key), position: index,
     name: String(item.name ?? item.key), level_required: Number(item.level_required ?? 1),
     giver_external_id: item.giver_external_id ?? null, summary: item.summary ?? null,
     status: 'draft', source_path: item.source_path ?? null,
@@ -101,7 +107,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   const steps: QuestStep[] = []
   const stepIds = new Map<string, string>()
   for (const questDoc of questDocs) {
-    const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); if (!questId) continue
+    const questId = questIds.get(scopedQuestKey(line.key, questDoc.key)); if (!questId) continue
     const sourceSteps = Array.isArray(questDoc.steps) ? questDoc.steps : []
     const startStep = sourceSteps.find((step: Record<string, any>) => step.type === 'talk_to_npc')
     // The first NPC conversation is promoted to quest.start_dialogue_id above.
@@ -120,14 +126,14 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
   }
   const rewards: QuestReward[] = []
   for (const questDoc of questDocs) {
-    const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); if (!questId) continue
+    const questId = questIds.get(scopedQuestKey(line.key, questDoc.key)); if (!questId) continue
     for (const reward of (Array.isArray(questDoc.rewards) ? questDoc.rewards : [])) rewards.push({ id: makeLocalId('reward'), scope: 'quest', quest_id: questId, step_id: null, reward_type: reward.reward_type === 'item' ? 'item' : 'xp', xp_amount: reward.xp_amount ?? null, item_external_id: reward.item_external_id ?? null, amount: reward.amount ?? null, source_metadata: reward.source_metadata ?? {} })
     for (const stepDoc of (Array.isArray(questDoc.steps) ? questDoc.steps : [])) {
       const stepId = stepIds.get(`${questDoc.key}::${stepDoc.key}`); if (!stepId) continue
       for (const reward of (Array.isArray(stepDoc.rewards) ? stepDoc.rewards : [])) rewards.push({ id: makeLocalId('reward'), scope: 'step', quest_id: null, step_id: stepId, reward_type: reward.reward_type === 'item' ? 'item' : 'xp', xp_amount: reward.xp_amount ?? null, item_external_id: reward.item_external_id ?? null, amount: reward.amount ?? null, source_metadata: reward.source_metadata ?? {} })
     }
   }
-  const prerequisites: QuestPrerequisite[] = questDocs.flatMap((questDoc) => (questDoc.prerequisites ?? []).flatMap((key: string) => { const questId = questIds.get(`${line.key}__${String(questDoc.key)}`); const prerequisiteQuestId = questIds.get(`${line.key}__${String(key)}`); return questId && prerequisiteQuestId ? [{ quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] : [] }))
+  const prerequisites: QuestPrerequisite[] = questDocs.flatMap((questDoc) => (questDoc.prerequisites ?? []).flatMap((key: string) => { const questId = questIds.get(scopedQuestKey(line.key, questDoc.key)); const prerequisiteQuestId = questIds.get(scopedQuestKey(line.key, key)); return questId && prerequisiteQuestId ? [{ quest_id: questId, prerequisite_quest_id: prerequisiteQuestId }] : [] }))
 
   const usedDialogueKeys = new Set<string>(quests.flatMap((quest) => [quest.start_dialogue_id, quest.turn_in_dialogue_id].filter((key): key is string => Boolean(key)))); const usedMinigameKeys = new Set<string>()
   for (const step of steps) { const p = step.payload; if (typeof p.dialogue_id === 'string') usedDialogueKeys.add(p.dialogue_id); if (typeof p.instance_id === 'string') usedMinigameKeys.add(p.instance_id); if (typeof p.instance_key === 'string') usedMinigameKeys.add(p.instance_key) }
