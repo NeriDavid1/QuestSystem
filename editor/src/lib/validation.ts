@@ -2,6 +2,7 @@ import type { EditorData, Questline, ValidationIssue } from './types'
 import type { MessageKey } from '../i18n/messages'
 import { drawingInputMode, tracingSymbols } from './letterDrawing'
 import { isLetterOrdering } from './letterOrdering'
+import { stepFieldLabel, stepTypeName } from './stepPresentation'
 import {
   getCatalogKindForRef,
   getQuestSteps,
@@ -138,7 +139,7 @@ export function validateQuestline(
           issues.push({
             severity: 'error',
             code: 'missing_step_field',
-            message: t('validationMissingField', { field: field.name, type: type.id }),
+            message: t('validationMissingField', { field: stepFieldLabel(t, field.name), type: stepTypeName(t, type.id) }),
             entityId: step.id,
           })
         }

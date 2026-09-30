@@ -40,6 +40,7 @@ import {
   getQuestlineQuests,
   getStepMinigame,
   getStepMinigameKey,
+  getStepType,
   makeLocalId,
   normalizeContentKey,
   refreshDraftQuestKey,
@@ -55,6 +56,7 @@ import {
   uniqueQuestlineKey,
 } from '../lib/editorData'
 import { validateQuestline } from '../lib/validation'
+import { defaultStepPayload } from '../lib/stepPresentation'
 import { importBundleIntoLine } from '../lib/bundleImport'
 import {
   SaveConflictError,
@@ -82,6 +84,11 @@ export interface ConfirmState {
 interface ToastState {
   message: string
   tone: 'success' | 'error'
+}
+
+export interface InspectorFocus {
+  section: 'quest' | 'steps'
+  nonce: number
 }
 
 interface EditorStoreValue {
@@ -154,7 +161,10 @@ interface EditorStoreValue {
   updateReward: (rewardId: string, patch: Partial<QuestReward>) => void
   removeReward: (rewardId: string) => void
   addQuest: () => void
-  addStep: () => void
+  addStep: (stepType?: string) => void
+  /** Select the quest/step a validation issue points at and open it in the inspector. */
+  focusEntity: (entityId: string) => void
+  inspectorFocus: InspectorFocus | null
   createQuestline: (name: string, key: string, theme: string) => void
   removeQuestline: (questlineId: string) => void
   removeQuest: (questId: string) => void
@@ -220,6 +230,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const [libraryTab, setLibraryTab] = useState<LibraryTab>('catalog')
   const [confirmState, setConfirmState] = useState<ConfirmState | null>(null)
   const [conflictState, setConflictState] = useState(false)
+  const [inspectorFocus, setInspectorFocus] = useState<InspectorFocus | null>(null)
 
   const history = useRef<EditorData[]>([])
   const historyIndex = useRef(-1)
@@ -776,7 +787,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     notify(t('draftQuestAdded'))
   }, [data, notify, selectedLine, t])
 
-  const addStep = useCallback(() => {
+  const addStep = useCallback((stepType = 'talk_to_npc') => {
     if (!selectedQuest) return
     const steps = getQuestSteps(data, selectedQuest.id)
     const position = nextPosition(steps)
@@ -785,15 +796,30 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       quest_id: selectedQuest.id,
       key: allocateStepKey(data, selectedQuest.id, selectedQuest.key, position),
       position,
-      step_type: 'talk_to_npc',
-      payload: { npc_id: selectedQuest.giver_external_id ?? 'teacher_maya', dialogue_id: '' },
+      step_type: stepType,
+      payload: defaultStepPayload(getStepType(data, stepType), {
+        giver: selectedQuest.giver_external_id ?? selectedLine?.default_giver_external_id ?? 'teacher_maya',
+        previousStep: steps[steps.length - 1],
+      }),
       source_metadata: { local_draft: true, source_position: position },
     }
     setData((current) => ({ ...current, steps: [...current.steps, newStep] }))
     setSelectedStepId(newStep.id)
     setDirty(true)
     notify(t('learningStepAdded'))
-  }, [data, notify, selectedQuest, t])
+  }, [data, notify, selectedLine, selectedQuest, t])
+
+  const focusEntity = useCallback((entityId: string) => {
+    const reward = data.rewards.find((item) => item.id === entityId)
+    const targetId = reward ? (reward.step_id ?? reward.quest_id ?? '') : entityId
+    const step = data.steps.find((item) => item.id === targetId)
+    const quest = data.quests.find((item) => item.id === (step ? step.quest_id : targetId))
+    if (!quest) return
+    setView('editor')
+    setSelectedQuestId(quest.id)
+    if (step) setSelectedStepId(step.id)
+    setInspectorFocus((current) => ({ section: step ? 'steps' : 'quest', nonce: (current?.nonce ?? 0) + 1 }))
+  }, [data.quests, data.rewards, data.steps])
 
   const createQuestline = useCallback((name: string, key: string, theme: string) => {
     const lineId = makeLocalId('questline')
@@ -1879,6 +1905,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       removeReward,
       addQuest,
       addStep,
+      focusEntity,
+      inspectorFocus,
       createQuestline,
       removeQuestline,
       removeQuest,
@@ -1911,7 +1939,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       showRevisions, showTemplates, libraryTab, setLibraryTab, updateLine, updateQuest, updateStep, updateDialogue,
       updateDialogueLine, addDialogueLine, removeDialogueLine, moveDialogueLine,       createDialogue,
       createDialogueForStep, createDialogueForQuest, createMinigameForStep, updateMinigame, togglePrerequisite, addReward, updateReward,
-      removeReward, addQuest, addStep, createQuestline, removeQuestline, removeQuest, removeStep,
+      removeReward, addQuest, addStep, focusEntity, inspectorFocus, createQuestline, removeQuestline, removeQuest, removeStep,
       removeDialogue, removeMinigame, duplicateQuest, duplicateStep, duplicateDialogue, duplicateQuestline,
       moveQuest, moveStep, saveDraft, publish,
       retryJoin, handleSignIn, handleSignUp, handleSignOut, revisionsForLine,
