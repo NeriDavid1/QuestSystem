@@ -270,6 +270,10 @@ code {
   transition: 160ms ease;
 }
 
+a.settings-link {
+  text-decoration: none;
+}
+
 .main-nav button:hover,
 .main-nav button.active,
 .settings-link:hover,
