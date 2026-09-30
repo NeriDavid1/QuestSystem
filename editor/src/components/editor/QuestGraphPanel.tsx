@@ -3,7 +3,7 @@ import { useLocale, useT } from '../../i18n'
 import { Icon } from '../common/Icon'
 import { StatusPill } from '../common/StatusPill'
 import { EmptyState } from '../common/EmptyState'
-import { GraphWithStepCounts } from './QuestGraph'
+import { QuestPath } from './QuestPath'
 import { buildQuestlineExportFiles } from '../../lib/questlineExport'
 import { createZipBlob, downloadBlob } from '../../lib/zip'
 
@@ -26,6 +26,7 @@ export function QuestGraphPanel() {
     openConfirm,
     setShowTemplates,
     setShowRevisions,
+    issues,
   } = useEditorStore()
 
   if (!selectedLine) {
@@ -149,10 +150,11 @@ export function QuestGraphPanel() {
           </div>
         </div>
         {lineQuests.length ? (
-          <GraphWithStepCounts
+          <QuestPath
+            data={data}
             quests={lineQuests}
             prerequisites={lineEdges}
-            steps={data.steps}
+            issues={issues}
             selectedQuestId={selectedQuestId}
             onSelect={(id) => { setSelectedQuestId(id); setSelectedStepId('') }}
           />

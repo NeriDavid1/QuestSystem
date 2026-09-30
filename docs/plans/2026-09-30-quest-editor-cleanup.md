@@ -36,6 +36,15 @@ Observed by running the editor in demo mode and reading the code:
 | 7 | Validation panel lists every issue (scrollable) and each one is a button that jumps to its quest/step. | 6 |
 | 8 | Number fields: empty stays empty until you type, values clamp to the field's min/max. | 7 |
 
+Visual pass (same PR):
+
+| # | Change |
+|---|---|
+| 9 | Readable type scale: no UI text under 11px (was 7–10px for most labels), via `--text-*` tokens in `index.css`. |
+| 10 | The quest map is a vertical path of quest cards instead of a one-row SVG, so every quest shows without side-scrolling; each card shows level, step count, status, its steps as icons, an issue dot and any non-adjacent prerequisite ("After Q02"). |
+| 11 | Questline heading gets the full width, with its actions in a row underneath. |
+| 12 | Library catalog status badges sit on their cards again (they were all stacked in the page corner). |
+
 All of it is presentation or editor behaviour; the saved rows keep the same shape, so Unity's
 `QuestSnapshotImporter` is unaffected.
 
