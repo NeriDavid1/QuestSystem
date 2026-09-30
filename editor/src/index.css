@@ -1756,10 +1756,26 @@ select:focus {
   gap: 4px;
 }
 
+.step-row-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.step-row-wrap > .step-row {
+  flex: 1;
+  min-width: 0;
+}
+
 .step-row-actions {
   display: inline-flex;
   gap: 2px;
   align-items: center;
+}
+
+/* Row tools only show for the step being worked on, keeping the list scannable. */
+.step-row-wrap:not(.selected):not(:hover):not(:focus-within) > .step-row-actions {
+  display: none;
 }
 
 .step-field {
@@ -1849,7 +1865,6 @@ select:focus {
 .step-copy strong {
   color: #4b5971;
   font-size: 9px;
-  text-transform: capitalize;
 }
 
 .step-copy small {
@@ -1882,6 +1897,94 @@ select:focus {
 .add-step-button:hover {
   border-color: #9c93ff;
   background: #faf9ff;
+}
+
+.step-type-icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  color: var(--purple);
+  background: var(--purple-soft);
+  font-size: 12px;
+}
+
+.step-copy small.content-text,
+.step-type-option .step-copy small {
+  font-family: inherit;
+  font-size: 9px;
+  color: var(--ink-soft);
+}
+
+.step-issue-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.step-issue-dot.error {
+  background: var(--danger);
+}
+
+.step-type-picker {
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid #dcd8ff;
+  border-radius: 10px;
+  background: #faf9ff;
+}
+
+.step-type-picker-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 2px 6px;
+}
+
+.step-type-picker-heading strong,
+.step-type-picker-heading small {
+  display: block;
+}
+
+.step-type-picker-heading strong {
+  color: var(--ink);
+  font-size: 10px;
+}
+
+.step-type-picker-heading small {
+  margin-top: 2px;
+  color: var(--ink-faint);
+  font-size: 8px;
+}
+
+.step-type-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 7px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  background: #fff;
+  text-align: start;
+}
+
+.step-type-option:hover,
+.step-type-option:focus-visible {
+  border-color: #9c93ff;
+  background: #f2f0ff;
+}
+
+.section-body > .step-editor {
+  margin: 12px -20px -18px;
 }
 
 .step-editor {
@@ -2278,9 +2381,22 @@ select:focus {
 .validation-item {
   display: flex;
   gap: 6px;
+  padding: 0;
+  border: 0;
   color: #929dac;
+  background: none;
+  font: inherit;
   font-size: 8px;
   line-height: 1.4;
+  text-align: start;
+}
+
+button.validation-item:not(:disabled) {
+  cursor: pointer;
+}
+
+button.validation-item:not(:disabled):hover > span:last-child {
+  text-decoration: underline;
 }
 
 .validation-item > span:first-child {
