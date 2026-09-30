@@ -2,7 +2,8 @@ questline:
   id: the_alphabet_adventure
   npc_id: teacher_maya
   display_name: The Alphabet Adventure
-  theme: אורן מחפש מפתח לספר החגיגה. לומדים A, B, C ו-D, צורות וצלילים, וחוזרים עליהם בשלושה קווסטים של שיעורי בית.
+  theme: 'הרפתקת המפתח של אורן: לומדים A-D דרך ציור, איסוף אותיות גדולות וקטנות, שמיעה, חיבור צירופים ומילים וחיתוך
+    אותיות. שלושה קווסטים של שיעורי בית.'
   quest_count: 7
   level_range:
   - 1
@@ -39,14 +40,14 @@ quests:
     - id: coin
       amount: 5
 - id: the_alphabet_adventure__q05_homework_similar_letters
-  name: שיעורי בית 1 - שתי אותיות דומות
+  name: שיעורי בית 1 - גדולות וקטנות
   level: 1
   prerequisite: the_alphabet_adventure__q04_d_d
   rewards:
     xp: 50
     items: []
 - id: the_alphabet_adventure__q06_homework_mixed_clues
-  name: שיעורי בית 2 - הרמזים בסדר חדש
+  name: שיעורי בית 2 - מצרפים צלילים
   level: 1
   prerequisite: the_alphabet_adventure__q05_homework_similar_letters
   rewards:

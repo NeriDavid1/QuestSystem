@@ -25,6 +25,7 @@ Review against the brief, current contracts and evidence. Return actionable find
 - Speak Aloud: what does GetDisplayWords() actually show? Is the intended sentence visible?
 - Dwarf Miner: could an item belong to both sets? Can the required count be reached?
 - Fruit Slice: does failure reflect language or reflexes? Do indices match segmentation?
+- Initial alphabet lesson: are story and explanation combined in the opening, followed by a game? Is the Hebrew child-readable without IPA, with the requested vowel term? Does first A drawing avoid a long word? Are recognition, repeated practice and sound combinations given distinct supported activities rather than only changing the recording in the same one-letter exercise?
 
 ## Verdict and correction loop
 

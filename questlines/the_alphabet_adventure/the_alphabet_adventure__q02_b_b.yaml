@@ -4,7 +4,7 @@ quest:
   level_required: 1
   giver_npc: Old Man
   prerequisite: the_alphabet_adventure__q01_a_a
-  summary: לומדים B ו-b, חוזרים על A ומשלימים רק את האות הראשונה ברמז של התיק.
+  summary: לומדים B ו-b, מקשרים לצליל תחילת bag, מחברים ba ומשלימים רק את אות הרמז הראשונה.
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: the_alphabet_adventure_q02_finish
 rewards:
@@ -14,16 +14,20 @@ steps:
 - type: talk_to_npc
   npc_id: Old Man
   dialogue_id: the_alphabet_adventure_q02_start
-- type: talk_to_npc
-  npc_id: teacher_maya
-  dialogue_id: the_alphabet_adventure_q02_form_teaching
 - type: play_minigame
   minigame_id: letter_drawing
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 1
   success_required: true
   instance_id: the_alphabet_adventure_q02_form
-  display_text: צייר את האותיות הגדולות והקטנות לפי הקווים.
+  display_text: צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.
+- type: play_minigame
+  minigame_id: dwarf_miner
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q02_mine_b
+  display_text: אסוף רק B ו-b. התרחק מ-A ו-a.
 - type: play_minigame
   minigame_id: listening_letter_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
@@ -32,26 +36,16 @@ steps:
   instance_id: the_alphabet_adventure_q02_listen_bag
   display_text: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
 - type: play_minigame
-  minigame_id: listening_letter_ordering
+  minigame_id: letter_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 1
   success_required: true
-  instance_id: the_alphabet_adventure_q02_review_apple
-  display_text: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
-- type: talk_to_npc
-  npc_id: teacher_maya
-  dialogue_id: the_alphabet_adventure_q02_blending
+  instance_id: the_alphabet_adventure_q02_build_ba
+  display_text: הרכב את צירוף הצלילים בא לפי הסדר.
 - type: play_minigame
   minigame_id: word_matching
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 1
   success_required: true
   instance_id: the_alphabet_adventure_q02_gap_bag
-  display_text: השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.
-- type: play_minigame
-  minigame_id: letter_drawing
-  world_object_id: Exam_Table_Fairy_Rose_Park
-  difficulty: 1
-  success_required: true
-  instance_id: the_alphabet_adventure_q02_word_model
-  display_text: צייר את המילה תיק באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.
+  display_text: השלם רק את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב.

@@ -4,7 +4,7 @@ quest:
   level_required: 1
   giver_npc: Old Man
   prerequisite: the_alphabet_adventure__q03_c_c
-  summary: לומדים D ו-d, מבחינים בין b ל-d ומרכיבים dad ו-bad מאותיות שנלמדו. סוגרים את סיפור המפתח.
+  summary: לומדים D ו-d, מבחינים בין b ל-d, מחברים da ומרכיבים dad מאותיות שנלמדו. סוגרים את סיפור המפתח.
   wait_for_npc_turn_in: true
   turn_in_dialogue_id: the_alphabet_adventure_q04_finish
 rewards:
@@ -16,47 +16,34 @@ steps:
 - type: talk_to_npc
   npc_id: Old Man
   dialogue_id: the_alphabet_adventure_q04_start
-- type: talk_to_npc
-  npc_id: teacher_maya
-  dialogue_id: the_alphabet_adventure_q04_form_teaching
 - type: play_minigame
   minigame_id: letter_drawing
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 1
   success_required: true
   instance_id: the_alphabet_adventure_q04_form
-  display_text: צייר את האותיות הגדולות והקטנות לפי הקווים.
+  display_text: צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.
 - type: play_minigame
-  minigame_id: listening_letter_ordering
-  world_object_id: Exam_Table_Fairy_Rose_Park
-  difficulty: 2
-  success_required: true
-  instance_id: the_alphabet_adventure_q04_listen_dog
-  display_text: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
-- type: talk_to_npc
-  npc_id: teacher_maya
-  dialogue_id: the_alphabet_adventure_q04_full_words
-- type: play_minigame
-  minigame_id: letter_drawing
+  minigame_id: dwarf_miner
   world_object_id: Exam_Table_Fairy_Rose_Park
   difficulty: 1
   success_required: true
-  instance_id: the_alphabet_adventure_q04_word_models
-  display_text: 'צייר לפי הקווים את שתי המילים שלמדת: אבא ורע. כל מילה מופיעה כדוגמה.'
+  instance_id: the_alphabet_adventure_q04_mine_d
+  display_text: אסוף רק D ו-d. שים לב להבדל בין b ל-d.
 - type: play_minigame
-  minigame_id: word_matching
+  minigame_id: letter_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
-  difficulty: 2
+  difficulty: 1
   success_required: true
-  instance_id: the_alphabet_adventure_q04_gap_dad
-  display_text: השלם את האות הראשונה במילה שפירושה אבא.
+  instance_id: the_alphabet_adventure_q04_build_da
+  display_text: הרכב את צירוף הצלילים דא לפי הסדר.
 - type: play_minigame
   minigame_id: listening_letter_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
-  difficulty: 2
+  difficulty: 1
   success_required: true
-  instance_id: the_alphabet_adventure_q04_listen_bad
-  display_text: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+  instance_id: the_alphabet_adventure_q04_listen_dog
+  display_text: הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.
 - type: play_minigame
   minigame_id: listening_letter_ordering
   world_object_id: Exam_Table_Fairy_Rose_Park
@@ -64,3 +51,10 @@ steps:
   success_required: true
   instance_id: the_alphabet_adventure_q04_listen_dad
   display_text: הקשב למילה והרכב אותה מכל האותיות לפי הסדר.
+- type: play_minigame
+  minigame_id: fruit_slice
+  world_object_id: Exam_Table_Fairy_Rose_Park
+  difficulty: 1
+  success_required: true
+  instance_id: the_alphabet_adventure_q04_slice_dad
+  display_text: חתוך את האותיות לפי הסדר כדי לכתוב אבא באנגלית.

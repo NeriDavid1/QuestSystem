@@ -3929,238 +3929,136 @@
         "כל הכבוד. עשיתם את שיעורי הבית לבד."
       ]
     },
-    "the_alphabet_adventure_q01_form_teaching": {
-      "speaker": "teacher_maya",
+    "the_alphabet_adventure_q01_start": {
+      "speaker": "Old Man",
       "lines": [
-        "נתחיל באות A.",
-        "קוראים לה איי.",
-        "לכתוב אותה אפשר בשתי צורות: A גדולה ו-a קטנה.",
-        "זאת אותה אות.",
-        "השם של האות והצליל שהיא מייצגת אינם תמיד אותו הדבר."
-      ]
-    },
-    "the_alphabet_adventure_q01_apple_teaching": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "Apple פירושו תפוח. A היא אות תנועה. באנגלית אותיות התנועה העיקריות הן A, E, I, O ו-U.",
-        "אלה אותיות של האלף-בית, והן שונות מסימני הניקוד בעברית.",
-        "בתחילת apple האות מייצגת את הצליל /æ/. העברית אינה מייצגת את הצליל הזה במדויק, ולכן נקשיב להקלטה באנגלית.",
-        "האזן למילה השלמה ובחר את האות של הצליל הראשון. אין צורך לקרוא את המילה כולה.",
-        "יש שתי אפשרויות. את האות שלנו כבר הכרנו; הסימן האחר הוא רק אפשרות נוספת."
-      ]
-    },
-    "the_alphabet_adventure_q01_acorn_teaching": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "A היא אות מיוחדת: היא יכולה לייצג כמה צלילים.",
-        "Acorn פירושו בלוט.",
-        "בתחילת acorn היא מייצגת /eɪ/, כמו בשם האות.",
-        "Apple ו-acorn מתחילות באותה אות, אף שהצלילים שונים.",
-        "האזן לשתי הדוגמאות; לא צריך לכתוב אותיות שעוד לא למדת.",
-        "אל תמתח את הקול כדי ליצור צליל אחר. מדובר בשני צלילים שונים, ולא רק בהבדל באורך."
-      ]
-    },
-    "the_alphabet_adventure_q01_word_teaching": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "עכשיו צייר את המילה תפוח באנגלית לפי הדוגמה.",
-        "האותיות האחרות עדיין חדשות, ולכן הן מופיעות בשבילך.",
-        "הציור עוזר להכיר צורות; הוא לא דורש לקרוא את כל המילה לבד."
+        "אני אורן. הערב אספר סיפור בחגיגת הממלכה, אבל הספר שלי נעול בתיבה ושכחתי איפה המפתח.",
+        "כתבתי לעצמי רמזים. חלק מהאותיות נמחקו, וברמז הראשון מצויר תפוח. בוא נפענח אותו יחד.",
+        "נתחיל באות A, שנקראת איי. A היא הצורה הגדולה, ו-a היא הצורה הקטנה. זאת אותה אות.",
+        "A היא אות ניקוד באנגלית. כאן זאת אות שכותבים בשורה, והיא עוזרת לייצג צליל. בעברית סימני הניקוד הם סימנים סביב האותיות.",
+        "A היא מיוחדת ויש לה כמה צלילים. Apple פירושו תפוח. Acorn פירושו בלוט. שתי המילים מתחילות באותה אות, אבל הצליל הראשון שונה.",
+        "בתחילת acorn הצליל דומה לשם האות איי. בתחילת apple נשמע צליל אחר. עכשיו נקשיב להקלטה של apple, ובשיעורי הבית נחזור גם ל-acorn.",
+        "שם האות והצליל שלה בתוך מילה אינם תמיד אותו הדבר. אין צורך לקרוא או לכתוב את כל המילים האלה.",
+        "בשולחן הלימוד שבפארק תצייר A ו-a. במכרה תאסוף אותן, ואחר כך תקשיב למילת הרמז ותבחר את האות שלה.",
+        "לסיום תחתוך a שלוש פעמים. הסימנים האחרים הם רק אפשרויות להבחנה; היום לומדים את A."
       ]
     },
     "the_alphabet_adventure_q01_finish": {
       "speaker": "Old Man",
       "lines": [
-        "תפוח!",
-        "עכשיו אני נזכר שלקחתי תפוח כשיצאתי מהבקתה.",
-        "יש ברמז הבא ציור של התיק שלי.",
-        "אולי הוא יזכיר לי מה קרה אחר כך."
-      ]
-    },
-    "the_alphabet_adventure_q01_start": {
-      "speaker": "Old Man",
-      "lines": [
-        "בדיוק אותך הייתי צריך.",
-        "אני אורן, ואני אוהב לספר סיפורים בחגיגות הממלכה.",
-        "הערב אספר סיפור בחגיגת הממלכה, אבל הספר שלי נעול בתיבה ושכחתי איפה המפתח.",
-        "כתבתי לעצמי רמזים, וחלק מהאותיות נמחקו.",
-        "ברמז הראשון מצויר תפוח.",
-        "תוכל לעזור לי לפענח אותו?",
-        "גש למאיה כדי ללמוד. את התרגולים תבצע בשולחן הלימוד שבפארק."
-      ]
-    },
-    "the_alphabet_adventure_q02_form_teaching": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "ברמז הבא מופיע תיק.",
-        "Bag פירושו תיק.",
-        "נלמד את B, שנקראת בי.",
-        "B היא הצורה הגדולה ו-b הקטנה.",
-        "בתחילת bag האות מייצגת /b/.",
-        "בחיבור צלילים משתמשים בצליל הזה, ולא בשם בי."
-      ]
-    },
-    "the_alphabet_adventure_q02_blending": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "אחרי הזיהוי נחבר את הצליל של b לצליל /æ/ של a.",
-        "/b/ ואז /æ/.",
-        "זה תרגול של חיבור צלילים, ולא מילה שנדרש לקרוא.",
-        "בסוף bag יש אות שעוד לא למדנו; היא כבר כתובה.",
-        "צריך להשלים רק את האות הראשונה."
-      ]
-    },
-    "the_alphabet_adventure_q02_finish": {
-      "speaker": "Old Man",
-      "lines": [
-        "נכון, לקחתי את התיק.",
-        "התפוח היה בפנים, אבל שמעתי ממנו רחש מוזר.",
-        "ברמז הבא מצויר מי שהתחבא בו."
+        "תפוח! עכשיו אני נזכר שלקחתי תפוח כשיצאתי מהבקתה.",
+        "תרגלת את שתי הצורות של האות שלנו. ברמז הבא מצויר התיק שלי. אולי הוא יזכיר לי מה קרה אחר כך."
       ]
     },
     "the_alphabet_adventure_q02_start": {
       "speaker": "Old Man",
       "lines": [
-        "ברמז הבא מצויר התיק הישן שלי. הוא היה כבד מהרגיל, וגם השמיע רחש.",
-        "גש למאיה כדי ללמוד. את התרגולים תבצע בשולחן הלימוד שבפארק. אולי הרמז יזכיר לי מה היה בתיק."
+        "ברמז הבא מצויר התיק שלי. הוא היה כבד מהרגיל, וגם השמיע רחש. מעניין מה הסתתר בו.",
+        "Bag פירושו תיק. האות הראשונה היא B, שנקראת בי. B היא הצורה הגדולה, ו-b הקטנה.",
+        "בהקלטה תקשיב לתחילת bag, המילה האנגלית לתיק. הצליל הראשון שייך ל-B. כדי לחבר צלילים, נשתמש בצליל הזה ולא בשם בי.",
+        "אחרי B נחבר A עם הצליל שלה בהקלטה של apple. נקבל צירוף שנכתוב בקירוב בא בעברית. זה צירוף לתרגול, ולא מילה באנגלית.",
+        "העברית עוזרת לזכור את הצירוף בקירוב. את הצליל האנגלי של A מכירים דרך ההקלטה של apple.",
+        "בשולחן שבפארק תצייר B ו-b, תאסוף את שתי הצורות ותאזין לרמז של התיק.",
+        "אחר כך תחבר שתי אותיות ותשלים רק את תחילת המילה. הסוף כבר כתוב, ואין צורך לקרוא את כולו לבד."
       ]
     },
-    "the_alphabet_adventure_q03_form_teaching": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "ברמז מצויר חתול.",
-        "Cat פירושו חתול.",
-        "האות החדשה היא C, שנקראת סי.",
-        "C גדולה ו-c קטנה הן אותה אות.",
-        "בתחילת cat היא מייצגת /k/.",
-        "לאות הזאת יש גם צלילים אחרים, אבל היום נשתמש בדוגמה של החתול."
-      ]
-    },
-    "the_alphabet_adventure_q03_blending": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "עכשיו נחבר /k/ ואחריו /æ/.",
-        "חיבור צלילים נעשה לפי הסדר.",
-        "במילה חתול נשלים רק את האות הראשונה; הסוף כבר כתוב כי עוד לא למדנו את כולו.",
-        "בתרגול הבא נחזור גם על האות של תיק."
-      ]
-    },
-    "the_alphabet_adventure_q03_finish": {
+    "the_alphabet_adventure_q02_finish": {
       "speaker": "Old Man",
       "lines": [
-        "החתול שלי!",
-        "הוא התחבא בתיק, וכשפתחתי אותו הוא קפץ החוצה.",
-        "החזקתי את המפתח באותו רגע.",
-        "הרמז האחרון הוא הכתובת שעל הכרית שקיבלתי מהבת שלי."
+        "נכון, לקחתי את התיק. התפוח היה בפנים, אבל שמעתי ממנו רחש מוזר.",
+        "ברמז הבא מצויר מי שהתחבא בו. לא ידעתי שיש לי אורח בתיק!"
       ]
     },
     "the_alphabet_adventure_q03_start": {
       "speaker": "Old Man",
       "lines": [
-        "ברמז הבא מצויר חתול. עכשיו אני מתחיל להבין מאיפה בא הרחש.",
-        "גש למאיה כדי ללמוד את האות החדשה. את התרגולים תבצע בשולחן הלימוד שבפארק."
+        "ברמז מצויר חתול. עכשיו אני מתחיל להבין מאיפה בא הרחש.",
+        "Cat פירושו חתול. האות החדשה היא C, שנקראת סי. C גדולה ו-c קטנה הן אותה אות.",
+        "בתחילת cat, המילה האנגלית לחתול, C נשמעת כמו הצליל בתחילת המילה קרן בעברית. תקשיב גם לדוגמה באנגלית.",
+        "ל-C יש גם צלילים אחרים. היום נשתמש בצליל שלה בדוגמה של החתול.",
+        "נחבר את הצליל הזה ל-A עם הצליל שלה בהקלטה של apple. נכתוב את הצירוף בקירוב קא בעברית. זה תרגול של שני צלילים, ולא מילה באנגלית.",
+        "בשולחן שבפארק תצייר C ו-c, תאסוף אותן ותקשיב למילת הרמז.",
+        "אחר כך תחבר שתי אותיות ותשלים רק את האות הראשונה במילה חתול. הסוף כבר כתוב, כי עוד לא למדנו את כולו."
       ]
     },
-    "the_alphabet_adventure_q04_form_teaching": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "האות החדשה היא D, שנקראת די.",
-        "D היא גדולה ו-d קטנה.",
-        "בתחילת dog, שפירושה כלב, היא מייצגת /d/.",
-        "השם די שונה מהצליל /d/.",
-        "שים לב: ל-b יש קו גבוה משמאל לבטן, ול-d יש קו גבוה מימין לבטן.",
-        "אלה שתי אותיות שונות."
-      ]
-    },
-    "the_alphabet_adventure_q04_full_words": {
-      "speaker": "teacher_maya",
-      "lines": [
-        "כבר למדנו את כל האותיות של dad.",
-        "Dad פירושו אבא.",
-        "נחבר לפי הסדר /d/, /æ/, /d/.",
-        "יש d גם בתחילת המילה וגם בסופה.",
-        "עכשיו bad: /b/, /æ/, /d/.",
-        "Bad פירושו רע.",
-        "אם נחליף את האות הראשונה, נשנה גם את הצליל הראשון ואת המשמעות.",
-        "צייר תחילה לפי הדוגמה; אחר כך הקשב והרכב בעצמך."
-      ]
-    },
-    "the_alphabet_adventure_q04_finish": {
+    "the_alphabet_adventure_q03_finish": {
       "speaker": "Old Man",
       "lines": [
-        "Dad, אבא!",
-        "הבת שלי רקמה את המילה על הכרית שלי ליד החלון.",
-        "כשהחתול קפץ, הנחתי שם את המפתח והרמתי אותו בשתי הידיים.",
-        "עכשיו נזכרתי איפה לחפש.",
-        "מצאתי את המפתח ופתחתי את התיבה.",
-        "הספר בפנים, ובחגיגה אוכל לספר איך עזרת לי.",
-        "אותיות הן כמו מפתחות קטנים לסיפורים.",
-        "אני נותן לך 5 מטבעות על העזרה.",
-        "מאיה הכינה לך עוד שלושה תרגולים קצרים לשיעורי הבית."
+        "החתול שלי! הוא התחבא בתיק, וכשפתחתי אותו הוא קפץ החוצה.",
+        "החזקתי את המפתח באותו רגע. הרמז האחרון הוא הכתובת שעל הכרית שקיבלתי מהבת שלי."
       ]
     },
     "the_alphabet_adventure_q04_start": {
       "speaker": "Old Man",
       "lines": [
-        "ברמז האחרון מצוירת הכרית שהבת שלי נתנה לי. היא רקמה עליה הקדשה, אבל האות הראשונה ברמז נמחקה.",
-        "מאיה תעזור לך לפענח את המילה. נדמה לי שהכרית הזאת תזכיר לי איפה הנחתי את המפתח."
+        "ברמז האחרון מצוירת הכרית שהבת שלי נתנה לי. היא רקמה עליה הקדשה, אבל חלק מהכתב ברמז נמחק.",
+        "האות החדשה היא D, שנקראת די. D היא הצורה הגדולה, ו-d הקטנה. בתחילת dog, שפירושה כלב, שומעים את הצליל שלה.",
+        "השם די שונה מהצליל בתחילת dog. הקשב להקלטה כדי להכיר את הצליל.",
+        "ל-b יש קו גבוה משמאל לבטן, ול-d יש קו גבוה מימין לבטן. בדוק את הצורות באנגלית לפני שתבחר.",
+        "נחבר D ואחריה A עם הצליל שלה בהקלטה של apple. נכתוב את הצירוף בקירוב דא בעברית. זה תרגול, ולא מילה באנגלית.",
+        "עכשיו נוסיף עוד D בסוף: dad. Dad פירושו אבא. זאת מילה אמיתית שכל האותיות שלה כבר מוכרות לך.",
+        "אם נחליף את האות הראשונה ב-B נקבל bad. Bad פירושו רע. שינוי האות הראשונה משנה גם את הצליל ואת המשמעות.",
+        "בשולחן שבפארק תצייר D ו-d, תאסוף אותן, תחבר את הצירוף ותאזין למילים.",
+        "לסיום תחתוך את האותיות של אבא לפי הסדר. צריך d בהתחלה וגם d בסוף."
       ]
     },
-    "the_alphabet_adventure_q05_finish": {
-      "speaker": "teacher_maya",
+    "the_alphabet_adventure_q04_finish": {
+      "speaker": "Old Man",
       "lines": [
-        "סיימת לחזור על שתי הצורות ועל הצלילים בתחילת המילים.",
-        "אם b ו-d מתבלבלות, עצור ובדוק באיזה צד נמצא הקו הגבוה.",
-        "בתרגול הבא נחזור לרמזי התפוח והחתול."
+        "Dad, אבא! הבת שלי רקמה את המילה על הכרית ליד החלון.",
+        "כשהחתול קפץ, הנחתי שם את המפתח והרמתי אותו בשתי הידיים. עכשיו נזכרתי איפה לחפש.",
+        "מצאתי את המפתח ופתחתי את התיבה. הספר בפנים, ובחגיגה אספר איך עזרת לי.",
+        "אני נותן לך 5 מטבעות על העזרה. אותיות הן כמו מפתחות קטנים לסיפורים.",
+        "מאיה הכינה לך עוד שלושה תרגולים קצרים לשיעורי הבית."
       ]
     },
     "the_alphabet_adventure_q05_start": {
       "speaker": "teacher_maya",
       "lines": [
-        "הספר של אורן כבר מוכן לחגיגה.",
-        "לפני השיעור הבא נחזק שתי אותיות שקל לבלבל.",
-        "ב-b הקו הגבוה נמצא משמאל לבטן, וב-d הוא נמצא מימין.",
-        "צייר אותן, ואז האזן לכל מילה ובחר לפי הצליל הראשון.",
-        "הפעם נעבוד עם כל ארבע האותיות שלמדנו.",
-        "הכול מחכה לך בשולחן הלימוד בפארק."
+        "הספר של אורן מוכן לחגיגה. אני מאיה, ולפני השיעור הבא נחזור על ארבע האותיות שלמדת.",
+        "במכרה הראשון תאסוף רק אותיות גדולות. במכרה השני תאסוף רק אותיות קטנות. שים לב לצורה, לא לגודל הציור על המסך.",
+        "אחר כך תצייר b ו-d. ב-b הקו הגבוה משמאל לבטן, וב-d הוא מימין.",
+        "התרגולים מחכים לך בשולחן הלימוד שבפארק."
       ]
     },
-    "the_alphabet_adventure_q06_finish": {
+    "the_alphabet_adventure_q05_finish": {
       "speaker": "teacher_maya",
       "lines": [
-        "חזרת אל האותיות בסדר חדש.",
-        "ב-apple וב-acorn בחרת אותה אות, למרות הצלילים השונים בתחילתן.",
-        "בשיעורים הבאים נלמד עוד דוגמאות שיעזרו לבחור את הצליל לפי המילה."
+        "כל הכבוד. הבחנת בין צורות גדולות וקטנות וחזרת על שתי האותיות שקל לבלבל.",
+        "בתרגול הבא תחבר אותיות לצירופים קצרים."
       ]
     },
     "the_alphabet_adventure_q06_start": {
       "speaker": "teacher_maya",
       "lines": [
-        "אורן רוצה להציג בחגיגה את הרמזים שפתרת.",
-        "הפעם הם מופיעים בסדר אחר.",
-        "הקשב לכל מילה ובחר רק את האות של הצליל הראשון.",
-        "אינך צריך לקרוא את המילה כולה.",
-        "אותה אות יכולה להתאים למילים עם צלילי פתיחה שונים, כמו בשתי הדוגמאות של A."
+        "אורן רוצה להציג בחגיגה את הרמזים שפתרת. היום נחזור אליהם בכמה דרכים.",
+        "תרכיב את הצירוף קא, ואחר כך תחתוך את האותיות של בא. אלו צירופים לתרגול, ולא מילים באנגלית.",
+        "בכל צירוף נשמור על הצליל של A בהקלטה של apple. הכתיבה בעברית מזכירה את סדר הצלילים בקירוב.",
+        "בסוף תקשיב למילה acorn, שפירושה בלוט. היא מתחילה ב-A עם צליל שדומה לשם האות איי.",
+        "זו אותה אות ניקוד של תפוח, אבל הצליל הראשון שונה. בחר רק את האות של הצליל הראשון, בלי לכתוב את המילה כולה."
       ]
     },
-    "the_alphabet_adventure_q07_finish": {
+    "the_alphabet_adventure_q06_finish": {
       "speaker": "teacher_maya",
       "lines": [
-        "סיימת את ההרפתקה ואת שלושת תרגולי הבית.",
-        "הכרת את A, B, C ו-D, חזרת על הצורות שלהן וחיברת את הצלילים במילים קטנות.",
-        "אני נותנת לך 5 מטבעות על השלמת תרגולי הבית.",
-        "עכשיו יש לך בסיס להמשך, ובשיעור הבא נוסיף אות חדשה."
+        "חיברת צירופים בשתי דרכים וחזרת על אות הניקוד A דרך דוגמה נוספת.",
+        "ב-apple וב-acorn זו אותה אות עם צלילים שונים. בתרגול האחרון נרכיב שתי מילים אמיתיות שכבר למדת."
       ]
     },
     "the_alphabet_adventure_q07_start": {
       "speaker": "teacher_maya",
       "lines": [
-        "לסיום נכין שתי מילים קטנות שכבר למדנו.",
-        "Dad פירושו אבא, ו-bad פירושו רע.",
-        "שתי האותיות האחרונות זהות, והאות הראשונה משנה את המילה.",
-        "עכשיו נסה להרכיב לפי המשמעות ואחר כך לפי ההקלטה.",
-        "במשחק האחרון נחזור על מילה מוכרת בתנועה.",
+        "לסיום נחזור על שתי מילים אמיתיות. Dad פירושו אבא, ו-bad פירושו רע.",
+        "הסוף שלהן זהה, והאות הראשונה משנה את הצליל ואת המשמעות.",
+        "בשולחן שבפארק תרכיב מילה לפי המשמעות, תקשיב למילה נוספת ותסיים בחיתוך אותיות לפי הסדר.",
         "כשמעשה הוא רע, אפשר לתקן אותו. טעות בתרגול היא חלק מהלמידה."
+      ]
+    },
+    "the_alphabet_adventure_q07_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "סיימת את ההרפתקה ואת שלושת תרגולי הבית. הכרת את A, B, C ו-D וחיברת צלילים לצירופים ולמילים קטנות.",
+        "אני נותנת לך 5 מטבעות על השלמת תרגולי הבית. עכשיו יש לך בסיס להמשך, ובשיעור הבא נוסיף אות חדשה."
       ]
     },
     "the_kingdoms_worst_day_q01_fenn_start": {
@@ -20809,7 +20707,7 @@
       "id": "the_alphabet_adventure",
       "folder": "the_alphabet_adventure",
       "displayName": "The Alphabet Adventure",
-      "theme": "אורן מחפש מפתח לספר החגיגה. לומדים A, B, C ו-D, צורות וצלילים, וחוזרים עליהם בשלושה קווסטים של שיעורי בית.",
+      "theme": "הרפתקת המפתח של אורן: לומדים A-D דרך ציור, איסוף אותיות גדולות וקטנות, שמיעה, חיבור צירופים ומילים וחיתוך אותיות. שלושה קווסטים של שיעורי בית.",
       "levelRange": [
         1,
         50
@@ -20830,7 +20728,7 @@
           "name": "A - התפוח והרמז הראשון",
           "level": 50,
           "prerequisite": null,
-          "summary": "אורן מחפש את המפתח לספר החגיגה. לומדים A ו-a, מכירים שני צלילים ומציירים לפי דוגמה.",
+          "summary": "אורן מלמד את צורות A ו-a ושני צלילים מוכרים שלה. מציירים, מזהים, מקשיבים וחותכים את האות.",
           "giver_npc": "Old Man",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -20847,28 +20745,23 @@
               "dialogue_id": "the_alphabet_adventure_q01_start"
             },
             {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q01_form_teaching"
-            },
-            {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q01_form",
-              "display_text": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
               "minigame_brief": {
                 "minigame_id": "letter_drawing",
-                "instruction": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
                 "tasks": [
                   "A",
                   "a"
                 ],
                 "target": "A, a",
                 "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
+                "success": "סיימת לצייר לפי הדוגמה.",
                 "params": {
                   "symbols": [
                     "A",
@@ -20878,9 +20771,38 @@
               }
             },
             {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q01_apple_teaching"
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q01_mine_a",
+              "display_text": "אסוף רק A ו-a. שתיהן אותה אות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק A ו-a. שתיהן אותה אות.",
+                "tasks": [
+                  "A",
+                  "a"
+                ],
+                "target": "A, a",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק A ו-a. שתיהן אותה אות.",
+                  "categoryLabel": "האות A בשתי צורות",
+                  "targetWords": [
+                    "A",
+                    "a"
+                  ],
+                  "distractorWords": [
+                    "B",
+                    "b"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
+                }
+              }
             },
             {
               "type": "play_minigame",
@@ -20898,7 +20820,7 @@
                 ],
                 "target": "a",
                 "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "בחרת לפי המילה ששמעת.",
                 "params": {
                   "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
                   "targetWord": "a",
@@ -20912,65 +20834,33 @@
               }
             },
             {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q01_acorn_teaching"
-            },
-            {
               "type": "play_minigame",
-              "minigame_id": "listening_letter_ordering",
+              "minigame_id": "fruit_slice",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 1,
               "success_required": true,
-              "instance_id": "the_alphabet_adventure_q01_listen_acorn",
-              "display_text": "הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "instance_id": "the_alphabet_adventure_q01_slice_a",
+              "display_text": "חתוך את האות a שלוש פעמים. התרחק מהאותיות האחרות. זה תרגול זיהוי, לא מילה.",
               "minigame_brief": {
-                "minigame_id": "listening_letter_ordering",
-                "instruction": "הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "minigame_id": "fruit_slice",
+                "instruction": "חתוך את האות a שלוש פעמים. התרחק מהאותיות האחרות. זה תרגול זיהוי, לא מילה.",
                 "tasks": [
+                  "a",
+                  "a",
                   "a"
                 ],
-                "target": "a",
-                "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "target": "aaa",
+                "variant": "letter_slicing",
+                "success": "זיהית את אותה אות כמה פעמים ברצף.",
                 "params": {
-                  "prompt": "הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                  "targetWord": "a",
-                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/acorn.mp3",
-                  "hintMode": "AudioOnly",
-                  "extraDistractorCount": 1,
-                  "customDistractors": [
+                  "prompt": "חתוך את האות a שלוש פעמים. התרחק מהאותיות האחרות. זה תרגול זיהוי, לא מילה.",
+                  "segmentation": "Letters",
+                  "targetText": "aaa",
+                  "preFilledIndices": [],
+                  "distractors": [
                     "b"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q01_word_teaching"
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_drawing",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 1,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q01_word_model",
-              "display_text": "צייר את המילה תפוח באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.",
-              "minigame_brief": {
-                "minigame_id": "letter_drawing",
-                "instruction": "צייר את המילה תפוח באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.",
-                "tasks": [
-                  "apple"
-                ],
-                "target": "apple",
-                "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
-                "params": {
-                  "symbols": [
-                    "apple"
-                  ]
+                  ],
+                  "extraLetterDistractorCount": 0
                 }
               }
             }
@@ -20981,7 +20871,7 @@
           "name": "B - התיק שהשמיע רחש",
           "level": 1,
           "prerequisite": "the_alphabet_adventure__q01_a_a",
-          "summary": "לומדים B ו-b, חוזרים על A ומשלימים רק את האות הראשונה ברמז של התיק.",
+          "summary": "לומדים B ו-b, מקשרים לצליל תחילת bag, מחברים ba ומשלימים רק את אות הרמז הראשונה.",
           "giver_npc": "Old Man",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -20998,21 +20888,16 @@
               "dialogue_id": "the_alphabet_adventure_q02_start"
             },
             {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q02_form_teaching"
-            },
-            {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q02_form",
-              "display_text": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
               "minigame_brief": {
                 "minigame_id": "letter_drawing",
-                "instruction": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
                 "tasks": [
                   "B",
                   "b",
@@ -21021,7 +20906,7 @@
                 ],
                 "target": "B, b, A, a",
                 "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
+                "success": "סיימת לצייר לפי הדוגמה.",
                 "params": {
                   "symbols": [
                     "B",
@@ -21029,6 +20914,40 @@
                     "A",
                     "a"
                   ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q02_mine_b",
+              "display_text": "אסוף רק B ו-b. התרחק מ-A ו-a.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק B ו-b. התרחק מ-A ו-a.",
+                "tasks": [
+                  "B",
+                  "b"
+                ],
+                "target": "B, b",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק B ו-b. התרחק מ-A ו-a.",
+                  "categoryLabel": "האות B בשתי צורות",
+                  "targetWords": [
+                    "B",
+                    "b"
+                  ],
+                  "distractorWords": [
+                    "A",
+                    "a"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
                 }
               }
             },
@@ -21048,7 +20967,7 @@
                 ],
                 "target": "b",
                 "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "בחרת לפי המילה ששמעת.",
                 "params": {
                   "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
                   "targetWord": "b",
@@ -21063,37 +20982,29 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "listening_letter_ordering",
+              "minigame_id": "letter_ordering",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 1,
               "success_required": true,
-              "instance_id": "the_alphabet_adventure_q02_review_apple",
-              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "instance_id": "the_alphabet_adventure_q02_build_ba",
+              "display_text": "הרכב את צירוף הצלילים בא לפי הסדר.",
               "minigame_brief": {
-                "minigame_id": "listening_letter_ordering",
-                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים בא לפי הסדר.",
                 "tasks": [
+                  "b",
                   "a"
                 ],
-                "target": "a",
-                "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "target": "ba",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
                 "params": {
-                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                  "targetWord": "a",
-                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/apple.mp3",
-                  "hintMode": "AudioOnly",
-                  "extraDistractorCount": 1,
-                  "customDistractors": [
-                    "b"
-                  ]
+                  "prompt": "הרכב את צירוף הצלילים בא לפי הסדר.",
+                  "targetWord": "ba",
+                  "extraDistractorCount": 0,
+                  "customDistractors": []
                 }
               }
-            },
-            {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q02_blending"
             },
             {
               "type": "play_minigame",
@@ -21102,16 +21013,16 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q02_gap_bag",
-              "display_text": "השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.",
+              "display_text": "השלם רק את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.",
+                "instruction": "השלם רק את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב.",
                 "tasks": [
                   "bag"
                 ],
                 "target": "bag",
                 "variant": "letter_to_gap",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "השלמת את תחילת המילה לפי הרמז.",
                 "params": {
                   "letters": [
                     {
@@ -21125,36 +21036,12 @@
                   ],
                   "wordTasks": [
                     {
-                      "id": "picture_1",
+                      "id": "task_1",
                       "fullWord": "bag",
                       "missingIndices": [
                         0
                       ]
                     }
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_drawing",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 1,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q02_word_model",
-              "display_text": "צייר את המילה תיק באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.",
-              "minigame_brief": {
-                "minigame_id": "letter_drawing",
-                "instruction": "צייר את המילה תיק באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.",
-                "tasks": [
-                  "bag"
-                ],
-                "target": "bag",
-                "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
-                "params": {
-                  "symbols": [
-                    "bag"
                   ]
                 }
               }
@@ -21166,7 +21053,7 @@
           "name": "C - האורח בתוך התיק",
           "level": 1,
           "prerequisite": "the_alphabet_adventure__q02_b_b",
-          "summary": "לומדים C ו-c עם הצליל /k/ בהקשר של חתול. משלימים אות ראשונה וחוזרים על B.",
+          "summary": "לומדים C ו-c בהקשר של cat, מחברים ca ומשלימים אות ראשונה בעזרת משמעות נתונה.",
           "giver_npc": "Old Man",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -21183,21 +21070,16 @@
               "dialogue_id": "the_alphabet_adventure_q03_start"
             },
             {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q03_form_teaching"
-            },
-            {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q03_form",
-              "display_text": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
               "minigame_brief": {
                 "minigame_id": "letter_drawing",
-                "instruction": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
                 "tasks": [
                   "C",
                   "c",
@@ -21206,7 +21088,7 @@
                 ],
                 "target": "C, c, B, b",
                 "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
+                "success": "סיימת לצייר לפי הדוגמה.",
                 "params": {
                   "symbols": [
                     "C",
@@ -21219,9 +21101,45 @@
             },
             {
               "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q03_mine_c",
+              "display_text": "אסוף רק C ו-c. התרחק מהאותיות האחרות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק C ו-c. התרחק מהאותיות האחרות.",
+                "tasks": [
+                  "C",
+                  "c"
+                ],
+                "target": "C, c",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק C ו-c. התרחק מהאותיות האחרות.",
+                  "categoryLabel": "האות C בשתי צורות",
+                  "targetWords": [
+                    "C",
+                    "c"
+                  ],
+                  "distractorWords": [
+                    "A",
+                    "a",
+                    "B",
+                    "b"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
               "minigame_id": "listening_letter_ordering",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
+              "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q03_listen_cat",
               "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
@@ -21233,7 +21151,7 @@
                 ],
                 "target": "c",
                 "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "בחרת לפי המילה ששמעת.",
                 "params": {
                   "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
                   "targetWord": "c",
@@ -21248,9 +21166,32 @@
               }
             },
             {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q03_blending"
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q03_build_ca",
+              "display_text": "הרכב את צירוף הצלילים קא לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים קא לפי הסדר.",
+                "tasks": [
+                  "c",
+                  "a"
+                ],
+                "target": "ca",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
+                "params": {
+                  "prompt": "הרכב את צירוף הצלילים קא לפי הסדר.",
+                  "targetWord": "ca",
+                  "extraDistractorCount": 1,
+                  "customDistractors": [
+                    "b"
+                  ]
+                }
+              }
             },
             {
               "type": "play_minigame",
@@ -21259,16 +21200,16 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q03_gap_cat",
-              "display_text": "השלם את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.",
+              "display_text": "השלם רק את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב.",
               "minigame_brief": {
                 "minigame_id": "word_matching",
-                "instruction": "השלם את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.",
+                "instruction": "השלם רק את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב.",
                 "tasks": [
                   "cat"
                 ],
                 "target": "cat",
                 "variant": "letter_to_gap",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "השלמת את תחילת המילה לפי הרמז.",
                 "params": {
                   "letters": [
                     {
@@ -21282,76 +21223,12 @@
                   ],
                   "wordTasks": [
                     {
-                      "id": "picture_1",
+                      "id": "task_1",
                       "fullWord": "cat",
                       "missingIndices": [
                         0
                       ]
                     }
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "word_matching",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 1,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q03_review_bag",
-              "display_text": "השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.",
-              "minigame_brief": {
-                "minigame_id": "word_matching",
-                "instruction": "השלם את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב, ואין צורך לקרוא אותו לבד.",
-                "tasks": [
-                  "bag"
-                ],
-                "target": "bag",
-                "variant": "letter_to_gap",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
-                "params": {
-                  "letters": [
-                    {
-                      "id": "tile_1",
-                      "value": "a"
-                    },
-                    {
-                      "id": "tile_2",
-                      "value": "b"
-                    }
-                  ],
-                  "wordTasks": [
-                    {
-                      "id": "picture_1",
-                      "fullWord": "bag",
-                      "missingIndices": [
-                        0
-                      ]
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_drawing",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 1,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q03_word_model",
-              "display_text": "צייר את המילה חתול באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.",
-              "minigame_brief": {
-                "minigame_id": "letter_drawing",
-                "instruction": "צייר את המילה חתול באנגלית לפי הקווים. המילה כולה מופיעה כדוגמה.",
-                "tasks": [
-                  "cat"
-                ],
-                "target": "cat",
-                "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
-                "params": {
-                  "symbols": [
-                    "cat"
                   ]
                 }
               }
@@ -21363,7 +21240,7 @@
           "name": "D - הכרית של אבא והמפתח",
           "level": 1,
           "prerequisite": "the_alphabet_adventure__q03_c_c",
-          "summary": "לומדים D ו-d, מבחינים בין b ל-d ומרכיבים dad ו-bad מאותיות שנלמדו. סוגרים את סיפור המפתח.",
+          "summary": "לומדים D ו-d, מבחינים בין b ל-d, מחברים da ומרכיבים dad מאותיות שנלמדו. סוגרים את סיפור המפתח.",
           "giver_npc": "Old Man",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -21385,21 +21262,16 @@
               "dialogue_id": "the_alphabet_adventure_q04_start"
             },
             {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q04_form_teaching"
-            },
-            {
               "type": "play_minigame",
               "minigame_id": "letter_drawing",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q04_form",
-              "display_text": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
               "minigame_brief": {
                 "minigame_id": "letter_drawing",
-                "instruction": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
                 "tasks": [
                   "D",
                   "d",
@@ -21408,7 +21280,7 @@
                 ],
                 "target": "D, d, b, d",
                 "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
+                "success": "סיימת לצייר לפי הדוגמה.",
                 "params": {
                   "symbols": [
                     "D",
@@ -21421,9 +21293,72 @@
             },
             {
               "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_mine_d",
+              "display_text": "אסוף רק D ו-d. שים לב להבדל בין b ל-d.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק D ו-d. שים לב להבדל בין b ל-d.",
+                "tasks": [
+                  "D",
+                  "d"
+                ],
+                "target": "D, d",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק D ו-d. שים לב להבדל בין b ל-d.",
+                  "categoryLabel": "האות D בשתי צורות",
+                  "targetWords": [
+                    "D",
+                    "d"
+                  ],
+                  "distractorWords": [
+                    "B",
+                    "b"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_build_da",
+              "display_text": "הרכב את צירוף הצלילים דא לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים דא לפי הסדר.",
+                "tasks": [
+                  "d",
+                  "a"
+                ],
+                "target": "da",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
+                "params": {
+                  "prompt": "הרכב את צירוף הצלילים דא לפי הסדר.",
+                  "targetWord": "da",
+                  "extraDistractorCount": 2,
+                  "customDistractors": [
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
               "minigame_id": "listening_letter_ordering",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
+              "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q04_listen_dog",
               "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
@@ -21435,7 +21370,7 @@
                 ],
                 "target": "d",
                 "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "בחרת לפי המילה ששמעת.",
                 "params": {
                   "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
                   "targetWord": "d",
@@ -21445,108 +21380,6 @@
                   "customDistractors": [
                     "a",
                     "b",
-                    "c"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "talk_to_npc",
-              "npc_id": "teacher_maya",
-              "dialogue_id": "the_alphabet_adventure_q04_full_words"
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "letter_drawing",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 1,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q04_word_models",
-              "display_text": "צייר לפי הקווים את שתי המילים שלמדת: אבא ורע. כל מילה מופיעה כדוגמה.",
-              "minigame_brief": {
-                "minigame_id": "letter_drawing",
-                "instruction": "צייר לפי הקווים את שתי המילים שלמדת: אבא ורע. כל מילה מופיעה כדוגמה.",
-                "tasks": [
-                  "dad",
-                  "bad"
-                ],
-                "target": "dad, bad",
-                "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
-                "params": {
-                  "symbols": [
-                    "dad",
-                    "bad"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "word_matching",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q04_gap_dad",
-              "display_text": "השלם את האות הראשונה במילה שפירושה אבא.",
-              "minigame_brief": {
-                "minigame_id": "word_matching",
-                "instruction": "השלם את האות הראשונה במילה שפירושה אבא.",
-                "tasks": [
-                  "dad"
-                ],
-                "target": "dad",
-                "variant": "letter_to_gap",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
-                "params": {
-                  "letters": [
-                    {
-                      "id": "tile_1",
-                      "value": "b"
-                    },
-                    {
-                      "id": "tile_2",
-                      "value": "d"
-                    }
-                  ],
-                  "wordTasks": [
-                    {
-                      "id": "picture_1",
-                      "fullWord": "dad",
-                      "missingIndices": [
-                        0
-                      ]
-                    }
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "listening_letter_ordering",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q04_listen_bad",
-              "display_text": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
-              "minigame_brief": {
-                "minigame_id": "listening_letter_ordering",
-                "instruction": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
-                "tasks": [
-                  "b",
-                  "a",
-                  "d"
-                ],
-                "target": "bad",
-                "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
-                "params": {
-                  "prompt": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
-                  "targetWord": "bad",
-                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/bad.mp3",
-                  "hintMode": "AudioOnly",
-                  "extraDistractorCount": 1,
-                  "customDistractors": [
                     "c"
                   ]
                 }
@@ -21570,7 +21403,7 @@
                 ],
                 "target": "dad",
                 "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "בחרת לפי המילה ששמעת.",
                 "params": {
                   "prompt": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
                   "targetWord": "dad",
@@ -21583,15 +21416,47 @@
                   ]
                 }
               }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_slice_dad",
+              "display_text": "חתוך את האותיות לפי הסדר כדי לכתוב אבא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתוך את האותיות לפי הסדר כדי לכתוב אבא באנגלית.",
+                "tasks": [
+                  "d",
+                  "a",
+                  "d"
+                ],
+                "target": "dad",
+                "variant": "letter_slicing",
+                "success": "שמרת על סדר האותיות במילה.",
+                "params": {
+                  "prompt": "חתוך את האותיות לפי הסדר כדי לכתוב אבא באנגלית.",
+                  "segmentation": "Letters",
+                  "targetText": "dad",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "b",
+                    "c"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
             }
           ]
         },
         {
           "id": "the_alphabet_adventure__q05_homework_similar_letters",
-          "name": "שיעורי בית 1 - שתי אותיות דומות",
+          "name": "שיעורי בית 1 - גדולות וקטנות",
           "level": 1,
           "prerequisite": "the_alphabet_adventure__q04_d_d",
-          "summary": "חזרה על צורות A-D ועל ההבחנה בין b ו-d בתחילת מילים מוקלטות.",
+          "summary": "מבחינים חזותית בין אותיות גדולות וקטנות ומחזקים את צורות b ו-d.",
           "giver_npc": "teacher_maya",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -21609,100 +21474,110 @@
             },
             {
               "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q05_mine_upper",
+              "display_text": "אסוף ארבע אותיות גדולות. התרחק מהאותיות הקטנות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף ארבע אותיות גדולות. התרחק מהאותיות הקטנות.",
+                "tasks": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "target": "A, B, C, D",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף ארבע אותיות גדולות. התרחק מהאותיות הקטנות.",
+                  "categoryLabel": "אותיות גדולות",
+                  "targetWords": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "distractorWords": [
+                    "a",
+                    "b",
+                    "c",
+                    "d"
+                  ],
+                  "requiredCorrect": 4,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q05_mine_lower",
+              "display_text": "אסוף ארבע אותיות קטנות. התרחק מהאותיות הגדולות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף ארבע אותיות קטנות. התרחק מהאותיות הגדולות.",
+                "tasks": [
+                  "a",
+                  "b",
+                  "c",
+                  "d"
+                ],
+                "target": "a, b, c, d",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף ארבע אותיות קטנות. התרחק מהאותיות הגדולות.",
+                  "categoryLabel": "אותיות קטנות",
+                  "targetWords": [
+                    "a",
+                    "b",
+                    "c",
+                    "d"
+                  ],
+                  "distractorWords": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "requiredCorrect": 4,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
               "minigame_id": "letter_drawing",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q05_mixed_forms",
-              "display_text": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
               "minigame_brief": {
                 "minigame_id": "letter_drawing",
-                "instruction": "צייר את האותיות הגדולות והקטנות לפי הקווים.",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
                 "tasks": [
                   "b",
                   "d",
                   "B",
-                  "D",
-                  "A",
-                  "a",
-                  "C",
-                  "c"
+                  "D"
                 ],
-                "target": "b, d, B, D, A, a, C, c",
+                "target": "b, d, B, D",
                 "variant": "trace_guided",
-                "success": "השלמת את הציור לפי הדוגמה. חזרת על הצורות.",
+                "success": "סיימת לצייר לפי הדוגמה.",
                 "params": {
                   "symbols": [
                     "b",
                     "d",
                     "B",
-                    "D",
-                    "A",
-                    "a",
-                    "C",
-                    "c"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "listening_letter_ordering",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q05_listen_bag",
-              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-              "minigame_brief": {
-                "minigame_id": "listening_letter_ordering",
-                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                "tasks": [
-                  "b"
-                ],
-                "target": "b",
-                "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
-                "params": {
-                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                  "targetWord": "b",
-                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/bag.mp3",
-                  "hintMode": "AudioOnly",
-                  "extraDistractorCount": 3,
-                  "customDistractors": [
-                    "a",
-                    "c",
-                    "d"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "listening_letter_ordering",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q05_listen_dog",
-              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-              "minigame_brief": {
-                "minigame_id": "listening_letter_ordering",
-                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                "tasks": [
-                  "d"
-                ],
-                "target": "d",
-                "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
-                "params": {
-                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                  "targetWord": "d",
-                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/dog.mp3",
-                  "hintMode": "AudioOnly",
-                  "extraDistractorCount": 3,
-                  "customDistractors": [
-                    "a",
-                    "b",
-                    "c"
+                    "D"
                   ]
                 }
               }
@@ -21711,10 +21586,10 @@
         },
         {
           "id": "the_alphabet_adventure__q06_homework_mixed_clues",
-          "name": "שיעורי בית 2 - הרמזים בסדר חדש",
+          "name": "שיעורי בית 2 - מצרפים צלילים",
           "level": 1,
           "prerequisite": "the_alphabet_adventure__q05_homework_similar_letters",
-          "summary": "שליפה מצטברת של c ו-a דרך דוגמאות מוכרות, כולל שני צלילי A.",
+          "summary": "חזרה על צירופי צלילים מוכרים דרך הרכבה וחיתוך, ושליפה של A דרך דוגמת הבלוט.",
           "giver_npc": "teacher_maya",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -21732,32 +21607,61 @@
             },
             {
               "type": "play_minigame",
-              "minigame_id": "listening_letter_ordering",
+              "minigame_id": "letter_ordering",
               "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
+              "difficulty": 1,
               "success_required": true,
-              "instance_id": "the_alphabet_adventure_q06_listen_cat",
-              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "instance_id": "the_alphabet_adventure_q06_build_ca",
+              "display_text": "הרכב את צירוף הצלילים קא לפי הסדר.",
               "minigame_brief": {
-                "minigame_id": "listening_letter_ordering",
-                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים קא לפי הסדר.",
                 "tasks": [
-                  "c"
+                  "c",
+                  "a"
                 ],
-                "target": "c",
-                "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "target": "ca",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
                 "params": {
-                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                  "targetWord": "c",
-                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/cat.mp3",
-                  "hintMode": "AudioOnly",
-                  "extraDistractorCount": 3,
+                  "prompt": "הרכב את צירוף הצלילים קא לפי הסדר.",
+                  "targetWord": "ca",
+                  "extraDistractorCount": 2,
                   "customDistractors": [
-                    "a",
                     "b",
                     "d"
                   ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q06_slice_ba",
+              "display_text": "חתוך את האותיות לפי הסדר כדי לבנות את צירוף הצלילים בא.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתוך את האותיות לפי הסדר כדי לבנות את צירוף הצלילים בא.",
+                "tasks": [
+                  "b",
+                  "a"
+                ],
+                "target": "ba",
+                "variant": "letter_slicing",
+                "success": "חזרת על צירוף מוכר ושמרת על סדר האותיות.",
+                "params": {
+                  "prompt": "חתוך את האותיות לפי הסדר כדי לבנות את צירוף הצלילים בא.",
+                  "segmentation": "Letters",
+                  "targetText": "ba",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "c",
+                    "d"
+                  ],
+                  "extraLetterDistractorCount": 0
                 }
               }
             },
@@ -21777,42 +21681,11 @@
                 ],
                 "target": "a",
                 "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "בחרת לפי המילה ששמעת.",
                 "params": {
                   "prompt": "הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
                   "targetWord": "a",
                   "promptAudio": "_OurAssets/Art/Audio/Voice/Words/acorn.mp3",
-                  "hintMode": "AudioOnly",
-                  "extraDistractorCount": 3,
-                  "customDistractors": [
-                    "b",
-                    "c",
-                    "d"
-                  ]
-                }
-              }
-            },
-            {
-              "type": "play_minigame",
-              "minigame_id": "listening_letter_ordering",
-              "world_object_id": "Exam_Table_Fairy_Rose_Park",
-              "difficulty": 2,
-              "success_required": true,
-              "instance_id": "the_alphabet_adventure_q06_listen_apple",
-              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-              "minigame_brief": {
-                "minigame_id": "listening_letter_ordering",
-                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                "tasks": [
-                  "a"
-                ],
-                "target": "a",
-                "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
-                "params": {
-                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
-                  "targetWord": "a",
-                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/apple.mp3",
                   "hintMode": "AudioOnly",
                   "extraDistractorCount": 3,
                   "customDistractors": [
@@ -21830,7 +21703,7 @@
           "name": "שיעורי בית 3 - שתי מילים ושני סיפורים",
           "level": 1,
           "prerequisite": "the_alphabet_adventure__q06_homework_mixed_clues",
-          "summary": "יישום של dad ו-bad לפי משמעות ולפי שמיעה, ואחר כך חזרה במשחק תנועה.",
+          "summary": "הרכבת dad ו-bad לפי משמעות ולפי שמיעה, וחזרה על סדר האותיות במשחק תנועה.",
           "giver_npc": "teacher_maya",
           "wait_for_npc_turn_in": true,
           "start_dialogue_id": null,
@@ -21858,10 +21731,10 @@
               "difficulty": 2,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q07_spell_dad",
-              "display_text": "הרכב את המילה אבא באנגלית מכל האותיות לפי הסדר.",
+              "display_text": "הרכב את המילה אבא באנגלית.",
               "minigame_brief": {
                 "minigame_id": "letter_ordering",
-                "instruction": "הרכב את המילה אבא באנגלית מכל האותיות לפי הסדר.",
+                "instruction": "הרכב את המילה אבא באנגלית.",
                 "tasks": [
                   "d",
                   "a",
@@ -21869,9 +21742,9 @@
                 ],
                 "target": "dad",
                 "variant": "word_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "הרכבת את המילה לפי המשמעות.",
                 "params": {
-                  "prompt": "הרכב את המילה אבא באנגלית מכל האותיות לפי הסדר.",
+                  "prompt": "הרכב את המילה אבא באנגלית.",
                   "targetWord": "dad",
                   "extraDistractorCount": 2,
                   "customDistractors": [
@@ -21899,7 +21772,7 @@
                 ],
                 "target": "bad",
                 "variant": "listening_spelling",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "בחרת לפי המילה ששמעת.",
                 "params": {
                   "prompt": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
                   "targetWord": "bad",
@@ -21919,10 +21792,10 @@
               "difficulty": 1,
               "success_required": true,
               "instance_id": "the_alphabet_adventure_q07_slice_bad",
-              "display_text": "חתוך את האותיות לפי הסדר כדי להרכיב את המילה רע באנגלית.",
+              "display_text": "חתוך את האותיות לפי הסדר כדי לכתוב רע באנגלית.",
               "minigame_brief": {
                 "minigame_id": "fruit_slice",
-                "instruction": "חתוך את האותיות לפי הסדר כדי להרכיב את המילה רע באנגלית.",
+                "instruction": "חתוך את האותיות לפי הסדר כדי לכתוב רע באנגלית.",
                 "tasks": [
                   "b",
                   "a",
@@ -21930,9 +21803,9 @@
                 ],
                 "target": "bad",
                 "variant": "letter_slicing",
-                "success": "השלמת את התרגול לפי הצלילים והאותיות שלמדת.",
+                "success": "שמרת על סדר האותיות במילה.",
                 "params": {
-                  "prompt": "חתוך את האותיות לפי הסדר כדי להרכיב את המילה רע באנגלית.",
+                  "prompt": "חתוך את האותיות לפי הסדר כדי לכתוב רע באנגלית.",
                   "segmentation": "Letters",
                   "targetText": "bad",
                   "preFilledIndices": [],

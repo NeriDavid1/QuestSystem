@@ -12,7 +12,7 @@ Turn the Designer's brief into valid QuestSystem content. Only this role edits q
 2. Check each planned stage has an objective, prerequisites, supported game, exact prompt, valid answers and a story purpose. Resolve routine choices; return unimplementable requirements with alternatives.
 3. Bind to exact registered NPC/station/item IDs. Prefer nearby live_used stations. Keep proposed narrative names out of technical IDs.
 4. Author globally unique line-scoped quest/dialogue/instance keys. Update index, prerequisites, graph and rewards together. Preserve letter case.
-5. Follow each game card. Letter Drawing is one manually typed ordered list such as symbols: [A, a, Apple]. Listen & Build has its own ID and audio dependency. Word Ordering builds sentences.
+5. Follow each game card. For initial A, Letter Drawing uses symbols: [A, a]; avoid a long first word such as apple. Later short taught words/combinations remain manual ordered entries. Listen & Build has its own ID and audio dependency. Word Ordering builds sentences.
 6. Fill params.prompt where supported, otherwise instruction. Never fabricate fields or infer a missing instruction from answer data. Answers belong in runtime targets except visible tracing/speaking models and explicitly supported practice.
 7. Use quest-level turn_in_dialogue_id and wait_for_npc_turn_in: true. Do not duplicate start/finish conversations as steps. Preserve first-quest level 50 / later level 1 integration convention.
 8. Check answer occurrences, zero-based indices, case, asset paths, reward ownership and game difficulty range. Quest level is not teaching difficulty.
@@ -25,6 +25,7 @@ Turn the Designer's brief into valid QuestSystem content. Only this role edits q
 - Kingdom motivation, lesson objective and interaction agree.
 - No placeholder English instruction, leaked spelling answer, invented recording path or imaginary objective.
 - YAML, a website mock and an importer success do not prove live Unity behavior.
+- For beginner alphabet lessons, combine story and teaching in the opening conversation, then start games directly. Use simple Hebrew without IPA; respect the requested term אות ניקוד. Provide distinct formation, recognition, repetition and sound-combination activities using supported Drawing, Miner, Slice and Ordering, rather than multiple near-identical one-letter audio screens.
 
 ## Handoff
 

@@ -30,6 +30,7 @@ Examples below are params fragments, not complete quests. Assign a verified stat
 - A whole word is composed onto one tracing surface; Apple is not five independent rounds.
 - Start with formation/shape, then a familiar word. Showing the model is necessary support, not an answer leak.
 - Tracing Apple is not evidence that the learner can independently spell or decode Apple.
+- For the first A lesson, use A/a only. Longer word models such as apple are inappropriate as the first tracing task; introduce short familiar combinations later.
 - Do not author new drawingInputMode, word, letter, strokes or previewImage fields. Those earlier contracts are read for compatibility only.
 - QA: entries are nonempty ASCII English letters only, no spaces/punctuation; required glyphs exist; each word remains one round; case and repeated letters survive import. Current Unity importer support must be present in the target game build.
 
@@ -39,9 +40,10 @@ Examples below are params fragments, not complete quests. Assign a verified stat
 - Choose the game ID to select the classic presentation; do not use legacy visualVariant to override another game ID.
 - Example: {"prompt":"סדרו את האותיות וכתבו את המילה חתול באנגלית.","targetWord":"cat","extraDistractorCount":2,"customDistractors":["b","n"]}.
 - Use familiar vocabulary. Teach c/a/t before independently spelling cat.
+- A taught syllable/letter combination is also supported: a Hebrew cue such as הרכב את צירוף הצלילים בא לפי הסדר with targetWord ba. Identify it as supported sound-combination practice, not an English word or a pronunciation test. Hebrew is a memory aid; the English vowel model comes from the taught recording.
 - Start with a small plausible pool; later contrast a learned neighboring spelling. Do not add distracting unknown letters simply to increase difficulty.
 - customDistractors contains single characters; repeated required letters, such as both p letters in apple, must remain available.
-- QA: prompt does not show the target spelling; answer is a valid intended word; case behavior is checked where relevant; distractors cannot replace the intended answer with another equally valid answer.
+- QA: prompt does not show the target English spelling; target is an intended taught word or explicitly labelled combination; case behavior is checked where relevant; distractors cannot replace the intended answer with another equally valid answer.
 - Do not call it pronunciation assessment or use it to order sentence words.
 
 ## listening_letter_ordering - Listen & Build
@@ -98,6 +100,8 @@ Examples below are params fragments, not complete quests. Assign a verified stat
 - Fields: prompt, categoryLabel, targetWords, distractorWords, requiredCorrect, allowedMistakes, background, wordRevealDatabase.
 - Example: {"prompt":"אספו רק שמות של בעלי חיים.","categoryLabel":"בעלי חיים","targetWords":["cat","dog","cow"],"distractorWords":["hat","bag","cup"],"requiredCorrect":3,"allowedMistakes":3}.
 - Use for taught vocabulary/category distinctions. Tie it to a Kingdom request, e.g. helping a farmer sort a list; the cave/hook presentation does not imply real quest loot.
+- Letter-family recognition is supported too. For A, use targetWords [A, a] and distractors from other letters. The current Miner keeps the case displayed on each orb and determines correctness from its target/distractor pool. Both A and a are accepted forms of the same letter.
+- requiredCorrect counts correct catches, including repeated orbs; it does not guarantee each distinct form was caught. Do not claim a mixed target pool separately assesses both forms. Use Drawing for formation of each specified form.
 - Define category membership precisely. Ambiguous isolated words such as cook or light can be more than one word class; use unambiguous material or another game with sentence context.
 - Keep target and distractor sets disjoint, remove accidental duplicates, and include both positive and negative examples when discrimination is the objective.
 - requiredCorrect must be achievable with the configured/placed targets. The SO documents runtime clamping; do not rely on that to repair a bad authored count.
@@ -109,7 +113,8 @@ Examples below are params fragments, not complete quests. Assign a verified stat
 - Fields: prompt, segmentation, targetText, preFilledIndices, distractors, extraLetterDistractorCount, background, wordRevealDatabase.
 - Letters example: {"prompt":"חתכו את האותיות לפי הסדר כדי לכתוב חתול באנגלית.","segmentation":"Letters","targetText":"cat","preFilledIndices":[],"distractors":["b","n"],"extraLetterDistractorCount":0}.
 - Words example: {"prompt":"הרכיבו את המשפט באנגלית: הכלב גדול.","segmentation":"Words","targetText":"The dog is big","preFilledIndices":[],"distractors":["small"]}.
-- Letters mode practises one word; Words mode orders sentence segments. Do not pass sentence spaces to a letter exercise without checking segmentation behavior.
+- Letters mode supports a word or a deliberate repeated-letter chain, such as targetText aaa for three successive recognitions of a. Describe the latter as repeated practice, not as a word. Words mode orders sentence segments.
+- Current Letters segmentation lowercases the target; comparisons ignore case. Use lowercase for this activity and do not claim it distinguishes uppercase/lowercase forms. Repeated target occurrences remain separate tiles/slots.
 - preFilledIndices refer to segments in the selected mode, not always character positions. Keep the learning target open.
 - Empty distractors in Letters mode can trigger random distractors via extraLetterDistractorCount; an empty list does not mean no distractors when that count is positive.
 - Prefer this game for consolidating familiar content. Flying targets add motor/timing demand; first exposure to a difficult rule is better supported elsewhere.

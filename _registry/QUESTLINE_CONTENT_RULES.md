@@ -34,6 +34,7 @@ Authoritative shared authoring policy. Role files describe responsibilities; the
 - NPCs motivate and give natural direction. Game UI explains exact controls and task actions.
 - Learner-facing NPC names are short and natural, optionally Hebrew plus English. Exact technical IDs belong only in schema fields.
 - One opening and one closing conversation per actual encounter; no immediate duplicate talk step. Intermediate dialogue needs new teaching, story information or a handoff.
+- For The Alphabet Adventure, combine the story and teaching in the opening dialogue. Start the learning steps with a game; do not split the same introduction into a second NPC conversation. Use concise game prompts as reminders during practice.
 
 ## Language and visible answers
 
@@ -49,14 +50,18 @@ Authoritative shared authoring policy. Role files describe responsibilities; the
 ## Phonics
 
 - Distinguish letter shape, name and represented sounds. A/a is one letter in two cases.
-- Use אותיות תנועה for vowel letters; English vowel letters are not Hebrew niqqud marks.
+- Use the user's preferred learner term אות ניקוד in The Alphabet Adventure. Explain simply that A is an English letter that helps us read sounds; Hebrew uses niqqud marks. Technical briefs may use vowel letter / אות תנועה. Do not present an English letter as a Hebrew diacritic.
 - A, E, I, O, U are the main vowel letters; sound depends on word/spelling context. Do not claim each letter has exactly one sound.
 - For initial A, use drawing and Listen & Build, not compulsory Speak Aloud. Introduce /æ/ and /eɪ/ through clear recorded examples such as apple and acorn, with meanings; do not demand spelling all their untaught letters.
 - Hebrew transliteration cannot fully represent /æ/. Use recorded English, not a misleading Hebrew approximation. Short/long vowel labels do not mean merely speaking longer.
+- Do not put IPA such as /æ/ or /eɪ/ in beginner-facing dialogue or prompts. Explain in simple Hebrew with familiar word recordings; IPA may remain in internal technical notes.
+- Hebrew cues such as בא, קא and דא may guide construction of taught consonant-plus-vowel combinations in Letter Ordering. Label them צירוף צלילים or הברה, not English vocabulary words. Hebrew spelling is a memory aid for sound order, not an exact transcription of the English vowel.
 - Teach consonant sounds without adding a vowel: /b/, not the letter name /biː/ during blending.
 - C as /k/ in cat is a contextual example, not a universal rule. Introduce additional sounds later.
 - Blend in order, then say/listen to the whole word. Teach T before independent cat and G before independent bag, or explicitly scaffold those letters.
 - Do not infer sound mastery from tracing or use a speech recognizer as a clinical/phonetic scoring tool.
+- In the first A lesson trace A/a, not a long word such as apple. Short taught combinations or words follow after the necessary letters and sounds have been introduced.
+- Select varied exercises with distinct purposes: formation in Drawing, both visible letter forms as Miner targets, repeated recognition in Slice, sound combination in Ordering, and targeted listening. Do not substitute several identical one-letter listening screens for this whole sequence.
 
 ## Quest integration
 

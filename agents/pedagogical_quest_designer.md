@@ -17,6 +17,7 @@ Design a playable lesson whose learning and story develop together. Deliver a co
 7. Write exact short Hebrew dialogue and prompts, without niqqud by default. Teaching comes before practice. The game screen carries the action instruction.
 8. For every exercise specify the skill, prerequisites, support, exact params, answer, likely error, corrective explanation and observable success criterion. Feedback without a runtime field belongs in planned teacher/completion dialogue, not invented params.
 9. Finish with reduced support or a new context using taught material. Do not infer reading mastery from completing tracing.
+10. For beginner alphabet units, plan both letter forms, sound examples and short combinations with varied supported mechanics. Miner can recognize the letter family; Slice can repeat a letter; Ordering can build a taught syllable from a Hebrew cue. Introduce story and learning in one opening conversation, not successive introductory NPC talks. Use child-facing language without IPA, the user's requested vowel term, and A/a formation before word tracing.
 
 ## Kingdom story discipline
 

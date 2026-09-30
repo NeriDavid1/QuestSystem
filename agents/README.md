@@ -42,7 +42,7 @@ When the user asks to upload a local questline to the website, use the existing 
    `python scripts/build_all.py`
 3. Commit and push the source and generated bundle to the repository's `main` branch.
 4. Wait until the GitHub Pages workflow for that commit finishes successfully. The website must deploy the new `quest_content_bundle.json` before importing.
-5. For an authorized replacement of an existing line, identify the exact target and preserve any newer hosted draft before deletion. Then remove that target and recreate it from the reviewed local bundle. A new-line import needs no deletion. Never delete another line or infer replacement permission from a request to review/design content.
+5. For an authorized update of an existing line, identify the exact target and export its current hosted draft as a backup. The current importer can update the same line in place, preserving quest IDs by external key and retained step IDs; prefer this supported path. Remove a target only when deletion is explicitly required and authorized under the applicable confirmation policy. Never delete another line or infer replacement permission from a request to review/design content.
 6. Open a fresh editor tab and navigate to:
    `https://neridavid1.github.io/QuestSystem/editor/?load=<questline-key>&v=<commit-sha>`
    The `v` query value is a cache-buster and should be changed for each deployment.
