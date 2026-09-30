@@ -101,7 +101,9 @@ async function saveViaRpc(payload: QuestlineSavePayload): Promise<SaveResult> {
       if (payload.force) return saveViaClient(payload)
       throw new SaveConflictError()
     }
-    throw error
+    // Supabase errors are plain objects; preserve their useful message in the
+    // editor instead of reducing them to the generic "[object Object]" toast.
+    throw new Error([error.message, error.details, error.hint].filter(Boolean).join(' — '))
   }
   const result = data as { questline_id?: string; updated_at?: string } | null
   return {

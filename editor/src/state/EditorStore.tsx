@@ -1741,8 +1741,14 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     const imported = importBundleIntoLine(bundle, data, targetLine, sourceKey)
     imported.dialogues.forEach((dialogue) => touchedDialogueIds.current.add(dialogue.id))
     imported.minigames.forEach((minigame) => touchedMinigameIds.current.add(minigame.id))
-    imported.oldQuestIds.forEach((id) => deletedQuestIds.current.push(id))
-    imported.oldStepIds.forEach((id) => deletedStepIds.current.push(id))
+    const retainedQuestIds = new Set(imported.quests.map((quest) => quest.id))
+    const retainedStepIds = new Set(imported.steps.map((step) => step.id))
+    // Retained rows are updates. Deleting them after the upsert would cascade
+    // through the newly imported lesson graph.
+    deletedQuestIds.current = deletedQuestIds.current.filter((id) => !retainedQuestIds.has(id))
+    deletedStepIds.current = deletedStepIds.current.filter((id) => !retainedStepIds.has(id))
+    imported.oldQuestIds.filter((id) => !retainedQuestIds.has(id)).forEach((id) => deletedQuestIds.current.push(id))
+    imported.oldStepIds.filter((id) => !retainedStepIds.has(id)).forEach((id) => deletedStepIds.current.push(id))
     setData((current) => ({
       ...current,
       questlines: current.questlines.some((item) => item.id === targetLine.id)

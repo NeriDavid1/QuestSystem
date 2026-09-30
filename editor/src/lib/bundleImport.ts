@@ -74,6 +74,7 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
 
   const oldQuests = current.quests.filter((quest) => quest.questline_id === line.id)
   const oldQuestIds = oldQuests.map((quest) => quest.id)
+  const oldQuestByKey = recordMap(oldQuests)
   const oldStepIds = current.steps.filter((step) => oldQuestIds.includes(step.quest_id)).map((step) => step.id)
   const questDocs = Array.isArray(doc.quests) ? doc.quests : []
   const quests: Quest[] = questDocs.map((item, index) => ({
@@ -97,7 +98,9 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
         wait_for_npc_turn_in: Boolean(item.wait_for_npc_turn_in) || promotedIndex >= 0,
       }
     })(),
-    id: makeLocalId('quest'), questline_id: line.id, key: scopedQuestKey(line.key, item.key), position: index,
+    // Replacing content must update the existing natural key, not insert a
+    // second UUID with that key before the RPC applies queued deletions.
+    id: oldQuestByKey.get(scopedQuestKey(line.key, item.key))?.id ?? makeLocalId('quest'), questline_id: line.id, key: scopedQuestKey(line.key, item.key), position: index,
     name: String(item.name ?? item.key), level_required: Number(item.level_required ?? 1),
     giver_external_id: item.giver_external_id ?? null, summary: item.summary ?? null,
     status: 'draft', source_path: item.source_path ?? null,
@@ -120,7 +123,10 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
       index === 0 && step.type === 'talk_to_npc' && step.payload?.dialogue_id === (questDoc.start_dialogue_id ?? startStep?.payload?.dialogue_id) && sourceSteps.length > 1
     ) && index !== promotedIndex)
     for (const [index, stepDoc] of visibleSteps.entries()) {
-      const id = makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
+      // Preserve each existing position's row during a lesson replacement.
+      // The save RPC frees these rows' positions before writing the new steps.
+      const existingStep = current.steps.find((step) => step.quest_id === questId && step.position === index)
+      const id = existingStep?.id ?? makeLocalId('step'); stepIds.set(`${questDoc.key}::${stepDoc.key}`, id)
       steps.push({ id, quest_id: questId, key: String(stepDoc.key), position: index, step_type: String(stepDoc.type), payload: stepDoc.payload ?? {}, source_metadata: stepDoc.source_metadata ?? {} })
     }
   }
