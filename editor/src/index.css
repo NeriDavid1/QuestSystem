@@ -4763,3 +4763,88 @@ button.validation-item:not(:disabled):hover > span:last-child {
 .mg-mock-draw-word-canvas { container-type: inline-size; }
 .mg-mock-draw-word { white-space: nowrap; max-width: 100%; }
 .mg-mock-word-note { font-size: var(--text-md); text-align: center; color: #70533e; margin: 10px 0 0; }
+
+/* Unity-built (custom) steps: read-only facts and one card per task */
+.custom-step-editor {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.custom-step-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px 16px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #e0e7ff;
+  border-radius: 10px;
+  background: #f7f9ff;
+}
+
+.custom-step-facts dt {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.custom-step-facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.custom-step-facts .wide {
+  grid-column: 1 / -1;
+}
+
+.custom-task-list {
+  display: grid;
+  gap: 10px;
+}
+
+.custom-task-card {
+  display: grid;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.custom-task-card.mode-minigame {
+  border-color: #c7d2fe;
+  background: #f7f9ff;
+}
+
+.custom-task-card.mode-none {
+  background: #f8fafc;
+}
+
+.custom-task-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-task-heading > div {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+
+.custom-task-heading small {
+  color: #64748b;
+}
+
+.custom-task-game {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+}
+
+.custom-task-game > :first-child {
+  justify-self: stretch;
+}
+
+.custom-locked-note {
+  margin: 8px 0 0;
+}

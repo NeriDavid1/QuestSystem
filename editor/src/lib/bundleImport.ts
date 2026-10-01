@@ -10,6 +10,7 @@ import type {
   Questline,
 } from './types'
 import { makeLocalId } from './editorData'
+import { customTasks, isCustomStep } from './customSteps'
 
 type Bundle = {
   revision_documents?: Array<Record<string, any>>
@@ -154,6 +155,8 @@ export function importBundleIntoLine(bundle: unknown, current: EditorData, line:
 
   const usedDialogueKeys = new Set<string>(quests.flatMap((quest) => [quest.start_dialogue_id, quest.turn_in_dialogue_id].filter((key): key is string => Boolean(key)))); const usedMinigameKeys = new Set<string>()
   for (const step of steps) { const p = step.payload; if (typeof p.dialogue_id === 'string') usedDialogueKeys.add(p.dialogue_id); if (typeof p.instance_id === 'string') usedMinigameKeys.add(p.instance_id); if (typeof p.instance_key === 'string') usedMinigameKeys.add(p.instance_key) }
+  // Unity-built (custom) steps choose one minigame per task.
+  for (const step of steps.filter(isCustomStep)) for (const task of customTasks(step)) if (task.instance_key) usedMinigameKeys.add(task.instance_key)
   const dialogueByKey = recordMap(current.dialogues); const minigameByKey = recordMap(current.minigames)
   const dialogues: Dialogue[] = []; const dialogueLines: DialogueLine[] = []
   for (const item of (Array.isArray(source.dialogues) ? source.dialogues : [])) {

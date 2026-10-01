@@ -9,6 +9,8 @@ import { Icon } from '../common/Icon'
 import { StepFieldEditor } from './StepFieldEditor'
 import { StepDialogueEditor } from './StepDialogueEditor'
 import { StepMinigameEditor } from './StepMinigameEditor'
+import { CustomStepEditor } from './CustomStepEditor'
+import { isCustomStep } from '../../lib/customSteps'
 import { RewardEditor } from './RewardEditor'
 
 export function StepEditor({ step }: { step: QuestStep }) {
@@ -25,6 +27,18 @@ export function StepEditor({ step }: { step: QuestStep }) {
       giver: selectedQuest?.giver_external_id ?? selectedLine?.default_giver_external_id ?? null,
     }),
   })
+  if (isCustomStep(step)) {
+    // Built in Unity: no type change, generic fields or rewards; only the tasks' minigames are chosen.
+    return (
+      <section className="step-editor">
+        <div className="step-editor-heading"><div><p className="eyebrow">{t('selectedStep')}</p><h3><span className="step-type-icon" aria-hidden="true">{stepTypeIcon(step.step_type)}</span> {stepTypeName(t, step.step_type)}</h3></div><span className="step-type-tag" title={step.key}>{definition?.unity_objective ?? t('customStep')}</span></div>
+        <p className="step-description">{definition ? stepTypeHint(t, definition) : t('configurePayload')}</p>
+        <CustomStepEditor step={step} />
+        <button className="advanced-toggle" onClick={() => setShowAdvanced(!showAdvanced)}>{showAdvanced ? t('hidePayload') : t('showPayload')} <Icon name="chevron" /></button>
+        {showAdvanced && <div className="payload-preview"><code>{JSON.stringify(step.payload, null, 2)}</code></div>}
+      </section>
+    )
+  }
   return (
     <section className="step-editor">
       <div className="step-editor-heading"><div><p className="eyebrow">{t('selectedStep')}</p><h3><span className="step-type-icon" aria-hidden="true">{stepTypeIcon(step.step_type)}</span> {stepTypeName(t, step.step_type)}</h3></div><span className="step-type-tag" title={step.key}>{definition?.unity_objective ?? t('customStep')}</span></div>

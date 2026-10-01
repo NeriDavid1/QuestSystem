@@ -1,4 +1,5 @@
 import type { MessageKey } from '../i18n/messages'
+import { CUSTOM_STEP, customStepSummary } from './customSteps'
 import { getCatalogKindForRef, getStepType } from './editorData'
 import type { Translate } from './labels'
 import type { EditorData, QuestStep, StepField, StepTypeDefinition } from './types'
@@ -44,14 +45,17 @@ function humanize(id: string): string {
 }
 
 export function stepTypeIcon(stepType: string): string {
+  if (stepType === CUSTOM_STEP) return '◈'
   return isKnownStepType(stepType) ? STEP_ICONS[stepType] : '•'
 }
 
 export function stepTypeName(t: Translate, stepType: string): string {
+  if (stepType === CUSTOM_STEP) return t('stepName_custom')
   return isKnownStepType(stepType) ? t(`stepName_${stepType}` as MessageKey) : humanize(stepType)
 }
 
 export function stepTypeHint(t: Translate, definition: StepTypeDefinition): string {
+  if (definition.id === CUSTOM_STEP) return t('stepHint_custom')
   return isKnownStepType(definition.id) ? t(`stepHint_${definition.id}` as MessageKey) : definition.description ?? ''
 }
 
@@ -59,13 +63,18 @@ export function stepFieldLabel(t: Translate, fieldName: string): string {
   return KNOWN_FIELDS.has(fieldName) ? t(`stepField_${fieldName}` as MessageKey) : humanize(fieldName)
 }
 
-/** Step types in the order a quest usually flows, followed by any others from the database. */
+/**
+ * Step types an author can pick, in the order a quest usually flows, followed by any others from the
+ * database. `custom` steps come only from Unity, so they are never offered.
+ */
 export function orderedStepTypes(data: EditorData): StepTypeDefinition[] {
   const rank = (id: string) => {
     const index = (KNOWN_STEP_TYPES as readonly string[]).indexOf(id)
     return index === -1 ? KNOWN_STEP_TYPES.length : index
   }
-  return [...data.stepTypes].sort((a, b) => rank(a.id) - rank(b.id) || a.id.localeCompare(b.id))
+  return data.stepTypes
+    .filter((type) => type.id !== CUSTOM_STEP)
+    .sort((a, b) => rank(a.id) - rank(b.id) || a.id.localeCompare(b.id))
 }
 
 function catalogName(data: EditorData, field: StepField | undefined, value: unknown): string | null {
@@ -77,6 +86,7 @@ function catalogName(data: EditorData, field: StepField | undefined, value: unkn
 
 /** A one-line, human description of what the step asks the player to do. */
 export function stepSummary(t: Translate, data: EditorData, step: QuestStep): string {
+  if (step.step_type === CUSTOM_STEP) return customStepSummary(t, step)
   if (!isKnownStepType(step.step_type)) return step.key
   const definition = getStepType(data, step.step_type)
   const unset = t('stepSummaryUnset')

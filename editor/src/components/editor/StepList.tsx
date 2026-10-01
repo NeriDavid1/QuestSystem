@@ -4,11 +4,14 @@ import { useEditorStore } from '../../state/EditorStore'
 import { orderedStepTypes, stepSummary, stepTypeHint, stepTypeIcon, stepTypeName } from '../../lib/stepPresentation'
 import type { QuestStep } from '../../lib/types'
 import { Icon } from '../common/Icon'
+import { isStructureLocked } from '../../lib/customSteps'
 
 export function StepList({ steps, onSelect }: { steps: QuestStep[]; onSelect: (stepId: string) => void }) {
   const t = useT()
   const { data, issues, selectedStepId, addStep, duplicateStep, moveStep, removeStep, openConfirm } = useEditorStore()
   const [picking, setPicking] = useState(false)
+  // A quest built in Unity keeps its steps as built: Unity's world binds to their order.
+  const locked = isStructureLocked(steps)
 
   const confirmDeleteStep = (step: QuestStep) => {
     openConfirm({
@@ -42,16 +45,18 @@ export function StepList({ steps, onSelect }: { steps: QuestStep[]; onSelect: (s
               {severity && <span className={`step-issue-dot ${severity}`} title={t('stepHasIssues', { count: stepIssues.length })} aria-label={t('stepHasIssues', { count: stepIssues.length })} />}
               <Icon name="chevron" />
             </button>
-            <div className="step-row-actions">
+            {!locked && <div className="step-row-actions">
               <button type="button" className="icon-button tiny" aria-label={t('duplicateStepAria')} title={t('duplicateStepAria')} onClick={() => duplicateStep(step.id)}><Icon name="copy" /></button>
               <button type="button" className="icon-button tiny" aria-label={t('moveStepUp')} title={t('moveStepUp')} disabled={index === 0} onClick={() => moveStep(step.id, -1)}><Icon name="undo" /></button>
               <button type="button" className="icon-button tiny" aria-label={t('moveStepDown')} title={t('moveStepDown')} disabled={index === steps.length - 1} onClick={() => moveStep(step.id, 1)}><Icon name="redo" /></button>
               <button type="button" className="icon-button tiny" aria-label={t('deleteStepAria')} title={t('deleteStepAria')} onClick={() => confirmDeleteStep(step)}><Icon name="close" /></button>
-            </div>
+            </div>}
           </div>
         )
       })}
-      {picking ? (
+      {locked ? (
+        <p className="field-description custom-locked-note">{t('customLockedNote')}</p>
+      ) : picking ? (
         <div className="step-type-picker" role="group" aria-label={t('chooseStepTypeTitle')}>
           <div className="step-type-picker-heading">
             <div><strong>{t('chooseStepTypeTitle')}</strong><small>{t('chooseStepTypeCopy')}</small></div>

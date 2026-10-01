@@ -2,6 +2,7 @@ import type { EditorData, Questline, ValidationIssue } from './types'
 import type { MessageKey } from '../i18n/messages'
 import { tracingSteps } from './letterDrawing'
 import { isLetterOrdering } from './letterOrdering'
+import { customTasks, isCustomStep, taskMode } from './customSteps'
 import { stepFieldLabel, stepTypeName } from './stepPresentation'
 import {
   getCatalogKindForRef,
@@ -110,6 +111,17 @@ export function validateQuestline(
       if (steps.length === 0) {
         issues.push({ severity: 'error', code: 'invalid_tracing_symbols',
           message: t('validationTracingSymbols'), entityId: step.id })
+      }
+    }
+    for (const step of steps.filter(isCustomStep)) {
+      for (const task of customTasks(step)) {
+        if (taskMode(task) !== 'minigame' || data.minigames.some((game) => game.key === task.instance_key)) continue
+        issues.push({
+          severity: 'error',
+          code: 'missing_task_minigame',
+          message: t('validationCustomTaskInstance', { task: task.index + 1, key: task.instance_key ?? '—' }),
+          entityId: step.id,
+        })
       }
     }
     if (steps.length === 0) {
