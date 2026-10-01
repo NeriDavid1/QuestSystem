@@ -11099,6 +11099,2143 @@
       "source_metadata": {}
     },
     {
+      "key": "abc_valley__abc_a_shards__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות A - גם A גדולה וגם a קטנה.",
+      "tasks": [
+        "אספו רק את האות A - גם A גדולה וגם a קטנה."
+      ],
+      "target": "A, a",
+      "variant": "word_category",
+      "success": "מצאתם את A בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות A - גם A גדולה וגם a קטנה.",
+        "categoryLabel": "האות A",
+        "targetWords": [
+          "A",
+          "a"
+        ],
+        "distractorWords": [
+          "O",
+          "S"
+        ],
+        "requiredCorrect": 3,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_a_shards__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "a",
+      "variant": "listening_spelling",
+      "success": "שמעתם את A בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "a",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/apple.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 1,
+        "customDistractors": [
+          "s"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_a_shards__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "A, a",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "A",
+          "a"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_a_shards__o1_t4",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "ant, apple",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "o"
+          },
+          {
+            "id": "tile_2",
+            "value": "a"
+          },
+          {
+            "id": "tile_3",
+            "value": "a"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "ant",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Ant.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "apple",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_a_shards__o4_t0",
+      "locale": "he",
+      "instruction": "הקשיבו למילה חדשה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה חדשה. באיזו אות היא מתחילה?"
+      ],
+      "target": "a",
+      "variant": "listening_spelling",
+      "success": "זיהיתם את A גם במילה חדשה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה חדשה. באיזו אות היא מתחילה?",
+        "targetWord": "a",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/ant.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "o",
+          "s"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_b_weeds__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות B - גדולה וקטנה.",
+      "tasks": [
+        "אספו רק את האות B - גדולה וקטנה."
+      ],
+      "target": "B, b",
+      "variant": "word_category",
+      "success": "מצאתם את B בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות B - גדולה וקטנה.",
+        "categoryLabel": "האות B",
+        "targetWords": [
+          "B",
+          "b"
+        ],
+        "distractorWords": [
+          "A",
+          "a"
+        ],
+        "requiredCorrect": 3,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_b_weeds__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "b",
+      "variant": "listening_spelling",
+      "success": "שמעתם את B בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "b",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/bee.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "a",
+          "o"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_b_weeds__o1_t3",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "bee, apple",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "a"
+          },
+          {
+            "id": "tile_2",
+            "value": "b"
+          },
+          {
+            "id": "tile_3",
+            "value": "o"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "bee",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Bee.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "apple",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_b_weeds__o2_t0",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "B, b",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "B",
+          "b"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_c_cave__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות C - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות C - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "C, c",
+      "variant": "word_category",
+      "success": "מצאתם את C בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות C - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות C",
+        "targetWords": [
+          "C",
+          "c"
+        ],
+        "distractorWords": [
+          "A",
+          "a",
+          "B",
+          "b"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_c_cave__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "c",
+      "variant": "listening_spelling",
+      "success": "שמעתם את C בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "c",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/candle.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "a",
+          "b"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_c_cave__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "C, c",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "C",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_c_cave__o1_t4",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "cat, apple",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "a"
+          },
+          {
+            "id": "tile_2",
+            "value": "b"
+          },
+          {
+            "id": "tile_3",
+            "value": "c"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Cat.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "apple",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_c_cave__o2_t0",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "apple, banana, cat",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "c"
+          },
+          {
+            "id": "tile_2",
+            "value": "a"
+          },
+          {
+            "id": "tile_3",
+            "value": "b"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "apple",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "banana",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Banana.png"
+          },
+          {
+            "id": "word_3",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Cat.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_d_drum__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות D - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות D - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "D, d",
+      "variant": "word_category",
+      "success": "מצאתם את D בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות D - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות D",
+        "targetWords": [
+          "D",
+          "d"
+        ],
+        "distractorWords": [
+          "B",
+          "b",
+          "C",
+          "c"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_d_drum__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "d",
+      "variant": "listening_spelling",
+      "success": "שמעתם את D בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "d",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/drum.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "b",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_d_drum__o1_t3",
+      "locale": "he",
+      "instruction": "ציירו D גדולה ו-d קטנה, ואחר כך b ו-d. שימו לב לאיזה צד הבטן פונה.",
+      "tasks": [
+        "ציירו D גדולה ו-d קטנה, ואחר כך b ו-d. שימו לב לאיזה צד הבטן פונה."
+      ],
+      "target": "D, d, b, d",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "D",
+          "d",
+          "b",
+          "d"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_d_drum__o1_t5",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "dog, bee",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "b"
+          },
+          {
+            "id": "tile_2",
+            "value": "c"
+          },
+          {
+            "id": "tile_3",
+            "value": "d"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Dog.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "bee",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Bee.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_d_drum__o2_t0",
+      "locale": "he",
+      "instruction": "הקשיבו ובנו את המילה אבא באנגלית.",
+      "tasks": [
+        "הקשיבו ובנו את המילה אבא באנגלית."
+      ],
+      "target": "dad",
+      "variant": "listening_spelling",
+      "success": "בניתם את המילה הראשונה שלכם: dad.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו ובנו את המילה אבא באנגלית.",
+        "targetWord": "dad",
+        "promptAudio": "_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/DAD.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "b",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_e_eggs__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות E - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות E - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "E, e",
+      "variant": "word_category",
+      "success": "מצאתם את E בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות E - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות E",
+        "targetWords": [
+          "E",
+          "e"
+        ],
+        "distractorWords": [
+          "C",
+          "c",
+          "A",
+          "a"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_e_eggs__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "e",
+      "variant": "listening_spelling",
+      "success": "שמעתם את E בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "e",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/egg.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "a",
+          "d"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_e_eggs__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "E, e",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "E",
+          "e"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_e_eggs__o1_t4",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "egg, doll",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "d"
+          },
+          {
+            "id": "tile_2",
+            "value": "a"
+          },
+          {
+            "id": "tile_3",
+            "value": "e"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "egg",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Egg.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "doll",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Doll.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_e_eggs__o2_t0",
+      "locale": "he",
+      "instruction": "סדרו את האותיות וכתבו את המילה מיטה באנגלית.",
+      "tasks": [
+        "סדרו את האותיות וכתבו את המילה מיטה באנגלית."
+      ],
+      "target": "bed",
+      "variant": "word_spelling",
+      "success": "כתבתם את המילה bed.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "סדרו את האותיות וכתבו את המילה מיטה באנגלית.",
+        "targetWord": "bed",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "a",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_f_shards__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות F - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות F - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "F, f",
+      "variant": "word_category",
+      "success": "מצאתם את F בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות F - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות F",
+        "targetWords": [
+          "F",
+          "f"
+        ],
+        "distractorWords": [
+          "E",
+          "e",
+          "D",
+          "d"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_f_shards__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "f",
+      "variant": "listening_spelling",
+      "success": "שמעתם את F בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "f",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/fire.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "e",
+          "d"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_f_shards__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו F ו-f, ואחר כך E ו-e. שימו לב למדף התחתון.",
+      "tasks": [
+        "ציירו F ו-f, ואחר כך E ו-e. שימו לב למדף התחתון."
+      ],
+      "target": "F, f, E, e",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "F",
+          "f",
+          "E",
+          "e"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_f_shards__o1_t4",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "fish, egg",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "e"
+          },
+          {
+            "id": "tile_2",
+            "value": "c"
+          },
+          {
+            "id": "tile_3",
+            "value": "f"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "fish",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Fish.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "egg",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Egg.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_f_shards__o2_t0",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "dog, egg, fish",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "e"
+          },
+          {
+            "id": "tile_2",
+            "value": "f"
+          },
+          {
+            "id": "tile_3",
+            "value": "b"
+          },
+          {
+            "id": "tile_4",
+            "value": "d"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Dog.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "egg",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Egg.png"
+          },
+          {
+            "id": "word_3",
+            "fullWord": "fish",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Fish.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_g_tree__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות G - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות G - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "G, g",
+      "variant": "word_category",
+      "success": "מצאתם את G בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות G - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות G",
+        "targetWords": [
+          "G",
+          "g"
+        ],
+        "distractorWords": [
+          "C",
+          "c",
+          "B",
+          "b"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_g_tree__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "g",
+      "variant": "listening_spelling",
+      "success": "שמעתם את G בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "g",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/girl.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "c",
+          "d"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_g_tree__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו G ו-g, ואחר כך C ו-c. שימו לב לשולחן הקטן של G.",
+      "tasks": [
+        "ציירו G ו-g, ואחר כך C ו-c. שימו לב לשולחן הקטן של G."
+      ],
+      "target": "G, g, C, c",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "G",
+          "g",
+          "C",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_g_tree__o1_t4",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "grapes, cat",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "c"
+          },
+          {
+            "id": "tile_2",
+            "value": "d"
+          },
+          {
+            "id": "tile_3",
+            "value": "g"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "grapes",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Grapes.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "cat",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Cat.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_g_tree__o1_t5",
+      "locale": "he",
+      "instruction": "הקשיבו ובנו את המילה תיק באנגלית.",
+      "tasks": [
+        "הקשיבו ובנו את המילה תיק באנגלית."
+      ],
+      "target": "bag",
+      "variant": "listening_spelling",
+      "success": "בניתם את המילה bag.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו ובנו את המילה תיק באנגלית.",
+        "targetWord": "bag",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/bag.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "d",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_h_waterfall__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות H - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות H - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "H, h",
+      "variant": "word_category",
+      "success": "מצאתם את H בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות H - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות H",
+        "targetWords": [
+          "H",
+          "h"
+        ],
+        "distractorWords": [
+          "B",
+          "b",
+          "D",
+          "d"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_h_waterfall__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "h",
+      "variant": "listening_spelling",
+      "success": "שמעתם את H בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "h",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/hat.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "b",
+          "f"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_h_waterfall__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "H, h",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "H",
+          "h"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_h_waterfall__o1_t4",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "hat, dog",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "d"
+          },
+          {
+            "id": "tile_2",
+            "value": "b"
+          },
+          {
+            "id": "tile_3",
+            "value": "h"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "hat",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Hat.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "dog",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Dog.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_h_waterfall__o1_t6",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "h",
+      "variant": "listening_spelling",
+      "success": "שמעתם את H בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "h",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/horse.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 3,
+        "customDistractors": [
+          "b",
+          "d",
+          "f"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw1_mail__o1_t0",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "a",
+      "variant": "listening_spelling",
+      "success": "שמעתם את A בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "a",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/apple.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 3,
+        "customDistractors": [
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw1_mail__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "b",
+      "variant": "listening_spelling",
+      "success": "שמעתם את B בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "b",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/ball.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 3,
+        "customDistractors": [
+          "d",
+          "a",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw1_mail__o1_t2",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "c",
+      "variant": "listening_spelling",
+      "success": "שמעתם את C בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "c",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/cat.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 3,
+        "customDistractors": [
+          "a",
+          "d",
+          "b"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw1_mail__o1_t3",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "d",
+      "variant": "listening_spelling",
+      "success": "שמעתם את D בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "d",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/dog.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 3,
+        "customDistractors": [
+          "b",
+          "a",
+          "c"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw2_stand__o2_t0",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "egg",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "a"
+          },
+          {
+            "id": "tile_2",
+            "value": "e"
+          },
+          {
+            "id": "tile_3",
+            "value": "f"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "egg",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Egg.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw2_stand__o2_t1",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "fish",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "h"
+          },
+          {
+            "id": "tile_2",
+            "value": "f"
+          },
+          {
+            "id": "tile_3",
+            "value": "e"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "fish",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Animal/Fish.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw2_stand__o2_t2",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "grapes",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "c"
+          },
+          {
+            "id": "tile_2",
+            "value": "h"
+          },
+          {
+            "id": "tile_3",
+            "value": "g"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "grapes",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Grapes.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_hw2_stand__o2_t3",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "hat",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "b"
+          },
+          {
+            "id": "tile_2",
+            "value": "h"
+          },
+          {
+            "id": "tile_3",
+            "value": "f"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "hat",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Hat.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_i_ice__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות I - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות I - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "I, i",
+      "variant": "word_category",
+      "success": "מצאתם את I בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות I - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות I",
+        "targetWords": [
+          "I",
+          "i"
+        ],
+        "distractorWords": [
+          "H",
+          "h",
+          "F",
+          "f"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_i_ice__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "i",
+      "variant": "listening_spelling",
+      "success": "שמעתם את I בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "i",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/ice.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "a",
+          "e"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_i_ice__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "I, i",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "I",
+          "i"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_i_ice__o2_t0",
+      "locale": "he",
+      "instruction": "הקשיבו ובנו את המילה גדול באנגלית.",
+      "tasks": [
+        "הקשיבו ובנו את המילה גדול באנגלית."
+      ],
+      "target": "big",
+      "variant": "listening_spelling",
+      "success": "בניתם את המילה big.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו ובנו את המילה גדול באנגלית.",
+        "targetWord": "big",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/big.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "d",
+          "e"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_j_jars__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות J - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות J - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "J, j",
+      "variant": "word_category",
+      "success": "מצאתם את J בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות J - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות J",
+        "targetWords": [
+          "J",
+          "j"
+        ],
+        "distractorWords": [
+          "I",
+          "i",
+          "G",
+          "g"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_j_jars__o1_t2",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "j",
+      "variant": "listening_spelling",
+      "success": "שמעתם את J בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "j",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/jump.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "d",
+          "i"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_j_jars__o1_t4",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "J, j",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "J",
+          "j"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_j_jars__o1_t6",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "jam, grapes",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "g"
+          },
+          {
+            "id": "tile_2",
+            "value": "i"
+          },
+          {
+            "id": "tile_3",
+            "value": "j"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "jam",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Sweets/Jam.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "grapes",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Grapes.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_k_keys__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות K - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות K - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "K, k",
+      "variant": "word_category",
+      "success": "מצאתם את K בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות K - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות K",
+        "targetWords": [
+          "K",
+          "k"
+        ],
+        "distractorWords": [
+          "H",
+          "h",
+          "F",
+          "f"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_k_keys__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "k",
+      "variant": "listening_spelling",
+      "success": "שמעתם את K בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "k",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/key.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "h",
+          "g"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_k_keys__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.",
+      "tasks": [
+        "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."
+      ],
+      "target": "K, k",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "K",
+          "k"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_k_keys__o1_t3",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "kiwi, hat",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "h"
+          },
+          {
+            "id": "tile_2",
+            "value": "f"
+          },
+          {
+            "id": "tile_3",
+            "value": "k"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "kiwi",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Kiwi.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "hat",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Hat.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_k_keys__o4_t0",
+      "locale": "he",
+      "instruction": "הקשיבו ובנו את המילה ילד באנגלית.",
+      "tasks": [
+        "הקשיבו ובנו את המילה ילד באנגלית."
+      ],
+      "target": "kid",
+      "variant": "listening_spelling",
+      "success": "בניתם את המילה kid.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו ובנו את המילה ילד באנגלית.",
+        "targetWord": "kid",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/kid.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "h",
+          "b"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_l_fireflies__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות L - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות L - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "L, l",
+      "variant": "word_category",
+      "success": "מצאתם את L בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות L - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות L",
+        "targetWords": [
+          "L",
+          "l"
+        ],
+        "distractorWords": [
+          "I",
+          "i",
+          "J",
+          "j"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_l_fireflies__o1_t2",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "l",
+      "variant": "listening_spelling",
+      "success": "שמעתם את L בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "l",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/light.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "i",
+          "h"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_l_fireflies__o1_t3",
+      "locale": "he",
+      "instruction": "ציירו L ו-l, ואחר כך I ו-i. שימו לב: l קטנה היא קו ארוך.",
+      "tasks": [
+        "ציירו L ו-l, ואחר כך I ו-i. שימו לב: l קטנה היא קו ארוך."
+      ],
+      "target": "L, l, I, i",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "L",
+          "l",
+          "I",
+          "i"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_l_fireflies__o1_t5",
+      "locale": "he",
+      "instruction": "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.",
+      "tasks": [
+        "השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת."
+      ],
+      "target": "lemon, kiwi",
+      "variant": "missing_letter_matching",
+      "success": "השלמתם את האות הראשונה בכל מילה.",
+      "minigame_id": "word_matching",
+      "params": {
+        "letters": [
+          {
+            "id": "tile_1",
+            "value": "k"
+          },
+          {
+            "id": "tile_2",
+            "value": "i"
+          },
+          {
+            "id": "tile_3",
+            "value": "l"
+          }
+        ],
+        "wordTasks": [
+          {
+            "id": "word_1",
+            "fullWord": "lemon",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Lemon.png"
+          },
+          {
+            "id": "word_2",
+            "fullWord": "kiwi",
+            "missingIndices": [
+              0
+            ],
+            "image": "Art/Sprites/LineMatch/Words/Food/Fruit/Kiwi.png"
+          }
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_l_fireflies__o2_t0",
+      "locale": "he",
+      "instruction": "הקשיבו ובנו את המילה אוהב באנגלית.",
+      "tasks": [
+        "הקשיבו ובנו את המילה אוהב באנגלית."
+      ],
+      "target": "like",
+      "variant": "listening_spelling",
+      "success": "בניתם את המילה like.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו ובנו את המילה אוהב באנגלית.",
+        "targetWord": "like",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/like.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "j",
+          "h"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_n_noodles__o1_t0",
+      "locale": "he",
+      "instruction": "אספו רק את האות N - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+      "tasks": [
+        "אספו רק את האות N - גדולה וקטנה. היזהרו מאותיות שדומות לה."
+      ],
+      "target": "N, n",
+      "variant": "word_category",
+      "success": "מצאתם את N בשתי הצורות שלה.",
+      "minigame_id": "dwarf_miner",
+      "params": {
+        "prompt": "אספו רק את האות N - גדולה וקטנה. היזהרו מאותיות שדומות לה.",
+        "categoryLabel": "האות N",
+        "targetWords": [
+          "N",
+          "n"
+        ],
+        "distractorWords": [
+          "M",
+          "m",
+          "H",
+          "h"
+        ],
+        "requiredCorrect": 4,
+        "allowedMistakes": 3
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_n_noodles__o1_t1",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "n",
+      "variant": "listening_spelling",
+      "success": "שמעתם את N בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "n",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/net.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "m",
+          "h"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_n_noodles__o1_t2",
+      "locale": "he",
+      "instruction": "ציירו N ו-n, ואחר כך M ו-m. ספרו את ההרים.",
+      "tasks": [
+        "ציירו N ו-n, ואחר כך M ו-m. ספרו את ההרים."
+      ],
+      "target": "N, n, M, m",
+      "variant": "trace_guided",
+      "success": "ציירתם לפי הדוגמה.",
+      "minigame_id": "letter_drawing",
+      "params": {
+        "symbols": [
+          "N",
+          "n",
+          "M",
+          "m"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_n_noodles__o1_t3",
+      "locale": "he",
+      "instruction": "הקשיבו למילה. באיזו אות היא מתחילה?",
+      "tasks": [
+        "הקשיבו למילה. באיזו אות היא מתחילה?"
+      ],
+      "target": "m",
+      "variant": "listening_spelling",
+      "success": "שמעתם את M בתחילת המילה.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו למילה. באיזו אות היא מתחילה?",
+        "targetWord": "m",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/moon.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "n",
+          "b"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
+      "key": "abc_valley__abc_n_noodles__o2_t0",
+      "locale": "he",
+      "instruction": "הקשיבו ובנו את המילה איש באנגלית.",
+      "tasks": [
+        "הקשיבו ובנו את המילה איש באנגלית."
+      ],
+      "target": "man",
+      "variant": "listening_spelling",
+      "success": "בניתם את המילה man.",
+      "minigame_id": "letter_ordering",
+      "params": {
+        "prompt": "הקשיבו ובנו את המילה איש באנגלית.",
+        "targetWord": "man",
+        "promptAudio": "_OurAssets/Art/Audio/Voice/Words/man.mp3",
+        "hintMode": "AudioOnly",
+        "extraDistractorCount": 2,
+        "customDistractors": [
+          "h",
+          "e"
+        ]
+      },
+      "source_path": "_registry\\minigame_instances\\abc_valley.yaml",
+      "source_metadata": {}
+    },
+    {
       "key": "adjectives_basics_homework_q01_a_big_red_apple",
       "locale": "he",
       "instruction": "בנו את התיאור באנגלית לפי התרגום בעברית. סדרו את כל המילים.",
@@ -28805,7 +30942,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t0"
                   },
                   {
                     "index": 1,
@@ -28814,7 +30953,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "DwarfMinerQuestConfig_articles_a_an_homework_q01_mine_an_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t1"
                   },
                   {
                     "index": 2,
@@ -28823,7 +30964,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_q03_red_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t2"
                   },
                   {
                     "index": 3,
@@ -28832,7 +30975,7 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "FruitSliceQuestConfig_articles_a_an_homework_q01_owl_in_a_tree",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -28841,7 +30984,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q01_match_colors",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t4"
                   }
                 ],
                 "display_text": "פתחו את התיבות הישנות על הטרסה ואספו את רסיסי ה-A"
@@ -28913,7 +31058,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_homework_q01_a_big_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_a_shards__o4_t0"
                   }
                 ],
                 "display_text": "פתחו את התיבה האמיתית וקחו את הרסיס האחרון"
@@ -29011,7 +31158,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q03_i_want_a_banana",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_b_weeds__o1_t0"
                   },
                   {
                     "index": 1,
@@ -29020,7 +31169,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_shop_homework_q01_the_baker_holds_a_cake",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_b_weeds__o1_t1"
                   },
                   {
                     "index": 2,
@@ -29030,7 +31181,7 @@
                     "intercepted": true,
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q02_match_size_words",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 3,
@@ -29039,7 +31190,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "FruitSliceQuestConfig_Playtest",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_b_weeds__o1_t3"
                   },
                   {
                     "index": 4,
@@ -29049,7 +31202,7 @@
                     "intercepted": true,
                     "scene_minigame": "DwarfMinerQuestConfig_Playtest",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "הרטיבו במזלף את העשבים הרטנונים ועקרו אותם"
@@ -29077,7 +31230,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_homework_q01_a_big_red_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_b_weeds__o2_t0"
                   }
                 ],
                 "display_text": "השקו את זרע ה-B בערוגה האמצעית"
@@ -29203,7 +31358,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "LetterOrderingQuestConfig_nouns_festival_q02_candle",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t0"
                   },
                   {
                     "index": 1,
@@ -29212,7 +31369,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "WordOrderingQuestConfig_q02_cat_small",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t1"
                   },
                   {
                     "index": 2,
@@ -29221,7 +31380,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q01_match_more_colors",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t2"
                   },
                   {
                     "index": 3,
@@ -29230,7 +31391,7 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -29239,7 +31400,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "DwarfMinerQuestConfig_noun_repair_shop_homework_q01_mine_the_nouns",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t4"
                   }
                 ],
                 "display_text": "הדליקו את הפנסים במערה, אחד אחרי השני"
@@ -29267,7 +31430,9 @@
                     "prompt": "הדלק את הנר",
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q03_match_sign_words",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_c_cave__o2_t0"
                   }
                 ],
                 "display_text": "הדליקו את הנר הגדול יחד עם נועה"
@@ -29452,7 +31617,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t0"
                   },
                   {
                     "index": 1,
@@ -29461,7 +31628,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t1"
                   },
                   {
                     "index": 2,
@@ -29470,7 +31639,7 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 3,
@@ -29479,7 +31648,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t3"
                   },
                   {
                     "index": 4,
@@ -29488,7 +31659,7 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 5,
@@ -29497,7 +31668,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t5"
                   }
                 ],
                 "display_text": "חפרו באיקסים האדומים סביב הבריכה"
@@ -29525,7 +31698,9 @@
                     "prompt": "חפור באיקס הזהב",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_d_drum__o2_t0"
                   }
                 ],
                 "display_text": "חפרו באיקס שהרמזים מובילים אליו"
@@ -29624,7 +31799,9 @@
                     "npc_id": "grandpa_tobias",
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day__q04_mixed_sentence_one",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t0"
                   },
                   {
                     "index": 1,
@@ -29634,7 +31811,9 @@
                     "npc_id": "bruno_gardener",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t1"
                   },
                   {
                     "index": 2,
@@ -29644,7 +31823,9 @@
                     "npc_id": "noa",
                     "scene_minigame": "LineMatchQuestConfig_wh_questions_q04_match_all_six",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t2"
                   },
                   {
                     "index": 3,
@@ -29654,7 +31835,9 @@
                     "npc_id": "pip_bellringer",
                     "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_q06_big_yellow_sun",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t3"
                   }
                 ],
                 "display_text": "מסרו את ארבעת המכתבים"
@@ -29752,7 +31935,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t0"
                   },
                   {
                     "index": 1,
@@ -29761,7 +31946,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t1"
                   },
                   {
                     "index": 2,
@@ -29770,7 +31957,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t2"
                   },
                   {
                     "index": 3,
@@ -29779,7 +31968,7 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -29788,7 +31977,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t4"
                   },
                   {
                     "index": 5,
@@ -29797,7 +31988,7 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "מצאו את הביצים שהתפזרו בעמק"
@@ -29825,7 +32016,9 @@
                     "prompt": "קח את ביצת הזהב",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_ordering",
+                    "instance_key": "abc_valley__abc_e_eggs__o2_t0"
                   }
                 ],
                 "display_text": "הביאו את ביצת הזהב מראש המגדל של פיפ"
@@ -29949,7 +32142,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t0"
                   },
                   {
                     "index": 1,
@@ -29958,7 +32153,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t1"
                   },
                   {
                     "index": 2,
@@ -29967,7 +32164,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t2"
                   },
                   {
                     "index": 3,
@@ -29976,7 +32175,7 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -29985,7 +32184,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t4"
                   },
                   {
                     "index": 5,
@@ -29994,7 +32195,7 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "רוצו אל כל שבר שנופל וקררו אותו"
@@ -30023,7 +32224,9 @@
                     "npc_id": "mira_stonecarver",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_f_shards__o2_t0"
                   }
                 ],
                 "display_text": "הביאו את השברים למירה"
@@ -30121,7 +32324,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t0"
                   },
                   {
                     "index": 1,
@@ -30130,7 +32335,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t1"
                   },
                   {
                     "index": 2,
@@ -30139,7 +32346,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t2"
                   },
                   {
                     "index": 3,
@@ -30148,7 +32357,7 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -30157,7 +32366,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t4"
                   },
                   {
                     "index": 5,
@@ -30166,7 +32377,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t5"
                   }
                 ],
                 "display_text": "עקבו אחרי שביל השורשים ותקנו את ה-G"
@@ -30380,7 +32593,7 @@
                     "name": "SummitChest",
                     "trigger": "interact",
                     "prompt": "פתח את התיבה",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "פתחו את התיבה בפסגה"
@@ -30478,7 +32691,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_the_these_those_homework_q01_mine_more_than_one",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t0"
                   },
                   {
                     "index": 1,
@@ -30487,7 +32702,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q06_an_orange_hat",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t1"
                   },
                   {
                     "index": 2,
@@ -30496,7 +32713,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_the_royal_impostor_homework_q01_mine_owner_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t2"
                   },
                   {
                     "index": 3,
@@ -30505,7 +32724,7 @@
                     "prompt": "דוג",
                     "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -30514,7 +32733,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_the_kingdoms_worst_day_homework_q01_mine_verbs",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t4"
                   },
                   {
                     "index": 5,
@@ -30523,7 +32744,7 @@
                     "prompt": "דוג",
                     "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q03_knowledge_advisors_minigame",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 6,
@@ -30532,7 +32753,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_personal_pronouns_homework_q01_mine_it_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t6"
                   }
                 ],
                 "display_text": "דגו מילים עם H מהבריכה"
@@ -30648,7 +32871,9 @@
                     "npc_id": "grandpa_tobias",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t0"
                   },
                   {
                     "index": 1,
@@ -30658,7 +32883,9 @@
                     "npc_id": "mira_stonecarver",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q04_fish_in_the_net",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t1"
                   },
                   {
                     "index": 2,
@@ -30668,7 +32895,9 @@
                     "npc_id": "noa",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_q02_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t2"
                   },
                   {
                     "index": 3,
@@ -30678,7 +32907,9 @@
                     "npc_id": "pip_bellringer",
                     "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t3"
                   }
                 ],
                 "display_text": "מסרו את ההזמנות לכפריים"
@@ -30776,7 +33007,9 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_i_ice__o1_t0"
                   },
                   {
                     "index": 1,
@@ -30785,7 +33018,9 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_mastery_homework_q01_a_sharp_sword",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_i_ice__o1_t1"
                   },
                   {
                     "index": 2,
@@ -30794,7 +33029,9 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_mastery_homework_q01_spell_bigger",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_i_ice__o1_t2"
                   },
                   {
                     "index": 3,
@@ -30803,7 +33040,7 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q03_an_ice_cream",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "המיסו את גושי הקרח שחוסמים את השבילים"
@@ -30831,7 +33068,9 @@
                     "prompt": "שבור את שכבת הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_i_ice__o2_t0"
                   },
                   {
                     "index": 1,
@@ -30840,7 +33079,7 @@
                     "prompt": "שבור את השכבה האחרונה",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "שברו את הקרח סביב מירה, שכבה אחרי שכבה"
@@ -30955,7 +33194,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t0"
                   },
                   {
                     "index": 1,
@@ -30965,7 +33206,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 2,
@@ -30974,7 +33215,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t2"
                   },
                   {
                     "index": 3,
@@ -30984,7 +33227,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -30993,7 +33236,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t4"
                   },
                   {
                     "index": 5,
@@ -31003,7 +33248,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 6,
@@ -31012,7 +33257,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t6"
                   }
                 ],
                 "display_text": "תפסו את הצנצנות הקופצות"
@@ -31137,7 +33384,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "LetterOrderingQuestConfig_nouns_festival_q03_monkey",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t0"
                   },
                   {
                     "index": 1,
@@ -31146,7 +33395,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "LetterOrderingQuestConfig_the_kingdoms_worst_day__q01_key_spelling",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t1"
                   },
                   {
                     "index": 2,
@@ -31155,7 +33406,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day__q01_key_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t2"
                   },
                   {
                     "index": 3,
@@ -31164,7 +33417,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_small_key_big_gate",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t3"
                   }
                 ],
                 "display_text": "פתחו את התיבות בכפר"
@@ -31236,7 +33491,9 @@
                     "prompt": "בנה את המסגרת",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_q06_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_k_keys__o4_t0"
                   },
                   {
                     "index": 1,
@@ -31245,7 +33502,7 @@
                     "prompt": "מתח את הבד",
                     "scene_minigame": "WordOrderingQuestConfig_numbers_q03_sentence_seven_hundred_twenty",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "בנו עפיפון עם פיפ"
@@ -31273,7 +33530,7 @@
                     "prompt": "הטס את העפיפון",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q02_farmer_minigame",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "הטיסו את העפיפון לרכס והורידו את המפתח האחרון"
@@ -31438,7 +33695,7 @@
                     "name": "Treasure",
                     "trigger": "interact",
                     "prompt": "פתח את התיבה",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "פתחו את האוצר"
@@ -31536,7 +33793,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_an_old_boat",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t0"
                   },
                   {
                     "index": 1,
@@ -31546,7 +33805,7 @@
                     "intercepted": true,
                     "scene_minigame": "LineMatchQuestConfig_noun_repair_q01_people",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 2,
@@ -31555,7 +33814,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "LineMatchQuestConfig_nouns_festival_q02_objects",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t2"
                   },
                   {
                     "index": 3,
@@ -31564,7 +33825,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "LineMatchQuestConfig_personal_pronouns_q02_match_he_she_you",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t3"
                   },
                   {
                     "index": 4,
@@ -31574,7 +33837,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_the_crown_is_small",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 5,
@@ -31583,7 +33846,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "WordOrderingQuestConfig_this_or_that_homework_q01_that_tower_is_very_old",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t5"
                   }
                 ],
                 "display_text": "תפסו את להקות הגחליליות"
@@ -31611,7 +33876,9 @@
                     "prompt": "פתח את הצנצנות",
                     "scene_minigame": "WordOrderingQuestConfig_do - does lesson_q01_new_quest_minigame",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_l_fireflies__o2_t0"
                   }
                 ],
                 "display_text": "פתחו את הצנצנות בתצפית מעל המפל"
@@ -31909,7 +34176,9 @@
                     "prompt": "תפוס את הבצל",
                     "scene_minigame": "DwarfMinerQuestConfig_verbs_to_be_homework_q01_mine_are_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t0"
                   },
                   {
                     "index": 1,
@@ -31918,7 +34187,9 @@
                     "prompt": "קח את התבלינים",
                     "scene_minigame": "LetterOrderingQuestConfig_adjectives_basics_q06_spell_tired",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t1"
                   },
                   {
                     "index": 2,
@@ -31927,7 +34198,9 @@
                     "prompt": "קח ביצה מהלול",
                     "scene_minigame": "LineMatchQuestConfig_articles_a_an_q06_match_review",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t2"
                   },
                   {
                     "index": 3,
@@ -31936,7 +34209,9 @@
                     "prompt": "קטוף ירקות",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q01_sentence_open",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t3"
                   },
                   {
                     "index": 4,
@@ -31945,7 +34220,7 @@
                     "prompt": "שאב מים מהבאר",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_q05_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "מצאו את המצרכים שהתחבאו בבתים"
@@ -31973,7 +34248,9 @@
                     "prompt": "בחש את הסיר",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_n_noodles__o2_t0"
                   }
                 ],
                 "display_text": "בחשו את הסיר הענק עם ברונו"
@@ -46977,7 +49254,7 @@
     "step_type_definitions": 7,
     "dialogues": 255,
     "dialogue_lines": 609,
-    "minigame_instances": 449,
+    "minigame_instances": 519,
     "questlines": 31,
     "quests": 116,
     "steps": 591,
@@ -48269,7 +50546,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t0"
                   },
                   {
                     "index": 1,
@@ -48278,7 +50557,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "DwarfMinerQuestConfig_articles_a_an_homework_q01_mine_an_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t1"
                   },
                   {
                     "index": 2,
@@ -48287,7 +50568,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_q03_red_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t2"
                   },
                   {
                     "index": 3,
@@ -48296,7 +50579,7 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "FruitSliceQuestConfig_articles_a_an_homework_q01_owl_in_a_tree",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -48305,7 +50588,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q01_match_colors",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_a_shards__o1_t4"
                   }
                 ],
                 "display_text": "פתחו את התיבות הישנות על הטרסה ואספו את רסיסי ה-A"
@@ -48377,7 +50662,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_homework_q01_a_big_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_a_shards__o4_t0"
                   }
                 ],
                 "display_text": "פתחו את התיבה האמיתית וקחו את הרסיס האחרון"
@@ -48475,7 +50762,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q03_i_want_a_banana",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_b_weeds__o1_t0"
                   },
                   {
                     "index": 1,
@@ -48484,7 +50773,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_shop_homework_q01_the_baker_holds_a_cake",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_b_weeds__o1_t1"
                   },
                   {
                     "index": 2,
@@ -48494,7 +50785,7 @@
                     "intercepted": true,
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q02_match_size_words",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 3,
@@ -48503,7 +50794,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "FruitSliceQuestConfig_Playtest",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_b_weeds__o1_t3"
                   },
                   {
                     "index": 4,
@@ -48513,7 +50806,7 @@
                     "intercepted": true,
                     "scene_minigame": "DwarfMinerQuestConfig_Playtest",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "הרטיבו במזלף את העשבים הרטנונים ועקרו אותם"
@@ -48541,7 +50834,9 @@
                     "prompt": "השקה במזלף",
                     "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_homework_q01_a_big_red_apple",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_b_weeds__o2_t0"
                   }
                 ],
                 "display_text": "השקו את זרע ה-B בערוגה האמצעית"
@@ -48667,7 +50962,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "LetterOrderingQuestConfig_nouns_festival_q02_candle",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t0"
                   },
                   {
                     "index": 1,
@@ -48676,7 +50973,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "WordOrderingQuestConfig_q02_cat_small",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t1"
                   },
                   {
                     "index": 2,
@@ -48685,7 +50984,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q01_match_more_colors",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t2"
                   },
                   {
                     "index": 3,
@@ -48694,7 +50995,7 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -48703,7 +51004,9 @@
                     "prompt": "הדלק את הפנס",
                     "scene_minigame": "DwarfMinerQuestConfig_noun_repair_shop_homework_q01_mine_the_nouns",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_c_cave__o1_t4"
                   }
                 ],
                 "display_text": "הדליקו את הפנסים במערה, אחד אחרי השני"
@@ -48731,7 +51034,9 @@
                     "prompt": "הדלק את הנר",
                     "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q03_match_sign_words",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_c_cave__o2_t0"
                   }
                 ],
                 "display_text": "הדליקו את הנר הגדול יחד עם נועה"
@@ -48916,7 +51221,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t0"
                   },
                   {
                     "index": 1,
@@ -48925,7 +51232,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t1"
                   },
                   {
                     "index": 2,
@@ -48934,7 +51243,7 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 3,
@@ -48943,7 +51252,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t3"
                   },
                   {
                     "index": 4,
@@ -48952,7 +51263,7 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 5,
@@ -48961,7 +51272,9 @@
                     "prompt": "חפור",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_d_drum__o1_t5"
                   }
                 ],
                 "display_text": "חפרו באיקסים האדומים סביב הבריכה"
@@ -48989,7 +51302,9 @@
                     "prompt": "חפור באיקס הזהב",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_d_drum__o2_t0"
                   }
                 ],
                 "display_text": "חפרו באיקס שהרמזים מובילים אליו"
@@ -49088,7 +51403,9 @@
                     "npc_id": "grandpa_tobias",
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day__q04_mixed_sentence_one",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t0"
                   },
                   {
                     "index": 1,
@@ -49098,7 +51415,9 @@
                     "npc_id": "bruno_gardener",
                     "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t1"
                   },
                   {
                     "index": 2,
@@ -49108,7 +51427,9 @@
                     "npc_id": "noa",
                     "scene_minigame": "LineMatchQuestConfig_wh_questions_q04_match_all_six",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t2"
                   },
                   {
                     "index": 3,
@@ -49118,7 +51439,9 @@
                     "npc_id": "pip_bellringer",
                     "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_q06_big_yellow_sun",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_hw1_mail__o1_t3"
                   }
                 ],
                 "display_text": "מסרו את ארבעת המכתבים"
@@ -49216,7 +51539,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t0"
                   },
                   {
                     "index": 1,
@@ -49225,7 +51550,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t1"
                   },
                   {
                     "index": 2,
@@ -49234,7 +51561,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t2"
                   },
                   {
                     "index": 3,
@@ -49243,7 +51572,7 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -49252,7 +51581,9 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_e_eggs__o1_t4"
                   },
                   {
                     "index": 5,
@@ -49261,7 +51592,7 @@
                     "prompt": "מצא את הביצה",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "מצאו את הביצים שהתפזרו בעמק"
@@ -49289,7 +51620,9 @@
                     "prompt": "קח את ביצת הזהב",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_ordering",
+                    "instance_key": "abc_valley__abc_e_eggs__o2_t0"
                   }
                 ],
                 "display_text": "הביאו את ביצת הזהב מראש המגדל של פיפ"
@@ -49413,7 +51746,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t0"
                   },
                   {
                     "index": 1,
@@ -49422,7 +51757,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t1"
                   },
                   {
                     "index": 2,
@@ -49431,7 +51768,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t2"
                   },
                   {
                     "index": 3,
@@ -49440,7 +51779,7 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -49449,7 +51788,9 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_f_shards__o1_t4"
                   },
                   {
                     "index": 5,
@@ -49458,7 +51799,7 @@
                     "prompt": "קרר את השבר",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "רוצו אל כל שבר שנופל וקררו אותו"
@@ -49487,7 +51828,9 @@
                     "npc_id": "mira_stonecarver",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_f_shards__o2_t0"
                   }
                 ],
                 "display_text": "הביאו את השברים למירה"
@@ -49585,7 +51928,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t0"
                   },
                   {
                     "index": 1,
@@ -49594,7 +51939,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t1"
                   },
                   {
                     "index": 2,
@@ -49603,7 +51950,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t2"
                   },
                   {
                     "index": 3,
@@ -49612,7 +51961,7 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -49621,7 +51970,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t4"
                   },
                   {
                     "index": 5,
@@ -49630,7 +51981,9 @@
                     "prompt": "תקן את ה-G",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_g_tree__o1_t5"
                   }
                 ],
                 "display_text": "עקבו אחרי שביל השורשים ותקנו את ה-G"
@@ -49844,7 +52197,7 @@
                     "name": "SummitChest",
                     "trigger": "interact",
                     "prompt": "פתח את התיבה",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "פתחו את התיבה בפסגה"
@@ -49942,7 +52295,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_the_these_those_homework_q01_mine_more_than_one",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t0"
                   },
                   {
                     "index": 1,
@@ -49951,7 +52306,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q06_an_orange_hat",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t1"
                   },
                   {
                     "index": 2,
@@ -49960,7 +52317,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_the_royal_impostor_homework_q01_mine_owner_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t2"
                   },
                   {
                     "index": 3,
@@ -49969,7 +52328,7 @@
                     "prompt": "דוג",
                     "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -49978,7 +52337,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_the_kingdoms_worst_day_homework_q01_mine_verbs",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t4"
                   },
                   {
                     "index": 5,
@@ -49987,7 +52348,7 @@
                     "prompt": "דוג",
                     "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q03_knowledge_advisors_minigame",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 6,
@@ -49996,7 +52357,9 @@
                     "prompt": "דוג",
                     "scene_minigame": "DwarfMinerQuestConfig_personal_pronouns_homework_q01_mine_it_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_h_waterfall__o1_t6"
                   }
                 ],
                 "display_text": "דגו מילים עם H מהבריכה"
@@ -50112,7 +52475,9 @@
                     "npc_id": "grandpa_tobias",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t0"
                   },
                   {
                     "index": 1,
@@ -50122,7 +52487,9 @@
                     "npc_id": "mira_stonecarver",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q04_fish_in_the_net",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t1"
                   },
                   {
                     "index": 2,
@@ -50132,7 +52499,9 @@
                     "npc_id": "noa",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_q02_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t2"
                   },
                   {
                     "index": 3,
@@ -50142,7 +52511,9 @@
                     "npc_id": "pip_bellringer",
                     "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_hw2_stand__o2_t3"
                   }
                 ],
                 "display_text": "מסרו את ההזמנות לכפריים"
@@ -50240,7 +52611,9 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_i_ice__o1_t0"
                   },
                   {
                     "index": 1,
@@ -50249,7 +52622,9 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_mastery_homework_q01_a_sharp_sword",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_i_ice__o1_t1"
                   },
                   {
                     "index": 2,
@@ -50258,7 +52633,9 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_adjectives_mastery_homework_q01_spell_bigger",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_i_ice__o1_t2"
                   },
                   {
                     "index": 3,
@@ -50267,7 +52644,7 @@
                     "prompt": "המס את הקרח",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q03_an_ice_cream",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "המיסו את גושי הקרח שחוסמים את השבילים"
@@ -50295,7 +52672,9 @@
                     "prompt": "שבור את שכבת הקרח",
                     "scene_minigame": "FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_i_ice__o2_t0"
                   },
                   {
                     "index": 1,
@@ -50304,7 +52683,7 @@
                     "prompt": "שבור את השכבה האחרונה",
                     "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
                     "scene_minigame_id": "fruit_slice",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "שברו את הקרח סביב מירה, שכבה אחרי שכבה"
@@ -50419,7 +52798,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t0"
                   },
                   {
                     "index": 1,
@@ -50429,7 +52810,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 2,
@@ -50438,7 +52819,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t2"
                   },
                   {
                     "index": 3,
@@ -50448,7 +52831,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 4,
@@ -50457,7 +52840,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t4"
                   },
                   {
                     "index": 5,
@@ -50467,7 +52852,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 6,
@@ -50476,7 +52861,9 @@
                     "prompt": "תפוס את הצנצנת",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_j_jars__o1_t6"
                   }
                 ],
                 "display_text": "תפסו את הצנצנות הקופצות"
@@ -50601,7 +52988,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "LetterOrderingQuestConfig_nouns_festival_q03_monkey",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t0"
                   },
                   {
                     "index": 1,
@@ -50610,7 +52999,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "LetterOrderingQuestConfig_the_kingdoms_worst_day__q01_key_spelling",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t1"
                   },
                   {
                     "index": 2,
@@ -50619,7 +53010,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day__q01_key_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t2"
                   },
                   {
                     "index": 3,
@@ -50628,7 +53021,9 @@
                     "prompt": "פתח את התיבה",
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_small_key_big_gate",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_k_keys__o1_t3"
                   }
                 ],
                 "display_text": "פתחו את התיבות בכפר"
@@ -50700,7 +53095,9 @@
                     "prompt": "בנה את המסגרת",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_q06_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_k_keys__o4_t0"
                   },
                   {
                     "index": 1,
@@ -50709,7 +53106,7 @@
                     "prompt": "מתח את הבד",
                     "scene_minigame": "WordOrderingQuestConfig_numbers_q03_sentence_seven_hundred_twenty",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "בנו עפיפון עם פיפ"
@@ -50737,7 +53134,7 @@
                     "prompt": "הטס את העפיפון",
                     "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q02_farmer_minigame",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "הטיסו את העפיפון לרכס והורידו את המפתח האחרון"
@@ -50902,7 +53299,7 @@
                     "name": "Treasure",
                     "trigger": "interact",
                     "prompt": "פתח את התיבה",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "פתחו את האוצר"
@@ -51000,7 +53397,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_an_old_boat",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t0"
                   },
                   {
                     "index": 1,
@@ -51010,7 +53409,7 @@
                     "intercepted": true,
                     "scene_minigame": "LineMatchQuestConfig_noun_repair_q01_people",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 2,
@@ -51019,7 +53418,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "LineMatchQuestConfig_nouns_festival_q02_objects",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t2"
                   },
                   {
                     "index": 3,
@@ -51028,7 +53429,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "LineMatchQuestConfig_personal_pronouns_q02_match_he_she_you",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t3"
                   },
                   {
                     "index": 4,
@@ -51038,7 +53441,7 @@
                     "intercepted": true,
                     "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_the_crown_is_small",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   },
                   {
                     "index": 5,
@@ -51047,7 +53450,9 @@
                     "prompt": "תפוס את הגחליליות",
                     "scene_minigame": "WordOrderingQuestConfig_this_or_that_homework_q01_that_tower_is_very_old",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "word_matching",
+                    "instance_key": "abc_valley__abc_l_fireflies__o1_t5"
                   }
                 ],
                 "display_text": "תפסו את להקות הגחליליות"
@@ -51075,7 +53480,9 @@
                     "prompt": "פתח את הצנצנות",
                     "scene_minigame": "WordOrderingQuestConfig_do - does lesson_q01_new_quest_minigame",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_l_fireflies__o2_t0"
                   }
                 ],
                 "display_text": "פתחו את הצנצנות בתצפית מעל המפל"
@@ -51373,7 +53780,9 @@
                     "prompt": "תפוס את הבצל",
                     "scene_minigame": "DwarfMinerQuestConfig_verbs_to_be_homework_q01_mine_are_words",
                     "scene_minigame_id": "dwarf_miner",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "dwarf_miner",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t0"
                   },
                   {
                     "index": 1,
@@ -51382,7 +53791,9 @@
                     "prompt": "קח את התבלינים",
                     "scene_minigame": "LetterOrderingQuestConfig_adjectives_basics_q06_spell_tired",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t1"
                   },
                   {
                     "index": 2,
@@ -51391,7 +53802,9 @@
                     "prompt": "קח ביצה מהלול",
                     "scene_minigame": "LineMatchQuestConfig_articles_a_an_q06_match_review",
                     "scene_minigame_id": "word_matching",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "letter_drawing",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t2"
                   },
                   {
                     "index": 3,
@@ -51400,7 +53813,9 @@
                     "prompt": "קטוף ירקות",
                     "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q01_sentence_open",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_n_noodles__o1_t3"
                   },
                   {
                     "index": 4,
@@ -51409,7 +53824,7 @@
                     "prompt": "שאב מים מהבאר",
                     "scene_minigame": "WordOrderingQuestConfig_noun_repair_q05_sentence",
                     "scene_minigame_id": "word_ordering",
-                    "mode": "scene"
+                    "mode": "none"
                   }
                 ],
                 "display_text": "מצאו את המצרכים שהתחבאו בבתים"
@@ -51437,7 +53852,9 @@
                     "prompt": "בחש את הסיר",
                     "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
                     "scene_minigame_id": "letter_ordering",
-                    "mode": "scene"
+                    "mode": "minigame",
+                    "minigame_id": "listening_letter_ordering",
+                    "instance_key": "abc_valley__abc_n_noodles__o2_t0"
                   }
                 ],
                 "display_text": "בחשו את הסיר הענק עם ברונו"
@@ -65416,5 +67833,5 @@
       ]
     }
   ],
-  "source_digest": "33e66edd92647e41b76978d05ef490d53da065e416811adedae12c73ad673098"
+  "source_digest": "f6718e3145b3e66afab4004254c2c2b11d5b482020500e642cd45031a686a261"
 }

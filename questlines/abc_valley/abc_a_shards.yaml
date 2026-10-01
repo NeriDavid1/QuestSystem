@@ -29,35 +29,43 @@ steps:
         prompt: פתח את התיבה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_apple
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_a_shards__o1_t0
       - index: 1
         name: Chest_2
         trigger: interact
         prompt: פתח את התיבה
         scene_minigame: DwarfMinerQuestConfig_articles_a_an_homework_q01_mine_an_words
         scene_minigame_id: dwarf_miner
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_a_shards__o1_t1
       - index: 2
         name: Chest_3
         trigger: interact
         prompt: פתח את התיבה
         scene_minigame: WordOrderingQuestConfig_adjectives_basics_q03_red_apple
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_a_shards__o1_t2
       - index: 3
         name: Chest_4
         trigger: interact
         prompt: פתח את התיבה
         scene_minigame: FruitSliceQuestConfig_articles_a_an_homework_q01_owl_in_a_tree
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: none
       - index: 4
         name: Chest_5
         trigger: interact
         prompt: פתח את התיבה
         scene_minigame: LineMatchQuestConfig_adjectives_basics_q01_match_colors
         scene_minigame_id: word_matching
-        mode: scene
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_a_shards__o1_t4
     display_text: פתחו את התיבות הישנות על הטרסה ואספו את רסיסי ה-A
   - type: custom
     handler_id: abc_a_fakechest
@@ -90,7 +98,9 @@ steps:
         prompt: פתח את התיבה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_homework_q01_a_big_apple
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_a_shards__o4_t0
     display_text: פתחו את התיבה האמיתית וקחו את הרסיס האחרון
   - type: return_to_npc
     npc_id: grandpa_tobias

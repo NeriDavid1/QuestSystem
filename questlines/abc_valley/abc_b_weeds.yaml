@@ -29,14 +29,18 @@ steps:
         prompt: השקה במזלף
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q03_i_want_a_banana
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_b_weeds__o1_t0
       - index: 1
         name: Weed_2
         trigger: interact
         prompt: השקה במזלף
         scene_minigame: WordOrderingQuestConfig_noun_repair_shop_homework_q01_the_baker_holds_a_cake
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_b_weeds__o1_t1
       - index: 2
         name: Weed_3
         trigger: interact
@@ -44,14 +48,16 @@ steps:
         intercepted: true
         scene_minigame: LineMatchQuestConfig_adjectives_basics_q02_match_size_words
         scene_minigame_id: word_matching
-        mode: scene
+        mode: none
       - index: 3
         name: Weed_4
         trigger: interact
         prompt: השקה במזלף
         scene_minigame: FruitSliceQuestConfig_Playtest
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_b_weeds__o1_t3
       - index: 4
         name: Weed_5
         trigger: interact
@@ -59,7 +65,7 @@ steps:
         intercepted: true
         scene_minigame: DwarfMinerQuestConfig_Playtest
         scene_minigame_id: dwarf_miner
-        mode: scene
+        mode: none
     display_text: הרטיבו במזלף את העשבים הרטנונים ועקרו אותם
   - type: custom
     handler_id: abc_b_seed
@@ -73,7 +79,9 @@ steps:
         prompt: השקה במזלף
         scene_minigame: WordOrderingQuestConfig_adjectives_basics_homework_q01_a_big_red_apple
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_b_weeds__o2_t0
     display_text: השקו את זרע ה-B בערוגה האמצעית
   - type: custom
     handler_id: abc_b_beanstalk

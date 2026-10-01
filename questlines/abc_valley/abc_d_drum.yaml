@@ -29,42 +29,50 @@ steps:
         prompt: חפור
         scene_minigame: FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_d_drum__o1_t0
       - index: 1
         name: X_2
         trigger: interact
         prompt: חפור
         scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_d_drum__o1_t1
       - index: 2
         name: X_3
         trigger: interact
         prompt: חפור
         scene_minigame: FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: none
       - index: 3
         name: X_4
         trigger: interact
         prompt: חפור
         scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_d_drum__o1_t3
       - index: 4
         name: X_5
         trigger: interact
         prompt: חפור
         scene_minigame: FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: none
       - index: 5
         name: X_6
         trigger: interact
         prompt: חפור
         scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_d_drum__o1_t5
     display_text: חפרו באיקסים האדומים סביב הבריכה
   - type: custom
     handler_id: abc_d_real
@@ -78,7 +86,9 @@ steps:
         prompt: חפור באיקס הזהב
         scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
         scene_minigame_id: fruit_slice
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_d_drum__o2_t0
     display_text: חפרו באיקס שהרמזים מובילים אליו
   - type: return_to_npc
     npc_id: pip_bellringer

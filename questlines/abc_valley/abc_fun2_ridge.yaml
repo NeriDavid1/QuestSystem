@@ -88,7 +88,7 @@ steps:
         name: SummitChest
         trigger: interact
         prompt: פתח את התיבה
-        mode: scene
+        mode: none
     display_text: פתחו את התיבה בפסגה
   - type: return_to_npc
     npc_id: noa

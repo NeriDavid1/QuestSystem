@@ -29,28 +29,36 @@ steps:
         prompt: פתח את התיבה
         scene_minigame: LetterOrderingQuestConfig_nouns_festival_q03_monkey
         scene_minigame_id: letter_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_k_keys__o1_t0
       - index: 1
         name: KeyChest_2
         trigger: interact
         prompt: פתח את התיבה
         scene_minigame: LetterOrderingQuestConfig_the_kingdoms_worst_day__q01_key_spelling
         scene_minigame_id: letter_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_k_keys__o1_t1
       - index: 2
         name: KeyChest_3
         trigger: interact
         prompt: פתח את התיבה
         scene_minigame: WordOrderingQuestConfig_the_kingdoms_worst_day__q01_key_sentence
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_k_keys__o1_t2
       - index: 3
         name: KeyChest_4
         trigger: interact
         prompt: פתח את התיבה
         scene_minigame: WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_small_key_big_gate
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_k_keys__o1_t3
     display_text: פתחו את התיבות בכפר
   - type: custom
     handler_id: abc_k_trap
@@ -83,14 +91,16 @@ steps:
         prompt: בנה את המסגרת
         scene_minigame: WordOrderingQuestConfig_noun_repair_q06_sentence
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_k_keys__o4_t0
       - index: 1
         name: KiteSail
         trigger: interact
         prompt: מתח את הבד
         scene_minigame: WordOrderingQuestConfig_numbers_q03_sentence_seven_hundred_twenty
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: none
     display_text: בנו עפיפון עם פיפ
   - type: custom
     handler_id: abc_k_fly
@@ -104,7 +114,7 @@ steps:
         prompt: הטס את העפיפון
         scene_minigame: WordOrderingQuestConfig_line_msysmv9a_q02_farmer_minigame
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: none
     display_text: הטיסו את העפיפון לרכס והורידו את המפתח האחרון
   - type: custom
     handler_id: abc_k_doors

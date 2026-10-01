@@ -29,42 +29,50 @@ steps:
         prompt: מצא את הביצה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_e_eggs__o1_t0
       - index: 1
         name: Egg_2
         trigger: interact
         prompt: מצא את הביצה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_e_eggs__o1_t1
       - index: 2
         name: Egg_3
         trigger: interact
         prompt: מצא את הביצה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_e_eggs__o1_t2
       - index: 3
         name: Egg_4
         trigger: interact
         prompt: מצא את הביצה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: none
       - index: 4
         name: Egg_5
         trigger: interact
         prompt: מצא את הביצה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_e_eggs__o1_t4
       - index: 5
         name: Egg_6
         trigger: interact
         prompt: מצא את הביצה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: none
     display_text: מצאו את הביצים שהתפזרו בעמק
   - type: custom
     handler_id: abc_e_golden
@@ -78,7 +86,9 @@ steps:
         prompt: קח את ביצת הזהב
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: letter_ordering
+        instance_key: abc_valley__abc_e_eggs__o2_t0
     display_text: הביאו את ביצת הזהב מראש המגדל של פיפ
   - type: custom
     handler_id: abc_e_home

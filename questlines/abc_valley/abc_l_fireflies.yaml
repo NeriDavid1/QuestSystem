@@ -29,7 +29,9 @@ steps:
         prompt: תפוס את הגחליליות
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_an_old_boat
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_l_fireflies__o1_t0
       - index: 1
         name: Swarm_2
         trigger: interact
@@ -37,21 +39,25 @@ steps:
         intercepted: true
         scene_minigame: LineMatchQuestConfig_noun_repair_q01_people
         scene_minigame_id: word_matching
-        mode: scene
+        mode: none
       - index: 2
         name: Swarm_3
         trigger: interact
         prompt: תפוס את הגחליליות
         scene_minigame: LineMatchQuestConfig_nouns_festival_q02_objects
         scene_minigame_id: word_matching
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_l_fireflies__o1_t2
       - index: 3
         name: Swarm_4
         trigger: interact
         prompt: תפוס את הגחליליות
         scene_minigame: LineMatchQuestConfig_personal_pronouns_q02_match_he_she_you
         scene_minigame_id: word_matching
-        mode: scene
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_l_fireflies__o1_t3
       - index: 4
         name: Swarm_5
         trigger: interact
@@ -59,14 +65,16 @@ steps:
         intercepted: true
         scene_minigame: WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_the_crown_is_small
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: none
       - index: 5
         name: Swarm_6
         trigger: interact
         prompt: תפוס את הגחליליות
         scene_minigame: WordOrderingQuestConfig_this_or_that_homework_q01_that_tower_is_very_old
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_l_fireflies__o1_t5
     display_text: תפסו את להקות הגחליליות
   - type: custom
     handler_id: abc_l_release
@@ -80,7 +88,9 @@ steps:
         prompt: פתח את הצנצנות
         scene_minigame: WordOrderingQuestConfig_do - does lesson_q01_new_quest_minigame
         scene_minigame_id: word_ordering
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_l_fireflies__o2_t0
     display_text: פתחו את הצנצנות בתצפית מעל המפל
   - type: return_to_npc
     npc_id: noa

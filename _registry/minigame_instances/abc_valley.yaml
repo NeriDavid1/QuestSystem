@@ -1,3 +1,1350 @@
 # Per-step minigame briefs — abc_valley
 # `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
-instances: {}
+instances:
+  abc_valley__abc_a_shards__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות A - גם A גדולה וגם a קטנה.
+    tasks:
+      - אספו רק את האות A - גם A גדולה וגם a קטנה.
+    target: A, a
+    variant: word_category
+    success: מצאתם את A בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות A - גם A גדולה וגם a קטנה.
+      categoryLabel: האות A
+      targetWords:
+        - A
+        - a
+      distractorWords:
+        - O
+        - S
+      requiredCorrect: 3
+      allowedMistakes: 3
+  abc_valley__abc_a_shards__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: a
+    variant: listening_spelling
+    success: שמעתם את A בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/apple.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 1
+      customDistractors:
+        - s
+  abc_valley__abc_a_shards__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: A, a
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - A
+        - a
+  abc_valley__abc_a_shards__o1_t4:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: ant, apple
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: o
+        - id: tile_2
+          value: a
+        - id: tile_3
+          value: a
+      wordTasks:
+        - id: word_1
+          fullWord: ant
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Ant.png
+        - id: word_2
+          fullWord: apple
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png
+  abc_valley__abc_a_shards__o4_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה חדשה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה חדשה. באיזו אות היא מתחילה?
+    target: a
+    variant: listening_spelling
+    success: זיהיתם את A גם במילה חדשה.
+    params:
+      prompt: הקשיבו למילה חדשה. באיזו אות היא מתחילה?
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/ant.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - o
+        - s
+  abc_valley__abc_b_weeds__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות B - גדולה וקטנה.
+    tasks:
+      - אספו רק את האות B - גדולה וקטנה.
+    target: B, b
+    variant: word_category
+    success: מצאתם את B בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות B - גדולה וקטנה.
+      categoryLabel: האות B
+      targetWords:
+        - B
+        - b
+      distractorWords:
+        - A
+        - a
+      requiredCorrect: 3
+      allowedMistakes: 3
+  abc_valley__abc_b_weeds__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: b
+    variant: listening_spelling
+    success: שמעתם את B בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: b
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/bee.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - a
+        - o
+  abc_valley__abc_b_weeds__o1_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: bee, apple
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: a
+        - id: tile_2
+          value: b
+        - id: tile_3
+          value: o
+      wordTasks:
+        - id: word_1
+          fullWord: bee
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Bee.png
+        - id: word_2
+          fullWord: apple
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png
+  abc_valley__abc_b_weeds__o2_t0:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: B, b
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - B
+        - b
+  abc_valley__abc_c_cave__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות C - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות C - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: C, c
+    variant: word_category
+    success: מצאתם את C בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות C - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות C
+      targetWords:
+        - C
+        - c
+      distractorWords:
+        - A
+        - a
+        - B
+        - b
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_c_cave__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: c
+    variant: listening_spelling
+    success: שמעתם את C בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: c
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/candle.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - a
+        - b
+  abc_valley__abc_c_cave__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: C, c
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - C
+        - c
+  abc_valley__abc_c_cave__o1_t4:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: cat, apple
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: a
+        - id: tile_2
+          value: b
+        - id: tile_3
+          value: c
+      wordTasks:
+        - id: word_1
+          fullWord: cat
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Cat.png
+        - id: word_2
+          fullWord: apple
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png
+  abc_valley__abc_c_cave__o2_t0:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: apple, banana, cat
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: c
+        - id: tile_2
+          value: a
+        - id: tile_3
+          value: b
+      wordTasks:
+        - id: word_1
+          fullWord: apple
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png
+        - id: word_2
+          fullWord: banana
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Banana.png
+        - id: word_3
+          fullWord: cat
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Cat.png
+  abc_valley__abc_d_drum__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות D - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות D - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: D, d
+    variant: word_category
+    success: מצאתם את D בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות D - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות D
+      targetWords:
+        - D
+        - d
+      distractorWords:
+        - B
+        - b
+        - C
+        - c
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_d_drum__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: d
+    variant: listening_spelling
+    success: שמעתם את D בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: d
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/drum.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - b
+        - c
+  abc_valley__abc_d_drum__o1_t3:
+    minigame_id: letter_drawing
+    instruction: ציירו D גדולה ו-d קטנה, ואחר כך b ו-d. שימו לב לאיזה צד הבטן פונה.
+    tasks:
+      - ציירו D גדולה ו-d קטנה, ואחר כך b ו-d. שימו לב לאיזה צד הבטן פונה.
+    target: D, d, b, d
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - D
+        - d
+        - b
+        - d
+  abc_valley__abc_d_drum__o1_t5:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: dog, bee
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: b
+        - id: tile_2
+          value: c
+        - id: tile_3
+          value: d
+      wordTasks:
+        - id: word_1
+          fullWord: dog
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Dog.png
+        - id: word_2
+          fullWord: bee
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Bee.png
+  abc_valley__abc_d_drum__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה אבא באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה אבא באנגלית.
+    target: dad
+    variant: listening_spelling
+    success: 'בניתם את המילה הראשונה שלכם: dad.'
+    params:
+      prompt: הקשיבו ובנו את המילה אבא באנגלית.
+      targetWord: dad
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/DAD.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - b
+        - c
+  abc_valley__abc_e_eggs__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות E - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות E - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: E, e
+    variant: word_category
+    success: מצאתם את E בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות E - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות E
+      targetWords:
+        - E
+        - e
+      distractorWords:
+        - C
+        - c
+        - A
+        - a
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_e_eggs__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: e
+    variant: listening_spelling
+    success: שמעתם את E בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: e
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/egg.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - a
+        - d
+  abc_valley__abc_e_eggs__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: E, e
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - E
+        - e
+  abc_valley__abc_e_eggs__o1_t4:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: egg, doll
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: d
+        - id: tile_2
+          value: a
+        - id: tile_3
+          value: e
+      wordTasks:
+        - id: word_1
+          fullWord: egg
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Egg.png
+        - id: word_2
+          fullWord: doll
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Doll.png
+  abc_valley__abc_e_eggs__o2_t0:
+    minigame_id: letter_ordering
+    instruction: סדרו את האותיות וכתבו את המילה מיטה באנגלית.
+    tasks:
+      - סדרו את האותיות וכתבו את המילה מיטה באנגלית.
+    target: bed
+    variant: word_spelling
+    success: כתבתם את המילה bed.
+    params:
+      prompt: סדרו את האותיות וכתבו את המילה מיטה באנגלית.
+      targetWord: bed
+      extraDistractorCount: 2
+      customDistractors:
+        - a
+        - c
+  abc_valley__abc_f_shards__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות F - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות F - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: F, f
+    variant: word_category
+    success: מצאתם את F בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות F - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות F
+      targetWords:
+        - F
+        - f
+      distractorWords:
+        - E
+        - e
+        - D
+        - d
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_f_shards__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: f
+    variant: listening_spelling
+    success: שמעתם את F בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: f
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/fire.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - e
+        - d
+  abc_valley__abc_f_shards__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו F ו-f, ואחר כך E ו-e. שימו לב למדף התחתון.
+    tasks:
+      - ציירו F ו-f, ואחר כך E ו-e. שימו לב למדף התחתון.
+    target: F, f, E, e
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - F
+        - f
+        - E
+        - e
+  abc_valley__abc_f_shards__o1_t4:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: fish, egg
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: e
+        - id: tile_2
+          value: c
+        - id: tile_3
+          value: f
+      wordTasks:
+        - id: word_1
+          fullWord: fish
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Fish.png
+        - id: word_2
+          fullWord: egg
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Egg.png
+  abc_valley__abc_f_shards__o2_t0:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: dog, egg, fish
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: e
+        - id: tile_2
+          value: f
+        - id: tile_3
+          value: b
+        - id: tile_4
+          value: d
+      wordTasks:
+        - id: word_1
+          fullWord: dog
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Dog.png
+        - id: word_2
+          fullWord: egg
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Egg.png
+        - id: word_3
+          fullWord: fish
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Fish.png
+  abc_valley__abc_g_tree__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות G - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות G - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: G, g
+    variant: word_category
+    success: מצאתם את G בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות G - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות G
+      targetWords:
+        - G
+        - g
+      distractorWords:
+        - C
+        - c
+        - B
+        - b
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_g_tree__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: g
+    variant: listening_spelling
+    success: שמעתם את G בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: g
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/girl.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - c
+        - d
+  abc_valley__abc_g_tree__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו G ו-g, ואחר כך C ו-c. שימו לב לשולחן הקטן של G.
+    tasks:
+      - ציירו G ו-g, ואחר כך C ו-c. שימו לב לשולחן הקטן של G.
+    target: G, g, C, c
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - G
+        - g
+        - C
+        - c
+  abc_valley__abc_g_tree__o1_t4:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: grapes, cat
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: c
+        - id: tile_2
+          value: d
+        - id: tile_3
+          value: g
+      wordTasks:
+        - id: word_1
+          fullWord: grapes
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Grapes.png
+        - id: word_2
+          fullWord: cat
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Cat.png
+  abc_valley__abc_g_tree__o1_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה תיק באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה תיק באנגלית.
+    target: bag
+    variant: listening_spelling
+    success: בניתם את המילה bag.
+    params:
+      prompt: הקשיבו ובנו את המילה תיק באנגלית.
+      targetWord: bag
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/bag.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - d
+        - c
+  abc_valley__abc_h_waterfall__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות H - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות H - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: H, h
+    variant: word_category
+    success: מצאתם את H בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות H - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות H
+      targetWords:
+        - H
+        - h
+      distractorWords:
+        - B
+        - b
+        - D
+        - d
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_h_waterfall__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: h
+    variant: listening_spelling
+    success: שמעתם את H בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: h
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/hat.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - b
+        - f
+  abc_valley__abc_h_waterfall__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: H, h
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - H
+        - h
+  abc_valley__abc_h_waterfall__o1_t4:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: hat, dog
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: d
+        - id: tile_2
+          value: b
+        - id: tile_3
+          value: h
+      wordTasks:
+        - id: word_1
+          fullWord: hat
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Hat.png
+        - id: word_2
+          fullWord: dog
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Dog.png
+  abc_valley__abc_h_waterfall__o1_t6:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: h
+    variant: listening_spelling
+    success: שמעתם את H בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: h
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/horse.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - d
+        - f
+  abc_valley__abc_hw1_mail__o1_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: a
+    variant: listening_spelling
+    success: שמעתם את A בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/apple.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - c
+        - d
+  abc_valley__abc_hw1_mail__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: b
+    variant: listening_spelling
+    success: שמעתם את B בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: b
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/ball.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - d
+        - a
+        - c
+  abc_valley__abc_hw1_mail__o1_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: c
+    variant: listening_spelling
+    success: שמעתם את C בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: c
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/cat.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - a
+        - d
+        - b
+  abc_valley__abc_hw1_mail__o1_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: d
+    variant: listening_spelling
+    success: שמעתם את D בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: d
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/dog.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - a
+        - c
+  abc_valley__abc_hw2_stand__o2_t0:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: egg
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: a
+        - id: tile_2
+          value: e
+        - id: tile_3
+          value: f
+      wordTasks:
+        - id: word_1
+          fullWord: egg
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Egg.png
+  abc_valley__abc_hw2_stand__o2_t1:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: fish
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: h
+        - id: tile_2
+          value: f
+        - id: tile_3
+          value: e
+      wordTasks:
+        - id: word_1
+          fullWord: fish
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Fish.png
+  abc_valley__abc_hw2_stand__o2_t2:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: grapes
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: c
+        - id: tile_2
+          value: h
+        - id: tile_3
+          value: g
+      wordTasks:
+        - id: word_1
+          fullWord: grapes
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Grapes.png
+  abc_valley__abc_hw2_stand__o2_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: hat
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: b
+        - id: tile_2
+          value: h
+        - id: tile_3
+          value: f
+      wordTasks:
+        - id: word_1
+          fullWord: hat
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Hat.png
+  abc_valley__abc_i_ice__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות I - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות I - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: I, i
+    variant: word_category
+    success: מצאתם את I בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות I - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות I
+      targetWords:
+        - I
+        - i
+      distractorWords:
+        - H
+        - h
+        - F
+        - f
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_i_ice__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: i
+    variant: listening_spelling
+    success: שמעתם את I בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: i
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/ice.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - a
+        - e
+  abc_valley__abc_i_ice__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: I, i
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - I
+        - i
+  abc_valley__abc_i_ice__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה גדול באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה גדול באנגלית.
+    target: big
+    variant: listening_spelling
+    success: בניתם את המילה big.
+    params:
+      prompt: הקשיבו ובנו את המילה גדול באנגלית.
+      targetWord: big
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/big.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - d
+        - e
+  abc_valley__abc_j_jars__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות J - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות J - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: J, j
+    variant: word_category
+    success: מצאתם את J בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות J - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות J
+      targetWords:
+        - J
+        - j
+      distractorWords:
+        - I
+        - i
+        - G
+        - g
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_j_jars__o1_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: j
+    variant: listening_spelling
+    success: שמעתם את J בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: j
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/jump.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - d
+        - i
+  abc_valley__abc_j_jars__o1_t4:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: J, j
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - J
+        - j
+  abc_valley__abc_j_jars__o1_t6:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: jam, grapes
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: g
+        - id: tile_2
+          value: i
+        - id: tile_3
+          value: j
+      wordTasks:
+        - id: word_1
+          fullWord: jam
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Sweets/Jam.png
+        - id: word_2
+          fullWord: grapes
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Grapes.png
+  abc_valley__abc_k_keys__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות K - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות K - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: K, k
+    variant: word_category
+    success: מצאתם את K בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות K - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות K
+      targetWords:
+        - K
+        - k
+      distractorWords:
+        - H
+        - h
+        - F
+        - f
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_k_keys__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: k
+    variant: listening_spelling
+    success: שמעתם את K בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: k
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/key.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - h
+        - g
+  abc_valley__abc_k_keys__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: K, k
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - K
+        - k
+  abc_valley__abc_k_keys__o1_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: kiwi, hat
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: h
+        - id: tile_2
+          value: f
+        - id: tile_3
+          value: k
+      wordTasks:
+        - id: word_1
+          fullWord: kiwi
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Kiwi.png
+        - id: word_2
+          fullWord: hat
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Hat.png
+  abc_valley__abc_k_keys__o4_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה ילד באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה ילד באנגלית.
+    target: kid
+    variant: listening_spelling
+    success: בניתם את המילה kid.
+    params:
+      prompt: הקשיבו ובנו את המילה ילד באנגלית.
+      targetWord: kid
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/kid.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - h
+        - b
+  abc_valley__abc_l_fireflies__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות L - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות L - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: L, l
+    variant: word_category
+    success: מצאתם את L בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות L - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות L
+      targetWords:
+        - L
+        - l
+      distractorWords:
+        - I
+        - i
+        - J
+        - j
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_l_fireflies__o1_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: l
+    variant: listening_spelling
+    success: שמעתם את L בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: l
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/light.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - i
+        - h
+  abc_valley__abc_l_fireflies__o1_t3:
+    minigame_id: letter_drawing
+    instruction: 'ציירו L ו-l, ואחר כך I ו-i. שימו לב: l קטנה היא קו ארוך.'
+    tasks:
+      - 'ציירו L ו-l, ואחר כך I ו-i. שימו לב: l קטנה היא קו ארוך.'
+    target: L, l, I, i
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - L
+        - l
+        - I
+        - i
+  abc_valley__abc_l_fireflies__o1_t5:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: lemon, kiwi
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: k
+        - id: tile_2
+          value: i
+        - id: tile_3
+          value: l
+      wordTasks:
+        - id: word_1
+          fullWord: lemon
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Lemon.png
+        - id: word_2
+          fullWord: kiwi
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Kiwi.png
+  abc_valley__abc_l_fireflies__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה אוהב באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה אוהב באנגלית.
+    target: like
+    variant: listening_spelling
+    success: בניתם את המילה like.
+    params:
+      prompt: הקשיבו ובנו את המילה אוהב באנגלית.
+      targetWord: like
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/like.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - j
+        - h
+  abc_valley__abc_n_noodles__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות N - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות N - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: N, n
+    variant: word_category
+    success: מצאתם את N בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות N - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות N
+      targetWords:
+        - N
+        - n
+      distractorWords:
+        - M
+        - m
+        - H
+        - h
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_n_noodles__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: n
+    variant: listening_spelling
+    success: שמעתם את N בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: n
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/net.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - m
+        - h
+  abc_valley__abc_n_noodles__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו N ו-n, ואחר כך M ו-m. ספרו את ההרים.
+    tasks:
+      - ציירו N ו-n, ואחר כך M ו-m. ספרו את ההרים.
+    target: N, n, M, m
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - N
+        - n
+        - M
+        - m
+  abc_valley__abc_n_noodles__o1_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: m
+    variant: listening_spelling
+    success: שמעתם את M בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: m
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/moon.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - n
+        - b
+  abc_valley__abc_n_noodles__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה איש באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה איש באנגלית.
+    target: man
+    variant: listening_spelling
+    success: בניתם את המילה man.
+    params:
+      prompt: הקשיבו ובנו את המילה איש באנגלית.
+      targetWord: man
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/man.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - h
+        - e
