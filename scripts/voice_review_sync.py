@@ -20,7 +20,9 @@ Run it from anywhere, pointing at the Unity project folder (the one that holds `
     python scripts/voice_review_sync.py --project "C:/.../English-Kingdom/English Kingdom"
 
 ``SUPABASE_SERVICE_ROLE_KEY`` may be used instead of an editor account. ``--dry-run``
-reports what would change without writing anything. Standard library only.
+reports what would change without writing anything. Standard library only, plus the optional
+``faster-whisper`` package: when it is installed, every new take is transcribed and compared with its
+script, and the Voice Review page shows the guide which lines need attention (see voice_whisper_check.py).
 """
 
 from __future__ import annotations
@@ -41,11 +43,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import voice_whisper_check as whisper  # noqa: E402
+
 BUCKET = "voice-review"
 SOURCE = "dialogue"
 HINTS_GROUP = "Hints"
 REVIEW_FIELDS = ["status", "tags", "note", "take_hash", "speaker", "text", "reviewed_at"]
 NO_VOICE = "(no voice cast)"
+ASR_EMPTY = {"asr_take_hash": None, "asr_text": None, "asr_score": None, "asr_level": None,
+             "asr_flags": [], "asr_missing": [], "asr_extra": []}
 CONTENT_TYPES = {".mp3": "audio/mpeg", ".wav": "audio/wav", ".ogg": "audio/ogg"}
 
 GUID_RE = re.compile(r"^guid:\s*([0-9a-f]+)", re.MULTILINE)
@@ -439,12 +446,13 @@ class Supabase:
 # Sync
 # --------------------------------------------------------------------------------------------
 
-def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: bool, log=print) -> None:
+def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: bool, log=print,
+         transcriber: "whisper.Transcriber | None" = None) -> None:
     items = project.load_items()
     review = ReviewFile.load(project.review_file)
     log(f"Unity project: {len(items)} lines with a take, {len(review.entries)} decisions in {project.review_file.name}.")
 
-    existing = {r["clip_path"]: r for r in db.select_all("voice_review_items", "clip_path,audio_path,alternate_audio_path")} if db else {}
+    existing = {r["clip_path"]: r for r in db.select_all("voice_review_items", "clip_path,audio_path,alternate_audio_path," + ",".join(ASR_EMPTY))} if db else {}
 
     # Lines and audio up.
     rows, uploads = [], []
@@ -454,8 +462,9 @@ def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: 
         if legacy is not None and legacy.exists():
             alternate = f"{SOURCE}/{path_id(item.clip_path)}/legacy-{file_hash(legacy)}{legacy.suffix.lower()}"
         row = item.row(alternate)
-        rows.append(row)
         before = existing.get(item.clip_path, {})
+        row.update({key: before.get(key, empty) for key, empty in ASR_EMPTY.items()})
+        rows.append(row)
         if before.get("audio_path") != row["audio_path"]:
             uploads.append((row["audio_path"], project.path(item.clip_path)))
         if alternate and before.get("alternate_audio_path") != alternate:
@@ -471,8 +480,10 @@ def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: 
     # Decisions both ways.
     plan = plan_decisions(review.entries, db.select_all("voice_review_decisions", "*") if db else [])
 
+    to_check = [r for r in rows if r["asr_take_hash"] != r["take_hash"]]
     log(f"Up:   {len(uploads)} clip(s) to upload, {len(rows)} line(s) to list, {len(removed)} line(s) gone from the script.")
     log(f"Both: {len(plan.to_db)} Unity decision(s) to the web, {len(plan.to_local)} web decision(s) to {project.review_file.name}.")
+    log(f"Whisper: {len(to_check)} take(s) to check" + ("" if transcriber else " (skipped: Whisper is off or not installed)") + ".")
     for clip, entry in plan.to_local.items():
         log(f"  web -> Unity  {entry['status']:<8} {Path(clip).name}" + (f"  ({entry['note']})" if entry.get("note") else ""))
 
@@ -489,6 +500,18 @@ def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: 
         for index, (object_path, file) in enumerate(uploads, 1):
             log(f"  uploading {index}/{len(uploads)}  {file.name}")
             db.upload(object_path, file)
+    if transcriber:
+        listed = {r["clip_path"] for r in rows}
+        checked = [r for r in to_check if r["clip_path"] in listed]
+        levels: dict[str, int] = {}
+        for index, row in enumerate(checked, 1):
+            result = whisper.check_take(transcriber, project.path(row["clip_path"]), row["tts_text"])
+            row.update(result.columns(row["take_hash"]))
+            levels[result.level] = levels.get(result.level, 0) + 1
+            if result.level != "ok" or index % 25 == 0:
+                log(f"  whisper {index}/{len(checked)}  {result.level:<7} {Path(row['clip_path']).name}")
+        if checked:
+            log("Whisper: " + ", ".join(f"{n} {level}" for level, n in sorted(levels.items())) + ".")
     db.upsert("voice_review_items", rows)
     if removed:
         db.delete_items(removed)
@@ -508,12 +531,21 @@ def main(argv: list[str] | None = None) -> int:
                         help='Unity project folder (the one holding Assets and Tools), e.g. ".../English Kingdom"')
     parser.add_argument("--dry-run", action="store_true", help="show what would change, write nothing")
     parser.add_argument("--skip-audio", action="store_true", help="sync decisions only; do not upload new takes")
+    parser.add_argument("--no-whisper", action="store_true", help="do not check new takes with Whisper")
+    parser.add_argument("--whisper-model", default="large-v3-turbo",
+                        help="faster-whisper model name or folder (default: large-v3-turbo)")
     args = parser.parse_args(argv)
 
     project = UnityProject(args.project.expanduser().resolve())
     if not (project.root / "Assets").is_dir():
         parser.error(f"{project.root} is not a Unity project folder (no Assets folder).")
-    sync(project, Supabase.from_env(), args.dry_run, args.skip_audio)
+    db = Supabase.from_env()
+    transcriber = None
+    if not args.no_whisper and not args.dry_run:
+        transcriber = whisper.load_transcriber(args.whisper_model)
+        if transcriber is None:
+            print("Whisper hints are off: install them with  pip install faster-whisper  (or pass --no-whisper).")
+    sync(project, db, args.dry_run, args.skip_audio, transcriber=transcriber)
     return 0
 
 

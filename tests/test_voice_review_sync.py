@@ -159,6 +159,27 @@ class VoiceReviewSyncTests(unittest.TestCase):
         self.assertEqual(db.deleted, ["Assets/old.mp3"])
         self.assertEqual(db.removed, ["dialogue/old/h.mp3"])
 
+    def test_whisper_checks_each_take_once_and_stores_hints(self):
+        heard = []
+
+        def transcriber(path):
+            heard.append(path.name)
+            return ("", None) if "finish" in path.name else ("שלום " + path.stem, 3.0)
+
+        db = FakeDb()
+        sync.sync(self.project, db, dry_run=False, skip_audio=False, log=lambda *_: None, transcriber=transcriber)
+        self.assertEqual(len(heard), 3)
+        rows = {Path(r["clip_path"]).stem: r for r in db.tables["voice_review_items"]}
+        finish = rows["Dialogue_line_q01_finish"]
+        self.assertEqual((finish["asr_level"], finish["asr_flags"], finish["asr_take_hash"]),
+                         ("problem", ["no_speech"], "h_Dialogue_line_q01_finish"))
+        self.assertEqual(rows["Dialogue_line_q01_start"]["asr_level"], "ok")
+
+        heard.clear()
+        sync.sync(self.project, db, dry_run=False, skip_audio=False, log=lambda *_: None, transcriber=transcriber)
+        self.assertEqual(heard, [])  # same takes: not checked again, results kept
+        self.assertEqual({Path(r["clip_path"]).stem: r["asr_level"] for r in db.tables["voice_review_items"]}["Dialogue_line_q01_finish"], "problem")
+
     def test_dry_run_changes_nothing(self):
         db = FakeDb()
         sync.sync(self.project, db, dry_run=True, skip_audio=False, log=lambda *_: None)

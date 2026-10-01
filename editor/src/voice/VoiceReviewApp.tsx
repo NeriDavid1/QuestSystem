@@ -14,6 +14,7 @@ import {
   sectionsOf,
   stateOf,
   summarizeGroups,
+  whisperHint,
   type Filter,
   type ItemState,
   type ReviewStatus,
@@ -29,6 +30,7 @@ const STATE_TEXT: Record<ItemState, string> = {
 }
 
 const FILTERS: Array<{ id: Filter; label: string }> = [
+  { id: 'attention', label: '⚠ לשים לב' },
   { id: 'toReview', label: 'לבדיקה' },
   { id: 'rejected', label: 'לא טובים' },
   { id: 'accepted', label: 'מאושרים' },
@@ -145,7 +147,7 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
   const activeGroup = groups.some((g) => g.key === group) ? group : groups.find((g) => g.toReview > 0)?.key ?? groups[0]?.key ?? ''
   const groupItems = useMemo(() => itemsOfGroup(items ?? [], activeGroup), [items, activeGroup])
   const visible = useMemo(
-    () => groupItems.filter((item) => matchesFilter(stateOf(item, decisions.get(item.clip_path)), filter) || item.clip_path === selected),
+    () => groupItems.filter((item) => matchesFilter(stateOf(item, decisions.get(item.clip_path)), filter, item) || item.clip_path === selected),
     [groupItems, decisions, filter, selected],
   )
   const current = groupItems.find((item) => item.clip_path === selected) ?? visible[0] ?? null
@@ -210,7 +212,7 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
           {groups.map((g) => (
             <button key={g.key} className={g.key === activeGroup ? 'active' : ''} onClick={() => chooseGroup(g.key)}>
               <span className="vr-group-name" dir="ltr">{groupTitle(g.key)}</span>
-              <span className="vr-group-count">{g.toReview > 0 ? `${g.toReview} לבדיקה` : '✓'}</span>
+              <span className="vr-group-count">{g.toReview > 0 ? `${g.attention > 0 ? `⚠ ${g.attention} · ` : ''}${g.toReview} לבדיקה` : '✓'}</span>
               <Progress accepted={g.accepted} rejected={g.rejected} total={g.total} />
             </button>
           ))}
@@ -222,7 +224,8 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
             {summary && <Progress accepted={summary.accepted} rejected={summary.rejected} total={summary.total} />}
             <div className="vr-filters" role="tablist">
               {FILTERS.map((f) => {
-                const count = groupItems.filter((item) => matchesFilter(stateOf(item, decisions.get(item.clip_path)), f.id)).length
+                const count = groupItems.filter((item) => matchesFilter(stateOf(item, decisions.get(item.clip_path)), f.id, item)).length
+                if (f.id === 'attention' && count === 0 && filter !== 'attention') return null
                 return <button key={f.id} role="tab" aria-selected={filter === f.id} className={filter === f.id ? 'active' : ''}
                   onClick={() => setFilter(f.id)}>{f.label} <b>{count}</b></button>
               })}
@@ -235,11 +238,13 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
                 <p className="vr-section" dir="ltr">{section}</p>
                 {rows.map((item) => {
                   const state = stateOf(item, decisions.get(item.clip_path))
+                  const hint = whisperHint(item)
                   return (
                     <button key={item.clip_path} className={`vr-row ${state}${item.clip_path === current?.clip_path ? ' selected' : ''}`}
                       onClick={() => setSelected(item.clip_path)}>
                       <span className={`vr-dot ${state}`} aria-label={STATE_TEXT[state]} />
                       <span className="vr-row-text"><strong>{item.speaker}</strong><span dir="auto">{item.on_screen_text}</span></span>
+                      {hint && <span className={`vr-flag ${hint.level}`} title={hint.messages.join(' ')} aria-label="Whisper ממליץ לשים לב">⚠</span>}
                     </button>
                   )
                 })}
@@ -272,6 +277,7 @@ function LineCard({ item, decision, onDecide, onNext }: {
   onNext: () => VoiceItem | null
 }) {
   const state = stateOf(item, decision)
+  const hint = whisperHint(item)
   const onThisTake = decision?.take_hash === item.take_hash
   const [urls, setUrls] = useState<Map<string, string>>(new Map())
   const [useLegacy, setUseLegacy] = useState(false)
@@ -346,6 +352,14 @@ function LineCard({ item, decision, onDecide, onNext }: {
           <span className={`vr-badge ${state}`}>{STATE_TEXT[state]}</span>
         </div>
         {state === 'newTake' && <p className="vr-hint">יש הקלטה חדשה למשפט הזה מאז הבדיקה הקודמת. הקשיבו שוב.</p>}
+        {hint && (
+          <div className={`vr-whisper ${hint.level}`}>
+            <strong>⚠ כדאי להקשיב טוב</strong>
+            {hint.messages.map((message) => <p key={message} dir="auto">{message}</p>)}
+            <details><summary>מה המחשב שמע</summary><p dir="auto">{hint.heard || '(כלום)'}</p></details>
+            <small>זו רק הצעה של בדיקה אוטומטית. ההחלטה שלכם.</small>
+          </div>
+        )}
         <p className="vr-script" dir="auto">{item.on_screen_text}</p>
         {item.tts_text && item.tts_text !== item.on_screen_text.replace(/\n/g, ' ').trim() && (
           <p className="vr-tts"><span>מה שנשלח להקלטה:</span> <span dir="auto">{item.tts_text}</span></p>

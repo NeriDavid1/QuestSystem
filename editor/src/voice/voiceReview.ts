@@ -6,7 +6,7 @@ export type ReviewStatus = 'pending' | 'accepted' | 'rejected'
 /** Where a line stands, as the list shows it. */
 export type ItemState = 'toReview' | 'newTake' | 'accepted' | 'rejected'
 
-export type Filter = 'toReview' | 'rejected' | 'accepted' | 'all'
+export type Filter = 'attention' | 'toReview' | 'rejected' | 'accepted' | 'all'
 
 export interface VoiceItem {
   clip_path: string
@@ -20,6 +20,20 @@ export interface VoiceItem {
   take_hash: string
   audio_path: string
   alternate_audio_path: string | null
+  // Whisper pre-check (scripts/voice_whisper_check.py); absent until the sync has checked this take.
+  asr_take_hash?: string | null
+  asr_text?: string | null
+  asr_score?: number | null
+  asr_level?: 'ok' | 'check' | 'problem' | null
+  asr_flags?: string[] | null
+  asr_missing?: string[] | null
+  asr_extra?: string[] | null
+}
+
+export interface WhisperHint {
+  level: 'check' | 'problem'
+  heard: string
+  messages: string[]
 }
 
 export interface VoiceDecision {
@@ -64,8 +78,27 @@ export function needsReview(state: ItemState): boolean {
   return state === 'toReview' || state === 'newTake'
 }
 
-export function matchesFilter(state: ItemState, filter: Filter): boolean {
+/** What Whisper noticed on the current take, or null when it found nothing (or has not checked this take). */
+export function whisperHint(item: VoiceItem): WhisperHint | null {
+  if (!item.asr_level || item.asr_level === 'ok' || item.asr_take_hash !== item.take_hash) return null
+  const flags = item.asr_flags ?? []
+  const messages: string[] = []
+  if (flags.includes('no_speech')) messages.push('לא נשמע דיבור בהקלטה.')
+  const missing = item.asr_missing ?? []
+  const extra = item.asr_extra ?? []
+  if (missing.length && extra.length) messages.push(`במקום "${missing.join(' ')}" נשמע "${extra.join(' ')}".`)
+  else if (missing.length) messages.push(`אולי חסר: "${missing.join(' ')}".`)
+  else if (extra.length) messages.push(`נשמע משהו שלא בטקסט: "${extra.join(' ')}".`)
+  if (flags.includes('mismatch') && !missing.length && !extra.length) messages.push('מה שנשמע שונה מהטקסט.')
+  if (flags.includes('fast')) messages.push('הדיבור נשמע מהיר מהרגיל.')
+  if (flags.includes('slow')) messages.push('הדיבור נשמע איטי מהרגיל.')
+  if (messages.length === 0) messages.push('כדאי להקשיב טוב למשפט הזה.')
+  return { level: item.asr_level, heard: item.asr_text ?? '', messages }
+}
+
+export function matchesFilter(state: ItemState, filter: Filter, item?: VoiceItem): boolean {
   switch (filter) {
+    case 'attention': return needsReview(state) && item !== undefined && whisperHint(item) !== null
     case 'toReview': return needsReview(state)
     case 'rejected': return state === 'rejected'
     case 'accepted': return state === 'accepted'
@@ -79,6 +112,8 @@ export interface GroupSummary {
   accepted: number
   rejected: number
   toReview: number
+  /** Lines still to review that Whisper flagged. */
+  attention: number
 }
 
 /** Groups in the order the sync script listed them (quest lines first, legacy last). */
@@ -87,14 +122,17 @@ export function summarizeGroups(items: VoiceItem[], decisions: Map<string, Voice
   for (const item of items) {
     let summary = groups.get(item.group_key)
     if (!summary) {
-      summary = { key: item.group_key, total: 0, accepted: 0, rejected: 0, toReview: 0 }
+      summary = { key: item.group_key, total: 0, accepted: 0, rejected: 0, toReview: 0, attention: 0 }
       groups.set(item.group_key, summary)
     }
     summary.total += 1
     const state = stateOf(item, decisions.get(item.clip_path))
     if (state === 'accepted') summary.accepted += 1
     else if (state === 'rejected') summary.rejected += 1
-    else summary.toReview += 1
+    else {
+      summary.toReview += 1
+      if (whisperHint(item)) summary.attention += 1
+    }
   }
   return [...groups.values()].sort((a, b) =>
     Number(a.key.startsWith('Legacy')) - Number(b.key.startsWith('Legacy')) || a.key.localeCompare(b.key))

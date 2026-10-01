@@ -49,4 +49,20 @@ into `Tools/voice/voice_review.json`. The file keeps the exact format Unity writ
 the changed decisions; Unity's Audio Review window picks them up on its next reload. `--skip-audio` syncs
 decisions only. Standard library only, no `pip install` needed.
 
+## Whisper hints
+
+When `faster-whisper` is installed (`pip install faster-whisper`), the sync also transcribes every new take
+and compares it with the text it was generated from. The page then shows the guide a ⚠ on lines worth a
+careful listen, a *⚠ לשים לב* filter, and a note such as "instead of 'להבחן' it heard 'לאבחן'". The note also
+says when no speech was heard, or when the speech sounds unusually fast or slow. Each take is checked once,
+and its result is kept until a new take replaces it. The hints never decide anything, and they don't reach
+`voice_review.json`.
+
+- The model is `large-v3-turbo` by default. It downloads once, about 1.6 GB. Use `--whisper-model` to pick
+  another model, such as a Hebrew-tuned one, and `--no-whisper` to skip the check.
+- The check compares Hebrew words only. English words inside a Hebrew line are left for the guide to judge by
+  ear, because Whisper writes them in either alphabet.
+- Apply `supabase/migrations/20260930190000_voice_review_whisper.sql` first. Until then the page works
+  without hints.
+
 Only dialogue lines are synced for now. SFX and word clips could be added as more `source` values.

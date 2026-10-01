@@ -4,6 +4,7 @@ import type { VoiceDecision, VoiceItem } from './voiceReview'
 // Filled from the Unity project by scripts/voice_review_sync.py; see supabase/migrations/*_voice_review.sql.
 const BUCKET = 'voice-review'
 const ITEM_COLUMNS = 'clip_path,group_key,section,position,speaker,voice_name,on_screen_text,tts_text,take_hash,audio_path,alternate_audio_path'
+const ASR_COLUMNS = 'asr_take_hash,asr_text,asr_score,asr_level,asr_flags,asr_missing,asr_extra'
 const DECISION_COLUMNS = 'clip_path,status,tags,note,take_hash,speaker,text,reviewed_at,reviewer_name'
 
 export const demoMode = !hasSupabaseConfig
@@ -23,7 +24,18 @@ async function allRows<T>(table: string, columns: string): Promise<T[]> {
 
 export async function loadItems(): Promise<VoiceItem[]> {
   if (demoMode) return demoItems
-  return allRows<VoiceItem>('voice_review_items', ITEM_COLUMNS)
+  try {
+    return await allRows<VoiceItem>('voice_review_items', `${ITEM_COLUMNS},${ASR_COLUMNS}`)
+  } catch (error) {
+    // Before the Whisper migration is applied the page still works, without hints.
+    if (!isMissingColumn(error)) throw error
+    return allRows<VoiceItem>('voice_review_items', ITEM_COLUMNS)
+  }
+}
+
+function isMissingColumn(error: unknown): boolean {
+  const code = typeof error === 'object' && error && 'code' in error ? String((error as { code?: unknown }).code) : ''
+  return code === '42703' || code === 'PGRST204'
 }
 
 export async function loadDecisions(): Promise<VoiceDecision[]> {
@@ -97,6 +109,10 @@ const demoItems: VoiceItem[] = [
   take_hash: `demo${index}`,
   audio_path: `dialogue/demo/${index}.wav`,
   alternate_audio_path: index === 0 ? 'dialogue/demo/legacy.wav' : null,
+  ...(index === 1 ? {
+    asr_take_hash: `demo${index}`, asr_level: 'check' as const, asr_score: 0.78, asr_flags: ['words'],
+    asr_text: 'אתם יכולים לעזור לי למצוא a fish or an octopus', asr_missing: ['או'], asr_extra: [],
+  } : {}),
 }))
 
 const demoDecisions = new Map<string, VoiceDecision>([
