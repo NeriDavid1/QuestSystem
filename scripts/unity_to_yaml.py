@@ -64,6 +64,7 @@ INDEX_ROOTS = (
     "Data/Quests",
     "Data/MiniGames",
     "Art/Prefabs/UI/GamePlay/MiniGame",
+    "Art/Audio",
 )
 
 CATALOG_PATHS = {
@@ -85,6 +86,7 @@ DATA_PREFIX_TO_MINIGAME = OrderedDict(
         ("LetterConnectionLevelConfig_", "word_matching"),
         ("MinerCategoryData_", "dwarf_miner"),
         ("SliceOrderingData_", "fruit_slice"),
+        ("TracingLesson_", "letter_drawing"),
     )
 )
 
@@ -95,15 +97,18 @@ CONFIG_CLASS_TO_MINIGAME = {
     "LineMatchQuestConfigSO": "word_matching",
     "DwarfMinerQuestConfigSO": "dwarf_miner",
     "FruitSliceQuestConfigSO": "fruit_slice",
+    "LetterTracingQuestConfigSO": "letter_drawing",
 }
 
 MINIGAME_VARIANT = {
     "letter_ordering": "word_spelling",
+    "listening_letter_ordering": "listening_spelling",
     "word_ordering": "sentence_building",
     "word_matching": "missing_letter_matching",
     "speak_aloud": "single_word",
     "dwarf_miner": "word_category",
     "fruit_slice": "letter_slicing",
+    "letter_drawing": "trace_guided",
 }
 
 # SliceOrderingDataSO.segmentation is the OrderingSegmentation enum (serialized as an int).
@@ -522,10 +527,14 @@ def extract_params(
 ) -> "OrderedDict[str, Any]":
     params: "OrderedDict[str, Any]" = OrderedDict()
     fields = content_fields.get(minigame_id) or []
-    if minigame_id in ("letter_ordering", "word_ordering", "speak_aloud"):
+    if minigame_id in ("letter_ordering", "listening_letter_ordering", "word_ordering", "speak_aloud"):
         for field in fields:
-            if field in ("wordRevealDatabase", "referenceClip"):
+            if field in ("wordRevealDatabase", "referenceClip", "promptAudio"):
                 params[field] = resolve_path(guid_index, unity_root, guid_of(data.get(field)))
+            elif field == "visualVariant":
+                params[field] = {0: "Classic", 1: "ListenAndBuild"}.get(data.get(field, 0), data.get(field, "Classic"))
+            elif field == "hintMode":
+                params[field] = {0: "AudioOnly", 1: "TextAndAudio"}.get(data.get(field, 0), data.get(field, "AudioOnly"))
             elif field == "allowFuzzyMatch":
                 params[field] = bool(data.get(field))
             elif field == "silenceTimeoutSeconds":
@@ -565,6 +574,22 @@ def extract_params(
                 )
         params["letters"] = letters
         params["wordTasks"] = tasks
+    elif minigame_id == "letter_drawing":
+        symbols = []
+        if data.get("symbol") is not None:
+            symbol = data["symbol"]
+            symbols.append(chr(symbol) if isinstance(symbol, int) else str(symbol))
+        for reference in data.get("symbols") or []:
+            path = guid_index.get((guid_of(reference) or "").lower())
+            if path:
+                asset = load_unity_yaml(path)
+                if len(data.get("symbols") or []) == 1 and asset.get("glyphs") and asset.get("displayText"):
+                    params["drawingInputMode"] = "Word"
+                    params["word"] = str(asset["displayText"])
+                    return params
+                symbol = asset.get("symbol")
+                symbols.append(chr(symbol) if isinstance(symbol, int) else str(symbol))
+        params["symbols"] = symbols
     elif minigame_id in ("dwarf_miner", "fruit_slice"):
         for field in fields:
             if field in ("background", "wordRevealDatabase"):
@@ -589,7 +614,7 @@ def default_brief(
     params: "OrderedDict[str, Any]",
 ) -> dict[str, Any]:
     instruction = str(data.get("prompt") or "")
-    if minigame_id == "letter_ordering":
+    if minigame_id in ("letter_ordering", "listening_letter_ordering"):
         target = str(params.get("targetWord") or "")
         success = f"{target.upper()} נכתב נכון"
     elif minigame_id == "speak_aloud":
@@ -612,6 +637,10 @@ def default_brief(
     elif minigame_id == "dwarf_miner":
         target = ", ".join(str(word) for word in (params.get("targetWords") or []))
         success = "כל המילים של הנושא נאספו"
+    elif minigame_id == "letter_drawing":
+        instruction = str(data.get("title") or "מתחילים בנקודה הזוהרת")
+        target = ", ".join(params.get("symbols") or [])
+        success = "כל האותיות צוירו לפי הסדר"
     elif minigame_id == "fruit_slice":
         target = str(params.get("targetText") or "")
         success = "הפירות נחתכו בסדר הנכון"
@@ -779,12 +808,14 @@ def build_steps(
                 if config_path:
                     config_data = load_unity_yaml(config_path)
                     minigame_id = minigame_type_for_config(config_data)
-                    data_ref = config_data.get("data") or config_data.get("levelConfig")
+                    data_ref = config_data.get("data") or config_data.get("levelConfig") or config_data.get("lesson") or config_data.get("symbolPath")
                     data_guid = guid_of(data_ref)
                     if data_guid:
                         data_path = guid_index.get(data_guid.lower())
                         if data_path:
                             data = load_unity_yaml(data_path)
+                            if minigame_id == "letter_ordering" and data.get("visualVariant") in (1, "ListenAndBuild"):
+                                minigame_id = "listening_letter_ordering"
                             data_name = data.get("m_Name") or data_path.stem
                             instance_id = instance_key_for_data(str(data_name))
                             if minigame_id and instance_id:

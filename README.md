@@ -10,6 +10,7 @@ Authoring workspace for English-learning Open World quests. Synced to Unity `Que
 | Creators (local) | Double-click [`presentation/OPEN_CATALOG.bat`](presentation/OPEN_CATALOG.bat) (serves over localhost — opening the HTML file directly stays empty) |
 | Boss / stakeholders (עברית) | **[Quest map](https://neridavid1.github.io/QuestSystem/viewer.html)** · local [`presentation/viewer.html`](presentation/viewer.html) |
 | Authenticated quest editors | **[QuestForge editor](https://neridavid1.github.io/QuestSystem/editor/)** · local `cd editor && npm install && npm run dev` |
+| Guides reviewing voice-over | **[Voice Review](https://neridavid1.github.io/QuestSystem/editor/voice.html)** · how it syncs with Unity: [`docs/voice-review.md`](docs/voice-review.md) |
 | Landing page | [`presentation/index.html`](presentation/index.html) |
 
 After changing registry YAML or capturing new pictures, rebuild:
@@ -22,30 +23,74 @@ python scripts/build_catalog.py      # creator catalog + galleries
 
 ## How to write a quest
 
+### Letter Ordering and Listen & Build
+
+The minigame catalog includes **Letter Ordering** (`letter_ordering`) and
+**Listen & Build** (`listening_letter_ordering`) with its own Unity screenshot.
+Both use `LetterOrderingQuestConfigSO` / `LetterOrderingDataSO` and the same
+ordering validation. The second catalog choice defaults to the listening visual.
+
+In a `play_minigame` step, choose **Letter Ordering** or **Listen & Build**
+from the minigame catalog, then create/attach an exercise. This selection sets
+the visual automatically; there is no separate Game version control. For the
+listening game, optionally assign **English word
+recording** using an existing Unity AudioClip path, then choose **Audio only**
+or **Text and audio**. Example parameters:
+
+```json
+{
+  "targetWord": "bee",
+  "prompt": "דבורה",
+  "extraDistractorCount": 2,
+  "promptAudio": "Assets/_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/BEE.mp3",
+  "hintMode": "AudioOnly"
+}
+```
+
+The recording must already exist in the Unity project; this field does not
+upload an audio file. The website preview shows the selected visual; playback
+runs in Unity. No microphone is needed. Audio is optional: leave the field blank
+to assign the recording manually in Unity later. Reimport of a listening exercise
+with a blank audio field preserves a manually assigned recording. Old exercises
+with no presentation fields stay Classic.
+Legacy `visualVariant` params cannot override the selected minigame.
+
+Save and publish the questline on the website, then import it through Unity's
+**Tools > English Kingdom > Quests > Database Sync**. Quest Sync resolves the
+recording, applies the selected visual/clue mode and preserves the world station
+ID. Reimport updates the same assets; returning to Classic clears stale audio.
+
+`currentMiniGameCatalog` also supplies this entry to older connected catalogs.
+For database catalog clients outside the editor, apply the scoped migration
+`supabase/migrations/20260928120000_listening_letter_ordering.sql`.
+
 1. Browse the **[Creator catalog](presentation/catalog.html)** and copy exact IDs (prefer `live_used` over `catalog_stub`).
 2. Prefer **[QuestForge](editor/)** — quest keys are auto-generated as `{lineKey}__qNN_slug` and must be **unique across the whole OpenWorld game**.
 3. If editing YAML by hand: open the target questline folder under [`questlines/`](questlines/) and use a globally unique key (line-scoped form above). Do not reuse bare `q01_*` across lines.
 4. Use only step types from [`_registry/systems.yaml`](_registry/systems.yaml).
 5. Update that line’s `_index.yaml` and `_graph.mmd`.
 
-### Canonical live pattern (Adjective Crown)
+### Current authoring pattern
 
 ```yaml
-- type: talk_to_npc
-  npc_id: teacher_maya
-  dialogue_id: ...
-- type: reach_location
-  location_id: The Oathstone Bridge
-- type: play_minigame
-  minigame_id: letter_ordering
-  world_object_id: WoodenCart3_The_Oath_stone_Bridge
-  difficulty: 1
-  reward_item_id: oak_log
-  reward_amount: 1
-- type: deliver_item
-  npc_id: teacher_maya
-  item_id: oak_log
-  amount: 1
+quest:
+  # Other required identity/prerequisite fields omitted in this fragment.
+  giver_npc: teacher_maya
+  start_dialogue_id: line_q01_intro
+  turn_in_dialogue_id: line_q01_finish
+  wait_for_npc_turn_in: true
+steps:
+  - type: play_minigame
+    minigame_id: letter_ordering
+    instance_id: line_q01_spelling
+    world_object_id: WoodenCart3_The_Oath_stone_Bridge
+    difficulty: 1
+    reward_item_id: oak_log
+    reward_amount: 1
+  - type: deliver_item
+    npc_id: teacher_maya
+    item_id: oak_log
+    amount: 1
 ```
 
 ## World catalog (all knowledge)
@@ -119,19 +164,20 @@ From the English Kingdom Unity project (OpenWorld scene open):
 
 ## AI authoring
 
-Cursor reads [`.cursor/rules/quest-authoring.mdc`](.cursor/rules/quest-authoring.mdc) automatically. Prefer the Creator catalog / gallery markdown for visual context when choosing IDs.
+Start with the [three-role workflow](agents/README.md), [shared content rules](_registry/QUESTLINE_CONTENT_RULES.md), [teaching cards for all eight games](_registry/MINIGAME_TEACHING_GUIDE.md), and [brief template](agents/BRIEF_TEMPLATE.md).
+Cursor reads [`.cursor/rules/quest-authoring.mdc`](.cursor/rules/quest-authoring.mdc) as a routing entry point. Prefer the Creator catalog / gallery markdown for visual context when choosing IDs.
 
 ### Prompt example
 
 ```
-Using _registry/systems.yaml and unity_mapping.yaml, add quest q07 to adjective_crown:
-talk to teacher_maya → reach The Last Roar → letter_ordering on Lost_Chest6_The_Last_Roar
-→ deliver softkitty item to Maya. Update _index.yaml and _graph.mmd.
+Using the three-role workflow, design and author a quest in adjective_crown:
+Maya introduces a taught adjective contrast; practise at a verified nearby station;
+finish through the quest-level completion dialogue. Update index and graph.
 ```
 
 ## File conventions
 
-- Quest IDs: `q01`, `q02`, … (zero-padded)
+- New quest IDs: globally unique, line-scoped, e.g. `adjective_crown__q07_review`; preserve existing live IDs.
 - Registry IDs: exact Unity catalog IDs (may include spaces)
 - One quest = one YAML file
 - Index files stay high-level — no step detail

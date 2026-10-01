@@ -1,5 +1,8 @@
 import type { EditorData, Questline, ValidationIssue } from './types'
 import type { MessageKey } from '../i18n/messages'
+import { tracingSteps } from './letterDrawing'
+import { isLetterOrdering } from './letterOrdering'
+import { stepFieldLabel, stepTypeName } from './stepPresentation'
 import {
   getCatalogKindForRef,
   getQuestSteps,
@@ -92,6 +95,23 @@ export function validateQuestline(
     }
 
     const steps = getQuestSteps(data, quest.id)
+    for (const step of steps) {
+      if (!isLetterOrdering(step.payload.minigame_id)) continue
+      const instance = data.minigames.find(game => game.key === getStepMinigameKey(step))
+      const params = instance?.params ?? {}
+      if (!['AudioOnly', 'TextAndAudio', 0, 1].includes((params.hintMode ?? 'AudioOnly') as string | number)) {
+        issues.push({ severity: 'error', code: 'invalid_ordering_presentation', message: t('validationOrderingPresentation'), entityId: step.id })
+      }
+    }
+    for (const step of steps) {
+      if (step.payload.minigame_id !== 'letter_drawing') continue
+      const instance = data.minigames.find((game) => game.key === getStepMinigameKey(step))
+      const steps = instance ? tracingSteps(instance.params ?? {}, instance.target) : []
+      if (steps.length === 0) {
+        issues.push({ severity: 'error', code: 'invalid_tracing_symbols',
+          message: t('validationTracingSymbols'), entityId: step.id })
+      }
+    }
     if (steps.length === 0) {
       issues.push({
         severity: 'error',
@@ -119,7 +139,7 @@ export function validateQuestline(
           issues.push({
             severity: 'error',
             code: 'missing_step_field',
-            message: t('validationMissingField', { field: field.name, type: type.id }),
+            message: t('validationMissingField', { field: stepFieldLabel(t, field.name), type: stepTypeName(t, type.id) }),
             entityId: step.id,
           })
         }

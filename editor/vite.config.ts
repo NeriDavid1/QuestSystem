@@ -41,6 +41,13 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), catalogImagesPlugin()],
     build: {
       sourcemap: true,
+      rollupOptions: {
+        // The guide Voice Review page ships next to the editor (editor/voice.html).
+        input: {
+          main: path.resolve(rootDir, 'index.html'),
+          voice: path.resolve(rootDir, 'voice.html'),
+        },
+      },
     },
   }
 })

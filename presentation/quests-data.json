@@ -2631,6 +2631,41 @@
           "default": 5.0
         }
       }
+    },
+    "custom": {
+      "unity_objective": "Custom",
+      "description": "A Unity-built step run by a scene reactor (task set, cutscene, encounter...); only task minigames are editable",
+      "locked": true,
+      "fields": {
+        "handler_id": {
+          "type": "string",
+          "required": true,
+          "readonly": true,
+          "description": "Unity objective targetId (the reactor's handler id)"
+        },
+        "unity_objective_index": {
+          "type": "integer",
+          "required": true,
+          "readonly": true,
+          "description": "Index in QuestDefinitionSO.objectives; the scene reactor binds to it"
+        },
+        "count": {
+          "type": "integer",
+          "required": false,
+          "readonly": true
+        },
+        "reactor": {
+          "type": "string",
+          "required": true,
+          "readonly": true,
+          "description": "task_set | cutscene | escort | monster_encounter | choice_rounds | wave_defense | museum"
+        },
+        "tasks": {
+          "type": "json",
+          "required": false,
+          "description": "task_set only: one entry per spot {index, name, mode: scene|minigame|none, minigame_id, instance_key, ...}"
+        }
+      }
     }
   },
   "minigames": {
@@ -2651,10 +2686,46 @@
         "targetWord",
         "extraDistractorCount",
         "customDistractors",
+        "visualVariant",
+        "promptAudio",
+        "hintMode",
         "wordRevealDatabase"
       ],
       "variants": [
         "word_spelling"
+      ],
+      "typical_stations": [
+        "chest",
+        "cart",
+        "tombstone",
+        "exam_table"
+      ]
+    },
+    "listening_letter_ordering": {
+      "image": "images/minigames/listening_letter_ordering.png",
+      "name": "Listen & Build",
+      "unity_config": "LetterOrderingQuestConfigSO",
+      "unity_content": "LetterOrderingDataSO",
+      "category": "spelling",
+      "description": "Listen to the assigned English recording, then arrange letters to spell the word. Separate teal and gold visuals, replay button, and optional text clue. Uses the shared Letter Ordering validation.",
+      "english_focus": "Listening comprehension, spelling",
+      "difficulty_range": [
+        1,
+        6
+      ],
+      "default_visual_variant": "ListenAndBuild",
+      "content_fields": [
+        "prompt",
+        "targetWord",
+        "extraDistractorCount",
+        "customDistractors",
+        "visualVariant",
+        "promptAudio",
+        "hintMode",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "listening_spelling"
       ],
       "typical_stations": [
         "chest",
@@ -2719,25 +2790,22 @@
       ]
     },
     "letter_drawing": {
+      "image": "images/minigames/letter_drawing.png",
       "name": "ציור אותיות",
-      "unity_config": "DrawingQuestConfigSO",
-      "unity_content": "LetterPathSO",
+      "unity_config": "LetterTracingQuestConfigSO",
+      "unity_content": "TracingLessonSO",
       "category": "motor_skills",
-      "description": "Trace or draw an English letter on screen.",
+      "description": "Type letters or English words in the order they should be traced. Each entry is one round; letter case is preserved.",
       "english_focus": "Letter formation, stroke order",
       "difficulty_range": [
         1,
         4
       ],
       "content_fields": [
-        "letter",
-        "strokes",
-        "previewImage",
-        "clip"
+        "symbols"
       ],
       "variants": [
-        "trace_guided",
-        "free_draw"
+        "trace_guided"
       ],
       "typical_stations": [
         "shop",
@@ -2898,6 +2966,300 @@
       "speaker": "teacher_maya",
       "lines": [
         "הפכתם למאסטרים לפניי.... אני חייבת לרוץ ללמוד!"
+      ]
+    },
+    "intro1_wake": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "חררר... מה? מי שם?! אה! סליחה, רק עצמתי את העיניים לרגע."
+      ]
+    },
+    "intro1_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "שמעת? הבאר ענתה לך! היא לא עונה לכל אחד."
+      ]
+    },
+    "intro2_mira": {
+      "speaker": "mira_stonecarver",
+      "lines": [
+        "שלום! אתה החדש? בוא, תתקרב. העיניים שלי כבר לא משהו, אבל הידיים שלי זוכרות הכול."
+      ]
+    },
+    "intro2_pip": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "היי! כאן! שמעת את הפעמון? דונג... ככה הוא נשמע היום. עמום ועצוב."
+      ]
+    },
+    "intro2_bruno": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "אה, שלום לך! סליחה, לא שמתי לב שבאת. הנה, קח תפוח. טרי מהעץ!"
+      ]
+    },
+    "intro2_noa": {
+      "speaker": "noa",
+      "lines": [
+        "בו! נבהלת? חה! אני נועה. ראיתי אותך מסתובב פה כל היום."
+      ]
+    },
+    "intro2_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "נו, הכרת את כולם? מירה שכמעט לא רואה, פיפ והפעמון שאיבד את הצלילים, ברונו והזרעים הישנים..."
+      ]
+    },
+    "intro3_story": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "תקשיבו כולם. הגיע הזמן שתדעו את האמת."
+      ]
+    },
+    "intro3_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "זה היה הוא. הקוסם האפל. הוא חזר."
+      ]
+    },
+    "a_lesson": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "לפני שאתה יוצא, תסתכל על ההר שלנו. שני צדדים שנפגשים בפסגה, ושביל באמצע. ככה נראית A."
+      ]
+    },
+    "a_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "כל הרסיסים! וניצחת את המימיק? טוב, הוא היה קטן. אבל כשהייתי צעיר, הייתי בורח גם מקטן."
+      ]
+    },
+    "b_lesson": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "אתה יודע איזו אות אני הכי אוהב? B. היא נראית כמו אני אחרי ארוחה: קו ישר ושתי בטנים!"
+      ]
+    },
+    "b_turnin": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "ראית את הגבעול? עד השמיים! אף פעם לא גידלתי משהו כזה!"
+      ]
+    },
+    "c_lesson": {
+      "speaker": "noa",
+      "lines": [
+        "שמעת? \"ק... ק...\". זה מגיע מהמערה."
+      ]
+    },
+    "c_turnin": {
+      "speaker": "noa",
+      "lines": [
+        "עשינו את זה! הייתי בפנים! ממש בפנים!"
+      ]
+    },
+    "fun1_alarm": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "שמעת את הרעש הזה? משהו מגיע מהקניון!"
+      ]
+    },
+    "fun1_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "הם ברחו! ראית איך רצו?"
+      ]
+    },
+    "d_lesson": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "סבא שלי קבר ליד הבריכה תוף זהב, והמפה שלו סימנה אותו באיקס. אבל הקוסם פיזר בלילה עוד המון איקסים!"
+      ]
+    },
+    "d_turnin": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "התוף של סבא שלי! יודע כמה שנים חיפשתי אותו?"
+      ]
+    },
+    "hw1_letters": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "בוקר טוב! הגיעו ארבעה מכתבים, אחד לכל אות שהדלקת."
+      ]
+    },
+    "hw1_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "כל המכתבים הגיעו? A, B, C, D... אתה כבר יודע ארבע אותיות!"
+      ]
+    },
+    "e_lesson": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "הרוח של הקוסם פיזרה את כל הביצים שלי בעמק! אם הן לא יבקעו בחום של הלול, האפרוחים יתקררו."
+      ]
+    },
+    "e_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "כל האפרוחים! תראה איך הם הולכים אחריך בשורה, כאילו אתה אמא שלהם."
+      ]
+    },
+    "f_lesson": {
+      "speaker": "mira_stonecarver",
+      "lines": [
+        "ראית? האבנים המרחפות נופלות עם שובל זהב. הן חלקים של אבן העמידה הגדולה!"
+      ]
+    },
+    "f_turnin": {
+      "speaker": "mira_stonecarver",
+      "lines": [
+        "תן לי להרגיש... הקו הזה, ועוד אחד, ועוד אחד. F."
+      ]
+    },
+    "g_lesson": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "סבא טוביאס, מה הסימן על העץ?"
+      ]
+    },
+    "g_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "ענק! היה ענק בכיכר שלנו!"
+      ]
+    },
+    "fun2_bet": {
+      "speaker": "noa",
+      "lines": [
+        "תגיד, אתה חושב שאתה יכול לטפס עד הרכס? עד האותיות עצמן?"
+      ]
+    },
+    "fun2_turnin": {
+      "speaker": "noa",
+      "lines": [
+        "טוב, טוב, הגעת ראשון. בפעם הבאה אני מנצחת."
+      ]
+    },
+    "h_lesson": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "תסתכל על המפל! המים זורמים למעלה! והבריכה מלאה אותיות מבולבלות."
+      ]
+    },
+    "h_turnin": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "המים חזרו לרדת! אני כל כך רטובה."
+      ]
+    },
+    "hw2_open": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "ברוך הבא לדוכן של ברונו! הכפר מזמין, ואנחנו מוכרים."
+      ]
+    },
+    "hw2_turnin": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "כל ההזמנות נמסרו! אתה המוכר הכי טוב שהיה לי. בעצם, הראשון."
+      ]
+    },
+    "i_lesson": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "קום! קום! כל העמק קפוא! ומירה... מירה תקועה בתוך גוש קרח!"
+      ]
+    },
+    "i_turnin": {
+      "speaker": "mira_stonecarver",
+      "lines": [
+        "ברררר... כמה זמן הייתי שם?"
+      ]
+    },
+    "j_lesson": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "הצנצנות שלי! הקוסם כישף אותן, והן קפצו מהמדף! ואני צריך אותן לפסטיבל הריבה!"
+      ]
+    },
+    "j_turnin": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "כל הצנצנות! גם זאת עם הריבה של סבתא!"
+      ]
+    },
+    "k_lesson": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "הקוסם נעל את שלושת הבתים! והמפתחות מוסתרים בתיבות בכפר."
+      ]
+    },
+    "k_turnin": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "הדלת שלי נפתחה! והעפיפון שלך... עוד בשמיים?"
+      ]
+    },
+    "fun3_stones": {
+      "speaker": "mira_stonecarver",
+      "lines": [
+        "הרגשתי את האבנים המרחפות. הן יציבות עכשיו. הן יכולות להחזיק ילד!"
+      ]
+    },
+    "fun3_turnin": {
+      "speaker": "mira_stonecarver",
+      "lines": [
+        "ידעתי שהאבנים יחזיקו. הרגשתי את זה."
+      ]
+    },
+    "l_lesson": {
+      "speaker": "noa",
+      "lines": [
+        "הקוסם גנב את כל האור של הלילה, והגחליליות ברחו. יש לי רעיון: נתפוס אותן בצנצנות!"
+      ]
+    },
+    "l_turnin": {
+      "speaker": "noa",
+      "lines": [
+        "פעם פחדתי מהחושך. עכשיו... קצת פחות."
+      ]
+    },
+    "hw3_plan": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "שמעת? לפעמון חזרו ארבעה צלילים! תליתי במגדל ארבעה פעמונים קטנים: I, J, K, L."
+      ]
+    },
+    "hw3_turnin": {
+      "speaker": "pip_bellringer",
+      "lines": [
+        "שמעת את הכפר מוחא כפיים? זה בשבילנו!"
+      ]
+    },
+    "m_lesson": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "אני מתחיל להיזכר בימים שבהם האותיות זהרו. אבל הכול מטושטש..."
+      ]
+    },
+    "m_turnin": {
+      "speaker": "grandpa_tobias",
+      "lines": [
+        "פסל, צלילים, ציור... כן. כן! נזכרתי."
+      ]
+    },
+    "n_lesson": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "אחרי כל ההרפתקאות מגיעה לכפר ארוחה! אבל הקוסם כישף את המטבח, וכל המצרכים ברחו לבתים של השכנים."
+      ]
+    },
+    "n_turnin": {
+      "speaker": "bruno_gardener",
+      "lines": [
+        "עוד צלחת? כמובן! N כמו noodles, ו-N כמו never enough noodles."
       ]
     },
     "adjectives_basics_q01_start": {
@@ -3935,6 +4297,138 @@
         "זכרו: He = הוא, על בן. She = היא, על בת. It = זה, על חפץ או על בעל חיים.",
         "We = אנחנו, אני ועוד אנשים. They = הם או הן, על אנשים אחרים.",
         "כל הכבוד. עשיתם את שיעורי הבית לבד."
+      ]
+    },
+    "the_alphabet_adventure_q01_start": {
+      "speaker": "Old Man",
+      "lines": [
+        "אני אורן. הערב אספר סיפור בחגיגת הממלכה, אבל הספר שלי נעול בתיבה ושכחתי איפה המפתח.",
+        "כתבתי לעצמי רמזים. חלק מהאותיות נמחקו, וברמז הראשון מצויר תפוח. בוא נפענח אותו יחד.",
+        "נתחיל באות A, שנקראת איי. A היא הצורה הגדולה, ו-a היא הצורה הקטנה. זאת אותה אות.",
+        "A היא אות ניקוד באנגלית. כאן זאת אות שכותבים בשורה, והיא עוזרת לייצג צליל. בעברית סימני הניקוד הם סימנים סביב האותיות.",
+        "A היא מיוחדת ויש לה כמה צלילים. Apple פירושו תפוח. Acorn פירושו בלוט. שתי המילים מתחילות באותה אות, אבל הצליל הראשון שונה.",
+        "בתחילת acorn הצליל דומה לשם האות איי. בתחילת apple נשמע צליל אחר. עכשיו נקשיב להקלטה של apple, ובשיעורי הבית נחזור גם ל-acorn.",
+        "שם האות והצליל שלה בתוך מילה אינם תמיד אותו הדבר. אין צורך לקרוא או לכתוב את כל המילים האלה.",
+        "בשולחן הלימוד שבפארק תצייר A ו-a. במכרה תאסוף אותן, ואחר כך תקשיב למילת הרמז ותבחר את האות שלה.",
+        "לסיום תחתוך a שלוש פעמים. הסימנים האחרים הם רק אפשרויות להבחנה; היום לומדים את A."
+      ]
+    },
+    "the_alphabet_adventure_q01_finish": {
+      "speaker": "Old Man",
+      "lines": [
+        "תפוח! עכשיו אני נזכר שלקחתי תפוח כשיצאתי מהבקתה.",
+        "תרגלת את שתי הצורות של האות שלנו. ברמז הבא מצויר התיק שלי. אולי הוא יזכיר לי מה קרה אחר כך."
+      ]
+    },
+    "the_alphabet_adventure_q02_start": {
+      "speaker": "Old Man",
+      "lines": [
+        "ברמז הבא מצויר התיק שלי. הוא היה כבד מהרגיל, וגם השמיע רחש. מעניין מה הסתתר בו.",
+        "Bag פירושו תיק. האות הראשונה היא B, שנקראת בי. B היא הצורה הגדולה, ו-b הקטנה.",
+        "בהקלטה תקשיב לתחילת bag, המילה האנגלית לתיק. הצליל הראשון שייך ל-B. כדי לחבר צלילים, נשתמש בצליל הזה ולא בשם בי.",
+        "אחרי B נחבר A עם הצליל שלה בהקלטה של apple. נקבל צירוף שנכתוב בקירוב בא בעברית. זה צירוף לתרגול, ולא מילה באנגלית.",
+        "העברית עוזרת לזכור את הצירוף בקירוב. את הצליל האנגלי של A מכירים דרך ההקלטה של apple.",
+        "בשולחן שבפארק תצייר B ו-b, תאסוף את שתי הצורות ותאזין לרמז של התיק.",
+        "אחר כך תחבר שתי אותיות ותשלים רק את תחילת המילה. הסוף כבר כתוב, ואין צורך לקרוא את כולו לבד."
+      ]
+    },
+    "the_alphabet_adventure_q02_finish": {
+      "speaker": "Old Man",
+      "lines": [
+        "נכון, לקחתי את התיק. התפוח היה בפנים, אבל שמעתי ממנו רחש מוזר.",
+        "ברמז הבא מצויר מי שהתחבא בו. לא ידעתי שיש לי אורח בתיק!"
+      ]
+    },
+    "the_alphabet_adventure_q03_start": {
+      "speaker": "Old Man",
+      "lines": [
+        "ברמז מצויר חתול. עכשיו אני מתחיל להבין מאיפה בא הרחש.",
+        "Cat פירושו חתול. האות החדשה היא C, שנקראת סי. C גדולה ו-c קטנה הן אותה אות.",
+        "בתחילת cat, המילה האנגלית לחתול, C נשמעת כמו הצליל בתחילת המילה קרן בעברית. תקשיב גם לדוגמה באנגלית.",
+        "ל-C יש גם צלילים אחרים. היום נשתמש בצליל שלה בדוגמה של החתול.",
+        "נחבר את הצליל הזה ל-A עם הצליל שלה בהקלטה של apple. נכתוב את הצירוף בקירוב קא בעברית. זה תרגול של שני צלילים, ולא מילה באנגלית.",
+        "בשולחן שבפארק תצייר C ו-c, תאסוף אותן ותקשיב למילת הרמז.",
+        "אחר כך תחבר שתי אותיות ותשלים רק את האות הראשונה במילה חתול. הסוף כבר כתוב, כי עוד לא למדנו את כולו."
+      ]
+    },
+    "the_alphabet_adventure_q03_finish": {
+      "speaker": "Old Man",
+      "lines": [
+        "החתול שלי! הוא התחבא בתיק, וכשפתחתי אותו הוא קפץ החוצה.",
+        "החזקתי את המפתח באותו רגע. הרמז האחרון הוא הכתובת שעל הכרית שקיבלתי מהבת שלי."
+      ]
+    },
+    "the_alphabet_adventure_q04_start": {
+      "speaker": "Old Man",
+      "lines": [
+        "ברמז האחרון מצוירת הכרית שהבת שלי נתנה לי. היא רקמה עליה הקדשה, אבל חלק מהכתב ברמז נמחק.",
+        "האות החדשה היא D, שנקראת די. D היא הצורה הגדולה, ו-d הקטנה. בתחילת dog, שפירושה כלב, שומעים את הצליל שלה.",
+        "השם די שונה מהצליל בתחילת dog. הקשב להקלטה כדי להכיר את הצליל.",
+        "ל-b יש קו גבוה משמאל לבטן, ול-d יש קו גבוה מימין לבטן. בדוק את הצורות באנגלית לפני שתבחר.",
+        "נחבר D ואחריה A עם הצליל שלה בהקלטה של apple. נכתוב את הצירוף בקירוב דא בעברית. זה תרגול, ולא מילה באנגלית.",
+        "עכשיו נוסיף עוד D בסוף: dad. Dad פירושו אבא. זאת מילה אמיתית שכל האותיות שלה כבר מוכרות לך.",
+        "אם נחליף את האות הראשונה ב-B נקבל bad. Bad פירושו רע. שינוי האות הראשונה משנה גם את הצליל ואת המשמעות.",
+        "בשולחן שבפארק תצייר D ו-d, תאסוף אותן, תחבר את הצירוף ותאזין למילים.",
+        "לסיום תחתוך את האותיות של אבא לפי הסדר. צריך d בהתחלה וגם d בסוף."
+      ]
+    },
+    "the_alphabet_adventure_q04_finish": {
+      "speaker": "Old Man",
+      "lines": [
+        "Dad, אבא! הבת שלי רקמה את המילה על הכרית ליד החלון.",
+        "כשהחתול קפץ, הנחתי שם את המפתח והרמתי אותו בשתי הידיים. עכשיו נזכרתי איפה לחפש.",
+        "מצאתי את המפתח ופתחתי את התיבה. הספר בפנים, ובחגיגה אספר איך עזרת לי.",
+        "אני נותן לך 5 מטבעות על העזרה. אותיות הן כמו מפתחות קטנים לסיפורים.",
+        "מאיה הכינה לך עוד שלושה תרגולים קצרים לשיעורי הבית."
+      ]
+    },
+    "the_alphabet_adventure_q05_start": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "הספר של אורן מוכן לחגיגה. אני מאיה, ולפני השיעור הבא נחזור על ארבע האותיות שלמדת.",
+        "במכרה הראשון תאסוף רק אותיות גדולות. במכרה השני תאסוף רק אותיות קטנות. שים לב לצורה, לא לגודל הציור על המסך.",
+        "אחר כך תצייר b ו-d. ב-b הקו הגבוה משמאל לבטן, וב-d הוא מימין.",
+        "התרגולים מחכים לך בשולחן הלימוד שבפארק."
+      ]
+    },
+    "the_alphabet_adventure_q05_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "כל הכבוד. הבחנת בין צורות גדולות וקטנות וחזרת על שתי האותיות שקל לבלבל.",
+        "בתרגול הבא תחבר אותיות לצירופים קצרים."
+      ]
+    },
+    "the_alphabet_adventure_q06_start": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "אורן רוצה להציג בחגיגה את הרמזים שפתרת. היום נחזור אליהם בכמה דרכים.",
+        "תרכיב את הצירוף קא, ואחר כך תחתוך את האותיות של בא. אלו צירופים לתרגול, ולא מילים באנגלית.",
+        "בכל צירוף נשמור על הצליל של A בהקלטה של apple. הכתיבה בעברית מזכירה את סדר הצלילים בקירוב.",
+        "בסוף תקשיב למילה acorn, שפירושה בלוט. היא מתחילה ב-A עם צליל שדומה לשם האות איי.",
+        "זו אותה אות ניקוד של תפוח, אבל הצליל הראשון שונה. בחר רק את האות של הצליל הראשון, בלי לכתוב את המילה כולה."
+      ]
+    },
+    "the_alphabet_adventure_q06_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "חיברת צירופים בשתי דרכים וחזרת על אות הניקוד A דרך דוגמה נוספת.",
+        "ב-apple וב-acorn זו אותה אות עם צלילים שונים. בתרגול האחרון נרכיב שתי מילים אמיתיות שכבר למדת."
+      ]
+    },
+    "the_alphabet_adventure_q07_start": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "לסיום נחזור על שתי מילים אמיתיות. Dad פירושו אבא, ו-bad פירושו רע.",
+        "הסוף שלהן זהה, והאות הראשונה משנה את הצליל ואת המשמעות.",
+        "בשולחן שבפארק תרכיב מילה לפי המשמעות, תקשיב למילה נוספת ותסיים בחיתוך אותיות לפי הסדר.",
+        "כשמעשה הוא רע, אפשר לתקן אותו. טעות בתרגול היא חלק מהלמידה."
+      ]
+    },
+    "the_alphabet_adventure_q07_finish": {
+      "speaker": "teacher_maya",
+      "lines": [
+        "סיימת את ההרפתקה ואת שלושת תרגולי הבית. הכרת את A, B, C ו-D וחיברת צלילים לצירופים ולמילים קטנות.",
+        "אני נותנת לך 5 מטבעות על השלמת תרגולי הבית. עכשיו יש לך בסיס להמשך, ובשיעור הבא נוסיף אות חדשה."
       ]
     },
     "the_kingdoms_worst_day_q01_fenn_start": {
@@ -5360,6 +5854,2615 @@
               "type": "return_to_npc",
               "npc_id": "teacher_maya",
               "dialogue_id": "adjectives_mastery_adjectives_mastery_q04_new_quest_turn_in"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abc_valley",
+      "folder": "abc_valley",
+      "displayName": "עמק האותיות",
+      "theme": "The ABC Valley story: the opening and the letter quests, one continuous questline.",
+      "levelRange": [
+        0,
+        0
+      ],
+      "questCount": 23,
+      "npcId": "grandpa_tobias",
+      "npc": {
+        "id": "grandpa_tobias",
+        "name": "סבא טוביאס",
+        "title": "זקן העמק",
+        "location": "עמק האותיות",
+        "description": "שומר הבאר והשביל, שעוד זוכר את השמיים זוהרים ונרדם באמצע משפט.",
+        "image": "images/npcs/grandpa_tobias.png"
+      },
+      "quests": [
+        {
+          "id": "abc_intro1_arrival",
+          "name": "הגעה לעמק",
+          "level": 0,
+          "prerequisite": null,
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "custom",
+              "handler_id": "abc_intro1_opening",
+              "unity_objective_index": 0,
+              "count": 1,
+              "reactor": "cutscene",
+              "display_text": "צפו בסרטון הפתיחה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro1_path",
+              "unity_objective_index": 1,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Spot_Well",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "לכו בשביל האורות עד הבאר"
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "intro1_wake",
+              "count": 1,
+              "display_text": "העירו את סבא טוביאס (גשו אליו ולחצו E)"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro1_well",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Spot_Bucket",
+                  "trigger": "interact",
+                  "prompt": "שאבו מים",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "שאבו מים מהבאר"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "intro1_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_intro2_neighbors",
+          "name": "שלום לשכנים",
+          "level": 0,
+          "prerequisite": "abc_intro1_arrival",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "custom",
+              "handler_id": "abc_intro2_meet_mira",
+              "unity_objective_index": 0,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Spot_Mira",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "בקרו את מירה בבית הצורות"
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "mira_stonecarver",
+              "dialogue_id": "intro2_mira",
+              "count": 1,
+              "display_text": "דברו עם מירה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro2_meet_pip",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Spot_Pip",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "בקרו את פיפ ליד מגדל הפעמון"
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "intro2_pip",
+              "count": 1,
+              "display_text": "דברו עם פיפ"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro2_meet_bruno",
+              "unity_objective_index": 4,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Spot_Bruno",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "בקרו את ברונו בגינה"
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "intro2_bruno",
+              "count": 1,
+              "display_text": "דברו עם ברונו"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro2_meet_noa",
+              "unity_objective_index": 6,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Spot_Noa",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "מישהו מסתתר ליד פתח המערה..."
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "noa",
+              "dialogue_id": "intro2_noa",
+              "count": 1,
+              "display_text": "דברו עם נועה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro2_race_start",
+              "unity_objective_index": 8,
+              "count": 1,
+              "reactor": "cutscene",
+              "display_text": "היכון, היכון..."
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro2_race",
+              "unity_objective_index": 9,
+              "count": 1,
+              "reactor": "escort",
+              "display_text": "רוצו לבאר לפני נועה!"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "intro2_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_intro3_wizard_night",
+          "name": "הלילה שבו הגיע הקוסם",
+          "level": 0,
+          "prerequisite": "abc_intro2_neighbors",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 10
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "custom",
+              "handler_id": "abc_intro3_wizard",
+              "unity_objective_index": 0,
+              "count": 1,
+              "reactor": "cutscene",
+              "display_text": "הלילה שבו הגיע הקוסם"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_intro3_gather",
+              "unity_objective_index": 1,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Spot_Well",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "רוצו לבאר, שם כל הכפריים מתאספים"
+            },
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "intro3_story",
+              "count": 1,
+              "display_text": "הקשיבו לסיפור של סבא טוביאס"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "intro3_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_a_shards",
+          "name": "הרסיסים של A",
+          "level": 0,
+          "prerequisite": "abc_intro3_wizard_night",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "a_lesson",
+              "count": 1,
+              "display_text": "דברו עם סבא טוביאס ליד הבאר"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_a_chests",
+              "unity_objective_index": 1,
+              "count": 5,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Chest_1",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_apple",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_a_shards__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Chest_2",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "DwarfMinerQuestConfig_articles_a_an_homework_q01_mine_an_words",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_a_shards__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Chest_3",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_q03_red_apple",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_a_shards__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Chest_4",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "FruitSliceQuestConfig_articles_a_an_homework_q01_owl_in_a_tree",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "none"
+                },
+                {
+                  "index": 4,
+                  "name": "Chest_5",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q01_match_colors",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_a_shards__o1_t4"
+                }
+              ],
+              "display_text": "פתחו את התיבות הישנות על הטרסה ואספו את רסיסי ה-A"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_a_fakechest",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Chest_Trap",
+                  "trigger": "interact",
+                  "prompt": "פתח",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "עוד תיבה אחת מחכה בקצה הטרסה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_a_mimic",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "monster_encounter",
+              "display_text": "זה מימיק! הביסו את המימיק התינוק"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_a_realchest",
+              "unity_objective_index": 4,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Chest_Golden",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_homework_q01_a_big_apple",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_a_shards__o4_t0"
+                }
+              ],
+              "display_text": "פתחו את התיבה האמיתית וקחו את הרסיס האחרון"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "a_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_b_weeds",
+          "name": "העשבים של הקוסם",
+          "level": 0,
+          "prerequisite": "abc_a_shards",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "bruno_gardener",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "b_lesson",
+              "count": 1,
+              "display_text": "דברו עם ברונו בגינה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_b_weeds",
+              "unity_objective_index": 1,
+              "count": 5,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Weed_1",
+                  "trigger": "interact",
+                  "prompt": "השקה במזלף",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q03_i_want_a_banana",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_b_weeds__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Weed_2",
+                  "trigger": "interact",
+                  "prompt": "השקה במזלף",
+                  "scene_minigame": "WordOrderingQuestConfig_noun_repair_shop_homework_q01_the_baker_holds_a_cake",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_b_weeds__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Weed_3",
+                  "trigger": "interact",
+                  "prompt": "השקה במזלף",
+                  "intercepted": true,
+                  "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q02_match_size_words",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "none"
+                },
+                {
+                  "index": 3,
+                  "name": "Weed_4",
+                  "trigger": "interact",
+                  "prompt": "השקה במזלף",
+                  "scene_minigame": "FruitSliceQuestConfig_Playtest",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_b_weeds__o1_t3"
+                },
+                {
+                  "index": 4,
+                  "name": "Weed_5",
+                  "trigger": "interact",
+                  "prompt": "השקה במזלף",
+                  "intercepted": true,
+                  "scene_minigame": "DwarfMinerQuestConfig_Playtest",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "הרטיבו במזלף את העשבים הרטנונים ועקרו אותם"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_b_seed",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "BSeed",
+                  "trigger": "interact",
+                  "prompt": "השקה במזלף",
+                  "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_homework_q01_a_big_red_apple",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_b_weeds__o2_t0"
+                }
+              ],
+              "display_text": "השקו את זרע ה-B בערוגה האמצעית"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_b_beanstalk",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "GoldenB",
+                  "trigger": "interact",
+                  "prompt": "גע ב-B",
+                  "intercepted": true,
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "טפסו בעצמכם על גבעול השעועית (לכו אליו והמשיכו קדימה) וגעו ב-B שבראש"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "b_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_c_cave",
+          "name": "נועה והמערה",
+          "level": 0,
+          "prerequisite": "abc_b_weeds",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "noa",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "noa",
+              "dialogue_id": "c_lesson",
+              "count": 1,
+              "display_text": "דברו עם נועה ליד המערה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_c_lanterns",
+              "unity_objective_index": 1,
+              "count": 5,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Lantern_1",
+                  "trigger": "interact",
+                  "prompt": "הדלק את הפנס",
+                  "scene_minigame": "LetterOrderingQuestConfig_nouns_festival_q02_candle",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_c_cave__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Lantern_2",
+                  "trigger": "interact",
+                  "prompt": "הדלק את הפנס",
+                  "scene_minigame": "WordOrderingQuestConfig_q02_cat_small",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_c_cave__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Lantern_3",
+                  "trigger": "interact",
+                  "prompt": "הדלק את הפנס",
+                  "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q01_match_more_colors",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_c_cave__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Lantern_4",
+                  "trigger": "interact",
+                  "prompt": "הדלק את הפנס",
+                  "scene_minigame": "FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "none"
+                },
+                {
+                  "index": 4,
+                  "name": "Lantern_5",
+                  "trigger": "interact",
+                  "prompt": "הדלק את הפנס",
+                  "scene_minigame": "DwarfMinerQuestConfig_noun_repair_shop_homework_q01_mine_the_nouns",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_c_cave__o1_t4"
+                }
+              ],
+              "display_text": "הדליקו את הפנסים במערה, אחד אחרי השני"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_c_candle",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "BigCandle",
+                  "trigger": "interact",
+                  "prompt": "הדלק את הנר",
+                  "scene_minigame": "LineMatchQuestConfig_adjectives_basics_q03_match_sign_words",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_c_cave__o2_t0"
+                }
+              ],
+              "display_text": "הדליקו את הנר הגדול יחד עם נועה"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "noa",
+              "dialogue_id": "c_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_fun1_raid",
+          "name": "פשיטה על הכפר",
+          "level": 0,
+          "prerequisite": "abc_c_cave",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 50
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "fun1_alarm",
+              "count": 1,
+              "display_text": "שמעו מה קורה ליד הקשת"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_fun1_waves",
+              "unity_objective_index": 1,
+              "count": 3,
+              "reactor": "wave_defense",
+              "display_text": "הגנו על הכפר מפני שלושה גלים של מפלצות"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "fun1_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_d_drum",
+          "name": "האוצר של פיפ",
+          "level": 0,
+          "prerequisite": "abc_fun1_raid",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "pip_bellringer",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "d_lesson",
+              "count": 1,
+              "display_text": "דברו עם פיפ ליד הבריכה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_d_digs",
+              "unity_objective_index": 1,
+              "count": 6,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "X_1",
+                  "trigger": "interact",
+                  "prompt": "חפור",
+                  "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_d_drum__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "X_2",
+                  "trigger": "interact",
+                  "prompt": "חפור",
+                  "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_d_drum__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "X_3",
+                  "trigger": "interact",
+                  "prompt": "חפור",
+                  "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "none"
+                },
+                {
+                  "index": 3,
+                  "name": "X_4",
+                  "trigger": "interact",
+                  "prompt": "חפור",
+                  "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_d_drum__o1_t3"
+                },
+                {
+                  "index": 4,
+                  "name": "X_5",
+                  "trigger": "interact",
+                  "prompt": "חפור",
+                  "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "none"
+                },
+                {
+                  "index": 5,
+                  "name": "X_6",
+                  "trigger": "interact",
+                  "prompt": "חפור",
+                  "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_d_drum__o1_t5"
+                }
+              ],
+              "display_text": "חפרו באיקסים האדומים סביב הבריכה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_d_real",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "X_Gold",
+                  "trigger": "interact",
+                  "prompt": "חפור באיקס הזהב",
+                  "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_d_drum__o2_t0"
+                }
+              ],
+              "display_text": "חפרו באיקס שהרמזים מובילים אליו"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "d_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_hw1_mail",
+          "name": "הדואר של הבוקר",
+          "level": 0,
+          "prerequisite": "abc_d_drum",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 20
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "hw1_letters",
+              "count": 1,
+              "display_text": "קחו את המכתבים מסבא טוביאס"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_hw1_deliver",
+              "unity_objective_index": 1,
+              "count": 4,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Letter_A",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "grandpa_tobias",
+                  "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day__q04_mixed_sentence_one",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_hw1_mail__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Letter_B",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "bruno_gardener",
+                  "scene_minigame": "FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_hw1_mail__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Letter_C",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "noa",
+                  "scene_minigame": "LineMatchQuestConfig_wh_questions_q04_match_all_six",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_hw1_mail__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Letter_D",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "pip_bellringer",
+                  "scene_minigame": "WordOrderingQuestConfig_adjectives_basics_q06_big_yellow_sun",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_hw1_mail__o1_t3"
+                }
+              ],
+              "display_text": "מסרו את ארבעת המכתבים"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "hw1_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_e_eggs",
+          "name": "הביצים של טוביאס",
+          "level": 0,
+          "prerequisite": "abc_hw1_mail",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "e_lesson",
+              "count": 1,
+              "display_text": "דברו עם טוביאס ליד הלול"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_e_eggs",
+              "unity_objective_index": 1,
+              "count": 6,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Egg_1",
+                  "trigger": "interact",
+                  "prompt": "מצא את הביצה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_e_eggs__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Egg_2",
+                  "trigger": "interact",
+                  "prompt": "מצא את הביצה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_e_eggs__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Egg_3",
+                  "trigger": "interact",
+                  "prompt": "מצא את הביצה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_e_eggs__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Egg_4",
+                  "trigger": "interact",
+                  "prompt": "מצא את הביצה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 4,
+                  "name": "Egg_5",
+                  "trigger": "interact",
+                  "prompt": "מצא את הביצה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_e_eggs__o1_t4"
+                },
+                {
+                  "index": 5,
+                  "name": "Egg_6",
+                  "trigger": "interact",
+                  "prompt": "מצא את הביצה",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "מצאו את הביצים שהתפזרו בעמק"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_e_golden",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "GoldenEgg",
+                  "trigger": "interact",
+                  "prompt": "קח את ביצת הזהב",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_a_big_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_ordering",
+                  "instance_key": "abc_valley__abc_e_eggs__o2_t0"
+                }
+              ],
+              "display_text": "הביאו את ביצת הזהב מראש המגדל של פיפ"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_e_home",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "CoopGate",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "הובילו את האפרוחים בחזרה ללול"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "e_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_f_shards",
+          "name": "השברים הנופלים",
+          "level": 0,
+          "prerequisite": "abc_e_eggs",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "mira_stonecarver",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "mira_stonecarver",
+              "dialogue_id": "f_lesson",
+              "count": 1,
+              "display_text": "דברו עם מירה בבית הצורות"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_f_fallen",
+              "unity_objective_index": 1,
+              "count": 6,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Shard_1",
+                  "trigger": "interact",
+                  "prompt": "קרר את השבר",
+                  "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_f_shards__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Shard_2",
+                  "trigger": "interact",
+                  "prompt": "קרר את השבר",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_f_shards__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Shard_3",
+                  "trigger": "interact",
+                  "prompt": "קרר את השבר",
+                  "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_f_shards__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Shard_4",
+                  "trigger": "interact",
+                  "prompt": "קרר את השבר",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 4,
+                  "name": "Shard_5",
+                  "trigger": "interact",
+                  "prompt": "קרר את השבר",
+                  "scene_minigame": "LetterOrderingQuestConfig_missing_verbs_q03_spell_fire",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_f_shards__o1_t4"
+                },
+                {
+                  "index": 5,
+                  "name": "Shard_6",
+                  "trigger": "interact",
+                  "prompt": "קרר את השבר",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "רוצו אל כל שבר שנופל וקררו אותו"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_f_assemble",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Assemble",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "mira_stonecarver",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q03_sentence_fire",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_f_shards__o2_t0"
+                }
+              ],
+              "display_text": "הביאו את השברים למירה"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "mira_stonecarver",
+              "dialogue_id": "f_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_g_tree",
+          "name": "העץ הנודד",
+          "level": 0,
+          "prerequisite": "abc_f_shards",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "g_lesson",
+              "count": 1,
+              "display_text": "דברו עם טוביאס בכיכר, מול העץ המוזר"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_g_chase",
+              "unity_objective_index": 1,
+              "count": 6,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Tree_1",
+                  "trigger": "interact",
+                  "prompt": "תקן את ה-G",
+                  "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_g_tree__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Tree_2",
+                  "trigger": "interact",
+                  "prompt": "תקן את ה-G",
+                  "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_g_tree__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Tree_3",
+                  "trigger": "interact",
+                  "prompt": "תקן את ה-G",
+                  "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_g_tree__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Tree_4",
+                  "trigger": "interact",
+                  "prompt": "תקן את ה-G",
+                  "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 4,
+                  "name": "Tree_5",
+                  "trigger": "interact",
+                  "prompt": "תקן את ה-G",
+                  "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_g_tree__o1_t4"
+                },
+                {
+                  "index": 5,
+                  "name": "Tree_6",
+                  "trigger": "interact",
+                  "prompt": "תקן את ה-G",
+                  "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_g_tree__o1_t5"
+                }
+              ],
+              "display_text": "עקבו אחרי שביל השורשים ותקנו את ה-G"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_g_giant",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "monster_encounter",
+              "display_text": "הביסו את ענק העץ"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "g_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_fun2_ridge",
+          "name": "טיפוס לרכס",
+          "level": 0,
+          "prerequisite": "abc_g_tree",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "noa",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 50
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "noa",
+              "dialogue_id": "fun2_bet",
+              "count": 1,
+              "display_text": "שמעו מה נועה רוצה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_fun2_climb",
+              "unity_objective_index": 1,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "ReachRidge",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "טפסו על הטרסות עד הרכס"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_fun2_touch",
+              "unity_objective_index": 2,
+              "count": 7,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Touch_A",
+                  "trigger": "enter_area",
+                  "prompt": "גע באות",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 1,
+                  "name": "Touch_B",
+                  "trigger": "enter_area",
+                  "prompt": "גע באות",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 2,
+                  "name": "Touch_C",
+                  "trigger": "enter_area",
+                  "prompt": "גע באות",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 3,
+                  "name": "Touch_D",
+                  "trigger": "enter_area",
+                  "prompt": "גע באות",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 4,
+                  "name": "Touch_E",
+                  "trigger": "enter_area",
+                  "prompt": "גע באות",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 5,
+                  "name": "Touch_F",
+                  "trigger": "enter_area",
+                  "prompt": "גע באות",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 6,
+                  "name": "Touch_G",
+                  "trigger": "enter_area",
+                  "prompt": "גע באות",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "געו בכל אות דולקת, מ-A עד G"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_fun2_chest",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "SummitChest",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "פתחו את התיבה בפסגה"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "noa",
+              "dialogue_id": "fun2_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_h_waterfall",
+          "name": "המפל ההפוך",
+          "level": 0,
+          "prerequisite": "abc_fun2_ridge",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "pip_bellringer",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "h_lesson",
+              "count": 1,
+              "display_text": "דברו עם פיפ ליד הבריכה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_h_fish",
+              "unity_objective_index": 1,
+              "count": 7,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "FishSpot_1",
+                  "trigger": "interact",
+                  "prompt": "דוג",
+                  "scene_minigame": "DwarfMinerQuestConfig_the_these_those_homework_q01_mine_more_than_one",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_h_waterfall__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "FishSpot_2",
+                  "trigger": "interact",
+                  "prompt": "דוג",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q06_an_orange_hat",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_h_waterfall__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "FishSpot_3",
+                  "trigger": "interact",
+                  "prompt": "דוג",
+                  "scene_minigame": "DwarfMinerQuestConfig_the_royal_impostor_homework_q01_mine_owner_words",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_h_waterfall__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "FishSpot_4",
+                  "trigger": "interact",
+                  "prompt": "דוג",
+                  "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 4,
+                  "name": "FishSpot_5",
+                  "trigger": "interact",
+                  "prompt": "דוג",
+                  "scene_minigame": "DwarfMinerQuestConfig_the_kingdoms_worst_day_homework_q01_mine_verbs",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_h_waterfall__o1_t4"
+                },
+                {
+                  "index": 5,
+                  "name": "FishSpot_6",
+                  "trigger": "interact",
+                  "prompt": "דוג",
+                  "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q03_knowledge_advisors_minigame",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 6,
+                  "name": "FishSpot_7",
+                  "trigger": "interact",
+                  "prompt": "דוג",
+                  "scene_minigame": "DwarfMinerQuestConfig_personal_pronouns_homework_q01_mine_it_words",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_h_waterfall__o1_t6"
+                }
+              ],
+              "display_text": "דגו מילים עם H מהבריכה"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "h_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_hw2_stand",
+          "name": "הדוכן של ברונו",
+          "level": 0,
+          "prerequisite": "abc_h_waterfall",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "bruno_gardener",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 20
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "hw2_open",
+              "count": 1,
+              "display_text": "בקרו בדוכן החדש של ברונו"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_hw2_pick",
+              "unity_objective_index": 1,
+              "count": 4,
+              "reactor": "choice_rounds",
+              "display_text": "בחרו מהדוכן את מה שהוזמן"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_hw2_deliver",
+              "unity_objective_index": 2,
+              "count": 4,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Deliver_egg",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "grandpa_tobias",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q02_an_egg",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_hw2_stand__o2_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Deliver_fish",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "mira_stonecarver",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q04_fish_in_the_net",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_hw2_stand__o2_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Deliver_grapes",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "noa",
+                  "scene_minigame": "WordOrderingQuestConfig_noun_repair_q02_sentence",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_hw2_stand__o2_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Deliver_hat",
+                  "trigger": "npc_talk",
+                  "prompt": "Open",
+                  "npc_id": "pip_bellringer",
+                  "scene_minigame": "WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_hw2_stand__o2_t3"
+                }
+              ],
+              "display_text": "מסרו את ההזמנות לכפריים"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "hw2_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_i_ice",
+          "name": "כישוף הקרח",
+          "level": 0,
+          "prerequisite": "abc_hw2_stand",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "mira_stonecarver",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "i_lesson",
+              "count": 1,
+              "display_text": "פיפ קורא לעזרה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_i_blocks",
+              "unity_objective_index": 1,
+              "count": 4,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "IceWall_1",
+                  "trigger": "interact",
+                  "prompt": "המס את הקרח",
+                  "scene_minigame": "FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_i_ice__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "IceWall_2",
+                  "trigger": "interact",
+                  "prompt": "המס את הקרח",
+                  "scene_minigame": "FruitSliceQuestConfig_adjectives_mastery_homework_q01_a_sharp_sword",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_i_ice__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "IceWall_3",
+                  "trigger": "interact",
+                  "prompt": "המס את הקרח",
+                  "scene_minigame": "FruitSliceQuestConfig_adjectives_mastery_homework_q01_spell_bigger",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_i_ice__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "IceWall_4",
+                  "trigger": "interact",
+                  "prompt": "המס את הקרח",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q03_an_ice_cream",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "המיסו את גושי הקרח שחוסמים את השבילים"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_i_mira",
+              "unity_objective_index": 2,
+              "count": 2,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "MiraIce_1",
+                  "trigger": "interact",
+                  "prompt": "שבור את שכבת הקרח",
+                  "scene_minigame": "FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_i_ice__o2_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "MiraIce_2",
+                  "trigger": "interact",
+                  "prompt": "שבור את השכבה האחרונה",
+                  "scene_minigame": "FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog",
+                  "scene_minigame_id": "fruit_slice",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "שברו את הקרח סביב מירה, שכבה אחרי שכבה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_i_imp",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "monster_encounter",
+              "display_text": "הביסו את שדון הקרח"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "mira_stonecarver",
+              "dialogue_id": "i_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_j_jars",
+          "name": "הצנצנות הקופצות",
+          "level": 0,
+          "prerequisite": "abc_i_ice",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "bruno_gardener",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "j_lesson",
+              "count": 1,
+              "display_text": "דברו עם ברונו ליד המדף הריק"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_j_catch",
+              "unity_objective_index": 1,
+              "count": 7,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Jar_1",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הצנצנת",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_j_jars__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Jar_2",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הצנצנת",
+                  "intercepted": true,
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 2,
+                  "name": "Jar_3",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הצנצנת",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_j_jars__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Jar_4",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הצנצנת",
+                  "intercepted": true,
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 4,
+                  "name": "Jar_5",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הצנצנת",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_j_jars__o1_t4"
+                },
+                {
+                  "index": 5,
+                  "name": "Jar_6",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הצנצנת",
+                  "intercepted": true,
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 6,
+                  "name": "Jar_7",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הצנצנת",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q02_sentence_jump",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_j_jars__o1_t6"
+                }
+              ],
+              "display_text": "תפסו את הצנצנות הקופצות"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_j_shelf",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "PutBack",
+                  "trigger": "interact",
+                  "prompt": "סדר את הצנצנות על המדף",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "החזירו את הצנצנות למדף של ברונו"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "j_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_k_keys",
+          "name": "המפתחות והעפיפון",
+          "level": 0,
+          "prerequisite": "abc_j_jars",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "pip_bellringer",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "k_lesson",
+              "count": 1,
+              "display_text": "דברו עם פיפ ליד הדלת הנעולה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_k_chests",
+              "unity_objective_index": 1,
+              "count": 4,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "KeyChest_1",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "LetterOrderingQuestConfig_nouns_festival_q03_monkey",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_k_keys__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "KeyChest_2",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "LetterOrderingQuestConfig_the_kingdoms_worst_day__q01_key_spelling",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_k_keys__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "KeyChest_3",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day__q01_key_sentence",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_k_keys__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "KeyChest_4",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_small_key_big_gate",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_k_keys__o1_t3"
+                }
+              ],
+              "display_text": "פתחו את התיבות בכפר"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_k_trap",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "TrapChest",
+                  "trigger": "interact",
+                  "prompt": "פתח",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "פתחו את התיבה האחרונה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_k_mimic",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "monster_encounter",
+              "display_text": "הביסו את המימיק"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_k_kite",
+              "unity_objective_index": 4,
+              "count": 2,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "KiteFrame",
+                  "trigger": "interact",
+                  "prompt": "בנה את המסגרת",
+                  "scene_minigame": "WordOrderingQuestConfig_noun_repair_q06_sentence",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_k_keys__o4_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "KiteSail",
+                  "trigger": "interact",
+                  "prompt": "מתח את הבד",
+                  "scene_minigame": "WordOrderingQuestConfig_numbers_q03_sentence_seven_hundred_twenty",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "בנו עפיפון עם פיפ"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_k_fly",
+              "unity_objective_index": 5,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "FlyKite",
+                  "trigger": "interact",
+                  "prompt": "הטס את העפיפון",
+                  "scene_minigame": "WordOrderingQuestConfig_line_msysmv9a_q02_farmer_minigame",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "הטיסו את העפיפון לרכס והורידו את המפתח האחרון"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_k_doors",
+              "unity_objective_index": 6,
+              "count": 3,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Door_Mira",
+                  "trigger": "interact",
+                  "prompt": "פתח את הדלת",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 1,
+                  "name": "Door_Chapel",
+                  "trigger": "interact",
+                  "prompt": "פתח את הדלת",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                },
+                {
+                  "index": 2,
+                  "name": "Door_Bruno",
+                  "trigger": "interact",
+                  "prompt": "פתח את הדלת",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "פתחו את שלוש הדלתות"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "k_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_fun3_stones",
+          "name": "גשר האבנים המרחפות",
+          "level": 0,
+          "prerequisite": "abc_k_keys",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "mira_stonecarver",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 50
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "mira_stonecarver",
+              "dialogue_id": "fun3_stones",
+              "count": 1,
+              "display_text": "שמעו מה מירה גילתה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_fun3_bridge",
+              "unity_objective_index": 1,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "ReachTop",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "קפצו מאבן לאבן עד הפסגה"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_fun3_treasure",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Treasure",
+                  "trigger": "interact",
+                  "prompt": "פתח את התיבה",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "פתחו את האוצר"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "mira_stonecarver",
+              "dialogue_id": "fun3_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_l_fireflies",
+          "name": "האורות הקטנים",
+          "level": 0,
+          "prerequisite": "abc_fun3_stones",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "noa",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "noa",
+              "dialogue_id": "l_lesson",
+              "count": 1,
+              "display_text": "דברו עם נועה בחושך"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_l_catch",
+              "unity_objective_index": 1,
+              "count": 6,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Swarm_1",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הגחליליות",
+                  "scene_minigame": "WordOrderingQuestConfig_articles_a_an_q05_an_old_boat",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_l_fireflies__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Swarm_2",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הגחליליות",
+                  "intercepted": true,
+                  "scene_minigame": "LineMatchQuestConfig_noun_repair_q01_people",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "none"
+                },
+                {
+                  "index": 2,
+                  "name": "Swarm_3",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הגחליליות",
+                  "scene_minigame": "LineMatchQuestConfig_nouns_festival_q02_objects",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_l_fireflies__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Swarm_4",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הגחליליות",
+                  "scene_minigame": "LineMatchQuestConfig_personal_pronouns_q02_match_he_she_you",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_l_fireflies__o1_t3"
+                },
+                {
+                  "index": 4,
+                  "name": "Swarm_5",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הגחליליות",
+                  "intercepted": true,
+                  "scene_minigame": "WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_the_crown_is_small",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                },
+                {
+                  "index": 5,
+                  "name": "Swarm_6",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הגחליליות",
+                  "scene_minigame": "WordOrderingQuestConfig_this_or_that_homework_q01_that_tower_is_very_old",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "word_matching",
+                  "instance_key": "abc_valley__abc_l_fireflies__o1_t5"
+                }
+              ],
+              "display_text": "תפסו את להקות הגחליליות"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_l_release",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Release",
+                  "trigger": "interact",
+                  "prompt": "פתח את הצנצנות",
+                  "scene_minigame": "WordOrderingQuestConfig_do - does lesson_q01_new_quest_minigame",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_l_fireflies__o2_t0"
+                }
+              ],
+              "display_text": "פתחו את הצנצנות בתצפית מעל המפל"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "noa",
+              "dialogue_id": "l_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_hw3_concert",
+          "name": "הקונצרט של פיפ",
+          "level": 0,
+          "prerequisite": "abc_l_fireflies",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "pip_bellringer",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 20
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "hw3_plan",
+              "count": 1,
+              "display_text": "שמעו מה פיפ מתכנן"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_hw3_climb",
+              "unity_objective_index": 1,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "TopOfTower",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "עלו עם פיפ לראש המגדל"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_hw3_bells",
+              "unity_objective_index": 2,
+              "count": 4,
+              "reactor": "choice_rounds",
+              "display_text": "צלצלו בפעמון הנכון לכל מילה"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "pip_bellringer",
+              "dialogue_id": "hw3_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_m_museum",
+          "name": "מוזיאון הזיכרונות",
+          "level": 0,
+          "prerequisite": "abc_hw3_concert",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "grandpa_tobias",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "m_lesson",
+              "count": 1,
+              "display_text": "דברו עם טוביאס ליד הבאר"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_m_museum",
+              "unity_objective_index": 1,
+              "count": 1,
+              "reactor": "museum",
+              "display_text": "עברו את המוזיאון הקסום של M"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "grandpa_tobias",
+              "dialogue_id": "m_turnin"
+            }
+          ]
+        },
+        {
+          "id": "abc_n_noodles",
+          "name": "הנודלס של ברונו",
+          "level": 0,
+          "prerequisite": "abc_m_museum",
+          "summary": "טרם הוגדר תקציר.",
+          "giver_npc": "bruno_gardener",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": null,
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 30
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "n_lesson",
+              "count": 1,
+              "display_text": "דברו עם ברונו במטבח"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_n_find",
+              "unity_objective_index": 1,
+              "count": 5,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Ingredient_Onion",
+                  "trigger": "interact",
+                  "prompt": "תפוס את הבצל",
+                  "scene_minigame": "DwarfMinerQuestConfig_verbs_to_be_homework_q01_mine_are_words",
+                  "scene_minigame_id": "dwarf_miner",
+                  "mode": "minigame",
+                  "minigame_id": "dwarf_miner",
+                  "instance_key": "abc_valley__abc_n_noodles__o1_t0"
+                },
+                {
+                  "index": 1,
+                  "name": "Ingredient_Spices",
+                  "trigger": "interact",
+                  "prompt": "קח את התבלינים",
+                  "scene_minigame": "LetterOrderingQuestConfig_adjectives_basics_q06_spell_tired",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_n_noodles__o1_t1"
+                },
+                {
+                  "index": 2,
+                  "name": "Ingredient_Egg",
+                  "trigger": "interact",
+                  "prompt": "קח ביצה מהלול",
+                  "scene_minigame": "LineMatchQuestConfig_articles_a_an_q06_match_review",
+                  "scene_minigame_id": "word_matching",
+                  "mode": "minigame",
+                  "minigame_id": "letter_drawing",
+                  "instance_key": "abc_valley__abc_n_noodles__o1_t2"
+                },
+                {
+                  "index": 3,
+                  "name": "Ingredient_Vegetables",
+                  "trigger": "interact",
+                  "prompt": "קטוף ירקות",
+                  "scene_minigame": "WordOrderingQuestConfig_missing_verbs_q01_sentence_open",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_n_noodles__o1_t3"
+                },
+                {
+                  "index": 4,
+                  "name": "Ingredient_Water",
+                  "trigger": "interact",
+                  "prompt": "שאב מים מהבאר",
+                  "scene_minigame": "WordOrderingQuestConfig_noun_repair_q05_sentence",
+                  "scene_minigame_id": "word_ordering",
+                  "mode": "none"
+                }
+              ],
+              "display_text": "מצאו את המצרכים שהתחבאו בבתים"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_n_stir",
+              "unity_objective_index": 2,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Stir",
+                  "trigger": "interact",
+                  "prompt": "בחש את הסיר",
+                  "scene_minigame": "LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame",
+                  "scene_minigame_id": "letter_ordering",
+                  "mode": "minigame",
+                  "minigame_id": "listening_letter_ordering",
+                  "instance_key": "abc_valley__abc_n_noodles__o2_t0"
+                }
+              ],
+              "display_text": "בחשו את הסיר הענק עם ברונו"
+            },
+            {
+              "type": "custom",
+              "handler_id": "abc_n_feast",
+              "unity_objective_index": 3,
+              "count": 1,
+              "reactor": "task_set",
+              "tasks": [
+                {
+                  "index": 0,
+                  "name": "Sit",
+                  "trigger": "enter_area",
+                  "scene_no_minigame": true,
+                  "mode": "scene"
+                }
+              ],
+              "display_text": "שבו לשולחן הארוך בכיכר"
+            },
+            {
+              "type": "return_to_npc",
+              "npc_id": "bruno_gardener",
+              "dialogue_id": "n_turnin"
             }
           ]
         }
@@ -20573,6 +23676,1123 @@
                   "silenceTimeoutSeconds": 3.0,
                   "allowFuzzyMatch": true,
                   "referenceClip": ""
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the_alphabet_adventure",
+      "folder": "the_alphabet_adventure",
+      "displayName": "The Alphabet Adventure",
+      "theme": "הרפתקת המפתח של אורן: לומדים A-D דרך ציור, איסוף אותיות גדולות וקטנות, שמיעה, חיבור צירופים ומילים וחיתוך אותיות. שלושה קווסטים של שיעורי בית.",
+      "levelRange": [
+        1,
+        50
+      ],
+      "questCount": 7,
+      "npcId": "teacher_maya",
+      "npc": {
+        "id": "teacher_maya",
+        "name": "המורה מאיה",
+        "title": "מורת אנגלית",
+        "location": "כיכר האלף-בית",
+        "description": "מורה עליזה ששולחת ילדים להרפתקאות של אותיות ומילים.",
+        "image": "images/npcs/teacher_maya.png"
+      },
+      "quests": [
+        {
+          "id": "the_alphabet_adventure__q01_a_a",
+          "name": "A - התפוח והרמז הראשון",
+          "level": 50,
+          "prerequisite": null,
+          "summary": "אורן מלמד את צורות A ו-a ושני צלילים מוכרים שלה. מציירים, מזהים, מקשיבים וחותכים את האות.",
+          "giver_npc": "Old Man",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_alphabet_adventure_q01_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Old Man",
+              "dialogue_id": "the_alphabet_adventure_q01_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_drawing",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q01_form",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+              "minigame_brief": {
+                "minigame_id": "letter_drawing",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+                "tasks": [
+                  "A",
+                  "a"
+                ],
+                "target": "A, a",
+                "variant": "trace_guided",
+                "success": "סיימת לצייר לפי הדוגמה.",
+                "params": {
+                  "symbols": [
+                    "A",
+                    "a"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q01_mine_a",
+              "display_text": "אסוף רק A ו-a. שתיהן אותה אות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק A ו-a. שתיהן אותה אות.",
+                "tasks": [
+                  "A",
+                  "a"
+                ],
+                "target": "A, a",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק A ו-a. שתיהן אותה אות.",
+                  "categoryLabel": "האות A בשתי צורות",
+                  "targetWords": [
+                    "A",
+                    "a"
+                  ],
+                  "distractorWords": [
+                    "B",
+                    "b"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "listening_letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q01_listen_apple",
+              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "minigame_brief": {
+                "minigame_id": "listening_letter_ordering",
+                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "tasks": [
+                  "a"
+                ],
+                "target": "a",
+                "variant": "listening_spelling",
+                "success": "בחרת לפי המילה ששמעת.",
+                "params": {
+                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                  "targetWord": "a",
+                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/apple.mp3",
+                  "hintMode": "AudioOnly",
+                  "extraDistractorCount": 1,
+                  "customDistractors": [
+                    "b"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q01_slice_a",
+              "display_text": "חתוך את האות a שלוש פעמים. התרחק מהאותיות האחרות. זה תרגול זיהוי, לא מילה.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתוך את האות a שלוש פעמים. התרחק מהאותיות האחרות. זה תרגול זיהוי, לא מילה.",
+                "tasks": [
+                  "a",
+                  "a",
+                  "a"
+                ],
+                "target": "aaa",
+                "variant": "letter_slicing",
+                "success": "זיהית את אותה אות כמה פעמים ברצף.",
+                "params": {
+                  "prompt": "חתוך את האות a שלוש פעמים. התרחק מהאותיות האחרות. זה תרגול זיהוי, לא מילה.",
+                  "segmentation": "Letters",
+                  "targetText": "aaa",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "b"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "the_alphabet_adventure__q02_b_b",
+          "name": "B - התיק שהשמיע רחש",
+          "level": 1,
+          "prerequisite": "the_alphabet_adventure__q01_a_a",
+          "summary": "לומדים B ו-b, מקשרים לצליל תחילת bag, מחברים ba ומשלימים רק את אות הרמז הראשונה.",
+          "giver_npc": "Old Man",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_alphabet_adventure_q02_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 75,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Old Man",
+              "dialogue_id": "the_alphabet_adventure_q02_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_drawing",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q02_form",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+              "minigame_brief": {
+                "minigame_id": "letter_drawing",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+                "tasks": [
+                  "B",
+                  "b",
+                  "A",
+                  "a"
+                ],
+                "target": "B, b, A, a",
+                "variant": "trace_guided",
+                "success": "סיימת לצייר לפי הדוגמה.",
+                "params": {
+                  "symbols": [
+                    "B",
+                    "b",
+                    "A",
+                    "a"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q02_mine_b",
+              "display_text": "אסוף רק B ו-b. התרחק מ-A ו-a.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק B ו-b. התרחק מ-A ו-a.",
+                "tasks": [
+                  "B",
+                  "b"
+                ],
+                "target": "B, b",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק B ו-b. התרחק מ-A ו-a.",
+                  "categoryLabel": "האות B בשתי צורות",
+                  "targetWords": [
+                    "B",
+                    "b"
+                  ],
+                  "distractorWords": [
+                    "A",
+                    "a"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "listening_letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q02_listen_bag",
+              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "minigame_brief": {
+                "minigame_id": "listening_letter_ordering",
+                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "tasks": [
+                  "b"
+                ],
+                "target": "b",
+                "variant": "listening_spelling",
+                "success": "בחרת לפי המילה ששמעת.",
+                "params": {
+                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                  "targetWord": "b",
+                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/bag.mp3",
+                  "hintMode": "AudioOnly",
+                  "extraDistractorCount": 1,
+                  "customDistractors": [
+                    "a"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q02_build_ba",
+              "display_text": "הרכב את צירוף הצלילים בא לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים בא לפי הסדר.",
+                "tasks": [
+                  "b",
+                  "a"
+                ],
+                "target": "ba",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
+                "params": {
+                  "prompt": "הרכב את צירוף הצלילים בא לפי הסדר.",
+                  "targetWord": "ba",
+                  "extraDistractorCount": 0,
+                  "customDistractors": []
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q02_gap_bag",
+              "display_text": "השלם רק את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלם רק את האות הראשונה במילה שפירושה תיק. הסוף כבר כתוב.",
+                "tasks": [
+                  "bag"
+                ],
+                "target": "bag",
+                "variant": "letter_to_gap",
+                "success": "השלמת את תחילת המילה לפי הרמז.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "tile_1",
+                      "value": "a"
+                    },
+                    {
+                      "id": "tile_2",
+                      "value": "b"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "task_1",
+                      "fullWord": "bag",
+                      "missingIndices": [
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "the_alphabet_adventure__q03_c_c",
+          "name": "C - האורח בתוך התיק",
+          "level": 1,
+          "prerequisite": "the_alphabet_adventure__q02_b_b",
+          "summary": "לומדים C ו-c בהקשר של cat, מחברים ca ומשלימים אות ראשונה בעזרת משמעות נתונה.",
+          "giver_npc": "Old Man",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_alphabet_adventure_q03_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 100,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Old Man",
+              "dialogue_id": "the_alphabet_adventure_q03_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_drawing",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q03_form",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+              "minigame_brief": {
+                "minigame_id": "letter_drawing",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+                "tasks": [
+                  "C",
+                  "c",
+                  "B",
+                  "b"
+                ],
+                "target": "C, c, B, b",
+                "variant": "trace_guided",
+                "success": "סיימת לצייר לפי הדוגמה.",
+                "params": {
+                  "symbols": [
+                    "C",
+                    "c",
+                    "B",
+                    "b"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q03_mine_c",
+              "display_text": "אסוף רק C ו-c. התרחק מהאותיות האחרות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק C ו-c. התרחק מהאותיות האחרות.",
+                "tasks": [
+                  "C",
+                  "c"
+                ],
+                "target": "C, c",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק C ו-c. התרחק מהאותיות האחרות.",
+                  "categoryLabel": "האות C בשתי צורות",
+                  "targetWords": [
+                    "C",
+                    "c"
+                  ],
+                  "distractorWords": [
+                    "A",
+                    "a",
+                    "B",
+                    "b"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "listening_letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q03_listen_cat",
+              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "minigame_brief": {
+                "minigame_id": "listening_letter_ordering",
+                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "tasks": [
+                  "c"
+                ],
+                "target": "c",
+                "variant": "listening_spelling",
+                "success": "בחרת לפי המילה ששמעת.",
+                "params": {
+                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                  "targetWord": "c",
+                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/cat.mp3",
+                  "hintMode": "AudioOnly",
+                  "extraDistractorCount": 2,
+                  "customDistractors": [
+                    "a",
+                    "b"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q03_build_ca",
+              "display_text": "הרכב את צירוף הצלילים קא לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים קא לפי הסדר.",
+                "tasks": [
+                  "c",
+                  "a"
+                ],
+                "target": "ca",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
+                "params": {
+                  "prompt": "הרכב את צירוף הצלילים קא לפי הסדר.",
+                  "targetWord": "ca",
+                  "extraDistractorCount": 1,
+                  "customDistractors": [
+                    "b"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "word_matching",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q03_gap_cat",
+              "display_text": "השלם רק את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב.",
+              "minigame_brief": {
+                "minigame_id": "word_matching",
+                "instruction": "השלם רק את האות הראשונה במילה שפירושה חתול. הסוף כבר כתוב.",
+                "tasks": [
+                  "cat"
+                ],
+                "target": "cat",
+                "variant": "letter_to_gap",
+                "success": "השלמת את תחילת המילה לפי הרמז.",
+                "params": {
+                  "letters": [
+                    {
+                      "id": "tile_1",
+                      "value": "b"
+                    },
+                    {
+                      "id": "tile_2",
+                      "value": "c"
+                    }
+                  ],
+                  "wordTasks": [
+                    {
+                      "id": "task_1",
+                      "fullWord": "cat",
+                      "missingIndices": [
+                        0
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "the_alphabet_adventure__q04_d_d",
+          "name": "D - הכרית של אבא והמפתח",
+          "level": 1,
+          "prerequisite": "the_alphabet_adventure__q03_c_c",
+          "summary": "לומדים D ו-d, מבחינים בין b ל-d, מחברים da ומרכיבים dad מאותיות שנלמדו. סוגרים את סיפור המפתח.",
+          "giver_npc": "Old Man",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_alphabet_adventure_q04_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 150,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 5
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "Old Man",
+              "dialogue_id": "the_alphabet_adventure_q04_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_drawing",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_form",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+              "minigame_brief": {
+                "minigame_id": "letter_drawing",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+                "tasks": [
+                  "D",
+                  "d",
+                  "b",
+                  "d"
+                ],
+                "target": "D, d, b, d",
+                "variant": "trace_guided",
+                "success": "סיימת לצייר לפי הדוגמה.",
+                "params": {
+                  "symbols": [
+                    "D",
+                    "d",
+                    "b",
+                    "d"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_mine_d",
+              "display_text": "אסוף רק D ו-d. שים לב להבדל בין b ל-d.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף רק D ו-d. שים לב להבדל בין b ל-d.",
+                "tasks": [
+                  "D",
+                  "d"
+                ],
+                "target": "D, d",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף רק D ו-d. שים לב להבדל בין b ל-d.",
+                  "categoryLabel": "האות D בשתי צורות",
+                  "targetWords": [
+                    "D",
+                    "d"
+                  ],
+                  "distractorWords": [
+                    "B",
+                    "b"
+                  ],
+                  "requiredCorrect": 2,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_build_da",
+              "display_text": "הרכב את צירוף הצלילים דא לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים דא לפי הסדר.",
+                "tasks": [
+                  "d",
+                  "a"
+                ],
+                "target": "da",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
+                "params": {
+                  "prompt": "הרכב את צירוף הצלילים דא לפי הסדר.",
+                  "targetWord": "da",
+                  "extraDistractorCount": 2,
+                  "customDistractors": [
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "listening_letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_listen_dog",
+              "display_text": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "minigame_brief": {
+                "minigame_id": "listening_letter_ordering",
+                "instruction": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "tasks": [
+                  "d"
+                ],
+                "target": "d",
+                "variant": "listening_spelling",
+                "success": "בחרת לפי המילה ששמעת.",
+                "params": {
+                  "prompt": "הקשב למילה ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                  "targetWord": "d",
+                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/dog.mp3",
+                  "hintMode": "AudioOnly",
+                  "extraDistractorCount": 3,
+                  "customDistractors": [
+                    "a",
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "listening_letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_listen_dad",
+              "display_text": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "listening_letter_ordering",
+                "instruction": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
+                "tasks": [
+                  "d",
+                  "a",
+                  "d"
+                ],
+                "target": "dad",
+                "variant": "listening_spelling",
+                "success": "בחרת לפי המילה ששמעת.",
+                "params": {
+                  "prompt": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
+                  "targetWord": "dad",
+                  "promptAudio": "_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/DAD.mp3",
+                  "hintMode": "AudioOnly",
+                  "extraDistractorCount": 2,
+                  "customDistractors": [
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q04_slice_dad",
+              "display_text": "חתוך את האותיות לפי הסדר כדי לכתוב אבא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתוך את האותיות לפי הסדר כדי לכתוב אבא באנגלית.",
+                "tasks": [
+                  "d",
+                  "a",
+                  "d"
+                ],
+                "target": "dad",
+                "variant": "letter_slicing",
+                "success": "שמרת על סדר האותיות במילה.",
+                "params": {
+                  "prompt": "חתוך את האותיות לפי הסדר כדי לכתוב אבא באנגלית.",
+                  "segmentation": "Letters",
+                  "targetText": "dad",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "b",
+                    "c"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "the_alphabet_adventure__q05_homework_similar_letters",
+          "name": "שיעורי בית 1 - גדולות וקטנות",
+          "level": 1,
+          "prerequisite": "the_alphabet_adventure__q04_d_d",
+          "summary": "מבחינים חזותית בין אותיות גדולות וקטנות ומחזקים את צורות b ו-d.",
+          "giver_npc": "teacher_maya",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_alphabet_adventure_q05_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "the_alphabet_adventure_q05_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q05_mine_upper",
+              "display_text": "אסוף ארבע אותיות גדולות. התרחק מהאותיות הקטנות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף ארבע אותיות גדולות. התרחק מהאותיות הקטנות.",
+                "tasks": [
+                  "A",
+                  "B",
+                  "C",
+                  "D"
+                ],
+                "target": "A, B, C, D",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף ארבע אותיות גדולות. התרחק מהאותיות הקטנות.",
+                  "categoryLabel": "אותיות גדולות",
+                  "targetWords": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "distractorWords": [
+                    "a",
+                    "b",
+                    "c",
+                    "d"
+                  ],
+                  "requiredCorrect": 4,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "dwarf_miner",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q05_mine_lower",
+              "display_text": "אסוף ארבע אותיות קטנות. התרחק מהאותיות הגדולות.",
+              "minigame_brief": {
+                "minigame_id": "dwarf_miner",
+                "instruction": "אסוף ארבע אותיות קטנות. התרחק מהאותיות הגדולות.",
+                "tasks": [
+                  "a",
+                  "b",
+                  "c",
+                  "d"
+                ],
+                "target": "a, b, c, d",
+                "variant": "word_category",
+                "success": "זיהית את האותיות שביקשנו ואספת אותן.",
+                "params": {
+                  "prompt": "אסוף ארבע אותיות קטנות. התרחק מהאותיות הגדולות.",
+                  "categoryLabel": "אותיות קטנות",
+                  "targetWords": [
+                    "a",
+                    "b",
+                    "c",
+                    "d"
+                  ],
+                  "distractorWords": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "requiredCorrect": 4,
+                  "allowedMistakes": 3
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_drawing",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q05_mixed_forms",
+              "display_text": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+              "minigame_brief": {
+                "minigame_id": "letter_drawing",
+                "instruction": "צייר את האותיות לפי הקווים. שים לב לצורה הגדולה ולצורה הקטנה.",
+                "tasks": [
+                  "b",
+                  "d",
+                  "B",
+                  "D"
+                ],
+                "target": "b, d, B, D",
+                "variant": "trace_guided",
+                "success": "סיימת לצייר לפי הדוגמה.",
+                "params": {
+                  "symbols": [
+                    "b",
+                    "d",
+                    "B",
+                    "D"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "the_alphabet_adventure__q06_homework_mixed_clues",
+          "name": "שיעורי בית 2 - מצרפים צלילים",
+          "level": 1,
+          "prerequisite": "the_alphabet_adventure__q05_homework_similar_letters",
+          "summary": "חזרה על צירופי צלילים מוכרים דרך הרכבה וחיתוך, ושליפה של A דרך דוגמת הבלוט.",
+          "giver_npc": "teacher_maya",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_alphabet_adventure_q06_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 50,
+            "items": []
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "the_alphabet_adventure_q06_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q06_build_ca",
+              "display_text": "הרכב את צירוף הצלילים קא לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את צירוף הצלילים קא לפי הסדר.",
+                "tasks": [
+                  "c",
+                  "a"
+                ],
+                "target": "ca",
+                "variant": "word_spelling",
+                "success": "חיברת שתי אותיות לצירוף של צלילים.",
+                "params": {
+                  "prompt": "הרכב את צירוף הצלילים קא לפי הסדר.",
+                  "targetWord": "ca",
+                  "extraDistractorCount": 2,
+                  "customDistractors": [
+                    "b",
+                    "d"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q06_slice_ba",
+              "display_text": "חתוך את האותיות לפי הסדר כדי לבנות את צירוף הצלילים בא.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתוך את האותיות לפי הסדר כדי לבנות את צירוף הצלילים בא.",
+                "tasks": [
+                  "b",
+                  "a"
+                ],
+                "target": "ba",
+                "variant": "letter_slicing",
+                "success": "חזרת על צירוף מוכר ושמרת על סדר האותיות.",
+                "params": {
+                  "prompt": "חתוך את האותיות לפי הסדר כדי לבנות את צירוף הצלילים בא.",
+                  "segmentation": "Letters",
+                  "targetText": "ba",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "c",
+                    "d"
+                  ],
+                  "extraLetterDistractorCount": 0
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "listening_letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q06_listen_acorn",
+              "display_text": "הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+              "minigame_brief": {
+                "minigame_id": "listening_letter_ordering",
+                "instruction": "הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                "tasks": [
+                  "a"
+                ],
+                "target": "a",
+                "variant": "listening_spelling",
+                "success": "בחרת לפי המילה ששמעת.",
+                "params": {
+                  "prompt": "הקשב למילה נוספת ובחר את האות הקטנה שמתאימה לצליל הראשון שלה.",
+                  "targetWord": "a",
+                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/acorn.mp3",
+                  "hintMode": "AudioOnly",
+                  "extraDistractorCount": 3,
+                  "customDistractors": [
+                    "b",
+                    "c",
+                    "d"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "the_alphabet_adventure__q07_homework_two_words",
+          "name": "שיעורי בית 3 - שתי מילים ושני סיפורים",
+          "level": 1,
+          "prerequisite": "the_alphabet_adventure__q06_homework_mixed_clues",
+          "summary": "הרכבת dad ו-bad לפי משמעות ולפי שמיעה, וחזרה על סדר האותיות במשחק תנועה.",
+          "giver_npc": "teacher_maya",
+          "wait_for_npc_turn_in": true,
+          "start_dialogue_id": null,
+          "turn_in_dialogue_id": "the_alphabet_adventure_q07_finish",
+          "status": "complete",
+          "rewards": {
+            "xp": 75,
+            "items": [
+              {
+                "id": "coin",
+                "amount": 5
+              }
+            ]
+          },
+          "steps": [
+            {
+              "type": "talk_to_npc",
+              "npc_id": "teacher_maya",
+              "dialogue_id": "the_alphabet_adventure_q07_start"
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q07_spell_dad",
+              "display_text": "הרכב את המילה אבא באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "letter_ordering",
+                "instruction": "הרכב את המילה אבא באנגלית.",
+                "tasks": [
+                  "d",
+                  "a",
+                  "d"
+                ],
+                "target": "dad",
+                "variant": "word_spelling",
+                "success": "הרכבת את המילה לפי המשמעות.",
+                "params": {
+                  "prompt": "הרכב את המילה אבא באנגלית.",
+                  "targetWord": "dad",
+                  "extraDistractorCount": 2,
+                  "customDistractors": [
+                    "b",
+                    "c"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "listening_letter_ordering",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 2,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q07_listen_bad",
+              "display_text": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
+              "minigame_brief": {
+                "minigame_id": "listening_letter_ordering",
+                "instruction": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
+                "tasks": [
+                  "b",
+                  "a",
+                  "d"
+                ],
+                "target": "bad",
+                "variant": "listening_spelling",
+                "success": "בחרת לפי המילה ששמעת.",
+                "params": {
+                  "prompt": "הקשב למילה והרכב אותה מכל האותיות לפי הסדר.",
+                  "targetWord": "bad",
+                  "promptAudio": "_OurAssets/Art/Audio/Voice/Words/bad.mp3",
+                  "hintMode": "AudioOnly",
+                  "extraDistractorCount": 1,
+                  "customDistractors": [
+                    "c"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "play_minigame",
+              "minigame_id": "fruit_slice",
+              "world_object_id": "Exam_Table_Fairy_Rose_Park",
+              "difficulty": 1,
+              "success_required": true,
+              "instance_id": "the_alphabet_adventure_q07_slice_bad",
+              "display_text": "חתוך את האותיות לפי הסדר כדי לכתוב רע באנגלית.",
+              "minigame_brief": {
+                "minigame_id": "fruit_slice",
+                "instruction": "חתוך את האותיות לפי הסדר כדי לכתוב רע באנגלית.",
+                "tasks": [
+                  "b",
+                  "a",
+                  "d"
+                ],
+                "target": "bad",
+                "variant": "letter_slicing",
+                "success": "שמרת על סדר האותיות במילה.",
+                "params": {
+                  "prompt": "חתוך את האותיות לפי הסדר כדי לכתוב רע באנגלית.",
+                  "segmentation": "Letters",
+                  "targetText": "bad",
+                  "preFilledIndices": [],
+                  "distractors": [
+                    "c"
+                  ],
+                  "extraLetterDistractorCount": 0
                 }
               }
             }

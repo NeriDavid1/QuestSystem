@@ -19,9 +19,35 @@ minigames:
       - targetWord
       - extraDistractorCount
       - customDistractors
+      - visualVariant
+      - promptAudio
+      - hintMode
       - wordRevealDatabase
     variants:
       - word_spelling
+    typical_stations: [chest, cart, tombstone, exam_table]
+
+  listening_letter_ordering:
+    image: images/minigames/listening_letter_ordering.png
+    name: "Listen & Build"
+    unity_config: LetterOrderingQuestConfigSO
+    unity_content: LetterOrderingDataSO
+    category: spelling
+    description: "Listen to the assigned English recording, then arrange letters to spell the word. Separate teal and gold visuals, replay button, and optional text clue. Uses the shared Letter Ordering validation."
+    english_focus: "Listening comprehension, spelling"
+    difficulty_range: [1, 6]
+    default_visual_variant: ListenAndBuild
+    content_fields:
+      - prompt
+      - targetWord
+      - extraDistractorCount
+      - customDistractors
+      - visualVariant
+      - promptAudio
+      - hintMode
+      - wordRevealDatabase
+    variants:
+      - listening_spelling
     typical_stations: [chest, cart, tombstone, exam_table]
 
   word_ordering:
@@ -63,21 +89,18 @@ minigames:
     typical_stations: [chest, exam_table]
 
   letter_drawing:
+    image: images/minigames/letter_drawing.png
     name: "Letter Drawing"
-    unity_config: DrawingQuestConfigSO
-    unity_content: LetterPathSO
+    unity_config: LetterTracingQuestConfigSO
+    unity_content: TracingLessonSO
     category: motor_skills
-    description: "Trace or draw an English letter on screen."
+    description: "Type letters or English words in the order they should be traced. Each entry is one round; letter case is preserved."
     english_focus: "Letter formation, stroke order"
     difficulty_range: [1, 4]
     content_fields:
-      - letter
-      - strokes
-      - previewImage
-      - clip
+      - symbols
     variants:
       - trace_guided
-      - free_draw
     typical_stations: [shop, chest, cart]
 
   speak_aloud:

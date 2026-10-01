@@ -1,4 +1,6 @@
 import type { CatalogEntry, EditorData, MinigameInstance, QuestStep } from './types'
+import { currentLetterDrawingCatalog, tracingSteps } from './letterDrawing'
+import { currentLetterOrderingCatalog } from './letterOrdering'
 
 /**
  * Editable parameter kinds. They mirror the public properties of the Unity data
@@ -8,7 +10,7 @@ import type { CatalogEntry, EditorData, MinigameInstance, QuestStep } from './ty
  * - LetterOrderingDataSO → letter_ordering
  * - SpeakAloudDataSO     → speak_aloud
  * - LetterConnectionLevelConfigSO → word_matching
- * - LetterPathSO         → letter_drawing
+ * - TracingLessonSO      → letter_drawing (references ready SymbolPathSO assets)
  * - MinerCategoryDataSO  → dwarf_miner
  * - SliceOrderingDataSO  → fruit_slice
  *
@@ -38,6 +40,7 @@ export interface MinigameParamField {
   max?: number
   /** Allowed values for `select` fields (Unity enum names). */
   options?: string[]
+  optionLabelKeys?: Record<string, string>
   /** Rendered collapsed behind the "Advanced" toggle (optional Unity asset references). */
   advanced?: boolean
 }
@@ -49,6 +52,9 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
   targetWord: { name: 'targetWord', labelKey: 'minigameParamTargetWord', type: 'string', default: '' },
   extraDistractorCount: { name: 'extraDistractorCount', labelKey: 'minigameParamExtraDistractors', type: 'integer', min: 0, default: 2 },
   customDistractors: { name: 'customDistractors', labelKey: 'minigameParamCustomDistractors', type: 'charArray', default: [] },
+  visualVariant: { name: 'visualVariant', labelKey: 'minigameParamVisualVariant', hintKey: 'minigameParamVisualVariantHint', type: 'select', options: ['Classic', 'ListenAndBuild'], optionLabelKeys: { Classic: 'minigameVisualClassic', ListenAndBuild: 'minigameVisualListening' }, default: 'Classic' },
+  promptAudio: { name: 'promptAudio', labelKey: 'minigameParamPromptAudio', hintKey: 'minigameParamPromptAudioHint', type: 'asset', default: '' },
+  hintMode: { name: 'hintMode', labelKey: 'minigameParamHintMode', hintKey: 'minigameParamHintModeHint', type: 'select', options: ['AudioOnly', 'TextAndAudio'], optionLabelKeys: { AudioOnly: 'minigameHintAudioOnly', TextAndAudio: 'minigameHintTextAndAudio' }, default: 'AudioOnly' },
 
   // WordOrderingDataSO
   translation: { name: 'translation', labelKey: 'minigameParamTranslation', hintKey: 'minigameParamTranslationHint', type: 'textarea', default: '' },
@@ -67,7 +73,11 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
   letters: { name: 'letters', labelKey: 'minigameParamLetters', type: 'json', default: [] },
   wordTasks: { name: 'wordTasks', labelKey: 'minigameParamWordTasks', type: 'json', default: [] },
 
-  // LetterPathSO
+  // TracingLessonSO: case-sensitive IDs of ready Unity SymbolPathSO assets.
+  drawingInputMode: { name: 'drawingInputMode', labelKey: 'minigameDrawingInputMode', type: 'select', default: 'Symbols', options: ['Symbols', 'Word'], optionLabelKeys: { Symbols: 'minigameDrawingSymbolsMode', Word: 'minigameDrawingWordMode' } },
+  word: { name: 'word', labelKey: 'minigameDrawingWord', hintKey: 'minigameDrawingWordHint', type: 'string', default: '' },
+  symbols: { name: 'symbols', labelKey: 'minigameParamSymbols', hintKey: 'minigameParamSymbolsHint', type: 'stringArray', default: ['A'] },
+  // Legacy drawing fields remain readable for old documents.
   letter: { name: 'letter', labelKey: 'minigameParamLetter', type: 'string', default: 'A' },
   strokes: { name: 'strokes', labelKey: 'minigameParamStrokes', type: 'json', default: [] },
   previewImage: { name: 'previewImage', labelKey: 'minigameParamPreviewImage', type: 'asset', default: '' },
@@ -94,6 +104,7 @@ export const MINIGAME_PARAM_FIELDS: Record<string, MinigameParamField> = {
  * data SO gives it a different default or meaning (e.g. each game's `prompt` default).
  */
 const MINIGAME_FIELD_OVERRIDES: Record<string, Record<string, Partial<MinigameParamField>>> = {
+  listening_letter_ordering: { visualVariant: { default: 'ListenAndBuild' } },
   dwarf_miner: {
     prompt: { default: 'Collect the right words' },
     targetWords: { hintKey: 'minigameParamMinerTargetWordsHint' },
@@ -137,12 +148,12 @@ function getMetadataArray(entry: CatalogEntry | undefined, key: string): string[
 
 /** The `content_fields` declared on the catalog minigame entry (from _registry/minigames.yaml). */
 export function getMinigameParamFieldNames(entry: CatalogEntry | undefined): string[] {
-  return getMetadataArray(entry, 'content_fields')
+  return getMetadataArray(entry ? currentLetterOrderingCatalog(currentLetterDrawingCatalog(entry)) : entry, 'content_fields')
 }
 
 /** The allowed gameplay variants declared on the catalog minigame entry. */
 export function getMinigameVariantsForEntry(entry: CatalogEntry | undefined): string[] {
-  return getMetadataArray(entry, 'variants')
+  return getMetadataArray(entry ? currentLetterDrawingCatalog(entry) : entry, 'variants')
 }
 
 /** Resolve the editable parameter fields for a catalog minigame entry. */
@@ -214,6 +225,11 @@ export function seedParamsFromBrief(
   const trimmedTarget = (target ?? '').trim()
   const trimmedInstruction = (instruction ?? '').trim()
 
+  if (entry?.external_id === 'letter_drawing' && !Object.hasOwn(next, 'symbols')) {
+    const legacy = typeof next.letter === 'string' ? next.letter : trimmedTarget
+    if (/^[A-Za-z]$/.test(legacy)) next.symbols = [legacy]
+  }
+
   if (fields.has('prompt')) {
     const currentPrompt = typeof next.prompt === 'string' ? next.prompt.trim() : ''
     const promptField = resolveField(entry?.external_id, 'prompt')
@@ -257,7 +273,12 @@ export function seedParamsFromBrief(
 
 /** Read a parameter value, falling back to the field default when unset. */
 export function readMinigameParam(minigame: MinigameInstance, field: MinigameParamField): unknown {
+  if (field.name === 'symbols' && (minigame.params?.word || !Object.hasOwn(minigame.params ?? {}, 'symbols')))
+    return tracingSteps(minigame.params ?? {}, minigame.target)
   const value = minigame.params?.[field.name]
+  if (field.type === 'select' && typeof value === 'number' && Number.isInteger(value)) {
+    return field.options?.[value] ?? value
+  }
   if (value === undefined || value === null || value === '') {
     return field.default ?? defaultValueForType(field.type)
   }

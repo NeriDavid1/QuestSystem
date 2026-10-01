@@ -58,7 +58,7 @@ export function StepMinigameEditor({ step }: { step: QuestStep }) {
                 <small>{catalogEntry ? catalogEntry.name : t('minigameParamsUnknownGame')}</small>
               </div>
               <MinigameParamsEditor
-                minigame={minigame}
+                minigame={{ ...minigame, minigame_id: catalogEntry?.external_id ?? minigame.minigame_id }}
                 fields={paramFields}
                 onChange={(params) => patchMinigame({ params, minigame_id: minigame.minigame_id ?? catalogEntry?.external_id ?? null })}
               />

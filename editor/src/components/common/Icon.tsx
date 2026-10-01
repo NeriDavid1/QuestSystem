@@ -20,6 +20,7 @@ export function Icon({ name }: { name: string }) {
     redo: '↷',
     undo: '↶',
     users: '♙',
+    voice: '♪',
     warning: '!',
   }
   return <span className="icon" data-name={name} aria-hidden="true">{glyphs[name] ?? '•'}</span>

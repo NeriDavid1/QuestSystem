@@ -1,0 +1,41 @@
+{
+  "hosted_readback": "PASS",
+  "archive": "C:\\Users\\kiril\\Downloads\\the_alphabet_adventure-questline (4).zip",
+  "editor_deployment_commit": "0a9dc0fc53705bd3e75ae1f7dd01d85969a624f3",
+  "quests": 7,
+  "learning_steps": 29,
+  "dialogues": 14,
+  "dialogue_lines": 62,
+  "minigame_instances": 29,
+  "mismatches": [],
+  "normalizations": [
+    "Editor draft status instead of source completeness status.",
+    "Zero-based contiguous learning-step positions after opening-dialogue promotion.",
+    "Reward list order is not semantically significant."
+  ],
+  "boundaries": [
+    "Saved hosted draft; public snapshot not published.",
+    "Unity gameplay and phonetic audition not performed."
+  ],
+  "before_update_backup": "C:/Users/kiril/Downloads/the_alphabet_adventure-questline (3).zip",
+  "deployment_run": "https://github.com/NeriDavid1/QuestSystem/actions/runs/36731872498",
+  "deployment_result": "success",
+  "content_validation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "build_all": "success",
+  "unrelated_bundle_content_changed": false,
+  "browser_proof": "reports/alphabet_adventure_revision_hosted_2026-09-30.png",
+  "independent_reload_before_export": true,
+  "old_learning_steps": 39,
+  "revision_summary": [
+    "Learner explanations use Hebrew אות ניקוד and contain no IPA or niqqud.",
+    "First tracing activity contains only A and a.",
+    "Opening story and teaching are one dialogue; games follow immediately.",
+    "Miner target pools retain uppercase and lowercase forms.",
+    "Slice aaa preserves three letter occurrences.",
+    "Hebrew combination cues בא, קא, דא build ba, ca, da.",
+    "Four main quests and three homework quests; six game types."
+  ]
+}

@@ -87,6 +87,8 @@ CONTENT_FIELD_NAMES = {
     "data",
     "levelConfig",
     "letterPath",
+    "lesson",
+    "symbolPath",
 }
 
 
@@ -203,6 +205,8 @@ def extract_unity_minigame_params(
     if not content_path or not content_path.is_file():
         return minigame_id, {}
     content_data = load_unity_yaml(content_path)
+    if minigame_id == "letter_ordering" and content_data.get("visualVariant") in (1, "ListenAndBuild"):
+        minigame_id = "listening_letter_ordering"
     params = extract_params(minigame_id or "", content_data, guid_index, our_assets, content_fields)
     # Registry fields the data SO no longer serializes (e.g. a removed Unity field) have no
     # Unity value to compare; they are schema drift, not per-instance drift.
@@ -225,6 +229,7 @@ def missing_param_matches(key: str, unity_value: Any) -> bool:
     if unity_value in ("", None) or unity_value == []:
         return True
     return key in IMPORTER_PARAM_FALLBACKS and params_equal(IMPORTER_PARAM_FALLBACKS[key], unity_value)
+
 
 def parse_reward_definition(path: Path) -> list[dict[str, Any]]:
     """Extract item rewards granted by a RewardDefinitionSO asset bundle."""

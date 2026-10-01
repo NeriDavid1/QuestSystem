@@ -1,5 +1,11 @@
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useT } from '../../i18n'
+import { tracingSteps } from '../../lib/letterDrawing'
+import { orderingVisual } from '../../lib/letterOrdering'
+import listeningFrame from '../../assets/minigames/listen-build/ListeningFrame.png'
+import listeningTile from '../../assets/minigames/listen-build/LetterTile.png'
+import listeningButton from '../../assets/minigames/listen-build/ListenButton.png'
+import listeningSlot from '../../assets/minigames/listen-build/AnswerSlot.png'
 
 type MockParams = Record<string, unknown>
 
@@ -74,26 +80,59 @@ function gapifyWord(fullWord: string, missingIndices: number[]): string {
 function ParchmentShell({
   children,
   closeClass = 'brown',
+  interactive = false,
 }: {
   children: ReactNode
   closeClass?: 'brown' | 'red'
+  interactive?: boolean
 }) {
   return (
-    <div className="mg-mock-parchment" aria-hidden="true">
+    <div className="mg-mock-parchment" aria-hidden={interactive ? undefined : true}>
       <span className={`mg-mock-close ${closeClass}`}>×</span>
       {children}
     </div>
   )
 }
 
-function LetterOrderingMock({ params, prompt, seed }: { params: MockParams; prompt: string; seed: string }) {
+function LetterOrderingMock({ params, prompt, seed, listening = false }: { params: MockParams; prompt: string; seed: string; listening?: boolean }) {
+  const t = useT()
   const targetWord = asString(params.targetWord) || asString(params.target) || 'word'
   const extra = asNumber(params.extraDistractorCount, 2)
   const custom = asStringArray(params.customDistractors)
   const pool = buildLetterPool(targetWord, extra, custom, seed)
+  if (listening) {
+    const hasAudio = Boolean(asString(params.promptAudio).trim())
+    const textClue = !hasAudio || params.hintMode === 'TextAndAudio' || params.hintMode === 1
+    return (
+      <div className="mg-listen-preview">
+        <div className="mg-listen-board" aria-hidden="true">
+          <img className="mg-listen-frame" src={listeningFrame} alt="" />
+          <div className="mg-listen-title">{t('mgMockListeningTitle')}</div>
+          <span className="mg-listen-close" style={{ backgroundImage: `url(${listeningSlot})` }}>×</span>
+          <div className="mg-listen-prompt" dir="auto">{textClue ? prompt || '…' : t('mgMockListeningInstruction')}</div>
+          {hasAudio && <div className="mg-listen-controls">
+            <div className="mg-listen-wave">{[30, 60, 85, 100, 85, 60, 30].map((height, i) => <i key={i} style={{ height: `${height}%` }} />)}</div>
+            <img src={listeningButton} alt="" />
+            <div className="mg-listen-wave">{[30, 60, 85, 100, 85, 60, 30].map((height, i) => <i key={i} style={{ height: `${height}%` }} />)}</div>
+            <small>{t('mgMockListeningReplay')}</small>
+          </div>}
+          <div className="mg-listen-slots" dir="ltr">
+            {Array.from({ length: Math.max(1, targetWord.length) }, (_, i) => <img src={listeningSlot} key={i} alt="" />)}
+          </div>
+          <div className="mg-listen-divider" />
+          <div className="mg-listen-tiles" dir="ltr">
+            {pool.map((ch, i) => <span key={`${ch}-${i}`} style={{ backgroundImage: `url(${listeningTile})` }}>{ch.toUpperCase()}</span>)}
+          </div>
+          <div className="mg-listen-helper">{t('mgMockListeningHelper')}</div>
+        </div>
+        <small className="mg-listen-note">{t('mgMockListeningPreview')}</small>
+      </div>
+    )
+  }
   return (
     <ParchmentShell>
       <div className="mg-mock-prompt" dir="auto">{prompt || '…'}</div>
+
       <div className="mg-mock-slots" dir="ltr">
         {Array.from({ length: Math.max(1, targetWord.length) }, (_, i) => (
           <span className="mg-mock-slot" key={i} />
@@ -209,21 +248,31 @@ function SpeakAloudMock({ params, prompt, speakLabel }: { params: MockParams; pr
   )
 }
 
-function LetterDrawingMock({ params, clearLabel, doneLabel }: { params: MockParams; clearLabel: string; doneLabel: string }) {
-  const letter = asString(params.letter) || 'A'
-  const preview = asString(params.previewImage)
+function LetterDrawingMock({ params }: { params: MockParams }) {
+  const t = useT()
+  const symbols = tracingSteps(params)
+  const [selected, setSelected] = useState(0)
+  const index = Math.min(selected, Math.max(0, symbols.length - 1))
   return (
-    <ParchmentShell>
+    <ParchmentShell interactive>
+      <div className="mg-mock-slots mg-drawing-sequence" dir="ltr">
+        {symbols.map((symbol, position) => (
+          <button type="button" className={`mg-mock-slot ${position === index ? 'filled' : ''}`}
+            key={position} aria-pressed={position === index}
+            aria-label={t('drawingPreviewLetter', { letter: symbol, index: position + 1, count: symbols.length })}
+            onClick={() => setSelected(position)}>{symbol}</button>
+        ))}
+      </div>
       <div className="mg-mock-draw-canvas">
-        {preview ? (
-          <img src={preview} alt={letter} className="mg-mock-draw-preview" />
-        ) : (
-          <span className="mg-mock-draw-letter">{letter.toUpperCase()}</span>
-        )}
+        <span className={`mg-mock-draw-letter ${symbols[index]?.length > 1 ? 'mg-mock-draw-word' : ''}`}
+          style={symbols[index]?.length > 1 ? { fontSize: `min(82px, ${120 / symbols[index].length}cqi)` } : undefined}>{symbols[index] || '…'}</span>
       </div>
       <div className="mg-mock-draw-actions">
-        <button type="button" className="mg-mock-draw-btn" disabled>{clearLabel}</button>
-        <button type="button" className="mg-mock-draw-btn primary" disabled>{doneLabel}</button>
+        <button type="button" className="mg-mock-draw-btn" disabled={index === 0}
+          onClick={() => setSelected(index - 1)}>{t('drawingPreviewPrevious')}</button>
+        <span dir="ltr">{symbols.length ? index + 1 : 0} / {symbols.length}</span>
+        <button type="button" className="mg-mock-draw-btn primary" disabled={index >= symbols.length - 1}
+          onClick={() => setSelected(index + 1)}>{t('drawingPreviewNext')}</button>
       </div>
     </ParchmentShell>
   )
@@ -325,8 +374,11 @@ export function MinigameMock({
   let body: ReactNode = null
   switch (id) {
     case 'letter_ordering':
-      body = <LetterOrderingMock params={params} prompt={prompt} seed={seed} />
+    case 'listening_letter_ordering': {
+      const visual = orderingVisual(id, params)
+      body = <LetterOrderingMock params={params} prompt={prompt} seed={seed} listening={visual === 'ListenAndBuild' || visual === 1} />
       break
+    }
     case 'word_ordering':
       body = <WordOrderingMock params={params} prompt={prompt} seed={seed} />
       break
@@ -337,7 +389,7 @@ export function MinigameMock({
       body = <SpeakAloudMock params={params} prompt={prompt} speakLabel={t('mgMockSpeak')} />
       break
     case 'letter_drawing':
-      body = <LetterDrawingMock params={params} clearLabel={t('mgMockClear')} doneLabel={t('mgMockDone')} />
+      body = <LetterDrawingMock key={tracingSteps(params).join('|')} params={params} />
       break
     case 'dwarf_miner':
       body = <DwarfMinerMock params={params} prompt={prompt} seed={seed} />
@@ -355,7 +407,7 @@ export function MinigameMock({
 
   return (
     <div className="mg-mock">
-      <small className="eyebrow mg-mock-badge">{t('mgMockPreviewOnly')}</small>
+      <small className="eyebrow mg-mock-badge">{t(minigameId === 'letter_drawing' ? 'drawingPreviewTitle' : 'mgMockPreviewOnly')}</small>
       <div className="mg-mock-board" dir="ltr">
         {body}
       </div>

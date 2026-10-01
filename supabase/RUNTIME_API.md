@@ -6,6 +6,24 @@ authenticated RLS policies.
 
 ## Read endpoints
 
+### Letter Drawing content contract
+
+The stable minigame ID is `letter_drawing`; the supported variant is `trace_guided`.
+New instances use `params: { "symbols": ["A", "b", "Apple"] }`, with one case-sensitive
+English letter or word per round. Order and repeats are preserved. Unity Quest Sync creates
+`TracingLessonSO` + `LetterTracingQuestConfigSO` and resolves ready `SymbolPathSO`
+assets. It completes the station objective after the entire list. Museum pairing
+is separate. Legacy single-letter `params.letter` / `target` remain supported.
+
+The editor shows one manual text field per round. Enter `A`, `a`, then `Apple` to
+trace two letters followed by a whole word. Existing published `drawingInputMode`
+and `word` exercises remain readable and import with their original sequence.
+
+QuestForge normalizes older Letter Drawing catalog rows to this shipped contract
+when loading the connected editor. The registry and catalog seed contain the same
+metadata and screenshot; other catalog kinds and existing published revisions are
+unchanged. Empty/invalid sequences block publication and Unity import.
+
 The public anon key can read the following published records:
 
 ```text

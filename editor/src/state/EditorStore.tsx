@@ -25,6 +25,7 @@ import type {
 import { emptyEditorData } from '../lib/types'
 import { hasSupabaseConfig, loadEditorData, supabase } from '../lib/supabase'
 import { createDemoData } from '../lib/demoData'
+import { isLetterOrdering, LISTENING_LETTER_ORDERING_ID } from '../lib/letterOrdering'
 import {
   defaultParamsForEntry,
   getMinigameCatalogEntry,
@@ -39,6 +40,7 @@ import {
   getQuestlineQuests,
   getStepMinigame,
   getStepMinigameKey,
+  getStepType,
   makeLocalId,
   normalizeContentKey,
   refreshDraftQuestKey,
@@ -54,6 +56,7 @@ import {
   uniqueQuestlineKey,
 } from '../lib/editorData'
 import { validateQuestline } from '../lib/validation'
+import { defaultStepPayload } from '../lib/stepPresentation'
 import { importBundleIntoLine } from '../lib/bundleImport'
 import {
   SaveConflictError,
@@ -81,6 +84,11 @@ export interface ConfirmState {
 interface ToastState {
   message: string
   tone: 'success' | 'error'
+}
+
+export interface InspectorFocus {
+  section: 'quest' | 'steps'
+  nonce: number
 }
 
 interface EditorStoreValue {
@@ -153,7 +161,10 @@ interface EditorStoreValue {
   updateReward: (rewardId: string, patch: Partial<QuestReward>) => void
   removeReward: (rewardId: string) => void
   addQuest: () => void
-  addStep: () => void
+  addStep: (stepType?: string) => void
+  /** Select the quest/step a validation issue points at and open it in the inspector. */
+  focusEntity: (entityId: string) => void
+  inspectorFocus: InspectorFocus | null
   createQuestline: (name: string, key: string, theme: string) => void
   removeQuestline: (questlineId: string) => void
   removeQuest: (questId: string) => void
@@ -191,6 +202,8 @@ function nextPosition(items: Array<{ position: number }>): number {
 
 export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const t = useT()
+  const authTranslate = useRef(t)
+  authTranslate.current = t
   const demoMode = !hasSupabaseConfig
   const [data, setData] = useState<EditorData>(() => (demoMode ? createDemoData() : emptyEditorData()))
   const [user, setUser] = useState<{ id: string; email?: string } | null>(null)
@@ -219,6 +232,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   const [libraryTab, setLibraryTab] = useState<LibraryTab>('catalog')
   const [confirmState, setConfirmState] = useState<ConfirmState | null>(null)
   const [conflictState, setConflictState] = useState(false)
+  const [inspectorFocus, setInspectorFocus] = useState<InspectorFocus | null>(null)
 
   const history = useRef<EditorData[]>([])
   const historyIndex = useRef(-1)
@@ -296,19 +310,28 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     const client = supabase
     let mounted = true
 
-    const enterWorkspace = async (sessionUser: { id: string; email?: string | null }) => {
-      const displayName = sessionUser.email?.split('@')[0] ?? null
-      const { error: membershipError } = await client.rpc('ensure_workspace_member', {
-        p_display_name: displayName,
-      })
-      if (membershipError) throw membershipError
-      const loaded = await loadEditorData()
-      if (!mounted) return
-      setData(loaded)
-      questlineVersions.current = Object.fromEntries(
-        loaded.questlines.map((line) => [line.id, line.updated_at ?? '']),
-      )
-      setLoadError('')
+    let workspaceUserId: string | null = null
+    let workspaceLoad: Promise<void> | null = null
+    const enterWorkspace = (sessionUser: { id: string; email?: string | null }): Promise<void> => {
+      // getSession and INITIAL_SESSION can arrive together. Share the same
+      // load, and never replace an open draft on a same-user auth refresh.
+      if (workspaceUserId === sessionUser.id && workspaceLoad) return workspaceLoad
+      workspaceUserId = sessionUser.id
+      workspaceLoad = (async () => {
+        const displayName = sessionUser.email?.split('@')[0] ?? null
+        const { error: membershipError } = await client.rpc('ensure_workspace_member', {
+          p_display_name: displayName,
+        })
+        if (membershipError) throw membershipError
+        const loaded = await loadEditorData()
+        if (!mounted || workspaceUserId !== sessionUser.id) return
+        setData(loaded)
+        questlineVersions.current = Object.fromEntries(
+          loaded.questlines.map((line) => [line.id, line.updated_at ?? '']),
+        )
+        setLoadError('')
+      })()
+      return workspaceLoad
     }
 
     const initialize = async () => {
@@ -320,7 +343,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
         try {
           await enterWorkspace(sessionUser)
         } catch (error) {
-          if (mounted) setLoadError(error instanceof Error ? error.message : t('loadEditorFailed'))
+          if (mounted) setLoadError(error instanceof Error ? error.message : authTranslate.current('loadEditorFailed'))
         }
       }
       setAuthReady(true)
@@ -331,9 +354,11 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       setUser(sessionUser ? { id: sessionUser.id, email: sessionUser.email } : null)
       if (sessionUser) {
         void enterWorkspace(sessionUser).catch((error: unknown) => {
-          if (mounted) setLoadError(error instanceof Error ? error.message : t('loadEditorFailed'))
+          if (mounted) setLoadError(error instanceof Error ? error.message : authTranslate.current('loadEditorFailed'))
         })
       } else {
+        workspaceUserId = null
+        workspaceLoad = null
         setData(emptyEditorData())
       }
     })
@@ -341,7 +366,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       mounted = false
       authListener.subscription.unsubscribe()
     }
-  }, [t])
+  }, [])
 
   // --- Selection sanity effects ---
   useEffect(() => {
@@ -450,10 +475,27 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
   }, [selectedLine, selectedQuest])
 
   const updateStep = useCallback((stepId: string, patch: Partial<QuestStep>) => {
-    setData((current) => ({
-      ...current,
-      steps: current.steps.map((step) => (step.id === stepId ? { ...step, ...patch } : step)),
-    }))
+    setData((current) => {
+      const previous = current.steps.find(step => step.id === stepId)
+      const kind = patch.payload?.minigame_id
+      const existing = previous ? getStepMinigame(current, previous) : undefined
+      // Give this step its own content when selecting the other ordering game.
+      // An instance can be shared by other steps, whose visual must remain intact.
+      const switchOrdering = previous && kind !== previous.payload.minigame_id && isLetterOrdering(kind) && isLetterOrdering(previous.payload.minigame_id) && existing
+      const nextInstance = switchOrdering ? {
+        ...existing, id: makeLocalId('minigame'), key: uniqueMinigameKey(current, `${existing.key}_version`),
+        minigame_id: String(kind), variant: kind === LISTENING_LETTER_ORDERING_ID ? 'listening_spelling' : 'word_spelling',
+        params: { ...existing.params, visualVariant: kind === LISTENING_LETTER_ORDERING_ID ? 'ListenAndBuild' : 'Classic' },
+        source_path: null, source_metadata: { local_draft: true },
+      } : undefined
+      if (nextInstance) touchedMinigameIds.current.add(nextInstance.id)
+      const resolvedPatch = nextInstance ? { ...patch, payload: { ...patch.payload, instance_id: nextInstance.key, instance_key: nextInstance.key } } : patch
+      return {
+        ...current,
+        minigames: nextInstance ? [...current.minigames, nextInstance] : current.minigames,
+        steps: current.steps.map(step => step.id === stepId ? { ...step, ...resolvedPatch } : step),
+      }
+    })
     setDirty(true)
   }, [])
 
@@ -758,7 +800,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     notify(t('draftQuestAdded'))
   }, [data, notify, selectedLine, t])
 
-  const addStep = useCallback(() => {
+  const addStep = useCallback((stepType = 'talk_to_npc') => {
     if (!selectedQuest) return
     const steps = getQuestSteps(data, selectedQuest.id)
     const position = nextPosition(steps)
@@ -767,15 +809,30 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       quest_id: selectedQuest.id,
       key: allocateStepKey(data, selectedQuest.id, selectedQuest.key, position),
       position,
-      step_type: 'talk_to_npc',
-      payload: { npc_id: selectedQuest.giver_external_id ?? 'teacher_maya', dialogue_id: '' },
+      step_type: stepType,
+      payload: defaultStepPayload(getStepType(data, stepType), {
+        giver: selectedQuest.giver_external_id ?? selectedLine?.default_giver_external_id ?? 'teacher_maya',
+        previousStep: steps[steps.length - 1],
+      }),
       source_metadata: { local_draft: true, source_position: position },
     }
     setData((current) => ({ ...current, steps: [...current.steps, newStep] }))
     setSelectedStepId(newStep.id)
     setDirty(true)
     notify(t('learningStepAdded'))
-  }, [data, notify, selectedQuest, t])
+  }, [data, notify, selectedLine, selectedQuest, t])
+
+  const focusEntity = useCallback((entityId: string) => {
+    const reward = data.rewards.find((item) => item.id === entityId)
+    const targetId = reward ? (reward.step_id ?? reward.quest_id ?? '') : entityId
+    const step = data.steps.find((item) => item.id === targetId)
+    const quest = data.quests.find((item) => item.id === (step ? step.quest_id : targetId))
+    if (!quest) return
+    setView('editor')
+    setSelectedQuestId(quest.id)
+    if (step) setSelectedStepId(step.id)
+    setInspectorFocus((current) => ({ section: step ? 'steps' : 'quest', nonce: (current?.nonce ?? 0) + 1 }))
+  }, [data.quests, data.rewards, data.steps])
 
   const createQuestline = useCallback((name: string, key: string, theme: string) => {
     const lineId = makeLocalId('questline')
@@ -1697,8 +1754,14 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
     const imported = importBundleIntoLine(bundle, data, targetLine, sourceKey)
     imported.dialogues.forEach((dialogue) => touchedDialogueIds.current.add(dialogue.id))
     imported.minigames.forEach((minigame) => touchedMinigameIds.current.add(minigame.id))
-    imported.oldQuestIds.forEach((id) => deletedQuestIds.current.push(id))
-    imported.oldStepIds.forEach((id) => deletedStepIds.current.push(id))
+    const retainedQuestIds = new Set(imported.quests.map((quest) => quest.id))
+    const retainedStepIds = new Set(imported.steps.map((step) => step.id))
+    // Retained rows are updates. Deleting them after the upsert would cascade
+    // through the newly imported lesson graph.
+    deletedQuestIds.current = deletedQuestIds.current.filter((id) => !retainedQuestIds.has(id))
+    deletedStepIds.current = deletedStepIds.current.filter((id) => !retainedStepIds.has(id))
+    imported.oldQuestIds.filter((id) => !retainedQuestIds.has(id)).forEach((id) => deletedQuestIds.current.push(id))
+    imported.oldStepIds.filter((id) => !retainedStepIds.has(id)).forEach((id) => deletedStepIds.current.push(id))
     setData((current) => ({
       ...current,
       questlines: current.questlines.some((item) => item.id === targetLine.id)
@@ -1861,6 +1924,8 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       removeReward,
       addQuest,
       addStep,
+      focusEntity,
+      inspectorFocus,
       createQuestline,
       removeQuestline,
       removeQuest,
@@ -1893,7 +1958,7 @@ export function EditorStoreProvider({ children }: { children: ReactNode }) {
       showRevisions, showTemplates, libraryTab, setLibraryTab, updateLine, updateQuest, updateStep, updateDialogue,
       updateDialogueLine, addDialogueLine, removeDialogueLine, moveDialogueLine,       createDialogue,
       createDialogueForStep, createDialogueForQuest, createMinigameForStep, updateMinigame, togglePrerequisite, addReward, updateReward,
-      removeReward, addQuest, addStep, createQuestline, removeQuestline, removeQuest, removeStep,
+      removeReward, addQuest, addStep, focusEntity, inspectorFocus, createQuestline, removeQuestline, removeQuest, removeStep,
       removeDialogue, removeMinigame, duplicateQuest, duplicateStep, duplicateDialogue, duplicateQuestline,
       moveQuest, moveStep, saveDraft, publish,
       retryJoin, handleSignIn, handleSignUp, handleSignOut, revisionsForLine,

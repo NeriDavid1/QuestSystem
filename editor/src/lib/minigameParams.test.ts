@@ -73,7 +73,7 @@ describe('minigameParams schema', () => {
 
   it('returns the content_fields declared on the catalog entry', () => {
     expect(getMinigameParamFieldNames(letterOrdering)).toEqual([
-      'prompt', 'targetWord', 'extraDistractorCount', 'customDistractors', 'wordRevealDatabase',
+      'prompt', 'targetWord', 'extraDistractorCount', 'customDistractors', 'visualVariant', 'promptAudio', 'hintMode', 'wordRevealDatabase',
     ])
     expect(getMinigameParamFieldNames(undefined)).toEqual([])
   })
@@ -81,7 +81,7 @@ describe('minigameParams schema', () => {
   it('resolves only declared fields that have a known definition', () => {
     const fields = getMinigameParamsForEntry(letterOrdering)
     expect(fields.map((field) => field.name)).toEqual([
-      'prompt', 'targetWord', 'extraDistractorCount', 'customDistractors', 'wordRevealDatabase',
+      'prompt', 'targetWord', 'extraDistractorCount', 'customDistractors', 'visualVariant', 'promptAudio', 'hintMode', 'wordRevealDatabase',
     ])
   })
 

@@ -1,12 +1,19 @@
 import { useT } from '../../i18n'
 import type { EditorData, QuestStep, StepField } from '../../lib/types'
 import { getCatalogKindForRef } from '../../lib/editorData'
+import { parseNumberInput, stepFieldLabel } from '../../lib/stepPresentation'
 import { CatalogSelect } from './CatalogSelect'
 import { FieldLabel } from '../common/FieldLabel'
 
 function isMissingRequired(step: QuestStep, field: StepField): boolean {
   const value = step.payload[field.name]
   return Boolean(field.required) && (value === undefined || value === null || value === '')
+}
+
+/** Optional numbers that are cleared are removed, so Unity falls back to its default. */
+function numberPayloadValue(raw: string, field: StepField): number | '' | undefined {
+  const parsed = parseNumberInput(raw, field)
+  return parsed === '' && !field.required ? undefined : parsed
 }
 
 export function StepFieldEditor({
@@ -26,7 +33,7 @@ export function StepFieldEditor({
   const catalogKind = getCatalogKindForRef(field.ref)
   const isDialogueRef = Boolean(field.ref?.includes('dialogues'))
   const isNumeric = field.type === 'integer' || field.type === 'number'
-  const label = field.name.replaceAll('_', ' ')
+  const label = stepFieldLabel(t, field.name)
   const inputId = `field-${step.id}-${field.name}`
   const unresolvedCatalog = Boolean(
     catalogKind
@@ -72,14 +79,14 @@ export function StepFieldEditor({
         value={String(value ?? field.default ?? '')}
         min={field.min}
         max={field.max}
-        onChange={(event) => onPayloadChange({ [field.name]: isNumeric ? Number(event.target.value) : event.target.value })}
+        onChange={(event) => onPayloadChange({ [field.name]: isNumeric ? numberPayloadValue(event.target.value, field) : event.target.value })}
       />
     )
   }
 
   return (
     <label className={`step-field ${missing ? 'has-error' : ''}`} htmlFor={inputId}>
-      <FieldLabel hint={field.required ? t('required') : t('optional')}>{label}</FieldLabel>
+      <FieldLabel hint={`${field.required ? t('required') : t('optional')} · ${field.name}`}>{label}</FieldLabel>
       {renderControl()}
       {field.description && <small className="field-description">{field.description}</small>}
       {(unresolvedCatalog || unresolvedDialogue) && <span className="unresolved-badge">{t('unresolvedRefBadge')}</span>}

@@ -27,14 +27,14 @@ class ContentPipelineTests(unittest.TestCase):
         self.assertEqual(
             self.bundle["counts"],
             {
-                "catalog_entries": 267,
+                "catalog_entries": 268,
                 "step_type_definitions": 7,
-                "dialogues": 255,
-                "dialogue_lines": 609,
-                "minigame_instances": 519,
-                "questlines": 31,
-                "quests": 116,
-                "steps": 591,
+                "dialogues": 269,
+                "dialogue_lines": 671,
+                "minigame_instances": 548,
+                "questlines": 32,
+                "quests": 123,
+                "steps": 620,
                 "errors": 0,
                 "warnings": 0,
                 "info": 56,
@@ -75,8 +75,8 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         )
-        self.assertEqual(prerequisites, 90)
-        self.assertEqual(rewards, 218)
+        self.assertEqual(prerequisites, 96)
+        self.assertEqual(rewards, 227)
 
     def test_report_and_generated_bundle_are_present(self):
         report = json.loads((ROOT / "reports" / "quest_import_report.json").read_text(encoding="utf-8"))
@@ -183,7 +183,7 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         }
-        self.assertEqual(len(quests_by_key), 116)
+        self.assertEqual(len(quests_by_key), 123)
         self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
         self.assertTrue(
             quests_by_key["adjectives_basics__q01_the_painting_with_no_colors"]["wait_for_npc_turn_in"]
@@ -195,6 +195,7 @@ class ContentPipelineTests(unittest.TestCase):
                 instance.get("minigame_id"),
                 {
                     "letter_ordering",
+                    "listening_letter_ordering",
                     "word_ordering",
                     "speak_aloud",
                     "word_matching",

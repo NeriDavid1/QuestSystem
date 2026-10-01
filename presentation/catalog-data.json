@@ -17,13 +17,13 @@
     "npcs": 31,
     "interactables": 14,
     "items": 199,
-    "minigames": 7,
-    "step_types": 6,
+    "minigames": 8,
+    "step_types": 7,
     "areas_with_image": 16,
     "npcs_with_image": 31,
     "interactables_with_image": 14,
     "items_with_image": 186,
-    "minigames_with_image": 6
+    "minigames_with_image": 8
   },
   "areas": [
     {
@@ -2781,25 +2781,22 @@
       "id": "fruit_slice"
     },
     {
+      "image": "images/minigames/letter_drawing.png",
       "name": "Letter Drawing",
-      "unity_config": "DrawingQuestConfigSO",
-      "unity_content": "LetterPathSO",
+      "unity_config": "LetterTracingQuestConfigSO",
+      "unity_content": "TracingLessonSO",
       "category": "motor_skills",
-      "description": "Trace or draw an English letter on screen.",
+      "description": "Type letters or English words in the order they should be traced. Each entry is one round; letter case is preserved.",
       "english_focus": "Letter formation, stroke order",
       "difficulty_range": [
         1,
         4
       ],
       "content_fields": [
-        "letter",
-        "strokes",
-        "previewImage",
-        "clip"
+        "symbols"
       ],
       "variants": [
-        "trace_guided",
-        "free_draw"
+        "trace_guided"
       ],
       "typical_stations": [
         "shop",
@@ -2825,6 +2822,9 @@
         "targetWord",
         "extraDistractorCount",
         "customDistractors",
+        "visualVariant",
+        "promptAudio",
+        "hintMode",
         "wordRevealDatabase"
       ],
       "variants": [
@@ -2837,6 +2837,40 @@
         "exam_table"
       ],
       "id": "letter_ordering"
+    },
+    {
+      "image": "images/minigames/listening_letter_ordering.png",
+      "name": "Listen & Build",
+      "unity_config": "LetterOrderingQuestConfigSO",
+      "unity_content": "LetterOrderingDataSO",
+      "category": "spelling",
+      "description": "Listen to the assigned English recording, then arrange letters to spell the word. Separate teal and gold visuals, replay button, and optional text clue. Uses the shared Letter Ordering validation.",
+      "english_focus": "Listening comprehension, spelling",
+      "difficulty_range": [
+        1,
+        6
+      ],
+      "default_visual_variant": "ListenAndBuild",
+      "content_fields": [
+        "prompt",
+        "targetWord",
+        "extraDistractorCount",
+        "customDistractors",
+        "visualVariant",
+        "promptAudio",
+        "hintMode",
+        "wordRevealDatabase"
+      ],
+      "variants": [
+        "listening_spelling"
+      ],
+      "typical_stations": [
+        "chest",
+        "cart",
+        "tombstone",
+        "exam_table"
+      ],
+      "id": "listening_letter_ordering"
     },
     {
       "image": "images/minigames/speak_aloud.png",
@@ -3096,6 +3130,46 @@
           "type": "float",
           "required": false,
           "default": 5.0
+        }
+      ]
+    },
+    {
+      "id": "custom",
+      "unity_objective": "Custom",
+      "description": "A Unity-built step run by a scene reactor (task set, cutscene, encounter...); only task minigames are editable",
+      "fields": [
+        {
+          "name": "handler_id",
+          "type": "string",
+          "required": true,
+          "readonly": true,
+          "description": "Unity objective targetId (the reactor's handler id)"
+        },
+        {
+          "name": "unity_objective_index",
+          "type": "integer",
+          "required": true,
+          "readonly": true,
+          "description": "Index in QuestDefinitionSO.objectives; the scene reactor binds to it"
+        },
+        {
+          "name": "count",
+          "type": "integer",
+          "required": false,
+          "readonly": true
+        },
+        {
+          "name": "reactor",
+          "type": "string",
+          "required": true,
+          "readonly": true,
+          "description": "task_set | cutscene | escort | monster_encounter | choice_rounds | wave_defense | museum"
+        },
+        {
+          "name": "tasks",
+          "type": "json",
+          "required": false,
+          "description": "task_set only: one entry per spot {index, name, mode: scene|minigame|none, minigame_id, instance_key, ...}"
         }
       ]
     }

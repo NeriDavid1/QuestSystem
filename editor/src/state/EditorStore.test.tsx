@@ -16,6 +16,11 @@ function Probe() {
     selectedQuestlineId,
     duplicateStep,
     updateMinigame,
+    updateStep,
+    focusEntity,
+    selectedQuestId,
+    selectedStepId,
+    inspectorFocus,
   } = useEditorStore()
   const errors = issues.filter((issue) => issue.severity === 'error').length
   const sourcePlayStep = data.steps.find((step) => step.step_type === 'play_minigame')
@@ -31,13 +36,25 @@ function Probe() {
       <span data-testid="questline-count">{data.questlines.length}</span>
       <span data-testid="selected-questline">{selectedQuestlineId}</span>
       <span data-testid="error-count">{errors}</span>
+      <span data-testid="selected-quest">{selectedQuestId}</span>
+      <span data-testid="selected-step">{selectedStepId}</span>
+      <span data-testid="focus-section">{inspectorFocus?.section ?? ''}</span>
+      <button onClick={() => {
+        const lineQuestIds = data.quests.filter((quest) => quest.questline_id === selectedQuestlineId && quest.id !== selectedQuestId).map((quest) => quest.id)
+        const target = data.steps.find((step) => lineQuestIds.includes(step.quest_id))
+        if (target) focusEntity(target.id)
+      }}>focus-second-quest-step</button>
+
       <span data-testid="minigame-count">{data.minigames.length}</span>
       <span data-testid="source-instance">{sourcePlayStep ? getStepMinigameKey(sourcePlayStep) : ''}</span>
       <span data-testid="copy-instance">{copiedPlayStep ? getStepMinigameKey(copiedPlayStep) : ''}</span>
       <span data-testid="source-target">{String(sourceMinigame?.params.targetWord ?? '')}</span>
       <span data-testid="copy-target">{String(copiedMinigame?.params.targetWord ?? '')}</span>
+      <span data-testid="source-visual">{String(sourceMinigame?.params.visualVariant ?? 'Classic')}</span>
+      <span data-testid="copy-visual">{String(copiedMinigame?.params.visualVariant ?? 'Classic')}</span>
+      <button onClick={() => sourcePlayStep && updateStep(sourcePlayStep.id, { payload: { ...sourcePlayStep.payload, minigame_id: 'listening_letter_ordering' } })}>switch-to-listening</button>
       <button onClick={addQuest}>add-quest</button>
-      <button onClick={addStep}>add-step</button>
+      <button onClick={() => addStep()}>add-step</button>
       <button onClick={() => sourcePlayStep && duplicateStep(sourcePlayStep.id)}>duplicate-play-step</button>
       <button onClick={() => copiedMinigame && updateMinigame(copiedMinigame.id, { params: { ...copiedMinigame.params, targetWord: 'copy-only' } })}>edit-copy-minigame</button>
       <button onClick={() => {
@@ -53,6 +70,30 @@ function Probe() {
 }
 
 describe('EditorStore critical flow', () => {
+  it('jumps to the quest and step a validation issue points at', async () => {
+    const user = userEvent.setup()
+    render(<LocaleProvider><EditorStoreProvider><Probe /></EditorStoreProvider></LocaleProvider>)
+    await waitFor(() => expect(screen.getByTestId('selected-quest').textContent).not.toBe(''))
+    const before = screen.getByTestId('selected-quest').textContent
+    await user.click(screen.getByRole('button', { name: 'focus-second-quest-step' }))
+    await waitFor(() => expect(screen.getByTestId('focus-section').textContent).toBe('steps'))
+    expect(screen.getByTestId('selected-quest').textContent).not.toBe(before)
+    expect(screen.getByTestId('selected-step').textContent).not.toBe('')
+  })
+
+  it('switches ordering versions without changing another exercise or losing the word', async () => {
+    const user = userEvent.setup()
+    render(<LocaleProvider><EditorStoreProvider><Probe /></EditorStoreProvider></LocaleProvider>)
+    const target = screen.getByTestId('source-target').textContent
+    const originalInstance = screen.getByTestId('source-instance').textContent
+    await user.click(screen.getByRole('button', { name: 'duplicate-play-step' }))
+    await user.click(screen.getByRole('button', { name: 'switch-to-listening' }))
+    await waitFor(() => expect(screen.getByTestId('source-visual').textContent).toBe('ListenAndBuild'))
+    expect(screen.getByTestId('source-target').textContent).toBe(target)
+    expect(screen.getByTestId('copy-target').textContent).toBe(target)
+    expect(screen.getByTestId('copy-visual').textContent).toBe('Classic')
+    expect(screen.getByTestId('source-instance').textContent).not.toBe(originalInstance)
+  })
   it('add quest -> add step -> validation state updates', async () => {
     const user = userEvent.setup()
     render(

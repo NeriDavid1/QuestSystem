@@ -8,6 +8,7 @@ import {
 } from '../../lib/minigameParams'
 import { FieldLabel } from '../common/FieldLabel'
 import { Icon } from '../common/Icon'
+import { orderingVisual } from '../../lib/letterOrdering'
 
 type LetterTile = { id: string; value: string }
 type WordTask = { id: string; image: string; fullWord: string; missingIndices: number[] }
@@ -103,7 +104,15 @@ function ArrayParamInput({
   const t = useT()
   const value = readMinigameParam(minigame, field)
   const items = Array.isArray(value) ? value.map((item) => String(item ?? '')) : ['']
-  const commit = (next: string[]) => onChange({ ...(minigame.params ?? {}), [field.name]: normalizeParamValue(field, next) })
+  const commit = (next: string[]) => {
+    const params = { ...(minigame.params ?? {}), [field.name]: normalizeParamValue(field, next) }
+    if (minigame.minigame_id === 'letter_drawing' && field.name === 'symbols') {
+      delete params.word
+      delete params.drawingInputMode
+      delete params.letter
+    }
+    onChange(params)
+  }
   const numeric = field.type === 'integerArray'
 
   return (
@@ -113,13 +122,22 @@ function ArrayParamInput({
         <div className="minigame-param-row" key={index}>
           <label>
             <span className="minigame-task-index">{index + 1}</span>
-            <input
+            {field.options ? <select
+              className="content-text"
+              dir="ltr"
+              value={item}
+              onChange={(event) => commit(items.map((entry, entryIndex) => entryIndex === index ? event.target.value : entry))}
+            >
+              <option value="">—</option>
+              {field.options.map((option) => <option key={option} value={option}>{option}</option>)}
+            </select> : <input
               className="content-text"
               dir="ltr"
               type={numeric ? 'number' : 'text'}
               value={item}
+              placeholder={minigame.minigame_id === 'letter_drawing' && field.name === 'symbols' ? 'A / Apple' : undefined}
               onChange={(event) => commit(items.map((entry, entryIndex) => (entryIndex === index ? event.target.value : entry)))}
-            />
+            />}
           </label>
           <button
             type="button"
@@ -132,8 +150,8 @@ function ArrayParamInput({
           </button>
         </div>
       ))}
-      <button type="button" className="button subtle compact" onClick={() => commit([...items, ''])}>
-        <Icon name="plus" /> {t('minigameParamAdd')}
+      <button type="button" className="button subtle compact" onClick={() => commit([...items, field.options?.[0] ?? ''])}>
+        <Icon name="plus" /> {t(minigame.minigame_id === 'letter_drawing' && field.name === 'symbols' ? 'minigameDrawingAddEntry' : 'minigameParamAdd')}
       </button>
     </div>
   )
@@ -353,6 +371,10 @@ export function MinigameParamsEditor({
         <p className="minigame-empty-hint">{t('minigameParamsNone')}</p>
       ) : (
         fields.map((field) => {
+          if (field.name === 'visualVariant') return null
+          const visual = orderingVisual(minigame.minigame_id, minigame.params ?? {})
+          const listening = visual === 'ListenAndBuild' || visual === 1
+          if ((field.name === 'promptAudio' || field.name === 'hintMode') && !listening) return null
           if (field.name === 'letters') {
             return (
               <div className="minigame-param-field" key={field.name}>
@@ -371,6 +393,12 @@ export function MinigameParamsEditor({
           }
           if (field.advanced) {
             return <AdvancedAssetField key={field.name} field={field} minigame={minigame} onChange={onChange} />
+          }
+          if (minigame.minigame_id === 'letter_drawing' && field.name === 'symbols') {
+            return <div className="minigame-param-field" key={field.name}>
+              <FieldLabel hint={t(field.hintKey as MessageKey)}>{t(field.labelKey as MessageKey)}</FieldLabel>
+              <ArrayParamInput field={field} minigame={minigame} onChange={onChange} />
+            </div>
           }
 
           const value = readMinigameParam(minigame, field)
@@ -395,9 +423,15 @@ export function MinigameParamsEditor({
                   onChange={(event) => setScalar(field, event.target.value)}
                 >
                   {(field.options ?? []).map((option) => (
-                    <option key={option} value={option}>{option}</option>
+                    <option key={option} value={option}>{field.optionLabelKeys?.[option] ? t(field.optionLabelKeys[option] as MessageKey) : option}</option>
                   ))}
                 </select>
+              ) : field.name === 'promptAudio' ? (
+                <>
+                  <input className="content-text" dir="ltr" value={String(value ?? '')}
+                    placeholder="Assets/_OurAssets/Art/Audio/…/BEE.mp3"
+                    onChange={(event) => setScalar(field, event.target.value)} />
+                </>
               ) : field.type === 'textarea' ? (
                 <textarea
                   className="content-text"
@@ -409,9 +443,9 @@ export function MinigameParamsEditor({
               ) : field.type === 'string' || field.type === 'asset' ? (
                 <input
                   className="content-text"
-                  dir={field.type === 'asset' ? 'ltr' : 'auto'}
+                  dir={field.type === 'asset' || field.name === 'word' ? 'ltr' : 'auto'}
                   value={String(value ?? '')}
-                  placeholder={field.type === 'asset' ? 'Assets/…' : ''}
+                  placeholder={field.type === 'asset' ? 'Assets/…' : field.name === 'word' ? t('minigameDrawingWordPlaceholder') : ''}
                   onChange={(event) => setScalar(field, event.target.value)}
                 />
               ) : field.type === 'number' || field.type === 'integer' ? (
