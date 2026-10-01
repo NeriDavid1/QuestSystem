@@ -1,0 +1,218 @@
+questline:
+  id: abc_valley
+  npc_id: grandpa_tobias
+  display_name: עמק האותיות
+  theme: 'The ABC Valley story: the opening and the letter quests, one continuous
+    questline.'
+  quest_count: 23
+  level_range:
+    - 0
+    - 0
+quests:
+  - id: abc_intro1_arrival
+    name: הגעה לעמק
+    level: 0
+    prerequisite: null
+    rewards:
+      xp: 50
+      items:
+        - id: coin
+          amount: 10
+  - id: abc_intro2_neighbors
+    name: שלום לשכנים
+    level: 0
+    prerequisite: abc_intro1_arrival
+    rewards:
+      xp: 50
+      items:
+        - id: coin
+          amount: 10
+  - id: abc_intro3_wizard_night
+    name: הלילה שבו הגיע הקוסם
+    level: 0
+    prerequisite: abc_intro2_neighbors
+    rewards:
+      xp: 50
+      items:
+        - id: coin
+          amount: 10
+  - id: abc_a_shards
+    name: הרסיסים של A
+    level: 0
+    prerequisite: abc_intro3_wizard_night
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_b_weeds
+    name: העשבים של הקוסם
+    level: 0
+    prerequisite: abc_a_shards
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_c_cave
+    name: נועה והמערה
+    level: 0
+    prerequisite: abc_b_weeds
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_fun1_raid
+    name: פשיטה על הכפר
+    level: 0
+    prerequisite: abc_c_cave
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 50
+  - id: abc_d_drum
+    name: האוצר של פיפ
+    level: 0
+    prerequisite: abc_fun1_raid
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_hw1_mail
+    name: הדואר של הבוקר
+    level: 0
+    prerequisite: abc_d_drum
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 20
+  - id: abc_e_eggs
+    name: הביצים של טוביאס
+    level: 0
+    prerequisite: abc_hw1_mail
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_f_shards
+    name: השברים הנופלים
+    level: 0
+    prerequisite: abc_e_eggs
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_g_tree
+    name: העץ הנודד
+    level: 0
+    prerequisite: abc_f_shards
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_fun2_ridge
+    name: טיפוס לרכס
+    level: 0
+    prerequisite: abc_g_tree
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 50
+  - id: abc_h_waterfall
+    name: המפל ההפוך
+    level: 0
+    prerequisite: abc_fun2_ridge
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_hw2_stand
+    name: הדוכן של ברונו
+    level: 0
+    prerequisite: abc_h_waterfall
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 20
+  - id: abc_i_ice
+    name: כישוף הקרח
+    level: 0
+    prerequisite: abc_hw2_stand
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_j_jars
+    name: הצנצנות הקופצות
+    level: 0
+    prerequisite: abc_i_ice
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_k_keys
+    name: המפתחות והעפיפון
+    level: 0
+    prerequisite: abc_j_jars
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_fun3_stones
+    name: גשר האבנים המרחפות
+    level: 0
+    prerequisite: abc_k_keys
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 50
+  - id: abc_l_fireflies
+    name: האורות הקטנים
+    level: 0
+    prerequisite: abc_fun3_stones
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_hw3_concert
+    name: הקונצרט של פיפ
+    level: 0
+    prerequisite: abc_l_fireflies
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 20
+  - id: abc_m_museum
+    name: מוזיאון הזיכרונות
+    level: 0
+    prerequisite: abc_hw3_concert
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_n_noodles
+    name: הנודלס של ברונו
+    level: 0
+    prerequisite: abc_m_museum
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30

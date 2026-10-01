@@ -28,16 +28,16 @@ class ContentPipelineTests(unittest.TestCase):
             self.bundle["counts"],
             {
                 "catalog_entries": 267,
-                "step_type_definitions": 6,
-                "dialogues": 206,
-                "dialogue_lines": 560,
+                "step_type_definitions": 7,
+                "dialogues": 255,
+                "dialogue_lines": 609,
                 "minigame_instances": 449,
-                "questlines": 30,
-                "quests": 93,
-                "steps": 507,
+                "questlines": 31,
+                "quests": 116,
+                "steps": 591,
                 "errors": 0,
                 "warnings": 0,
-                "info": 33,
+                "info": 56,
             },
         )
 
@@ -75,8 +75,8 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         )
-        self.assertEqual(prerequisites, 68)
-        self.assertEqual(rewards, 172)
+        self.assertEqual(prerequisites, 90)
+        self.assertEqual(rewards, 218)
 
     def test_report_and_generated_bundle_are_present(self):
         report = json.loads((ROOT / "reports" / "quest_import_report.json").read_text(encoding="utf-8"))
@@ -183,7 +183,7 @@ class ContentPipelineTests(unittest.TestCase):
             for questline in self.bundle["questlines"]
             for quest in questline["quests"]
         }
-        self.assertEqual(len(quests_by_key), 93)
+        self.assertEqual(len(quests_by_key), 116)
         self.assertTrue(quests_by_key["q01_runaway_hammer"]["wait_for_npc_turn_in"])  # blacksmith_will
         self.assertTrue(
             quests_by_key["adjectives_basics__q01_the_painting_with_no_colors"]["wait_for_npc_turn_in"]
@@ -234,6 +234,57 @@ class ContentPipelineTests(unittest.TestCase):
                     (ROOT / quest["source_path"]).read_text(encoding="utf-8"),
                     f"{quest['key']} YAML must declare wait_for_npc_turn_in",
                 )
+
+    # ---- Unity-built lines (custom steps, e.g. abc_valley) ----
+
+    def abc_valley(self):
+        return next(line for line in self.bundle["questlines"] if line["key"] == "abc_valley")
+
+    def test_custom_steps_keep_their_unity_objective_index_and_stable_key(self):
+        custom = [
+            (quest, step)
+            for quest in self.abc_valley()["quests"]
+            for step in quest["steps"]
+            if step["type"] == "custom"
+        ]
+        self.assertEqual(len(custom), 58)
+        for quest, step in custom:
+            index = step["payload"]["unity_objective_index"]
+            self.assertEqual(step["key"], f"{self.importer.slug(quest['key'])}_custom_o{index}")
+            self.assertTrue(step["payload"]["handler_id"])
+            self.assertIn(step["payload"]["reactor"], {
+                "task_set", "cutscene", "escort", "monster_encounter", "choice_rounds", "wave_defense", "museum",
+            })
+            if step["payload"]["reactor"] == "task_set":
+                tasks = step["payload"]["tasks"]
+                self.assertEqual([task["index"] for task in tasks], list(range(len(tasks))))
+                self.assertTrue(all(task["mode"] in {"scene", "minigame", "none"} for task in tasks))
+
+    def test_explicit_first_talk_objective_is_not_promoted_to_start_dialogue(self):
+        quest = next(quest for quest in self.abc_valley()["quests"] if quest["key"] == "abc_a_shards")
+        self.assertIsNone(quest["start_dialogue_id"])
+        self.assertEqual(quest["steps"][0]["type"], "talk_to_npc")
+        self.assertEqual(quest["steps"][0]["position"], 0)
+
+    def test_line_live_sql_replaces_rewards_and_guards_editor_task_choices(self):
+        batches = self.importer.line_live_batches(self.bundle, "abc_valley")
+        rewards = batches["07_prerequisites_rewards.sql"]
+        # Rewards and prerequisites are deleted before they are inserted, so a re-run cannot double XP.
+        self.assertLess(rewards.index("delete from public.quest_rewards"), rewards.index("insert into public.quest_rewards"))
+        self.assertLess(rewards.index("delete from public.quest_prerequisites"), rewards.index("insert into public.quest_prerequisites"))
+        self.assertTrue(batches["06_steps.sql"].startswith("do $guard$"))
+        self.assertNotIn("$guard$", self.importer.line_live_batches(self.bundle, "abc_valley", force=True)["06_steps.sql"])
+        # Only this line's rows are touched.
+        for name in ("05_quests.sql", "06_steps.sql", "07_prerequisites_rewards.sql"):
+            self.assertNotIn("questlines where key = 'articles_a_an", batches[name])
+        self.assertEqual(batches, self.importer.line_live_batches(self.bundle, "abc_valley"))
+
+    def test_custom_step_type_is_registered_with_a_migration(self):
+        self.assertIn("custom", {definition["id"] for definition in self.bundle["step_type_definitions"]})
+        migrations = "".join(
+            path.read_text(encoding="utf-8") for path in (ROOT / "supabase" / "migrations").glob("*.sql")
+        )
+        self.assertIn("values ('custom', 'Custom'", migrations)
 
 
 if __name__ == "__main__":

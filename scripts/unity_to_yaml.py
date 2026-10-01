@@ -82,6 +82,7 @@ DATA_PREFIX_TO_MINIGAME = OrderedDict(
         ("SpeakAloudData_", "speak_aloud"),
         ("MissingLetterMatchingData_", "word_matching"),
         ("OppositeMatchingData_", "word_matching"),
+        ("LetterConnectionLevelConfig_", "word_matching"),
         ("MinerCategoryData_", "dwarf_miner"),
         ("SliceOrderingData_", "fruit_slice"),
     )
@@ -114,7 +115,28 @@ OBJECTIVE_TO_STEP = {
     1: "reach_location",
     3: "play_minigame",
     4: "deliver_item",
+    5: "custom",
 }
+
+# Scene components that run a Custom step (QuestStepReactor subclasses) -> `reactor` value.
+REACTOR_KINDS = {
+    "QuestTaskSet": "task_set",
+    "QuestCutsceneStep": "cutscene",
+    "QuestEscort": "escort",
+    "QuestMonsterEncounter": "monster_encounter",
+    "QuestChoiceRounds": "choice_rounds",
+    "QuestWaveDefense": "wave_defense",
+    "QuestMuseumVisit": "museum",
+}
+
+# QuestTaskSpot.Trigger enum.
+SPOT_TRIGGERS = {0: "interact", 1: "enter_area", 2: "npc_talk", 3: "external"}
+
+# IQuestTaskInterceptor components: they take over the task before any minigame plays.
+TASK_INTERCEPTORS = {"HopAwayOutcome", "RideOutcome"}
+
+# Scenes searched for the reactors of a line's Custom steps.
+REACTOR_SCENE_GLOB = "Scenes/OpenWorld*.unity"
 
 CATALOG_HEADER = {
     "npcs": [
@@ -144,9 +166,24 @@ def load_yaml(path: Path) -> dict[str, Any]:
         return yaml.safe_load(handle) or {}
 
 
-# int[] fields Unity writes as one hex string. Quoted before parsing so YAML keeps the
-# text (an all-digit value like 0000000001000000 would otherwise load as an octal int).
-HEX_INT_ARRAY_LINE = re.compile(r"^(\s*(?:- )?(?:preFilledIndices|missingIndices): )([0-9a-fA-F]+)$")
+# int[] / char[] fields Unity writes as one hex string. Quoted before parsing so YAML keeps
+# the text (an all-digit value like 0000000001000000 would otherwise load as an octal int).
+HEX_INT_ARRAY_LINE = re.compile(
+    r"^(\s*(?:- )?(?:preFilledIndices|missingIndices|customDistractors): )([0-9a-fA-F]+)$"
+)
+
+
+class UnityYamlLoader(yaml.SafeLoader):
+    """SafeLoader without YAML 1.1 on/off/yes/no booleans.
+
+    Unity writes bools as 0/1, so a word tile like `- on` must stay the string "on".
+    """
+
+
+UnityYamlLoader.yaml_implicit_resolvers = {
+    first: [(tag, regexp) for tag, regexp in resolvers if tag != "tag:yaml.org,2002:bool"]
+    for first, resolvers in yaml.SafeLoader.yaml_implicit_resolvers.items()
+}
 
 
 def load_unity_yaml(path: Path) -> dict[str, Any]:
@@ -161,7 +198,7 @@ def load_unity_yaml(path: Path) -> dict[str, Any]:
                 stripped = "---"
             stripped = HEX_INT_ARRAY_LINE.sub(r"\1'\2'", stripped)
             lines.append(stripped)
-    doc = yaml.safe_load("\n".join(lines))
+    doc = yaml.load("\n".join(lines), Loader=UnityYamlLoader)
     if not isinstance(doc, dict):
         return {}
     mono = doc.get("MonoBehaviour")
@@ -222,6 +259,166 @@ def decode_int_array(value: Any) -> list[int]:
         int.from_bytes(blob[offset : offset + 4], "little", signed=True)
         for offset in range(0, len(blob) - len(blob) % 4, 4)
     ]
+
+
+def decode_char_array(value: Any) -> list[str]:
+    """Decode Unity's hex-serialized char array (consecutive UTF-16LE code units)."""
+    if isinstance(value, list):
+        return [str(item) for item in value]
+    text = "" if value is None else str(value).strip()
+    try:
+        blob = bytes.fromhex(text)
+    except ValueError:
+        return []
+    return [chr(int.from_bytes(blob[offset : offset + 2], "little")) for offset in range(0, len(blob) - 1, 2)]
+
+
+SCENE_DOC_HEADER = re.compile(r"^--- !u!(\d+) &(-?\d+)[^\n]*$", re.MULTILINE)
+CLASS_IDENTIFIER = re.compile(r"^  m_EditorClassIdentifier: (?:[^:\n]*::)?(?:[\w.]*\.)?(\w+)\s*$", re.MULTILINE)
+GAME_OBJECT_REF = re.compile(r"^  m_GameObject: \{fileID: (-?\d+)\}", re.MULTILINE)
+
+
+def _scene_doc(text: str) -> dict[str, Any]:
+    """Parse one scene document body (the part after its `--- !u!` header)."""
+    cleaned = "\n".join(HEX_INT_ARRAY_LINE.sub(r"\1'\2'", line) for line in text.splitlines())
+    doc = yaml.load(cleaned, Loader=UnityYamlLoader)
+    if not isinstance(doc, dict) or not doc:
+        return {}
+    body = next(iter(doc.values()))
+    return body if isinstance(body, dict) else {}
+
+
+def parse_scene_reactors(
+    scene_path: Path,
+    quest_guids: set[str],
+    guid_index: dict[str, Path],
+    unity_root: Path,
+) -> dict[tuple[str, int], dict[str, Any]]:
+    """Find the components that run Custom steps of the given quests in a scene.
+
+    Returns {(quest guid, objective index): {"reactor", "tasks"}}; tasks are listed only for
+    task sets, one per spot in `spots` order (the spot index the runtime binds).
+    """
+    text = scene_path.read_text(encoding="utf-8", errors="ignore")
+    headers = list(SCENE_DOC_HEADER.finditer(text))
+    raw: dict[str, str] = {}
+    classes: dict[str, str] = {}
+    components_of: dict[str, list[str]] = {}
+    for position, header in enumerate(headers):
+        end = headers[position + 1].start() if position + 1 < len(headers) else len(text)
+        file_id = header.group(2)
+        body = text[header.end() + 1 : end]
+        raw[file_id] = body
+        if header.group(1) == "114":
+            class_match = CLASS_IDENTIFIER.search(body)
+            if class_match:
+                classes[file_id] = class_match.group(1)
+            owner = GAME_OBJECT_REF.search(body)
+            if owner:
+                components_of.setdefault(owner.group(1), []).append(file_id)
+
+    def game_object_name(file_id: str) -> str:
+        body = raw.get(file_id)
+        return str(_scene_doc(body).get("m_Name") or "") if body else ""
+
+    def config_info(ref: Any) -> tuple[str, str]:
+        config_path = guid_index.get((guid_of(ref) or "").lower())
+        if not config_path:
+            return "", ""
+        return config_path.stem, minigame_type_for_config(load_unity_yaml(config_path)) or ""
+
+    reactors: dict[tuple[str, int], dict[str, Any]] = {}
+    for file_id, class_name in classes.items():
+        kind = REACTOR_KINDS.get(class_name)
+        if not kind:
+            continue
+        body = raw[file_id]
+        if not any(guid in body for guid in quest_guids):
+            continue
+        data = _scene_doc(body)
+        quest_guid = (guid_of(data.get("quest")) or "").lower()
+        if quest_guid not in quest_guids:
+            continue
+        reactor: dict[str, Any] = {"reactor": kind, "tasks": []}
+        if kind == "task_set":
+            for index, spot_ref in enumerate(data.get("spots") or []):
+                spot_id = str((spot_ref or {}).get("fileID") or 0)
+                spot = _scene_doc(raw[spot_id]) if spot_id in raw else {}
+                owner = str((spot.get("m_GameObject") or {}).get("fileID") or 0)
+                task: "OrderedDict[str, Any]" = OrderedDict()
+                task["index"] = index
+                task["name"] = game_object_name(owner)
+                task["trigger"] = SPOT_TRIGGERS.get(int(spot.get("trigger") or 0), "interact")
+                prompt = str(spot.get("interactionPrompt") or "").strip()
+                if prompt:
+                    task["prompt"] = prompt
+                if spot.get("npcId"):
+                    task["npc_id"] = str(spot["npcId"])
+                if any(classes.get(component) in TASK_INTERCEPTORS for component in components_of.get(owner, [])):
+                    task["intercepted"] = True
+                if int(spot.get("noMiniGame") or 0):
+                    task["scene_no_minigame"] = True
+                else:
+                    config_name, config_type = config_info(spot.get("miniGame"))
+                    if not config_name:
+                        config_name, config_type = config_info(data.get("defaultMiniGame"))
+                    if config_name:
+                        task["scene_minigame"] = config_name
+                        task["scene_minigame_id"] = config_type
+                task["mode"] = "scene"
+                reactor["tasks"].append(task)
+        reactors[(quest_guid, int(data.get("stepIndex") or 0))] = reactor
+    return reactors
+
+
+def find_line_reactors(
+    unity_root: Path,
+    quests: list[dict[str, Any]],
+    guid_index: dict[str, Path],
+) -> dict[tuple[str, int], dict[str, Any]]:
+    """Reactors for every Custom step of a line, from the OpenWorld scenes that reference its quests."""
+    quest_guids = {quest["guid"] for quest in quests if quest.get("guid") and quest.get("has_custom")}
+    if not quest_guids:
+        return {}
+    reactors: dict[tuple[str, int], dict[str, Any]] = {}
+    for scene in sorted(unity_root.glob(REACTOR_SCENE_GLOB)):
+        content = scene.read_bytes()
+        if not any(guid.encode() in content for guid in quest_guids):
+            continue
+        reactors.update(parse_scene_reactors(scene, quest_guids, guid_index, unity_root))
+    return reactors
+
+
+def task_minigame_overrides(
+    objective: dict[str, Any],
+    guid_index: dict[str, Path],
+    instances: dict[str, dict[str, Any]],
+    line_key: str,
+) -> dict[int, dict[str, Any]]:
+    """Read QuestObjectiveDefinition.taskMiniGames (written by Unity's Custom Step Minigames sync)."""
+    overrides: dict[int, dict[str, Any]] = {}
+    for entry in objective.get("taskMiniGames") or []:
+        if not isinstance(entry, dict):
+            continue
+        task = int(entry.get("task") or 0)
+        if int(entry.get("none") or 0):
+            overrides[task] = {"mode": "none"}
+            continue
+        config_path = guid_index.get((guid_of(entry.get("miniGame")) or "").lower())
+        if not config_path:
+            continue
+        config_data = load_unity_yaml(config_path)
+        minigame_id = minigame_type_for_config(config_data)
+        data_path = guid_index.get((guid_of(config_data.get("data") or config_data.get("levelConfig")) or "").lower())
+        if not minigame_id or not data_path:
+            continue
+        data = load_unity_yaml(data_path)
+        instance_key = instance_key_for_data(str(data.get("m_Name") or data_path.stem))
+        # Only this line's own instances are exported; a borrowed one already lives with its line.
+        if instance_key.startswith(f"{line_key}__"):
+            instances[instance_key] = {"minigame_id": minigame_id, "data": data}
+        overrides[task] = {"mode": "minigame", "minigame_id": minigame_id, "instance_key": instance_key}
+    return overrides
 
 
 def to_int(value: Any) -> int | Any:
@@ -337,7 +534,9 @@ def extract_params(
                 params[field] = int(data.get(field) or 0)
             elif field == "preFilledIndices":
                 params[field] = decode_int_array(data.get(field))
-            elif field in ("customDistractors", "englishWordsInOrder", "distractorWords"):
+            elif field == "customDistractors":
+                params[field] = decode_char_array(data.get(field))
+            elif field in ("englishWordsInOrder", "distractorWords"):
                 params[field] = data.get(field) or []
             else:
                 params[field] = data.get(field)
@@ -473,8 +672,17 @@ def parse_quest(
                 else:
                     existing["amount"] = max(existing["amount"], bundle_item["amount"])
     prerequisite = (str(data.get("prerequisiteQuestId") or "")).strip() or None
+    meta_path = asset.with_name(asset.name + ".meta")
+    guid_match = (
+        re.search(r"^guid:\s*([0-9a-fA-F]{32})\s*$", meta_path.read_text(encoding="utf-8", errors="ignore"), re.MULTILINE)
+        if meta_path.exists()
+        else None
+    )
+    objectives = data.get("objectives") or []
     return {
         "path": asset,
+        "guid": guid_match.group(1).lower() if guid_match else None,
+        "has_custom": any(isinstance(o, dict) and o.get("type") == 5 for o in objectives),
         "id": QUEST_ID_ALIASES.get(quest_id, quest_id),
         "displayName": data.get("displayName"),
         "levelRequired": int(data.get("levelRequired") or 0),
@@ -487,7 +695,7 @@ def parse_quest(
         },
         "startDialogue": data.get("startDialogue"),
         "turnInDialogue": data.get("turnInDialogue"),
-        "objectives": data.get("objectives") or [],
+        "objectives": objectives,
     }
 
 
@@ -499,9 +707,12 @@ def build_steps(
     dialogues: "OrderedDict[str, dict[str, Any]]",
     item_keys: set[str],
     item_reverse: dict[int, str],
+    reactors: dict[tuple[str, int], dict[str, Any]] | None = None,
+    line_key: str = "",
 ) -> list["OrderedDict[str, Any]"]:
     steps: list["OrderedDict[str, Any]"] = []
     giver = quest["giverNpcId"]
+    reactors = reactors or {}
 
     def add_dialogue_ref(ref: Any, speaker: str) -> str | None:
         guid = guid_of(ref)
@@ -602,6 +813,24 @@ def build_steps(
             delivered_key = add_dialogue_ref(objective.get("dialogue"), target_id)
             if delivered_key:
                 step["dialogue_id"] = delivered_key
+        elif step_type == "custom":
+            # A Unity-built step: a scene reactor runs it and binds by objective index. Only the
+            # task minigames are authored outside Unity (they round-trip through taskMiniGames).
+            reactor = reactors.get((quest.get("guid") or "", index))
+            step["handler_id"] = target_id
+            step["unity_objective_index"] = index
+            step["count"] = int(objective.get("count") or 1)
+            step["reactor"] = reactor["reactor"] if reactor else "unknown"
+            if reactor is None:
+                print(f"    !! {quest['id']} objective {index} ({target_id}): no scene reactor found", file=sys.stderr)
+            if reactor and reactor["reactor"] == "task_set":
+                overrides = task_minigame_overrides(objective, guid_index, instances, line_key)
+                tasks = []
+                for task in reactor["tasks"]:
+                    entry = OrderedDict(task)
+                    entry.update(overrides.get(task["index"], {}))
+                    tasks.append(entry)
+                step["tasks"] = tasks
 
         display_text = objective.get("displayText")
         if display_text:
@@ -689,7 +918,17 @@ def process_line(
         parsed = parse_quest(asset, unity_root, guid_index, item_keys, item_reverse)
         if parsed:
             quests.append(parsed)
-    quests.sort(key=lambda quest: quest["id"])
+    # The QuestLine's own order (story order), then id for quests it does not list.
+    line_order = [
+        (guid_of(ref) or "").lower()
+        for ref in (load_unity_yaml(line_meta["unity_path"]).get("quests") or [])
+    ]
+    quests.sort(
+        key=lambda quest: (
+            line_order.index(quest["guid"]) if quest.get("guid") in line_order else len(line_order),
+            quest["id"],
+        )
+    )
     if not quests:
         print(f"  !! no QuestDefinitionSO assets found for {line_key}")
         return
@@ -697,6 +936,9 @@ def process_line(
     instances: dict[str, dict[str, Any]] = {}
     dialogues: "OrderedDict[str, dict[str, Any]]" = OrderedDict()
     quest_entries: list["OrderedDict[str, Any]"] = []
+    reactors = find_line_reactors(unity_root, quests, guid_index)
+    if reactors:
+        print(f"  {line_key}: {len(reactors)} scene reactors for Custom steps")
 
     for quest in quests:
         quest_id = quest["id"]
@@ -712,6 +954,8 @@ def process_line(
             dialogues,
             item_keys,
             item_reverse,
+            reactors,
+            line_key,
         )
         doc = OrderedDict()
         doc["quest"] = OrderedDict(
@@ -985,6 +1229,14 @@ def parse_args() -> argparse.Namespace:
             "export lines missing from QuestSystem in full, and never prune or rewrite catalogs."
         ),
     )
+    parser.add_argument(
+        "--line",
+        metavar="LINE_ID",
+        help=(
+            "Export only this questline (its Unity lineId) into questlines/<lineId>/ plus its "
+            "minigame instance and dialogue registry files; never prunes or rewrites catalogs."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -1017,6 +1269,15 @@ def main() -> int:
     catalogs = {kind: parse_catalog(unity_root / relative) for kind, relative in CATALOG_PATHS.items()}
     for kind, entries in catalogs.items():
         print(f"  catalog {kind}: {len(entries)} entries")
+
+    if args.line:
+        matches = [folder for folder, meta in lines.items() if str(meta["line_id"] or folder) == args.line]
+        if not matches:
+            print(f"!! no registered questline with lineId '{args.line}'", file=sys.stderr)
+            return 1
+        process_line(args.line, lines[matches[0]], unity_root, guid_index, content_fields, item_keys, item_reverse)
+        print(f"Line export complete: {args.line}")
+        return 0
 
     if args.rewards_only:
         for folder_key in sorted(lines):

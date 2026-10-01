@@ -1,0 +1,77 @@
+quest:
+  id: abc_g_tree
+  name: העץ הנודד
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_f_shards
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: g_lesson
+    count: 1
+    display_text: דברו עם טוביאס בכיכר, מול העץ המוזר
+  - type: custom
+    handler_id: abc_g_chase
+    unity_objective_index: 1
+    count: 6
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Tree_1
+        trigger: interact
+        prompt: תקן את ה-G
+        scene_minigame: LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame
+        scene_minigame_id: letter_ordering
+        mode: scene
+      - index: 1
+        name: Tree_2
+        trigger: interact
+        prompt: תקן את ה-G
+        scene_minigame: WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 2
+        name: Tree_3
+        trigger: interact
+        prompt: תקן את ה-G
+        scene_minigame: LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame
+        scene_minigame_id: letter_ordering
+        mode: scene
+      - index: 3
+        name: Tree_4
+        trigger: interact
+        prompt: תקן את ה-G
+        scene_minigame: WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 4
+        name: Tree_5
+        trigger: interact
+        prompt: תקן את ה-G
+        scene_minigame: LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame
+        scene_minigame_id: letter_ordering
+        mode: scene
+      - index: 5
+        name: Tree_6
+        trigger: interact
+        prompt: תקן את ה-G
+        scene_minigame: WordOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame_2
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: עקבו אחרי שביל השורשים ותקנו את ה-G
+  - type: custom
+    handler_id: abc_g_giant
+    unity_objective_index: 2
+    count: 1
+    reactor: monster_encounter
+    display_text: הביסו את ענק העץ
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: g_turnin

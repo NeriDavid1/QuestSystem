@@ -1,0 +1,97 @@
+quest:
+  id: abc_e_eggs
+  name: הביצים של טוביאס
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_hw1_mail
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: e_lesson
+    count: 1
+    display_text: דברו עם טוביאס ליד הלול
+  - type: custom
+    handler_id: abc_e_eggs
+    unity_objective_index: 1
+    count: 6
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Egg_1
+        trigger: interact
+        prompt: מצא את הביצה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 1
+        name: Egg_2
+        trigger: interact
+        prompt: מצא את הביצה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 2
+        name: Egg_3
+        trigger: interact
+        prompt: מצא את הביצה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 3
+        name: Egg_4
+        trigger: interact
+        prompt: מצא את הביצה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 4
+        name: Egg_5
+        trigger: interact
+        prompt: מצא את הביצה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 5
+        name: Egg_6
+        trigger: interact
+        prompt: מצא את הביצה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: מצאו את הביצים שהתפזרו בעמק
+  - type: custom
+    handler_id: abc_e_golden
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: GoldenEgg
+        trigger: interact
+        prompt: קח את ביצת הזהב
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: הביאו את ביצת הזהב מראש המגדל של פיפ
+  - type: custom
+    handler_id: abc_e_home
+    unity_objective_index: 3
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: CoopGate
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: הובילו את האפרוחים בחזרה ללול
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: e_turnin

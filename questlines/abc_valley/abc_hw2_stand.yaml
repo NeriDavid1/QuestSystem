@@ -1,0 +1,67 @@
+quest:
+  id: abc_hw2_stand
+  name: הדוכן של ברונו
+  level_required: 0
+  giver_npc: bruno_gardener
+  prerequisite: abc_h_waterfall
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: hw2_open
+    count: 1
+    display_text: בקרו בדוכן החדש של ברונו
+  - type: custom
+    handler_id: abc_hw2_pick
+    unity_objective_index: 1
+    count: 4
+    reactor: choice_rounds
+    display_text: בחרו מהדוכן את מה שהוזמן
+  - type: custom
+    handler_id: abc_hw2_deliver
+    unity_objective_index: 2
+    count: 4
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Deliver_egg
+        trigger: npc_talk
+        prompt: Open
+        npc_id: grandpa_tobias
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 1
+        name: Deliver_fish
+        trigger: npc_talk
+        prompt: Open
+        npc_id: mira_stonecarver
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q04_fish_in_the_net
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 2
+        name: Deliver_grapes
+        trigger: npc_talk
+        prompt: Open
+        npc_id: noa
+        scene_minigame: WordOrderingQuestConfig_noun_repair_q02_sentence
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 3
+        name: Deliver_hat
+        trigger: npc_talk
+        prompt: Open
+        npc_id: pip_bellringer
+        scene_minigame: WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: מסרו את ההזמנות לכפריים
+  - type: return_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: hw2_turnin

@@ -1,0 +1,28 @@
+quest:
+  id: abc_m_museum
+  name: מוזיאון הזיכרונות
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_hw3_concert
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: m_lesson
+    count: 1
+    display_text: דברו עם טוביאס ליד הבאר
+  - type: custom
+    handler_id: abc_m_museum
+    unity_objective_index: 1
+    count: 1
+    reactor: museum
+    display_text: עברו את המוזיאון הקסום של M
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: m_turnin

@@ -44,8 +44,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from import_yaml_to_supabase import build_bundle, load_yaml, merged_items  # noqa: E402
 from unity_to_yaml import (  # noqa: E402
     CONFIG_CLASS_TO_MINIGAME,
+    HEX_INT_ARRAY_LINE,
+    UnityYamlLoader,
     extract_params,
     guid_of,
+    instance_key_for_data,
     minigame_type_for_config,
 )
 
@@ -75,6 +78,7 @@ STEP_TO_OBJECTIVE = {
     "play_minigame": "CompleteMiniGame",
     "collect_item": "Collect",
     "deliver_item": "DeliverItem",
+    "custom": "Custom",
 }
 
 DEFAULT_UNITY_ROOT = str(DEFAULT_OUR_ASSETS / "Data" / "Quests" / "Lines")
@@ -96,8 +100,9 @@ def load_unity_yaml(path: Path) -> dict[str, Any]:
                 continue
             if stripped.startswith("---"):
                 stripped = "---"
+            stripped = HEX_INT_ARRAY_LINE.sub(r"\1'\2'", stripped)
             lines.append(stripped)
-    doc = yaml.safe_load("\n".join(lines))
+    doc = yaml.load("\n".join(lines), Loader=UnityYamlLoader)
     if not isinstance(doc, dict):
         return {}
     mono = doc.get("MonoBehaviour")
@@ -198,7 +203,28 @@ def extract_unity_minigame_params(
     if not content_path or not content_path.is_file():
         return minigame_id, {}
     content_data = load_unity_yaml(content_path)
-    return minigame_id, extract_params(minigame_id or "", content_data, guid_index, our_assets, content_fields)
+    params = extract_params(minigame_id or "", content_data, guid_index, our_assets, content_fields)
+    # Registry fields the data SO no longer serializes (e.g. a removed Unity field) have no
+    # Unity value to compare; they are schema drift, not per-instance drift.
+    return minigame_id, {key: value for key, value in params.items() if key in content_data}
+
+
+# Values the Unity importer falls back to when a param is absent from the authored instance
+# (QuestSnapshotImporter.MiniGames.cs), so a missing YAML key with this Unity value is in sync.
+IMPORTER_PARAM_FALLBACKS = {
+    "extraDistractorCount": 2,
+    "allowFuzzyMatch": True,
+    "requiredCorrect": 5,
+    "allowedMistakes": 3,
+    "extraLetterDistractorCount": 2,
+    "segmentation": "Letters",
+}
+
+
+def missing_param_matches(key: str, unity_value: Any) -> bool:
+    if unity_value in ("", None) or unity_value == []:
+        return True
+    return key in IMPORTER_PARAM_FALLBACKS and params_equal(IMPORTER_PARAM_FALLBACKS[key], unity_value)
 
 def parse_reward_definition(path: Path) -> list[dict[str, Any]]:
     """Extract item rewards granted by a RewardDefinitionSO asset bundle."""
@@ -238,6 +264,14 @@ def parse_quest_definition(path: Path, guid_index: dict[str, Path] | None = None
                 parameters[str(parameter["key"])] = str(parameter.get("value") or "")
         step_reward = objective.get("stepReward")
         mini_game_config = objective.get("miniGameConfig")
+        task_mini_games = {
+            int(entry.get("task") or 0): {
+                "none": bool(int(entry.get("none") or 0)),
+                "configGuid": (entry.get("miniGame") or {}).get("guid") if isinstance(entry.get("miniGame"), dict) else None,
+            }
+            for entry in objective.get("taskMiniGames") or []
+            if isinstance(entry, dict)
+        }
         objectives.append(
             {
                 "type": objective.get("type"),
@@ -248,6 +282,7 @@ def parse_quest_definition(path: Path, guid_index: dict[str, Path] | None = None
                 "stepRewardGuid": step_reward.get("guid") if isinstance(step_reward, dict) else None,
                 "miniGameConfigGuid": mini_game_config.get("guid") if isinstance(mini_game_config, dict) else None,
                 "parameters": parameters,
+                "taskMiniGames": task_mini_games,
             }
         )
 
@@ -351,6 +386,9 @@ def expected_objective_target(step_type: str, payload: dict[str, Any]) -> str | 
         return str(value) if value else None
     if step_type == "collect_item":
         value = payload.get("item_id")
+        return str(value) if value else None
+    if step_type == "custom":
+        value = payload.get("handler_id")
         return str(value) if value else None
     return None
 
@@ -653,7 +691,8 @@ def compare_quest(
                 mismatched = []
                 for key, unity_value in unity_params.items():
                     if key not in authored_params:
-                        mismatched.append(key)
+                        if not missing_param_matches(key, unity_value):
+                            mismatched.append(key)
                         continue
                     if not params_equal(authored_params.get(key), unity_value):
                         mismatched.append(key)
@@ -665,6 +704,10 @@ def compare_quest(
                         step_index=index,
                         instance_key=instance_key,
                         fields=mismatched,
+                        values={
+                            key: {"yaml": authored_params.get(key, "<missing>"), "unity": unity_params.get(key)}
+                            for key in mismatched
+                        },
                         yaml_minigame_id=(authored or {}).get("minigame_id"),
                         unity_minigame_id=unity_minigame_id,
                     )
@@ -676,6 +719,37 @@ def compare_quest(
                     step_index=index,
                     instance_key=instance_key,
                 )
+
+        if step_type == "custom":
+            unity_tasks = unity_objective.get("taskMiniGames") or {}
+            for task in payload.get("tasks") or []:
+                if not isinstance(task, dict):
+                    continue
+                task_index = int(task.get("index") or 0)
+                unity_task = unity_tasks.get(task_index)
+                yaml_mode = str(task.get("mode") or "scene")
+                unity_mode = "scene" if not unity_task else "none" if unity_task["none"] else "minigame"
+                unity_instance = ""
+                if unity_mode == "minigame":
+                    config_path = guid_index.get(str(unity_task["configGuid"] or "").lower())
+                    config_data = load_unity_yaml(config_path) if config_path and config_path.is_file() else {}
+                    data_path = guid_index.get(
+                        str(guid_of(config_data.get("data") or config_data.get("levelConfig")) or "").lower()
+                    )
+                    if data_path and data_path.is_file():
+                        unity_instance = instance_key_for_data(str(load_unity_yaml(data_path).get("m_Name") or data_path.stem))
+                yaml_instance = str(task.get("instance_key") or "") if yaml_mode == "minigame" else ""
+                if yaml_mode != unity_mode or yaml_instance != unity_instance:
+                    issue(
+                        "warning",
+                        "task_minigame_mismatch",
+                        f"Step {index + 1} task {task_index} minigame differs between authoring source and Unity "
+                        "(run Unity's Custom Step Minigames sync, then unity_to_yaml.py --line).",
+                        step_index=index,
+                        task=task_index,
+                        yaml={"mode": yaml_mode, "instance_key": yaml_instance},
+                        unity={"mode": unity_mode, "instance_key": unity_instance},
+                    )
 
     return issues
 

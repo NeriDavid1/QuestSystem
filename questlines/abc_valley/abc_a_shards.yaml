@@ -1,0 +1,97 @@
+quest:
+  id: abc_a_shards
+  name: הרסיסים של A
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_intro3_wizard_night
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: a_lesson
+    count: 1
+    display_text: דברו עם סבא טוביאס ליד הבאר
+  - type: custom
+    handler_id: abc_a_chests
+    unity_objective_index: 1
+    count: 5
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Chest_1
+        trigger: interact
+        prompt: פתח את התיבה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_apple
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 1
+        name: Chest_2
+        trigger: interact
+        prompt: פתח את התיבה
+        scene_minigame: DwarfMinerQuestConfig_articles_a_an_homework_q01_mine_an_words
+        scene_minigame_id: dwarf_miner
+        mode: scene
+      - index: 2
+        name: Chest_3
+        trigger: interact
+        prompt: פתח את התיבה
+        scene_minigame: WordOrderingQuestConfig_adjectives_basics_q03_red_apple
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 3
+        name: Chest_4
+        trigger: interact
+        prompt: פתח את התיבה
+        scene_minigame: FruitSliceQuestConfig_articles_a_an_homework_q01_owl_in_a_tree
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 4
+        name: Chest_5
+        trigger: interact
+        prompt: פתח את התיבה
+        scene_minigame: LineMatchQuestConfig_adjectives_basics_q01_match_colors
+        scene_minigame_id: word_matching
+        mode: scene
+    display_text: פתחו את התיבות הישנות על הטרסה ואספו את רסיסי ה-A
+  - type: custom
+    handler_id: abc_a_fakechest
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Chest_Trap
+        trigger: interact
+        prompt: פתח
+        scene_no_minigame: true
+        mode: scene
+    display_text: עוד תיבה אחת מחכה בקצה הטרסה
+  - type: custom
+    handler_id: abc_a_mimic
+    unity_objective_index: 3
+    count: 1
+    reactor: monster_encounter
+    display_text: זה מימיק! הביסו את המימיק התינוק
+  - type: custom
+    handler_id: abc_a_realchest
+    unity_objective_index: 4
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Chest_Golden
+        trigger: interact
+        prompt: פתח את התיבה
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_homework_q01_a_big_apple
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: פתחו את התיבה האמיתית וקחו את הרסיס האחרון
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: a_turnin

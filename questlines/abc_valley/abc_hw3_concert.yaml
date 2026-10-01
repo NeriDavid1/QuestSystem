@@ -1,0 +1,40 @@
+quest:
+  id: abc_hw3_concert
+  name: הקונצרט של פיפ
+  level_required: 0
+  giver_npc: pip_bellringer
+  prerequisite: abc_l_fireflies
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: hw3_plan
+    count: 1
+    display_text: שמעו מה פיפ מתכנן
+  - type: custom
+    handler_id: abc_hw3_climb
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: TopOfTower
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: עלו עם פיפ לראש המגדל
+  - type: custom
+    handler_id: abc_hw3_bells
+    unity_objective_index: 2
+    count: 4
+    reactor: choice_rounds
+    display_text: צלצלו בפעמון הנכון לכל מילה
+  - type: return_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: hw3_turnin

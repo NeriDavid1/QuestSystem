@@ -1,0 +1,95 @@
+quest:
+  id: abc_fun2_ridge
+  name: טיפוס לרכס
+  level_required: 0
+  giver_npc: noa
+  prerequisite: abc_g_tree
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 50
+steps:
+  - type: talk_to_npc
+    npc_id: noa
+    dialogue_id: fun2_bet
+    count: 1
+    display_text: שמעו מה נועה רוצה
+  - type: custom
+    handler_id: abc_fun2_climb
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: ReachRidge
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: טפסו על הטרסות עד הרכס
+  - type: custom
+    handler_id: abc_fun2_touch
+    unity_objective_index: 2
+    count: 7
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Touch_A
+        trigger: enter_area
+        prompt: גע באות
+        scene_no_minigame: true
+        mode: scene
+      - index: 1
+        name: Touch_B
+        trigger: enter_area
+        prompt: גע באות
+        scene_no_minigame: true
+        mode: scene
+      - index: 2
+        name: Touch_C
+        trigger: enter_area
+        prompt: גע באות
+        scene_no_minigame: true
+        mode: scene
+      - index: 3
+        name: Touch_D
+        trigger: enter_area
+        prompt: גע באות
+        scene_no_minigame: true
+        mode: scene
+      - index: 4
+        name: Touch_E
+        trigger: enter_area
+        prompt: גע באות
+        scene_no_minigame: true
+        mode: scene
+      - index: 5
+        name: Touch_F
+        trigger: enter_area
+        prompt: גע באות
+        scene_no_minigame: true
+        mode: scene
+      - index: 6
+        name: Touch_G
+        trigger: enter_area
+        prompt: גע באות
+        scene_no_minigame: true
+        mode: scene
+    display_text: געו בכל אות דולקת, מ-A עד G
+  - type: custom
+    handler_id: abc_fun2_chest
+    unity_objective_index: 3
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: SummitChest
+        trigger: interact
+        prompt: פתח את התיבה
+        mode: scene
+    display_text: פתחו את התיבה בפסגה
+  - type: return_to_npc
+    npc_id: noa
+    dialogue_id: fun2_turnin

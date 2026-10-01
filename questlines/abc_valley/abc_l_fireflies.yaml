@@ -1,0 +1,87 @@
+quest:
+  id: abc_l_fireflies
+  name: האורות הקטנים
+  level_required: 0
+  giver_npc: noa
+  prerequisite: abc_fun3_stones
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: noa
+    dialogue_id: l_lesson
+    count: 1
+    display_text: דברו עם נועה בחושך
+  - type: custom
+    handler_id: abc_l_catch
+    unity_objective_index: 1
+    count: 6
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Swarm_1
+        trigger: interact
+        prompt: תפוס את הגחליליות
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_an_old_boat
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 1
+        name: Swarm_2
+        trigger: interact
+        prompt: תפוס את הגחליליות
+        intercepted: true
+        scene_minigame: LineMatchQuestConfig_noun_repair_q01_people
+        scene_minigame_id: word_matching
+        mode: scene
+      - index: 2
+        name: Swarm_3
+        trigger: interact
+        prompt: תפוס את הגחליליות
+        scene_minigame: LineMatchQuestConfig_nouns_festival_q02_objects
+        scene_minigame_id: word_matching
+        mode: scene
+      - index: 3
+        name: Swarm_4
+        trigger: interact
+        prompt: תפוס את הגחליליות
+        scene_minigame: LineMatchQuestConfig_personal_pronouns_q02_match_he_she_you
+        scene_minigame_id: word_matching
+        mode: scene
+      - index: 4
+        name: Swarm_5
+        trigger: interact
+        prompt: תפוס את הגחליליות
+        intercepted: true
+        scene_minigame: WordOrderingQuestConfig_the_kingdoms_worst_day_homework_q01_the_crown_is_small
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 5
+        name: Swarm_6
+        trigger: interact
+        prompt: תפוס את הגחליליות
+        scene_minigame: WordOrderingQuestConfig_this_or_that_homework_q01_that_tower_is_very_old
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: תפסו את להקות הגחליליות
+  - type: custom
+    handler_id: abc_l_release
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Release
+        trigger: interact
+        prompt: פתח את הצנצנות
+        scene_minigame: WordOrderingQuestConfig_do - does lesson_q01_new_quest_minigame
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: פתחו את הצנצנות בתצפית מעל המפל
+  - type: return_to_npc
+    npc_id: noa
+    dialogue_id: l_turnin

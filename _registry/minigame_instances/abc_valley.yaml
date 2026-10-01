@@ -1,0 +1,3 @@
+# Per-step minigame briefs — abc_valley
+# `minigame_id` is the catalog kind; `params` mirrors the Unity Data SO fields.
+instances: {}

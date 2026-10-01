@@ -1,0 +1,84 @@
+quest:
+  id: abc_i_ice
+  name: כישוף הקרח
+  level_required: 0
+  giver_npc: mira_stonecarver
+  prerequisite: abc_hw2_stand
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: i_lesson
+    count: 1
+    display_text: פיפ קורא לעזרה
+  - type: custom
+    handler_id: abc_i_blocks
+    unity_objective_index: 1
+    count: 4
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: IceWall_1
+        trigger: interact
+        prompt: המס את הקרח
+        scene_minigame: FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 1
+        name: IceWall_2
+        trigger: interact
+        prompt: המס את הקרח
+        scene_minigame: FruitSliceQuestConfig_adjectives_mastery_homework_q01_a_sharp_sword
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 2
+        name: IceWall_3
+        trigger: interact
+        prompt: המס את הקרח
+        scene_minigame: FruitSliceQuestConfig_adjectives_mastery_homework_q01_spell_bigger
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 3
+        name: IceWall_4
+        trigger: interact
+        prompt: המס את הקרח
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q03_an_ice_cream
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: המיסו את גושי הקרח שחוסמים את השבילים
+  - type: custom
+    handler_id: abc_i_mira
+    unity_objective_index: 2
+    count: 2
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: MiraIce_1
+        trigger: interact
+        prompt: שבור את שכבת הקרח
+        scene_minigame: FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 1
+        name: MiraIce_2
+        trigger: interact
+        prompt: שבור את השכבה האחרונה
+        scene_minigame: FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog
+        scene_minigame_id: fruit_slice
+        mode: scene
+    display_text: שברו את הקרח סביב מירה, שכבה אחרי שכבה
+  - type: custom
+    handler_id: abc_i_imp
+    unity_objective_index: 3
+    count: 1
+    reactor: monster_encounter
+    display_text: הביסו את שדון הקרח
+  - type: return_to_npc
+    npc_id: mira_stonecarver
+    dialogue_id: i_turnin

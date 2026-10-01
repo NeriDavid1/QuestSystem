@@ -561,6 +561,8 @@ def build_bundle() -> dict[str, Any]:
                     and isinstance(steps_raw[0], dict)
                     and steps_raw[0].get("type") == "talk_to_npc"
                     and steps_raw[0].get("dialogue_id")
+                    # `count` marks an explicit TalkToNpc objective, not the opening dialogue.
+                    and steps_raw[0].get("count") in (None, "")
                     else None
                 ),
                 "turn_in_dialogue_id": (
@@ -674,7 +676,13 @@ def build_bundle() -> dict[str, Any]:
                     )
                 occurrence = occurrences.get(step_type, 0)
                 occurrences[step_type] = occurrence + 1
-                stable_key = quest_step_key(quest_id, raw_step, occurrence)
+                stable_key = (
+                    # A custom step is the Unity objective at this index: a stable key lets a
+                    # re-import update the row the editor already has (with its task minigames).
+                    f"{slug(quest_id)}_custom_o{int(raw_step['unity_objective_index'])}"
+                    if step_type == "custom" and raw_step.get("unity_objective_index") is not None
+                    else quest_step_key(quest_id, raw_step, occurrence)
+                )
                 payload = normalize({key: value for key, value in raw_step.items() if key != "type"})
                 step_metadata: dict[str, Any] = {
                     "source_position": step_position,
@@ -750,6 +758,26 @@ def build_bundle() -> dict[str, Any]:
                                 quest_id=quest_id,
                                 step_position=step_position,
                                 expected_key=instance_id,
+                            )
+
+                if step_type == "custom":
+                    for task in raw_step.get("tasks") or []:
+                        if not isinstance(task, dict) or task.get("mode") != "minigame":
+                            continue
+                        instance_key = str(task.get("instance_key") or "")
+                        if instance_key not in minigame_instance_by_key:
+                            conflict(
+                                conflicts,
+                                "missing_task_instance",
+                                "warning",
+                                "Custom step task plays a minigame instance that is not in the registry "
+                                "(fine when it already lives in Supabase).",
+                                quest["source_path"] or str(index_path.relative_to(ROOT)),
+                                questline=questline_key,
+                                quest_id=quest_id,
+                                step_position=step_position,
+                                task=task.get("index"),
+                                instance_key=instance_key,
                             )
 
                 step = {
@@ -1067,6 +1095,108 @@ def insert_revisions_sql(bundle: dict[str, Any]) -> str:
     return "\n".join(statements) + "\n"
 
 
+def line_quests_sql(line_key: str) -> str:
+    return f"(select id from public.quests where questline_id = {questline_lookup(line_key)})"
+
+
+def task_choices_guard_sql(line: dict[str, Any]) -> str:
+    """Stop a re-import from wiping task minigames chosen in the editor but not yet synced into Unity.
+
+    Every live non-`scene` task choice of the line must be in the incoming YAML (which it is once
+    Unity's Custom Step Minigames sync ran and the line was re-exported).
+    """
+    incoming = [
+        {
+            "quest": quest["key"],
+            "step": step["key"],
+            "task": int(task.get("index") or 0),
+            "mode": str(task.get("mode") or "scene"),
+            "instance_key": str(task.get("instance_key") or ""),
+        }
+        for quest in line["quests"]
+        for step in quest["steps"]
+        if step["type"] == "custom"
+        for task in (step["payload"].get("tasks") or [])
+        if isinstance(task, dict)
+    ]
+    message = (
+        f"{line['key']}: task minigames chosen in the quest editor are not in this import. "
+        "Run Unity's Custom Step Minigames sync and re-export the line first (or pass --force)."
+    )
+    return (
+        "do $guard$ begin if exists ("
+        "select 1 from public.quest_steps s "
+        "join public.quests q on q.id = s.quest_id "
+        "join public.questlines l on l.id = q.questline_id "
+        "cross join lateral jsonb_array_elements(coalesce(s.payload->'tasks', '[]'::jsonb)) t "
+        f"where l.key = {sql_literal(line['key'])} and s.step_type = 'custom' "
+        "and coalesce(t->>'mode', 'scene') <> 'scene' "
+        "and not exists (select 1 from jsonb_to_recordset("
+        f"{dollar_json(incoming)}) as i(quest text, step text, task integer, mode text, instance_key text) "
+        "where i.quest = q.key and i.step = s.key and i.task = (t->>'index')::integer "
+        "and i.mode = t->>'mode' and i.instance_key = coalesce(t->>'instance_key', ''))"
+        f") then raise exception {sql_literal(message)}; end if; end $guard$;\n"
+    )
+
+
+def line_live_batches(bundle: dict[str, Any], line_key: str, force: bool = False) -> dict[str, str]:
+    """Ordered SQL that (re)imports one questline into a live database without touching other lines.
+
+    Steps, prerequisites and rewards of the line are replaced, so running it twice never
+    doubles XP or coins.
+    """
+    line = next((line for line in bundle["questlines"] if line["key"] == line_key), None)
+    if line is None:
+        raise SystemExit(f"questline '{line_key}' is not in questlines/")
+    single = {
+        **bundle,
+        "questlines": [line],
+        "revision_documents": [doc for doc in bundle["revision_documents"] if doc["key"] == line_key],
+    }
+    quest_ids = line_quests_sql(line_key)
+    step_keys = [step["key"] for quest in line["quests"] for step in quest["steps"]]
+    replace = (
+        f"delete from public.quest_prerequisites where quest_id in {quest_ids};\n"
+        f"delete from public.quest_rewards where quest_id in {quest_ids};\n"
+        "delete from public.quest_rewards where step_id in "
+        f"(select id from public.quest_steps where quest_id in {quest_ids});\n"
+    )
+    return {
+        "01_step_types.sql": insert_step_types_sql(bundle),
+        "02_dialogues.sql": insert_dialogues_sql(bundle, str((REGISTRY / "dialogues" / f"{line_key}.yaml").relative_to(ROOT))),
+        "03_minigames.sql": insert_minigames_sql(bundle, str((REGISTRY / "minigame_instances" / f"{line_key}.yaml").relative_to(ROOT))),
+        "04_questline.sql": insert_questlines_sql(single),
+        "05_quests.sql": insert_quests_sql(single),
+        "06_steps.sql": ("" if force else task_choices_guard_sql(line))
+        + f"delete from public.quest_steps where quest_id in {quest_ids} "
+        f"and key <> all (array[{', '.join(sql_literal(key) for key in step_keys)}]::text[]);\n"
+        + insert_steps_sql(single),
+        "07_prerequisites_rewards.sql": replace + insert_edges_and_rewards_sql(single),
+        "08_revision.sql": insert_revisions_sql(single),
+    }
+
+
+def write_line_live(bundle: dict[str, Any], line_key: str, live_dir: Path, force: bool) -> None:
+    live_dir.mkdir(parents=True, exist_ok=True)
+    for old_file in live_dir.glob("*.sql"):
+        old_file.unlink()
+    for filename, content in line_live_batches(bundle, line_key, force).items():
+        if "$guard$" in content:
+            # The guard's do-block must stay whole; split_sql_statements does not know $guard$ quoting.
+            guard, rest = content.split(" end $guard$;\n", 1)
+            chunks = [guard + " end $guard$;\n"] + split_sql_statements(rest, max_chars=20000)
+        else:
+            chunks = split_sql_statements(content, max_chars=20000)
+        for index, chunk in enumerate(chunks, start=1):
+            (live_dir / f"{Path(filename).stem}_{index:02d}.sql").write_text(chunk, encoding="utf-8")
+    line_conflicts = [item for item in bundle["conflicts"] if item.get("context", {}).get("questline") == line_key]
+    errors = [item for item in line_conflicts if item["severity"] == "error"]
+    print(f"live sql for {line_key}: {live_dir} ({len(list(live_dir.glob('*.sql')))} files, "
+          f"{len(errors)} errors, {len(line_conflicts) - len(errors)} warnings/info)")
+    for item in errors:
+        print(f"  !! {item['kind']}: {item['message']} {item.get('context')}")
+
+
 def reset_sql() -> str:
     return """-- Generated by import_yaml_to_supabase.py --reset
 delete from public.questline_revisions;
@@ -1242,6 +1372,21 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=ROOT / "supabase" / "seed" / "generated",
     )
+    parser.add_argument(
+        "--line",
+        metavar="LINE_KEY",
+        help="Also write ordered SQL that (re)imports only this questline into the live database.",
+    )
+    parser.add_argument(
+        "--live-out",
+        type=Path,
+        help="Folder for the --line SQL chunks (default reports/_<line>_live/).",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="--line: skip the guard that keeps editor task-minigame choices not yet synced into Unity.",
+    )
     return parser.parse_args()
 
 
@@ -1253,6 +1398,9 @@ def main() -> None:
     QUESTLINES_DIR = ROOT / "questlines"
     bundle = build_bundle()
     write_outputs(bundle, args.output_dir.resolve(), args.report.resolve(), args.sql_dir.resolve())
+    if args.line:
+        live_dir = (args.live_out or ROOT / "reports" / f"_{args.line}_live").resolve()
+        write_line_live(bundle, args.line, live_dir, args.force)
 
 
 if __name__ == "__main__":

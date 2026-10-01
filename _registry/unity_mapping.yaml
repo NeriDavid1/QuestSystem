@@ -35,6 +35,7 @@ step_type_map:
   play_minigame: CompleteMiniGame
   collect_item: Collect
   deliver_item: DeliverItem
+  custom: Custom  # imported Unity reactor step; only tasks[].mode/instance_key round-trip (taskMiniGames)
 
 play_minigame_fields:
   minigame_id: "Which *QuestConfigSO subclass / content type to use"

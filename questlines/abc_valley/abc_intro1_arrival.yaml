@@ -1,0 +1,53 @@
+quest:
+  id: abc_intro1_arrival
+  name: הגעה לעמק
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: null
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 50
+  items:
+    - id: coin
+      amount: 10
+steps:
+  - type: custom
+    handler_id: abc_intro1_opening
+    unity_objective_index: 0
+    count: 1
+    reactor: cutscene
+    display_text: צפו בסרטון הפתיחה
+  - type: custom
+    handler_id: abc_intro1_path
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Spot_Well
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: לכו בשביל האורות עד הבאר
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: intro1_wake
+    count: 1
+    display_text: העירו את סבא טוביאס (גשו אליו ולחצו E)
+  - type: custom
+    handler_id: abc_intro1_well
+    unity_objective_index: 3
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Spot_Bucket
+        trigger: interact
+        prompt: שאבו מים
+        scene_no_minigame: true
+        mode: scene
+    display_text: שאבו מים מהבאר
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: intro1_turnin

@@ -1,0 +1,94 @@
+quest:
+  id: abc_j_jars
+  name: הצנצנות הקופצות
+  level_required: 0
+  giver_npc: bruno_gardener
+  prerequisite: abc_i_ice
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: j_lesson
+    count: 1
+    display_text: דברו עם ברונו ליד המדף הריק
+  - type: custom
+    handler_id: abc_j_catch
+    unity_objective_index: 1
+    count: 7
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Jar_1
+        trigger: interact
+        prompt: תפוס את הצנצנת
+        scene_minigame: WordOrderingQuestConfig_missing_verbs_q02_sentence_jump
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 1
+        name: Jar_2
+        trigger: interact
+        prompt: תפוס את הצנצנת
+        intercepted: true
+        scene_minigame: WordOrderingQuestConfig_missing_verbs_q02_sentence_jump
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 2
+        name: Jar_3
+        trigger: interact
+        prompt: תפוס את הצנצנת
+        scene_minigame: WordOrderingQuestConfig_missing_verbs_q02_sentence_jump
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 3
+        name: Jar_4
+        trigger: interact
+        prompt: תפוס את הצנצנת
+        intercepted: true
+        scene_minigame: WordOrderingQuestConfig_missing_verbs_q02_sentence_jump
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 4
+        name: Jar_5
+        trigger: interact
+        prompt: תפוס את הצנצנת
+        scene_minigame: WordOrderingQuestConfig_missing_verbs_q02_sentence_jump
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 5
+        name: Jar_6
+        trigger: interact
+        prompt: תפוס את הצנצנת
+        intercepted: true
+        scene_minigame: WordOrderingQuestConfig_missing_verbs_q02_sentence_jump
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 6
+        name: Jar_7
+        trigger: interact
+        prompt: תפוס את הצנצנת
+        scene_minigame: WordOrderingQuestConfig_missing_verbs_q02_sentence_jump
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: תפסו את הצנצנות הקופצות
+  - type: custom
+    handler_id: abc_j_shelf
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: PutBack
+        trigger: interact
+        prompt: סדר את הצנצנות על המדף
+        scene_no_minigame: true
+        mode: scene
+    display_text: החזירו את הצנצנות למדף של ברונו
+  - type: return_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: j_turnin

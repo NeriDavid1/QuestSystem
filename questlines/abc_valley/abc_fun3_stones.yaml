@@ -1,0 +1,46 @@
+quest:
+  id: abc_fun3_stones
+  name: גשר האבנים המרחפות
+  level_required: 0
+  giver_npc: mira_stonecarver
+  prerequisite: abc_k_keys
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 50
+steps:
+  - type: talk_to_npc
+    npc_id: mira_stonecarver
+    dialogue_id: fun3_stones
+    count: 1
+    display_text: שמעו מה מירה גילתה
+  - type: custom
+    handler_id: abc_fun3_bridge
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: ReachTop
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: קפצו מאבן לאבן עד הפסגה
+  - type: custom
+    handler_id: abc_fun3_treasure
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Treasure
+        trigger: interact
+        prompt: פתח את התיבה
+        mode: scene
+    display_text: פתחו את האוצר
+  - type: return_to_npc
+    npc_id: mira_stonecarver
+    dialogue_id: fun3_turnin

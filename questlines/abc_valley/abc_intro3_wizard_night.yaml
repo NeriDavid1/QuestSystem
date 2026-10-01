@@ -1,0 +1,40 @@
+quest:
+  id: abc_intro3_wizard_night
+  name: הלילה שבו הגיע הקוסם
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_intro2_neighbors
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 50
+  items:
+    - id: coin
+      amount: 10
+steps:
+  - type: custom
+    handler_id: abc_intro3_wizard
+    unity_objective_index: 0
+    count: 1
+    reactor: cutscene
+    display_text: הלילה שבו הגיע הקוסם
+  - type: custom
+    handler_id: abc_intro3_gather
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Spot_Well
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: רוצו לבאר, שם כל הכפריים מתאספים
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: intro3_story
+    count: 1
+    display_text: הקשיבו לסיפור של סבא טוביאס
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: intro3_turnin

@@ -1,0 +1,61 @@
+quest:
+  id: abc_hw1_mail
+  name: הדואר של הבוקר
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_d_drum
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: hw1_letters
+    count: 1
+    display_text: קחו את המכתבים מסבא טוביאס
+  - type: custom
+    handler_id: abc_hw1_deliver
+    unity_objective_index: 1
+    count: 4
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Letter_A
+        trigger: npc_talk
+        prompt: Open
+        npc_id: grandpa_tobias
+        scene_minigame: WordOrderingQuestConfig_the_kingdoms_worst_day__q04_mixed_sentence_one
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 1
+        name: Letter_B
+        trigger: npc_talk
+        prompt: Open
+        npc_id: bruno_gardener
+        scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 2
+        name: Letter_C
+        trigger: npc_talk
+        prompt: Open
+        npc_id: noa
+        scene_minigame: LineMatchQuestConfig_wh_questions_q04_match_all_six
+        scene_minigame_id: word_matching
+        mode: scene
+      - index: 3
+        name: Letter_D
+        trigger: npc_talk
+        prompt: Open
+        npc_id: pip_bellringer
+        scene_minigame: WordOrderingQuestConfig_adjectives_basics_q06_big_yellow_sun
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: מסרו את ארבעת המכתבים
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: hw1_turnin

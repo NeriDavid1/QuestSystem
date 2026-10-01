@@ -1,0 +1,78 @@
+quest:
+  id: abc_h_waterfall
+  name: המפל ההפוך
+  level_required: 0
+  giver_npc: pip_bellringer
+  prerequisite: abc_fun2_ridge
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: h_lesson
+    count: 1
+    display_text: דברו עם פיפ ליד הבריכה
+  - type: custom
+    handler_id: abc_h_fish
+    unity_objective_index: 1
+    count: 7
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: FishSpot_1
+        trigger: interact
+        prompt: דוג
+        scene_minigame: DwarfMinerQuestConfig_the_these_those_homework_q01_mine_more_than_one
+        scene_minigame_id: dwarf_miner
+        mode: scene
+      - index: 1
+        name: FishSpot_2
+        trigger: interact
+        prompt: דוג
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q06_an_orange_hat
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 2
+        name: FishSpot_3
+        trigger: interact
+        prompt: דוג
+        scene_minigame: DwarfMinerQuestConfig_the_royal_impostor_homework_q01_mine_owner_words
+        scene_minigame_id: dwarf_miner
+        mode: scene
+      - index: 3
+        name: FishSpot_4
+        trigger: interact
+        prompt: דוג
+        scene_minigame: WordOrderingQuestConfig_line_thisorthat_q01_village_head_minigame_3
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 4
+        name: FishSpot_5
+        trigger: interact
+        prompt: דוג
+        scene_minigame: DwarfMinerQuestConfig_the_kingdoms_worst_day_homework_q01_mine_verbs
+        scene_minigame_id: dwarf_miner
+        mode: scene
+      - index: 5
+        name: FishSpot_6
+        trigger: interact
+        prompt: דוג
+        scene_minigame: WordOrderingQuestConfig_line_thisorthat_q03_knowledge_advisors_minigame
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 6
+        name: FishSpot_7
+        trigger: interact
+        prompt: דוג
+        scene_minigame: DwarfMinerQuestConfig_personal_pronouns_homework_q01_mine_it_words
+        scene_minigame_id: dwarf_miner
+        mode: scene
+    display_text: דגו מילים עם H מהבריכה
+  - type: return_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: h_turnin

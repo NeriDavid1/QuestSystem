@@ -57,6 +57,20 @@ step_types:
       location_id: { type: string, required: true, ref: areas.yaml, description: "Exact Unity area ID from AreaCatalog_OpenWorld" }
       radius: { type: float, required: false, default: 5.0 }
 
+  custom:
+    unity_objective: Custom
+    description: A Unity-built step run by a scene reactor (task set, cutscene, encounter...); only task minigames are editable
+    # Imported from Unity (unity_to_yaml.py reads the objective + its scene reactor). The quest's step
+    # structure is locked: reactors bind to the objective index. Task minigames sync back to
+    # QuestObjectiveDefinition.taskMiniGames through Unity's "Custom Step Minigames" sync.
+    locked: true
+    fields:
+      handler_id: { type: string, required: true, readonly: true, description: "Unity objective targetId (the reactor's handler id)" }
+      unity_objective_index: { type: integer, required: true, readonly: true, description: "Index in QuestDefinitionSO.objectives; the scene reactor binds to it" }
+      count: { type: integer, required: false, readonly: true }
+      reactor: { type: string, required: true, readonly: true, description: "task_set | cutscene | escort | monster_encounter | choice_rounds | wave_defense | museum" }
+      tasks: { type: json, required: false, description: "task_set only: one entry per spot {index, name, mode: scene|minigame|none, minigame_id, instance_key, ...}" }
+
 # Example live Adjective Crown pattern:
 # - type: talk_to_npc
 #   npc_id: teacher_maya

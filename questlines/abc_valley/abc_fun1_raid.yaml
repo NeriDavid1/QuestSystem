@@ -1,0 +1,28 @@
+quest:
+  id: abc_fun1_raid
+  name: פשיטה על הכפר
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_c_cave
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 50
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: fun1_alarm
+    count: 1
+    display_text: שמעו מה קורה ליד הקשת
+  - type: custom
+    handler_id: abc_fun1_waves
+    unity_objective_index: 1
+    count: 3
+    reactor: wave_defense
+    display_text: הגנו על הכפר מפני שלושה גלים של מפלצות
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: fun1_turnin

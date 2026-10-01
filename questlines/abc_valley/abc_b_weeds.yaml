@@ -1,0 +1,94 @@
+quest:
+  id: abc_b_weeds
+  name: העשבים של הקוסם
+  level_required: 0
+  giver_npc: bruno_gardener
+  prerequisite: abc_a_shards
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: b_lesson
+    count: 1
+    display_text: דברו עם ברונו בגינה
+  - type: custom
+    handler_id: abc_b_weeds
+    unity_objective_index: 1
+    count: 5
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Weed_1
+        trigger: interact
+        prompt: השקה במזלף
+        scene_minigame: WordOrderingQuestConfig_articles_a_an_q03_i_want_a_banana
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 1
+        name: Weed_2
+        trigger: interact
+        prompt: השקה במזלף
+        scene_minigame: WordOrderingQuestConfig_noun_repair_shop_homework_q01_the_baker_holds_a_cake
+        scene_minigame_id: word_ordering
+        mode: scene
+      - index: 2
+        name: Weed_3
+        trigger: interact
+        prompt: השקה במזלף
+        intercepted: true
+        scene_minigame: LineMatchQuestConfig_adjectives_basics_q02_match_size_words
+        scene_minigame_id: word_matching
+        mode: scene
+      - index: 3
+        name: Weed_4
+        trigger: interact
+        prompt: השקה במזלף
+        scene_minigame: FruitSliceQuestConfig_Playtest
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 4
+        name: Weed_5
+        trigger: interact
+        prompt: השקה במזלף
+        intercepted: true
+        scene_minigame: DwarfMinerQuestConfig_Playtest
+        scene_minigame_id: dwarf_miner
+        mode: scene
+    display_text: הרטיבו במזלף את העשבים הרטנונים ועקרו אותם
+  - type: custom
+    handler_id: abc_b_seed
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: BSeed
+        trigger: interact
+        prompt: השקה במזלף
+        scene_minigame: WordOrderingQuestConfig_adjectives_basics_homework_q01_a_big_red_apple
+        scene_minigame_id: word_ordering
+        mode: scene
+    display_text: השקו את זרע ה-B בערוגה האמצעית
+  - type: custom
+    handler_id: abc_b_beanstalk
+    unity_objective_index: 3
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: GoldenB
+        trigger: interact
+        prompt: גע ב-B
+        intercepted: true
+        scene_no_minigame: true
+        mode: scene
+    display_text: טפסו בעצמכם על גבעול השעועית (לכו אליו והמשיכו קדימה) וגעו ב-B שבראש
+  - type: return_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: b_turnin

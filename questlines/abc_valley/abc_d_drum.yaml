@@ -1,0 +1,85 @@
+quest:
+  id: abc_d_drum
+  name: האוצר של פיפ
+  level_required: 0
+  giver_npc: pip_bellringer
+  prerequisite: abc_fun1_raid
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: d_lesson
+    count: 1
+    display_text: דברו עם פיפ ליד הבריכה
+  - type: custom
+    handler_id: abc_d_digs
+    unity_objective_index: 1
+    count: 6
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: X_1
+        trigger: interact
+        prompt: חפור
+        scene_minigame: FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 1
+        name: X_2
+        trigger: interact
+        prompt: חפור
+        scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 2
+        name: X_3
+        trigger: interact
+        prompt: חפור
+        scene_minigame: FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 3
+        name: X_4
+        trigger: interact
+        prompt: חפור
+        scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 4
+        name: X_5
+        trigger: interact
+        prompt: חפור
+        scene_minigame: FruitSliceQuestConfig_personal_pronouns_homework_q01_it_is_a_big_dog
+        scene_minigame_id: fruit_slice
+        mode: scene
+      - index: 5
+        name: X_6
+        trigger: interact
+        prompt: חפור
+        scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
+        scene_minigame_id: fruit_slice
+        mode: scene
+    display_text: חפרו באיקסים האדומים סביב הבריכה
+  - type: custom
+    handler_id: abc_d_real
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: X_Gold
+        trigger: interact
+        prompt: חפור באיקס הזהב
+        scene_minigame: FruitSliceQuestConfig_the_these_those_homework_q01_the_dog_and_those_kids
+        scene_minigame_id: fruit_slice
+        mode: scene
+    display_text: חפרו באיקס שהרמזים מובילים אליו
+  - type: return_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: d_turnin

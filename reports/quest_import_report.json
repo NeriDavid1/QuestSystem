@@ -1,18 +1,18 @@
 {
   "importer_version": "1.0.0",
-  "source_digest": "68ad887056148cae22b90b11c2b611fbe4b33ba975b6d1dec55f43854f14a6cb",
+  "source_digest": "33e66edd92647e41b76978d05ef490d53da065e416811adedae12c73ad673098",
   "counts": {
     "catalog_entries": 267,
-    "step_type_definitions": 6,
-    "dialogues": 206,
-    "dialogue_lines": 560,
+    "step_type_definitions": 7,
+    "dialogues": 255,
+    "dialogue_lines": 609,
     "minigame_instances": 449,
-    "questlines": 30,
-    "quests": 93,
-    "steps": 507,
+    "questlines": 31,
+    "quests": 116,
+    "steps": 591,
     "errors": 0,
     "warnings": 0,
-    "info": 33
+    "info": 56
   },
   "conflicts": [
     {
@@ -65,6 +65,305 @@
         "position": 8,
         "step_type": "return_to_npc",
         "dialogue_id": "adjectives_mastery_adjectives_mastery_q04_new_quest_turn_in"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_intro1_arrival.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_intro1_arrival",
+        "position": 4,
+        "step_type": "return_to_npc",
+        "dialogue_id": "intro1_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_intro2_neighbors.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_intro2_neighbors",
+        "position": 10,
+        "step_type": "return_to_npc",
+        "dialogue_id": "intro2_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_intro3_wizard_night.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_intro3_wizard_night",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "intro3_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_a_shards.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_a_shards",
+        "position": 5,
+        "step_type": "return_to_npc",
+        "dialogue_id": "a_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_b_weeds.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_b_weeds",
+        "position": 4,
+        "step_type": "return_to_npc",
+        "dialogue_id": "b_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_c_cave.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_c_cave",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "c_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_fun1_raid.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_fun1_raid",
+        "position": 2,
+        "step_type": "return_to_npc",
+        "dialogue_id": "fun1_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_d_drum.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_d_drum",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "d_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_hw1_mail.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_hw1_mail",
+        "position": 2,
+        "step_type": "return_to_npc",
+        "dialogue_id": "hw1_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_e_eggs.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_e_eggs",
+        "position": 4,
+        "step_type": "return_to_npc",
+        "dialogue_id": "e_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_f_shards.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_f_shards",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "f_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_g_tree.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_g_tree",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "g_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_fun2_ridge.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_fun2_ridge",
+        "position": 4,
+        "step_type": "return_to_npc",
+        "dialogue_id": "fun2_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_h_waterfall.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_h_waterfall",
+        "position": 2,
+        "step_type": "return_to_npc",
+        "dialogue_id": "h_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_hw2_stand.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_hw2_stand",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "hw2_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_i_ice.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_i_ice",
+        "position": 4,
+        "step_type": "return_to_npc",
+        "dialogue_id": "i_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_j_jars.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_j_jars",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "j_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_k_keys.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_k_keys",
+        "position": 7,
+        "step_type": "return_to_npc",
+        "dialogue_id": "k_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_fun3_stones.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_fun3_stones",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "fun3_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_l_fireflies.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_l_fireflies",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "l_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_hw3_concert.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_hw3_concert",
+        "position": 3,
+        "step_type": "return_to_npc",
+        "dialogue_id": "hw3_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_m_museum.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_m_museum",
+        "position": 2,
+        "step_type": "return_to_npc",
+        "dialogue_id": "m_turnin"
+      }
+    },
+    {
+      "kind": "promoted_turn_in_step",
+      "severity": "info",
+      "message": "Trailing NPC step was promoted to the quest completion dialogue with NPC turn-in enabled.",
+      "path": "questlines\\abc_valley\\abc_n_noodles.yaml",
+      "context": {
+        "questline": "abc_valley",
+        "quest_id": "abc_n_noodles",
+        "position": 4,
+        "step_type": "return_to_npc",
+        "dialogue_id": "n_turnin"
       }
     },
     {

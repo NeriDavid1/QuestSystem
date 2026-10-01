@@ -1,0 +1,207 @@
+# Dialogue scripts exported from Unity — abc_valley
+dialogues:
+  intro1_wake:
+    speaker: grandpa_tobias
+    lines:
+      - חררר... מה? מי שם?! אה! סליחה, רק עצמתי את העיניים לרגע.
+  intro1_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - שמעת? הבאר ענתה לך! היא לא עונה לכל אחד.
+  intro2_mira:
+    speaker: mira_stonecarver
+    lines:
+      - שלום! אתה החדש? בוא, תתקרב. העיניים שלי כבר לא משהו, אבל הידיים שלי זוכרות
+        הכול.
+  intro2_pip:
+    speaker: pip_bellringer
+    lines:
+      - היי! כאן! שמעת את הפעמון? דונג... ככה הוא נשמע היום. עמום ועצוב.
+  intro2_bruno:
+    speaker: bruno_gardener
+    lines:
+      - אה, שלום לך! סליחה, לא שמתי לב שבאת. הנה, קח תפוח. טרי מהעץ!
+  intro2_noa:
+    speaker: noa
+    lines:
+      - בו! נבהלת? חה! אני נועה. ראיתי אותך מסתובב פה כל היום.
+  intro2_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - נו, הכרת את כולם? מירה שכמעט לא רואה, פיפ והפעמון שאיבד את הצלילים, ברונו
+        והזרעים הישנים...
+  intro3_story:
+    speaker: grandpa_tobias
+    lines:
+      - תקשיבו כולם. הגיע הזמן שתדעו את האמת.
+  intro3_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - זה היה הוא. הקוסם האפל. הוא חזר.
+  a_lesson:
+    speaker: grandpa_tobias
+    lines:
+      - לפני שאתה יוצא, תסתכל על ההר שלנו. שני צדדים שנפגשים בפסגה, ושביל באמצע. ככה
+        נראית A.
+  a_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - כל הרסיסים! וניצחת את המימיק? טוב, הוא היה קטן. אבל כשהייתי צעיר, הייתי בורח
+        גם מקטן.
+  b_lesson:
+    speaker: bruno_gardener
+    lines:
+      - 'אתה יודע איזו אות אני הכי אוהב? B. היא נראית כמו אני אחרי ארוחה: קו ישר ושתי
+        בטנים!'
+  b_turnin:
+    speaker: bruno_gardener
+    lines:
+      - ראית את הגבעול? עד השמיים! אף פעם לא גידלתי משהו כזה!
+  c_lesson:
+    speaker: noa
+    lines:
+      - שמעת? "ק... ק...". זה מגיע מהמערה.
+  c_turnin:
+    speaker: noa
+    lines:
+      - עשינו את זה! הייתי בפנים! ממש בפנים!
+  fun1_alarm:
+    speaker: grandpa_tobias
+    lines:
+      - שמעת את הרעש הזה? משהו מגיע מהקניון!
+  fun1_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - הם ברחו! ראית איך רצו?
+  d_lesson:
+    speaker: pip_bellringer
+    lines:
+      - סבא שלי קבר ליד הבריכה תוף זהב, והמפה שלו סימנה אותו באיקס. אבל הקוסם פיזר
+        בלילה עוד המון איקסים!
+  d_turnin:
+    speaker: pip_bellringer
+    lines:
+      - התוף של סבא שלי! יודע כמה שנים חיפשתי אותו?
+  hw1_letters:
+    speaker: grandpa_tobias
+    lines:
+      - בוקר טוב! הגיעו ארבעה מכתבים, אחד לכל אות שהדלקת.
+  hw1_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - כל המכתבים הגיעו? A, B, C, D... אתה כבר יודע ארבע אותיות!
+  e_lesson:
+    speaker: grandpa_tobias
+    lines:
+      - הרוח של הקוסם פיזרה את כל הביצים שלי בעמק! אם הן לא יבקעו בחום של הלול, האפרוחים
+        יתקררו.
+  e_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - כל האפרוחים! תראה איך הם הולכים אחריך בשורה, כאילו אתה אמא שלהם.
+  f_lesson:
+    speaker: mira_stonecarver
+    lines:
+      - ראית? האבנים המרחפות נופלות עם שובל זהב. הן חלקים של אבן העמידה הגדולה!
+  f_turnin:
+    speaker: mira_stonecarver
+    lines:
+      - תן לי להרגיש... הקו הזה, ועוד אחד, ועוד אחד. F.
+  g_lesson:
+    speaker: grandpa_tobias
+    lines:
+      - סבא טוביאס, מה הסימן על העץ?
+  g_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - ענק! היה ענק בכיכר שלנו!
+  fun2_bet:
+    speaker: noa
+    lines:
+      - תגיד, אתה חושב שאתה יכול לטפס עד הרכס? עד האותיות עצמן?
+  fun2_turnin:
+    speaker: noa
+    lines:
+      - טוב, טוב, הגעת ראשון. בפעם הבאה אני מנצחת.
+  h_lesson:
+    speaker: pip_bellringer
+    lines:
+      - תסתכל על המפל! המים זורמים למעלה! והבריכה מלאה אותיות מבולבלות.
+  h_turnin:
+    speaker: pip_bellringer
+    lines:
+      - המים חזרו לרדת! אני כל כך רטובה.
+  hw2_open:
+    speaker: bruno_gardener
+    lines:
+      - ברוך הבא לדוכן של ברונו! הכפר מזמין, ואנחנו מוכרים.
+  hw2_turnin:
+    speaker: bruno_gardener
+    lines:
+      - כל ההזמנות נמסרו! אתה המוכר הכי טוב שהיה לי. בעצם, הראשון.
+  i_lesson:
+    speaker: pip_bellringer
+    lines:
+      - קום! קום! כל העמק קפוא! ומירה... מירה תקועה בתוך גוש קרח!
+  i_turnin:
+    speaker: mira_stonecarver
+    lines:
+      - ברררר... כמה זמן הייתי שם?
+  j_lesson:
+    speaker: bruno_gardener
+    lines:
+      - הצנצנות שלי! הקוסם כישף אותן, והן קפצו מהמדף! ואני צריך אותן לפסטיבל הריבה!
+  j_turnin:
+    speaker: bruno_gardener
+    lines:
+      - כל הצנצנות! גם זאת עם הריבה של סבתא!
+  k_lesson:
+    speaker: pip_bellringer
+    lines:
+      - הקוסם נעל את שלושת הבתים! והמפתחות מוסתרים בתיבות בכפר.
+  k_turnin:
+    speaker: pip_bellringer
+    lines:
+      - הדלת שלי נפתחה! והעפיפון שלך... עוד בשמיים?
+  fun3_stones:
+    speaker: mira_stonecarver
+    lines:
+      - הרגשתי את האבנים המרחפות. הן יציבות עכשיו. הן יכולות להחזיק ילד!
+  fun3_turnin:
+    speaker: mira_stonecarver
+    lines:
+      - ידעתי שהאבנים יחזיקו. הרגשתי את זה.
+  l_lesson:
+    speaker: noa
+    lines:
+      - 'הקוסם גנב את כל האור של הלילה, והגחליליות ברחו. יש לי רעיון: נתפוס אותן בצנצנות!'
+  l_turnin:
+    speaker: noa
+    lines:
+      - פעם פחדתי מהחושך. עכשיו... קצת פחות.
+  hw3_plan:
+    speaker: pip_bellringer
+    lines:
+      - 'שמעת? לפעמון חזרו ארבעה צלילים! תליתי במגדל ארבעה פעמונים קטנים: I, J, K,
+        L.'
+  hw3_turnin:
+    speaker: pip_bellringer
+    lines:
+      - שמעת את הכפר מוחא כפיים? זה בשבילנו!
+  m_lesson:
+    speaker: grandpa_tobias
+    lines:
+      - אני מתחיל להיזכר בימים שבהם האותיות זהרו. אבל הכול מטושטש...
+  m_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - פסל, צלילים, ציור... כן. כן! נזכרתי.
+  n_lesson:
+    speaker: bruno_gardener
+    lines:
+      - אחרי כל ההרפתקאות מגיעה לכפר ארוחה! אבל הקוסם כישף את המטבח, וכל המצרכים ברחו
+        לבתים של השכנים.
+  n_turnin:
+    speaker: bruno_gardener
+    lines:
+      - עוד צלחת? כמובן! N כמו noodles, ו-N כמו never enough noodles.
