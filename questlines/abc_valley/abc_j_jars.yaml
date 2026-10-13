@@ -95,7 +95,9 @@ steps:
         trigger: interact
         prompt: סדר את הצנצנות על המדף
         scene_no_minigame: true
-        mode: scene
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_j_jars__o2_t0
     display_text: החזירו את הצנצנות למדף של ברונו
   - type: return_to_npc
     npc_id: bruno_gardener

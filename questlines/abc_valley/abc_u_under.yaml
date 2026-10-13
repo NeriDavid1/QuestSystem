@@ -1,0 +1,102 @@
+quest:
+  id: abc_u_under
+  name: מתחת לבאר
+  level_required: 0
+  giver_npc: mira_stonecarver
+  prerequisite: abc_hw5_album
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: mira_stonecarver
+    dialogue_id: u_lesson
+    count: 1
+    display_text: דברו עם מירה ליד הבאר
+  - type: custom
+    handler_id: abc_u_down
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Down
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: רדו במדרגות מתחת לבאר
+  - type: custom
+    handler_id: abc_u_doors
+    unity_objective_index: 2
+    count: 5
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Door_1
+        trigger: interact
+        prompt: פתח את הדלת
+        scene_minigame: LineMatchQuestConfig_the_royal_impostor__q03_group_perspective_gaps
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_u_under__o2_t0
+      - index: 1
+        name: Door_2
+        trigger: interact
+        prompt: פתח את הדלת
+        scene_minigame: LineMatchQuestConfig_the_royal_impostor__q03_group_perspective_gaps
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_u_under__o2_t1
+      - index: 2
+        name: Door_3
+        trigger: interact
+        prompt: פתח את הדלת
+        scene_minigame: LineMatchQuestConfig_the_royal_impostor__q03_group_perspective_gaps
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_u_under__o2_t2
+      - index: 3
+        name: Door_4
+        trigger: interact
+        prompt: פתח את הדלת
+        scene_minigame: LineMatchQuestConfig_the_royal_impostor__q03_group_perspective_gaps
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_u_under__o2_t3
+      - index: 4
+        name: Door_5
+        trigger: interact
+        prompt: פתח את הדלת
+        scene_minigame: LineMatchQuestConfig_the_royal_impostor__q03_group_perspective_gaps
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_u_under__o2_t4
+    display_text: פתחו את הדלתות במנהרות
+  - type: custom
+    handler_id: abc_u_room
+    unity_objective_index: 3
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: TornBook
+        trigger: interact
+        prompt: פתח את הספר הקרוע
+        scene_minigame: LineMatchQuestConfig_the_royal_impostor__q03_group_perspective_gaps
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_u_under__o3_t0
+    display_text: מצאו את מה שמסתתר בחדר הסודי
+  - type: return_to_npc
+    npc_id: mira_stonecarver
+    dialogue_id: u_turnin

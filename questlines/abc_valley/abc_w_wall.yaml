@@ -1,0 +1,92 @@
+quest:
+  id: abc_w_wall
+  name: החומה של הקוסם
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_v_visitor
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: w_lesson
+    count: 1
+    display_text: דברו עם טוביאס מול החומה
+  - type: custom
+    handler_id: abc_w_bricks
+    unity_objective_index: 1
+    count: 7
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Brick_1
+        trigger: interact
+        prompt: שבור את הלבנה
+        scene_minigame: DwarfMinerQuestConfig_abc_valley__abc_h_waterfall__o1_t0
+        scene_minigame_id: dwarf_miner
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_w_wall__o1_t0
+      - index: 1
+        name: Brick_2
+        trigger: interact
+        prompt: שבור את הלבנה
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_h_waterfall__o1_t1
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_w_wall__o1_t1
+      - index: 2
+        name: Brick_3
+        trigger: interact
+        prompt: שבור את הלבנה
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_h_waterfall__o1_t4
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_w_wall__o1_t2
+      - index: 3
+        name: Brick_4
+        trigger: interact
+        prompt: שבור את הלבנה
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_h_waterfall__o1_t5
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_w_wall__o1_t3
+      - index: 4
+        name: Brick_5
+        trigger: interact
+        prompt: שבור את הלבנה
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_h_waterfall__o1_t6
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_w_wall__o1_t4
+      - index: 5
+        name: Brick_6
+        trigger: interact
+        prompt: שבור את הלבנה
+        scene_minigame: LineMatchQuestConfig_abc_valley__abc_h_waterfall__o1_t3
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_w_wall__o1_t5
+      - index: 6
+        name: Brick_7
+        trigger: interact
+        prompt: שבור את הלבנה
+        scene_minigame: LineMatchQuestConfig_abc_valley__abc_h_waterfall__o1_t4
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_w_wall__o1_t6
+    display_text: שברו את הלבנים של החומה
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: w_turnin

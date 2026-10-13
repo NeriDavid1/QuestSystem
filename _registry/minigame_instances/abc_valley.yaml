@@ -48,6 +48,23 @@ instances:
       symbols:
         - A
         - a
+  abc_valley__abc_a_shards__o1_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה חדשה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה חדשה. באיזו אות היא מתחילה?
+    target: a
+    variant: listening_spelling
+    success: שמעתם את A גם ב-axe.
+    params:
+      prompt: הקשיבו למילה חדשה. באיזו אות היא מתחילה?
+      targetWord: a
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/axe.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 2
+      customDistractors:
+        - o
+        - s
   abc_valley__abc_a_shards__o1_t4:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
@@ -217,7 +234,7 @@ instances:
       symbols:
         - C
         - c
-  abc_valley__abc_c_cave__o1_t4:
+  abc_valley__abc_c_cave__o1_t3:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
     tasks:
@@ -244,6 +261,26 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Food/Fruit/Apple.png
+  abc_valley__abc_c_cave__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ca
+    variant: listening_spelling
+    success: בניתם את הצירוף ca.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ca
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/CA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - b
+        - e
+        - o
+        - d
+        - i
   abc_valley__abc_c_cave__o2_t0:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
@@ -314,7 +351,7 @@ instances:
       customDistractors:
         - b
         - c
-  abc_valley__abc_d_drum__o1_t3:
+  abc_valley__abc_d_drum__o1_t2:
     minigame_id: letter_drawing
     instruction: ציירו D גדולה ו-d קטנה, ואחר כך b ו-d. שימו לב לאיזה צד הבטן פונה.
     tasks:
@@ -328,7 +365,7 @@ instances:
         - d
         - b
         - d
-  abc_valley__abc_d_drum__o1_t5:
+  abc_valley__abc_d_drum__o1_t3:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
     tasks:
@@ -355,6 +392,46 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Animal/Bee.png
+  abc_valley__abc_d_drum__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: da
+    variant: listening_spelling
+    success: בניתם את הצירוף da.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: da
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/DA.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - b
+        - e
+        - c
+        - o
+        - i
+  abc_valley__abc_d_drum__o1_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ad
+    variant: listening_spelling
+    success: בניתם את הצירוף ad.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ad
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/AD.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - b
+        - o
+        - c
+        - i
+        - e
   abc_valley__abc_d_drum__o2_t0:
     minigame_id: listening_letter_ordering
     instruction: הקשיבו ובנו את המילה אבא באנגלית.
@@ -422,7 +499,7 @@ instances:
       symbols:
         - E
         - e
-  abc_valley__abc_e_eggs__o1_t4:
+  abc_valley__abc_e_eggs__o1_t3:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
     tasks:
@@ -449,6 +526,46 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Doll.png
+  abc_valley__abc_e_eggs__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: be
+    variant: listening_spelling
+    success: בניתם את הצירוף be.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: be
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/BE.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - d
+        - a
+        - c
+        - i
+        - o
+  abc_valley__abc_e_eggs__o1_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: de
+    variant: listening_spelling
+    success: בניתם את הצירוף de.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: de
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/DE.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - b
+        - a
+        - i
+        - c
+        - o
   abc_valley__abc_e_eggs__o2_t0:
     minigame_id: letter_ordering
     instruction: סדרו את האותיות וכתבו את המילה מיטה באנגלית.
@@ -516,7 +633,7 @@ instances:
         - f
         - E
         - e
-  abc_valley__abc_f_shards__o1_t4:
+  abc_valley__abc_f_shards__o1_t3:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
     tasks:
@@ -543,6 +660,46 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Egg.png
+  abc_valley__abc_f_shards__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: fa
+    variant: listening_spelling
+    success: בניתם את הצירוף fa.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: fa
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/FA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - e
+        - d
+        - b
+        - c
+        - i
+  abc_valley__abc_f_shards__o1_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ef
+    variant: listening_spelling
+    success: בניתם את הצירוף ef.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ef
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/EF.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - a
+        - d
+        - b
+        - c
+        - i
   abc_valley__abc_f_shards__o2_t0:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
@@ -629,7 +786,7 @@ instances:
         - g
         - C
         - c
-  abc_valley__abc_g_tree__o1_t4:
+  abc_valley__abc_g_tree__o1_t3:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
     tasks:
@@ -656,6 +813,26 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Animal/Cat.png
+  abc_valley__abc_g_tree__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ga
+    variant: listening_spelling
+    success: בניתם את הצירוף ga.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ga
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/GA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - c
+        - e
+        - d
+        - b
+        - f
   abc_valley__abc_g_tree__o1_t5:
     minigame_id: listening_letter_ordering
     instruction: הקשיבו ובנו את המילה תיק באנגלית.
@@ -673,6 +850,96 @@ instances:
       customDistractors:
         - d
         - c
+  abc_valley__abc_grad_ceremony__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: b
+    variant: listening_spelling
+    success: שמעתם את B בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: b
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/ball.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - d
+        - p
+        - q
+  abc_valley__abc_grad_ceremony__o2_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: m
+    variant: listening_spelling
+    success: שמעתם את M בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: m
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/moon.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - n
+        - w
+        - u
+  abc_valley__abc_grad_ceremony__o2_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה חם באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה חם באנגלית.
+    target: hot
+    variant: listening_spelling
+    success: בניתם את המילה hot.
+    params:
+      prompt: הקשיבו ובנו את המילה חם באנגלית.
+      targetWord: hot
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/hot.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - d
+        - a
+        - e
+  abc_valley__abc_grad_ceremony__o2_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: f
+    variant: listening_spelling
+    success: שמעתם את F בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: f
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/fire.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - v
+        - p
+        - h
+  abc_valley__abc_grad_ceremony__o2_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: y
+    variant: listening_spelling
+    success: שמעתם את Y בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: y
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/yes.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - u
+        - v
+        - w
   abc_valley__abc_h_waterfall__o1_t0:
     minigame_id: dwarf_miner
     instruction: אספו רק את האות H - גדולה וקטנה. היזהרו מאותיות שדומות לה.
@@ -723,7 +990,7 @@ instances:
       symbols:
         - H
         - h
-  abc_valley__abc_h_waterfall__o1_t4:
+  abc_valley__abc_h_waterfall__o1_t3:
     minigame_id: word_matching
     instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
     tasks:
@@ -750,7 +1017,7 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Animal/Dog.png
-  abc_valley__abc_h_waterfall__o1_t6:
+  abc_valley__abc_h_waterfall__o1_t4:
     minigame_id: listening_letter_ordering
     instruction: הקשיבו למילה. באיזו אות היא מתחילה?
     tasks:
@@ -768,6 +1035,46 @@ instances:
         - b
         - d
         - f
+  abc_valley__abc_h_waterfall__o1_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ha
+    variant: listening_spelling
+    success: בניתם את הצירוף ha.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ha
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/HA.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - e
+        - b
+        - d
+        - f
+        - g
+  abc_valley__abc_h_waterfall__o1_t6:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: he
+    variant: listening_spelling
+    success: בניתם את הצירוף he.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: he
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/HE.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - a
+        - b
+        - d
+        - f
+        - g
   abc_valley__abc_hw1_mail__o1_t0:
     minigame_id: listening_letter_ordering
     instruction: הקשיבו למילה. באיזו אות היא מתחילה?
@@ -928,6 +1235,78 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Hat.png
+  abc_valley__abc_hw5_album__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: q
+    variant: listening_spelling
+    success: שמעתם את Q בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: q
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/queen.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - r
+        - s
+        - t
+  abc_valley__abc_hw5_album__o2_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: r
+    variant: listening_spelling
+    success: שמעתם את R בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: r
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/rabbit.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - q
+        - s
+        - p
+  abc_valley__abc_hw5_album__o2_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: s
+    variant: listening_spelling
+    success: שמעתם את S בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: s
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/sun.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - q
+        - r
+        - c
+  abc_valley__abc_hw5_album__o2_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: t
+    variant: listening_spelling
+    success: שמעתם את T בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: t
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/tree.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - r
+        - s
+        - f
   abc_valley__abc_i_ice__o1_t0:
     minigame_id: dwarf_miner
     instruction: אספו רק את האות I - גדולה וקטנה. היזהרו מאותיות שדומות לה.
@@ -960,12 +1339,13 @@ instances:
     params:
       prompt: הקשיבו למילה. באיזו אות היא מתחילה?
       targetWord: i
-      promptAudio: _OurAssets/Art/Audio/Voice/Words/ice.mp3
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/insect.mp3
       hintMode: AudioOnly
-      extraDistractorCount: 2
+      extraDistractorCount: 3
       customDistractors:
         - a
         - e
+        - h
   abc_valley__abc_i_ice__o1_t2:
     minigame_id: letter_drawing
     instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
@@ -978,7 +1358,47 @@ instances:
       symbols:
         - I
         - i
+  abc_valley__abc_i_ice__o1_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: bi
+    variant: listening_spelling
+    success: בניתם את הצירוף bi.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: bi
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/BI.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - d
+        - a
+        - e
+        - h
+        - f
   abc_valley__abc_i_ice__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: di
+    variant: listening_spelling
+    success: בניתם את הצירוף di.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: di
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/DI.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - b
+        - a
+        - e
+        - h
+        - g
+  abc_valley__abc_i_ice__o2_t1:
     minigame_id: listening_letter_ordering
     instruction: הקשיבו ובנו את המילה גדול באנגלית.
     tasks:
@@ -1072,6 +1492,26 @@ instances:
           missingIndices:
             - 0
           image: Art/Sprites/LineMatch/Words/Food/Fruit/Grapes.png
+  abc_valley__abc_j_jars__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ja
+    variant: listening_spelling
+    success: בניתם את הצירוף ja.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ja
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/JA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - g
+        - i
+        - e
+        - d
+        - h
   abc_valley__abc_k_keys__o1_t0:
     minigame_id: dwarf_miner
     instruction: אספו רק את האות K - גדולה וקטנה. היזהרו מאותיות שדומות לה.
@@ -1150,6 +1590,46 @@ instances:
             - 0
           image: Art/Sprites/LineMatch/Words/Hat.png
   abc_valley__abc_k_keys__o4_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ka
+    variant: listening_spelling
+    success: בניתם את הצירוף ka.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ka
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/KA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - h
+        - i
+        - e
+        - g
+        - f
+  abc_valley__abc_k_keys__o4_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ki
+    variant: listening_spelling
+    success: בניתם את הצירוף ki.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ki
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/KI.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - h
+        - a
+        - e
+        - g
+        - f
+  abc_valley__abc_k_keys__o5_t0:
     minigame_id: listening_letter_ordering
     instruction: הקשיבו ובנו את המילה ילד באנגלית.
     tasks:
@@ -1331,6 +1811,26 @@ instances:
       customDistractors:
         - n
         - b
+  abc_valley__abc_n_noodles__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: na
+    variant: listening_spelling
+    success: בניתם את הצירוף na.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: na
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/NA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - m
+        - e
+        - i
+        - h
+        - l
   abc_valley__abc_n_noodles__o2_t0:
     minigame_id: listening_letter_ordering
     instruction: הקשיבו ובנו את המילה איש באנגלית.
@@ -1348,3 +1848,1185 @@ instances:
       customDistractors:
         - h
         - e
+  abc_valley__abc_o_orc__o3_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות O - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות O - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: O, o
+    variant: word_category
+    success: מצאתם את O בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות O - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות O
+      targetWords:
+        - O
+        - o
+      distractorWords:
+        - C
+        - c
+        - D
+        - d
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_o_orc__o3_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: o
+    variant: listening_spelling
+    success: שמעתם את O בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: o
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/octopus.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - a
+        - e
+        - i
+  abc_valley__abc_o_orc__o3_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו O ו-o, ואחר כך C ו-c. O סגורה, C פתוחה.
+    tasks:
+      - ציירו O ו-o, ואחר כך C ו-c. O סגורה, C פתוחה.
+    target: O, o, C, c
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - O
+        - o
+        - C
+        - c
+  abc_valley__abc_o_orc__o3_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: orange, egg
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: e
+        - id: tile_2
+          value: a
+        - id: tile_3
+          value: o
+      wordTasks:
+        - id: word_1
+          fullWord: orange
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Orange.png
+        - id: word_2
+          fullWord: egg
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Egg.png
+  abc_valley__abc_o_orc__o3_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: o
+    variant: listening_spelling
+    success: שמעתם את O בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: o
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/otter.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - a
+        - i
+        - n
+  abc_valley__abc_o_orc__o3_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: 'on'
+    variant: listening_spelling
+    success: בניתם את הצירוף on.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: 'on'
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/ON.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - a
+        - e
+        - i
+        - m
+        - d
+  abc_valley__abc_o_orc__o4_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה כלב באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה כלב באנגלית.
+    target: dog
+    variant: listening_spelling
+    success: בניתם את המילה dog.
+    params:
+      prompt: הקשיבו ובנו את המילה כלב באנגלית.
+      targetWord: dog
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/dog.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - c
+        - a
+  abc_valley__abc_p_paint__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות P - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות P - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: P, p
+    variant: word_category
+    success: מצאתם את P בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות P - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות P
+      targetWords:
+        - P
+        - p
+      distractorWords:
+        - B
+        - b
+        - D
+        - d
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_p_paint__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: p
+    variant: listening_spelling
+    success: שמעתם את P בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: p
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/pear.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - d
+        - a
+  abc_valley__abc_p_paint__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו P ו-p, ואחר כך B ו-b. ל-P יש בטן אחת, ל-B שתיים.
+    tasks:
+      - ציירו P ו-p, ואחר כך B ו-b. ל-P יש בטן אחת, ל-B שתיים.
+    target: P, p, B, b
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - P
+        - p
+        - B
+        - b
+  abc_valley__abc_p_paint__o1_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: pizza, bee
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: b
+        - id: tile_2
+          value: o
+        - id: tile_3
+          value: p
+      wordTasks:
+        - id: word_1
+          fullWord: pizza
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/BreadsAndPastries/Pizza.png
+        - id: word_2
+          fullWord: bee
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Bee.png
+  abc_valley__abc_p_paint__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: pa
+    variant: listening_spelling
+    success: בניתם את הצירוף pa.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: pa
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/Pa.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - b
+        - d
+        - o
+        - e
+        - i
+  abc_valley__abc_p_paint__o1_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה עט באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה עט באנגלית.
+    target: pen
+    variant: listening_spelling
+    success: בניתם את המילה pen.
+    params:
+      prompt: הקשיבו ובנו את המילה עט באנגלית.
+      targetWord: pen
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/pen.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - a
+        - d
+  abc_valley__abc_q_sounds__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות Q - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות Q - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: Q, q
+    variant: word_category
+    success: מצאתם את Q בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות Q - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות Q
+      targetWords:
+        - Q
+        - q
+      distractorWords:
+        - O
+        - o
+        - P
+        - p
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_q_sounds__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: q
+    variant: listening_spelling
+    success: שמעתם את Q בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: q
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/queen.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - p
+        - o
+        - g
+  abc_valley__abc_q_sounds__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו Q ו-q, ואחר כך P ו-p. ב-p הקו משמאל, ב-q הקו מימין.
+    tasks:
+      - ציירו Q ו-q, ואחר כך P ו-p. ב-p הקו משמאל, ב-q הקו מימין.
+    target: Q, q, P, p
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - Q
+        - q
+        - P
+        - p
+  abc_valley__abc_q_sounds__o1_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: qu
+    variant: listening_spelling
+    success: בניתם את הצירוף qu.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: qu
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/QU.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - p
+        - o
+        - a
+        - e
+        - i
+  abc_valley__abc_r_rope__o3_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות R - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות R - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: R, r
+    variant: word_category
+    success: מצאתם את R בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות R - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות R
+      targetWords:
+        - R
+        - r
+      distractorWords:
+        - P
+        - p
+        - B
+        - b
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_r_rope__o3_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: r
+    variant: listening_spelling
+    success: שמעתם את R בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: r
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/rabbit.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - p
+        - b
+        - l
+  abc_valley__abc_r_rope__o3_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו R ו-r, ואחר כך P ו-p. ל-R יש רגל לעמוד עליה.
+    tasks:
+      - ציירו R ו-r, ואחר כך P ו-p. ל-R יש רגל לעמוד עליה.
+    target: R, r, P, p
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - R
+        - r
+        - P
+        - p
+  abc_valley__abc_r_rope__o4_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: r
+    variant: listening_spelling
+    success: שמעתם את R בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: r
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/rain.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - l
+        - n
+        - p
+  abc_valley__abc_r_rope__o4_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ra
+    variant: listening_spelling
+    success: בניתם את הצירוף ra.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ra
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/Ra.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - l
+        - p
+        - e
+        - o
+        - n
+  abc_valley__abc_r_rope__o4_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ro
+    variant: listening_spelling
+    success: בניתם את הצירוף ro.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ro
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/RO.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - l
+        - p
+        - a
+        - e
+        - n
+  abc_valley__abc_r_rope__o5_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה אדום באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה אדום באנגלית.
+    target: red
+    variant: listening_spelling
+    success: בניתם את המילה red.
+    params:
+      prompt: הקשיבו ובנו את המילה אדום באנגלית.
+      targetWord: red
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/red.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - p
+        - a
+  abc_valley__abc_s_sun__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות S - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות S - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: S, s
+    variant: word_category
+    success: מצאתם את S בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות S - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות S
+      targetWords:
+        - S
+        - s
+      distractorWords:
+        - C
+        - c
+        - G
+        - g
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_s_sun__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: s
+    variant: listening_spelling
+    success: שמעתם את S בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: s
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/sun.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - f
+        - h
+        - r
+  abc_valley__abc_s_sun__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    tasks:
+      - ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה.
+    target: S, s
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - S
+        - s
+  abc_valley__abc_s_sun__o1_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: salt, pizza
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: p
+        - id: tile_2
+          value: r
+        - id: tile_3
+          value: s
+      wordTasks:
+        - id: word_1
+          fullWord: salt
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/SpicesAndCondiments/Salt.png
+        - id: word_2
+          fullWord: pizza
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/BreadsAndPastries/Pizza.png
+  abc_valley__abc_s_sun__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: sa
+    variant: listening_spelling
+    success: בניתם את הצירוף sa.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: sa
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/Sa.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - f
+        - h
+        - e
+        - o
+        - i
+  abc_valley__abc_s_sun__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה עצוב באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה עצוב באנגלית.
+    target: sad
+    variant: listening_spelling
+    success: בניתם את המילה sad.
+    params:
+      prompt: הקשיבו ובנו את המילה עצוב באנגלית.
+      targetWord: sad
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/sad.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - b
+        - p
+        - o
+  abc_valley__abc_t_treehouse__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות T - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות T - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: T, t
+    variant: word_category
+    success: מצאתם את T בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות T - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות T
+      targetWords:
+        - T
+        - t
+      distractorWords:
+        - I
+        - i
+        - L
+        - l
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_t_treehouse__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: t
+    variant: listening_spelling
+    success: שמעתם את T בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: t
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/tree.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - f
+        - l
+        - i
+  abc_valley__abc_t_treehouse__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו T ו-t, ואחר כך F ו-f. ל-t הקטנה הקו חוצה באמצע.
+    tasks:
+      - ציירו T ו-t, ואחר כך F ו-f. ל-t הקטנה הקו חוצה באמצע.
+    target: T, t, F, f
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - T
+        - t
+        - F
+        - f
+  abc_valley__abc_t_treehouse__o1_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: tiger, tomato
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: f
+        - id: tile_2
+          value: t
+        - id: tile_3
+          value: t
+      wordTasks:
+        - id: word_1
+          fullWord: tiger
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Animal/Tiger.png
+        - id: word_2
+          fullWord: tomato
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Vegetables/Tomato.png
+  abc_valley__abc_t_treehouse__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: ta
+    variant: listening_spelling
+    success: בניתם את הצירוף ta.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: ta
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/TA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - f
+        - l
+        - e
+        - o
+        - i
+  abc_valley__abc_t_treehouse__o3_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה עשר באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה עשר באנגלית.
+    target: ten
+    variant: listening_spelling
+    success: בניתם את המילה ten.
+    params:
+      prompt: הקשיבו ובנו את המילה עשר באנגלית.
+      targetWord: ten
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/ten.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - f
+        - l
+        - a
+  abc_valley__abc_u_under__o2_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות U - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות U - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: U, u
+    variant: word_category
+    success: מצאתם את U בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות U - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות U
+      targetWords:
+        - U
+        - u
+      distractorWords:
+        - N
+        - n
+        - O
+        - o
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_u_under__o2_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: u
+    variant: listening_spelling
+    success: שמעתם את U בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: u
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/umbrella.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - a
+        - o
+        - e
+  abc_valley__abc_u_under__o2_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו U ו-u, ואחר כך N ו-n. u היא כמו n הפוכה.
+    tasks:
+      - ציירו U ו-u, ואחר כך N ו-n. u היא כמו n הפוכה.
+    target: U, u, N, n
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - U
+        - u
+        - N
+        - n
+  abc_valley__abc_u_under__o2_t3:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: umbrella, orange
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: o
+        - id: tile_2
+          value: n
+        - id: tile_3
+          value: u
+      wordTasks:
+        - id: word_1
+          fullWord: umbrella
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Seasons/Winter/Umbrella.png
+        - id: word_2
+          fullWord: orange
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Orange.png
+  abc_valley__abc_u_under__o2_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: up
+    variant: listening_spelling
+    success: בניתם את הצירוף up.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: up
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/UP.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - a
+        - o
+        - e
+        - b
+        - d
+  abc_valley__abc_u_under__o3_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה שמש באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה שמש באנגלית.
+    target: sun
+    variant: listening_spelling
+    success: בניתם את המילה sun.
+    params:
+      prompt: הקשיבו ובנו את המילה שמש באנגלית.
+      targetWord: sun
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/sun.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - m
+        - o
+        - a
+  abc_valley__abc_v_visitor__o1_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: v
+    variant: listening_spelling
+    success: שמעתם את V בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: v
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/vase.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - f
+        - p
+        - u
+  abc_valley__abc_v_visitor__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: v
+    variant: listening_spelling
+    success: שמעתם את V בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: v
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/vest.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - f
+        - b
+        - u
+  abc_valley__abc_v_visitor__o1_t2:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות V - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות V - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: V, v
+    variant: word_category
+    success: מצאתם את V בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות V - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות V
+      targetWords:
+        - V
+        - v
+      distractorWords:
+        - U
+        - u
+        - A
+        - a
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_v_visitor__o1_t3:
+    minigame_id: letter_drawing
+    instruction: ציירו V ו-v, ואחר כך U ו-u. V חדה בתחתית, U עגולה.
+    tasks:
+      - ציירו V ו-v, ואחר כך U ו-u. V חדה בתחתית, U עגולה.
+    target: V, v, U, u
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - V
+        - v
+        - U
+        - u
+  abc_valley__abc_v_visitor__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: va
+    variant: listening_spelling
+    success: בניתם את הצירוף va.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: va
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/VA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - f
+        - b
+        - u
+        - e
+        - o
+  abc_valley__abc_v_visitor__o3_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה טנדר באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה טנדר באנגלית.
+    target: van
+    variant: listening_spelling
+    success: בניתם את המילה van.
+    params:
+      prompt: הקשיבו ובנו את המילה טנדר באנגלית.
+      targetWord: van
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/van.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - f
+        - b
+        - u
+  abc_valley__abc_w_wall__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות W - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות W - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: W, w
+    variant: word_category
+    success: מצאתם את W בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות W - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות W
+      targetWords:
+        - W
+        - w
+      distractorWords:
+        - M
+        - m
+        - V
+        - v
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_w_wall__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: w
+    variant: listening_spelling
+    success: שמעתם את W בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: w
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/water.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - v
+        - u
+        - m
+  abc_valley__abc_w_wall__o1_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: w
+    variant: listening_spelling
+    success: שמעתם את W בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: w
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/window.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - v
+        - u
+        - o
+  abc_valley__abc_w_wall__o1_t3:
+    minigame_id: letter_drawing
+    instruction: ציירו W ו-w, ואחר כך V ו-v. W היא שתי V שמחזיקות ידיים.
+    tasks:
+      - ציירו W ו-w, ואחר כך V ו-v. W היא שתי V שמחזיקות ידיים.
+    target: W, w, V, v
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - W
+        - w
+        - V
+        - v
+  abc_valley__abc_w_wall__o1_t4:
+    minigame_id: word_matching
+    instruction: השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    tasks:
+      - השלימו את האות החסרה בתחילת כל מילה. התמונה עוזרת.
+    target: watermelon, umbrella
+    variant: missing_letter_matching
+    success: השלמתם את האות הראשונה בכל מילה.
+    params:
+      letters:
+        - id: tile_1
+          value: u
+        - id: tile_2
+          value: m
+        - id: tile_3
+          value: w
+      wordTasks:
+        - id: word_1
+          fullWord: watermelon
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Food/Fruit/Watermelon.png
+        - id: word_2
+          fullWord: umbrella
+          missingIndices:
+            - 0
+          image: Art/Sprites/LineMatch/Words/Seasons/Winter/Umbrella.png
+  abc_valley__abc_w_wall__o1_t5:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: wa
+    variant: listening_spelling
+    success: בניתם את הצירוף wa.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: wa
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/WA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - v
+        - m
+        - u
+        - e
+        - o
+  abc_valley__abc_w_wall__o1_t6:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה wow!
+    tasks:
+      - הקשיבו ובנו את המילה wow!
+    target: wow
+    variant: listening_spelling
+    success: בניתם את המילה wow!
+    params:
+      prompt: הקשיבו ובנו את המילה wow!
+      targetWord: wow
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/WOW.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - v
+        - m
+        - a
+  abc_valley__abc_z_sleep__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות Z - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות Z - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: Z, z
+    variant: word_category
+    success: מצאתם את Z בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות Z - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות Z
+      targetWords:
+        - Z
+        - z
+      distractorWords:
+        - S
+        - s
+        - N
+        - n
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_z_sleep__o1_t1:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו למילה. באיזו אות היא מתחילה?
+    tasks:
+      - הקשיבו למילה. באיזו אות היא מתחילה?
+    target: z
+    variant: listening_spelling
+    success: שמעתם את Z בתחילת המילה.
+    params:
+      prompt: הקשיבו למילה. באיזו אות היא מתחילה?
+      targetWord: z
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/zebra.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - s
+        - j
+        - g
+  abc_valley__abc_z_sleep__o1_t2:
+    minigame_id: letter_drawing
+    instruction: ציירו Z ו-z, ואחר כך S ו-s. Z היא זיגזג עם קווים ישרים.
+    tasks:
+      - ציירו Z ו-z, ואחר כך S ו-s. Z היא זיגזג עם קווים ישרים.
+    target: Z, z, S, s
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - Z
+        - z
+        - S
+        - s
+  abc_valley__abc_z_sleep__o1_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: za
+    variant: listening_spelling
+    success: בניתם את הצירוף za.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: za
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/ZA.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - s
+        - j
+        - e
+        - o
+        - i
+  abc_valley__abc_z_sleep__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    tasks:
+      - הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+    target: zo
+    variant: listening_spelling
+    success: בניתם את הצירוף zo.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!
+      targetWord: zo
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/ZO.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 5
+      customDistractors:
+        - s
+        - j
+        - a
+        - e
+        - i
+  abc_valley__abc_z_sleep__o4_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה zap!
+    tasks:
+      - הקשיבו ובנו את המילה zap!
+    target: zap
+    variant: listening_spelling
+    success: בניתם את המילה zap!
+    params:
+      prompt: הקשיבו ובנו את המילה zap!
+      targetWord: zap
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/ZAP.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - s
+        - b
+        - d
+  abc_valley__abc_z_sleep__o6_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה גן חיות באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה גן חיות באנגלית.
+    target: zoo
+    variant: listening_spelling
+    success: בניתם את המילה zoo!
+    params:
+      prompt: הקשיבו ובנו את המילה גן חיות באנגלית.
+      targetWord: zoo
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z/Zoo.wav
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - s
+        - u
+        - a

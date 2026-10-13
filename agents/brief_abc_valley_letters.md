@@ -144,6 +144,20 @@ invented path.
 - **Samples:** `abc_a_shards` and `abc_d_drum`, authored with `scripts/abc_valley_task_minigames.py` (PLAN) and live
   in the editor. The rest of the valley follows once they are approved.
 
+## Decided (2026-10-06) - blends (צירופים)
+
+- **Rung 5 = blend.** Hear a two-letter blend (da, ad, be, ki...) and build it in Listen & Build. Audio only, 5 foil
+  letters (7 tiles), and the order counts, so guessing rarely works.
+- **At most 2 extra games per letter quest**, only on free spots that can open a popup. Spots where the object
+  hops away or flies off (B weeds 3/5, J jars 2/4/6, L swarms 2/5), walk-in spots, traps and doors stay empty.
+- **Blends come last:** the letter's own rungs move to the first spots, blends take the last ones and lead into
+  the gold word (da/ad then dad, bi/di then big, ka/ki then kid). In "any order" task sets the player still picks.
+- **Foils** are the confusable letters plus the other vowels (a/e/i), so the child has to listen to the vowel.
+  C and D get e/i/o as foils before they are taught (not enough known letters yet).
+- **Recordings:** `Art/Audio/Museum sounds/Sounds A-Z/` and `SOUNDS FOR MUSEUM new/`.
+- Added: C ca · D da, ad · E be, de · F fa, ef · G ga · H ha, he · I bi, di · J ja · K ka, ki · N na.
+  A (only one letter known), B and L (no free spots) get none.
+
 ## Part 4 - Open decisions
 
 1. **Dose:** about 5 games per letter quest (ladder + gold) with the remaining spots empty. Or lighter: 3 rungs

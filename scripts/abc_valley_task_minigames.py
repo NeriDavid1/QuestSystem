@@ -146,6 +146,24 @@ def spell_word(target: str, meaning: str, distractors: list[str]) -> dict[str, A
     }
 
 
+SYLLABLES_AZ = "_OurAssets/Art/Audio/Museum sounds/Sounds A-Z/Sounds A-Z"
+SYLLABLES_NEW = "_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new"
+BLEND_PROMPT = "הקשיבו לצירוף ובנו אותו מהאותיות. שימו לב לסדר!"
+
+
+def blend(syllable: str, recording: str, distractors: list[str]) -> dict[str, Any]:
+    """Rung 5: hear a two-letter blend (da, ki) and build it. Audio only and 5 foils, so guessing rarely works."""
+    return hear_it(syllable, recording, distractors, BLEND_PROMPT, f"בניתם את הצירוף {syllable}.")
+
+
+def az(name: str) -> str:
+    return f"{SYLLABLES_AZ}/{name}.wav"
+
+
+def new_syllable(name: str) -> str:
+    return f"{SYLLABLES_NEW}/{name}.mp3"
+
+
 A = ("Apple", "Food/Fruit/Apple.png")
 ANT = ("Ant", "Animal/Ant.png")
 BEE = ("Bee", "Animal/Bee.png")
@@ -160,6 +178,13 @@ HAT = ("Hat", "Hat.png")
 JAM = ("Jam", "Food/Sweets/Jam.png")
 KIWI = ("Kiwi", "Food/Fruit/Kiwi.png")
 LEMON = ("Lemon", "Food/Fruit/Lemon.png")
+ORANGE = ("Orange", "Food/Fruit/Orange.png")
+PIZZA = ("Pizza", "Food/BreadsAndPastries/Pizza.png")
+SALT = ("Salt", "Food/SpicesAndCondiments/Salt.png")
+TIGER = ("Tiger", "Animal/Tiger.png")
+TOMATO = ("Tomato", "Food/Vegetables/Tomato.png")
+UMBRELLA = ("Umbrella", "Seasons/Winter/Umbrella.png")
+WATERMELON = ("Watermelon", "Food/Fruit/Watermelon.png")
 
 
 def pictures(*items: tuple[str, str]) -> list[tuple[str, str]]:
@@ -169,6 +194,8 @@ def pictures(*items: tuple[str, str]) -> list[tuple[str, str]]:
 # quest -> objective index -> task index -> instance or NONE.
 # Not listed: the task keeps its scene setup (`scene`); no-minigame and story spots stay as built.
 # Distractors are letters already taught (A has none yet). Pools are ordered so no letter sits opposite its word.
+# Blends (rung 5) come after the letter's own rungs, on the last spots of the step, and lead into the gold word.
+# Their 5 foils are the confusable letters plus the other vowels (C and D also get e/i/o, not taught yet).
 PLAN: dict[str, dict[int, dict[int, Any]]] = {
     # A - Tobias: two sides meeting at the peak with a path in the middle; "אַ... apple".
     # First letter ever: no learned letters yet, so foils are clearly different shapes (O, S).
@@ -178,7 +205,9 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             0: find_it("a", ["O", "S"], 3, "אספו רק את האות A - גם A גדולה וגם a קטנה."),
             1: hear_it("a", f"{WORDS_AUDIO}/apple.mp3", ["s"], FIRST_SOUND, "שמעתם את A בתחילת המילה."),
             2: trace_it(["A", "a"], "ציירו את האות לפי הקווים - פעם גדולה ופעם קטנה."),
-            3: NONE,
+            # Chest 4 was the last chest with no game: a second first-sound round with a new A word.
+            3: hear_it("a", f"{WORDS_AUDIO}/axe.mp3", ["o", "s"], "הקשיבו למילה חדשה. באיזו אות היא מתחילה?",
+                       "שמעתם את A גם ב-axe."),
             4: use_it([("ant", "Animal/Ant.png"), ("apple", "Food/Fruit/Apple.png")], ["o", "a", "a"]),
         },
         4: {
@@ -193,10 +222,10 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
         1: {
             0: find_it("d", ["B", "b", "C", "c"], 4, "אספו רק את האות D - גדולה וקטנה. היזהרו מאותיות שדומות לה."),
             1: hear_it("d", f"{WORDS_AUDIO}/drum.mp3", ["b", "c"], FIRST_SOUND, "שמעתם את D בתחילת המילה."),
-            2: NONE,
-            3: trace_it(["D", "d", "b", "d"], "ציירו D גדולה ו-d קטנה, ואחר כך b ו-d. שימו לב לאיזה צד הבטן פונה."),
-            4: NONE,
-            5: use_it(pictures(DOG, BEE), ["b", "c", "d"]),
+            2: trace_it(["D", "d", "b", "d"], "ציירו D גדולה ו-d קטנה, ואחר כך b ו-d. שימו לב לאיזה צד הבטן פונה."),
+            3: use_it(pictures(DOG, BEE), ["b", "c", "d"]),
+            4: blend("da", new_syllable("DA"), ["b", "e", "c", "o", "i"]),
+            5: blend("ad", az("AD"), ["b", "o", "c", "i", "e"]),
         },
         2: {
             0: hear_it("dad", "_OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/DAD.mp3", ["b", "c"],
@@ -220,8 +249,8 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             0: find_letter("c", ["A", "a", "B", "b"]),
             1: first_sound("c", "candle", ["a", "b"]),
             2: trace_it(["C", "c"], TRACE_BOTH),
-            3: NONE,
-            4: use_it(pictures(CAT, A), ["a", "b", "c"]),
+            3: use_it(pictures(CAT, A), ["a", "b", "c"]),
+            4: blend("ca", az("CA"), ["b", "e", "o", "d", "i"]),
         },
         2: {0: use_it(pictures(A, BANANA, CAT), ["c", "a", "b"])},
     },
@@ -240,9 +269,9 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             0: find_letter("e", ["C", "c", "A", "a"]),
             1: first_sound("e", "egg", ["a", "d"]),
             2: trace_it(["E", "e"], TRACE_BOTH),
-            3: NONE,
-            4: use_it(pictures(EGG, DOLL), ["d", "a", "e"]),
-            5: NONE,
+            3: use_it(pictures(EGG, DOLL), ["d", "a", "e"]),
+            4: blend("be", az("BE"), ["d", "a", "c", "i", "o"]),
+            5: blend("de", new_syllable("DE"), ["b", "a", "i", "c", "o"]),
         },
         2: {0: spell_word("bed", "מיטה", ["a", "c"])},
     },
@@ -252,35 +281,35 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             0: find_letter("f", ["E", "e", "D", "d"]),
             1: first_sound("f", "fire", ["e", "d"]),
             2: trace_it(["F", "f", "E", "e"], "ציירו F ו-f, ואחר כך E ו-e. שימו לב למדף התחתון."),
-            3: NONE,
-            4: use_it(pictures(FISH, EGG), ["e", "c", "f"]),
-            5: NONE,
+            3: use_it(pictures(FISH, EGG), ["e", "c", "f"]),
+            4: blend("fa", az("FA"), ["e", "d", "b", "c", "i"]),
+            5: blend("ef", az("EF"), ["a", "d", "b", "c", "i"]),
         },
         2: {0: use_it(pictures(DOG, EGG, FISH), ["e", "f", "b", "d"])},
     },
-    # G - Tobias: like C with a little table inside; "ג". Practised with girl (the ג sound). Tree 6: build bag.
+    # G - Tobias: like C with a little table inside; "ג". Practised with girl (the ג sound). Tree 5: ga, tree 6: build bag.
     "abc_g_tree": {
         1: {
             0: find_letter("g", ["C", "c", "B", "b"]),
             1: first_sound("g", "girl", ["c", "d"]),
             2: trace_it(["G", "g", "C", "c"], "ציירו G ו-g, ואחר כך C ו-c. שימו לב לשולחן הקטן של G."),
-            3: NONE,
-            4: use_it(pictures(GRAPES, CAT), ["c", "d", "g"]),
+            3: use_it(pictures(GRAPES, CAT), ["c", "d", "g"]),
+            4: blend("ga", az("GA"), ["c", "e", "d", "b", "f"]),
             5: build_word("bag", "תיק", ["d", "c"]),
         },
     },
     # Fun quest: the summit chest is a reward, no game.
     "abc_fun2_ridge": {3: {0: NONE}},
-    # H - Pip: a ladder with one rung; "הָה... כמו hat". Seven fishing spots: five games, two free.
+    # H - Pip: a ladder with one rung; "הָה... כמו hat". Seven fishing spots: the ladder, horse, then ha / he.
     "abc_h_waterfall": {
         1: {
             0: find_letter("h", ["B", "b", "D", "d"]),
             1: first_sound("h", "hat", ["b", "f"]),
             2: trace_it(["H", "h"], TRACE_BOTH),
-            3: NONE,
-            4: use_it(pictures(HAT, DOG), ["d", "b", "h"]),
-            5: NONE,
-            6: first_sound("h", "horse", ["b", "d", "f"]),
+            3: use_it(pictures(HAT, DOG), ["d", "b", "h"]),
+            4: first_sound("h", "horse", ["b", "d", "f"]),
+            5: blend("ha", new_syllable("HA"), ["e", "b", "d", "f", "g"]),
+            6: blend("he", az("HE"), ["a", "b", "d", "f", "g"]),
         },
     },
     # Homework 2 - review E-H: each delivered item is its picture with the first letter missing.
@@ -292,15 +321,17 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             3: use_it(pictures(HAT), ["b", "h", "f"]),
         },
     },
-    # I - Pip: one straight line; "אִ ... ice says its own name". Mira's first block: build big.
+    # I - Pip: one straight line; "אִ, כמו insect" (ice is the exception that says its own name, so it is not
+    # practised). Blends bi, di lead into big (Mira's last block).
     "abc_i_ice": {
         1: {
             0: find_letter("i", ["H", "h", "F", "f"]),
-            1: first_sound("i", "ice", ["a", "e"]),
+            1: first_sound("i", "insect", ["a", "e", "h"]),
             2: trace_it(["I", "i"], TRACE_BOTH),
-            3: NONE,
+            3: blend("bi", az("BI"), ["d", "a", "e", "h", "f"]),
         },
-        2: {0: build_word("big", "גדול", ["d", "e"]), 1: NONE},
+        # Mira's blocks are in order: one more blend, then big.
+        2: {0: blend("di", az("DI"), ["b", "a", "e", "h", "g"]), 1: build_word("big", "גדול", ["d", "e"])},
     },
     # J - Bruno: a line that curls down (a hook); "ג', כמו jump". Jars 2, 4 and 6 hop away (no game).
     "abc_j_jars": {
@@ -313,6 +344,8 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             5: NONE,
             6: use_it(pictures(JAM, GRAPES), ["g", "i", "j"]),
         },
+        # Putting the jar back closes the quest with a blend (the spot had no game in the scene).
+        2: {0: blend("ja", az("JA"), ["g", "i", "e", "d", "h"])},
     },
     # K - Pip: a line and two arms (a kite); "ק, כמו key". c is never a choice: Pip teaches that C says ק too.
     "abc_k_keys": {
@@ -322,8 +355,9 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             2: trace_it(["K", "k"], TRACE_BOTH),
             3: use_it(pictures(KIWI, HAT), ["h", "f", "k"]),
         },
-        4: {0: build_word("kid", "ילד", ["h", "b"]), 1: NONE},
-        5: {0: NONE},
+        # The kite is built in order: two blends, then flying it builds kid.
+        4: {0: blend("ka", az("KA"), ["h", "i", "e", "g", "f"]), 1: blend("ki", new_syllable("KI"), ["h", "a", "e", "g", "f"])},
+        5: {0: build_word("kid", "ילד", ["h", "b"])},
     },
     # Fun quest: the treasure is a reward, no game.
     "abc_fun3_stones": {2: {0: NONE}},
@@ -347,9 +381,167 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
             1: first_sound("n", "net", ["m", "h"]),
             2: trace_it(["N", "n", "M", "m"], "ציירו N ו-n, ואחר כך M ו-m. ספרו את ההרים."),
             3: first_sound("m", "moon", ["n", "b"]),
-            4: NONE,
+            4: blend("na", az("NA"), ["m", "e", "i", "h", "l"]),
         },
         2: {0: build_word("man", "איש", ["h", "e"])},
+    },
+    # ---- O to Z (2026-10-13, from the learning review) ------------------------------------------------
+    # Same ladder as A-N. First-sound rounds get 3 foils (4 choices) so a guess passes only 1 time in 4.
+    # Letters with no Line Match pictures (Q, R, V, X, Z) get an extra listening round instead.
+    # O - Tobias: a mouth that is surprised, a circle; short "אוֹ, כמו octopus / on". Gold: dog (o in the middle).
+    "abc_o_orc": {
+        3: {
+            0: find_letter("o", ["C", "c", "D", "d"]),
+            1: first_sound("o", "octopus", ["a", "e", "i"]),
+            2: trace_it(["O", "o", "C", "c"], "ציירו O ו-o, ואחר כך C ו-c. O סגורה, C פתוחה."),
+            3: use_it(pictures(ORANGE, EGG), ["e", "a", "o"]),
+            4: first_sound("o", "otter", ["a", "i", "n"]),
+            5: blend("on", az("ON"), ["a", "e", "i", "m", "d"]),
+        },
+        4: {0: build_word("dog", "כלב", ["b", "c", "a"])},
+    },
+    # P - Mira: a line with one belly at the top, not two like B; "פּ" with a hand in front of the mouth. Gold: pen.
+    "abc_p_paint": {
+        1: {
+            0: find_letter("p", ["B", "b", "D", "d"]),
+            1: first_sound("p", "pear", ["b", "d", "a"]),
+            2: trace_it(["P", "p", "B", "b"], "ציירו P ו-p, ואחר כך B ו-b. ל-P יש בטן אחת, ל-B שתיים."),
+            3: use_it(pictures(PIZZA, BEE), ["b", "o", "p"]),
+            4: blend("pa", az("Pa"), ["b", "d", "o", "e", "i"]),
+            5: build_word("pen", "עט", ["b", "a", "d"]),
+        },
+    },
+    # Q - Pip: O with a tail that always walks with u; "קוו, כמו queen". The museum (o3) teaches qu after this.
+    "abc_q_sounds": {
+        1: {
+            0: find_letter("q", ["O", "o", "P", "p"]),
+            1: first_sound("q", "queen", ["p", "o", "g"]),
+            2: trace_it(["Q", "q", "P", "p"], "ציירו Q ו-q, ואחר כך P ו-p. ב-p הקו משמאל, ב-q הקו מימין."),
+            3: blend("qu", az("QU"), ["p", "o", "a", "e", "i"]),
+        },
+    },
+    # R - Mira: P with a leg to stand on; "ר" without the throat. No R pictures, so two first-sound rounds.
+    "abc_r_rope": {
+        3: {
+            0: find_letter("r", ["P", "p", "B", "b"]),
+            1: first_sound("r", "rabbit", ["p", "b", "l"]),
+            2: trace_it(["R", "r", "P", "p"], "ציירו R ו-r, ואחר כך P ו-p. ל-R יש רגל לעמוד עליה."),
+        },
+        4: {
+            0: first_sound("r", "rain", ["l", "n", "p"]),
+            1: blend("ra", az("Ra"), ["l", "p", "e", "o", "n"]),
+            2: blend("ro", new_syllable("RO"), ["l", "p", "a", "e", "n"]),
+        },
+        5: {0: build_word("red", "אדום", ["b", "p", "a"])},
+    },
+    # S - Noa: the path that winds like a snake; "ססס". Gold: sad (sun would need U, which comes later).
+    "abc_s_sun": {
+        1: {
+            0: find_letter("s", ["C", "c", "G", "g"]),
+            1: first_sound("s", "sun", ["f", "h", "r"]),
+            2: trace_it(["S", "s"], TRACE_BOTH),
+            3: use_it(pictures(SALT, PIZZA), ["p", "r", "s"]),
+            4: blend("sa", az("Sa"), ["f", "h", "e", "o", "i"]),
+        },
+        2: {0: build_word("sad", "עצוב", ["b", "p", "o"])},
+    },
+    # Homework 5 - review Q-T: each pasted photo is a first-sound round mixing the four letters.
+    "abc_hw5_album": {
+        2: {
+            0: first_sound("q", "queen", ["r", "s", "t"]),
+            1: first_sound("r", "rabbit", ["q", "s", "p"]),
+            2: first_sound("s", "sun", ["q", "r", "c"]),
+            3: first_sound("t", "tree", ["r", "s", "f"]),
+        },
+    },
+    # U - Mira: the well seen from the side, a bowl; a short "אַ, כמו up". u is n upside down. Gold: sun.
+    "abc_u_under": {
+        2: {
+            0: find_letter("u", ["N", "n", "O", "o"]),
+            1: first_sound("u", "umbrella", ["a", "o", "e"]),
+            2: trace_it(["U", "u", "N", "n"], "ציירו U ו-u, ואחר כך N ו-n. u היא כמו n הפוכה."),
+            3: use_it(pictures(UMBRELLA, ORANGE), ["o", "n", "u"]),
+            4: blend("up", az("UP"), ["a", "o", "e", "b", "d"]),
+        },
+        3: {0: build_word("sun", "שמש", ["m", "o", "a"])},
+    },
+    # W - Tobias: two V's holding hands; round lips, "וּ". The listening rounds pit w against v (ו in Hebrew).
+    "abc_w_wall": {
+        1: {
+            0: find_letter("w", ["M", "m", "V", "v"]),
+            1: first_sound("w", "water", ["v", "u", "m"]),
+            2: first_sound("w", "window", ["v", "u", "o"]),
+            3: trace_it(["W", "w", "V", "v"], "ציירו W ו-w, ואחר כך V ו-v. W היא שתי V שמחזיקות ידיים."),
+            4: use_it(pictures(WATERMELON, UMBRELLA), ["u", "m", "w"]),
+            5: blend("wa", az("WA"), ["v", "m", "u", "e", "o"]),
+            6: hear_it("wow", new_syllable("WOW"), ["v", "m", "a"], "הקשיבו ובנו את המילה wow!", "בניתם את המילה wow!"),
+        },
+    },
+    # Z - Noa: a lightning zigzag; "ז, כמו zoo / zebra". Waking each villager is one rung; the songs build zap and zoo.
+    "abc_z_sleep": {
+        1: {
+            0: find_letter("z", ["S", "s", "N", "n"]),
+            1: first_sound("z", "zebra", ["s", "j", "g"]),
+            2: trace_it(["Z", "z", "S", "s"], "ציירו Z ו-z, ואחר כך S ו-s. Z היא זיגזג עם קווים ישרים."),
+            3: blend("za", az("ZA"), ["s", "j", "e", "o", "i"]),
+            4: blend("zo", az("ZO"), ["s", "j", "a", "e", "i"]),
+        },
+        4: {0: hear_it("zap", new_syllable("ZAP"), ["s", "b", "d"], "הקשיבו ובנו את המילה zap!", "בניתם את המילה zap!")},
+        6: {0: hear_it("zoo", az("Zoo"), ["s", "u", "a"], "הקשיבו ובנו את המילה גן חיות באנגלית.", "בניתם את המילה zoo!")},
+    },
+    # T - Noa under the apple tree: a trunk and one wide branch; "ט, כמו tree". The 5 tree-house parts are in order,
+    # then the telescope builds ten. The zipline spot hops away (no game).
+    "abc_t_treehouse": {
+        1: {
+            0: find_letter("t", ["I", "i", "L", "l"]),
+            1: first_sound("t", "tree", ["f", "l", "i"]),
+            2: trace_it(["T", "t", "F", "f"], "ציירו T ו-t, ואחר כך F ו-f. ל-t הקטנה הקו חוצה באמצע."),
+            3: use_it(pictures(TIGER, TOMATO), ["f", "t", "t"]),
+            4: blend("ta", az("TA"), ["f", "l", "e", "o", "i"]),
+        },
+        3: {0: build_word("ten", "עשר", ["f", "l", "a"])},
+    },
+    # V - "the mysterious visitor": Noa teaches "ו: שיניים עליונות על השפה" with vase/vest/van/visitor. The 4 cursed
+    # gifts can be undone in any order, so each gift's game matches its object (vase, vest); the cart then the unmask.
+    "abc_v_visitor": {
+        1: {
+            0: first_sound("v", "vase", ["f", "p", "u"]),
+            1: first_sound("v", "vest", ["f", "b", "u"]),
+            2: find_letter("v", ["U", "u", "A", "a"]),
+            3: trace_it(["V", "v", "U", "u"], "ציירו V ו-v, ואחר כך U ו-u. V חדה בתחתית, U עגולה."),
+        },
+        2: {0: blend("va", az("VA"), ["f", "b", "u", "e", "o"])},
+        # The visitor came in a van: the unmask builds it, a real word of learned letters.
+        3: {0: build_word("van", "טנדר", ["f", "b", "u"])},
+    },
+    # Closing ceremony - each villager's station mixes letters from the whole journey, confusable pairs first.
+    # The mirror step stays without a game: building "help" there would spoil reading HELP ME right after.
+    "abc_grad_ceremony": {
+        2: {
+            0: first_sound("b", "ball", ["d", "p", "q"]),
+            1: first_sound("m", "moon", ["n", "w", "u"]),
+            2: build_word("hot", "חם", ["d", "a", "e"]),
+            3: first_sound("f", "fire", ["v", "p", "h"]),
+            4: first_sound("y", "yes", ["u", "v", "w"]),
+        },
+        4: {0: NONE},
+    },
+}
+
+# X is designed but not built in Unity yet (no quest YAML), so it waits here. When it is built, export it
+# (unity_to_yaml.py --line abc_valley), check its objective/task indices, and move it into PLAN.
+PENDING: dict[str, dict[str, Any]] = {
+    # X - Mira and Pip: two planks crossing; in most words X is at the end and says "קס". 5 boxes + the gold box.
+    "abc_x_boxes": {
+        "boxes": [
+            lambda: find_letter("x", ["K", "k", "V", "v"]),
+            lambda: trace_it(["X", "x", "K", "k"], "ציירו X ו-x, ואחר כך K ו-k. X היא שני קווים שנחתכים באמצע."),
+            lambda: hear_it("box", word("box"), ["d", "p", "a"], "הקשיבו ובנו את המילה קופסה באנגלית. האות האחרונה היא X!",
+                            "בניתם את המילה box."),
+            lambda: hear_it("ox", new_syllable("OX"), ["a", "k", "s"], "הקשיבו לצירוף ובנו אותו. איפה ה-X?", "בניתם ox."),
+            lambda: build_word("six", "שש", ["k", "z", "a"]),
+        ],
+        "gold": lambda: build_word("fox", "שועל", ["k", "b", "a"]),
     },
 }
 

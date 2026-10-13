@@ -1,0 +1,76 @@
+quest:
+  id: abc_q_sounds
+  name: הצלילים הגנובים
+  level_required: 0
+  giver_npc: pip_bellringer
+  prerequisite: abc_hw4_penalty
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: q_lesson
+    count: 1
+    display_text: דברו עם פיפ במגדל השקט
+  - type: custom
+    handler_id: abc_q_echoes
+    unity_objective_index: 1
+    count: 4
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Echo_1
+        trigger: interact
+        prompt: הקשב להד
+        scene_minigame: FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown
+        scene_minigame_id: fruit_slice
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_q_sounds__o1_t0
+      - index: 1
+        name: Echo_2
+        trigger: interact
+        prompt: הקשב להד
+        scene_minigame: WordOrderingQuestConfig_personal_pronouns_q05_line_queen
+        scene_minigame_id: word_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_q_sounds__o1_t1
+      - index: 2
+        name: Echo_3
+        trigger: interact
+        prompt: הקשב להד
+        scene_minigame: FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown
+        scene_minigame_id: fruit_slice
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_q_sounds__o1_t2
+      - index: 3
+        name: Echo_4
+        trigger: interact
+        prompt: הקשב להד
+        scene_minigame: WordOrderingQuestConfig_personal_pronouns_q05_line_queen
+        scene_minigame_id: word_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_q_sounds__o1_t3
+    display_text: 'מצאו את ההדים לפי השמיעה: חם או קר'
+  - type: talk_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: q_museum
+    count: 1
+    display_text: חזרו לפיפ
+  - type: custom
+    handler_id: abc_q_museum
+    unity_objective_index: 3
+    count: 1
+    reactor: museum
+    display_text: עברו את המוזיאון הקסום של Q
+  - type: return_to_npc
+    npc_id: pip_bellringer
+    dialogue_id: q_turnin

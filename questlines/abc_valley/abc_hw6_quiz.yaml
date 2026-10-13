@@ -1,0 +1,28 @@
+quest:
+  id: abc_hw6_quiz
+  name: החידון של טוביאס
+  level_required: 0
+  giver_npc: grandpa_tobias
+  prerequisite: abc_fun6_falls
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: hw6_quiz
+    count: 1
+    display_text: דברו עם טוביאס ליד הבאר
+  - type: custom
+    handler_id: abc_hw6_quiz
+    unity_objective_index: 1
+    count: 4
+    reactor: choice_rounds
+    display_text: ענו על ארבע השאלות של טוביאס
+  - type: return_to_npc
+    npc_id: grandpa_tobias
+    dialogue_id: hw6_turnin

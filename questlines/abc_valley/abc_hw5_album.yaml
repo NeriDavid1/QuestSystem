@@ -1,0 +1,96 @@
+quest:
+  id: abc_hw5_album
+  name: האלבום של נועה
+  level_required: 0
+  giver_npc: noa
+  prerequisite: abc_t_treehouse
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: noa
+    dialogue_id: hw5_album
+    count: 1
+    display_text: דברו עם נועה
+  - type: custom
+    handler_id: abc_hw5_find
+    unity_objective_index: 1
+    count: 4
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Photo_Q
+        trigger: interact
+        prompt: הרם את התמונה
+        scene_no_minigame: true
+        mode: scene
+      - index: 1
+        name: Photo_R
+        trigger: interact
+        prompt: הרם את התמונה
+        scene_no_minigame: true
+        mode: scene
+      - index: 2
+        name: Photo_S
+        trigger: interact
+        prompt: הרם את התמונה
+        scene_no_minigame: true
+        mode: scene
+      - index: 3
+        name: Photo_T
+        trigger: interact
+        prompt: הרם את התמונה
+        scene_no_minigame: true
+        mode: scene
+    display_text: מצאו את התמונות בכפר
+  - type: custom
+    handler_id: abc_hw5_paste
+    unity_objective_index: 2
+    count: 4
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Page_Q
+        trigger: interact
+        prompt: הדבק את התמונה של queen
+        scene_minigame: FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown
+        scene_minigame_id: fruit_slice
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_hw5_album__o2_t0
+      - index: 1
+        name: Page_R
+        trigger: interact
+        prompt: הדבק את התמונה של rope
+        scene_minigame: WordOrderingQuestConfig_personal_pronouns_q05_line_queen
+        scene_minigame_id: word_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_hw5_album__o2_t1
+      - index: 2
+        name: Page_S
+        trigger: interact
+        prompt: הדבק את התמונה של sun
+        scene_minigame: FruitSliceQuestConfig_noun_repair_shop_homework_q01_the_queen_has_a_crown
+        scene_minigame_id: fruit_slice
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_hw5_album__o2_t2
+      - index: 3
+        name: Page_T
+        trigger: interact
+        prompt: הדבק את התמונה של tree
+        scene_minigame: WordOrderingQuestConfig_personal_pronouns_q05_line_queen
+        scene_minigame_id: word_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_hw5_album__o2_t3
+    display_text: הדביקו כל תמונה בעמוד הנכון
+  - type: return_to_npc
+    npc_id: noa
+    dialogue_id: hw5_turnin

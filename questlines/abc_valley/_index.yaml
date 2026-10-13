@@ -4,7 +4,7 @@ questline:
   display_name: עמק האותיות
   theme: 'The ABC Valley story: the opening and the letter quests, one continuous
     questline.'
-  quest_count: 23
+  quest_count: 41
   level_range:
     - 0
     - 0
@@ -216,3 +216,165 @@ quests:
       items:
         - id: coin
           amount: 30
+  - id: abc_o_orc
+    name: האורק בשביל
+    level: 0
+    prerequisite: abc_n_noodles
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_fun4_ponies
+    name: טבעות האור
+    level: 0
+    prerequisite: abc_o_orc
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 50
+  - id: abc_p_paint
+    name: הפסיפס של הכיכר
+    level: 0
+    prerequisite: abc_fun4_ponies
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_hw4_penalty
+    name: הפנדל של האורק
+    level: 0
+    prerequisite: abc_p_paint
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 20
+  - id: abc_q_sounds
+    name: הצלילים הגנובים
+    level: 0
+    prerequisite: abc_hw4_penalty
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_r_rope
+    name: ה-R שנפלה
+    level: 0
+    prerequisite: abc_q_sounds
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_s_sun
+    name: הלילה שלא נגמר
+    level: 0
+    prerequisite: abc_r_rope
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_fun5_sleds
+    name: מזחלות מהפסגה
+    level: 0
+    prerequisite: abc_s_sun
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 50
+  - id: abc_t_treehouse
+    name: בית העץ
+    level: 0
+    prerequisite: abc_fun5_sleds
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_hw5_album
+    name: האלבום של נועה
+    level: 0
+    prerequisite: abc_t_treehouse
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 20
+  - id: abc_u_under
+    name: מתחת לבאר
+    level: 0
+    prerequisite: abc_hw5_album
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_v_visitor
+    name: האורח המסתורי
+    level: 0
+    prerequisite: abc_u_under
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_w_wall
+    name: החומה של הקוסם
+    level: 0
+    prerequisite: abc_v_visitor
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_fun6_falls
+    name: קפיצה מהמפל ומחבואים
+    level: 0
+    prerequisite: abc_w_wall
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 50
+  - id: abc_hw6_quiz
+    name: החידון של טוביאס
+    level: 0
+    prerequisite: abc_fun6_falls
+    rewards:
+      xp: 100
+      items:
+        - id: coin
+          amount: 20
+  - id: abc_y_yesterday
+    name: אתמול
+    level: 0
+    prerequisite: abc_hw6_quiz
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_z_sleep
+    name: כישוף ה-Zzz
+    level: 0
+    prerequisite: abc_y_yesterday
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
+  - id: abc_grad_ceremony
+    name: טקס הסיום
+    level: 0
+    prerequisite: abc_z_sleep
+    rewards:
+      xp: 300
+      items:
+        - id: coin
+          amount: 100

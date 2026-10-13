@@ -1,0 +1,89 @@
+quest:
+  id: abc_fun6_falls
+  name: קפיצה מהמפל ומחבואים
+  level_required: 0
+  giver_npc: noa
+  prerequisite: abc_w_wall
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 50
+steps:
+  - type: talk_to_npc
+    npc_id: noa
+    dialogue_id: fun6_plan
+    count: 1
+    display_text: דברו עם נועה ליד הבריכה
+  - type: custom
+    handler_id: abc_fun6_top
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Top
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: טפסו על האבנים עד מעל המפל
+  - type: custom
+    handler_id: abc_fun6_jump
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Splash
+        trigger: enter_area
+        scene_no_minigame: true
+        mode: scene
+    display_text: קפצו לבריכה
+  - type: custom
+    handler_id: abc_fun6_seek_pond
+    unity_objective_index: 3
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Found
+        trigger: npc_talk
+        prompt: Open
+        npc_id: noa
+        scene_no_minigame: true
+        mode: scene
+    display_text: 'מחבואים: נועה מתחבאת ליד הבריכה. הקשיבו לצחוק שלה וחפשו מאחורי
+      הדברים'
+  - type: custom
+    handler_id: abc_fun6_seek_tower
+    unity_objective_index: 4
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Found
+        trigger: npc_talk
+        prompt: Open
+        npc_id: noa
+        scene_no_minigame: true
+        mode: scene
+    display_text: 'מחבואים: עכשיו היא מתחבאת ליד המגדל של פיפ'
+  - type: custom
+    handler_id: abc_fun6_seek_mira
+    unity_objective_index: 5
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Found
+        trigger: npc_talk
+        prompt: Open
+        npc_id: noa
+        scene_no_minigame: true
+        mode: scene
+    display_text: 'מחבואים: פעם אחרונה, ליד הבית של מירה'
+  - type: return_to_npc
+    npc_id: noa
+    dialogue_id: fun6_turnin

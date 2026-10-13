@@ -56,7 +56,9 @@ steps:
         prompt: הדלק את הפנס
         scene_minigame: FruitSliceQuestConfig_adjectives_basics_homework_q01_a_tall_green_tree
         scene_minigame_id: fruit_slice
-        mode: none
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_c_cave__o1_t3
       - index: 4
         name: Lantern_5
         trigger: interact
@@ -64,7 +66,7 @@ steps:
         scene_minigame: DwarfMinerQuestConfig_noun_repair_shop_homework_q01_mine_the_nouns
         scene_minigame_id: dwarf_miner
         mode: minigame
-        minigame_id: word_matching
+        minigame_id: listening_letter_ordering
         instance_key: abc_valley__abc_c_cave__o1_t4
     display_text: הדליקו את הפנסים במערה, אחד אחרי השני
   - type: custom

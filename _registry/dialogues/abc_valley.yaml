@@ -76,7 +76,7 @@ dialogues:
   d_lesson:
     speaker: pip_bellringer
     lines:
-      - סבא שלי קבר ליד הבריכה תוף זהב, והמפה שלו סימנה אותו באיקס. אבל הקוסם פיזר
+      - הסבא שלי הטמין ליד הבריכה תוף זהב, והמפה שלו סימנה אותו באיקס. אבל הקוסם פיזר
         בלילה עוד המון איקסים!
   d_turnin:
     speaker: pip_bellringer
@@ -93,8 +93,8 @@ dialogues:
   e_lesson:
     speaker: grandpa_tobias
     lines:
-      - הרוח של הקוסם פיזרה את כל הביצים שלי בעמק! אם הן לא יבקעו בחום של הלול, האפרוחים
-        יתקררו.
+      - הרוח של הקוסם פיזרה את כל הביצים שלי בעמק! אם הן לא יחזרו לחום של הלול, האפרוחים
+        שבתוכן יתקררו.
   e_turnin:
     speaker: grandpa_tobias
     lines:
@@ -106,7 +106,7 @@ dialogues:
   f_turnin:
     speaker: mira_stonecarver
     lines:
-      - תן לי להרגיש... הקו הזה, ועוד אחד, ועוד אחד. F.
+      - תן לי להרגיש... הקו הזה, ועוד אחד, ועוד אחד. F, כמו fire.
   g_lesson:
     speaker: grandpa_tobias
     lines:
@@ -122,7 +122,7 @@ dialogues:
   fun2_turnin:
     speaker: noa
     lines:
-      - טוב, טוב, הגעת ראשון. בפעם הבאה אני מנצחת.
+      - חה! הגעתי ראשונה! אבל גם אתה הגעת. כל הכבוד.
   h_lesson:
     speaker: pip_bellringer
     lines:
@@ -200,8 +200,176 @@ dialogues:
     speaker: bruno_gardener
     lines:
       - אחרי כל ההרפתקאות מגיעה לכפר ארוחה! אבל הקוסם כישף את המטבח, וכל המצרכים ברחו
-        לבתים של השכנים.
+        לכל הכפר.
   n_turnin:
     speaker: bruno_gardener
     lines:
       - עוד צלחת? כמובן! N כמו noodles, ו-N כמו never enough noodles.
+  o_call:
+    speaker: grandpa_tobias
+    lines:
+      - חזרתי עכשיו מהקניון. מישהו ענק יושב באמצע השביל!
+  o_lesson:
+    speaker: grandpa_tobias
+    lines:
+      - אורקים אוהבים חידות. מי שעונה עליהן, עובר.
+  o_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - ראית? לא צריך תמיד חרב. לפעמים צריך רק לשאול את השאלה הנכונה.
+  fun4_ponies:
+    speaker: bruno_gardener
+    lines:
+      - תראה מי חזרו! הפונים הישנים של העמק. הם אוכלים לי את כל הגזר.
+  fun4_turnin:
+    speaker: bruno_gardener
+    lines:
+      - ראית את הטבעת האחרונה? הפוני שלך עף!
+  p_lesson:
+    speaker: mira_stonecarver
+    lines:
+      - הפסיפס שלי! בניתי אותו לפני שנים, ובו ציור של כל העמק. והבוקר הוא אפור לגמרי.
+        הקוסם שאב ממנו את כל הצבעים.
+  p_turnin:
+    speaker: mira_stonecarver
+    lines:
+      - אני לא רואה טוב את הצבעים. אבל אני מרגישה אותם. האבנים חמות שוב.
+  hw4_penalty:
+    speaker: noa
+    lines:
+      - האורק משתעמם! הוא יושב ליד הבריכה כל היום ונאנח.
+  hw4_turnin:
+    speaker: noa
+    lines:
+      - ארבעה גולים! הוא לא עצר אף אחד!
+  q_lesson:
+    speaker: pip_bellringer
+    lines:
+      - הקוסם גנב מהפעמון את הצלילים שחזרו, ופיזר אותם כהדים בכל העמק!
+  q_museum:
+    speaker: pip_bellringer
+    lines:
+      - מצאת ארבעה הדים! אבל את הצליל האחרון, "קוו", הקוסם החביא עמוק מדי.
+  q_turnin:
+    speaker: pip_bellringer
+    lines:
+      - שקט... ועכשיו...
+  r_call:
+    speaker: mira_stonecarver
+    lines:
+      - זוכר את ה-R הענקית ששוכבת שבורה בשביל, לפני הכניסה לקניון? הקוסם הפיל אותה
+        מהשמיים ביום השקט.
+  r_lesson:
+    speaker: mira_stonecarver
+    lines:
+      - תעביר יד על האות הגדולה. מרגיש? זו P עם רגל לעמוד עליה. זו R.
+  r_turnin:
+    speaker: mira_stonecarver
+    lines:
+      - היא הייתה כבדה יותר ממה שחשבתי, אבל עפה כמו נוצה.
+  s_lesson:
+    speaker: noa
+    lines:
+      - 'השמש לא זורחת! הקוסם הטיל כישוף: בעמק יהיה רק לילה, לתמיד.'
+  s_turnin:
+    speaker: noa
+    lines:
+      - תראה! השמש! היא זכרה את הדרך!
+  fun5_sleds:
+    speaker: noa
+    lines:
+      - תראה מה מצאתי מתחת לשלג! מזחלות עץ ישנות!
+  fun5_turnin:
+    speaker: noa
+    lines:
+      - רימית! עקפת אותי בקפיצה הזאת!
+  t_lesson:
+    speaker: bruno_gardener
+    lines:
+      - תראה מה מצאתי במחסן! תוכנית ישנה ומקומטת. פעם היה בית עץ, tree house, בעץ
+        הגדול הזה.
+  t_turnin:
+    speaker: bruno_gardener
+    lines:
+      - בית עץ! בית עץ אמיתי! ורואים ממנו את כל העמק!
+  hw5_album:
+    speaker: noa
+    lines:
+      - אני מכינה אלבום של כל ההרפתקאות שלנו! אבל בכל עמוד חסרה תמונה.
+  hw5_turnin:
+    speaker: noa
+    lines:
+      - האלבום מלא! תראה, זה אתה עם החבל. וזאת המדורה הגדולה על ההר.
+  u_lesson:
+    speaker: mira_stonecarver
+    lines:
+      - אתה מרגיש? משהו רועד מתחת לבאר. גיליתי מדרגות נסתרות!
+  u_turnin:
+    speaker: mira_stonecarver
+    lines:
+      - הוא גר כאן. מתחת לרגליים שלנו. הקוסם.
+  v_lesson:
+    speaker: noa
+    lines:
+      - (בלחש) תסתכל על הגמד הזה. הוא הגיע הבוקר עם van, עגלה גדולה, ומחלק לכולם מתנות
+        בחינם.
+  v_turnin:
+    speaker: noa
+    lines:
+      - ידעתי! ידעתי שגמדים לא זוהרים!
+  w_lesson:
+    speaker: grandpa_tobias
+    lines:
+      - בלילה הקוסם בנה חומה שחורה באמצע העמק. חצי מהכפר בצד אחד, וחצי בצד השני.
+  w_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - הוא ניסה לחלק אותנו. זה מה שהוא תמיד רצה, שכל אחד יהיה לבד.
+  fun6_plan:
+    speaker: noa
+    lines:
+      - יום חופש! אין קוסם, אין אותיות, רק כיף.
+  fun6_turnin:
+    speaker: noa
+    lines:
+      - מצאת אותי בכל פעם. זה לא הוגן!
+  hw6_quiz:
+    speaker: grandpa_tobias
+    lines:
+      - חידון! ליד הבאר. אני אומר מילה, ואתה בוחר באיזו אות היא מתחילה.
+  hw6_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - כל התשובות נכונות! הבאר לא הפסיקה לענות.
+  y_lesson:
+    speaker: grandpa_tobias
+    lines:
+      - כמעט נזכרתי בכל יום השקט. חסר לי רק החלק האחרון.
+  y_story:
+    speaker: grandpa_tobias
+    lines:
+      - שב לידי. עכשיו אני זוכר הכול.
+  y_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - עכשיו אני מבין למה הוא ברח. אף אחד לא עזר לו, וגם אני לא.
+  z_lesson:
+    speaker: noa
+    lines:
+      - (מפהקת) זזזז... מה קרה? כולם נוחרים!
+  z_turnin:
+    speaker: noa
+    lines:
+      - (מרחוק, מעבר לקשת) זה לא נגמר! יש עוד ממלכה שלמה!
+  grad_call:
+    speaker: grandpa_tobias
+    lines:
+      - שמעת? כל העמק מתאסף בכיכר. היום חוגגים אותך.
+  grad_page:
+    speaker: grandpa_tobias
+    lines:
+      - יש לי עוד דבר אחד בשבילך. דף ישן.
+  grad_turnin:
+    speaker: grandpa_tobias
+    lines:
+      - באת לכאן תלמיד חדש. אתה יוצא... עדיין תלמיד. ככה זה אמור להיות.

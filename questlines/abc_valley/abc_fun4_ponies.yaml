@@ -1,0 +1,113 @@
+quest:
+  id: abc_fun4_ponies
+  name: טבעות האור
+  level_required: 0
+  giver_npc: bruno_gardener
+  prerequisite: abc_o_orc
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 50
+steps:
+  - type: talk_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: fun4_ponies
+    count: 1
+    display_text: דברו עם ברונו ליד הגינה
+  - type: custom
+    handler_id: abc_fun4_mount
+    unity_objective_index: 1
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: MountPony
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+    display_text: עלו על הפוני
+  - type: custom
+    handler_id: abc_fun4_rings
+    unity_objective_index: 2
+    count: 12
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Ring_01
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 1
+        name: Ring_02
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 2
+        name: Ring_03
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 3
+        name: Ring_04
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 4
+        name: Ring_05
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 5
+        name: Ring_06
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 6
+        name: Ring_07
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 7
+        name: Ring_08
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 8
+        name: Ring_09
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 9
+        name: Ring_10
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 10
+        name: Ring_11
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+      - index: 11
+        name: Ring_12
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+    display_text: דהרו דרך טבעות הזהב
+  - type: custom
+    handler_id: abc_fun4_leap
+    unity_objective_index: 3
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: BigRing
+        trigger: external
+        scene_no_minigame: true
+        mode: scene
+    display_text: עברו בטבעת הגדולה ליד המפל
+  - type: return_to_npc
+    npc_id: bruno_gardener
+    dialogue_id: fun4_turnin

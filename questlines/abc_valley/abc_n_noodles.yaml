@@ -27,7 +27,7 @@ steps:
         name: Ingredient_Onion
         trigger: interact
         prompt: תפוס את הבצל
-        scene_minigame: DwarfMinerQuestConfig_verbs_to_be_homework_q01_mine_are_words
+        scene_minigame: DwarfMinerQuestConfig_abc_valley__abc_n_noodles__o1_t0
         scene_minigame_id: dwarf_miner
         mode: minigame
         minigame_id: dwarf_miner
@@ -36,7 +36,7 @@ steps:
         name: Ingredient_Spices
         trigger: interact
         prompt: קח את התבלינים
-        scene_minigame: LetterOrderingQuestConfig_adjectives_basics_q06_spell_tired
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_n_noodles__o1_t1
         scene_minigame_id: letter_ordering
         mode: minigame
         minigame_id: listening_letter_ordering
@@ -45,8 +45,8 @@ steps:
         name: Ingredient_Egg
         trigger: interact
         prompt: קח ביצה מהלול
-        scene_minigame: LineMatchQuestConfig_articles_a_an_q06_match_review
-        scene_minigame_id: word_matching
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_n_noodles__o1_t3
+        scene_minigame_id: letter_ordering
         mode: minigame
         minigame_id: letter_drawing
         instance_key: abc_valley__abc_n_noodles__o1_t2
@@ -54,8 +54,8 @@ steps:
         name: Ingredient_Vegetables
         trigger: interact
         prompt: קטוף ירקות
-        scene_minigame: WordOrderingQuestConfig_missing_verbs_q01_sentence_open
-        scene_minigame_id: word_ordering
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_n_noodles__o2_t0
+        scene_minigame_id: letter_ordering
         mode: minigame
         minigame_id: listening_letter_ordering
         instance_key: abc_valley__abc_n_noodles__o1_t3
@@ -63,10 +63,12 @@ steps:
         name: Ingredient_Water
         trigger: interact
         prompt: שאב מים מהבאר
-        scene_minigame: WordOrderingQuestConfig_noun_repair_q05_sentence
-        scene_minigame_id: word_ordering
-        mode: none
-    display_text: מצאו את המצרכים שהתחבאו בבתים
+        scene_minigame: DwarfMinerQuestConfig_abc_valley__abc_n_noodles__o1_t0
+        scene_minigame_id: dwarf_miner
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_n_noodles__o1_t4
+    display_text: מצאו את המצרכים שהתחבאו בכפר
   - type: custom
     handler_id: abc_n_stir
     unity_objective_index: 2
@@ -77,7 +79,7 @@ steps:
         name: Stir
         trigger: interact
         prompt: בחש את הסיר
-        scene_minigame: LetterOrderingQuestConfig_line_msysmv9a_q03_little_girl_minigame
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_n_noodles__o2_t0
         scene_minigame_id: letter_ordering
         mode: minigame
         minigame_id: listening_letter_ordering

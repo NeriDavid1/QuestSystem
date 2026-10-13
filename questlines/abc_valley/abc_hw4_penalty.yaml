@@ -1,0 +1,28 @@
+quest:
+  id: abc_hw4_penalty
+  name: הפנדל של האורק
+  level_required: 0
+  giver_npc: noa
+  prerequisite: abc_p_paint
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 100
+  items:
+    - id: coin
+      amount: 20
+steps:
+  - type: talk_to_npc
+    npc_id: noa
+    dialogue_id: hw4_penalty
+    count: 1
+    display_text: דברו עם נועה ליד הבריכה
+  - type: custom
+    handler_id: abc_hw4_kicks
+    unity_objective_index: 1
+    count: 4
+    reactor: choice_rounds
+    display_text: בעטו לשער את הכדור הנכון
+  - type: return_to_npc
+    npc_id: noa
+    dialogue_id: hw4_turnin

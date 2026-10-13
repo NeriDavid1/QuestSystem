@@ -27,8 +27,8 @@ steps:
         name: Egg_1
         trigger: interact
         prompt: מצא את הביצה
-        scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
-        scene_minigame_id: word_ordering
+        scene_minigame: DwarfMinerQuestConfig_abc_valley__abc_e_eggs__o1_t0
+        scene_minigame_id: dwarf_miner
         mode: minigame
         minigame_id: dwarf_miner
         instance_key: abc_valley__abc_e_eggs__o1_t0
@@ -36,8 +36,8 @@ steps:
         name: Egg_2
         trigger: interact
         prompt: מצא את הביצה
-        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
-        scene_minigame_id: word_ordering
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_e_eggs__o1_t1
+        scene_minigame_id: letter_ordering
         mode: minigame
         minigame_id: listening_letter_ordering
         instance_key: abc_valley__abc_e_eggs__o1_t1
@@ -45,8 +45,8 @@ steps:
         name: Egg_3
         trigger: interact
         prompt: מצא את הביצה
-        scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
-        scene_minigame_id: word_ordering
+        scene_minigame: LetterOrderingQuestConfig_abc_valley__abc_e_eggs__o2_t0
+        scene_minigame_id: letter_ordering
         mode: minigame
         minigame_id: letter_drawing
         instance_key: abc_valley__abc_e_eggs__o1_t2
@@ -54,9 +54,11 @@ steps:
         name: Egg_4
         trigger: interact
         prompt: מצא את הביצה
-        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
-        scene_minigame_id: word_ordering
-        mode: none
+        scene_minigame: LineMatchQuestConfig_abc_valley__abc_e_eggs__o1_t4
+        scene_minigame_id: word_matching
+        mode: minigame
+        minigame_id: word_matching
+        instance_key: abc_valley__abc_e_eggs__o1_t3
       - index: 4
         name: Egg_5
         trigger: interact
@@ -64,7 +66,7 @@ steps:
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q02_an_egg
         scene_minigame_id: word_ordering
         mode: minigame
-        minigame_id: word_matching
+        minigame_id: listening_letter_ordering
         instance_key: abc_valley__abc_e_eggs__o1_t4
       - index: 5
         name: Egg_6
@@ -72,7 +74,9 @@ steps:
         prompt: מצא את הביצה
         scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
         scene_minigame_id: word_ordering
-        mode: none
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_e_eggs__o1_t5
     display_text: מצאו את הביצים שהתפזרו בעמק
   - type: custom
     handler_id: abc_e_golden
@@ -84,8 +88,8 @@ steps:
         name: GoldenEgg
         trigger: interact
         prompt: קח את ביצת הזהב
-        scene_minigame: WordOrderingQuestConfig_articles_a_an_q05_a_big_egg
-        scene_minigame_id: word_ordering
+        scene_minigame: LineMatchQuestConfig_abc_valley__abc_e_eggs__o1_t4
+        scene_minigame_id: word_matching
         mode: minigame
         minigame_id: letter_ordering
         instance_key: abc_valley__abc_e_eggs__o2_t0

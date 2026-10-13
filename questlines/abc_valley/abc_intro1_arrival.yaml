@@ -34,7 +34,7 @@ steps:
     npc_id: grandpa_tobias
     dialogue_id: intro1_wake
     count: 1
-    display_text: העירו את סבא טוביאס (גשו אליו ולחצו E)
+    display_text: העירו את סבא טוביאס (גשו אליו ודברו איתו)
   - type: custom
     handler_id: abc_intro1_well
     unity_objective_index: 3
