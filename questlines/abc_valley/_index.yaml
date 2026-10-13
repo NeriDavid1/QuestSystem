@@ -4,7 +4,7 @@ questline:
   display_name: עמק האותיות
   theme: 'The ABC Valley story: the opening and the letter quests, one continuous
     questline.'
-  quest_count: 41
+  quest_count: 42
   level_range:
     - 0
     - 0
@@ -342,10 +342,19 @@ quests:
       items:
         - id: coin
           amount: 50
+  - id: abc_x_boxes
+    name: הר הקופסאות
+    level: 0
+    prerequisite: abc_fun6_falls
+    rewards:
+      xp: 150
+      items:
+        - id: coin
+          amount: 30
   - id: abc_hw6_quiz
     name: החידון של טוביאס
     level: 0
-    prerequisite: abc_fun6_falls
+    prerequisite: abc_x_boxes
     rewards:
       xp: 100
       items:

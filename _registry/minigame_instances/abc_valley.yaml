@@ -2901,6 +2901,113 @@ instances:
         - v
         - m
         - a
+  abc_valley__abc_x_boxes__o1_t0:
+    minigame_id: dwarf_miner
+    instruction: אספו רק את האות X - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    tasks:
+      - אספו רק את האות X - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+    target: X, x
+    variant: word_category
+    success: מצאתם את X בשתי הצורות שלה.
+    params:
+      prompt: אספו רק את האות X - גדולה וקטנה. היזהרו מאותיות שדומות לה.
+      categoryLabel: האות X
+      targetWords:
+        - X
+        - x
+      distractorWords:
+        - K
+        - k
+        - V
+        - v
+      requiredCorrect: 4
+      allowedMistakes: 3
+  abc_valley__abc_x_boxes__o1_t1:
+    minigame_id: letter_drawing
+    instruction: ציירו X ו-x, ואחר כך K ו-k. X היא שני קווים שנחתכים באמצע.
+    tasks:
+      - ציירו X ו-x, ואחר כך K ו-k. X היא שני קווים שנחתכים באמצע.
+    target: X, x, K, k
+    variant: trace_guided
+    success: ציירתם לפי הדוגמה.
+    params:
+      symbols:
+        - X
+        - x
+        - K
+        - k
+  abc_valley__abc_x_boxes__o1_t2:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה קופסה באנגלית. האות האחרונה היא X!
+    tasks:
+      - הקשיבו ובנו את המילה קופסה באנגלית. האות האחרונה היא X!
+    target: box
+    variant: listening_spelling
+    success: בניתם את המילה box.
+    params:
+      prompt: הקשיבו ובנו את המילה קופסה באנגלית. האות האחרונה היא X!
+      targetWord: box
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/box.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - d
+        - p
+        - a
+  abc_valley__abc_x_boxes__o1_t3:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו לצירוף ובנו אותו. איפה ה-X?
+    tasks:
+      - הקשיבו לצירוף ובנו אותו. איפה ה-X?
+    target: ox
+    variant: listening_spelling
+    success: בניתם ox.
+    params:
+      prompt: הקשיבו לצירוף ובנו אותו. איפה ה-X?
+      targetWord: ox
+      promptAudio: _OurAssets/Art/Audio/Museum sounds/SOUNDS FOR MUSEUM new/OX.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - a
+        - k
+        - s
+  abc_valley__abc_x_boxes__o1_t4:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה שש באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה שש באנגלית.
+    target: six
+    variant: listening_spelling
+    success: בניתם את המילה six.
+    params:
+      prompt: הקשיבו ובנו את המילה שש באנגלית.
+      targetWord: six
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/six.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - k
+        - v
+        - a
+  abc_valley__abc_x_boxes__o2_t0:
+    minigame_id: listening_letter_ordering
+    instruction: הקשיבו ובנו את המילה שועל באנגלית.
+    tasks:
+      - הקשיבו ובנו את המילה שועל באנגלית.
+    target: fox
+    variant: listening_spelling
+    success: בניתם את המילה fox.
+    params:
+      prompt: הקשיבו ובנו את המילה שועל באנגלית.
+      targetWord: fox
+      promptAudio: _OurAssets/Art/Audio/Voice/Words/fox.mp3
+      hintMode: AudioOnly
+      extraDistractorCount: 3
+      customDistractors:
+        - k
+        - b
+        - a
   abc_valley__abc_z_sleep__o1_t0:
     minigame_id: dwarf_miner
     instruction: אספו רק את האות Z - גדולה וקטנה. היזהרו מאותיות שדומות לה.

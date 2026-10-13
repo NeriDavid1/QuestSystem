@@ -526,22 +526,18 @@ PLAN: dict[str, dict[int, dict[int, Any]]] = {
         },
         4: {0: NONE},
     },
-}
-
-# X is designed but not built in Unity yet (no quest YAML), so it waits here. When it is built, export it
-# (unity_to_yaml.py --line abc_valley), check its objective/task indices, and move it into PLAN.
-PENDING: dict[str, dict[str, Any]] = {
-    # X - Mira and Pip: two planks crossing; in most words X is at the end and says "קס". 5 boxes + the gold box.
+    # X - Mira and Pip: two planks crossing; in most words X is at the end and says "קס". The 5 boxes open in any
+    # order (X rarely starts a word, so its words are built and the X heard at the end); the gold box builds fox.
     "abc_x_boxes": {
-        "boxes": [
-            lambda: find_letter("x", ["K", "k", "V", "v"]),
-            lambda: trace_it(["X", "x", "K", "k"], "ציירו X ו-x, ואחר כך K ו-k. X היא שני קווים שנחתכים באמצע."),
-            lambda: hear_it("box", word("box"), ["d", "p", "a"], "הקשיבו ובנו את המילה קופסה באנגלית. האות האחרונה היא X!",
-                            "בניתם את המילה box."),
-            lambda: hear_it("ox", new_syllable("OX"), ["a", "k", "s"], "הקשיבו לצירוף ובנו אותו. איפה ה-X?", "בניתם ox."),
-            lambda: build_word("six", "שש", ["k", "z", "a"]),
-        ],
-        "gold": lambda: build_word("fox", "שועל", ["k", "b", "a"]),
+        1: {
+            0: find_letter("x", ["K", "k", "V", "v"]),
+            1: trace_it(["X", "x", "K", "k"], "ציירו X ו-x, ואחר כך K ו-k. X היא שני קווים שנחתכים באמצע."),
+            2: hear_it("box", word("box"), ["d", "p", "a"], "הקשיבו ובנו את המילה קופסה באנגלית. האות האחרונה היא X!",
+                       "בניתם את המילה box."),
+            3: hear_it("ox", new_syllable("OX"), ["a", "k", "s"], "הקשיבו לצירוף ובנו אותו. איפה ה-X?", "בניתם ox."),
+            4: build_word("six", "שש", ["k", "v", "a"]),
+        },
+        2: {0: build_word("fox", "שועל", ["k", "b", "a"])},
     },
 }
 

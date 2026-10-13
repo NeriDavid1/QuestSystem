@@ -3,7 +3,7 @@ quest:
   name: החידון של טוביאס
   level_required: 0
   giver_npc: grandpa_tobias
-  prerequisite: abc_fun6_falls
+  prerequisite: abc_x_boxes
   summary: ''
   wait_for_npc_turn_in: true
 rewards:

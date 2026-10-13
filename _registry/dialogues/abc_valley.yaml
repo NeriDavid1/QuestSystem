@@ -333,6 +333,14 @@ dialogues:
     speaker: noa
     lines:
       - מצאת אותי בכל פעם. זה לא הוגן!
+  x_lesson:
+    speaker: mira_stonecarver
+    lines:
+      - הר שלם של קופסאות! box, box, box! מי שם אותו באמצע הכיכר?
+  x_turnin:
+    speaker: mira_stonecarver
+    lines:
+      - ראית את הראש של הקוסם על הקפיץ? "בּוּ!" לא פחדתי. כמעט.
   hw6_quiz:
     speaker: grandpa_tobias
     lines:

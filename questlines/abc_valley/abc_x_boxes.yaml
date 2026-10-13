@@ -1,0 +1,90 @@
+quest:
+  id: abc_x_boxes
+  name: הר הקופסאות
+  level_required: 0
+  giver_npc: mira_stonecarver
+  prerequisite: abc_fun6_falls
+  summary: ''
+  wait_for_npc_turn_in: true
+rewards:
+  xp: 150
+  items:
+    - id: coin
+      amount: 30
+steps:
+  - type: talk_to_npc
+    npc_id: mira_stonecarver
+    dialogue_id: x_lesson
+    count: 1
+    display_text: דברו עם מירה מול הר הקופסאות
+  - type: custom
+    handler_id: abc_x_boxes
+    unity_objective_index: 1
+    count: 5
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: Box_WateringCan
+        trigger: interact
+        prompt: פתח את הקופסה
+        scene_minigame: LetterOrderingQuestConfig_Listening_Box
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: dwarf_miner
+        instance_key: abc_valley__abc_x_boxes__o1_t0
+      - index: 1
+        name: Box_Boo1
+        trigger: interact
+        prompt: פתח את הקופסה
+        scene_minigame: WordOrderingQuestConfig_wh_questions_q04_ask_box
+        scene_minigame_id: word_ordering
+        mode: minigame
+        minigame_id: letter_drawing
+        instance_key: abc_valley__abc_x_boxes__o1_t1
+      - index: 2
+        name: Box_Hammer
+        trigger: interact
+        prompt: פתח את הקופסה
+        scene_minigame: LetterOrderingQuestConfig_Listening_Box
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_x_boxes__o1_t2
+      - index: 3
+        name: Box_Boo2
+        trigger: interact
+        prompt: פתח את הקופסה
+        scene_minigame: WordOrderingQuestConfig_wh_questions_q04_ask_box
+        scene_minigame_id: word_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_x_boxes__o1_t3
+      - index: 4
+        name: Box_Stick
+        trigger: interact
+        prompt: פתח את הקופסה
+        scene_minigame: LetterOrderingQuestConfig_Listening_Box
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_x_boxes__o1_t4
+    display_text: פתחו את הקופסאות הזוהרות שלמרגלות ההר
+  - type: custom
+    handler_id: abc_x_gold
+    unity_objective_index: 2
+    count: 1
+    reactor: task_set
+    tasks:
+      - index: 0
+        name: GoldBox
+        trigger: interact
+        prompt: פתח את קופסת הזהב
+        scene_minigame: LetterOrderingQuestConfig_numbers_q01_spell_sixteen
+        scene_minigame_id: letter_ordering
+        mode: minigame
+        minigame_id: listening_letter_ordering
+        instance_key: abc_valley__abc_x_boxes__o2_t0
+    display_text: טפסו למעלה ופתחו את קופסת הזהב
+  - type: return_to_npc
+    npc_id: mira_stonecarver
+    dialogue_id: x_turnin
