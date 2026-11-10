@@ -28,17 +28,18 @@ def node_asset(next_guids):
 
 class FakeDb:
     def __init__(self, items=None, decisions=None):
-        self.tables = {"voice_review_items": list(items or []), "voice_review_decisions": list(decisions or [])}
+        self.tables = {"voice_review_items": list(items or []), "voice_review_decisions": list(decisions or []),
+                       "voice_review_speakers": [], "voice_review_groups": []}
         self.uploads, self.removed, self.deleted = [], [], []
 
-    def select_all(self, table, columns):
+    def select_all(self, table, columns, key="clip_path"):
         return [dict(r) for r in self.tables[table]]
 
-    def upsert(self, table, rows):
-        by_clip = {r["clip_path"]: r for r in self.tables[table]}
+    def upsert(self, table, rows, key="clip_path"):
+        by_key = {r[key]: r for r in self.tables[table]}
         for row in rows:
-            by_clip[row["clip_path"]] = {**by_clip.get(row["clip_path"], {}), **row}
-        self.tables[table] = list(by_clip.values())
+            by_key[row[key]] = {**by_key.get(row[key], {}), **row}
+        self.tables[table] = list(by_key.values())
 
     def delete_items(self, clips):
         self.deleted += clips
@@ -158,6 +159,65 @@ class VoiceReviewSyncTests(unittest.TestCase):
         sync.sync(self.project, db, dry_run=False, skip_audio=False, log=lambda *_: None)
         self.assertEqual(db.deleted, ["Assets/old.mp3"])
         self.assertEqual(db.removed, ["dialogue/old/h.mp3"])
+
+    def write_take(self, clip, take, **lock_entry):
+        (self.root / clip).parent.mkdir(parents=True, exist_ok=True)
+        (self.root / clip).write_bytes(take.encode())
+        lock_path = self.root / "Tools" / "voice" / "generated.lock.json"
+        lock = json.loads(lock_path.read_text(encoding="utf-8"))
+        lock[clip] = {"hash": take, **lock_entry}
+        lock_path.write_text(json.dumps(lock), encoding="utf-8")
+
+    def test_girl_take_follows_its_line_and_other_voiced_lines_are_listed(self):
+        tools = self.root / "Tools" / "voice"
+        start_node = f"{NODES}/Dialogue_line_q01_start.asset"
+        girl = f"{VOICE}/Dialogue_line_q01_start_girl.mp3"
+        self.write_take(girl, "g1")
+        (tools / "girl_script.csv").write_text(
+            '"clip_path","group","speaker","node_path","display_text","tts_text"\n'
+            f'"{girl}","line","Nemo","{start_node}","שלום ילדה","שלום ילדה"\n', encoding="utf-8")
+        (tools / "bubble_lines.json").write_text(json.dumps({"lines": [
+            {"id": "abc_quest_d_x_1_say", "speaker": "פיפ", "text": "גרב!", "tts_text": "גרב!"}]}), encoding="utf-8")
+        (tools / "cutscene_lines.json").write_text(json.dumps({"lines": [
+            {"id": "intro1_01", "timeline": "TL_Intro1_Opening", "speaker": "פיפ", "text": "פיפ: שלום", "tts_text": "שלום"}]}),
+            encoding="utf-8")
+        (tools / "ambient_lines.json").write_text(json.dumps({
+            "characters": {"Mia": {"display_name": "מיה האופה", "voice_speaker": "Mia the Baker"}},
+            "conversations": {}, "lines": [{"id": "mia_greet_01", "character": "Mia", "text": "לחם!"}]}), encoding="utf-8")
+        self.write_take(f"{sync.VOICE_ROOT}/Bubbles/abc_quest_d_x_1_say.mp3", "b1", speaker="פיפ")
+        self.write_take(f"{sync.VOICE_ROOT}/Bubbles/abc_quest_d_x_1_say_girl.mp3", "b2", speaker="פיפ")
+        self.write_take(f"{sync.VOICE_ROOT}/Cutscenes/intro1_01.mp3", "c1", speaker="פיפ", tts_text="[warmly] שלום")
+        self.write_take(f"{sync.VOICE_ROOT}/Ambient/Mia/mia_greet_01.mp3", "a1", speaker="Mia the Baker")
+
+        items = self.project.load_items()
+        line = [i for i in items if i.group_key == "line"]
+        self.assertEqual([(Path(i.clip_path).stem, i.variant) for i in line[:3]],
+                         [("Dialogue_line_q01_start", ""), ("Dialogue_line_q01_start_girl", "girl"), ("Dialogue_line_q01_s01", "")])
+        self.assertEqual([i.position for i in line], list(range(len(line))))
+        extra = {(i.source, i.variant): i for i in items if i.source != "dialogue"}
+        self.assertEqual(sorted(extra), [("ambient", ""), ("bubble", ""), ("bubble", "girl"), ("cutscene", "")])
+        self.assertEqual((extra["bubble", ""].group_key, extra["bubble", ""].section), ("abc_valley", "Speech bubbles · Quest D"))
+        self.assertEqual((extra["cutscene", ""].on_screen_text, extra["cutscene", ""].tts_text), ("שלום", "[warmly] שלום"))
+        self.assertEqual(extra["cutscene", ""].section, "Cutscene · Intro1 Opening")
+        mia = extra["ambient", ""]
+        self.assertEqual((mia.group_key, mia.speaker, mia.speaker_key), ("ambient", "מיה האופה", "Mia the Baker"))
+        self.assertTrue(mia.audio_path().startswith("ambient/"))
+
+        speakers, groups, _ = self.project.people(items)
+        self.assertIn({"speaker_key": "Mia the Baker", "display_name": "מיה האופה (Mia the Baker)"},
+                      [{k: s[k] for k in ("speaker_key", "display_name")} for s in speakers])
+        self.assertEqual([g["group_key"] for g in groups], ["abc_valley", "line", "ambient"])
+
+    def test_character_of_a_line(self):
+        cast = sync.VoiceCast({"speakers": {
+            "Village Head": {"aliases": ["ראש הכפר", "Bobby"]},
+            "Garrick": {"node_paths": ["Assets/Data/Gate/"]}}})
+        self.assertEqual(cast.character_for("ראש הכפר"), "Village Head")   # Hebrew name of the same character
+        self.assertEqual(cast.character_for("Bobby"), "Bobby")             # another character borrowing the voice
+        self.assertEqual(cast.character_for("השומר", "Assets/Data/Gate/x.asset"), "Garrick")
+        self.assertEqual(cast.display_name("Village Head"), "ראש הכפר (Village Head)")
+        self.assertEqual(sync.bubble_section("abc_quest_hw3_2_say"), "Speech bubbles · Homework 3")
+        self.assertEqual(sync.girl_clip("A/b/c.mp3"), "A/b/c_girl.mp3")
 
     def test_dry_run_changes_nothing(self):
         db = FakeDb()

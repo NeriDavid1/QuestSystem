@@ -2,20 +2,26 @@ import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } fro
 import type { User } from '@supabase/supabase-js'
 import { supabase } from '../lib/supabase'
 import { signIn, signOut, signUp } from '../lib/persistence'
-import { audioUrls, demoMode, loadDecisions, loadItems, saveDecision } from './voiceData'
+import { audioUrls, demoMode, loadDecisions, loadItems, loadPeople, pictureUrls, saveDecision } from './voiceData'
 import {
   REJECT_REASONS,
+  SOURCE_LABEL,
   buildDecision,
+  faceOf,
   groupTitle,
   itemsOfGroup,
   matchesFilter,
   nextToReview,
   reasonLabel,
   sectionsOf,
+  speakerKeyOf,
+  speakerTitle,
   stateOf,
   summarizeGroups,
   type Filter,
+  type GroupMode,
   type ItemState,
+  type People,
   type ReviewStatus,
   type VoiceDecision,
   type VoiceItem,
@@ -36,6 +42,27 @@ const FILTERS: Array<{ id: Filter; label: string }> = [
 ]
 
 const GROUP_KEY = 'voiceReview.group'
+const MODE_KEY = 'voiceReview.mode'
+
+const MODES: Array<{ id: GroupMode; label: string }> = [
+  { id: 'questline', label: 'לפי קו משימות' },
+  { id: 'character', label: 'לפי דמות' },
+]
+
+const AVATAR_COLORS = ['#6d5ff0', '#1fa892', '#d99a1e', '#d9535b', '#3b82c4', '#a855c7', '#4f9d4a', '#c2703d']
+
+/** The character's picture, or a coloured circle with the first letter when there is none. */
+function Avatar({ name, url, size = 36 }: { name: string; url?: string; size?: number }) {
+  const [broken, setBroken] = useState(false)
+  const style = { width: size, height: size, fontSize: Math.round(size * 0.42) }
+  if (url && !broken) return <img className="vr-avatar" src={url} alt="" style={style} onError={() => setBroken(true)} />
+  let hash = 0
+  for (const char of name) hash = (hash * 31 + char.charCodeAt(0)) | 0
+  const letter = [...name.replace(/^[^\p{L}]+/u, '')][0] ?? '?'
+  return <span className="vr-avatar" aria-hidden style={{ ...style, background: AVATAR_COLORS[Math.abs(hash) % AVATAR_COLORS.length] }}>{letter.toUpperCase()}</span>
+}
+
+const EMPTY_PEOPLE: People = { speakers: new Map(), groups: new Map() }
 
 function readStored(key: string): string | null {
   try { return localStorage.getItem(key) } catch { return null }
@@ -113,7 +140,10 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
   const [items, setItems] = useState<VoiceItem[] | null>(null)
   const [decisions, setDecisions] = useState<Map<string, VoiceDecision>>(new Map())
   const [loadError, setLoadError] = useState('')
-  const [group, setGroup] = useState<string>(() => readStored(GROUP_KEY) ?? '')
+  const [mode, setMode] = useState<GroupMode>(() => (readStored(MODE_KEY) === 'character' ? 'character' : 'questline'))
+  const [group, setGroup] = useState<string>(() => readStored(`${GROUP_KEY}.${mode}`) ?? '')
+  const [people, setPeople] = useState<People>(EMPTY_PEOPLE)
+  const [faces, setFaces] = useState<Map<string, string>>(new Map())
   const [filter, setFilter] = useState<Filter>('toReview')
   const [selected, setSelected] = useState<string | null>(null)
   const [saving, setSaving] = useState(false)
@@ -129,8 +159,11 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
     void (async () => {
       try {
         if (supabase) await supabase.rpc('ensure_workspace_member', { p_display_name: null })
-        const [loaded] = await Promise.all([loadItems(), refreshDecisions()])
+        const [loaded, who] = await Promise.all([loadItems(), loadPeople(), refreshDecisions()])
+        setPeople(who)
         setItems(loaded)
+        // Pictures are a nicety: the page works without them.
+        void pictureUrls(who).then(setFaces).catch(() => undefined)
       } catch (error) {
         setLoadError(error instanceof Error ? error.message : String(error))
       }
@@ -141,9 +174,11 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
     return () => window.removeEventListener('focus', onFocus)
   }, [refreshDecisions])
 
-  const groups = useMemo(() => summarizeGroups(items ?? [], decisions), [items, decisions])
+  const groups = useMemo(() => summarizeGroups(items ?? [], decisions, mode, people), [items, decisions, mode, people])
   const activeGroup = groups.some((g) => g.key === group) ? group : groups.find((g) => g.toReview > 0)?.key ?? groups[0]?.key ?? ''
-  const groupItems = useMemo(() => itemsOfGroup(items ?? [], activeGroup), [items, activeGroup])
+  const groupItems = useMemo(() => itemsOfGroup(items ?? [], activeGroup, mode, people), [items, activeGroup, mode, people])
+  const titleOf = (key: string) => (mode === 'character' ? speakerTitle(key, people) : groupTitle(key, people))
+  const faceUrl = (speakerKey: string) => faces.get(speakerKey)
   const visible = useMemo(
     () => groupItems.filter((item) => matchesFilter(stateOf(item, decisions.get(item.clip_path)), filter) || item.clip_path === selected),
     [groupItems, decisions, filter, selected],
@@ -153,9 +188,17 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
 
   const chooseGroup = (key: string) => {
     setGroup(key)
-    writeStored(GROUP_KEY, key)
+    writeStored(`${GROUP_KEY}.${mode}`, key)
     setSelected(null)
     setShowGroups(false)
+  }
+
+  const chooseMode = (next: GroupMode) => {
+    if (next === mode) return
+    setMode(next)
+    writeStored(MODE_KEY, next)
+    setGroup(readStored(`${GROUP_KEY}.${next}`) ?? '')
+    setSelected(null)
   }
 
   const decide = useCallback(async (item: VoiceItem, status: ReviewStatus, change: { tags?: string[]; note?: string } = {}) => {
@@ -205,20 +248,33 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
       </header>
 
       <div className="vr-body">
-        <nav className={`vr-groups${showGroups ? ' open' : ''}`} aria-label="קווי משימות">
-          <p className="vr-eyebrow">קווי משימות</p>
-          {groups.map((g) => (
-            <button key={g.key} className={g.key === activeGroup ? 'active' : ''} onClick={() => chooseGroup(g.key)}>
-              <span className="vr-group-name" dir="ltr">{groupTitle(g.key)}</span>
-              <span className="vr-group-count">{g.toReview > 0 ? `${g.toReview} לבדיקה` : '✓'}</span>
-              <Progress accepted={g.accepted} rejected={g.rejected} total={g.total} />
-            </button>
-          ))}
+        <nav className={`vr-groups${showGroups ? ' open' : ''}`} aria-label={mode === 'character' ? 'דמויות' : 'קווי משימות'}>
+          <div className="vr-mode" role="radiogroup" aria-label="סידור הרשימה">
+            {MODES.map((m) => (
+              <button key={m.id} role="radio" aria-checked={mode === m.id} className={mode === m.id ? 'active' : ''}
+                onClick={() => chooseMode(m.id)}>{m.label}</button>
+            ))}
+          </div>
+          {groups.map((g) => {
+            const face = faceOf(g.key, mode, people)
+            const title = titleOf(g.key)
+            return (
+              <button key={g.key} className={g.key === activeGroup ? 'active' : ''} onClick={() => chooseGroup(g.key)}>
+                <Avatar name={face ? speakerTitle(face, people) : title} url={faceUrl(face)} size={34} />
+                <span className="vr-group-name" dir="auto">{title}</span>
+                <span className="vr-group-count">{g.toReview > 0 ? `${g.toReview} לבדיקה` : '✓'}</span>
+                <Progress accepted={g.accepted} rejected={g.rejected} total={g.total} />
+              </button>
+            )
+          })}
         </nav>
 
         <section className="vr-list">
           <div className="vr-list-head">
-            <h2 dir="ltr">{groupTitle(activeGroup)}</h2>
+            <div className="vr-list-title">
+              <Avatar name={titleOf(activeGroup)} url={faceUrl(faceOf(activeGroup, mode, people))} size={44} />
+              <h2 dir="auto">{titleOf(activeGroup)}</h2>
+            </div>
             {summary && <Progress accepted={summary.accepted} rejected={summary.rejected} total={summary.total} />}
             <div className="vr-filters" role="tablist">
               {FILTERS.map((f) => {
@@ -232,14 +288,20 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
             {visible.length === 0 && <p className="vr-empty">{filter === 'toReview' ? 'סיימתם את קו המשימות הזה! 🎉' : 'אין משפטים כאן.'}</p>}
             {sectionsOf(visible).map(({ section, items: rows }) => (
               <div key={section}>
-                <p className="vr-section" dir="ltr">{section}</p>
+                <p className="vr-section" dir="auto">{section}</p>
                 {rows.map((item) => {
                   const state = stateOf(item, decisions.get(item.clip_path))
                   return (
                     <button key={item.clip_path} className={`vr-row ${state}${item.clip_path === current?.clip_path ? ' selected' : ''}`}
                       onClick={() => setSelected(item.clip_path)}>
-                      <span className={`vr-dot ${state}`} aria-label={STATE_TEXT[state]} />
-                      <span className="vr-row-text"><strong>{item.speaker}</strong><span dir="auto">{item.on_screen_text}</span></span>
+                      <span className="vr-row-face">
+                        <Avatar name={item.speaker} url={faceUrl(speakerKeyOf(item))} size={32} />
+                        <span className={`vr-dot ${state}`} aria-label={STATE_TEXT[state]} />
+                      </span>
+                      <span className="vr-row-text">
+                        <strong>{item.speaker}<LineTags item={item} /></strong>
+                        <span dir="auto">{item.on_screen_text}</span>
+                      </span>
                     </button>
                   )
                 })}
@@ -249,10 +311,23 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
         </section>
 
         {current
-          ? <LineCard key={current.clip_path} item={current} decision={decisions.get(current.clip_path)} onDecide={decide} onNext={goNext} />
+          ? <LineCard key={current.clip_path} item={current} decision={decisions.get(current.clip_path)} onDecide={decide} onNext={goNext}
+              people={people} faceUrl={faceUrl(speakerKeyOf(current))} showQuestline={mode === 'character'} />
           : <section className="vr-detail vr-empty">בחרו משפט מהרשימה.</section>}
       </div>
     </div>
+  )
+}
+
+/** Small labels for lines that are not a plain dialogue node, and for the girl version. */
+function LineTags({ item }: { item: VoiceItem }) {
+  const source = item.source ? SOURCE_LABEL[item.source] : undefined
+  if (!source && item.variant !== 'girl') return null
+  return (
+    <>
+      {source && <span className="vr-tag">{source}</span>}
+      {item.variant === 'girl' && <span className="vr-tag girl">גרסה לבת</span>}
+    </>
   )
 }
 
@@ -265,12 +340,16 @@ function Progress({ accepted, rejected, total }: { accepted: number; rejected: n
   )
 }
 
-function LineCard({ item, decision, onDecide, onNext }: {
+function LineCard({ item, decision, onDecide, onNext, people, faceUrl, showQuestline }: {
   item: VoiceItem
   decision: VoiceDecision | undefined
   onDecide: (item: VoiceItem, status: ReviewStatus, change?: { tags?: string[]; note?: string }) => Promise<void>
   onNext: () => VoiceItem | null
+  people: People
+  faceUrl?: string
+  showQuestline: boolean
 }) {
+  const character = people.speakers.get(speakerKeyOf(item))
   const state = stateOf(item, decision)
   const onThisTake = decision?.take_hash === item.take_hash
   const [urls, setUrls] = useState<Map<string, string>>(new Map())
@@ -342,10 +421,33 @@ function LineCard({ item, decision, onDecide, onNext }: {
     <section className="vr-detail">
       <div className="vr-card vr-line">
         <div className="vr-line-head">
-          <div><strong className="vr-speaker">{item.speaker}</strong><small dir="ltr">{item.voice_name}</small></div>
+          <Avatar name={item.speaker} url={faceUrl} size={72} />
+          <div className="vr-who">
+            <strong className="vr-speaker">{item.speaker}</strong>
+            {character && character.display_name !== item.speaker && <small dir="auto">{character.display_name}</small>}
+            <small dir="ltr">{item.voice_name}</small>
+            <span className="vr-who-tags">
+              <LineTags item={item} />
+              {showQuestline && <span className="vr-tag" dir="auto">{groupTitle(item.group_key, people)}</span>}
+            </span>
+          </div>
           <span className={`vr-badge ${state}`}>{STATE_TEXT[state]}</span>
         </div>
-        {state === 'newTake' && <p className="vr-hint">יש הקלטה חדשה למשפט הזה מאז הבדיקה הקודמת. הקשיבו שוב.</p>}
+        {character?.brief && <p className="vr-brief" dir="ltr">{character.brief}</p>}
+        {state === 'newTake' && (
+          <p className="vr-hint">
+            יש הקלטה חדשה למשפט הזה מאז הבדיקה הקודמת. הקשיבו שוב.
+            {decision?.status === 'rejected' && (
+              <>
+                <br />
+                <b>בפעם הקודמת סומן "לא טוב"</b>
+                {decision.tags.length > 0 && ` · ${decision.tags.map(reasonLabel).join(' · ')}`}
+                {decision.note && <> · <span dir="auto">{decision.note}</span></>}
+                {' '}— בדקו אם זה תוקן.
+              </>
+            )}
+          </p>
+        )}
         <p className="vr-script" dir="auto">{item.on_screen_text}</p>
         {item.tts_text && item.tts_text !== item.on_screen_text.replace(/\n/g, ' ').trim() && (
           <p className="vr-tts"><span>מה שנשלח להקלטה:</span> <span dir="auto">{item.tts_text}</span></p>
