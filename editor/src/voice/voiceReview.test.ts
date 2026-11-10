@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { buildDecision, groupTitle, nextToReview, sectionsOf, stateOf, summarizeGroups, type VoiceDecision, type VoiceItem } from './voiceReview'
+import {
+  buildDecision, faceOf, groupTitle, itemsOfGroup, nextToReview, sectionsOf, speakerTitle, stateOf, summarizeGroups,
+  type People, type VoiceDecision, type VoiceItem,
+} from './voiceReview'
 
 const item = (n: number, group = 'articles_a_an', section = 'Quest 1 · start'): VoiceItem => ({
   clip_path: `clip_${group}_${n}.mp3`, group_key: group, section, position: n, speaker: 'Nemo', voice_name: 'EK - Nemo',
@@ -52,5 +55,27 @@ describe('voice review', () => {
     expect(sectionsOf(items.slice(1)).map((s) => s.section)).toEqual(['Quest 1 · start', 'Quest 1 · finish'])
     expect(groupTitle('the_royal_impostor')).toBe('The royal impostor')
     expect(groupTitle('Legacy/Level1')).toBe('Legacy · Level1')
+  })
+
+  it('groups by character, quest line by quest line, with the Hebrew titles and faces from the sync', () => {
+    const people: People = {
+      speakers: new Map([['Nemo the Netless', { speaker_key: 'Nemo the Netless', display_name: 'נמו', voice_name: '', brief: '', image_path: 'portraits/n.jpg' }]]),
+      groups: new Map([
+        ['wh_questions', { group_key: 'wh_questions', title: 'שאלות מידע', sort_order: 1, speaker_key: 'Nemo the Netless' }],
+        ['articles_a_an', { group_key: 'articles_a_an', title: 'A / An', sort_order: 0, speaker_key: 'Maya' }],
+      ]),
+    }
+    const nemo = (n: number, group: string): VoiceItem => ({ ...item(n, group), speaker_key: 'Nemo the Netless' })
+    const items = [nemo(1, 'wh_questions'), nemo(0, 'articles_a_an'), { ...item(2, 'articles_a_an'), speaker: 'Maya', speaker_key: 'Maya' }]
+
+    // Quest lines follow the sync's order, not the alphabet.
+    expect(summarizeGroups(items, new Map(), 'questline', people).map((g) => g.key)).toEqual(['articles_a_an', 'wh_questions'])
+    // Characters: most lines first; a character's lines are sectioned by quest line title.
+    expect(summarizeGroups(items, new Map(), 'character', people).map((g) => [g.key, g.total])).toEqual([['Nemo the Netless', 2], ['Maya', 1]])
+    expect(itemsOfGroup(items, 'Nemo the Netless', 'character', people).map((i) => i.section)).toEqual(['A / An', 'שאלות מידע'])
+    expect(groupTitle('wh_questions', people)).toBe('שאלות מידע')
+    expect(speakerTitle('Nemo the Netless', people)).toBe('נמו')
+    expect(faceOf('wh_questions', 'questline', people)).toBe('Nemo the Netless')
+    expect(faceOf('Maya', 'character', people)).toBe('Maya')
   })
 })

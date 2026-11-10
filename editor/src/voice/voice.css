@@ -70,12 +70,20 @@ kbd { font-family: ui-monospace, Consolas, monospace; font-size: 11px; border: 1
 
 .vr-groups { display: grid; gap: 6px; position: sticky; top: 80px; max-height: calc(100vh - 100px); overflow: auto; padding-bottom: 8px; }
 .vr-eyebrow { margin: 0 4px 4px; font-size: 12px; font-weight: 700; color: var(--ink-soft); letter-spacing: 0.02em; }
-.vr-groups button { text-align: start; border: 1px solid transparent; background: transparent; border-radius: 12px; padding: 10px 12px; display: grid; grid-template-columns: 1fr auto; gap: 6px 8px; }
+.vr-groups button { text-align: start; border: 1px solid transparent; background: transparent; border-radius: 12px; padding: 10px 12px; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 6px 10px; }
 .vr-groups button:hover { background: var(--paper); border-color: var(--line); }
 .vr-groups button.active { background: var(--paper); border-color: var(--purple); box-shadow: var(--shadow); }
 .vr-group-name { font-weight: 600; font-size: 14px; text-align: right; }
 .vr-group-count { font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
-.vr-groups .vr-progress { grid-column: 1 / -1; }
+.vr-groups .vr-progress { grid-column: 2 / -1; }
+.vr-mode { display: grid; grid-template-columns: 1fr 1fr; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 4px; gap: 4px; margin-bottom: 6px; }
+.vr-groups .vr-mode button { display: block; text-align: center; padding: 8px 6px; font-size: 13px; font-weight: 600; color: var(--ink-soft); border-radius: 9px; }
+.vr-groups .vr-mode button.active { background: var(--purple); color: #fff; border-color: var(--purple); box-shadow: none; }
+
+/* Faces */
+.vr-avatar { flex: none; display: inline-grid; place-items: center; border-radius: 50%; object-fit: cover; object-position: center 35%; color: #fff; font-weight: 700; background: var(--line); box-shadow: 0 0 0 2px var(--paper), 0 2px 8px rgba(26, 46, 87, 0.12); }
+.vr-tag { display: inline-block; margin-inline-start: 6px; padding: 1px 8px; border-radius: 999px; background: var(--purple-soft); color: #4c40c9; font-size: 11px; font-weight: 600; vertical-align: 1px; }
+.vr-tag.girl { background: #ffe9f3; color: #b0306e; }
 
 .vr-progress { display: flex; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
 .vr-progress i { display: block; height: 100%; }
@@ -84,7 +92,8 @@ kbd { font-family: ui-monospace, Consolas, monospace; font-size: 11px; border: 1
 
 .vr-list { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; position: sticky; top: 80px; max-height: calc(100vh - 100px); display: flex; flex-direction: column; }
 .vr-list-head { padding: 14px 14px 10px; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
-.vr-list-head h2 { margin: 0; font-size: 18px; text-align: right; }
+.vr-list-title { display: flex; align-items: center; gap: 12px; }
+.vr-list-head h2 { margin: 0; font-size: 18px; text-align: start; }
 .vr-filters { display: flex; flex-wrap: wrap; gap: 6px; }
 .vr-filters button { border: 1px solid var(--line); background: var(--canvas); border-radius: 999px; padding: 5px 11px; font-size: 13px; font-weight: 600; color: var(--ink-soft); }
 .vr-filters button b { font-weight: 700; margin-inline-start: 2px; }
@@ -96,7 +105,9 @@ kbd { font-family: ui-monospace, Consolas, monospace; font-size: 11px; border: 1
 .vr-row.selected { background: var(--purple-soft); border-color: #d6d1ff; }
 .vr-row-text { display: grid; gap: 2px; min-width: 0; }
 .vr-row-text strong { font-size: 12px; color: var(--ink-soft); }
-.vr-row-text span { font-size: 14px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.vr-row-face { position: relative; flex: none; }
+.vr-row-face .vr-dot { position: absolute; inset-inline-end: -3px; bottom: -2px; margin: 0; box-shadow: 0 0 0 2px var(--paper); background: var(--paper); }
+.vr-row-text > span { font-size: 14px; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .vr-dot { flex: none; width: 12px; height: 12px; border-radius: 50%; margin-top: 4px; border: 2px solid #b6c0d2; }
 .vr-dot.accepted { background: var(--mint); border-color: var(--mint); }
 .vr-dot.rejected { background: var(--danger); border-color: var(--danger); }
@@ -106,9 +117,13 @@ kbd { font-family: ui-monospace, Consolas, monospace; font-size: 11px; border: 1
 /* The line being reviewed */
 .vr-detail { display: grid; gap: 10px; }
 .vr-line { max-width: 760px; display: grid; gap: 16px; }
-.vr-line-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-.vr-speaker { font-size: 20px; display: block; }
+.vr-line-head { display: flex; align-items: center; gap: 16px; }
+.vr-who { flex: 1; display: grid; gap: 2px; min-width: 0; }
+.vr-who-tags .vr-tag:first-child { margin-inline-start: 0; }
+.vr-speaker { font-size: 22px; display: block; }
 .vr-line-head small { color: var(--ink-soft); font-size: 13px; }
+.vr-line-head .vr-badge { align-self: flex-start; }
+.vr-brief { margin: -6px 0 0; font-size: 13px; color: var(--ink-soft); background: var(--canvas); border-radius: 10px; padding: 8px 12px; }
 .vr-badge { border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 700; background: var(--canvas); color: var(--ink-soft); white-space: nowrap; }
 .vr-badge.accepted { background: var(--mint-soft); color: #0f7a68; }
 .vr-badge.rejected { background: var(--danger-soft); color: #b3343c; }
