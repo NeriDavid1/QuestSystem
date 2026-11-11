@@ -19,6 +19,7 @@ export interface VoiceItem {
   source?: LineSource | string
   variant?: string                  // 'girl' = the take a girl player hears
   speaker_key?: string              // voice_review_speakers.speaker_key
+  voice_key?: string                // voice_review_voices.voice_key: whose voice says it
   group_key: string
   section: string
   position: number
@@ -29,6 +30,41 @@ export interface VoiceItem {
   take_hash: string
   audio_path: string
   alternate_audio_path: string | null
+}
+
+/** A take made on the page with the character's own ElevenLabs voice (voice_review_takes). */
+export interface VoiceTake {
+  id: string
+  clip_path: string
+  voice_key: string
+  text: string
+  audio_path: string
+  characters: number
+  status: 'new' | 'chosen' | 'discarded'
+  creator_name: string
+  created_at: string
+  chosen_by_name: string
+  imported_at: string | null
+}
+
+/** A cast voice as Unity's generators use it (voice_review_voices); fx is added in Unity, not on web takes. */
+export interface VoiceSetup {
+  voice_key: string
+  voice_name: string
+  fx: string | null
+  approved: boolean
+}
+
+/** Takes of one line that are still on the page (not discarded, not yet in Unity), newest first. */
+export function takesOf(takes: VoiceTake[], clipPath: string): VoiceTake[] {
+  return takes
+    .filter((take) => take.clip_path === clipPath && take.status !== 'discarded' && !take.imported_at)
+    .sort((a, b) => b.created_at.localeCompare(a.created_at))
+}
+
+/** How many lines have a chosen take waiting for the next sync into Unity. */
+export function chosenCount(takes: VoiceTake[]): number {
+  return new Set(takes.filter((take) => take.status === 'chosen' && !take.imported_at).map((take) => take.clip_path)).size
 }
 
 export interface VoiceSpeaker {

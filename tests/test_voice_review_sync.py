@@ -27,10 +27,26 @@ def node_asset(next_guids):
 
 
 class FakeDb:
-    def __init__(self, items=None, decisions=None):
+    def __init__(self, items=None, decisions=None, takes=None, objects=None):
         self.tables = {"voice_review_items": list(items or []), "voice_review_decisions": list(decisions or []),
-                       "voice_review_speakers": [], "voice_review_groups": []}
-        self.uploads, self.removed, self.deleted = [], [], []
+                       "voice_review_speakers": [], "voice_review_groups": [], "voice_review_voices": [],
+                       "voice_review_takes": list(takes or [])}
+        self.objects = dict(objects or {})
+        self.uploads, self.removed, self.deleted, self.calls = [], [], [], []
+
+    def select_where(self, table, query):
+        assert table == "voice_review_takes" and "status=eq.chosen" in query
+        return [dict(t) for t in self.tables[table] if t["status"] == "chosen" and not t.get("imported_at")]
+
+    def rpc(self, name, args):
+        self.calls.append((name, args))
+        if name == "voice_review_mark_imported":
+            for take in self.tables["voice_review_takes"]:
+                if take["id"] in args["p_takes"]:
+                    take["imported_at"] = "now"
+
+    def download(self, path):
+        return self.objects[path]
 
     def select_all(self, table, columns, key="clip_path"):
         return [dict(r) for r in self.tables[table]]
@@ -207,6 +223,67 @@ class VoiceReviewSyncTests(unittest.TestCase):
         self.assertIn({"speaker_key": "Mia the Baker", "display_name": "מיה האופה (Mia the Baker)"},
                       [{k: s[k] for k in ("speaker_key", "display_name")} for s in speakers])
         self.assertEqual([g["group_key"] for g in groups], ["abc_valley", "line", "ambient"])
+
+    def test_each_line_knows_its_voice_and_the_voices_are_listed(self):
+        tools = self.root / "Tools" / "voice"
+        (tools / "voice_cast.json").write_text(json.dumps({
+            "defaults": {"model_id": "eleven_v4", "language_code": "he", "output_format": "mp3_44100_128", "seed": None,
+                         "voice_settings": {"stability": 0.5}, "pronunciation_dictionaries": []},
+            "speakers": {"Nemo": {"voice_name": "EK - Nemo", "voice_id": "v_nemo", "approved": True,
+                                  "voice_settings": {"style": 0.2}, "fx": "atempo=1.1", "aliases": ["Bobby"]},
+                         "Draft": {"voice_name": "EK - Draft"}}}), encoding="utf-8")
+        items = self.project.load_items()
+        self.assertEqual({i.voice_key for i in items}, {"Nemo"})
+        self.assertEqual(sync.VoiceCast({"speakers": {"Nemo": {"aliases": ["Bobby"]}}}).voice_key_for("Bobby"), "Nemo")
+        voices = {v["voice_key"]: v for v in self.project.voices()}
+        self.assertEqual(voices["Nemo"]["request"], {
+            "voice_id": "v_nemo", "model_id": "eleven_v4", "language_code": "he", "output_format": "mp3_44100_128",
+            "seed": None, "voice_settings": {"stability": 0.5, "style": 0.2}, "pronunciation_dictionaries": []})
+        self.assertEqual((voices["Nemo"]["fx"], voices["Nemo"]["approved"]), ("atempo=1.1", True))
+        self.assertFalse(voices["Draft"]["approved"])
+
+    def test_a_chosen_web_take_goes_into_the_project(self):
+        tools = self.root / "Tools" / "voice"
+        cast = {"defaults": {"model_id": "eleven_v4", "language_code": "he", "output_format": "mp3_44100_128",
+                             "seed": None, "voice_settings": {"stability": 0.5}, "pronunciation_dictionaries": []},
+                "speakers": {"Nemo": {"voice_name": "EK - Nemo", "voice_id": "v_nemo", "approved": True}}}
+        (tools / "voice_cast.json").write_text(json.dumps(cast), encoding="utf-8")
+        # The script keeps its exact format (BOM, quoting, CRLF rows, LF inside a field).
+        csv_path = tools / "voice_script.csv"
+        csv_path.write_bytes(csv_path.read_bytes().replace(b"\r\n", b"\n").replace(b"\n", b"\r\n").replace(
+            "שלום Dialogue_line_q01_s01".encode(), "שלום\nשורה".encode(), 1))
+        before = csv_path.read_bytes()
+
+        clip = self.clip("Dialogue_line_q01_start")
+        new_text = "שָׁלוֹם Dialogue_line_q01_start"
+        request = {**self.project.voices()[0]["request"], "text": new_text}
+        take = {"id": "1234abcd-0000-0000-0000-000000000000", "clip_path": clip, "voice_key": "Nemo", "text": new_text,
+                "request": request, "audio_path": "takes/x/1.mp3", "status": "chosen", "creator_name": "guide@x",
+                "chosen_by_name": "guide@x", "imported_at": None}
+        db = FakeDb(takes=[take], objects={"takes/x/1.mp3": b"NEW AUDIO"})
+        sync.sync(self.project, db, dry_run=False, skip_audio=False, log=lambda *_: None)
+
+        self.assertEqual((self.root / clip).read_bytes(), b"NEW AUDIO")  # no generator in this project: raw
+        self.assertEqual((tools / "raw" / clip).read_bytes(), b"NEW AUDIO")
+        lock = json.loads((tools / "generated.lock.json").read_text(encoding="utf-8"))[clip]
+        expected_hash = sync.request_hash(self.project.resolve_request(cast, cast["speakers"]["Nemo"], new_text))
+        self.assertEqual((lock["hash"], lock["tts_text"], lock["web_take"]), (expected_hash, new_text, take["id"]))
+        decision = json.loads(self.project.review_file.read_text(encoding="utf-8"))[clip]
+        self.assertEqual((decision["status"], decision["take_hash"]), ("accepted", expected_hash))
+        self.assertEqual(db.calls, [("voice_review_mark_imported", {"p_takes": [take["id"]]})])
+        # The edited text is in the script, and nothing else in the file changed.
+        after = csv_path.read_bytes()
+        self.assertEqual(after.replace(new_text.encode(), "שלום Dialogue_line_q01_start".encode()), before)
+        # The web lists the new audio (new path although the request hash may repeat), and the decision.
+        row = next(r for r in db.tables["voice_review_items"] if r["clip_path"] == clip)
+        self.assertTrue(row["audio_path"].endswith(f"{expected_hash}-1234abcd.mp3"))
+        self.assertIn(row["audio_path"], db.uploads)
+        self.assertEqual(next(d for d in db.tables["voice_review_decisions"] if d["clip_path"] == clip)["status"], "accepted")
+
+        # Imported once only.
+        db.uploads.clear()
+        sync.sync(self.project, db, dry_run=False, skip_audio=False, log=lambda *_: None)
+        self.assertEqual(len(db.calls), 1)
 
     def test_character_of_a_line(self):
         cast = sync.VoiceCast({"speakers": {

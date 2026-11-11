@@ -10,6 +10,10 @@ One command does both directions:
   (``cutscene_lines.json``) and townsfolk (``ambient_lines.json``). Who says each line and which
   quest line it belongs to go to ``voice_review_speakers`` / ``voice_review_groups``, with a
   picture of each character (QuestSystem's NPC registry, or Unity's rendered NPC portraits).
+* **Web takes into Unity:** a take a guide made and chose on the page (voice_review_takes) is
+  normalised like the generators do (raw/ kept), written over the clip, recorded in
+  ``generated.lock.json`` (so the generators see it as up to date) and accepted in the review file.
+  An edited text is written back to the line's script (voice_script.csv, *_lines.json).
 * **Decisions, both ways:** ``voice_review_decisions`` and ``Tools/voice/voice_review.json``
   are merged per clip; the newer decision wins. The review file keeps the exact format
   Unity's Audio Review window writes (field order, sorted keys, line endings, no BOM),
@@ -92,9 +96,12 @@ class VoiceItem:
     source: str = SOURCE
     variant: str = ""
     speaker_key: str = ""
+    voice_key: str = ""     # the voice_cast.json voice that says it (generated.lock.json "speaker")
+    take_tag: str = ""      # set when the clip is a take made on the web: same request, new audio
 
     def audio_path(self) -> str:
-        return f"{self.source}/{path_id(self.clip_path)}/{self.take_hash}{Path(self.clip_path).suffix.lower()}"
+        tag = f"-{self.take_tag}" if self.take_tag else ""
+        return f"{self.source}/{path_id(self.clip_path)}/{self.take_hash}{tag}{Path(self.clip_path).suffix.lower()}"
 
     def row(self, alternate_audio_path: str | None) -> dict[str, Any]:
         return {
@@ -102,6 +109,7 @@ class VoiceItem:
             "source": self.source,
             "variant": self.variant,
             "speaker_key": self.speaker_key,
+            "voice_key": self.voice_key,
             "group_key": self.group_key,
             "section": self.section,
             "position": self.position,
@@ -247,6 +255,69 @@ def questline_info(group_key: str) -> tuple[str, str]:
     return clean(title), clean(npc)
 
 
+def web_take_tag(lock_entry: dict[str, Any] | None) -> str:
+    return str((lock_entry or {}).get("web_take") or "")[:8]
+
+
+def request_hash(req: dict[str, Any]) -> str:
+    """generate_dialogue_voices.request_hash: the lock file's take id."""
+    return hashlib.sha1(json.dumps(req, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()[:16]
+
+
+def rewrite_csv_text(path: Path, clip_path: str, text: str) -> bool:
+    """Set tts_text of one row, keeping the file byte for byte otherwise (BOM, quoting, line endings)."""
+    if not path.exists():
+        return False
+    raw = path.read_bytes()
+    bom = raw.startswith(b"\xef\xbb\xbf")
+    content = raw.decode("utf-8-sig")
+    rows = list(csv.reader(io.StringIO(content, newline="")))
+    terminator = "\r\n" if "\r\n" in content else "\n"
+
+    def write(table: list[list[str]]) -> str:
+        out = io.StringIO(newline="")
+        csv.writer(out, quoting=csv.QUOTE_ALL, lineterminator=terminator).writerows(table)
+        return out.getvalue()
+
+    if write(rows) != content or not rows:
+        return False  # not a format this can rewrite safely
+    header = rows[0]
+    if "clip_path" not in header or "tts_text" not in header:
+        return False
+    clip_col, text_col = header.index("clip_path"), header.index("tts_text")
+    hit = False
+    for row in rows[1:]:
+        if len(row) > text_col and row[clip_col] == clip_path:
+            row[text_col] = text
+            hit = True
+    if hit:
+        path.write_bytes((b"\xef\xbb\xbf" if bom else b"") + write(rows).encode("utf-8"))
+    return hit
+
+
+def rewrite_json_text(path: Path, line_id: str, text: str) -> bool:
+    """Set tts_text of one line in a *_lines.json, written the way the generators write it."""
+    if not path.exists():
+        return False
+    content = path.read_bytes().decode("utf-8")
+    data = json.loads(content)
+    newline = "\r\n" if "\r\n" in content else "\n"
+    dump = lambda d: (json.dumps(d, ensure_ascii=False, indent=2) + "\n").replace("\n", newline)
+    line = next((l for l in data.get("lines") or [] if l.get("id") == line_id), None)
+    if line is None:
+        return False
+    if dump(data) == content:
+        line["tts_text"] = text
+        path.write_bytes(dump(data).encode("utf-8"))
+        return True
+    # Written by another tool (Unity's exporters): change only that one value, in place.
+    old = f'"tts_text": {json.dumps(line.get("tts_text", ""), ensure_ascii=False)}'
+    if "tts_text" not in line or content.count(old) != 1:
+        return False
+    path.write_bytes(content.replace(old, f'"tts_text": {json.dumps(text, ensure_ascii=False)}').encode("utf-8"))
+    return True
+
+
 def is_hebrew(text: str) -> bool:
     return bool(HEBREW_RE.search(text or ""))
 
@@ -289,6 +360,13 @@ class VoiceCast:
             return speaker
         alias_of = self.owner.get(speaker)
         return alias_of if alias_of and is_hebrew(speaker) else speaker
+
+    def voice_key_for(self, speaker: str, node_path: str = "") -> str:
+        """The cast entry whose voice says the line (an alias always borrows its owner's voice)."""
+        owner = self._node_owner(node_path)
+        if owner is not None:
+            return owner
+        return speaker if speaker in self.speakers else self.owner.get(speaker, "")
 
     def display_name(self, key: str) -> str:
         """Hebrew name the guide knows the character by, when the cast key is English."""
@@ -363,6 +441,8 @@ class UnityProject:
                 legacy_clip=row.get("legacy_clip", "") if group != HINTS_GROUP and not variant else "",
                 variant=variant,
                 speaker_key=cast.character_for(speaker, row["node_path"]),
+                voice_key=cast.voice_key_for((self.lock.get(clip) or {}).get("speaker") or speaker, row["node_path"]),
+                take_tag=web_take_tag(self.lock.get(clip)),
             )
 
         by_group: dict[str, list[VoiceItem]] = {}
@@ -459,10 +539,74 @@ class UnityProject:
                     on_screen_text=text,
                     tts_text=entry.get("tts_text") or line.get("tts_text") or text,
                     take_hash=take, node_path="", source=source, variant=variant, speaker_key=key,
+                    voice_key=cast.voice_key_for(entry.get("speaker") or speaker),
+                    take_tag=web_take_tag(entry),
                 ))
         return items
 
     # ---- Faces and titles ----------------------------------------------------------------------
+
+    def generator(self) -> Any:
+        """Tools/voice/generate_dialogue_voices.py of this project: the one place requests, hashes and
+        loudness are defined. None when the project does not have it."""
+        if not hasattr(self, "_generator"):
+            script = self.tools / "generate_dialogue_voices.py"
+            self._generator = None
+            if script.exists():
+                import importlib.util
+                spec = importlib.util.spec_from_file_location("ek_generate_dialogue_voices", script)
+                module = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(module)
+                self._generator = module
+        return self._generator
+
+    def cast_data(self) -> dict[str, Any]:
+        return read_json(self.tools / "voice_cast.json") or {"defaults": {}, "speakers": {}}
+
+    def resolve_request(self, cast: dict[str, Any], entry: dict[str, Any], text: str) -> dict[str, Any]:
+        generator = self.generator()
+        if generator is not None:
+            return generator.resolve_request(cast, entry, text)
+        d = cast.get("defaults") or {}
+        return {  # same as generate_dialogue_voices.resolve_request
+            "voice_id": entry.get("voice_id"),
+            "model_id": entry.get("model_id", d.get("model_id")),
+            "language_code": entry.get("language_code", d.get("language_code")),
+            "output_format": d.get("output_format"),
+            "seed": entry.get("seed", d.get("seed")),
+            "voice_settings": {**(d.get("voice_settings") or {}), **(entry.get("voice_settings") or {})},
+            "pronunciation_dictionaries": entry.get("pronunciation_dictionaries", d.get("pronunciation_dictionaries", [])),
+            "fx": entry.get("fx"),
+            "text": text,
+        }
+
+    def voices(self) -> list[dict[str, Any]]:
+        """voice_review_voices rows: each cast voice as the generators send it, without the text."""
+        cast = self.cast_data()
+        rows = []
+        for key, entry in (cast.get("speakers") or {}).items():
+            request = self.resolve_request(cast, entry, "") if entry.get("voice_id") else {}
+            fx = request.pop("fx", None)
+            request.pop("text", None)
+            rows.append({"voice_key": key, "voice_name": entry.get("voice_name") or "", "request": request,
+                         "fx": fx or None, "approved": bool(entry.get("approved") and entry.get("voice_id"))})
+        return rows
+
+    def set_script_text(self, item: "VoiceItem", text: str) -> str | None:
+        """Write an edited text back where the generator reads it. Returns the file name, or None when
+        the line has no text of its own in a script (girl takes of bubbles, cutscenes and townsfolk)."""
+        if item.source == SOURCE:
+            name = "girl_script.csv" if item.variant else "voice_script.csv"
+            return name if rewrite_csv_text(self.tools / name, item.clip_path, text) else None
+        if item.variant:
+            return None
+        files = {"bubble": ["bubble_lines.json", "farm_bubble_lines.json", "farm_answer_lines.json"],
+                 "cutscene": ["cutscene_lines.json"], "ambient": ["ambient_lines.json"]}.get(item.source, [])
+        line_id = Path(item.clip_path).stem
+        for name in files:
+            if rewrite_json_text(self.tools / name, line_id, text):
+                return name
+        return None
 
     def catalog_entries(self) -> list[tuple[str, str, str]]:
         """(npc id, Hebrew display name, sprite guid) from Unity's NPC portrait catalog."""
@@ -751,6 +895,24 @@ class Supabase:
             self._request("POST", f"/rest/v1/{table}?on_conflict={key}", rows[start:start + 200],
                           {"Prefer": "resolution=merge-duplicates,return=minimal"})
 
+    def select_where(self, table: str, query: str) -> list[dict[str, Any]]:
+        return self._request("GET", f"/rest/v1/{table}?{query}") or []
+
+    def rpc(self, name: str, args: dict[str, Any]) -> Any:
+        return self._request("POST", f"/rest/v1/rpc/{name}", args)
+
+    def download(self, object_path: str) -> bytes:
+        request = urllib.request.Request(
+            f"{self.url}/storage/v1/object/authenticated/{BUCKET}/{urllib.parse.quote(object_path)}")
+        request.add_header("apikey", self.anon_key)
+        request.add_header("Authorization", f"Bearer {self.token}")
+        try:
+            with urllib.request.urlopen(request, timeout=120) as response:
+                return response.read()
+        except urllib.error.HTTPError as error:
+            raise SystemExit(f"Supabase download {object_path} failed ({error.code}): "
+                             f"{error.read().decode('utf-8', errors='replace')[:300]}")
+
     def delete_items(self, clips: list[str]) -> None:
         for start in range(0, len(clips), 50):
             quoted = ",".join('"' + c.replace("\\", "\\\\").replace('"', '\\"') + '"' for c in clips[start:start + 50])
@@ -785,8 +947,95 @@ def upload_all(db: Supabase, uploads: list[tuple[str, Path | bytes]], log=print)
                 log(f"  uploaded {done}/{len(uploads)}")
 
 
-def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: bool, log=print) -> None:
+REQUEST_FIELDS = ("voice_id", "model_id", "language_code", "output_format", "seed", "voice_settings",
+                  "pronunciation_dictionaries")
+
+
+def import_takes(project: UnityProject, db: Supabase, items: list[VoiceItem], dry_run: bool, log=print) -> int:
+    """Bring the takes guides chose on the page into the Unity project. Returns how many were imported."""
+    takes = db.select_where("voice_review_takes", "select=*&status=eq.chosen&imported_at=is.null&order=chosen_at")
+    if not takes:
+        return 0
+    log(f"Web takes chosen by guides: {len(takes)} to bring into the Unity project.")
+    by_clip = {item.clip_path: item for item in items}
+    if dry_run:
+        for take in takes:
+            log(f"  web take -> Unity  {Path(take['clip_path']).name}  ({take['voice_key']}: {take['text'][:60]})")
+        return 0
+
+    generator = project.generator()
+    if generator is None:
+        log("  WARNING: Tools/voice/generate_dialogue_voices.py was not found; clips are written without loudness "
+            "normalisation.")
+    cast = project.cast_data()
+    lock = read_json(project.tools / "generated.lock.json") or {}
+    review = ReviewFile.load(project.review_file)
+    now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    imported = []
+    for take in takes:
+        clip = take["clip_path"]
+        item = by_clip.get(clip)
+        entry = (cast.get("speakers") or {}).get(take["voice_key"])
+        if entry is None:
+            log(f"  skipped {Path(clip).name}: voice '{take['voice_key']}' is no longer in voice_cast.json")
+            continue
+        req = project.resolve_request(cast, entry, take["text"])
+        sent = take.get("request") or {}
+        if any(sent.get(k) != req.get(k) for k in REQUEST_FIELDS):
+            log(f"  note {Path(clip).name}: the voice settings changed since this take was made; "
+                "the generators may redo it")
+            req = {**{k: sent.get(k) for k in REQUEST_FIELDS}, "fx": req.get("fx"), "text": take["text"]}
+
+        raw = db.download(take["audio_path"])
+        raw_path = project.tools / "raw" / clip  # generate_dialogue_voices.RAW: untouched ElevenLabs output
+        raw_path.parent.mkdir(parents=True, exist_ok=True)
+        raw_path.write_bytes(raw)
+        if generator is not None:
+            generator.normalize(raw, project.path(clip), cast.get("normalize"), req.get("fx"))
+        else:
+            project.path(clip).write_bytes(raw)
+
+        script = None
+        if item is not None and take["text"] != item.tts_text:
+            script = project.set_script_text(item, take["text"])
+        take_hash = request_hash(req)
+        lock[clip] = {
+            "hash": take_hash,
+            "speaker": take["voice_key"],
+            "voice_id": req["voice_id"],
+            "tts_text": take["text"],
+            "generated_at": now,
+            "web_take": take["id"],
+        }
+        entry_before = review.entries.get(clip, {})
+        review.entries[clip] = {**entry_before,
+                                "status": "accepted",
+                                "tags": [],
+                                "note": f"New take made on the review page by {take.get('creator_name') or 'a guide'}"
+                                        + (f", chosen by {take['chosen_by_name']}" if take.get("chosen_by_name") else ""),
+                                "take_hash": take_hash,
+                                "speaker": (item.speaker if item else entry_before.get("speaker", "")),
+                                "text": take["text"],
+                                "reviewed_at": now}
+        imported.append(take["id"])
+        log(f"  web take -> Unity  {clip}" + (f"  (text saved in {script})" if script else ""))
+
+    if imported:
+        if generator is not None:
+            generator.save_lock(lock)
+        else:
+            (project.tools / "generated.lock.json").write_text(
+                json.dumps(dict(sorted(lock.items())), ensure_ascii=False, indent=1), encoding="utf-8")
+        review.save()
+        db.rpc("voice_review_mark_imported", {"p_takes": imported})
+    return len(imported)
+
+
+def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: bool, log=print,
+         import_web_takes: bool = True) -> None:
     items = project.load_items()
+    if db is not None and import_web_takes and import_takes(project, db, items, dry_run, log):
+        items = project.load_items()  # the imported clips have new takes
     review = ReviewFile.load(project.review_file)
     log(f"Unity project: {len(items)} lines with a take, {len(review.entries)} decisions in {project.review_file.name}.")
 
@@ -855,6 +1104,7 @@ def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: 
     upload_all(db, picture_uploads, log)
     db.upsert("voice_review_speakers", speakers, "speaker_key")
     db.upsert("voice_review_groups", groups, "group_key")
+    db.upsert("voice_review_voices", project.voices(), "voice_key")
     db.upsert("voice_review_items", rows)
     if removed:
         db.delete_items(removed)
@@ -865,7 +1115,8 @@ def sync(project: UnityProject, db: Supabase | None, dry_run: bool, skip_audio: 
     if plan.to_local:
         review.entries.update(plan.to_local)
         review.save()
-    log("Done. Unity's Audio Review window picks up the changes on its next reload.")
+    log("Done. Unity's Audio Review window picks up the changes on its next reload. "
+        "New takes from the page are already in the clips; for a legacy line, choose it in the Dialogue tab.")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -874,6 +1125,8 @@ def main(argv: list[str] | None = None) -> int:
                         help='Unity project folder (the one holding Assets and Tools), e.g. ".../English Kingdom"')
     parser.add_argument("--dry-run", action="store_true", help="show what would change, write nothing")
     parser.add_argument("--skip-audio", action="store_true", help="sync decisions only; do not upload new takes")
+    parser.add_argument("--no-import", action="store_true",
+                        help="do not bring takes chosen on the review page into the Unity project")
     args = parser.parse_args(argv)
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")  # Hebrew speaker names on a Windows console
@@ -881,7 +1134,7 @@ def main(argv: list[str] | None = None) -> int:
     project = UnityProject(args.project.expanduser().resolve())
     if not (project.root / "Assets").is_dir():
         parser.error(f"{project.root} is not a Unity project folder (no Assets folder).")
-    sync(project, Supabase.from_env(), args.dry_run, args.skip_audio)
+    sync(project, Supabase.from_env(), args.dry_run, args.skip_audio, import_web_takes=not args.no_import)
     return 0
 
 

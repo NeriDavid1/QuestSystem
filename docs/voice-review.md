@@ -43,6 +43,29 @@ voice_review.json  ◄───────────────────�
   so the generators (`--rejected`) and the voice-over skill treat guide reviews like their own.
 - When the same line was reviewed in both places, the newer decision wins.
 
+## New takes for lines that are not good
+
+On a line marked **not good**, the card shows *הקלטה חדשה בקול של …*: the guide presses one button and
+gets a new take in that character's own ElevenLabs voice. Nobody picks a voice: every line knows it
+(`voice_review_items.voice_key`, the voice `generated.lock.json` recorded), and every voice is sent exactly
+as Unity's generators send it (`voice_review_voices`, built with `generate_dialogue_voices.resolve_request`
+from `voice_cast.json`). The guide may fix the text first (niqqud, a word written as it sounds), make as many
+attempts as needed, and press **זו טובה** on the good one. The header counts the chosen takes waiting for Unity.
+
+- **The key.** Someone pastes the ElevenLabs key once (*🔑 מפתח ElevenLabs*). It is kept encrypted in Supabase
+  Vault and shared by every guide; browsers can only replace it and see its last four characters and the
+  credits left. Only the `voice-review-tts` edge function reads it.
+- **Into the game.** The next sync brings every chosen take into the Unity project: the raw take goes to
+  `Tools/voice/raw/`, the clip is written through the generator's own `normalize` (loudness and the speaker's
+  `fx`, e.g. Boo's echo, which web takes are heard without), `generated.lock.json` gets the request hash (so
+  the generators see it as up to date) and `web_take`, the review file marks it accepted, and an edited text
+  is written back to the line's script (`voice_script.csv`, `girl_script.csv` or `*_lines.json`). `--no-import`
+  skips this. A legacy line still needs *Use new take in game* in Unity's Dialogue tab.
+- Web takes cost credits like any generation; the edge function allows 10 takes a minute per guide.
+
+Deploy: `supabase/migrations/20261111120000_voice_review_regenerate.sql` and the edge function
+`supabase/functions/voice-review-tts` (JWT required).
+
 ## Setup (once)
 
 1. Apply `supabase/migrations/20260930120000_voice_review.sql` and
