@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
-  buildDecision, faceOf, groupTitle, itemsOfGroup, nextToReview, sectionsOf, speakerTitle, stateOf, summarizeGroups,
-  type People, type VoiceDecision, type VoiceItem,
+  buildDecision, chosenCount, faceOf, groupTitle, itemsOfGroup, nextToReview, sectionsOf, speakerTitle, stateOf, summarizeGroups, takesOf,
+  type People, type VoiceTake, type VoiceDecision, type VoiceItem,
 } from './voiceReview'
 
 const item = (n: number, group = 'articles_a_an', section = 'Quest 1 · start'): VoiceItem => ({
@@ -77,5 +77,17 @@ describe('voice review', () => {
     expect(speakerTitle('Nemo the Netless', people)).toBe('נמו')
     expect(faceOf('wh_questions', 'questline', people)).toBe('Nemo the Netless')
     expect(faceOf('Maya', 'character', people)).toBe('Maya')
+  })
+
+  it('lists the takes of a line newest first and counts lines waiting for Unity', () => {
+    const take = (id: string, clip: string, status: VoiceTake['status'], at: string, imported_at: string | null = null): VoiceTake => ({
+      id, clip_path: clip, voice_key: 'Nemo', text: 'x', audio_path: `takes/${id}.mp3`, characters: 1, status,
+      creator_name: 'g', created_at: at, chosen_by_name: '', imported_at,
+    })
+    const takes = [take('a', 'c1', 'new', '2026-11-11T10:00:00Z'), take('b', 'c1', 'chosen', '2026-11-11T11:00:00Z'),
+      take('c', 'c1', 'discarded', '2026-11-11T12:00:00Z'), take('d', 'c2', 'chosen', '2026-11-11T09:00:00Z', '2026-11-11T13:00:00Z')]
+    expect(takesOf(takes, 'c1').map((t) => t.id)).toEqual(['b', 'a'])
+    expect(takesOf(takes, 'c2')).toEqual([])  // already in Unity
+    expect(chosenCount(takes)).toBe(1)
   })
 })

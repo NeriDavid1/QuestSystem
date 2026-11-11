@@ -84,6 +84,10 @@ kbd { font-family: ui-monospace, Consolas, monospace; font-size: 11px; border: 1
 .vr-avatar { flex: none; display: inline-grid; place-items: center; border-radius: 50%; object-fit: cover; object-position: center 35%; color: #fff; font-weight: 700; background: var(--line); box-shadow: 0 0 0 2px var(--paper), 0 2px 8px rgba(26, 46, 87, 0.12); }
 .vr-tag { display: inline-block; margin-inline-start: 6px; padding: 1px 8px; border-radius: 999px; background: var(--purple-soft); color: #4c40c9; font-size: 11px; font-weight: 600; vertical-align: 1px; }
 .vr-tag.girl { background: #ffe9f3; color: #b0306e; }
+.vr-tag.boy { background: #e4f0ff; color: #1f5fa8; }
+.vr-audience { margin: -6px 0 0; font-size: 14px; font-weight: 600; border-radius: 10px; padding: 8px 12px; }
+.vr-audience.girl { background: #ffe9f3; color: #b0306e; }
+.vr-audience.boy { background: #e4f0ff; color: #1f5fa8; }
 
 .vr-progress { display: flex; height: 6px; border-radius: 99px; background: var(--line); overflow: hidden; }
 .vr-progress i { display: block; height: 100%; }
@@ -175,3 +179,28 @@ kbd { font-family: ui-monospace, Consolas, monospace; font-size: 11px; border: 1
   .vr-card { padding: 18px; }
   .vr-keys { display: none; }
 }
+
+/* New takes in the character's voice */
+.vr-chip.mint { background: var(--mint-soft); color: #0f7a68; }
+.vr-tag.mint { background: var(--mint-soft); color: #0f7a68; }
+.vr-key-button.missing { color: #b3343c; }
+.vr-newtakes { display: grid; gap: 10px; border: 1px solid #d6d1ff; background: #faf9ff; border-radius: 14px; padding: 14px; }
+.vr-newtakes-head { display: grid; gap: 2px; }
+.vr-newtakes-head small { color: var(--ink-soft); font-size: 13px; }
+.vr-reset { justify-self: start; padding: 0; }
+.vr-take { display: grid; gap: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.vr-take.chosen { border-color: var(--mint); box-shadow: 0 0 0 2px var(--mint-soft); }
+.vr-take-head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.vr-take-head small { color: var(--ink-soft); font-size: 12px; }
+.vr-take audio { width: 100%; height: 40px; }
+.vr-take-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.vr-take-actions .vr-button { padding: 8px 14px; font-size: 15px; }
+.vr-take-chosen { color: #0f7a68; font-weight: 700; font-size: 14px; }
+
+.vr-modal { position: fixed; inset: 0; background: rgba(16, 30, 61, 0.45); display: grid; place-items: center; padding: 16px; z-index: 50; }
+.vr-key { display: grid; gap: 12px; max-width: 460px; }
+.vr-key label { display: grid; gap: 6px; font-weight: 600; font-size: 14px; }
+.vr-key input { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; font-size: 16px; }
+.vr-key small { color: var(--ink-soft); }
+.vr-key-state { margin: 0; background: var(--canvas); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+.vr-key-state.ok { background: var(--mint-soft); color: #0f7a68; }

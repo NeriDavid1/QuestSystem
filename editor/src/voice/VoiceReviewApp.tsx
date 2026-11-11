@@ -2,11 +2,16 @@ import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } fro
 import type { User } from '@supabase/supabase-js'
 import { supabase } from '../lib/supabase'
 import { signIn, signOut, signUp } from '../lib/persistence'
-import { audioUrls, demoMode, loadDecisions, loadItems, loadPeople, pictureUrls, saveDecision } from './voiceData'
+import {
+  audioUrls, demoMode, keyStatus, loadDecisions, loadItems, loadPeople, loadTakes, loadVoices, makeTake, pictureUrls,
+  saveApiKey, saveDecision, setTakeStatus, type KeyStatus,
+} from './voiceData'
+import { AUDIENCE_HINT, AUDIENCE_TAG, audienceOf, boyLinesOf, type Audience } from './audience'
 import {
   REJECT_REASONS,
   SOURCE_LABEL,
   buildDecision,
+  chosenCount,
   faceOf,
   groupTitle,
   itemsOfGroup,
@@ -18,6 +23,7 @@ import {
   speakerTitle,
   stateOf,
   summarizeGroups,
+  takesOf,
   type Filter,
   type GroupMode,
   type ItemState,
@@ -25,6 +31,8 @@ import {
   type ReviewStatus,
   type VoiceDecision,
   type VoiceItem,
+  type VoiceSetup,
+  type VoiceTake,
 } from './voiceReview'
 
 const STATE_TEXT: Record<ItemState, string> = {
@@ -149,6 +157,15 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
   const [saving, setSaving] = useState(false)
   const [saveError, setSaveError] = useState('')
   const [showGroups, setShowGroups] = useState(false)
+  const [takes, setTakes] = useState<VoiceTake[]>([])
+  const [voices, setVoices] = useState<Map<string, VoiceSetup>>(new Map())
+  const [keyInfo, setKeyInfo] = useState<KeyStatus | null>(null)
+  const [showKey, setShowKey] = useState(false)
+
+  const refreshTakes = useCallback(async () => setTakes(await loadTakes()), [])
+  const refreshKey = useCallback(async () => {
+    try { setKeyInfo(await keyStatus()) } catch { setKeyInfo(null) }
+  }, [])
 
   const refreshDecisions = useCallback(async () => {
     const rows = await loadDecisions()
@@ -162,23 +179,30 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
         const [loaded, who] = await Promise.all([loadItems(), loadPeople(), refreshDecisions()])
         setPeople(who)
         setItems(loaded)
-        // Pictures are a nicety: the page works without them.
+        // Pictures, new takes and the key status are extras: the page works without them.
         void pictureUrls(who).then(setFaces).catch(() => undefined)
+        void refreshTakes().catch(() => undefined)
+        void loadVoices().then(setVoices).catch(() => undefined)
+        void refreshKey()
       } catch (error) {
         setLoadError(error instanceof Error ? error.message : String(error))
       }
     })()
     // Other guides review at the same time: pick up their decisions when the tab comes back.
-    const onFocus = () => { void refreshDecisions().catch(() => undefined) }
+    const onFocus = () => {
+      void refreshDecisions().catch(() => undefined)
+      void refreshTakes().catch(() => undefined)
+    }
     window.addEventListener('focus', onFocus)
     return () => window.removeEventListener('focus', onFocus)
-  }, [refreshDecisions])
+  }, [refreshDecisions, refreshTakes, refreshKey])
 
   const groups = useMemo(() => summarizeGroups(items ?? [], decisions, mode, people), [items, decisions, mode, people])
   const activeGroup = groups.some((g) => g.key === group) ? group : groups.find((g) => g.toReview > 0)?.key ?? groups[0]?.key ?? ''
   const groupItems = useMemo(() => itemsOfGroup(items ?? [], activeGroup, mode, people), [items, activeGroup, mode, people])
   const titleOf = (key: string) => (mode === 'character' ? speakerTitle(key, people) : groupTitle(key, people))
   const faceUrl = (speakerKey: string) => faces.get(speakerKey)
+  const boyLines = useMemo(() => boyLinesOf(items ?? []), [items])
   const visible = useMemo(
     () => groupItems.filter((item) => matchesFilter(stateOf(item, decisions.get(item.clip_path)), filter) || item.clip_path === selected),
     [groupItems, decisions, filter, selected],
@@ -215,6 +239,18 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
     }
   }, [decisions, reviewerName])
 
+  const newTake = useCallback(async (item: VoiceItem, text: string) => {
+    const { take, characters_left } = await makeTake(item, text, reviewerName)
+    setTakes((before) => [...before, take])
+    setKeyInfo((before) => (before ? { ...before, characters_left } : before))
+    return take
+  }, [reviewerName])
+
+  const changeTake = useCallback(async (take: VoiceTake, status: VoiceTake['status']) => {
+    await setTakeStatus(take, status, reviewerName)
+    await refreshTakes()
+  }, [reviewerName, refreshTakes])
+
   const goNext = useCallback(() => {
     const next = nextToReview(groupItems, decisions, current?.clip_path ?? null)
     if (next) setSelected(next.clip_path)
@@ -231,6 +267,7 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
       <p>ההקלטות מגיעות מ-Unity. מי שמכין אותן צריך להריץ את הסנכרון (scripts/voice_review_sync.py).</p></div></main>
   }
 
+  const waiting = chosenCount(takes)
   const totals = groups.reduce((sum, g) => ({ total: sum.total + g.total, done: sum.done + g.accepted + g.rejected }), { total: 0, done: 0 })
 
   return (
@@ -242,6 +279,10 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
         <span className="vr-save-state" aria-live="polite">{saveError ? <span className="vr-error">{saveError}</span> : saving ? 'שומר…' : 'הכל נשמר ✓'}</span>
         <div className="vr-top-actions">
           {demoMode && <span className="vr-chip">מצב הדגמה</span>}
+          {waiting > 0 && <span className="vr-chip mint" title="ייכנסו למשחק בסנכרון הבא מ-Unity">{waiting} הקלטות חדשות מחכות ל-Unity</span>}
+          <button className={`vr-link vr-key-button${keyInfo && !keyInfo.saved ? ' missing' : ''}`} onClick={() => setShowKey(true)}>
+            🔑 מפתח ElevenLabs
+          </button>
           <a className="vr-link" href="./">לעורך המשימות</a>
           {!demoMode && <button className="vr-link" onClick={() => void signOut()}>יציאה</button>}
         </div>
@@ -299,7 +340,7 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
                         <span className={`vr-dot ${state}`} aria-label={STATE_TEXT[state]} />
                       </span>
                       <span className="vr-row-text">
-                        <strong>{item.speaker}<LineTags item={item} /></strong>
+                        <strong>{item.speaker}<LineTags item={item} audience={audienceOf(item, boyLines)} /><TakeTag takes={takesOf(takes, item.clip_path)} /></strong>
                         <span dir="auto">{item.on_screen_text}</span>
                       </span>
                     </button>
@@ -312,21 +353,191 @@ function Reviewer({ reviewerName }: { reviewerName: string }) {
 
         {current
           ? <LineCard key={current.clip_path} item={current} decision={decisions.get(current.clip_path)} onDecide={decide} onNext={goNext}
-              people={people} faceUrl={faceUrl(speakerKeyOf(current))} showQuestline={mode === 'character'} />
+              people={people} faceUrl={faceUrl(speakerKeyOf(current))} showQuestline={mode === 'character'}
+              audience={audienceOf(current, boyLines)}
+              takes={takesOf(takes, current.clip_path)} voice={voices.get(current.voice_key ?? '')} keyInfo={keyInfo}
+              onMakeTake={newTake} onTakeStatus={changeTake} onOpenKey={() => setShowKey(true)} />
           : <section className="vr-detail vr-empty">בחרו משפט מהרשימה.</section>}
       </div>
+      {showKey && <KeyDialog info={keyInfo} onClose={() => setShowKey(false)} onSaved={refreshKey} />}
     </div>
   )
 }
 
-/** Small labels for lines that are not a plain dialogue node, and for the girl version. */
-function LineTags({ item }: { item: VoiceItem }) {
+/** A row's hint that a new take was made (or chosen) for the line. */
+function TakeTag({ takes }: { takes: VoiceTake[] }) {
+  if (takes.length === 0) return null
+  return takes.some((take) => take.status === 'chosen')
+    ? <span className="vr-tag mint">🔄 נבחרה הקלטה חדשה</span>
+    : <span className="vr-tag">🔄 {takes.length} הקלטות חדשות</span>
+}
+
+/** Paste the ElevenLabs key once; it is kept encrypted on the server and shared by every guide. */
+function KeyDialog({ info, onClose, onSaved }: { info: KeyStatus | null; onClose: () => void; onSaved: () => Promise<void> }) {
+  const [key, setKey] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const [done, setDone] = useState(false)
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') onClose() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  const save = async (event: FormEvent) => {
+    event.preventDefault()
+    setBusy(true)
+    setError('')
+    try {
+      await saveApiKey(key)
+      await onSaved()
+      setKey('')
+      setDone(true)
+    } catch (failure) {
+      setError(failure instanceof Error ? failure.message : String(failure))
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <div className="vr-modal" role="dialog" aria-modal="true" aria-labelledby="vr-key-title" onClick={onClose}>
+      <form className="vr-card vr-key" onClick={(event) => event.stopPropagation()} onSubmit={save}>
+        <h1 id="vr-key-title">🔑 מפתח ElevenLabs</h1>
+        <p>בעזרת המפתח אפשר ליצור הקלטה חדשה למשפט שלא טוב, בקול של הדמות. שומרים אותו פעם אחת, והוא משותף לכל המדריכים.</p>
+        {info?.saved
+          ? (
+            <p className="vr-key-state ok">
+              ✓ שמור מפתח שנגמר ב-<b dir="ltr">{info.hint.replace('…', '')}</b>
+              {info.set_by && <> · נשמר על ידי <span dir="ltr">{info.set_by}</span></>}
+              {info.characters_left !== null && <><br />נשארו בחשבון <b>{info.characters_left.toLocaleString('he-IL')}</b> תווים.</>}
+            </p>
+          )
+          : <p className="vr-key-state">עוד לא נשמר מפתח.</p>}
+        <label>{info?.saved ? 'החלפת המפתח' : 'הדביקו את המפתח'}
+          <input type="password" dir="ltr" value={key} onChange={(e) => setKey(e.target.value)} placeholder="sk_…" autoComplete="off" required minLength={20} />
+        </label>
+        <small>המפתח נשמר מוצפן בשרת. אחרי השמירה אף אחד לא יכול לראות אותו שוב, רק את 4 התווים האחרונים.</small>
+        {error && <p className="vr-error">{error}</p>}
+        {done && <p className="vr-key-state ok">המפתח נשמר ✓</p>}
+        <div className="vr-foot">
+          <button className="vr-button primary" disabled={busy || key.trim().length < 20}>{busy ? 'שומר…' : 'שמירה'}</button>
+          <button type="button" className="vr-link" onClick={onClose}>סגירה</button>
+        </div>
+      </form>
+    </div>
+  )
+}
+
+/**
+ * Make a new take of a line that was not good, in the character's own voice (nothing to choose), listen,
+ * and keep the good one. The chosen take goes into the game on the next sync from Unity.
+ */
+function NewTakes({ item, takes, voice, keyInfo, onMake, onStatus, onOpenKey }: {
+  item: VoiceItem
+  takes: VoiceTake[]
+  voice: VoiceSetup | undefined
+  keyInfo: KeyStatus | null
+  onMake: (item: VoiceItem, text: string) => Promise<VoiceTake>
+  onStatus: (take: VoiceTake, status: VoiceTake['status']) => Promise<void>
+  onOpenKey: () => void
+}) {
+  const original = item.tts_text || item.on_screen_text.replace(/\n/g, ' ').trim()
+  const [text, setText] = useState(takes[0]?.text ?? original)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const [urls, setUrls] = useState<Map<string, string>>(new Map())
+  const [fresh, setFresh] = useState<string | null>(null)
+
+  useEffect(() => {
+    const paths = takes.map((take) => take.audio_path).filter((path) => !urls.has(path))
+    if (paths.length) void audioUrls(paths).then((more) => setUrls((before) => new Map([...before, ...more]))).catch(() => undefined)
+  }, [takes, urls])
+
+  const ready = Boolean(voice?.approved) && keyInfo?.saved !== false
+  const make = async () => {
+    setBusy(true)
+    setError('')
+    try {
+      const take = await onMake(item, text)
+      setFresh(take.id)
+    } catch (failure) {
+      setError(failure instanceof Error ? failure.message : String(failure))
+    } finally {
+      setBusy(false)
+    }
+  }
+  const change = (take: VoiceTake, status: VoiceTake['status']) => {
+    setError('')
+    void onStatus(take, status).catch((failure) => setError(failure instanceof Error ? failure.message : String(failure)))
+  }
+
+  return (
+    <div className="vr-newtakes">
+      <div className="vr-newtakes-head">
+        <strong>🔄 הקלטה חדשה בקול של {item.speaker}</strong>
+        <small>הקול נבחר לבד: <span dir="ltr">{voice?.voice_name || item.voice_name}</span></small>
+      </div>
+      {!voice?.approved && <p className="vr-error">לדמות הזו עוד אין קול מאושר ב-Unity, אז אי אפשר ליצור לה הקלטה מכאן.</p>}
+      {keyInfo && !keyInfo.saved && (
+        <p className="vr-hint">כדי ליצור הקלטה צריך קודם לשמור מפתח ElevenLabs. <button className="vr-link" onClick={onOpenKey}>לשמירת המפתח</button></p>
+      )}
+      <label className="vr-note">
+        מה הדמות תגיד (אפשר לתקן: להוסיף ניקוד, או לכתוב מילה כמו שהיא נשמעת)
+        <textarea dir="auto" rows={3} value={text} onChange={(e) => setText(e.target.value)} />
+      </label>
+      {text.trim() !== original && <button className="vr-link vr-reset" onClick={() => setText(original)}>חזרה לטקסט המקורי</button>}
+      {voice?.fx && <p className="vr-brief">במשחק מוסיפים לקול של הדמות הזו אפקט (הד או מהירות). כאן שומעים את ההקלטה בלי האפקט.</p>}
+      <div className="vr-foot">
+        <button className="vr-button primary" onClick={() => void make()} disabled={!ready || busy || !text.trim()}>
+          {busy ? 'יוצר הקלטה…' : takes.length ? 'עוד ניסיון' : 'צרו הקלטה חדשה'}
+        </button>
+        <small>{text.trim().length} תווים{keyInfo?.characters_left != null && ` · נשארו ${keyInfo.characters_left.toLocaleString('he-IL')}`}</small>
+      </div>
+      {error && <p className="vr-error">{error}</p>}
+
+      {takes.map((take, index) => {
+        const chosen = take.status === 'chosen'
+        return (
+          <div key={take.id} className={`vr-take${chosen ? ' chosen' : ''}`}>
+            <div className="vr-take-head">
+              <b>ניסיון {takes.length - index}</b>
+              <small dir="ltr">{new Date(take.created_at).toLocaleString('he-IL', { dateStyle: 'short', timeStyle: 'short' })}</small>
+              <small dir="ltr">{take.creator_name}</small>
+            </div>
+            {take.text !== original && <p className="vr-tts" dir="auto">{take.text}</p>}
+            <audio src={urls.get(take.audio_path)} controls preload="auto" autoPlay={take.id === fresh} />
+            <div className="vr-take-actions">
+              {chosen
+                ? (
+                  <>
+                    <span className="vr-take-chosen">✔ נבחרה. תיכנס למשחק בסנכרון הבא מ-Unity</span>
+                    <button className="vr-link" onClick={() => change(take, 'new')}>ביטול הבחירה</button>
+                  </>
+                )
+                : (
+                  <>
+                    <button className="vr-button accept" onClick={() => change(take, 'chosen')}>✔ זו טובה, להכניס למשחק</button>
+                    <button className="vr-link" onClick={() => change(take, 'discarded')}>למחוק</button>
+                  </>
+                )}
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+/** Small labels: lines that are not a plain dialogue node, and who the line talks to (a boy or a girl). */
+function LineTags({ item, audience }: { item: VoiceItem; audience: Audience }) {
   const source = item.source ? SOURCE_LABEL[item.source] : undefined
-  if (!source && item.variant !== 'girl') return null
+  if (!source && audience === 'everyone') return null
   return (
     <>
       {source && <span className="vr-tag">{source}</span>}
-      {item.variant === 'girl' && <span className="vr-tag girl">גרסה לבת</span>}
+      {audience !== 'everyone' && <span className={`vr-tag ${audience}`}>{AUDIENCE_TAG[audience]}</span>}
     </>
   )
 }
@@ -340,7 +551,7 @@ function Progress({ accepted, rejected, total }: { accepted: number; rejected: n
   )
 }
 
-function LineCard({ item, decision, onDecide, onNext, people, faceUrl, showQuestline }: {
+function LineCard({ item, decision, onDecide, onNext, people, faceUrl, showQuestline, audience, takes, voice, keyInfo, onMakeTake, onTakeStatus, onOpenKey }: {
   item: VoiceItem
   decision: VoiceDecision | undefined
   onDecide: (item: VoiceItem, status: ReviewStatus, change?: { tags?: string[]; note?: string }) => Promise<void>
@@ -348,6 +559,13 @@ function LineCard({ item, decision, onDecide, onNext, people, faceUrl, showQuest
   people: People
   faceUrl?: string
   showQuestline: boolean
+  audience: Audience
+  takes: VoiceTake[]
+  voice: VoiceSetup | undefined
+  keyInfo: KeyStatus | null
+  onMakeTake: (item: VoiceItem, text: string) => Promise<VoiceTake>
+  onTakeStatus: (take: VoiceTake, status: VoiceTake['status']) => Promise<void>
+  onOpenKey: () => void
 }) {
   const character = people.speakers.get(speakerKeyOf(item))
   const state = stateOf(item, decision)
@@ -427,13 +645,14 @@ function LineCard({ item, decision, onDecide, onNext, people, faceUrl, showQuest
             {character && character.display_name !== item.speaker && <small dir="auto">{character.display_name}</small>}
             <small dir="ltr">{item.voice_name}</small>
             <span className="vr-who-tags">
-              <LineTags item={item} />
+              <LineTags item={item} audience={audience} />
               {showQuestline && <span className="vr-tag" dir="auto">{groupTitle(item.group_key, people)}</span>}
             </span>
           </div>
           <span className={`vr-badge ${state}`}>{STATE_TEXT[state]}</span>
         </div>
         {character?.brief && <p className="vr-brief" dir="ltr">{character.brief}</p>}
+        {audience !== 'everyone' && <p className={`vr-audience ${audience}`}>{AUDIENCE_HINT[audience]}</p>}
         {state === 'newTake' && (
           <p className="vr-hint">
             יש הקלטה חדשה למשפט הזה מאז הבדיקה הקודמת. הקשיבו שוב.
@@ -488,6 +707,10 @@ function LineCard({ item, decision, onDecide, onNext, people, faceUrl, showQuest
           <textarea ref={noteBox} dir="auto" rows={3} value={note} onChange={(e) => setNote(e.target.value)} onBlur={saveNote}
             placeholder={showReasons ? 'למשל: "להיבחן" ולא "לאבחן"' : ''} />
         </label>
+
+        {(state === 'rejected' || takes.length > 0) && (
+          <NewTakes item={item} takes={takes} voice={voice} keyInfo={keyInfo} onMake={onMakeTake} onStatus={onTakeStatus} onOpenKey={onOpenKey} />
+        )}
 
         <div className="vr-foot">
           <button className="vr-button" onClick={() => onNext()}>למשפט הבא <kbd>N</kbd></button>
